@@ -110,6 +110,9 @@
           </text>
           <text id="/data/c_ClusterID2:label">
             <value>Enter Cluster ID again</value>
+          </text>          
+          <text id="/data/c_ClusterID1:hint">
+            <value>example: A100, D5, SP300</value>
           </text>
           <text id="/data/c_GPS:label">
             <value>Collect GPS data</value>
@@ -233,8 +236,8 @@
       <bind nodeset="/data/c_DistrictID" type="select1" required="true()" db_add_col_1="."/>
       <bind nodeset="/data/c_EU" type="select1" required="true()" db_add_col_1="/data/c_DistrictID" db_add_col_2="."/>
       <bind nodeset="/data/c_ClusterName" type="string"  required="true()" />
-      <bind nodeset="/data/c_ClusterID1" type="int" required="true()" maxLength="3" constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="Invalid. Cluster ID code is 3 numbers long."/>
-      <bind nodeset="/data/c_ClusterID2" type="int" required="true()" maxLength="3" constraint=". =/data/c_ClusterID1" db_add_col_1="/data/c_DistrictID" db_add_col_2="/data/c_EU" db_add_col_3="."/>
+      <bind nodeset="/data/c_ClusterID1" type="string" required="true()" maxLength="5" />
+      <bind nodeset="/data/c_ClusterID2" type="string" required="true()" maxLength="5" constraint=". =/data/c_ClusterID1" db_add_col_1="/data/c_DistrictID" db_add_col_2="/data/c_EU" db_add_col_3="."/>
       <bind nodeset="/data/c_GPS" type="geopoint" required="true()"/>
       <bind nodeset="/data/c_VillagePop" type="int" required="true()"/>
       <bind nodeset="/data/c_BlackFly" type="select1" required="true()"/>
@@ -334,7 +337,8 @@
       <label ref="jr:itext('/data/c_ClusterName:label')"/>
     </input>
     <input ref="/data/c_ClusterID1">
-      <label ref="jr:itext('/data/c_ClusterID1:label')"/>
+      <label ref="jr:itext('/data/c_ClusterID1:label')"/>      
+      <hint ref="jr:itext('/data/c_ClusterID1:hint')"/>
     </input>
     <input ref="/data/c_ClusterID2">
       <label ref="jr:itext('/data/c_ClusterID2:label')"/>
