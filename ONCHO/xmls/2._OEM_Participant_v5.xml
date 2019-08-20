@@ -10,7 +10,7 @@
           <meta>
             <instanceID/>
             <randomnum/>
-          </meta>          
+          </meta>
           <p_StartTime/>
           <p_EndTime/>
           <p_RecorderID/>
@@ -27,7 +27,6 @@
           <p_IDMethod/>
           <p_BarcodeID/>
           <p_GenerateID/>
-          <p_DbsCollected/>          
           <p_ending_survey_note/>
           <p_AdditionalNotes/>
         </data>
@@ -136,15 +135,6 @@
           <text id="/data/p_GenerateID:label">
             <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) adminstered, including OV16 RDT and Dry Blood Spot tests.</value>
           </text>
-          <text id="/data/p_DbsCollected:label">
-            <value>Was the DBS Collected from this person?</value>
-          </text>
-          <text id="/data/p_DbsCollected:option0">
-            <value>Yes</value>
-          </text>
-          <text id="/data/p_DbsCollected:option1">
-            <value>No</value>
-          </text>          
           <text id="/data/p_ending_survey_note:label">
             <value>You just entered a value that will end the survey</value>
           </text>
@@ -162,24 +152,16 @@
       <bind nodeset="/data/p_EUID" type="string" required="true()" db_get="col_2" db_filter_by_col_1="/data/p_DistrictID"/>
       <bind nodeset="/data/p_ClusterID" type="string" required="true()" db_get="col_3" db_filter_by_col_2="/data/p_EUID" db_filter_by_col_1="/data/p_DistrictID"/>
       <bind nodeset="/data/p_Consent" type="select1" required="true()"/>
-      <bind nodeset="/data/p_AgeYrs" type="int" required="true()" relevant="(selected(/data/p_Consent, 'Yes'))"
-          constraint=". > 19 and .  &#60; 121"  jr:constraintMsg="The age must be greater than 19" />
-      <bind nodeset="/data/p_HowLongLived" type="int" relevant="(selected(/data/p_Consent, 'Yes'))"
-          constraint=". > 9 and .  &#60; /data/p_AgeYrs"  jr:constraintMsg="The value must be greater than 9 and less than the age"/>
+      <bind nodeset="/data/p_AgeYrs" type="int" required="true()" relevant="(selected(/data/p_Consent, 'Yes'))" constraint=". > 19 and .  &#60; 121" jr:constraintMsg="The age must be greater than 19" />
+      <bind nodeset="/data/p_HowLongLived" type="int" relevant="(selected(/data/p_Consent, 'Yes'))" constraint=". > 9 and .  &#60;= /data/p_AgeYrs" jr:constraintMsg="The value must be greater than 9 and less than the age"/>
       <bind nodeset="/data/p_Travel" type="select1" required="true()" relevant="(selected(/data/p_Consent, 'Yes')) "/>
-      <bind nodeset="/data/p_IVM" type="select1" required="true()"  relevant="(selected(/data/p_Consent, 'Yes')) "/>
-      <bind nodeset="/data/p_IVMWhere" type="select1" required="true()" 
-          relevant="(selected(/data/p_IVM, 'Yes')) and (selected(/data/p_Consent, 'Yes')) "/>
-      <bind nodeset="/data/p_Sex" type="select1" required="true()"  relevant="(selected(/data/p_Consent, 'Yes')) " />
+      <bind nodeset="/data/p_IVM" type="select1" required="true()" relevant="(selected(/data/p_Consent, 'Yes')) "/>
+      <bind nodeset="/data/p_IVMWhere" type="select1" required="true()" relevant="(selected(/data/p_IVM, 'Yes')) and (selected(/data/p_Consent, 'Yes')) "/>
+      <bind nodeset="/data/p_Sex" type="select1" required="true()" relevant="(selected(/data/p_Consent, 'Yes')) " />
       <bind nodeset="/data/p_IDMethod" type="select1" required="true()" relevant="(selected(/data/p_Consent, 'Yes')) "/>
-      <bind nodeset="/data/p_BarcodeID" type="barcode" required="true()" 
-          relevant="(selected(/data/p_Consent, 'Yes')) and (selected(/data/p_IDMethod, 'Scanner')) "/>
-      <bind nodeset="/data/p_GenerateID" type="string" required="true()" readonly="true()" 
-          relevant="(selected(/data/p_Consent, 'Yes')) and (selected(/data/p_IDMethod, 'IDGeneration')) and (selected(/data/p_IDMethod, 'Scanner')) " 
-          calculate="concat('MOZ', '_', /data/p_ClusterID, '_GEN_', /data/meta/randomnum)"/>
-      <bind nodeset="/data/p_DbsCollected" type="select1" required="true()"  relevant="(selected(/data/p_Consent, 'Yes')) " />
-      <bind nodeset="/data/p_ending_survey_note" readonly="true()" 
-          relevant="(selected(/data/p_Consent, 'No')) or /data/p_AgeYrs &#60; 20 or /data/p_HowLongLived &#60; 10" type="string"/>
+      <bind nodeset="/data/p_BarcodeID" type="barcode" required="true()" relevant="(selected(/data/p_Consent, 'Yes')) and (selected(/data/p_IDMethod, 'Scanner')) "/>
+      <bind nodeset="/data/p_GenerateID" type="string" required="true()" readonly="true()" relevant="(selected(/data/p_Consent, 'Yes')) and (selected(/data/p_IDMethod, 'IDGeneration'))" calculate="concat('MOZ', '_', /data/p_ClusterID, '_GEN_', /data/meta/randomnum)"/>
+      <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant="(selected(/data/p_Consent, 'No')) or /data/p_AgeYrs &#60; 20 or /data/p_HowLongLived &#60; 10" type="string"/>
 
       <bind nodeset="/data/p_AdditionalNotes" type="string"/>
     </model>
@@ -204,7 +186,7 @@
       <hint ref="jr:itext('/data/p_Consent:hint')"/>
       <item>
         <label ref="jr:itext('/data/p_Consent:option0')"/>
-      <hint ref="jr:itext('/data/p_Consent:hint')"/>
+        <hint ref="jr:itext('/data/p_Consent:hint')"/>
         <value>Yes</value>
       </item>
       <item>
@@ -247,8 +229,8 @@
     </input>
     <input ref="/data/p_GenerateID">
       <label ref="jr:itext('/data/p_GenerateID:label')"/>
-    </input>    
-     <select1 ref="/data/p_Travel">
+    </input>
+    <select1 ref="/data/p_Travel">
       <label ref="jr:itext('/data/p_Travel:label')"/>
       <item>
         <label ref="jr:itext('/data/p_Travel:option0')"/>
@@ -292,18 +274,7 @@
         <label ref="jr:itext('/data/p_IVMWhere:option3')"/>
         <value>AnotherVillageClinic</value>
       </item>
-    </select1>    
-    <select1 ref="/data/p_DbsCollected">
-      <label ref="jr:itext('/data/p_DbsCollected:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_DbsCollected:option0')"/>
-        <value>Yes</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_DbsCollected:option1')"/>
-        <value>No</value>
-      </item>
-    </select1>    
+    </select1>
     <input ref="/data/p_ending_survey_note">
       <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
     </input>
