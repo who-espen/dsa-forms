@@ -14,6 +14,7 @@
           <q_EndTime/>
           <q_DistrictID/>
           <q_SiteName/>
+          <q_GPS/>
           <q_Information/>
           <q_BitesProblems/>
           <q_EndSurveyNote/>
@@ -62,6 +63,12 @@
           </text>
           <text id="/data/q_SiteName:hint">
             <value>A comunidade mais próxima do local de reprodução</value>
+          </text>
+          <text id="/data/q_GPS:label">
+            <value>Collect GPS data</value>
+          </text>
+          <text id="/data/q_GPS:hint">
+            <value>Works best outside of buildings</value>
           </text>
           <text id="/data/q_Information:label">
             <value>Pergunte a um pequeno grupo de membros da comunidade (10+) o seguinte:	Nota informativa</value>
@@ -159,6 +166,7 @@
       <bind nodeset="/data/q_EndTime" type="dateTime" jr:preload="timestamp" jr:preloadParams="end"/>
       <bind nodeset="/data/q_DistrictID" type="select1" required="true()" db_add_col_1="."/>
       <bind nodeset="/data/q_SiteName" type="string" required="true()" />
+      <bind nodeset="/data/q_GPS" type="geopoint" required="true()"/>      
       <bind nodeset="/data/q_Information" readonly="true()" type="string"/>
       <bind nodeset="/data/q_BitesProblems" type="select1" required="true()"/>
       <bind nodeset="/data/q_EndSurveyNote" readonly="true()" type="string" relevant="(selected(/data/q_BitesProblems, 'No'))"/>
@@ -208,6 +216,10 @@
     <input ref="/data/q_SiteName">
       <label ref="jr:itext('/data/q_SiteName:label')"/>
       <hint ref="jr:itext('/data/q_SiteName:hint')"/>
+    </input>
+    <input ref="/data/q_GPS">
+      <label ref="jr:itext('/data/q_GPS:label')"/>
+      <hint ref="jr:itext('/data/q_GPS:hint')"/>
     </input>
     <input ref="/data/q_Information">
       <label ref="jr:itext('/data/q_Information:label')"/>
