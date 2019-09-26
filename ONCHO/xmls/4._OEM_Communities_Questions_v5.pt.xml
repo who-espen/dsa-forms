@@ -3,10 +3,10 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
   xmlns:jr="http://openrosa.org/javarosa">
   <h:head>
-    <h:title>4. &#9888;&#65039; OEM Breeding site survey - Community questions v5 - Mozambique</h:title>
+    <h:title>4. OEM Pesquisa no local de reprodução - Perguntas da comunidade v5 - Moçambique</h:title>
     <model>
       <instance>
-        <data id="OEMCommunityQuestionsv5_Mozambique">
+        <data id="OEMCommunityQuestionsv5_Mozambique.pt">
           <meta>
             <instanceID/>
           </meta>
@@ -27,7 +27,7 @@
 
           <!-- District label begin -->
           <text id="/data/q_DistrictID:label">
-            <value>Select District</value>
+            <value>Seleccione o nome do distrito	Seleccione um distrito entre a lista pré-preenchida</value>
           </text>
 
           <text id="/data/q_DistrictID:option0">
@@ -58,10 +58,10 @@
           <!-- District label end -->
 
           <text id="/data/q_SiteName:label">
-            <value>Enter the name of breeding site surveyed </value>
+            <value>Nome da comunidade pesquisada</value>
           </text>
           <text id="/data/q_SiteName:hint">
-            <value>The name of the nearest community to the breeding site</value>
+            <value>A comunidade mais próxima do local de reprodução</value>
           </text>
           <text id="/data/q_GPS:label">
             <value>Collect GPS data</value>
@@ -72,87 +72,87 @@
 
           <!-- blackfly problem begin -->
           <text id="/data/q_BitesProblems:label">
-            <value>Are blackfly bites a problem in this community? </value>
+            <value>As picadas da mosca preta são um problema nesta comunidade? </value>
           </text>
           <text id="/data/q_BitesProblems:hint">
-            <value>check local name for blackfly, show picture or actual black fly in a glass container </value>
+            <value>verifique o nome local para mosca preta, show uma imagem ou uma mosca preta real em um recipiente de vidro</value>
           </text>
           <text id="/data/q_BitesProblems:option0">
-            <value>Yes</value>
+            <value>Sim</value>
           </text>
           <text id="/data/q_BitesProblems:option1">
-            <value>No</value>
+            <value>Não</value>
           </text>
           <!-- blackfly problem end -->
 
           <text id="/data/q_EndSurveyNote:label">
-            <value>You just entered a value that will end the survey</value>
+            <value>Você acabou de inserir um valor que terminará a pesquisa</value>
           </text>
 
           <!-- Bites per day begin -->
 
           <text id="/data/q_BitesPerDay:label">
-            <value>How many bites do you receive each day? </value>
+            <value>Quantas mordidas você sofre por dia? </value>
           </text>
           <text id="/data/q_BitesPerDay:option0">
-            <value>None</value>
+            <value>Nenhuma</value>
           </text>
           <text id="/data/q_BitesPerDay:option1">
-            <value>A few (&lt;=10)</value>
+            <value>Poucas (&lt;=10)</value>
           </text>
           <text id="/data/q_BitesPerDay:option2">
-            <value>Some (&gt;10 and &lt;=50)</value>
+            <value>Algumas (&gt;10 and &lt;=50)</value>
           </text>
           <text id="/data/q_BitesPerDay:option3">
-            <value>Many (&gt;50)</value>
+            <value>Muitas (&gt;50)</value>
           </text>
           <!-- Bite per day end -->
 
           <!-- Black fly season begin -->
           <text id="/data/q_BlackflySeason:label">
-            <value>What time of year (MONTH) or season are there the most blackfly bites?</value>
+            <value>Em que época do ano (MÊS) ou estação, há mais picadas de mosca preta?</value>
           </text>
           <text id="/data/q_BlackflySeason:option0">
-            <value>January</value>
+            <value>Janeiro</value>
           </text>
           <text id="/data/q_BlackflySeason:option1">
-            <value>February</value>
+            <value>Fevereiro</value>
           </text>
           <text id="/data/q_BlackflySeason:option2">
-            <value>March</value>
+            <value>Março</value>
           </text>
           <text id="/data/q_BlackflySeason:option3">
-            <value>April</value>
+            <value>Abril</value>
           </text>
           <text id="/data/q_BlackflySeason:option4">
-            <value>May</value>
+            <value>Maio</value>
           </text>
           <text id="/data/q_BlackflySeason:option5">
-            <value>June</value>
+            <value>Junho</value>
           </text>
           <text id="/data/q_BlackflySeason:option6">
-            <value>July</value>
+            <value>Julho</value>
           </text>
           <text id="/data/q_BlackflySeason:option7">
-            <value>August</value>
+            <value>Agosto</value>
           </text>
           <text id="/data/q_BlackflySeason:option8">
-            <value>September</value>
+            <value>Setembro</value>
           </text>
           <text id="/data/q_BlackflySeason:option9">
-            <value>October</value>
+            <value>Outubro</value>
           </text>
           <text id="/data/q_BlackflySeason:option10">
-            <value>November</value>
+            <value>Novembro</value>
           </text>
           <text id="/data/q_BlackflySeason:option11">
-            <value>December</value>
+            <value>Dezembro</value>
           </text>
 
           <!-- Black fly season end -->
 
           <text id="/data/q_Notes:label">
-            <value>Additional notes to add?</value>
+            <value>Notas Adicionais</value>
           </text>
         </translation>
       </itext>
@@ -162,7 +162,7 @@
       <bind nodeset="/data/q_EndTime" type="dateTime" jr:preload="timestamp" jr:preloadParams="end"/>
       <bind nodeset="/data/q_DistrictID" type="select1" required="true()" db_add_col_1="."/>
       <bind nodeset="/data/q_SiteName" type="string" required="true()" />
-      <bind nodeset="/data/q_GPS" type="geopoint" required="true()"/>
+      <bind nodeset="/data/q_GPS" type="geopoint" required="true()"/>     
       <bind nodeset="/data/q_BitesProblems" type="select1" required="true()"/>
       <bind nodeset="/data/q_EndSurveyNote" readonly="true()" type="string" relevant="(selected(/data/q_BitesProblems, 'No'))"/>
       <bind nodeset="/data/q_BitesPerDay" type="select1" required="true()" relevant="(selected(/data/q_BitesProblems, 'Yes'))"/>
