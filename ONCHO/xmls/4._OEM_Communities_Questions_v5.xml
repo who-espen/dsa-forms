@@ -14,7 +14,6 @@
           <q_EndTime/>
           <q_DistrictID/>
           <q_SiteName/>
-          <q_Information/>
           <q_GPS/>
           <q_BitesProblems/>
           <q_EndSurveyNote/>
@@ -69,9 +68,6 @@
           </text>
           <text id="/data/q_GPS:hint">
             <value>Works best outside of buildings</value>
-          </text>
-          <text id="/data/q_Information:label">
-            <value>Ask a small group of community members (10+) the following questions</value>
           </text>
 
           <!-- blackfly problem begin -->
@@ -166,7 +162,6 @@
       <bind nodeset="/data/q_EndTime" type="dateTime" jr:preload="timestamp" jr:preloadParams="end"/>
       <bind nodeset="/data/q_DistrictID" type="select1" required="true()" db_add_col_1="."/>
       <bind nodeset="/data/q_SiteName" type="string" required="true()" />
-      <bind nodeset="/data/q_Information" readonly="true()" type="string"/>
       <bind nodeset="/data/q_GPS" type="geopoint" required="true()"/>
       <bind nodeset="/data/q_BitesProblems" type="select1" required="true()"/>
       <bind nodeset="/data/q_EndSurveyNote" readonly="true()" type="string" relevant="(selected(/data/q_BitesProblems, 'No'))"/>
@@ -220,9 +215,6 @@
     <input ref="/data/q_GPS">
       <label ref="jr:itext('/data/q_GPS:label')"/>
       <hint ref="jr:itext('/data/q_GPS:hint')"/>
-    </input>
-    <input ref="/data/q_Information">
-      <label ref="jr:itext('/data/q_Information:label')"/>
     </input>
     <!-- blackfly problem begin -->
     <select1 ref="/data/q_BitesProblems">
