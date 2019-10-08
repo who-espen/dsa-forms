@@ -3,7 +3,7 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
   xmlns:jr="http://openrosa.org/javarosa">
   <h:head>
-    <h:title>4. &#9888;&#65039; OEM Breeding site survey - Community questions v5 - Mozambique</h:title>
+    <h:title>4. (English) OEM Breeding site survey - Community questions v5 - Mozambique</h:title>
     <model>
       <instance>
         <data id="OEMCommunityQuestionsv5_Mozambique">
@@ -12,19 +12,33 @@
           </meta>
           <q_StartTime/>
           <q_EndTime/>
+          <q_RecorderID/>
           <q_DistrictID/>
           <q_SiteName/>
-          <q_GPS/>
+
+          <q_Consent/>
+          <q_Sex/>
+          <q_AgeYrs/>
+          <q_occupation/>
+          <q_HowLongLived/>
+
           <q_BitesProblems/>
           <q_EndSurveyNote/>
           <q_BitesPerDay/>
+          <q_KnowBlackflySeason/>
           <q_BlackflySeason/>
+
           <q_Notes/>
         </data>
       </instance>
       <itext>
         <translation lang="English">
-
+          <text id="/data/q_RecorderID:label">
+            <value>Enter Recorder ID</value>
+          </text>
+          <text id="/data/q_RecorderID:hint">
+            <value>2 digit code assigned to you</value>
+          </text>
           <!-- District label begin -->
           <text id="/data/q_DistrictID:label">
             <value>Select District</value>
@@ -52,7 +66,7 @@
             <value>Sanga</value>
           </text>
           <text id="/data/q_DistrictID:option7">
-            <value>Spared District</value>
+            <value>Other district</value>
           </text>
 
           <!-- District label end -->
@@ -61,13 +75,38 @@
             <value>Enter the name of breeding site surveyed </value>
           </text>
           <text id="/data/q_SiteName:hint">
-            <value>The name of the nearest community to the breeding site</value>
+            <value>The name of the community you are in</value>
           </text>
-          <text id="/data/q_GPS:label">
-            <value>Collect GPS data</value>
+          <text id="/data/q_Consent:label">
+            <value>Does this person consent to take part in the study?</value>
           </text>
-          <text id="/data/q_GPS:hint">
-            <value>Works best outside of buildings</value>
+          <text id="/data/q_Consent:hint">
+            <value>No response will end survey</value>
+          </text>
+          <text id="/data/q_Consent:option0">
+            <value>Yes</value>
+          </text>
+          <text id="/data/q_Consent:option1">
+            <value>No</value>
+          </text>
+
+          <text id="/data/q_Sex:label">
+            <value>What gender is this person</value>
+          </text>
+          <text id="/data/q_Sex:option0">
+            <value>Female</value>
+          </text>
+          <text id="/data/q_Sex:option1">
+            <value>Male</value>
+          </text>
+          <text id="/data/q_AgeYrs:label">
+            <value>Enter age in years</value>
+          </text>
+          <text id="/data/q_occupation:label">
+            <value>What is their occupation</value>
+          </text>
+          <text id="/data/q_HowLongLived:label">
+            <value>How many years has the respondent lived in the area?</value>
           </text>
 
           <!-- blackfly problem begin -->
@@ -82,6 +121,9 @@
           </text>
           <text id="/data/q_BitesProblems:option1">
             <value>No</value>
+          </text>
+          <text id="/data/q_BitesProblems:option2">
+            <value>Don't know</value>
           </text>
           <!-- blackfly problem end -->
 
@@ -105,12 +147,25 @@
           </text>
           <text id="/data/q_BitesPerDay:option3">
             <value>Many (&gt;50)</value>
+          </text>          
+          <text id="/data/q_BitesPerDay:option4">
+            <value>Don't know</value>
           </text>
           <!-- Bite per day end -->
 
+          <text id="/data/q_KnowBlackflySeason:label">
+            <value>Do you know the time of year when there are the most black fly bites? </value>
+          </text>
+          <text id="/data/q_KnowBlackflySeason:option0">
+            <value>Yes</value>
+          </text>
+          <text id="/data/q_KnowBlackflySeason:option1">
+            <value>No</value>
+          </text>
+
           <!-- Black fly season begin -->
           <text id="/data/q_BlackflySeason:label">
-            <value>What time of year (MONTH) or season are there the most blackfly bites?</value>
+            <value>If Yes, select the month(s)</value>
           </text>
           <text id="/data/q_BlackflySeason:option0">
             <value>January</value>
@@ -160,17 +215,27 @@
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
       <bind nodeset="/data/q_StartTime" type="dateTime" jr:preload="timestamp" jr:preloadParams="start"/>
       <bind nodeset="/data/q_EndTime" type="dateTime" jr:preload="timestamp" jr:preloadParams="end"/>
+      <bind nodeset="/data/q_RecorderID" type="int" required="true()" maxLength="2" constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="Invalid. Recorder ID code is 2 numbers long."/>
       <bind nodeset="/data/q_DistrictID" type="select1" required="true()" db_add_col_1="."/>
       <bind nodeset="/data/q_SiteName" type="string" required="true()" />
-      <bind nodeset="/data/q_GPS" type="geopoint" required="true()"/>
-      <bind nodeset="/data/q_BitesProblems" type="select1" required="true()"/>
-      <bind nodeset="/data/q_EndSurveyNote" readonly="true()" type="string" relevant="(selected(/data/q_BitesProblems, 'No'))"/>
-      <bind nodeset="/data/q_BitesPerDay" type="select1" required="true()" relevant="(selected(/data/q_BitesProblems, 'Yes'))"/>
-      <bind nodeset="/data/q_BlackflySeason" type="select" required="true()" relevant="(selected(/data/q_BitesProblems, 'Yes'))"/>
-      <bind nodeset="/data/q_Notes" type="string"/>
+      <bind nodeset="/data/q_Consent" type="select1" required="true()"/>
+      <bind nodeset="/data/q_Sex" type="select1" required="true()" relevant="(selected(/data/q_Consent, 'Yes')) " />
+      <bind nodeset="/data/q_AgeYrs" type="int" required="true()" relevant="(selected(/data/q_Consent, 'Yes'))" constraint=".  &#60; 121" jr:constraintMsg="Enter a valid age"  />
+      <bind nodeset="/data/q_occupation" required="true()" relevant="(selected(/data/q_Consent, 'Yes'))" type="string" />
+      <bind nodeset="/data/q_HowLongLived" type="int" relevant="(selected(/data/q_Consent, 'Yes'))" constraint=".  &#60;= /data/q_AgeYrs" jr:constraintMsg="The value less than or equal to the age" />
+      <bind nodeset="/data/q_BitesProblems" type="select1" required="true()" relevant="(selected(/data/q_Consent, 'Yes'))" />
+      <bind nodeset="/data/q_BitesPerDay" type="select1" required="true()" relevant="(selected(/data/q_BitesProblems, 'Yes')) and (selected(/data/q_Consent, 'Yes'))"  />
+      <bind nodeset="/data/q_KnowBlackflySeason" type="select1" required="true()" relevant="(selected(/data/q_BitesProblems, 'Yes')) and (selected(/data/q_Consent, 'Yes'))" />
+      <bind nodeset="/data/q_BlackflySeason" type="select" required="true()" relevant="(selected(/data/q_BitesProblems, 'Yes')) and (selected(/data/q_KnowBlackflySeason, 'Yes')) and (selected(/data/q_Consent, 'Yes'))" />
+      <bind nodeset="/data/q_EndSurveyNote" readonly="true()" type="string" relevant="(selected(/data/q_Consent, 'No'))" />
+      <bind nodeset="/data/q_Notes" type="string" />
     </model>
   </h:head>
   <h:body>
+    <input ref="/data/q_RecorderID">
+      <label ref="jr:itext('/data/q_RecorderID:label')"/>
+      <hint ref="jr:itext('/data/q_RecorderID:hint')"/>
+    </input>
     <!-- District Begin -->
     <select1 ref="/data/q_DistrictID">
       <label ref="jr:itext('/data/q_DistrictID:label')"/>
@@ -204,7 +269,7 @@
       </item>
       <item>
         <label ref="jr:itext('/data/q_DistrictID:option7')"/>
-        <value>Spared District</value>
+        <value>Other district</value>
       </item>
     </select1>
     <!-- District label End -->
@@ -212,10 +277,42 @@
       <label ref="jr:itext('/data/q_SiteName:label')"/>
       <hint ref="jr:itext('/data/q_SiteName:hint')"/>
     </input>
-    <input ref="/data/q_GPS">
-      <label ref="jr:itext('/data/q_GPS:label')"/>
-      <hint ref="jr:itext('/data/q_GPS:hint')"/>
+
+    <select1 ref="/data/q_Consent">
+      <label ref="jr:itext('/data/q_Consent:label')"/>
+      <hint ref="jr:itext('/data/q_Consent:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/q_Consent:option0')"/>
+        <hint ref="jr:itext('/data/q_Consent:hint')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/q_Consent:option1')"/>
+        <value>No</value>
+      </item>
+    </select1>
+
+    <select1 ref="/data/q_Sex">
+      <label ref="jr:itext('/data/q_Sex:label')"/>
+      <item>
+        <label ref="jr:itext('/data/q_Sex:option0')"/>
+        <value>Female</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/q_Sex:option1')"/>
+        <value>Male</value>
+      </item>
+    </select1>
+    <input ref="/data/q_AgeYrs">
+      <label ref="jr:itext('/data/q_AgeYrs:label')"/>
     </input>
+    <input ref="/data/q_occupation">
+      <label ref="jr:itext('/data/q_occupation:label')"/>
+    </input>    
+    <input ref="/data/q_HowLongLived">
+      <label ref="jr:itext('/data/q_HowLongLived:label')"/>
+    </input>
+
     <!-- blackfly problem begin -->
     <select1 ref="/data/q_BitesProblems">
       <label ref="jr:itext('/data/q_BitesProblems:label')"/>
@@ -227,6 +324,10 @@
       <item>
         <label ref="jr:itext('/data/q_BitesProblems:option1')"/>
         <value>No</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/q_BitesProblems:option2')"/>
+        <value>Don't know</value>
       </item>
     </select1>
     <!-- blackfly problem end -->
@@ -253,9 +354,25 @@
       <item>
         <label ref="jr:itext('/data/q_BitesPerDay:option3')"/>
         <value>Many (&gt;50)</value>
+      </item>      
+      <item>
+        <label ref="jr:itext('/data/q_BitesPerDay:option4')"/>
+        <value>Don't know</value>
       </item>
     </select1>
     <!-- Bites per day end -->
+    
+    <select1 ref="/data/q_KnowBlackflySeason">
+      <label ref="jr:itext('/data/q_KnowBlackflySeason:label')"/>
+      <item>
+        <label ref="jr:itext('/data/q_KnowBlackflySeason:option0')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/q_KnowBlackflySeason:option1')"/>
+        <value>No</value>
+      </item>
+    </select1>
 
     <!-- Black fly season begin -->
     <select ref="/data/q_BlackflySeason">
