@@ -1,0 +1,38 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>3. OIAS DBS Collected v2 Sierra Leone</h:title>
+    <model>
+      <instance>
+        <data id="OIAS_DBSCollectedv2_Sierra_leone">
+          <meta>
+            <instanceID/>
+          </meta>
+          <d_StartTime/>
+          <d_EndTime/>
+          <d_DbsId/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/d_DbsId:label">
+            <value>Scan QR code now</value>
+          </text>
+        </translation>
+      </itext>
+
+
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/d_StartTime" type="dateTime" jr:preload="timestamp" jr:preloadParams="start"/>
+      <bind nodeset="/data/d_EndTime" type="dateTime" jr:preload="timestamp" jr:preloadParams="end"/>
+      <bind nodeset="/data/d_DbsId" type="barcode" required="true()" />
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/d_DbsId">
+      <label ref="jr:itext('/data/d_DbsId:label')"/>
+    </input>
+  </h:body>
+</h:html>
