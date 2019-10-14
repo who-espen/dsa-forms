@@ -12,10 +12,11 @@
           </meta>
           <r_StartTime/>
           <r_EndTime/>
+          <r_RecorderID/>
+          <r_Province/>
           <r_DistrictID/>
           <r_SiteName/>
-          <r_Month/>
-          <r_Year/>
+          <r_Date/>
           <r_GPS/>
           <r_RiverName/>
           <r_RiverBasin/>
@@ -27,8 +28,37 @@
       </instance>
       <itext>
         <translation lang="English">
+          <text id="/data/r_RecorderID:label">
+            <value>ID de digitador</value>
+          </text>
+          <text id="/data/r_RecorderID:hint">
+            <value>Insira o código do digitador de 2 dígitos fornecido para cada digitador (pessoa que faz a entrada de dados)</value>
+          </text>
+
+          <!-- Province label begin -->
+          <text id="/data/r_Province:label">
+            <value>Seleccione a província</value>
+          </text>
+          <text id="/data/r_Province:option0">
+            <value>Manica</value>
+          </text>
+          <text id="/data/r_Province:option1">
+            <value>Niassa</value>
+          </text>
+          <text id="/data/r_Province:option2">
+            <value>Sofala</value>
+          </text>
+          <text id="/data/r_Province:option3">
+            <value>Tete</value>
+          </text>
+          <text id="/data/r_Province:option4">
+            <value>Other province</value>
+          </text>
+
+          <!-- Province label end -->
+
           <text id="/data/r_DistrictID:label">
-            <value>Seleccione o nome do distrito</value>
+            <value>Seleccionar o distrito</value>
           </text>
 
           <!-- District label begin -->
@@ -55,65 +85,21 @@
             <value>Sanga</value>
           </text>
           <text id="/data/r_DistrictID:option7">
-            <value>Spared District</value>
+            <value>Outro distrito</value>
           </text>
 
           <!-- District label end -->
 
           <text id="/data/r_SiteName:label">
-            <value>Nome da comunidade pesquisada</value>
+            <value>Site</value>
           </text>
           <text id="/data/r_SiteName:hint">
-            <value>A comunidade mais próxima do local de reprodução</value>
+            <value>O nome da comunidade mais próxima </value>
           </text>
-          <text id="/data/r_Month:label">
-            <value>Mês de pesquisa</value>
-          </text>
-
-          <!-- Month begin -->
-
-          <text id="/data/r_Month:option0">
-            <value>Janeiro</value>
-          </text>
-          <text id="/data/r_Month:option1">
-            <value>Fevereiro</value>
-          </text>
-          <text id="/data/r_Month:option2">
-            <value>Março</value>
-          </text>
-          <text id="/data/r_Month:option3">
-            <value>Abril</value>
-          </text>
-          <text id="/data/r_Month:option4">
-            <value>Maio</value>
-          </text>
-          <text id="/data/r_Month:option5">
-            <value>Junho</value>
-          </text>
-          <text id="/data/r_Month:option6">
-            <value>Julho</value>
-          </text>
-          <text id="/data/r_Month:option7">
-            <value>Agosto</value>
-          </text>
-          <text id="/data/r_Month:option8">
-            <value>Setembro</value>
-          </text>
-          <text id="/data/r_Month:option9">
-            <value>Outubro</value>
-          </text>
-          <text id="/data/r_Month:option10">
-            <value>Novembro</value>
-          </text>
-          <text id="/data/r_Month:option11">
-            <value>Dezembro</value>
+          <text id="/data/r_Date:label">
+            <value>Digite a data de hoje</value>
           </text>
 
-          <!-- Month end -->
-
-          <text id="/data/r_Year:label">
-            <value>Ano de pesquisa</value>
-          </text>
           <text id="/data/r_GPS:label">
             <value>Coordenação GPS do local de reprodução suspeito</value>
           </text>
@@ -127,7 +113,7 @@
             <value>Nome da bacia do rio</value>
           </text>
           <text id="/data/r_SiteSuitable:label">
-            <value>No momento da inspecção, o local pareceu adequado para a reprodução de mosca preta</value>
+            <value>Tempo e inspenção</value>
           </text>
           <text id="/data/r_SiteSuitable:option0">
             <value>Sim</value>
@@ -136,7 +122,7 @@
             <value>Não</value>
           </text>
           <text id="/data/r_EvidenceOfLarvae:label">
-            <value>No momento da inspecção, o local forneceu evidências de larvas</value>
+            <value>Evidencia de Larva</value>
           </text>
           <text id="/data/r_EvidenceOfLarvae:option0">
             <value>Sim</value>
@@ -145,35 +131,83 @@
             <value>Não</value>
           </text>
           <text id="/data/r_LarvaeRate:label">
-            <value>Se SIM às larvas, classifique a abundância como poucas, algumas ou muitas</value>
+            <value>Abundancia</value>
           </text>
           <!-- Larvae Rate Begin -->
           <text id="/data/r_LarvaeRate:option0">
             <value>-</value>
           </text>
           <text id="/data/r_LarvaeRate:option1">
-            <value>+</value>
+            <value>+ (1 - 10)</value>
           </text>
           <text id="/data/r_LarvaeRate:option2">
-            <value>++</value>
+            <value>++ (11 - 50)</value>
           </text>
           <text id="/data/r_LarvaeRate:option3">
-            <value>+++</value>
+            <value>+++ (mais de 50)</value>
           </text>
           <!-- Larvae Rate End -->
           <text id="/data/r_Notes:label">
-            <value>Notas Adicionais</value>
+            <value>Notas</value>
           </text>
         </translation>
       </itext>
 
+      <instance id="districts">
+        <root>
+          <item>
+            <itextId>/data/r_DistrictID:option0</itextId>
+            <name>Buzi; 33210</name>
+            <r_Province>Sofala</r_Province>
+          </item>
+          <item>
+            <itextId>/data/r_DistrictID:option1</itextId>
+            <name>Gôndola; 33152</name>
+            <r_Province>Manica</r_Province>
+          </item>
+          <item>
+            <itextId>/data/r_DistrictID:option2</itextId>
+            <name>Lago; 33196</name>
+            <r_Province>Niassa</r_Province>
+          </item>
+          <item>
+            <itextId>/data/r_DistrictID:option3</itextId>
+            <name>Machaze; 33155</name>
+            <r_Province>Manica</r_Province>
+          </item>
+          <item>
+            <itextId>/data/r_DistrictID:option4</itextId>
+            <name>Manica; 3315</name>
+            <r_Province>Manica</r_Province>
+          </item>
+          <item>
+            <itextId>/data/r_DistrictID:option5</itextId>
+            <name>Maravia; 33233</name>
+            <r_Province>Tete</r_Province>
+          </item>
+          <item>
+            <itextId>/data/r_DistrictID:option6</itextId>
+            <name>Sanga; 33209</name>
+            <r_Province>Niassa</r_Province>
+          </item>
+          <item>
+            <itextId>/data/r_DistrictID:option7</itextId>
+            <name>Outro distrito</name>
+            <r_Province>Outra província</r_Province>
+          </item>
+
+        </root>
+      </instance>
+
+
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
       <bind nodeset="/data/r_StartTime" type="dateTime" jr:preload="timestamp" jr:preloadParams="start"/>
       <bind nodeset="/data/r_EndTime" type="dateTime" jr:preload="timestamp" jr:preloadParams="end"/>
-      <bind nodeset="/data/r_DistrictID" type="select1" required="true()" db_add_col_1="."/>
+      <bind nodeset="/data/r_RecorderID" type="int" required="true()" maxLength="2" constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="Invalid. Recorder ID code is 2 numbers long."/>
+      <bind nodeset="/data/r_Province" type="select1" required="true()" />
+      <bind nodeset="/data/r_DistrictID" type="select1" required="true()" />
       <bind nodeset="/data/r_SiteName" type="string" required="true()" />
-      <bind nodeset="/data/r_Month" type="select1" required="true()"/>
-      <bind nodeset="/data/r_Year" type="int" required="true()" maxLength="4" constraint="regex(., '^20[0-9]{2}$')" jr:constraintMsg="The year is not correct" default="2019" />
+      <bind nodeset="/data/r_Date" type="date" required="true()"/>
       <bind nodeset="/data/r_GPS" type="geopoint" required="true()"/>
       <bind nodeset="/data/r_RiverName" type="string" required="true()" />
       <bind nodeset="/data/r_RiverBasin" type="string" required="true()" />
@@ -184,105 +218,58 @@
     </model>
   </h:head>
   <h:body>
+
+    <input ref="/data/r_RecorderID">
+      <label ref="jr:itext('/data/r_RecorderID:label')"/>
+      <hint ref="jr:itext('/data/r_RecorderID:hint')"/>
+    </input>
+
     <!-- District Begin -->
-    <select1 ref="/data/r_DistrictID">
-      <label ref="jr:itext('/data/r_DistrictID:label')"/>
+    <select1 ref="/data/r_Province">
+      <label ref="jr:itext('/data/r_Province:label')"/>
       <item>
-        <label ref="jr:itext('/data/r_DistrictID:option0')"/>
-        <value>Buzi; 33210</value>
+        <label ref="jr:itext('/data/r_Province:option0')"/>
+        <value>Manica</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/r_DistrictID:option1')"/>
-        <value>Gôndola; 33152</value>
+        <label ref="jr:itext('/data/r_Province:option1')"/>
+        <value>Niassa</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/r_DistrictID:option2')"/>
-        <value>Lago; 33196</value>
+        <label ref="jr:itext('/data/r_Province:option2')"/>
+        <value>Sofala</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/r_DistrictID:option3')"/>
-        <value>Machaze; 33155</value>
+        <label ref="jr:itext('/data/r_Province:option3')"/>
+        <value>Tete</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/r_DistrictID:option4')"/>
-        <value>Manica; 3315</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_DistrictID:option5')"/>
-        <value>Maravia; 33233</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_DistrictID:option6')"/>
-        <value>Sanga; 33209</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_DistrictID:option7')"/>
-        <value>Spared District</value>
+        <label ref="jr:itext('/data/r_Province:option4')"/>
+        <value>Outra província</value>
       </item>
     </select1>
     <!-- District label End -->
-   <input ref="/data/r_SiteName">
+
+    <!-- District Begin -->
+    <select1 ref="/data/r_DistrictID">
+      <label ref="jr:itext('/data/r_DistrictID:label')"/>
+      <itemset nodeset="instance('districts')/root/item[r_Province= /data/r_Province ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+
+    <!-- District label End -->
+
+    <input ref="/data/r_SiteName">
       <label ref="jr:itext('/data/r_SiteName:label')"/>
       <hint ref="jr:itext('/data/r_SiteName:hint')"/>
     </input>
 
-    <!-- Month begin -->
-    <select1 ref="/data/r_Month">
-      <label ref="jr:itext('/data/r_Month:label')"/>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option0')"/>
-        <value>January</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option1')"/>
-        <value>February</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option2')"/>
-        <value>March</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option3')"/>
-        <value>April</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option4')"/>
-        <value>May</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option5')"/>
-        <value>June</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option6')"/>
-        <value>July</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option7')"/>
-        <value>August</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option8')"/>
-        <value>September</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option9')"/>
-        <value>October</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option10')"/>
-        <value>November</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/r_Month:option11')"/>
-        <value>December</value>
-      </item>
-    </select1>
-    <!-- Month end -->
-
-   <input ref="/data/r_Year">
-      <label ref="jr:itext('/data/r_Year:label')"/>
+    <input ref="/data/r_Date">
+      <label ref="jr:itext('/data/r_Date:label')"/>
     </input>
+
     <input ref="/data/r_GPS">
       <label ref="jr:itext('/data/r_GPS:label')"/>
       <hint ref="jr:itext('/data/r_GPS:hint')"/>
@@ -304,6 +291,7 @@
         <value>No</value>
       </item>
     </select1>
+    
     <select1 ref="/data/r_EvidenceOfLarvae">
       <label ref="jr:itext('/data/r_EvidenceOfLarvae:label')"/>
       <item>
@@ -315,6 +303,7 @@
         <value>No</value>
       </item>
     </select1>
+
     <select1 ref="/data/r_LarvaeRate">
       <label ref="jr:itext('/data/r_LarvaeRate:label')"/>
       <item>
@@ -323,21 +312,21 @@
       </item>
       <item>
         <label ref="jr:itext('/data/r_LarvaeRate:option1')"/>
-        <value>+</value>
+        <value>+ (1 - 10)</value>
       </item>
       <item>
         <label ref="jr:itext('/data/r_LarvaeRate:option2')"/>
-        <value>++</value>
+        <value>++ (11 - 50)</value>
       </item>
       <item>
         <label ref="jr:itext('/data/r_LarvaeRate:option3')"/>
-        <value>+++</value>
+        <value>+++ (more than 50)</value>
       </item>
     </select1>
 
     <input ref="/data/r_Notes">
       <label ref="jr:itext('/data/r_Notes:label')"/>
     </input>
-   
+
   </h:body>
 </h:html>
