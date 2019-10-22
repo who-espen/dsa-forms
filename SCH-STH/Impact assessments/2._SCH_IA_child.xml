@@ -122,7 +122,7 @@
             <value>Male</value>
           </text>
           <text id="/data/s_recorder_id:jr:constraintMsg">
-            <value>Invalide! Le code doit être constitué d'un nombre à deux chiffres</value>
+            <value>Invalid! Le code doit être constitué d'un nombre à deux chiffres</value>
           </text>
           <text id="/data/s_defecate_place/Je ne sais pas:label">
             <value>99. Je ne sais pas</value>
@@ -202,7 +202,7 @@
       <bind nodeset="/data/s_barcode_id" relevant=" /data/s_id_type =&quot;Oui&quot;" required="true()" type="barcode"/>
       <bind nodeset="/data/s_generated_id" relevant=" /data/s_id_type =&quot;Non&quot;" required="true()" calculate="concat('GEN_', if(string-length(/data/s_school_id) > 2, substr(/data/s_school_id,0,2), ''),'_', /data/meta/randomnum)" readonly="true()" type="string"/>
 
-      <bind constraint=".&gt;=9 and .&lt;=15" jr:constraintMsg="jr:itext('/data/s_age:jr:constraintMsg')" nodeset="/data/s_age" required="true()" type="int"/>
+      <bind constraint=".&gt;=9 and .&lt;=14" jr:constraintMsg="jr:itext('/data/s_age:jr:constraintMsg')" nodeset="/data/s_age" required="true()" type="int"/>
       <bind nodeset="/data/s_sex" required="true()" type="select1"/>
       <bind nodeset="/data/s_urinate_place" required="true()" type="select1"/>
       <bind nodeset="/data/s_urinate_place_other" relevant=" /data/s_urinate_place  = &quot;Autres&quot;" required="true()" type="string"/>
