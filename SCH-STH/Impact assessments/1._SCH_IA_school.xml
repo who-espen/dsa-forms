@@ -9,40 +9,42 @@
   <h:head>
     <h:title>1. Information sur l'Ecole - RDC</h:title>
     <model>
-    <instance>
-      <data id="SCH_IA_School_rdc" version="20191021">
-        <w_recorder_id/>
-        <w_region>Ituri</w_region>
-        <w_cordination>Ituri Nonrd</w_cordination>
-        <w_district/>
-        <w_health_facility/>
-        <w_school_id/>
-        <w_gps/>
-        <w_sth_deworming/>
-        <w_sch_deworming/>
-        <w_source_exist/>
-        <w_source_drinkable/>
-        <w_source_type/>
-        <w_accessible_water/>
-        <w_toilet/>
-        <w_toilet_type/>
-        <w_toilet_type_other/>
-        <w_toilet_has_paper/>
-        <w_toilet_has_washing_water/>
-        <w_toilet_has_soap/>
-        <w_obs_toilet_condition/>
-        <w_obs_toilet_has_water/>
-        <w_obs_has_hand_provision/>
-        <w_obs_washing_hand_type/>
-        <w_obs_washing_hand_type_other/>
-        <w_remarks/>
-        <start_at/>
-        <end_at/>
-        <meta>
-          <instanceID/>
-        </meta>
-      </data>
-    </instance>
+      <instance>
+        <data id="SCH_IA_School_rdc" version="20191021">
+          <meta>
+            <instanceID/>
+            <w_region/>
+            <!-- </w_region> -->
+            <w_cordination/>
+            <!-- Ituri Nonrd</w_cordination> -->
+          </meta>
+          <w_recorder_id/>
+          <w_district/>
+          <w_health_facility/>
+          <w_school_id/>
+          <w_gps/>
+          <w_sth_deworming/>
+          <w_sch_deworming/>
+          <w_source_exist/>
+          <w_source_drinkable/>
+          <w_source_type/>
+          <w_accessible_water/>
+          <w_toilet/>
+          <w_toilet_type/>
+          <w_toilet_type_other/>
+          <w_toilet_has_paper/>
+          <w_toilet_has_washing_water/>
+          <w_toilet_has_soap/>
+          <w_obs_toilet_condition/>
+          <w_obs_toilet_has_water/>
+          <w_obs_has_hand_provision/>
+          <w_obs_washing_hand_type/>
+          <w_obs_washing_hand_type_other/>
+          <w_remarks/>
+          <start_at/>
+          <end_at/>
+        </data>
+      </instance>
 
       <itext>
         <translation default="true()" lang="French">
@@ -469,9 +471,9 @@
           <text id="/data/w_toilet_has_washing_water/Parfois:label">
             <value>Parfois</value>
           </text>
-          <text id="/data/w_region:label">
+          <!-- <text id="/data/w_region:label">
             <value>Region</value>
-          </text>
+          </text> -->
           <text id="static_instance-schools-1">
             <value>Songe de Logo</value>
           </text>
@@ -520,9 +522,9 @@
           <text id="/data/w_obs_toilet_condition/Bon/agreable (propre, sans odeur, pas de mouches, presence de toit et porte):label">
             <value>Bon/agréable (propre, sans odeur, pas de mouches, présence de toit et porte)</value>
           </text>
-          <text id="/data/w_cordination:label">
+          <!-- <text id="/data/w_cordination:label">
             <value>Coordination MTN-CTP</value>
-          </text>
+          </text> -->
           <text id="static_instance-latrine_hand_type-0">
             <value>Non</value>
           </text>
@@ -880,8 +882,8 @@
         </root>
       </instance>
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/w_recorder_id:jr:constraintMsg')" nodeset="/data/w_recorder_id" required="true()" type="int"/>
-      <bind nodeset="/data/w_region" required="true()" type="string"/>
-      <bind nodeset="/data/w_cordination" required="true()" type="string"/>
+      <bind nodeset="/data/meta/w_region" required="true()" type="string" calculate="concat('Ituri')" />
+      <bind nodeset="/data/meta/w_cordination" required="true()" type="string" calculate="concat('Ituri Nonrd')" />
       <bind nodeset="/data/w_district" required="true()" type="select1"/>
       <bind nodeset="/data/w_health_facility" required="true()" type="select1"/>
       <bind jr:constraintMsg="jr:itext('/data/w_school_id:jr:constraintMsg')" nodeset="/data/w_school_id" required="true()" type="select1"/>
@@ -914,12 +916,12 @@
       <label ref="jr:itext('/data/w_recorder_id:label')"/>
       <hint ref="jr:itext('/data/w_recorder_id:hint')"/>
     </input>
-    <input ref="/data/w_region">
+    <!-- <input ref="/data/w_region">
       <label ref="jr:itext('/data/w_region:label')"/>
-    </input>
-    <input ref="/data/w_cordination">
+    </input> -->
+    <!-- <input ref="/data/w_cordination">
       <label ref="jr:itext('/data/w_cordination:label')"/>
-    </input>
+    </input> -->
     <select1 ref="/data/w_district">
       <label ref="jr:itext('/data/w_district:label')"/>
       <item>

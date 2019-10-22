@@ -9,30 +9,31 @@
   <h:head>
     <h:title>2. Information sur l'Élève - RDC</h:title>
     <model>
-    <instance>
-      <data id="SCH_IA_Child_rdc" version="20191021">
-        <s_recorder_id/>
-        <s_school_id/>
-        <s_id_type/>
-        <s_barcode_id/>
-        <s_generated_id/>
-        <s_age/>
-        <s_sex/>
-        <s_urinate_place/>
-        <s_urinate_place_other/>
-        <s_defecate_place/>
-        <s_defecate_place_other/>
-        <s_do_water_activities/>
-        <s_water_activities/>
-        <s_water_activities_other/>
-        <s_remarks/>
-        <started_at/>
-        <ended_at/>
-        <meta>
-          <instanceID/>
-        </meta>
-      </data>
-    </instance>
+      <instance>
+        <data id="SCH_IA_Child_rdc" version="20191021">
+          <meta>
+            <instanceID/>
+            <randomnum/>
+          </meta>
+          <s_recorder_id/>
+          <s_school_id/>
+          <s_id_type/>
+          <s_barcode_id/>
+          <s_generated_id/>
+          <s_age/>
+          <s_sex/>
+          <s_urinate_place/>
+          <s_urinate_place_other/>
+          <s_defecate_place/>
+          <s_defecate_place_other/>
+          <s_do_water_activities/>
+          <s_water_activities/>
+          <s_water_activities_other/>
+          <s_remarks/>
+          <started_at/>
+          <ended_at/>
+        </data>
+      </instance>
 
       <itext>
         <translation default="true()" lang="French">
@@ -194,11 +195,13 @@
           </text>
         </translation>
       </itext>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,8)"/>
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/s_recorder_id:jr:constraintMsg')" nodeset="/data/s_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/s_school_id" required="true()" type="select1"/>
       <bind nodeset="/data/s_id_type" required="true()" type="select1"/>
       <bind nodeset="/data/s_barcode_id" relevant=" /data/s_id_type =&quot;Oui&quot;" required="true()" type="barcode"/>
-      <bind constraint="regex(., '^[0-9]{3}-[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/s_generated_id:jr:constraintMsg')" nodeset="/data/s_generated_id" relevant=" /data/s_id_type =&quot;Non&quot;" required="true()" type="string"/>
+      <bind nodeset="/data/s_generated_id" relevant=" /data/s_id_type =&quot;Non&quot;" required="true()" calculate="concat('GEN_', if(string-length(/data/s_school_id) > 2, substr(/data/s_school_id,0,2), ''),'_', /data/meta/randomnum)" readonly="true()" type="string"/>
+
       <bind constraint=".&gt;=9 and .&lt;=15" jr:constraintMsg="jr:itext('/data/s_age:jr:constraintMsg')" nodeset="/data/s_age" required="true()" type="int"/>
       <bind nodeset="/data/s_sex" required="true()" type="select1"/>
       <bind nodeset="/data/s_urinate_place" required="true()" type="select1"/>
@@ -207,7 +210,7 @@
       <bind nodeset="/data/s_defecate_place_other" relevant=" /data/s_defecate_place  = &quot;Autres&quot;" required="true()" type="string"/>
       <bind nodeset="/data/s_do_water_activities" required="true()" type="select1"/>
       <bind nodeset="/data/s_water_activities" relevant=" /data/s_do_water_activities =&quot;Oui&quot;" required="true()" type="select"/>
-      <bind nodeset="/data/s_water_activities_other" relevant=" /data/s_water_activities =&quot;Autres&quot;" type="string"/>
+      <bind nodeset="/data/s_water_activities_other" relevant="selected(/data/s_water_activities, 'Autres')" type="string"/>
       <bind nodeset="/data/s_remarks" required="false()" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/started_at" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/ended_at" type="dateTime"/>
