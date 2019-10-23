@@ -1,6 +1,6 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" 
-  xmlns:h="http://www.w3.org/1999/xhtml" 
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:jr="http://openrosa.org/javarosa">
   <h:head>
     <h:title>1. OEM grupo v5 Moçambique</h:title>
@@ -41,32 +41,30 @@
 
           <!-- District label begin -->
 
-          
           <text id="/data/c_DistrictID:option0">
-            <value>Buzi</value>
+            <value>Cahora Bassa</value>
           </text>
           <text id="/data/c_DistrictID:option1">
-            <value>Gôndola</value>
-          </text>
-          <text id="/data/c_DistrictID:option2">
             <value>Lago</value>
           </text>
+          <text id="/data/c_DistrictID:option2">
+            <value>Maravia</value>
+          </text>
           <text id="/data/c_DistrictID:option3">
-            <value>Machaze</value>
+            <value>Mechanhelas</value>
           </text>
           <text id="/data/c_DistrictID:option4">
-            <value>Manica</value>
+            <value>Milange </value>
           </text>
           <text id="/data/c_DistrictID:option5">
-            <value>Maravia</value>
+            <value>Morrumbala</value>
           </text>
           <text id="/data/c_DistrictID:option6">
             <value>Sanga</value>
           </text>
           <text id="/data/c_DistrictID:option7">
-            <value>Spared District (SP)</value>
+            <value>Outro distrito</value>
           </text>
-
 
           <!-- District label end -->
 
@@ -76,22 +74,22 @@
             <value>Seleccione o nome da UA</value>
           </text>
           <text id="/data/c_EU:option0">
-            <value>BZI</value>
+            <value>CBS</value>
           </text>
           <text id="/data/c_EU:option1">
-            <value>GDL</value>
-          </text>
-          <text id="/data/c_EU:option2">
             <value>LGO</value>
           </text>
+          <text id="/data/c_EU:option2">
+            <value>MRV</value>
+          </text>
           <text id="/data/c_EU:option3">
-            <value>MCZ</value>
+            <value>MCH</value>
           </text>
           <text id="/data/c_EU:option4">
-            <value>MNC</value>
+            <value>MLG</value>
           </text>
           <text id="/data/c_EU:option5">
-            <value>MRV</value>
+            <value>MRB</value>
           </text>
           <text id="/data/c_EU:option6">
             <value>SNG</value>
@@ -111,7 +109,7 @@
           </text>
           <text id="/data/c_ClusterID2:label">
             <value>Insira a identificação do grupo novamente</value>
-          </text>          
+          </text>
           <text id="/data/c_ClusterID1:hint">
             <value>exemplo: A100, D5, SP300</value>
           </text>
@@ -146,74 +144,82 @@
       </itext>
 
       <instance id="districts">
-        <root>          
+        <root>
           <item>
-            <itextId>static_instance-districts-0</itextId>
-            <name>Buzi; 33210</name>
+            <itextId>/data/c_DistrictID:option0</itextId>
+            <name>Cahora Bassa; 33224</name>
+            <r_Province>Tete</r_Province>
           </item>
           <item>
-            <itextId>static_instance-districts-1</itextId>
-            <name>Gôndola; 33152</name>
-          </item>
-          <item>
-            <itextId>static_instance-districts-2</itextId>
+            <itextId>/data/c_DistrictID:option1</itextId>
             <name>Lago; 33196</name>
+            <r_Province>Niassa</r_Province>
           </item>
           <item>
-            <itextId>static_instance-districts-3</itextId>
-            <name>Machaze; 33155</name>
-          </item>
-          <item>
-            <itextId>static_instance-districts-4</itextId>
-            <name>Manica; 33157</name>
-          </item>
-          <item>
-            <itextId>static_instance-districts-5</itextId>
+            <itextId>/data/c_DistrictID:option2</itextId>
             <name>Maravia; 33233</name>
+            <r_Province>Tete</r_Province>
           </item>
           <item>
-            <itextId>static_instance-districts-6</itextId>
+            <itextId>/data/c_DistrictID:option3</itextId>
+            <name>Mechanhelas; 33203</name>
+            <r_Province>Niassa</r_Province>
+          </item>
+          <item>
+            <itextId>/data/c_DistrictID:option4</itextId>
+            <name>Milange ; 33248</name>
+            <r_Province>Zambezia</r_Province>
+          </item>
+          <item>
+            <itextId>/data/c_DistrictID:option5</itextId>
+            <name>Morrumbala; 33254</name>
+            <r_Province>Zambezia</r_Province>
+          </item>
+          <item>
+            <itextId>/data/c_DistrictID:option6</itextId>
             <name>Sanga; 33209</name>
+            <r_Province>Niassa</r_Province>
           </item>
           <item>
-            <itextId>static_instance-districts-7</itextId>
-           <name>Spared District</name>
-          </item>  
-   
+            <itextId>/data/c_DistrictID:option7</itextId>
+            <name>Outro distrito</name>
+            <r_Province>Outra província</r_Province>
+          </item>
+
         </root>
       </instance>
 
       <instance id="eus">
-        <root>          
+        <root>
           <item>
             <itextId>/data/c_EU:option0</itextId>
-            <name>BZI</name>
-            <c_DistrictID>Buzi; 33210</c_DistrictID>
+            <name>CBS</name>
+            <c_DistrictID>Cahora Bassa; 33224</c_DistrictID>
           </item>
           <item>
             <itextId>/data/c_EU:option1</itextId>
-            <name>GDL</name>
-            <c_DistrictID>Gôndola; 33152</c_DistrictID>
-          </item>
-          <item>
-            <itextId>/data/c_EU:option2</itextId>
             <name>LGO</name>
             <c_DistrictID>Lago; 33196</c_DistrictID>
           </item>
           <item>
+            <itextId>/data/c_EU:option2</itextId>
+            <name>MRV</name>
+            <c_DistrictID>Maravia; 33233</c_DistrictID>
+          </item>
+          <item>
             <itextId>/data/c_EU:option3</itextId>
-            <name>MCZ</name>
-            <c_DistrictID>Machaze; 33155</c_DistrictID>
+            <name>MCH</name>
+            <c_DistrictID>Mechanhelas; 33203</c_DistrictID>
           </item>
           <item>
             <itextId>/data/c_EU:option4</itextId>
-            <name>MNC</name>
-            <c_DistrictID>Manica; 33157</c_DistrictID>
+            <name>MLG</name>
+            <c_DistrictID>Milange ; 33248</c_DistrictID>
           </item>
           <item>
             <itextId>/data/c_EU:option5</itextId>
-            <name>MRV</name>
-            <c_DistrictID>Maravia; 33233</c_DistrictID>
+            <name>MRB</name>
+            <c_DistrictID>Morrumbala; 33254</c_DistrictID>
           </item>
           <item>
             <itextId>/data/c_EU:option6</itextId>
@@ -223,9 +229,9 @@
           <item>
             <itextId>/data/c_EU:option7</itextId>
             <name>SPD</name>
-           <c_DistrictID>Spared District</c_DistrictID>
-          </item>  
-   
+           <c_DistrictID>Outro distrito</c_DistrictID>
+          </item>
+
         </root>
       </instance>
 
@@ -249,34 +255,34 @@
     <input ref="/data/c_RecorderID">
       <label ref="jr:itext('/data/c_RecorderID:label')"/>
       <hint ref="jr:itext('/data/c_RecorderID:hint')"/>
-    </input>    
+    </input>
 
     <!-- District Begin -->
     <select1 ref="/data/c_DistrictID">
       <label ref="jr:itext('/data/c_DistrictID:label')"/>
       <item>
         <label ref="jr:itext('/data/c_DistrictID:option0')"/>
-        <value>Buzi; 33210</value>
+        <value>Cahora Bassa; 33224</value>
       </item>
       <item>
         <label ref="jr:itext('/data/c_DistrictID:option1')"/>
-        <value>Gôndola; 33152</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/c_DistrictID:option2')"/>
         <value>Lago; 33196</value>
       </item>
       <item>
+        <label ref="jr:itext('/data/c_DistrictID:option2')"/>
+        <value>Maravia; 33233</value>
+      </item>
+      <item>
         <label ref="jr:itext('/data/c_DistrictID:option3')"/>
-        <value>Machaze; 33155</value>
+        <value>Mechanhelas; 33203</value>
       </item>
       <item>
         <label ref="jr:itext('/data/c_DistrictID:option4')"/>
-        <value>Manica; 33157</value>
+        <value>Milange ; 33248</value>
       </item>
       <item>
         <label ref="jr:itext('/data/c_DistrictID:option5')"/>
-        <value>Maravia; 33233</value>
+        <value>Morrumbala; 33254</value>
       </item>
       <item>
         <label ref="jr:itext('/data/c_DistrictID:option6')"/>
@@ -284,9 +290,9 @@
       </item>
       <item>
         <label ref="jr:itext('/data/c_DistrictID:option7')"/>
-        <value>Spared District</value>
+        <value>Outro distrito</value>
       </item>
-    </select1>   
+    </select1>
     <!-- District label End -->
 
     <select1 ref="/data/c_EU">
@@ -302,7 +308,7 @@
       <label ref="jr:itext('/data/c_ClusterName:label')"/>
     </input>
     <input ref="/data/c_ClusterID1">
-      <label ref="jr:itext('/data/c_ClusterID1:label')"/>      
+      <label ref="jr:itext('/data/c_ClusterID1:label')"/>
       <hint ref="jr:itext('/data/c_ClusterID1:hint')"/>
     </input>
     <input ref="/data/c_ClusterID2">

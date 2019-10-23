@@ -1,6 +1,6 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" 
-  xmlns:h="http://www.w3.org/1999/xhtml" 
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:jr="http://openrosa.org/javarosa">
   <h:head>
     <h:title>4. (English) OEM Breeding site survey - Community questions v5 - Mozambique</h:title>
@@ -45,22 +45,22 @@
           </text>
 
           <text id="/data/q_DistrictID:option0">
-            <value>Buzi</value>
+            <value>Cahora Bassa</value>
           </text>
           <text id="/data/q_DistrictID:option1">
-            <value>Gôndola</value>
-          </text>
-          <text id="/data/q_DistrictID:option2">
             <value>Lago</value>
           </text>
+          <text id="/data/q_DistrictID:option2">
+            <value>Maravia</value>
+          </text>
           <text id="/data/q_DistrictID:option3">
-            <value>Machaze</value>
+            <value>Mechanhelas</value>
           </text>
           <text id="/data/q_DistrictID:option4">
-            <value>Manica</value>
+            <value>Milange </value>
           </text>
           <text id="/data/q_DistrictID:option5">
-            <value>Maravia</value>
+            <value>Morrumbala</value>
           </text>
           <text id="/data/q_DistrictID:option6">
             <value>Sanga</value>
@@ -147,7 +147,7 @@
           </text>
           <text id="/data/q_BitesPerDay:option3">
             <value>Many (&gt;50)</value>
-          </text>          
+          </text>
           <text id="/data/q_BitesPerDay:option4">
             <value>Don't know</value>
           </text>
@@ -220,11 +220,11 @@
       <bind nodeset="/data/q_SiteName" type="string" required="true()" />
       <bind nodeset="/data/q_Consent" type="select1" required="true()"/>
       <bind nodeset="/data/q_Sex" type="select1" required="true()" relevant="(selected(/data/q_Consent, 'Yes')) " />
-      <bind nodeset="/data/q_AgeYrs" type="int" required="true()" relevant="(selected(/data/q_Consent, 'Yes'))" constraint=".  &#60; 121" jr:constraintMsg="Enter a valid age"  />
+      <bind nodeset="/data/q_AgeYrs" type="int" required="true()" relevant="(selected(/data/q_Consent, 'Yes'))" constraint=".  &#60; 121" jr:constraintMsg="Enter a valid age" />
       <bind nodeset="/data/q_occupation" required="true()" relevant="(selected(/data/q_Consent, 'Yes'))" type="string" />
-      <bind nodeset="/data/q_HowLongLived" type="int" relevant="(selected(/data/q_Consent, 'Yes'))" constraint=".  &#60;= /data/q_AgeYrs" jr:constraintMsg="The value less than or equal to the age" />
+      <bind nodeset="/data/q_HowLongLived" type="int" relevant="(selected(/data/q_Consent, 'Yes'))" constraint=". &#60;= /data/q_AgeYrs" jr:constraintMsg="The value less than or equal to the age" />
       <bind nodeset="/data/q_BitesProblems" type="select1" required="true()" relevant="(selected(/data/q_Consent, 'Yes'))" />
-      <bind nodeset="/data/q_BitesPerDay" type="select1" required="true()" relevant="(selected(/data/q_BitesProblems, 'Yes')) and (selected(/data/q_Consent, 'Yes'))"  />
+      <bind nodeset="/data/q_BitesPerDay" type="select1" required="true()" relevant="(selected(/data/q_BitesProblems, 'Yes')) and (selected(/data/q_Consent, 'Yes'))" />
       <bind nodeset="/data/q_KnowBlackflySeason" type="select1" required="true()" relevant="(selected(/data/q_BitesProblems, 'Yes')) and (selected(/data/q_Consent, 'Yes'))" />
       <bind nodeset="/data/q_BlackflySeason" type="select" required="true()" relevant="(selected(/data/q_BitesProblems, 'Yes')) and (selected(/data/q_KnowBlackflySeason, 'Yes')) and (selected(/data/q_Consent, 'Yes'))" />
       <bind nodeset="/data/q_EndSurveyNote" readonly="true()" type="string" relevant="(selected(/data/q_Consent, 'No'))" />
@@ -241,27 +241,27 @@
       <label ref="jr:itext('/data/q_DistrictID:label')"/>
       <item>
         <label ref="jr:itext('/data/q_DistrictID:option0')"/>
-        <value>Buzi; 33210</value>
+        <value>Cahora Bassa; 33224</value>
       </item>
       <item>
         <label ref="jr:itext('/data/q_DistrictID:option1')"/>
-        <value>Gôndola; 33152</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/q_DistrictID:option2')"/>
         <value>Lago; 33196</value>
       </item>
       <item>
+        <label ref="jr:itext('/data/q_DistrictID:option2')"/>
+        <value>Maravia; 33233</value>
+      </item>
+      <item>
         <label ref="jr:itext('/data/q_DistrictID:option3')"/>
-        <value>Machaze; 33155</value>
+        <value>Mechanhelas; 33203</value>
       </item>
       <item>
         <label ref="jr:itext('/data/q_DistrictID:option4')"/>
-        <value>Manica; 3315</value>
+        <value>Milange ; 33248</value>
       </item>
       <item>
         <label ref="jr:itext('/data/q_DistrictID:option5')"/>
-        <value>Maravia; 33233</value>
+        <value>Morrumbala; 33254</value>
       </item>
       <item>
         <label ref="jr:itext('/data/q_DistrictID:option6')"/>
@@ -308,7 +308,7 @@
     </input>
     <input ref="/data/q_occupation">
       <label ref="jr:itext('/data/q_occupation:label')"/>
-    </input>    
+    </input>
     <input ref="/data/q_HowLongLived">
       <label ref="jr:itext('/data/q_HowLongLived:label')"/>
     </input>
@@ -354,14 +354,14 @@
       <item>
         <label ref="jr:itext('/data/q_BitesPerDay:option3')"/>
         <value>Many (&gt;50)</value>
-      </item>      
+      </item>
       <item>
         <label ref="jr:itext('/data/q_BitesPerDay:option4')"/>
         <value>Don't know</value>
       </item>
     </select1>
     <!-- Bites per day end -->
-    
+
     <select1 ref="/data/q_KnowBlackflySeason">
       <label ref="jr:itext('/data/q_KnowBlackflySeason:label')"/>
       <item>
