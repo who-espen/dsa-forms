@@ -2096,7 +2096,7 @@
       <bind nodeset="/data/c_EndTime" type="dateTime" jr:preload="timestamp" jr:preloadParams="end"/>
       <bind nodeset="/data/c_RecorderID" type="int" required="true()" maxLength="2" constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="Invalid. Recorder ID code is 2 numbers long."/>
       <bind nodeset="/data/c_DistrictID" type="select1" required="true()" db_add_col_1="."/>
-      <bind nodeset="/data/c_ClusterID" type="select1" required="true()" db_add_col_2="." />
+      <bind nodeset="/data/c_ClusterID" type="select1" required="true()" db_add_col_1="/data/c_DistrictID" db_add_col_2="." />
       <bind nodeset="/data/c_ClusterName" type="string" required="true()" relevant="(/data/c_ClusterID &#62; 100 and /data/c_ClusterID &#60; 109) or (/data/c_ClusterID &#62; 200 and /data/c_ClusterID &#60; 209) or (/data/c_ClusterID &#62; 300 and /data/c_ClusterID &#60; 309) or (/data/c_ClusterID &#62; 400 and /data/c_ClusterID &#60; 409) or (/data/c_ClusterID &#62; 500 and /data/c_ClusterID &#60; 509) or (/data/c_ClusterID &#62; 600 and /data/c_ClusterID &#60; 609) or (/data/c_ClusterID &#62; 700 and /data/c_ClusterID &#60; 709)" />
       <bind nodeset="/data/c_GPS" type="geopoint" required="true()"/>
       <bind nodeset="/data/c_VillagePop" type="int" required="true()"/>
@@ -2113,7 +2113,7 @@
     <!-- District Begin -->
     <!-- District label End -->
 
-    
+
         <select1 ref="/data/c_DistrictID">
             <label ref="jr:itext('/data/c_DistrictID:label')"/>
             <item>
@@ -2156,7 +2156,7 @@
             </itemset>
     </select1>
 
-        
+
 
     <input ref="/data/c_ClusterName">
       <label ref="jr:itext('/data/c_ClusterName:label')"/>

@@ -1,6 +1,6 @@
-<h:html xmlns="http://www.w3.org/2002/xforms" 
-  xmlns:h="http://www.w3.org/1999/xhtml" 
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:jr="http://openrosa.org/javarosa">
   <h:head>
     <h:title>2. OEM participantes v5 Moçambique</h:title>
@@ -15,7 +15,6 @@
           <p_EndTime/>
           <p_RecorderID/>
           <p_DistrictID/>
-          <p_EUID/>
           <p_ClusterID/>
           <p_Consent/>
           <p_Sex/>
@@ -44,9 +43,6 @@
           </text>
           <text id="/data/p_DistrictID:hint">
             <value></value>
-          </text>
-          <text id="/data/p_EUID:label">
-            <value>Seleccione o nome da UA</value>
           </text>
           <text id="/data/p_ClusterID:label">
             <value>Seleccione o nome do grupo</value>
@@ -149,11 +145,10 @@
       <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,8)"/>
       <bind nodeset="/data/p_RecorderID" type="int" required="true()" maxLength="2" constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="Invalid. Recorder ID code is 2 numbers long."/>
       <bind nodeset="/data/p_DistrictID" type="string" required="true()" db_get="col_1"/>
-      <bind nodeset="/data/p_EUID" type="string" required="true()" db_get="col_2" db_filter_by_col_1="/data/p_DistrictID"/>
-      <bind nodeset="/data/p_ClusterID" type="string" required="true()" db_get="col_3" db_filter_by_col_2="/data/p_EUID" db_filter_by_col_1="/data/p_DistrictID"/>
+      <bind nodeset="/data/p_ClusterID" type="string" required="true()" db_get="col_2" db_filter_by_col_1="/data/p_DistrictID"/>
       <bind nodeset="/data/p_Consent" type="select1" required="true()"/>
-      <bind nodeset="/data/p_AgeYrs" type="int" required="true()" relevant="(selected(/data/p_Consent, 'Yes'))" constraint=". > 19 and .  &#60; 121" jr:constraintMsg="The age must be greater than 19" />
-      <bind nodeset="/data/p_HowLongLived" type="int" relevant="(selected(/data/p_Consent, 'Yes'))" constraint=". > 9 and .  &#60;= /data/p_AgeYrs" jr:constraintMsg="The value must be greater than 9 and less than the age"/>
+      <bind nodeset="/data/p_AgeYrs" type="int" required="true()" relevant="(selected(/data/p_Consent, 'Yes'))" constraint=". > 19 and .  &#60; 121" jr:constraintMsg="A idade deve ser maior que 19" />
+      <bind nodeset="/data/p_HowLongLived" type="int" relevant="(selected(/data/p_Consent, 'Yes'))" constraint=". > 9 and .  &#60;= /data/p_AgeYrs" jr:constraintMsg="O valor deve ser maior que 9 e menor que a idade"/>
       <bind nodeset="/data/p_Travel" type="select1" required="true()" relevant="(selected(/data/p_Consent, 'Yes')) "/>
       <bind nodeset="/data/p_IVM" type="select1" required="true()" relevant="(selected(/data/p_Consent, 'Yes')) "/>
       <bind nodeset="/data/p_IVMWhere" type="select1" required="true()" relevant="(selected(/data/p_IVM, 'Yes')) and (selected(/data/p_Consent, 'Yes')) "/>
@@ -174,9 +169,6 @@
     <input ref="/data/p_DistrictID">
       <label ref="jr:itext('/data/p_DistrictID:label')"/>
       <hint ref="jr:itext('/data/p_DistrictID:hint')"/>
-    </input>
-    <input ref="/data/p_EUID">
-      <label ref="jr:itext('/data/p_EUID:label')"/>
     </input>
     <input ref="/data/p_ClusterID">
       <label ref="jr:itext('/data/p_ClusterID:label')"/>
