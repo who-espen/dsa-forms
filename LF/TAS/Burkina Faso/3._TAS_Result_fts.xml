@@ -308,9 +308,9 @@
           <text id="/data/duree_sejour_en_mois:label">
             <value>Durée de séjour dans la région (mois)</value>
           </text>
-                    <text id="/data/ds:label">
-                        <value>Sélectionner un DS</value>
-                    </text>
+          <text id="/data/ds:label">
+            <value>Sélectionner un DS</value>
+          </text>
         </translation>
       </itext>
       <instance>
@@ -351,9 +351,9 @@
       </instance>
       <bind nodeset="/data/code_operateur" required="true()" type="select1" db_get="col_1"/>
 
-            <bind nodeset="/data/ue" required="true()" type="string" db_get="col_1"/>
-            <bind nodeset="/data/ds" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/ue" />
-            <bind nodeset="/data/num_grappe" required="true()" type="string"  db_get="col_3" db_filter_by_col_2="/data/ds"/>
+      <bind nodeset="/data/ue" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/ds" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/ue" />
+      <bind nodeset="/data/num_grappe" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/ds"/>
 
       <bind nodeset="/data/id_methode" required="true()" type="select1"/>
       <bind nodeset="/data/barcode" relevant=" /data/id_methode  = &quot;Scanner&quot;" required="true()" type="barcode"/>
@@ -408,9 +408,9 @@
       <label ref="jr:itext('/data/ue:label')"/>
     </input>
 
-        <input ref="/data/ds">
-            <label ref="jr:itext('/data/ds:label')"/>
-        </input>
+    <input ref="/data/ds">
+      <label ref="jr:itext('/data/ds:label')"/>
+    </input>
 
     <input ref="/data/num_grappe">
       <label ref="jr:itext('/data/num_grappe:label')"/>
