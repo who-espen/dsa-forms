@@ -348,7 +348,7 @@
             <bind nodeset="/data/code_operateur" required="true()" type="select1"/>
             <bind nodeset="/data/ue" required="true()" type="string" db_get="col_1"/>
             <bind nodeset="/data/type_tas" required="true()" type="select1"/>
-            <bind nodeset="/data/ds" relevant="not (selected( /data/ue , 'Po') or selected( /data/ue , 'Manga') )" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/ue"/>
+            <bind nodeset="/data/ds" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/ue" />
             <bind nodeset="/data/num_grappe" required="true()" type="string"  db_get="col_3" db_filter_by_col_2="/data/ds"/>
             <bind constraint="regex(.,'^[a-zA-Z]{1}[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/nb_menage:jr:constraintMsg')" nodeset="/data/nb_menage" required="true()" type="string"/>
             <bind constraint=". =  /data/nb_menage " jr:constraintMsg="jr:itext('/data/nb_menage2:jr:constraintMsg')" nodeset="/data/nb_menage2" required="true()" type="string"/>
