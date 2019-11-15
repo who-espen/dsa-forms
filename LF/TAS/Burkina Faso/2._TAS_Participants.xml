@@ -15,7 +15,7 @@
                     <ue/>
                     <type_tas/>
                     <ds/>
-                    <nb_grappe/>
+                    <num_grappe/>
                     <nb_menage/>
                     <nb_menage2/>
                     <id_methode/>
@@ -227,9 +227,6 @@
                     <text id="static_instance-OuiNonSaitPas-0">
                         <value>Oui</value>
                     </text>
-                    <text id="/data/nb_grappe:jr:constraintMsg">
-                        <value>Le numéro doit être entre 1 et 35</value>
-                    </text>
                     <text id="/data/age:label">
                         <value>Age</value>
                     </text>
@@ -245,7 +242,7 @@
                     <text id="/data/ue/Kombissiri-Sapone:label">
                         <value>Kombissiri-Saponé</value>
                     </text>
-                    <text id="/data/nb_grappe:label">
+                    <text id="/data/num_grappe:label">
                         <value>N° Grappe</value>
                     </text>
                     <text id="/data/ds/Sig-noghin:label">
@@ -352,7 +349,7 @@
             <bind nodeset="/data/ue" required="true()" type="string" db_get="col_1"/>
             <bind nodeset="/data/type_tas" required="true()" type="select1"/>
             <bind nodeset="/data/ds" relevant="not (selected( /data/ue , 'Po') or selected( /data/ue , 'Manga') )" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/ue"/>
-            <bind constraint=". &gt; 0 and . &lt;= 35" jr:constraintMsg="jr:itext('/data/nb_grappe:jr:constraintMsg')" nodeset="/data/nb_grappe" required="true()" type="int"/>
+            <bind nodeset="/data/num_grappe" required="true()" type="string"  db_get="col_3" db_filter_by_col_2="/data/ds"/>
             <bind constraint="regex(.,'^[a-zA-Z]{1}[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/nb_menage:jr:constraintMsg')" nodeset="/data/nb_menage" required="true()" type="string"/>
             <bind constraint=". =  /data/nb_menage " jr:constraintMsg="jr:itext('/data/nb_menage2:jr:constraintMsg')" nodeset="/data/nb_menage2" required="true()" type="string"/>
             <bind nodeset="/data/id_methode" required="true()" type="select1"/>
@@ -411,8 +408,8 @@
             <label ref="jr:itext('/data/ds:label')"/>
         </input>
 
-        <input ref="/data/nb_grappe">
-            <label ref="jr:itext('/data/nb_grappe:label')"/>
+        <input ref="/data/num_grappe">
+            <label ref="jr:itext('/data/num_grappe:label')"/>
         </input>
         <input ref="/data/nb_menage">
             <label ref="jr:itext('/data/nb_menage:label')"/>
