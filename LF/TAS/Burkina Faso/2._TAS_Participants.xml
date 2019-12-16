@@ -1,495 +1,672 @@
-<?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" 
-    xmlns:ev="http://www.w3.org/2001/xml-events" 
-    xmlns:h="http://www.w3.org/1999/xhtml" 
-    xmlns:jr="http://openrosa.org/javarosa" 
-    xmlns:odk="http://www.opendatakit.org/xforms" 
-    xmlns:orx="http://openrosa.org/xforms" 
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <h:head>
-        <h:title>Burkina Faso TAS FL - 2. Formulaire Enrôlement V2</h:title>
-        <model>
-            <instance>
-                <data id="bf_tas-lf-enrolement-v2" version="20191115">
-                    <code_operateur/>
-                    <ue/>
-                    <type_tas/>
-                    <ds/>
-                    <num_grappe/>
-                    <nb_menage/>
-                    <nb_menage2/>
-                    <id_methode/>
-                    <barcode/>
-                    <id_manuel/>
-                    <id_manuel2/>
-                    <age/>
-                    <sexe/>
-                    <scolarise/>
-                    <ivm_alb/>
-                    <selectionne_sth/>
-                    <commentaires/>
-                    <debut_enregistrement/>
-                    <fin_enregistrement/>
-                    <meta>
-                        <instanceID/>
-                    </meta>
-                </data>
-            </instance>
-            
-            <itext>
-                <translation lang="French">
-                    <text id="/data/ds/Sapone:label">
-                        <value>Saponé</value>
-                    </text>
-                    <text id="/data/ue/Manga:label">
-                        <value>Manga</value>
-                    </text>
-                    <text id="static_instance-OuiNonSaitPas-1">
-                        <value>Non</value>
-                    </text>
-                    <text id="/data/id_manuel2:label">
-                        <value>Veullez répéter le code manuel</value>
-                    </text>
-                    <text id="/data/ivm_alb/Inconnu:label">
-                        <value>Ne sait pas</value>
-                    </text>
-                    <text id="/data/type_tas:label">
-                        <value>Type de TAS</value>
-                    </text>
-                    <text id="/data/code_operateur/04:label">
-                        <value>04</value>
-                    </text>
-                    <text id="/data/ue/Centre-Ouest1:label">
-                        <value>Centre-Ouest1</value>
-                    </text>
-                    <text id="/data/code_operateur:label">
-                        <value>Code opérateurs</value>
-                    </text>
-                    <text id="/data/ds/Nanoro:label">
-                        <value>Nanoro</value>
-                    </text>
-                    <text id="/data/type_tas/TAS3:label">
-                        <value>TAS3</value>
-                    </text>
-                    <text id="/data/code_operateur/03:label">
-                        <value>03</value>
-                    </text>
-                    <text id="/data/ue/Bogande-Manni:label">
-                        <value>Bogande-Manni</value>
-                    </text>
-                    <text id="/data/ds/Koudougou:label">
-                        <value>Koudougou</value>
-                    </text>
-                    <text id="/data/ds/Bogande:label">
-                        <value>Bogande</value>
-                    </text>
-                    <text id="/data/ds/Boulmiougou:label">
-                        <value>Boulmiougou</value>
-                    </text>
-                    <text id="/data/ivm_alb:label">
-                        <value>Déjà traité à l'Ivermectine/Albendazole</value>
-                    </text>
-                    <text id="/data/ds/Manni:label">
-                        <value>Manni</value>
-                    </text>
-                    <text id="/data/type_tas/TAS2:label">
-                        <value>TAS2</value>
-                    </text>
-                    <text id="/data/ds:label">
-                        <value>Sélectionner un DS</value>
-                    </text>
-                    <text id="static_instance-id_methodes-1">
-                        <value>Manuel</value>
-                    </text>
-                    <text id="/data/selectionne_sth/Oui:label">
-                        <value>Oui</value>
-                    </text>
-                    <text id="/data/nb_menage2:jr:constraintMsg">
-                        <value>Le code répéter est incorrect</value>
-                    </text>
-                    <text id="static_instance-id_methodes-0">
-                        <value>Scanner</value>
-                    </text>
-                    <text id="/data/ue/Po:label">
-                        <value>Po</value>
-                    </text>
-                    <text id="/data/sexe/Femelle:label">
-                        <value>Femelle</value>
-                    </text>
-                    <text id="static_instance-operateur_list-3">
-                        <value>04</value>
-                    </text>
-                    <text id="static_instance-OuiNonSaitPas-2">
-                        <value>Ne sait pas</value>
-                    </text>
-                    <text id="static_instance-operateur_list-2">
-                        <value>03</value>
-                    </text>
-                    <text id="/data/ue/Garango-Pouytenga:label">
-                        <value>Garango-Pouytenga</value>
-                    </text>
-                    <text id="/data/selectionne_sth:label">
-                        <value>Sélectionné pour STH</value>
-                    </text>
-                    <text id="/data/ivm_alb/Oui:label">
-                        <value>Oui</value>
-                    </text>
-                    <text id="/data/sexe:label">
-                        <value>Sexe</value>
-                    </text>
-                    <text id="static_instance-tas_list-1">
-                        <value>TAS3</value>
-                    </text>
-                    <text id="/data/nb_menage:label">
-                        <value>N° Ménage</value>
-                    </text>
-                    <text id="/data/scolarise:label">
-                        <value>Scolarisé</value>
-                    </text>
-                    <text id="/data/selectionne_sth/Non:label">
-                        <value>Non</value>
-                    </text>
-                    <text id="/data/ds/Nongr-Massom:label">
-                        <value>Nongr Massom</value>
-                    </text>
-                    <text id="/data/ue/Centre 3:label">
-                        <value>Centre 3</value>
-                    </text>
-                    <text id="/data/sexe/Male:label">
-                        <value>Male</value>
-                    </text>
-                    <text id="static_instance-OuiNon-1">
-                        <value>Non</value>
-                    </text>
-                    <text id="static_instance-operateur_list-0">
-                        <value>01</value>
-                    </text>
-                    <text id="/data/ds/Garango:label">
-                        <value>Garango</value>
-                    </text>
-                    <text id="/data/ds/Sabou:label">
-                        <value>Sabou</value>
-                    </text>
-                    <text id="static_instance-OuiNon-0">
-                        <value>Oui</value>
-                    </text>
-                    <text id="/data/ds/Kombissiri:label">
-                        <value>Kombissiri</value>
-                    </text>
-                    <text id="/data/commentaires:label">
-                        <value>Commentaires</value>
-                    </text>
-                    <text id="/data/nb_menage:jr:constraintMsg">
-                        <value>Le code doit contenir une lettre et trois chiffres</value>
-                    </text>
-                    <text id="/data/code_operateur/02:label">
-                        <value>02</value>
-                    </text>
-                    <text id="static_instance-sex-0">
-                        <value>Male</value>
-                    </text>
-                    <text id="/data/nb_menage2:label">
-                        <value>Répéter le N° Ménage</value>
-                    </text>
-                    <text id="/data/ds/Tenado:label">
-                        <value>Tenado</value>
-                    </text>
-                    <text id="/data/code_operateur/01:label">
-                        <value>01</value>
-                    </text>
-                    <text id="/data/id_methode:label">
-                        <value>Type d'identification</value>
-                    </text>
-                    <text id="/data/id_methode/Manuel:label">
-                        <value>Manuel</value>
-                    </text>
-                    <text id="/data/ds/Pouytenga:label">
-                        <value>Pouytenga</value>
-                    </text>
-                    <text id="/data/ue:label">
-                        <value>Sélectionner une UE</value>
-                    </text>
-                    <text id="/data/scolarise/Non:label">
-                        <value>Non</value>
-                    </text>
-                    <text id="static_instance-operateur_list-1">
-                        <value>02</value>
-                    </text>
-                    <text id="/data/id_manuel:label">
-                        <value>Entrer le code manuel</value>
-                    </text>
-                    <text id="/data/barcode:label">
-                        <value>Veillez scanner le code à barre</value>
-                    </text>
-                    <text id="/data/id_methode/Scanner:label">
-                        <value>Scanner</value>
-                    </text>
-                    <text id="static_instance-OuiNonSaitPas-0">
-                        <value>Oui</value>
-                    </text>
-                    <text id="/data/age:label">
-                        <value>Age</value>
-                    </text>
-                    <text id="/data/ivm_alb/Non:label">
-                        <value>Non</value>
-                    </text>
-                    <text id="static_instance-tas_list-0">
-                        <value>TAS2</value>
-                    </text>
-                    <text id="static_instance-sex-1">
-                        <value>Femelle</value>
-                    </text>
-                    <text id="/data/ue/Kombissiri-Sapone:label">
-                        <value>Kombissiri-Saponé</value>
-                    </text>
-                    <text id="/data/num_grappe:label">
-                        <value>N° Grappe</value>
-                    </text>
-                    <text id="/data/ds/Sig-noghin:label">
-                        <value>Sig-noghin</value>
-                    </text>
-                    <text id="/data/ds/Reo:label">
-                        <value>Réo</value>
-                    </text>
-                    <text id="/data/scolarise/Oui:label">
-                        <value>Oui</value>
-                    </text>
-                    <text id="/data/age:jr:constraintMsg">
-                        <value>Doit être entre 6 et 7 ans</value>
-                    </text>
-                </translation>
-            </itext>
-            
-            <instance id="OuiNon">
-                <root>
-                    <item>
-                        <itextId>static_instance-OuiNon-0</itextId>
-                        <name>Oui</name>
-                    </item>
-                    <item>
-                        <itextId>static_instance-OuiNon-1</itextId>
-                        <name>Non</name>
-                    </item>
-                </root>
-            </instance>
-            <instance id="operateur_list">
-                <root>
-                    <item>
-                        <itextId>static_instance-operateur_list-0</itextId>
-                        <name>01</name>
-                    </item>
-                    <item>
-                        <itextId>static_instance-operateur_list-1</itextId>
-                        <name>02</name>
-                    </item>
-                    <item>
-                        <itextId>static_instance-operateur_list-2</itextId>
-                        <name>03</name>
-                    </item>
-                    <item>
-                        <itextId>static_instance-operateur_list-3</itextId>
-                        <name>04</name>
-                    </item>
-                </root>
-            </instance>
-            <instance id="tas_list">
-                <root>
-                    <item>
-                        <itextId>static_instance-tas_list-0</itextId>
-                        <name>TAS2</name>
-                    </item>
-                    <item>
-                        <itextId>static_instance-tas_list-1</itextId>
-                        <name>TAS3</name>
-                    </item>
-                </root>
-            </instance>
-            <instance id="OuiNonSaitPas">
-                <root>
-                    <item>
-                        <itextId>static_instance-OuiNonSaitPas-0</itextId>
-                        <name>Oui</name>
-                    </item>
-                    <item>
-                        <itextId>static_instance-OuiNonSaitPas-1</itextId>
-                        <name>Non</name>
-                    </item>
-                    <item>
-                        <itextId>static_instance-OuiNonSaitPas-2</itextId>
-                        <name>Inconnu</name>
-                    </item>
-                </root>
-            </instance>
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <h:head>
+      <h:title>Burkina Faso TAS FL - 2. Formulaire Enrôlement V3</h:title>
+      <model>
+         <itext>
+            <translation lang="French">
+               <text id="/data/num_menage:jr:constraintMsg">
+                  <value>Le code doit contenir une lettre et trois chiffres</value>
+               </text>
+               <text id="/data/ue/Centre 3:label">
+                  <value>Centre 3</value>
+               </text>
+               <text id="/data/selectionne_sth/Oui:label">
+                  <value>Oui</value>
+               </text>
+               <text id="/data/type_tas:label">
+                  <value>Type de TAS</value>
+               </text>
+               <text id="static_instance-ds_list-10">
+                  <value>Garango</value>
+               </text>
+               <text id="/data/id_methode/Manuel:label">
+                  <value>Manuel</value>
+               </text>
+               <text id="static_instance-OuiNonSaitPas-1">
+                  <value>Non</value>
+               </text>
+               <text id="/data/age:jr:constraintMsg">
+                  <value>Doit être entre 6 et 7 ans</value>
+               </text>
+               <text id="/data/ue/Reo-Tenado-Sabou:label">
+                  <value>Reo-Tenado-Sabou</value>
+               </text>
+               <text id="static_instance-ue_list-3">
+                  <value>Manga</value>
+               </text>
+               <text id="/data/code_operateur/02:label">
+                  <value>02</value>
+               </text>
+               <text id="static_instance-ue_list-2">
+                  <value>Kombissiri-Saponé</value>
+               </text>
+               <text id="static_instance-ds_list-9">
+                  <value>Manni</value>
+               </text>
+               <text id="/data/ds/Nongr-Massom:label">
+                  <value>Nongr Massom</value>
+               </text>
+               <text id="/data/ds/Boulmiougou:label">
+                  <value>Boulmiougou</value>
+               </text>
+               <text id="/data/code_operateur/04:label">
+                  <value>04</value>
+               </text>
+               <text id="static_instance-ue_list-4">
+                  <value>Po</value>
+               </text>
+               <text id="/data/selectionne_sth/Non:label">
+                  <value>Non</value>
+               </text>
+               <text id="/data/ds/Tenado:label">
+                  <value>Tenado</value>
+               </text>
+               <text id="static_instance-id_methodes-1">
+                  <value>Manuel</value>
+               </text>
+               <text id="/data/ds/Garango:label">
+                  <value>Garango</value>
+               </text>
+               <text id="/data/sexe/Male:label">
+                  <value>Male</value>
+               </text>
+               <text id="static_instance-id_methodes-0">
+                  <value>Scanner</value>
+               </text>
+               <text id="/data/ue/Garango-Pouytenga:label">
+                  <value>Garango-Pouytenga</value>
+               </text>
+               <text id="/data/ds/Sabou:label">
+                  <value>Sabou</value>
+               </text>
+               <text id="static_instance-ds_list-12">
+                  <value>Kombissiri</value>
+               </text>
+               <text id="static_instance-ds_list-13">
+                  <value>Saponé</value>
+               </text>
+               <text id="/data/ue/Kombissiri-Sapone:label">
+                  <value>Kombissiri-Saponé</value>
+               </text>
+               <text id="static_instance-operateur_list-3">
+                  <value>04</value>
+               </text>
+               <text id="static_instance-OuiNonSaitPas-2">
+                  <value>Ne sait pas</value>
+               </text>
+               <text id="/data/ue/Koudougou-Nanoro:label">
+                  <value>Koudougou-Nanoro</value>
+               </text>
+               <text id="/data/commentaires:label">
+                  <value>Commentaires</value>
+               </text>
+               <text id="/data/sexe:label">
+                  <value>Sexe</value>
+               </text>
+               <text id="static_instance-operateur_list-2">
+                  <value>03</value>
+               </text>
+               <text id="static_instance-ue_list-5">
+                  <value>Bogande-Manni</value>
+               </text>
+               <text id="static_instance-ue_list-0">
+                  <value>Koudougou-Nanoro</value>
+               </text>
+               <text id="/data/ds/Manni:label">
+                  <value>Manni</value>
+               </text>
+               <text id="/data/selectionne_sth:label">
+                  <value>Sélectionné pour STH</value>
+               </text>
+               <text id="static_instance-ue_list-1">
+                  <value>Reo-Tenado-Sabou</value>
+               </text>
+               <text id="static_instance-tas_list-0">
+                  <value>TAS2</value>
+               </text>
+               <text id="/data/ds/Pouytenga:label">
+                  <value>Pouytenga</value>
+               </text>
+               <text id="/data/ivm_alb:label">
+                  <value>Déjà traité à l'Ivermectine/Albendazole</value>
+               </text>
+               <text id="static_instance-ds_list-11">
+                  <value>Pouytenga</value>
+               </text>
+               <text id="/data/ds/Kombissiri:label">
+                  <value>Kombissiri</value>
+               </text>
+               <text id="/data/num_menage2:label">
+                  <value>Répéter le N° Ménage</value>
+               </text>
+               <text id="/data/code_operateur/01:label">
+                  <value>01</value>
+               </text>
+               <text id="/data/ds:label">
+                  <value>Sélectionner un DS</value>
+               </text>
+               <text id="/data/ds/Sig-noghin:label">
+                  <value>Sig-noghin</value>
+               </text>
+               <text id="static_instance-sex-0">
+                  <value>Male</value>
+               </text>
+               <text id="static_instance-OuiNon-1">
+                  <value>Non</value>
+               </text>
+               <text id="static_instance-ds_list-6">
+                  <value>Nongr Massom</value>
+               </text>
+               <text id="static_instance-operateur_list-0">
+                  <value>01</value>
+               </text>
+               <text id="static_instance-ds_list-8">
+                  <value>Bogande</value>
+               </text>
+               <text id="/data/ds/Nanoro:label">
+                  <value>Nanoro</value>
+               </text>
+               <text id="/data/ue/Bogande-Manni:label">
+                  <value>Bogande-Manni</value>
+               </text>
+               <text id="/data/num_grappe:label">
+                  <value>N° Grappe</value>
+               </text>
+               <text id="static_instance-OuiNon-0">
+                  <value>Oui</value>
+               </text>
+               <text id="/data/id_methode:label">
+                  <value>Type d'identification</value>
+               </text>
+               <text id="/data/ds/Koudougou:label">
+                  <value>Koudougou</value>
+               </text>
+               <text id="/data/type_tas/TAS2:label">
+                  <value>TAS2</value>
+               </text>
+               <text id="/data/scolarise:label">
+                  <value>Scolarisé</value>
+               </text>
+               <text id="static_instance-ds_list-5">
+                  <value>Boulmiougou</value>
+               </text>
+               <text id="/data/id_manuel:label">
+                  <value>Entrer le code manuel</value>
+               </text>
+               <text id="/data/ivm_alb/Inconnu:label">
+                  <value>Ne sait pas</value>
+               </text>
+               <text id="/data/type_tas/TAS3:label">
+                  <value>TAS3</value>
+               </text>
+               <text id="/data/num_menage:label">
+                  <value>N° Ménage</value>
+               </text>
+               <text id="/data/id_manuel2:label">
+                  <value>Veullez répéter le code manuel</value>
+               </text>
+               <text id="/data/ue/Po:label">
+                  <value>Po</value>
+               </text>
+               <text id="static_instance-ue_list-6">
+                  <value>Centre 3</value>
+               </text>
+               <text id="static_instance-ds_list-7">
+                  <value>Sig-noghin</value>
+               </text>
+               <text id="/data/ds/Reo:label">
+                  <value>Réo</value>
+               </text>
+               <text id="/data/ue/Manga:label">
+                  <value>Manga</value>
+               </text>
+               <text id="/data/ds/Sapone:label">
+                  <value>Saponé</value>
+               </text>
+               <text id="/data/barcode:label">
+                  <value>Veillez scanner le code à barre</value>
+               </text>
+               <text id="/data/id_methode/Scanner:label">
+                  <value>Scanner</value>
+               </text>
+               <text id="/data/scolarise/Oui:label">
+                  <value>Oui</value>
+               </text>
+               <text id="static_instance-ue_list-7">
+                  <value>Garango-Pouytenga</value>
+               </text>
+               <text id="static_instance-ds_list-2">
+                  <value>Tenado</value>
+               </text>
+               <text id="static_instance-operateur_list-1">
+                  <value>02</value>
+               </text>
+               <text id="/data/num_grappe:jr:constraintMsg">
+                  <value>Le numéro doit être entre 1 et 35</value>
+               </text>
+               <text id="/data/num_menage2:jr:constraintMsg">
+                  <value>Le code répéter est incorrect</value>
+               </text>
+               <text id="static_instance-ds_list-0">
+                  <value>Koudougou</value>
+               </text>
+               <text id="static_instance-OuiNonSaitPas-0">
+                  <value>Oui</value>
+               </text>
+               <text id="static_instance-ds_list-3">
+                  <value>Nanoro</value>
+               </text>
+               <text id="/data/age:label">
+                  <value>Age</value>
+               </text>
+               <text id="/data/ivm_alb/Non:label">
+                  <value>Non</value>
+               </text>
+               <text id="static_instance-tas_list-1">
+                  <value>TAS3</value>
+               </text>
+               <text id="/data/ivm_alb/Oui:label">
+                  <value>Oui</value>
+               </text>
+               <text id="static_instance-sex-1">
+                  <value>Femelle</value>
+               </text>
+               <text id="/data/ds/Bogande:label">
+                  <value>Bogande</value>
+               </text>
+               <text id="/data/code_operateur:label">
+                  <value>Code opérateurs</value>
+               </text>
+               <text id="static_instance-ds_list-4">
+                  <value>Sabou</value>
+               </text>
+               <text id="/data/sexe/Femelle:label">
+                  <value>Femelle</value>
+               </text>
+               <text id="/data/ue:label">
+                  <value>Sélectionner une UE</value>
+               </text>
+               <text id="/data/scolarise/Non:label">
+                  <value>Non</value>
+               </text>
+               <text id="static_instance-ds_list-1">
+                  <value>Réo</value>
+               </text>
+               <text id="/data/code_operateur/03:label">
+                  <value>03</value>
+               </text>
+            </translation>
+         </itext>
+         <instance>
+            <data id="bf_tas_lf_enrolement" version="20191216">
+               <code_operateur />
+               <ue />
+               <type_tas />
+               <ds />
+               <num_grappe />
+               <num_menage />
+               <num_menage2 />
+               <id_methode />
+               <barcode />
+               <id_manuel />
+               <id_manuel2 />
+               <age />
+               <sexe />
+               <scolarise />
+               <ivm_alb />
+               <selectionne_sth />
+               <commentaires />
+               <debut_enregistrement />
+               <fin_enregistrement />
+               <meta>
+                  <instanceID />
+               </meta>
+            </data>
+         </instance>
+         <instance id="OuiNon">
+            <root>
+               <item>
+                  <itextId>static_instance-OuiNon-0</itextId>
+                  <name>Oui</name>
+               </item>
+               <item>
+                  <itextId>static_instance-OuiNon-1</itextId>
+                  <name>Non</name>
+               </item>
+            </root>
+         </instance>
+         <instance id="ue_list">
+            <root>
+               <item>
+                  <itextId>static_instance-ue_list-0</itextId>
+                  <name>Koudougou-Nanoro</name>
+               </item>
+               <item>
+                  <itextId>static_instance-ue_list-1</itextId>
+                  <name>Reo-Tenado-Sabou</name>
+               </item>
+               <item>
+                  <itextId>static_instance-ue_list-2</itextId>
+                  <name>Kombissiri-Sapone</name>
+               </item>
+               <item>
+                  <itextId>static_instance-ue_list-3</itextId>
+                  <name>Manga</name>
+               </item>
+               <item>
+                  <itextId>static_instance-ue_list-4</itextId>
+                  <name>Po</name>
+               </item>
+               <item>
+                  <itextId>static_instance-ue_list-5</itextId>
+                  <name>Bogande-Manni</name>
+               </item>
+               <item>
+                  <itextId>static_instance-ue_list-6</itextId>
+                  <name>Centre 3</name>
+               </item>
+               <item>
+                  <itextId>static_instance-ue_list-7</itextId>
+                  <name>Garango-Pouytenga</name>
+               </item>
+            </root>
+         </instance>
+         <instance id="operateur_list">
+            <root>
+               <item>
+                  <itextId>static_instance-operateur_list-0</itextId>
+                  <name>01</name>
+               </item>
+               <item>
+                  <itextId>static_instance-operateur_list-1</itextId>
+                  <name>02</name>
+               </item>
+               <item>
+                  <itextId>static_instance-operateur_list-2</itextId>
+                  <name>03</name>
+               </item>
+               <item>
+                  <itextId>static_instance-operateur_list-3</itextId>
+                  <name>04</name>
+               </item>
+            </root>
+         </instance>
+         <instance id="tas_list">
+            <root>
+               <item>
+                  <itextId>static_instance-tas_list-0</itextId>
+                  <name>TAS2</name>
+               </item>
+               <item>
+                  <itextId>static_instance-tas_list-1</itextId>
+                  <name>TAS3</name>
+               </item>
+            </root>
+         </instance>
+         <instance id="OuiNonSaitPas">
+            <root>
+               <item>
+                  <itextId>static_instance-OuiNonSaitPas-0</itextId>
+                  <name>Oui</name>
+               </item>
+               <item>
+                  <itextId>static_instance-OuiNonSaitPas-1</itextId>
+                  <name>Non</name>
+               </item>
+               <item>
+                  <itextId>static_instance-OuiNonSaitPas-2</itextId>
+                  <name>Inconnu</name>
+               </item>
+            </root>
+         </instance>
+         <instance id="ds_list">
+            <root>
+               <item>
+                  <itextId>static_instance-ds_list-0</itextId>
+                  <name>Koudougou</name>
+                  <ue_list>Koudougou-Nanoro</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-1</itextId>
+                  <name>Reo</name>
+                  <ue_list>Reo-Tenado-Sabou</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-2</itextId>
+                  <name>Tenado</name>
+                  <ue_list>Reo-Tenado-Sabou</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-3</itextId>
+                  <name>Nanoro</name>
+                  <ue_list>Koudougou-Nanoro</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-4</itextId>
+                  <name>Sabou</name>
+                  <ue_list>Reo-Tenado-Sabou</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-5</itextId>
+                  <name>Boulmiougou</name>
+                  <ue_list>Centre 3</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-6</itextId>
+                  <name>Nongr-Massom</name>
+                  <ue_list>Centre 3</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-7</itextId>
+                  <name>Sig-noghin</name>
+                  <ue_list>Centre 3</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-8</itextId>
+                  <name>Bogande</name>
+                  <ue_list>Bogande-Manni</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-9</itextId>
+                  <name>Manni</name>
+                  <ue_list>Bogande-Manni</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-10</itextId>
+                  <name>Garango</name>
+                  <ue_list>Garango-Pouytenga</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-11</itextId>
+                  <name>Pouytenga</name>
+                  <ue_list>Garango-Pouytenga</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-12</itextId>
+                  <name>Kombissiri</name>
+                  <ue_list>Kombissiri-Sapone</ue_list>
+               </item>
+               <item>
+                  <itextId>static_instance-ds_list-13</itextId>
+                  <name>Sapone</name>
+                  <ue_list>Kombissiri-Sapone</ue_list>
+               </item>
+            </root>
+         </instance>
+         <instance id="id_methodes">
+            <root>
+               <item>
+                  <itextId>static_instance-id_methodes-0</itextId>
+                  <name>Scanner</name>
+               </item>
+               <item>
+                  <itextId>static_instance-id_methodes-1</itextId>
+                  <name>Manuel</name>
+               </item>
+            </root>
+         </instance>
+         <instance id="sex">
+            <root>
+               <item>
+                  <itextId>static_instance-sex-0</itextId>
+                  <name>Male</name>
+               </item>
+               <item>
+                  <itextId>static_instance-sex-1</itextId>
+                  <name>Femelle</name>
+               </item>
+            </root>
+         </instance>
+         <bind nodeset="/data/code_operateur" required="true()" type="select1" />
+         <bind nodeset="/data/ue" required="true()" type="string" db_get="col_1"/>
+         <bind nodeset="/data/type_tas" required="true()" type="select1" />
+         <bind nodeset="/data/ds" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/ue" />
 
-            <instance id="id_methodes">
-                <root>
-                    <item>
-                        <itextId>static_instance-id_methodes-0</itextId>
-                        <name>Scanner</name>
-                    </item>
-                    <item>
-                        <itextId>static_instance-id_methodes-1</itextId>
-                        <name>Manuel</name>
-                    </item>
-                </root>
-            </instance>
-            <instance id="sex">
-                <root>
-                    <item>
-                        <itextId>static_instance-sex-0</itextId>
-                        <name>Male</name>
-                    </item>
-                    <item>
-                        <itextId>static_instance-sex-1</itextId>
-                        <name>Femelle</name>
-                    </item>
-                </root>
-            </instance>
-            <bind nodeset="/data/code_operateur" required="true()" type="select1"/>
-            <bind nodeset="/data/ue" required="true()" type="string" db_get="col_1"/>
-            <bind nodeset="/data/type_tas" required="true()" type="select1"/>
-            <bind nodeset="/data/ds" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/ue" />
-            <bind nodeset="/data/num_grappe" required="true()" type="string"  db_get="col_3" db_filter_by_col_2="/data/ds"/>
-            <bind constraint="regex(.,'^[a-zA-Z]{1}[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/nb_menage:jr:constraintMsg')" nodeset="/data/nb_menage" required="true()" type="string"/>
-            <bind constraint=". =  /data/nb_menage " jr:constraintMsg="jr:itext('/data/nb_menage2:jr:constraintMsg')" nodeset="/data/nb_menage2" required="true()" type="string"/>
-            <bind nodeset="/data/id_methode" required="true()" type="select1"/>
-            <bind nodeset="/data/barcode" relevant=" /data/id_methode  = &quot;Scanner&quot;" required="true()" type="barcode"/>
-            <bind nodeset="/data/id_manuel" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
-            <bind constraint=". =  /data/id_manuel " nodeset="/data/id_manuel2" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
-            <bind constraint=". &gt;=6 and . &lt;=7" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" required="true()" type="int"/>
-            <bind nodeset="/data/sexe" required="true()" type="select1"/>
-            <bind nodeset="/data/scolarise" required="true()" type="select1"/>
-            <bind nodeset="/data/ivm_alb" required="true()" type="select1"/>
-            <bind nodeset="/data/selectionne_sth" required="true()" type="select1"/>
-            <bind nodeset="/data/commentaires" type="string"/>
-            <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/debut_enregistrement" type="dateTime"/>
-            <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/fin_enregistrement" type="dateTime"/>
-            <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-        </model>
-    </h:head>
-    <h:body>
-        <select1 ref="/data/code_operateur">
-            <label ref="jr:itext('/data/code_operateur:label')"/>
-            <item>
-                <label ref="jr:itext('/data/code_operateur/01:label')"/>
-                <value>01</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/code_operateur/02:label')"/>
-                <value>02</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/code_operateur/03:label')"/>
-                <value>03</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/code_operateur/04:label')"/>
-                <value>04</value>
-            </item>
-        </select1>      
-        
+         <bind nodeset="/data/num_grappe" required="true()" type="string" constraint=". &gt; 0 and . &lt;= 35" jr:constraintMsg="jr:itext('/data/num_grappe:jr:constraintMsg')" db_get="col_3" db_filter_by_col_2="/data/ds"/>
+
+         <bind nodeset="/data/num_menage" required="true()" type="string" constraint="regex(.,'^[a-zA-Z]{1}[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/num_menage:jr:constraintMsg')" />
+         <bind constraint=". =  /data/num_menage " jr:constraintMsg="jr:itext('/data/num_menage2:jr:constraintMsg')" nodeset="/data/num_menage2" required="true()" type="string" />
+         <bind nodeset="/data/id_methode" required="true()" type="select1" />
+         <bind nodeset="/data/barcode" relevant=" /data/id_methode  = &quot;Scanner&quot;" required="true()" type="barcode" />
+         <bind nodeset="/data/id_manuel" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string" />
+         <bind constraint=". =  /data/id_manuel " nodeset="/data/id_manuel2" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string" />
+         <bind constraint=". &gt;=6 and . &lt;=7" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" required="true()" type="int" />
+         <bind nodeset="/data/sexe" required="true()" type="select1" />
+         <bind nodeset="/data/scolarise" required="true()" type="select1" />
+         <bind nodeset="/data/ivm_alb" required="true()" type="select1" />
+         <bind nodeset="/data/selectionne_sth" required="true()" type="select1" />
+         <bind nodeset="/data/commentaires" type="string" />
+         <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/debut_enregistrement" type="dateTime" />
+         <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/fin_enregistrement" type="dateTime" />
+         <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string" />
+      </model>
+   </h:head>
+   <h:body>
+      <select1 ref="/data/code_operateur">
+         <label ref="jr:itext('/data/code_operateur:label')" />
+         <item>
+            <label ref="jr:itext('/data/code_operateur/01:label')" />
+            <value>01</value>
+         </item>
+         <item>
+            <label ref="jr:itext('/data/code_operateur/02:label')" />
+            <value>02</value>
+         </item>
+         <item>
+            <label ref="jr:itext('/data/code_operateur/03:label')" />
+            <value>03</value>
+         </item>
+         <item>
+            <label ref="jr:itext('/data/code_operateur/04:label')" />
+            <value>04</value>
+         </item>
+      </select1>
+
+
         <input ref="/data/ue">
             <label ref="jr:itext('/data/ue:label')"/>
         </input>
 
-        <select1 ref="/data/type_tas">
-            <label ref="jr:itext('/data/type_tas:label')"/>
-            <item>
-                <label ref="jr:itext('/data/type_tas/TAS2:label')"/>
-                <value>TAS2</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/type_tas/TAS3:label')"/>
-                <value>TAS3</value>
-            </item>
-        </select1>
-        
-        <input ref="/data/ds">
-            <label ref="jr:itext('/data/ds:label')"/>
-        </input>
+      <select1 ref="/data/type_tas">
+         <label ref="jr:itext('/data/type_tas:label')" />
+         <item>
+            <label ref="jr:itext('/data/type_tas/TAS2:label')" />
+            <value>TAS2</value>
+         </item>
+         <item>
+            <label ref="jr:itext('/data/type_tas/TAS3:label')" />
+            <value>TAS3</value>
+         </item>
+      </select1>
 
-        <input ref="/data/num_grappe">
-            <label ref="jr:itext('/data/num_grappe:label')"/>
-        </input>
-        <input ref="/data/nb_menage">
-            <label ref="jr:itext('/data/nb_menage:label')"/>
-        </input>
-        <input ref="/data/nb_menage2">
-            <label ref="jr:itext('/data/nb_menage2:label')"/>
-        </input>
-        <select1 ref="/data/id_methode">
-            <label ref="jr:itext('/data/id_methode:label')"/>
-            <item>
-                <label ref="jr:itext('/data/id_methode/Scanner:label')"/>
-                <value>Scanner</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/id_methode/Manuel:label')"/>
-                <value>Manuel</value>
-            </item>
-        </select1>
-        <input ref="/data/barcode">
-            <label ref="jr:itext('/data/barcode:label')"/>
-        </input>
-        <input ref="/data/id_manuel">
-            <label ref="jr:itext('/data/id_manuel:label')"/>
-        </input>
-        <input ref="/data/id_manuel2">
-            <label ref="jr:itext('/data/id_manuel2:label')"/>
-        </input>
-        <input ref="/data/age">
-            <label ref="jr:itext('/data/age:label')"/>
-        </input>
-        <select1 ref="/data/sexe">
-            <label ref="jr:itext('/data/sexe:label')"/>
-            <item>
-                <label ref="jr:itext('/data/sexe/Male:label')"/>
-                <value>Male</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/sexe/Femelle:label')"/>
-                <value>Femelle</value>
-            </item>
-        </select1>
-        <select1 ref="/data/scolarise">
-            <label ref="jr:itext('/data/scolarise:label')"/>
-            <item>
-                <label ref="jr:itext('/data/scolarise/Oui:label')"/>
-                <value>Oui</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/scolarise/Non:label')"/>
-                <value>Non</value>
-            </item>
-        </select1>
-        <select1 ref="/data/ivm_alb">
-            <label ref="jr:itext('/data/ivm_alb:label')"/>
-            <item>
-                <label ref="jr:itext('/data/ivm_alb/Oui:label')"/>
-                <value>Oui</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/ivm_alb/Non:label')"/>
-                <value>Non</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/ivm_alb/Inconnu:label')"/>
-                <value>Inconnu</value>
-            </item>
-        </select1>
-        <select1 ref="/data/selectionne_sth">
-            <label ref="jr:itext('/data/selectionne_sth:label')"/>
-            <item>
-                <label ref="jr:itext('/data/selectionne_sth/Oui:label')"/>
-                <value>Oui</value>
-            </item>
-            <item>
-                <label ref="jr:itext('/data/selectionne_sth/Non:label')"/>
-                <value>Non</value>
-            </item>
-        </select1>
-        <input ref="/data/commentaires">
-            <label ref="jr:itext('/data/commentaires:label')"/>
-        </input>
-    </h:body>
+
+      <input ref="/data/ds">
+         <label ref="jr:itext('/data/ds:label')" />
+      </input>
+
+      <input ref="/data/num_grappe">
+         <label ref="jr:itext('/data/num_grappe:label')" />
+      </input>
+      <input ref="/data/num_menage">
+         <label ref="jr:itext('/data/num_menage:label')" />
+      </input>
+      <input ref="/data/num_menage2">
+         <label ref="jr:itext('/data/num_menage2:label')" />
+      </input>
+      <select1 ref="/data/id_methode">
+         <label ref="jr:itext('/data/id_methode:label')" />
+         <item>
+            <label ref="jr:itext('/data/id_methode/Scanner:label')" />
+            <value>Scanner</value>
+         </item>
+         <item>
+            <label ref="jr:itext('/data/id_methode/Manuel:label')" />
+            <value>Manuel</value>
+         </item>
+      </select1>
+      <input ref="/data/barcode">
+         <label ref="jr:itext('/data/barcode:label')" />
+      </input>
+      <input ref="/data/id_manuel">
+         <label ref="jr:itext('/data/id_manuel:label')" />
+      </input>
+      <input ref="/data/id_manuel2">
+         <label ref="jr:itext('/data/id_manuel2:label')" />
+      </input>
+      <input ref="/data/age">
+         <label ref="jr:itext('/data/age:label')" />
+      </input>
+      <select1 ref="/data/sexe">
+         <label ref="jr:itext('/data/sexe:label')" />
+         <item>
+            <label ref="jr:itext('/data/sexe/Male:label')" />
+            <value>Male</value>
+         </item>
+         <item>
+            <label ref="jr:itext('/data/sexe/Femelle:label')" />
+            <value>Femelle</value>
+         </item>
+      </select1>
+      <select1 ref="/data/scolarise">
+         <label ref="jr:itext('/data/scolarise:label')" />
+         <item>
+            <label ref="jr:itext('/data/scolarise/Oui:label')" />
+            <value>Oui</value>
+         </item>
+         <item>
+            <label ref="jr:itext('/data/scolarise/Non:label')" />
+            <value>Non</value>
+         </item>
+      </select1>
+      <select1 ref="/data/ivm_alb">
+         <label ref="jr:itext('/data/ivm_alb:label')" />
+         <item>
+            <label ref="jr:itext('/data/ivm_alb/Oui:label')" />
+            <value>Oui</value>
+         </item>
+         <item>
+            <label ref="jr:itext('/data/ivm_alb/Non:label')" />
+            <value>Non</value>
+         </item>
+         <item>
+            <label ref="jr:itext('/data/ivm_alb/Inconnu:label')" />
+            <value>Inconnu</value>
+         </item>
+      </select1>
+      <select1 ref="/data/selectionne_sth">
+         <label ref="jr:itext('/data/selectionne_sth:label')" />
+         <item>
+            <label ref="jr:itext('/data/selectionne_sth/Oui:label')" />
+            <value>Oui</value>
+         </item>
+         <item>
+            <label ref="jr:itext('/data/selectionne_sth/Non:label')" />
+            <value>Non</value>
+         </item>
+      </select1>
+      <input ref="/data/commentaires">
+         <label ref="jr:itext('/data/commentaires:label')" />
+      </input>
+   </h:body>
 </h:html>
