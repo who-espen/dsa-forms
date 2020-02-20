@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>3. IVM+ALB Coverage - Household Members</h:title>
+    <model>
+
+      <instance>
+        <data id="household_members_cs_ss" version="2000214">
+          <m_recorderID/>
+          <m_villageName/>
+          <m_villageCode/>
+          <m_hh_code/>
+          <m_respondent/>
+          <m_respondentID/>
+          <m_age_years/>
+          <m_sex/>
+          <m_marital_status/>
+          <m_how_long_lived/>
+          <m_education_level/>
+          <m_main_source_income/>
+          <m_main_source_income_other/>
+          <m_ivm_swallowed/>
+          <m_ald_swallowed/>
+          <m_imv_alb_place/>
+          <m_take_tablet_how/>
+          <m_reason_not_swallowed/>
+          <m_reason_not_swallowed_other/>
+          <m_ivm_last_time/>
+          <m_hear_mass_treatment/>
+          <m_hear_mass_treatment_other/>
+          <m_imv_alb_usedfor/>
+          <m_decide_take_treatment/>
+          <m_had_heard_lfoncho/>
+          <m_notes/>
+          <m_start/>
+          <m_end/>
+          <meta>
+            <instanceID/>
+            <randomnum/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/m_reason_not_swallowed/Refusal:label">
+            <value>6=Refusal</value>
+          </text>
+          <text id="/data/m_education_level/Don't know:label">
+            <value>5=Don't know</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment/Posters:label">
+            <value>2=Posters</value>
+          </text>
+          <text id="/data/m_ald_swallowed/Yes:label">
+            <value>1=Yes</value>
+          </text>
+          <text id="/data/m_ivm_swallowed:jr:constraintMsg">
+            <value>La valeure ne peut pas être supérieure à l'age</value>
+          </text>
+          <text id="/data/m_decide_take_treatment/Don't know:label">
+            <value>5=Don't know</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed/Feels.Healthy:label">
+            <value>8=Feels Healthy</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed/Other:label">
+            <value>10=Other(specify)</value>
+          </text>
+          <text id="/data/m_decide_take_treatment:label">
+            <value>13. Who decided whether you took the treatment or Not</value>
+          </text>
+          <text id="/data/m_education_level:label">
+            <value>8. What level of education attained?</value>
+          </text>
+          <text id="/data/m_take_tablet_how/Do Not remember:label">
+            <value>4=Do Not remember</value>
+          </text>
+          <text id="/data/m_imv_alb_place/Don't know:label">
+            <value>6=Don't know</value>
+          </text>
+          <text id="/data/m_notes:label">
+            <value>Additionnal notes</value>
+          </text>
+          <text id="/data/m_imv_alb_usedfor/Treatment for LF, Oncho or Worms:label">
+            <value>2=Treatment for LF, Oncho or Worms</value>
+          </text>
+          <text id="/data/m_respondentID:label">
+            <value>3b. Respondent ID</value>
+          </text>
+          <text id="/data/m_ivm_last_time/NA:label">
+            <value>3=N/A</value>
+          </text>
+          <text id="/data/m_imv_alb_place/School:label">
+            <value>1=School</value>
+          </text>
+          <text id="/data/m_education_level/Lower primary (P1-P4):label">
+            <value>1=Lower primary (P1-P4)</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed_other:label">
+            <value>Please, specify the other reason you did not take IVM or LAB</value>
+          </text>
+          <text id="/data/m_ivm_last_time/2017.or.earlier:label">
+            <value>2=2017 or earlier</value>
+          </text>
+          <text id="/data/m_marital_status/NA:label">
+            <value>5=N/A</value>
+          </text>
+          <text id="/data/m_education_level/Never attended school:label">
+            <value>0=Never attended school</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment/Radio:label">
+            <value>1=Radio</value>
+          </text>
+          <text id="/data/m_take_tablet_how/I took some not all of them.:label">
+            <value>3=I took some not all of them.</value>
+          </text>
+          <text id="/data/m_had_heard_lfoncho/No:label">
+            <value>2=No</value>
+          </text>
+          <text id="/data/m_main_source_income/Farming:label">
+            <value>2=Farming</value>
+          </text>
+          <text id="/data/m_main_source_income/NA:label">
+            <value>6=N/A</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment/Others:label">
+            <value>10=Others</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed/Pregnancy:label">
+            <value>2=Pregnancy</value>
+          </text>
+          <text id="/data/m_main_source_income:label">
+            <value>9. Main source of income</value>
+          </text>
+          <text id="/data/m_recorderID:jr:constraintMsg">
+            <value>Invalid! Recorder ID code is 2 numbers long.</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed/Nobody.came:label">
+            <value>9=Nobody came</value>
+          </text>
+          <text id="/data/m_decide_take_treatment/Drug Distributor/Health Workers:label">
+            <value>3=Drug Distributor/Health Workers</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment/Did.Not.hear:label">
+            <value>9=Did Not hear</value>
+          </text>
+          <text id="/data/m_imv_alb_place/Home:label">
+            <value>2=Home</value>
+          </text>
+          <text id="/data/m_had_heard_lfoncho/Yes:label">
+            <value>1=Yes</value>
+          </text>
+          <text id="/data/m_main_source_income/None:label">
+            <value>1=None</value>
+          </text>
+          <text id="/data/m_age_years:label">
+            <value>4. Age (Years)</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed/Fear.of.side.effects:label">
+            <value>7=Fear of side effects</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed:label">
+            <value>10a. If not, why did you not take the IVM or ALB?</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment/TV_News.paper:label">
+            <value>7=TV/News paper</value>
+          </text>
+          <text id="/data/m_imv_alb_usedfor:label">
+            <value>12. What disease is IVM, ALB used for?</value>
+          </text>
+          <text id="/data/m_hh_code:label">
+            <value>Select the house hold code</value>
+          </text>
+          <text id="/data/m_imv_alb_place/Central place:label">
+            <value>4=Central place</value>
+          </text>
+          <text id="/data/m_ivm_swallowed/Yes:label">
+            <value>1=Yes</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment:label">
+            <value>11. Where Did you hear about the mass treatment?</value>
+          </text>
+          <text id="/data/m_ivm_last_time:label">
+            <value>10b. When was the last time you took IVM or ALB before this present campaign?</value>
+          </text>
+          <text id="/data/m_ivm_swallowed:label">
+            <value>9a. Did you swallow the ivermectin during the MDA</value>
+          </text>
+          <text id="/data/m_how_long_lived/&lt; 3 months:label">
+            <value>1= &lt; 3 months</value>
+          </text>
+          <text id="/data/m_take_tablet_how:label">
+            <value>9d. How did you the take tablets</value>
+          </text>
+          <text id="/data/m_sex/Femelle:label">
+            <value>2=Femelle</value>
+          </text>
+          <text id="/data/m_marital_status:label">
+            <value>6. Marital status</value>
+          </text>
+          <text id="/data/m_imv_alb_place/Others:label">
+            <value>5=Others</value>
+          </text>
+          <text id="/data/m_education_level/Secondary:label">
+            <value>3=Secondary</value>
+          </text>
+          <text id="/data/m_main_source_income/Salaried:label">
+            <value>4=Salaried</value>
+          </text>
+          <text id="/data/m_ald_swallowed/Not eligible:label">
+            <value>4= Not eligible</value>
+          </text>
+          <text id="/data/m_main_source_income_other:label">
+            <value>Please, specify the income</value>
+          </text>
+          <text id="/data/m_main_source_income/Other:label">
+            <value>5=Others, Specify</value>
+          </text>
+          <text id="/data/m_take_tablet_how/All at the same time.:label">
+            <value>1=All at the same time.</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment/Place.of.Worship:label">
+            <value>6=Place of Worship</value>
+          </text>
+          <text id="/data/m_villageCode:label">
+            <value>Select the village code</value>
+          </text>
+          <text id="/data/m_take_tablet_how/NA:label">
+            <value>5=N/A</value>
+          </text>
+          <text id="/data/m_had_heard_lfoncho:label">
+            <value>14. Before today's conversation, had you ever heard of LF/Oncho?</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment/Teachers:label">
+            <value>4=Teachers</value>
+          </text>
+          <text id="/data/m_age_years:jr:constraintMsg">
+            <value>Please, enter a valide age.</value>
+          </text>
+          <text id="/data/m_decide_take_treatment/Me:label">
+            <value>1=Me</value>
+          </text>
+          <text id="/data/m_ivm_swallowed/Don't know:label">
+            <value>3=Don't know</value>
+          </text>
+          <text id="/data/m_respondent/Someone on their behalf as underage:label">
+            <value>3= Someone on their behalf as underage</value>
+          </text>
+          <text id="/data/m_main_source_income/Self employed:label">
+            <value>3=Self employed</value>
+          </text>
+          <text id="/data/m_imv_alb_place:label">
+            <value>9c. Where Did you take IVM or ALB from?</value>
+          </text>
+          <text id="/data/m_imv_alb_usedfor/Other disease:label">
+            <value>4=Other disease</value>
+          </text>
+          <text id="/data/m_ald_swallowed:label">
+            <value>9b. Did you swallow the Albendazole during the MDA round in</value>
+          </text>
+          <text id="/data/m_ivm_swallowed/Not eligible:label">
+            <value>4= Not eligible</value>
+          </text>
+          <text id="/data/m_marital_status/Single:label">
+            <value>1=Single</value>
+          </text>
+          <text id="/data/m_sex/Male:label">
+            <value>1=Male</value>
+          </text>
+          <text id="/data/m_main_source_income:jr:constraintMsg">
+            <value>La valeure ne peut pas être supérieure à l'age</value>
+          </text>
+          <text id="/data/m_how_long_lived:label">
+            <value>7. How long have you been living in this village?</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed/under.5.years:label">
+            <value>1=under 5 years</value>
+          </text>
+          <text id="/data/m_sex:label">
+            <value>5. Sex</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment/Village.Meeting:label">
+            <value>5=Village Meeting</value>
+          </text>
+          <text id="/data/m_decide_take_treatment/Family member:label">
+            <value>2=Family member</value>
+          </text>
+          <text id="/data/m_ald_swallowed/No:label">
+            <value>2=No (go to 10)</value>
+          </text>
+          <text id="/data/m_education_level/Tertiary:label">
+            <value>4=Tertiary</value>
+          </text>
+          <text id="/data/m_ivm_last_time/2018:label">
+            <value>1=2018</value>
+          </text>
+          <text id="/data/m_education_level/Upper primary (P5-P8):label">
+            <value>2=Upper primary (P5-P8)</value>
+          </text>
+          <text id="/data/m_villageName:label">
+            <value>Select the village name</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed/Sick:label">
+            <value>4=Sick</value>
+          </text>
+          <text id="/data/m_had_heard_lfoncho/Don't Know:label">
+            <value>3=Don't Know</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed/Absent:label">
+            <value>5=Absent</value>
+          </text>
+          <text id="/data/m_how_long_lived/&gt; 3 months:label">
+            <value>2= &gt; 3 months</value>
+          </text>
+          <text id="/data/m_take_tablet_how/I was given tablets but did not swollen them.:label">
+            <value>2=I was given tablets but did not swollen them.</value>
+          </text>
+          <text id="/data/m_ivm_swallowed/No:label">
+            <value>2=No (go to 10)</value>
+          </text>
+          <text id="/data/m_respondent/Someone on their behalf as absent:label">
+            <value>2= Someone on their behalf as absent</value>
+          </text>
+          <text id="/data/m_marital_status/Married:label">
+            <value>2=Married</value>
+          </text>
+          <text id="/data/m_ald_swallowed/Don't know:label">
+            <value>3=Don't know</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment/Health.worker:label">
+            <value>3=Health worker</value>
+          </text>
+          <text id="/data/m_marital_status/Widow:label">
+            <value>4=Widow(er)</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment/Town.criers:label">
+            <value>8=Town criers</value>
+          </text>
+          <text id="/data/m_imv_alb_place/Health Centre:label">
+            <value>3=Health Centre</value>
+          </text>
+          <text id="/data/m_decide_take_treatment/Others:label">
+            <value>6=Others</value>
+          </text>
+          <text id="/data/m_imv_alb_usedfor/Don't Know:label">
+            <value>1=Don't Know</value>
+          </text>
+          <text id="/data/m_recorderID:hint">
+            <value>Two digit code affected to you</value>
+          </text>
+          <text id="/data/m_hear_mass_treatment_other:label">
+            <value>11b. Please specify the other sources</value>
+          </text>
+          <text id="/data/m_recorderID:label">
+            <value>2. Enter the recorder ID</value>
+          </text>
+          <text id="/data/m_respondent/Themselves:label">
+            <value>1= Themselves</value>
+          </text>
+          <text id="/data/m_respondent:label">
+            <value>3. Person responding to the questions</value>
+          </text>
+          <text id="/data/m_imv_alb_place/NA:label">
+            <value>7=N/A</value>
+          </text>
+          <text id="/data/m_reason_not_swallowed/BF&lt;a.week:label">
+            <value>3=BF&lt;a week</value>
+          </text>
+          <text id="/data/m_marital_status/Separated_Divorced:label">
+            <value>3=Separated/ Divorced</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/m_recorderID" constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/m_recorderID:jr:constraintMsg')" required="true()" type="int"/>
+      <bind nodeset="/data/m_villageName" required="true()" type="string" db_get="col_6" />
+      <bind nodeset="/data/m_villageCode" required="true()" type="string" db_get="col_7" db_filter_by_col_6="/data/m_villageName"/>
+      <bind nodeset="/data/m_hh_code" required="true()" type="string" db_get="col_8" db_filter_by_col_7="/data/m_villageCode"/>
+      <bind nodeset="/data/m_respondent" required="true()" type="string"/>
+      <bind nodeset="/data/m_respondentID" type="string" calculate="concat(/data/m_hh_code,'-',/data/meta/randomnum)" readonly="true()"/>
+      <bind constraint=". &gt;= 5 and .&lt;120" jr:constraintMsg="jr:itext('/data/m_age_years:jr:constraintMsg')" nodeset="/data/m_age_years" required="true()" type="int"/>
+      <bind nodeset="/data/m_sex" required="true()" type="string"/>
+      <bind nodeset="/data/m_marital_status" required="true()" type="string"/>
+      <bind nodeset="/data/m_how_long_lived" required="true()" type="string"/>
+      <bind nodeset="/data/m_education_level" required="true()" type="string"/>
+      <bind jr:constraintMsg="jr:itext('/data/m_main_source_income:jr:constraintMsg')" nodeset="/data/m_main_source_income" required="true()" type="string"/>
+      <bind nodeset="/data/m_main_source_income_other" relevant="selected( /data/m_main_source_income , 'Other')" required="true()" type="string"/>
+      <bind jr:constraintMsg="jr:itext('/data/m_ivm_swallowed:jr:constraintMsg')" nodeset="/data/m_ivm_swallowed" required="true()" type="string"/>
+      <bind nodeset="/data/m_ald_swallowed" required="true()" type="string"/>
+      <bind nodeset="/data/m_imv_alb_place" relevant="selected( /data/m_ivm_swallowed , 'Yes') or selected( /data/m_ald_swallowed , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/m_take_tablet_how" relevant="selected( /data/m_ivm_swallowed , 'Yes') or selected( /data/m_ald_swallowed , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/m_reason_not_swallowed" relevant="selected( /data/m_ivm_swallowed , 'No') or selected( /data/m_ald_swallowed , 'No')" required="true()" type="string"/>
+      <bind nodeset="/data/m_reason_not_swallowed_other" relevant="selected( /data/m_reason_not_swallowed , 'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/m_ivm_last_time" required="true()" type="string"/>
+      <bind nodeset="/data/m_hear_mass_treatment" type="string"/>
+      <bind nodeset="/data/m_hear_mass_treatment_other" relevant="selected( /data/m_hear_mass_treatment , 'Others')" type="string"/>
+      <bind nodeset="/data/m_imv_alb_usedfor" type="string"/>
+      <bind nodeset="/data/m_decide_take_treatment" type="string"/>
+      <bind nodeset="/data/m_had_heard_lfoncho" type="string"/>
+      <bind nodeset="/data/m_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/m_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/m_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,7)"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/m_recorderID">
+      <label ref="jr:itext('/data/m_recorderID:label')"/>
+      <hint ref="jr:itext('/data/m_recorderID:hint')"/>
+    </input>
+    <input ref="/data/m_villageName">
+      <label ref="jr:itext('/data/m_villageName:label')"/>
+    </input>
+    <input ref="/data/m_villageCode">
+      <label ref="jr:itext('/data/m_villageCode:label')"/>
+    </input>
+    <input ref="/data/m_hh_code">
+      <label ref="jr:itext('/data/m_hh_code:label')"/>
+    </input>
+    <select1 ref="/data/m_respondent">
+      <label ref="jr:itext('/data/m_respondent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_respondent/Themselves:label')"/>
+        <value>Themselves</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_respondent/Someone on their behalf as absent:label')"/>
+        <value>Someone on their behalf as absent</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_respondent/Someone on their behalf as underage:label')"/>
+        <value>Someone on their behalf as underage</value>
+      </item>
+    </select1>
+    <input ref="/data/m_respondentID">
+      <label ref="jr:itext('/data/m_respondentID:label')"/>
+    </input>
+    <input ref="/data/m_age_years">
+      <label ref="jr:itext('/data/m_age_years:label')"/>
+    </input>
+    <select1 ref="/data/m_sex">
+      <label ref="jr:itext('/data/m_sex:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_sex/Male:label')"/>
+        <value>Male</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_sex/Femelle:label')"/>
+        <value>Femelle</value>
+      </item>
+    </select1>
+    <select1 ref="/data/m_marital_status">
+      <label ref="jr:itext('/data/m_marital_status:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_marital_status/Single:label')"/>
+        <value>Single</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_marital_status/Married:label')"/>
+        <value>Married</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_marital_status/Separated_Divorced:label')"/>
+        <value>Separated_Divorced</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_marital_status/Widow:label')"/>
+        <value>Widow</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_marital_status/NA:label')"/>
+        <value>NA</value>
+      </item>
+    </select1>
+    <select1 ref="/data/m_how_long_lived">
+      <label ref="jr:itext('/data/m_how_long_lived:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_how_long_lived/&lt; 3 months:label')"/>
+        <value>&lt; 3 months</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_how_long_lived/&gt; 3 months:label')"/>
+        <value>&gt; 3 months</value>
+      </item>
+    </select1>
+    <select1 ref="/data/m_education_level">
+      <label ref="jr:itext('/data/m_education_level:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_education_level/Never attended school:label')"/>
+        <value>Never attended school</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_education_level/Lower primary (P1-P4):label')"/>
+        <value>Lower primary (P1-P4)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_education_level/Upper primary (P5-P8):label')"/>
+        <value>Upper primary (P5-P8)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_education_level/Secondary:label')"/>
+        <value>Secondary</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_education_level/Tertiary:label')"/>
+        <value>Tertiary</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_education_level/Don't know:label')"/>
+        <value>Don't know</value>
+      </item>
+    </select1>
+    <select1 ref="/data/m_main_source_income">
+      <label ref="jr:itext('/data/m_main_source_income:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_main_source_income/None:label')"/>
+        <value>None</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_main_source_income/Farming:label')"/>
+        <value>Farming</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_main_source_income/Self employed:label')"/>
+        <value>Self employed</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_main_source_income/Salaried:label')"/>
+        <value>Salaried</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_main_source_income/Other:label')"/>
+        <value>Other</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_main_source_income/NA:label')"/>
+        <value>NA</value>
+      </item>
+    </select1>
+    <input ref="/data/m_main_source_income_other">
+      <label ref="jr:itext('/data/m_main_source_income_other:label')"/>
+    </input>
+    <select1 ref="/data/m_ivm_swallowed">
+      <label ref="jr:itext('/data/m_ivm_swallowed:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_ivm_swallowed/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_ivm_swallowed/No:label')"/>
+        <value>No</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_ivm_swallowed/Don't know:label')"/>
+        <value>Don't know</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_ivm_swallowed/Not eligible:label')"/>
+        <value>Not eligible</value>
+      </item>
+    </select1>
+    <select1 ref="/data/m_ald_swallowed">
+      <label ref="jr:itext('/data/m_ald_swallowed:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_ald_swallowed/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_ald_swallowed/No:label')"/>
+        <value>No</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_ald_swallowed/Don't know:label')"/>
+        <value>Don't know</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_ald_swallowed/Not eligible:label')"/>
+        <value>Not eligible</value>
+      </item>
+    </select1>
+    <select1 ref="/data/m_imv_alb_place">
+      <label ref="jr:itext('/data/m_imv_alb_place:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_imv_alb_place/School:label')"/>
+        <value>School</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_imv_alb_place/Home:label')"/>
+        <value>Home</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_imv_alb_place/Health Centre:label')"/>
+        <value>Health Centre</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_imv_alb_place/Central place:label')"/>
+        <value>Central place</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_imv_alb_place/Others:label')"/>
+        <value>Others</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_imv_alb_place/Don't know:label')"/>
+        <value>Don't know</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_imv_alb_place/NA:label')"/>
+        <value>NA</value>
+      </item>
+    </select1>
+    <select1 ref="/data/m_take_tablet_how">
+      <label ref="jr:itext('/data/m_take_tablet_how:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_take_tablet_how/All at the same time.:label')"/>
+        <value>All at the same time.</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_take_tablet_how/I was given tablets but did not swollen them.:label')"/>
+        <value>I was given tablets but did not swollen them.</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_take_tablet_how/I took some not all of them.:label')"/>
+        <value>I took some not all of them.</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_take_tablet_how/Do Not remember:label')"/>
+        <value>Do Not remember</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_take_tablet_how/NA:label')"/>
+        <value>NA</value>
+      </item>
+    </select1>
+    <select ref="/data/m_reason_not_swallowed">
+      <label ref="jr:itext('/data/m_reason_not_swallowed:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_reason_not_swallowed/under.5.years:label')"/>
+        <value>under.5.years</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_reason_not_swallowed/Pregnancy:label')"/>
+        <value>Pregnancy</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_reason_not_swallowed/BF&lt;a.week:label')"/>
+        <value>BF&lt;a.week</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_reason_not_swallowed/Sick:label')"/>
+        <value>Sick</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_reason_not_swallowed/Absent:label')"/>
+        <value>Absent</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_reason_not_swallowed/Refusal:label')"/>
+        <value>Refusal</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_reason_not_swallowed/Fear.of.side.effects:label')"/>
+        <value>Fear.of.side.effects</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_reason_not_swallowed/Feels.Healthy:label')"/>
+        <value>Feels.Healthy</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_reason_not_swallowed/Nobody.came:label')"/>
+        <value>Nobody.came</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_reason_not_swallowed/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/m_reason_not_swallowed_other">
+      <label ref="jr:itext('/data/m_reason_not_swallowed_other:label')"/>
+    </input>
+    <select1 ref="/data/m_ivm_last_time">
+      <label ref="jr:itext('/data/m_ivm_last_time:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_ivm_last_time/2018:label')"/>
+        <value>2018</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_ivm_last_time/2017.or.earlier:label')"/>
+        <value>2017.or.earlier</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_ivm_last_time/NA:label')"/>
+        <value>NA</value>
+      </item>
+    </select1>
+    <select ref="/data/m_hear_mass_treatment">
+      <label ref="jr:itext('/data/m_hear_mass_treatment:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_hear_mass_treatment/Radio:label')"/>
+        <value>Radio</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_hear_mass_treatment/Posters:label')"/>
+        <value>Posters</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_hear_mass_treatment/Health.worker:label')"/>
+        <value>Health.worker</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_hear_mass_treatment/Teachers:label')"/>
+        <value>Teachers</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_hear_mass_treatment/Village.Meeting:label')"/>
+        <value>Village.Meeting</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_hear_mass_treatment/Place.of.Worship:label')"/>
+        <value>Place.of.Worship</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_hear_mass_treatment/TV_News.paper:label')"/>
+        <value>TV_News.paper</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_hear_mass_treatment/Town.criers:label')"/>
+        <value>Town.criers</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_hear_mass_treatment/Did.Not.hear:label')"/>
+        <value>Did.Not.hear</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_hear_mass_treatment/Others:label')"/>
+        <value>Others</value>
+      </item>
+    </select>
+    <input ref="/data/m_hear_mass_treatment_other">
+      <label ref="jr:itext('/data/m_hear_mass_treatment_other:label')"/>
+    </input>
+    <select1 ref="/data/m_imv_alb_usedfor">
+      <label ref="jr:itext('/data/m_imv_alb_usedfor:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_imv_alb_usedfor/Don't Know:label')"/>
+        <value>Don't Know</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_imv_alb_usedfor/Treatment for LF, Oncho or Worms:label')"/>
+        <value>Treatment for LF, Oncho or Worms</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_imv_alb_usedfor/Other disease:label')"/>
+        <value>Other disease</value>
+      </item>
+    </select1>
+    <select1 ref="/data/m_decide_take_treatment">
+      <label ref="jr:itext('/data/m_decide_take_treatment:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_decide_take_treatment/Me:label')"/>
+        <value>Me</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_decide_take_treatment/Family member:label')"/>
+        <value>Family member</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_decide_take_treatment/Drug Distributor/Health Workers:label')"/>
+        <value>Drug Distributor/Health Workers</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_decide_take_treatment/Don't know:label')"/>
+        <value>Don't know</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_decide_take_treatment/Others:label')"/>
+        <value>Others</value>
+      </item>
+    </select1>
+    <select1 ref="/data/m_had_heard_lfoncho">
+      <label ref="jr:itext('/data/m_had_heard_lfoncho:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_had_heard_lfoncho/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_had_heard_lfoncho/No:label')"/>
+        <value>No</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_had_heard_lfoncho/Don't Know:label')"/>
+        <value>Don't Know</value>
+      </item>
+    </select1>
+    <input ref="/data/m_notes">
+      <label ref="jr:itext('/data/m_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
