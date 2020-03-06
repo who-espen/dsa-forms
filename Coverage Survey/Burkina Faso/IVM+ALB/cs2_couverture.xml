@@ -11,7 +11,7 @@
     <model >
 
       <instance>
-        <data id="bf_Coverage-mars_2020-lf-coverage" version="20200305">
+        <data id="bf_Coverage_mars_2020_2lf_coverage" version="20200305">
           <code_equipe/>
           <code_enqueteur/>
           <csps/>
@@ -806,8 +806,8 @@
       </itext>
       <bind nodeset="/data/code_equipe" required="true()" type="string"/>
       <bind nodeset="/data/code_enqueteur" required="true()" type="string"/>
-      <bind nodeset="/data/csps" required="true()" type="string"  db_get="col_2"/>
-      <bind nodeset="/data/Code_grappe" constraint=". &gt;=0 and . &lt;= 30" required="true()" type="int" db_get="col_3" db_filter_by_col_2="/data/csps"/>
+      <bind nodeset="/data/csps" required="true()" type="string" db_get="col_2"/>
+      <bind nodeset="/data/Code_grappe" constraint=". &gt;=0 and . &lt;= 30" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/csps"/>
       <bind nodeset="/data/repondant_questionnaire" required="true()" type="string"/>
       <bind constraint=". &gt;=0 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" required="true()" type="int"/>
       <bind constraint=". &gt;=0 and . &lt;= 36" nodeset="/data/Age_en_mois" relevant=" /data/age  = 0" required="true()" type="int"/>
