@@ -973,10 +973,10 @@
       </instance>
       <bind nodeset="/data/code_equipe" required="true()" type="string"/>
       <bind nodeset="/data/code_operateur" required="true()" type="string"/>
-      <bind nodeset="/data/district" required="true()" type="string"  db_add_col_1="."/>
-      <bind nodeset="/data/csps" required="true()" type="string"  db_add_col_1="/data/district" db_add_col_2="."/>
+      <bind nodeset="/data/district" required="true()" type="string" />
+      <bind nodeset="/data/csps" required="true()" type="string" db_add_col_2="."/>
       <bind nodeset="/data/num_grappe" constraint=". &gt; 0 and . &lt;= 30" jr:constraintMsg="jr:itext('/data/num_grappe:jr:constraintMsg')" db_add_col_2="/data/csps" db_add_col_3="." required="true()" type="string"/>
-      <bind nodeset="/data/nom_grappe" type="string"  db_add_col_3="/data/num_grappe" db_add_col_4="."/>
+      <bind nodeset="/data/nom_grappe" type="string" db_add_col_3="/data/num_grappe" db_add_col_4="."/>
       <bind nodeset="/data/gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/commentaires" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/debut_enregistrement" type="dateTime"/>
