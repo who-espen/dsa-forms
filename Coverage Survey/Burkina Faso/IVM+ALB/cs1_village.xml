@@ -12,7 +12,6 @@
 
       <instance>
         <data id="bf_Coverage_mars_2020_1lf_village" version="20200305">
-          <code_equipe/>
           <code_operateur/>
           <district/>
           <csps/>
@@ -90,9 +89,6 @@
           <text id="/data/nom_grappe/Birina1:label">
             <value>Birina1</value>
           </text>
-          <text id="static_instance-code_equipe-0">
-            <value>01</value>
-          </text>
           <text id="static_instance-grape_name-10">
             <value>Birina2</value>
           </text>
@@ -132,9 +128,6 @@
           <text id="/data/nom_grappe/Setondouo:label">
             <value>Sétondouo</value>
           </text>
-          <text id="static_instance-code_equipe-3">
-            <value>04</value>
-          </text>
           <text id="/data/nom_grappe/Kaldera:label">
             <value>Kaldéra</value>
           </text>
@@ -168,9 +161,6 @@
           <text id="static_instance-num_grappe_list-4">
             <value>5</value>
           </text>
-          <text id="static_instance-code_equipe-1">
-            <value>02</value>
-          </text>
           <text id="/data/num_grappe/25:label">
             <value>25</value>
           </text>
@@ -197,9 +187,6 @@
           </text>
           <text id="/data/code_operateur/03:label">
             <value>03</value>
-          </text>
-          <text id="/data/code_equipe/02:label">
-            <value>02</value>
           </text>
           <text id="static_instance-grape_name-5">
             <value>Galgouli</value>
@@ -236,9 +223,6 @@
           </text>
           <text id="/data/nom_grappe/Guirina:label">
             <value>Guirina</value>
-          </text>
-          <text id="/data/code_equipe:label">
-            <value>Code Equipe</value>
           </text>
           <text id="static_instance-ds_list-0">
             <value>Kampti</value>
@@ -393,9 +377,6 @@
           <text id="static_instance-num_grappe_list-28">
             <value>29</value>
           </text>
-          <text id="/data/code_equipe/03:label">
-            <value>03</value>
-          </text>
           <text id="/data/nom_grappe/kampti-bouti1:label">
             <value>kampti-bouti1</value>
           </text>
@@ -407,12 +388,6 @@
           </text>
           <text id="/data/nom_grappe/Moulera:label">
             <value>Mouléra</value>
-          </text>
-          <text id="static_instance-code_equipe-2">
-            <value>03</value>
-          </text>
-          <text id="/data/code_equipe/01:label">
-            <value>01</value>
           </text>
           <text id="/data/num_grappe/15:label">
             <value>15</value>
@@ -431,9 +406,6 @@
           </text>
           <text id="/data/num_grappe/18:label">
             <value>18</value>
-          </text>
-          <text id="/data/code_equipe/04:label">
-            <value>04</value>
           </text>
           <text id="static_instance-csps_list-10">
             <value>PERIGBAN</value>
@@ -951,27 +923,6 @@
           </item>
         </root>
       </instance>
-      <instance id="code_equipe">
-        <root>
-          <item>
-            <itextId>static_instance-code_equipe-0</itextId>
-            <name>01</name>
-          </item>
-          <item>
-            <itextId>static_instance-code_equipe-1</itextId>
-            <name>02</name>
-          </item>
-          <item>
-            <itextId>static_instance-code_equipe-2</itextId>
-            <name>03</name>
-          </item>
-          <item>
-            <itextId>static_instance-code_equipe-3</itextId>
-            <name>04</name>
-          </item>
-        </root>
-      </instance>
-      <bind nodeset="/data/code_equipe" required="true()" type="string"/>
       <bind nodeset="/data/code_operateur" required="true()" type="string"/>
       <bind nodeset="/data/district" required="true()" type="string" />
       <bind nodeset="/data/csps" required="true()" type="string" db_add_col_2="."/>
@@ -985,25 +936,6 @@
     </model>
   </h:head>
   <h:body>
-    <select1 ref="/data/code_equipe">
-      <label ref="jr:itext('/data/code_equipe:label')"/>
-      <item>
-        <label ref="jr:itext('/data/code_equipe/01:label')"/>
-        <value>01</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/code_equipe/02:label')"/>
-        <value>02</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/code_equipe/03:label')"/>
-        <value>03</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/code_equipe/04:label')"/>
-        <value>04</value>
-      </item>
-    </select1>
     <select1 ref="/data/code_operateur">
       <label ref="jr:itext('/data/code_operateur:label')"/>
       <hint ref="jr:itext('/data/code_operateur:hint')"/>

@@ -8,11 +8,11 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>(BF - Mars 2020) Couv ALB+IVM FL - 2. Formulaire Couverture</h:title>
-    <model >
+
+    <model>
 
       <instance>
         <data id="bf_Coverage_mars_2020_2lf_coverage" version="20200305">
-          <code_equipe/>
           <code_enqueteur/>
           <csps/>
           <Code_grappe/>
@@ -50,12 +50,12 @@
             <Volet_aime_autre/>
             <Volet_pas_aime/>
             <Suggestions/>
+            <Voyage/>
+            <voyage_frequence/>
+            <voyage_localite/>
+            <voyage_duree/>
+            <Incidence_voyages/>
           </g1>
-          <Voyage/>
-          <voyage_frequence/>
-          <voyage_localite/>
-          <voyage_duree/>
-          <Incidence_voyages/>
           <Certitude_davaler/>
           <Autonomie_prise_annuelle/>
           <Intention_davaler/>
@@ -103,17 +103,17 @@
           <text id="/data/Autonomie_prise_annuelle/2:label">
             <value>2</value>
           </text>
+          <text id="/data/g1/voyage_frequence/Une fois par jour:label">
+            <value>1. Une fois par jour</value>
+          </text>
           <text id="/data/Types_effets/Vertige:label">
             <value>3. Vertige</value>
           </text>
           <text id="/data/g1/canal_imformaion/Proche.parent.ami:label">
             <value>6 Proche parent/ami</value>
           </text>
-          <text id="/data/voyage_localite/Autres de la region:label">
-            <value>1. Autres de la région</value>
-          </text>
-          <text id="/data/voyage_frequence/Une fois par jour:label">
-            <value>1. Une fois par jour</value>
+          <text id="/data/g1/voyage_localite/Autres regions du Burkina:label">
+            <value>2. Autres régions du Burkina</value>
           </text>
           <text id="/data/Instruction/Alphabetise:label">
             <value>2 Alphabétisé</value>
@@ -130,14 +130,17 @@
           <text id="/data/g1/Volet_aime/5=Communication:label">
             <value>5=Communication</value>
           </text>
+          <text id="/data/g1/voyage_duree/1-6 moins:label">
+            <value>b. 1-6 moins</value>
+          </text>
           <text id="/data/Instruction/Primaire:label">
             <value>3 Primaire</value>
           </text>
           <text id="/data/Autonomie_prise_annuelle/3:label">
             <value>3</value>
           </text>
-          <text id="/data/voyage_localite/RCI:label">
-            <value>3. RCI</value>
+          <text id="/data/g1/voyage_duree/Moins d'un mois:label">
+            <value>a. Moins d'un mois</value>
           </text>
           <text id="/data/Traitement/Oui:label">
             <value>Oui</value>
@@ -148,8 +151,8 @@
           <text id="/data/g1/Transmission_Lymp/1=Mouches:label">
             <value>1=Mouches</value>
           </text>
-          <text id="/data/voyage_duree:label">
-            <value>Qu'elle est la durée moyenne de vos voyages hors de votre district ?</value>
+          <text id="/data/g1/voyage_duree/1 an et plus:label">
+            <value>d. 1 an et plus</value>
           </text>
           <text id="/data/Raisons_IVM_ALB_non_recu/Grossese.Allaitement:label">
             <value>1.Grossese/Allaitement</value>
@@ -181,6 +184,9 @@
           <text id="/data/Types_effets/Somnolence:label">
             <value>7. Somnolence</value>
           </text>
+          <text id="/data/g1/Incidence_voyages/Non:label">
+            <value>Non</value>
+          </text>
           <text id="/data/Sexe:label">
             <value>Sexe</value>
           </text>
@@ -193,6 +199,9 @@
           <text id="/data/Sexe/Masculin:label">
             <value>Masculin</value>
           </text>
+          <text id="/data/g1/voyage_frequence:label">
+            <value>Si oui, à quelle fréquence ?</value>
+          </text>
           <text id="/data/g1/Prevention_Hydrocele/3=Recours.aux.soins.auprès.des.TPS:label">
             <value>3=Recours aux soins auprès des TPS</value>
           </text>
@@ -201,6 +210,9 @@
           </text>
           <text id="/data/Taille_enquete/Jaune:label">
             <value>2.Jaune</value>
+          </text>
+          <text id="/data/g1/voyage_frequence/Une fois par mois:label">
+            <value>3. Une fois par mois</value>
           </text>
           <text id="/data/Autonomie_prise_annuelle/4:label">
             <value>4</value>
@@ -220,20 +232,20 @@
           <text id="/data/g1/Transmission_Lymp/3=Autres.insectes:label">
             <value>3=Autres insectes</value>
           </text>
-          <text id="/data/Voyage:label">
-            <value>Voyagez-vous souvent en dehors de ce district ?</value>
-          </text>
           <text id="/data/Code_grappe:label">
             <value>Numéro de la grappe</value>
           </text>
-          <text id="/data/Incidence_voyages/Non:label">
-            <value>Non</value>
+          <text id="/data/Intention_davaler/6:label">
+            <value>6</value>
+          </text>
+          <text id="/data/Raisons_IVM_ALB_non_avale_autres:label">
+            <value>Autres raison pas avalé</value>
           </text>
           <text id="/data/groupes_prenant_pas_med/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/exist_personnes_non_traitees:label">
-            <value>Est-ce que dans votre ménage il y a des personnes éligibles qui n'avaient pas été traitées ?</value>
+          <text id="/data/g1/Voyage:label">
+            <value>Voyagez-vous souvent en dehors de ce district ?</value>
           </text>
           <text id="/data/Types_effets/Cephalees:label">
             <value>1. Céphalées</value>
@@ -241,20 +253,17 @@
           <text id="/data/Traitement/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/Intention_davaler/6:label">
-            <value>6</value>
-          </text>
           <text id="/data/Taille_enquete/Noir:label">
             <value>1.Noir</value>
           </text>
           <text id="/data/g1/Volet_aime/6=Prise.supervisee:label">
             <value>6=Prise supervisée</value>
           </text>
-          <text id="/data/Types_effets/Courbature:label">
-            <value>4. Courbature</value>
+          <text id="/data/g1/Entendu_parle_FL/Oui:label">
+            <value>Oui</value>
           </text>
-          <text id="/data/voyage_frequence/Une fois par semaine:label">
-            <value>2. Une fois par semaine</value>
+          <text id="/data/exist_personnes_non_traitees:label">
+            <value>Est-ce que dans votre ménage il y a des personnes éligibles qui n'avaient pas été traitées ?</value>
           </text>
           <text id="/data/Certitude_davaler/1:label">
             <value>1</value>
@@ -277,32 +286,23 @@
           <text id="/data/Taille_enquete/Vert:label">
             <value>4.Vert</value>
           </text>
-          <text id="/data/voyage_frequence/Plusieurs fois par mois:label">
-            <value>4. Plusieurs fois par mois</value>
-          </text>
-          <text id="/data/Raisons_IVM_ALB_non_recu/Le.DC.n'est.pas.passe:label">
-            <value>5.Le DC n'est pas passé</value>
+          <text id="/data/Lieu_prise_IVM_ALB/Lieux de culte:label">
+            <value>2 Lieux de culte</value>
           </text>
           <text id="/data/Raisons_IVM_ALB_non_avale/Mauvais.gout:label">
             <value>3.Mauvais gout</value>
           </text>
-          <text id="/data/Incidence_voyages:label">
-            <value>Est-ce que vos voyages vous empêchent de prendre annuellement les médicaments ?</value>
-          </text>
           <text id="/data/Raisons_IVM_ALB_non_avale:label">
             <value>Pourquoi n'avez-vous pas avalé l'IVM+ALB la dernière campagne?</value>
           </text>
-          <text id="/data/Raisons_IVM_ALB_non_avale_autres:label">
-            <value>Autres raison pas avalé</value>
-          </text>
-          <text id="/data/code_equipe/04:label">
-            <value>04</value>
+          <text id="/data/g1/Volet_pas_aime/6=Tous.ma.famille.pas.traitee:label">
+            <value>6=Tous ma famille pas traitée</value>
           </text>
           <text id="/data/g1/Entendu_parle_FL/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/code_equipe/02:label">
-            <value>02</value>
+          <text id="/data/Certitude_davaler/6:label">
+            <value>6</value>
           </text>
           <text id="/data/Prise_medicaments_dernier_tdm/1:label">
             <value>1</value>
@@ -328,9 +328,6 @@
           <text id="/data/g1/Transmission_Hydrocele/4=Contact.avec.du.sang:label">
             <value>4=Contact avec du sang</value>
           </text>
-          <text id="/data/voyage_localite/Ghana:label">
-            <value>4. Ghana</value>
-          </text>
           <text id="/data/g1/Transmission_Lymp/7=Mauvaise.hygiene:label">
             <value>7=Mauvaise hygiène</value>
           </text>
@@ -339,9 +336,6 @@
           </text>
           <text id="/data/Raisons_IVM_ALB_non_avale/Malade:label">
             <value>2.Malade</value>
-          </text>
-          <text id="/data/voyage_frequence/Une fois par mois:label">
-            <value>3. Une fois par mois</value>
           </text>
           <text id="/data/Raisons_IVM_ALB_non_recu/Malade.grave:label">
             <value>4.Malade grave</value>
@@ -352,11 +346,8 @@
           <text id="/data/g1/Transmission_Hydrocele/12=Rapports.sexuels:label">
             <value>12=Rapports sexuels</value>
           </text>
-          <text id="/data/voyage_frequence:label">
-            <value>Si oui, à quelle fréquence ?</value>
-          </text>
-          <text id="/data/g1/Volet_pas_aime/2=Insuffisance.medicaments:label">
-            <value>2=Insuffisance médicaments</value>
+          <text id="/data/Types_effets/Douleur.abdominale._.diarrhee:label">
+            <value>5. Douleur abdominale /diarrhée</value>
           </text>
           <text id="/data/IVM_ALB_recu/Oui:label">
             <value>Oui</value>
@@ -385,8 +376,8 @@
           <text id="/data/g1/Prevention_Lymp/3=Washing:label">
             <value>3=Washing</value>
           </text>
-          <text id="/data/Types_effets/Douleur.abdominale._.diarrhee:label">
-            <value>5. Douleur abdominale /diarrhée</value>
+          <text id="/data/g1/Volet_pas_aime/2=Insuffisance.medicaments:label">
+            <value>2=Insuffisance médicaments</value>
           </text>
           <text id="/data/g1:label">
             <value>Connaissances sur la maladie pour les enquêtes de 18 ans et plus</value>
@@ -409,8 +400,17 @@
           <text id="/data/g1/Transmission_Lymp/11=Punition.de.Dieu:label">
             <value>11=Punition de Dieu</value>
           </text>
+          <text id="/data/g1/voyage_duree:label">
+            <value>Qu'elle est la durée moyenne de vos voyages hors de votre district ?</value>
+          </text>
           <text id="/data/Raisons_IVM_ALB_non_avale/Pas.recu.suffisamment.d.information:label">
             <value>4.Pas reçu suffisamment d'information</value>
+          </text>
+          <text id="/data/Autonomie_prise_annuelle/7:label">
+            <value>7</value>
+          </text>
+          <text id="/data/g1/Suggestions:label">
+            <value>Selon vous que peut-on faire pour que la prochaine campagne soit mieux organisée</value>
           </text>
           <text id="/data/g1/canal_imformaion/Tele:label">
             <value>8 Télé</value>
@@ -424,14 +424,17 @@
           <text id="/data/Raisons_IVM_ALB_non_recu:label">
             <value>Si non, Pourquoi n'avez-vous pas reçu ?</value>
           </text>
+          <text id="/data/g1/Voyage/Non:label">
+            <value>Non</value>
+          </text>
           <text id="/data/IVM_ALB_recu/Non:label">
             <value>Non</value>
           </text>
           <text id="/data/g1/canal_imformaion/Reseaux.sociaux:label">
             <value>9 Réseaux sociaux</value>
           </text>
-          <text id="/data/Autonomie_prise_annuelle:label">
-            <value>Mon ingestion annuelle des comprimés relève de mon choix. | Peu probable : ___1__ : ___2__ : ___3__ : ___4__ : ___5__ : ___6__ :___7___ : probable</value>
+          <text id="/data/g1/voyage_localite/RCI:label">
+            <value>3. RCI</value>
           </text>
           <text id="/data/Types_effets/Prurit:label">
             <value>8. Prurit</value>
@@ -441,6 +444,9 @@
           </text>
           <text id="/data/Raisons_IVM_ALB_non_avale/Peur.d.effets.indesirables:label">
             <value>1.Peur d'effets indésirables</value>
+          </text>
+          <text id="/data/g1/voyage_localite:label">
+            <value>Si oui, quels sont les localités les plus visitées ?</value>
           </text>
           <text id="/data/g1/Transmission_Hydrocele/5=Mauvais.temps:label">
             <value>5=Mauvais temps</value>
@@ -463,9 +469,6 @@
           <text id="/data/Raisons_IVM_ALB_non_recu/Absent.au.travail.ou.en.voyage:label">
             <value>3.Absent, au travail ou en voyage</value>
           </text>
-          <text id="/data/voyage_localite/Autres regions du Burkina:label">
-            <value>2. Autres régions du Burkina</value>
-          </text>
           <text id="/data/Types_effets/Fievre:label">
             <value>6.Fièvre</value>
           </text>
@@ -481,8 +484,8 @@
           <text id="/data/g1/Prevention_Lymp/5=Autres:label">
             <value>5=Autres à préciser</value>
           </text>
-          <text id="/data/Lieu_prise_IVM_ALB/Lieux de culte:label">
-            <value>2 Lieux de culte</value>
+          <text id="/data/Raisons_IVM_ALB_non_recu/Le.DC.n'est.pas.passe:label">
+            <value>5.Le DC n'est pas passé</value>
           </text>
           <text id="/data/Instruction/Secondaire:label">
             <value>4 Secondaire</value>
@@ -508,11 +511,11 @@
           <text id="/data/Types_effets:label">
             <value>Lequel/lesquels des effets indésirables avez-vous eu après la prise de l'ivermectine</value>
           </text>
+          <text id="/data/g1/voyage_localite/Ghana:label">
+            <value>4. Ghana</value>
+          </text>
           <text id="/data/Certitude_davaler/5:label">
             <value>5</value>
-          </text>
-          <text id="/data/voyage_duree/1 an et plus:label">
-            <value>d. 1 an et plus</value>
           </text>
           <text id="/data/g1/canal_imformaion/Autres:label">
             <value>10 Autres à préciser</value>
@@ -528,6 +531,9 @@
           </text>
           <text id="/data/Intention_davaler:label">
             <value>J'ai l'intention d'avaler les médicaments tous les ans. | Peu probable : ___1__ : ___2__ : ___3__ : ___4__ : ___5__ : ___6__ :___7___ : probable</value>
+          </text>
+          <text id="/data/g1/voyage_localite/Autres:label">
+            <value>5. Autres</value>
           </text>
           <text id="/data/Profession/Autres:label">
             <value>7 Autres (précisez)</value>
@@ -547,20 +553,23 @@
           <text id="/data/Prise_medicaments_dernier_tdm/7:label">
             <value>7</value>
           </text>
+          <text id="/data/g1/voyage_duree/1-2 mois:label">
+            <value>c. 1-2 mois</value>
+          </text>
           <text id="/data/g1/Volet_aime/8=Disponibilite.de.l.eau:label">
             <value>8=Disponibilité de l'eau</value>
           </text>
           <text id="/data/g1/Transmission_Hydrocele/1=Mouche:label">
             <value>1=Mouche</value>
           </text>
+          <text id="/data/g1/voyage_frequence/Plusieurs fois par mois:label">
+            <value>4. Plusieurs fois par mois</value>
+          </text>
           <text id="/data/g1/Transmission_Hydrocele/7=Mauvaise.hygiène:label">
             <value>7=Mauvaise hygiène</value>
           </text>
           <text id="/data/g1/Volet_aime_autre:label">
             <value>Autres volets aimés</value>
-          </text>
-          <text id="/data/Voyage/Oui:label">
-            <value>Oui</value>
           </text>
           <text id="/data/g1/Transmission_Lymp/6=Pauvrete:label">
             <value>6=Pauvreté</value>
@@ -580,9 +589,6 @@
           <text id="/data/g1/Prevention_Hydrocele/4=Autres:label">
             <value>4=autres à préciser</value>
           </text>
-          <text id="/data/g1/Suggestions:label">
-            <value>Selon vous que peut-on faire pour que la prochaine campagne soit mieux organisée</value>
-          </text>
           <text id="/data/Raisons_IVM_ALB_non_avale/Autres:label">
             <value>6.Autre (spécifiez)</value>
           </text>
@@ -600,6 +606,9 @@
           </text>
           <text id="/data/Lieu_prise_IVM_ALB/Lieu de travail:label">
             <value>5 Lieu de travail</value>
+          </text>
+          <text id="/data/g1/Voyage/Oui:label">
+            <value>Oui</value>
           </text>
           <text id="/data/Raisons_IVM_ALB_non_recu/Rupture.de.medicaments:label">
             <value>7.Rupture de médicaments</value>
@@ -619,26 +628,14 @@
           <text id="/data/csps:label">
             <value>Nom du CSPS</value>
           </text>
-          <text id="/data/Incidence_voyages/Oui:label">
-            <value>Oui</value>
-          </text>
           <text id="/data/Raisons_IVM_ALB_non_recu/Peur.des.effets.indesirables:label">
             <value>2.Peur des effets indésirables</value>
           </text>
-          <text id="/data/code_equipe:label">
-            <value>Code de l'équipe</value>
-          </text>
-          <text id="/data/code_equipe/01:label">
-            <value>01</value>
-          </text>
-          <text id="/data/Autonomie_prise_annuelle/7:label">
-            <value>7</value>
+          <text id="/data/g1/Incidence_voyages:label">
+            <value>Est-ce que vos voyages vous empêchent de prendre annuellement les médicaments ?</value>
           </text>
           <text id="/data/g1/Transmission_Hydrocele/2=Moustiques:label">
             <value>2=Moustiques</value>
-          </text>
-          <text id="/data/voyage_localite:label">
-            <value>Si oui, quels sont les localités les plus visitées ?</value>
           </text>
           <text id="/data/repondant_questionnaire/1 Personne interrogee presente:label">
             <value>1 Personne interrogée présente</value>
@@ -657,9 +654,6 @@
           </text>
           <text id="/data/g1/canal_imformaion/Chef.coutumier.religieux:label">
             <value>4 Chef coutumier/religieux</value>
-          </text>
-          <text id="/data/g1/Volet_pas_aime/6=Tous.ma.famille.pas.traitee:label">
-            <value>6=Tous ma famille pas traitée</value>
           </text>
           <text id="/data/Prise_medicaments_voisinage/Non:label">
             <value>Non</value>
@@ -712,26 +706,14 @@
           <text id="/data/g1/canal_imformaion/Conseiller.CVD.du.village:label">
             <value>5 Conseiller/CVD du village</value>
           </text>
-          <text id="/data/voyage_localite/Autres:label">
-            <value>5. Autres</value>
-          </text>
           <text id="/data/g1/Volet_aime/1=Proximite.du.site.de.distribution:label">
             <value>1=Proximité du site de distribution</value>
-          </text>
-          <text id="/data/voyage_duree/1-6 moins:label">
-            <value>b. 1-6 moins</value>
           </text>
           <text id="/data/Lieu_prise_IVM_ALB/Gare routiere:label">
             <value>3 Gare routière</value>
           </text>
-          <text id="/data/voyage_duree/Moins d'un mois:label">
-            <value>a. Moins d'un mois</value>
-          </text>
-          <text id="/data/g1/Entendu_parle_FL/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/Certitude_davaler/6:label">
-            <value>6</value>
+          <text id="/data/Types_effets/Courbature:label">
+            <value>4. Courbature</value>
           </text>
           <text id="/data/Profession/Menagere:label">
             <value>4 Ménagère</value>
@@ -745,14 +727,14 @@
           <text id="/data/g1/Transmission_Lymp/9=Sort:label">
             <value>9=Sort</value>
           </text>
-          <text id="/data/voyage_duree/1-2 mois:label">
-            <value>c. 1-2 mois</value>
-          </text>
           <text id="/data/g1/Transmission_Lymp/12=Autres:label">
             <value>12=Autres</value>
           </text>
           <text id="/data/Profession/Commerçant:label">
             <value>3 Commerçant</value>
+          </text>
+          <text id="/data/g1/voyage_localite/Autres de la region:label">
+            <value>1. Autres de la région</value>
           </text>
           <text id="/data/Prise_medicaments_dernier_tdm/5:label">
             <value>5</value>
@@ -765,9 +747,6 @@
           </text>
           <text id="/data/g1/Prevention_Lymp/4=Recours.aux.soins.auprès.des.TPS:label">
             <value>4=Recours aux soins auprès des TPS</value>
-          </text>
-          <text id="/data/code_equipe/03:label">
-            <value>03</value>
           </text>
           <text id="/data/IVM_ALB_avale/Non:label">
             <value>Non</value>
@@ -784,17 +763,23 @@
           <text id="/data/g1/Informe_TDM/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/Voyage/Non:label">
-            <value>Non</value>
-          </text>
           <text id="/data/Prise_medicaments_voisinage:label">
             <value>Est-ce que dans votre voisinage, les gens prennent les médicaments ?</value>
           </text>
           <text id="/data/Sexe/Feminin:label">
             <value>Féminin</value>
           </text>
+          <text id="/data/Autonomie_prise_annuelle:label">
+            <value>Mon ingestion annuelle des comprimés relève de mon choix. | Peu probable : ___1__ : ___2__ : ___3__ : ___4__ : ___5__ : ___6__ :___7___ : probable</value>
+          </text>
           <text id="/data/Intention_davaler/5:label">
             <value>5</value>
+          </text>
+          <text id="/data/g1/voyage_frequence/Une fois par semaine:label">
+            <value>2. Une fois par semaine</value>
+          </text>
+          <text id="/data/g1/Incidence_voyages/Oui:label">
+            <value>Oui</value>
           </text>
           <text id="/data/g1/Volet_pas_aime:label">
             <value>Quels volets de campagne vous n'avez pas aimé ?</value>
@@ -804,7 +789,7 @@
           </text>
         </translation>
       </itext>
-      <bind nodeset="/data/code_equipe" required="true()" type="string"/>
+
       <bind nodeset="/data/code_enqueteur" required="true()" type="string"/>
       <bind nodeset="/data/csps" required="true()" type="string" db_get="col_2"/>
       <bind nodeset="/data/Code_grappe" constraint=". &gt;=0 and . &lt;= 30" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/csps"/>
@@ -824,11 +809,11 @@
       <bind nodeset="/data/Avale_devant_DC" relevant="selected( /data/IVM_ALB_avale ,'Oui') and selected( /data/IVM_ALB_recu ,'Oui')" required="true()" type="string"/>
       <bind nodeset="/data/Raisons_IVM_ALB_non_avale" relevant="selected( /data/IVM_ALB_avale ,'Non') and selected( /data/IVM_ALB_recu ,'Oui')" required="true()" type="string"/>
       <bind nodeset="/data/Raisons_IVM_ALB_non_avale_autres" relevant="selected( /data/Raisons_IVM_ALB_non_avale ,'Autres')" required="true()" type="string"/>
-      <bind nodeset="/data/Effets_indesirables" relevant="selected( /data/IVM_ALB_recu ,'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/Effets_indesirables" relevant="selected( /data/IVM_ALB_recu ,'Oui') and selected( /data/Avale_devant_DC ,'Oui')" required="true()" type="string"/>
       <bind nodeset="/data/Types_effets" relevant="selected( /data/IVM_ALB_recu ,'Oui') and selected( /data/Effets_indesirables ,'Oui')" required="true()" type="string"/>
       <bind nodeset="/data/Types_effets_autres" relevant="selected( /data/Types_effets ,'Autres')" required="true()" type="string"/>
       <bind nodeset="/data/Prise_taille" relevant="selected( /data/IVM_ALB_recu ,'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/Taille_enquete" relevant="selected( /data/IVM_ALB_recu ,'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/Taille_enquete" required="true()" type="string"/>
       <bind nodeset="/data/Traitement" required="true()" type="string"/>
       <bind nodeset="/data/g1" relevant=" /data/age  &gt; 17"/>
       <bind nodeset="/data/g1/Entendu_parle_FL" required="true()" type="string"/>
@@ -842,11 +827,11 @@
       <bind nodeset="/data/g1/Volet_aime_autre" relevant="selected( /data/g1/Volet_aime ,'9=Autres')" required="true()" type="string"/>
       <bind nodeset="/data/g1/Volet_pas_aime" required="true()" type="string"/>
       <bind nodeset="/data/g1/Suggestions" required="true()" type="string"/>
-      <bind nodeset="/data/Voyage" required="true()" type="string"/>
-      <bind nodeset="/data/voyage_frequence" relevant="selected( /data/Voyage ,'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/voyage_localite" relevant="selected( /data/Voyage ,'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/voyage_duree" relevant="selected( /data/Voyage ,'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/Incidence_voyages" required="true()" type="string"/>
+      <bind nodeset="/data/g1/Voyage" required="true()" type="string"/>
+      <bind nodeset="/data/g1/voyage_frequence" relevant="selected( /data/g1/Voyage ,'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/g1/voyage_localite" relevant="selected( /data/g1/Voyage ,'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/g1/voyage_duree" relevant="selected( /data/g1/Voyage ,'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/g1/Incidence_voyages" relevant="selected( /data/g1/Voyage ,'Oui')" required="true()" type="string"/>
       <bind nodeset="/data/Certitude_davaler" required="true()" type="string"/>
       <bind nodeset="/data/Autonomie_prise_annuelle" required="true()" type="string"/>
       <bind nodeset="/data/Intention_davaler" required="true()" type="string"/>
@@ -863,25 +848,6 @@
     </model>
   </h:head>
   <h:body>
-    <select1 ref="/data/code_equipe">
-      <label ref="jr:itext('/data/code_equipe:label')"/>
-      <item>
-        <label ref="jr:itext('/data/code_equipe/01:label')"/>
-        <value>01</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/code_equipe/02:label')"/>
-        <value>02</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/code_equipe/03:label')"/>
-        <value>03</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/code_equipe/04:label')"/>
-        <value>04</value>
-      </item>
-    </select1>
     <select1 ref="/data/code_enqueteur">
       <label ref="jr:itext('/data/code_enqueteur:label')"/>
       <item>
@@ -1520,90 +1486,90 @@
       <input ref="/data/g1/Suggestions">
         <label ref="jr:itext('/data/g1/Suggestions:label')"/>
       </input>
+      <select1 ref="/data/g1/Voyage">
+        <label ref="jr:itext('/data/g1/Voyage:label')"/>
+        <item>
+          <label ref="jr:itext('/data/g1/Voyage/Oui:label')"/>
+          <value>Oui</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/Voyage/Non:label')"/>
+          <value>Non</value>
+        </item>
+      </select1>
+      <select1 ref="/data/g1/voyage_frequence">
+        <label ref="jr:itext('/data/g1/voyage_frequence:label')"/>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_frequence/Une fois par jour:label')"/>
+          <value>Une fois par jour</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_frequence/Une fois par semaine:label')"/>
+          <value>Une fois par semaine</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_frequence/Une fois par mois:label')"/>
+          <value>Une fois par mois</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_frequence/Plusieurs fois par mois:label')"/>
+          <value>Plusieurs fois par mois</value>
+        </item>
+      </select1>
+      <select1 ref="/data/g1/voyage_localite">
+        <label ref="jr:itext('/data/g1/voyage_localite:label')"/>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_localite/Autres de la region:label')"/>
+          <value>Autres de la region</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_localite/Autres regions du Burkina:label')"/>
+          <value>Autres regions du Burkina</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_localite/RCI:label')"/>
+          <value>RCI</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_localite/Ghana:label')"/>
+          <value>Ghana</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_localite/Autres:label')"/>
+          <value>Autres</value>
+        </item>
+      </select1>
+      <select1 ref="/data/g1/voyage_duree">
+        <label ref="jr:itext('/data/g1/voyage_duree:label')"/>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_duree/Moins d'un mois:label')"/>
+          <value>Moins d'un mois</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_duree/1-6 moins:label')"/>
+          <value>1-6 moins</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_duree/1-2 mois:label')"/>
+          <value>1-2 mois</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/voyage_duree/1 an et plus:label')"/>
+          <value>1 an et plus</value>
+        </item>
+      </select1>
+      <select1 ref="/data/g1/Incidence_voyages">
+        <label ref="jr:itext('/data/g1/Incidence_voyages:label')"/>
+        <item>
+          <label ref="jr:itext('/data/g1/Incidence_voyages/Oui:label')"/>
+          <value>Oui</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/g1/Incidence_voyages/Non:label')"/>
+          <value>Non</value>
+        </item>
+      </select1>
     </group>
-    <select1 ref="/data/Voyage">
-      <label ref="jr:itext('/data/Voyage:label')"/>
-      <item>
-        <label ref="jr:itext('/data/Voyage/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/Voyage/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <select1 ref="/data/voyage_frequence">
-      <label ref="jr:itext('/data/voyage_frequence:label')"/>
-      <item>
-        <label ref="jr:itext('/data/voyage_frequence/Une fois par jour:label')"/>
-        <value>Une fois par jour</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/voyage_frequence/Une fois par semaine:label')"/>
-        <value>Une fois par semaine</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/voyage_frequence/Une fois par mois:label')"/>
-        <value>Une fois par mois</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/voyage_frequence/Plusieurs fois par mois:label')"/>
-        <value>Plusieurs fois par mois</value>
-      </item>
-    </select1>
-    <select1 ref="/data/voyage_localite">
-      <label ref="jr:itext('/data/voyage_localite:label')"/>
-      <item>
-        <label ref="jr:itext('/data/voyage_localite/Autres de la region:label')"/>
-        <value>Autres de la region</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/voyage_localite/Autres regions du Burkina:label')"/>
-        <value>Autres regions du Burkina</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/voyage_localite/RCI:label')"/>
-        <value>RCI</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/voyage_localite/Ghana:label')"/>
-        <value>Ghana</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/voyage_localite/Autres:label')"/>
-        <value>Autres</value>
-      </item>
-    </select1>
-    <select1 ref="/data/voyage_duree">
-      <label ref="jr:itext('/data/voyage_duree:label')"/>
-      <item>
-        <label ref="jr:itext('/data/voyage_duree/Moins d'un mois:label')"/>
-        <value>Moins d'un mois</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/voyage_duree/1-6 moins:label')"/>
-        <value>1-6 moins</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/voyage_duree/1-2 mois:label')"/>
-        <value>1-2 mois</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/voyage_duree/1 an et plus:label')"/>
-        <value>1 an et plus</value>
-      </item>
-    </select1>
-    <select1 ref="/data/Incidence_voyages">
-      <label ref="jr:itext('/data/Incidence_voyages:label')"/>
-      <item>
-        <label ref="jr:itext('/data/Incidence_voyages/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/Incidence_voyages/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
     <select1 ref="/data/Certitude_davaler">
       <label ref="jr:itext('/data/Certitude_davaler:label')"/>
       <item>
