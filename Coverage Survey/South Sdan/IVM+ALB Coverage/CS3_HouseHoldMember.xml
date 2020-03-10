@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
@@ -8,11 +8,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>3. IVM+ALB Coverage - Household Members</h:title>
+    <h:title>3. IVM+ALB Coverage - Household Members V2</h:title>
     <model>
 
       <instance>
-        <data id="household_members_cs_ss" version="2000214">
+        <data id="household_members_cs_ss_v2" version="2000214">
           <m_recorderID/>
           <m_villageName/>
           <m_villageCode/>
@@ -61,9 +61,6 @@
           </text>
           <text id="/data/m_ald_swallowed/Yes:label">
             <value>1=Yes</value>
-          </text>
-          <text id="/data/m_ivm_swallowed:jr:constraintMsg">
-            <value>La valeure ne peut pas être supérieure à l'age</value>
           </text>
           <text id="/data/m_decide_take_treatment/Don't know:label">
             <value>5=Don't know</value>
@@ -275,9 +272,6 @@
           <text id="/data/m_sex/Male:label">
             <value>1=Male</value>
           </text>
-          <text id="/data/m_main_source_income:jr:constraintMsg">
-            <value>La valeure ne peut pas être supérieure à l'age</value>
-          </text>
           <text id="/data/m_how_long_lived:label">
             <value>7. How long have you been living in this village?</value>
           </text>
@@ -391,9 +385,9 @@
       <bind nodeset="/data/m_marital_status" required="true()" type="string"/>
       <bind nodeset="/data/m_how_long_lived" required="true()" type="string"/>
       <bind nodeset="/data/m_education_level" required="true()" type="string"/>
-      <bind jr:constraintMsg="jr:itext('/data/m_main_source_income:jr:constraintMsg')" nodeset="/data/m_main_source_income" required="true()" type="string"/>
+      <bind nodeset="/data/m_main_source_income" required="true()" type="string"/>
       <bind nodeset="/data/m_main_source_income_other" relevant="selected( /data/m_main_source_income , 'Other')" required="true()" type="string"/>
-      <bind jr:constraintMsg="jr:itext('/data/m_ivm_swallowed:jr:constraintMsg')" nodeset="/data/m_ivm_swallowed" required="true()" type="string"/>
+      <bind nodeset="/data/m_ivm_swallowed" required="true()" type="string"/>
       <bind nodeset="/data/m_ald_swallowed" required="true()" type="string"/>
       <bind nodeset="/data/m_imv_alb_place" relevant="selected( /data/m_ivm_swallowed , 'Yes') or selected( /data/m_ald_swallowed , 'Yes')" required="true()" type="string"/>
       <bind nodeset="/data/m_take_tablet_how" relevant="selected( /data/m_ivm_swallowed , 'Yes') or selected( /data/m_ald_swallowed , 'Yes')" required="true()" type="string"/>
