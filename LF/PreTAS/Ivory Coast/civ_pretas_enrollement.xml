@@ -21,7 +21,6 @@
           <optionscanner/>
           <code_barre/>
           <code_genere/>
-          <code_genere2/>
           <age/>
           <sexe/>
           <status/>
@@ -38,6 +37,7 @@
           <end/>
           <meta>
             <instanceID/>
+            <randomnum/>
           </meta>
         </data>
       </instance>
@@ -64,9 +64,6 @@
           </text>
           <text id="/data/lymphoedeme/Oui:label">
             <value>Oui</value>
-          </text>
-          <text id="/data/code_genere2:label">
-            <value>Répéter le code automatique généré</value>
           </text>
           <text id="/data/codeOperateur/13:label">
             <value>13</value>
@@ -111,7 +108,7 @@
             <value>Manuel</value>
           </text>
           <text id="/data/code_genere:label">
-            <value>Saisir le code automatique généré</value>
+            <value>Veuillez sauvegarder ce code généré. Il sera utilisé pour identifier ce participant à cette enquête.</value>
           </text>
           <text id="/data/age:label">
             <value>Age</value>
@@ -227,12 +224,6 @@
           <text id="/data/migration_origine:label">
             <value>Dans quel pays/région venez-vous?</value>
           </text>
-          <text id="/data/code_genere2:hint">
-            <value>Exemple "100-0001"</value>
-          </text>
-          <text id="/data/code_genere2:jr:constraintMsg">
-            <value>Le code n'est pas le même</value>
-          </text>
           <text id="/data/migration_origine/Aucun:label">
             <value>Aucun</value>
           </text>
@@ -246,8 +237,7 @@
       <bind nodeset="/data/code_site2" relevant="selected( /data/site ,'Autre')" required="true()" type="string" db_get="col_6" db_filter_by_col_1="/data/ue"/>
       <bind nodeset="/data/optionscanner" required="true()" type="string"/>
       <bind nodeset="/data/code_barre" relevant=" /data/optionscanner ='scanner'" required="true()" type="barcode"/>
-      <bind constraint="regex(., '^[0-9]{3}-[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/code_genere:jr:constraintMsg')" nodeset="/data/code_genere" relevant=" /data/optionscanner ='manuel'" required="true()" type="string"/>
-      <bind constraint=". =  /data/code_genere " jr:constraintMsg="jr:itext('/data/code_genere2:jr:constraintMsg')" nodeset="/data/code_genere2" relevant=" /data/optionscanner ='manuel'" required="true()" type="string"/>
+      <bind nodeset="/data/code_genere" constraint="regex(., '^[0-9]{3}-[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/code_genere:jr:constraintMsg')" relevant=" /data/optionscanner ='manuel'" required="true()" type="string" calculate="concat(if(string-length(/data/code_site) > 2, /data/code_site, /data/code_site2),'-', /data/meta/randomnum)" readonly="true()"/>
       <bind constraint=".&gt;4 and .&lt;120" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" required="true()" type="int"/>
       <bind nodeset="/data/sexe" required="true()" type="string"/>
       <bind nodeset="/data/status" required="true()" type="string"/>
@@ -263,6 +253,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,7)"/>
     </model>
   </h:head>
   <h:body>
@@ -341,10 +332,6 @@
     <input ref="/data/code_genere">
       <label ref="jr:itext('/data/code_genere:label')"/>
       <hint ref="jr:itext('/data/code_genere:hint')"/>
-    </input>
-    <input ref="/data/code_genere2">
-      <label ref="jr:itext('/data/code_genere2:label')"/>
-      <hint ref="jr:itext('/data/code_genere2:hint')"/>
     </input>
     <input ref="/data/age">
       <label ref="jr:itext('/data/age:label')"/>
