@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. Côte d'Ivoire - Pré TAS FL Formulaire Enrôlement V2</h:title>
+    <h:title>2. Côte d'Ivoire - Pré TAS FL Formulaire Enrôlement V3</h:title>
     <model >
 
       <instance>
-        <data id="bf_pretas_lf_enrollement_v2" version="20200310">
+        <data id="bf_pretas_lf_enrollement_v3" version="20200310">
           <codeOperateur/>
           <ue/>
           <site/>
@@ -23,7 +23,6 @@
           <code_genere/>
           <age/>
           <sexe/>
-          <status/>
           <ivm_alb/>
           <avm_alb_derniere_campagne/>
           <nb_fois_ivm_alb/>
@@ -67,9 +66,6 @@
           </text>
           <text id="/data/codeOperateur/13:label">
             <value>13</value>
-          </text>
-          <text id="/data/status/nouvel.entrant:label">
-            <value>2 nouvel entrant</value>
           </text>
           <text id="/data/migration_origine/Guinea:label">
             <value>Guinea</value>
@@ -126,7 +122,7 @@
             <value>Mali</value>
           </text>
           <text id="/data/site2:label">
-            <value>Entrer le nom du Site sentinnelle/Control Ponctuel</value>
+            <value>Entrer le nom du site sentinnelle/control ponctuel</value>
           </text>
           <text id="/data/codeOperateur/17:label">
             <value>17</value>
@@ -155,9 +151,6 @@
           <text id="/data/codeOperateur/14:label">
             <value>14</value>
           </text>
-          <text id="/data/status/examine.precedemment:label">
-            <value>1 examiné précédemment</value>
-          </text>
           <text id="/data/codeOperateur/10:label">
             <value>10</value>
           </text>
@@ -165,7 +158,7 @@
             <value>Combien de fois avez reçu IVM+ALB au cours des cinq dernière années</value>
           </text>
           <text id="/data/code_site2:label">
-            <value>Entrer le code du Site sentinnelle/Control Ponctuel</value>
+            <value>Entrer le code du site sentinnelle/control ponctuel</value>
           </text>
           <text id="/data/codeOperateur/19:label">
             <value>19</value>
@@ -183,13 +176,10 @@
             <value>Masculin</value>
           </text>
           <text id="/data/site:label">
-            <value>Site sentinnelle/Control Ponctuel</value>
+            <value>Site sentinnelle/control ponctuel</value>
           </text>
           <text id="/data/commentaires:label">
             <value>Commentaires</value>
-          </text>
-          <text id="/data/status:label">
-            <value>Statut enregistrement</value>
           </text>
           <text id="/data/migration_origine/Ghana:label">
             <value>Ghana</value>
@@ -240,7 +230,6 @@
       <bind nodeset="/data/code_genere" constraint="regex(., '^[0-9]{3}-[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/code_genere:jr:constraintMsg')" relevant=" /data/optionscanner ='manuel'" required="true()" type="string" calculate="concat(if(string-length(/data/code_site) > 2, /data/code_site, /data/code_site2),'-', /data/meta/randomnum)" readonly="true()"/>
       <bind constraint=".&gt;4 and .&lt;120" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" required="true()" type="int"/>
       <bind nodeset="/data/sexe" required="true()" type="string"/>
-      <bind nodeset="/data/status" required="true()" type="string"/>
       <bind nodeset="/data/ivm_alb" required="true()" type="string"/>
       <bind nodeset="/data/avm_alb_derniere_campagne" relevant=" /data/ivm_alb ='Oui'" required="true()" type="string"/>
       <bind nodeset="/data/nb_fois_ivm_alb" relevant=" /data/ivm_alb ='Oui'" required="true()" type="int"/>
@@ -345,17 +334,6 @@
       <item>
         <label ref="jr:itext('/data/sexe/F:label')"/>
         <value>F</value>
-      </item>
-    </select1>
-    <select1 ref="/data/status">
-      <label ref="jr:itext('/data/status:label')"/>
-      <item>
-        <label ref="jr:itext('/data/status/examine.precedemment:label')"/>
-        <value>examine.precedemment</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/status/nouvel.entrant:label')"/>
-        <value>nouvel.entrant</value>
       </item>
     </select1>
     <select1 ref="/data/ivm_alb">
