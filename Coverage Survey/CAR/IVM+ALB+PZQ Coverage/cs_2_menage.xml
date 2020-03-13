@@ -9,55 +9,13 @@
   <h:head>
     <h:title>RAC Couverture ALB+IVM+PZQ (Mar. 2020) - 2. Ménage</h:title>
     <model >
-
-      <instance>
-        <data id="cs_mar2020_manage" version="20200313">
-          <code_operateur/>
-          <district/>
-          <village/>
-          <village_code/>
-          <num_menage/>
-          <chef_men_consent/>
-          <code_repondant/>
-          <repondand_consent/>
-          <sexe/>
-          <age_annee/>
-          <temps_dans_menage/>
-          <cible_med/>
-          <centre_sante/>
-          <passage_dc/>
-          <present_dernier_amm/>
-          <avale_ivm/>
-          <nombre_ivm_avale/>
-          <mesurer_avec_toise/>
-          <avale_alb/>
-          <nombre_alb_avale/>
-          <avale_pzq/>
-          <nombre_pzq_avale/>
-          <raison_ivm/>
-          <raison_ivm_autre/>
-          <raison_alb/>
-          <raison_alb_autre/>
-          <raison_pzq/>
-          <raison_pzq_autre/>
-          <lieu_ivm/>
-          <lieu_alb/>
-          <lieu_pzq/>
-          <information_amm/>
-          <information_amm_autre/>
-          <raison_non_traitement/>
-          <raison_non_traitement_aure/>
-          <notes/>
-          <meta>
-            <instanceID/>
-          </meta>
-        </data>
-      </instance>
-
       <itext>
         <translation default="true()" lang="French">
           <text id="/data/information_amm/eglise:label">
             <value>Église</value>
+          </text>
+          <text id="/data/num_menage2:label">
+            <value>Répéter le numéro de ménage</value>
           </text>
           <text id="/data/information_amm/Agent.de.sante:label">
             <value>Agent de santé</value>
@@ -377,8 +335,8 @@
           <text id="/data/lieu_pzq:label">
             <value>Où avez-vous reçu Le PZQ</value>
           </text>
-          <text id="/data/avale_alb/Non:label">
-            <value>N'a pas avalé</value>
+          <text id="/data/num_menage2:jr:constraintMsg">
+            <value>Le numéro n'est pas le même</value>
           </text>
           <text id="/data/raison_non_traitement/Femme.allaitante.&lt;.8.jrs:label">
             <value>Femme allaitante &lt; 8 jrs</value>
@@ -416,6 +374,9 @@
           <text id="/data/lieu_pzq/A.l'ecole..A.la.maison:label">
             <value>A l'école  A la maison</value>
           </text>
+          <text id="/data/info_fin:label">
+            <value>Vous venez d'entrer une information qui mettra fin l'enquête</value>
+          </text>
           <text id="/data/raison_ivm/Fievre:label">
             <value>Fièvre</value>
           </text>
@@ -446,46 +407,98 @@
           <text id="/data/raison_alb/Paludisme:label">
             <value>Paludisme</value>
           </text>
+          <text id="/data/avale_alb/Non:label">
+            <value>N'a pas avalé</value>
+          </text>
         </translation>
       </itext>
+      <instance>
+        <data id="cs_mar2020_manage" version="20200313">
+          <code_operateur/>
+          <district/>
+          <village/>
+          <village_code/>
+          <num_menage/>
+          <num_menage2/>
+          <chef_men_consent/>
+          <code_repondant/>
+          <repondand_consent/>
+          <sexe/>
+          <age_annee/>
+          <temps_dans_menage/>
+          <cible_med/>
+          <centre_sante/>
+          <passage_dc/>
+          <present_dernier_amm/>
+          <avale_ivm/>
+          <nombre_ivm_avale/>
+          <mesurer_avec_toise/>
+          <avale_alb/>
+          <nombre_alb_avale/>
+          <avale_pzq/>
+          <nombre_pzq_avale/>
+          <raison_ivm/>
+          <raison_ivm_autre/>
+          <raison_alb/>
+          <raison_alb_autre/>
+          <raison_pzq/>
+          <raison_pzq_autre/>
+          <lieu_ivm/>
+          <lieu_alb/>
+          <lieu_pzq/>
+          <information_amm/>
+          <information_amm_autre/>
+          <raison_non_traitement/>
+          <raison_non_traitement_aure/>
+          <info_fin/>
+          <notes/>
+          <meta>
+            <instanceID/>
+            <randomnum/>
+          </meta>
+        </data>
+      </instance>
 
       <bind constraint="regex(., '^[0-9]{1,2}$')" jr:constraintMsg="jr:itext('/data/code_operateur:jr:constraintMsg')" nodeset="/data/code_operateur" required="true()" type="int"/>
       <bind nodeset="/data/district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/village" required="true()" type="string" db_get="col_3" db_filter_by_col_1="/data/district"/>
       <bind nodeset="/data/village_code" required="true()" type="string" db_get="col_4" db_filter_by_col_1="/data/district"/>
       <bind nodeset="/data/num_menage" required="true()" type="int"/>
+      <bind constraint=". =  /data/num_menage " jr:constraintMsg="jr:itext('/data/num_menage2:jr:constraintMsg')" nodeset="/data/num_menage2" required="true()" type="int"/>
       <bind nodeset="/data/chef_men_consent" required="true()" type="string"/>
-      <bind nodeset="/data/code_repondant" required="true()" type="string"/>
-      <bind nodeset="/data/repondand_consent" required="true()" type="string"/>
-      <bind nodeset="/data/sexe" required="true()" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/age_annee:jr:constraintMsg')" nodeset="/data/age_annee" required="true()" type="int"/>
-      <bind nodeset="/data/temps_dans_menage" required="true()" type="string"/>
-      <bind nodeset="/data/cible_med" required="true()" type="string"/>
-      <bind nodeset="/data/centre_sante" required="true()" type="string"/>
-      <bind nodeset="/data/passage_dc" required="true()" type="string"/>
-      <bind nodeset="/data/present_dernier_amm" required="true()" type="string"/>
-      <bind nodeset="/data/avale_ivm" relevant="selected( /data/cible_med , 'IVM')" required="true()" type="string"/>
-      <bind nodeset="/data/nombre_ivm_avale" relevant="selected( /data/avale_ivm , 'Oui')" required="true()" type="int"/>
-      <bind nodeset="/data/mesurer_avec_toise" relevant="selected( /data/cible_med , 'IVM')" type="string"/>
-      <bind nodeset="/data/avale_alb" relevant="selected( /data/cible_med , 'ALB')" required="true()" type="string"/>
-      <bind nodeset="/data/nombre_alb_avale" relevant="selected( /data/avale_alb , 'Oui')" required="true()" type="int"/>
-      <bind nodeset="/data/avale_pzq" relevant="selected( /data/cible_med , 'PZQ')" required="true()" type="string"/>
-      <bind nodeset="/data/nombre_pzq_avale" relevant="selected( /data/avale_pzq , 'Oui')" required="true()" type="int"/>
-      <bind nodeset="/data/raison_ivm" required="true()" type="string"/>
-      <bind nodeset="/data/raison_ivm_autre" relevant="selected( /data/raison_ivm , 'Autres')" required="true()" type="string"/>
-      <bind nodeset="/data/raison_alb" required="true()" type="string"/>
-      <bind nodeset="/data/raison_alb_autre" relevant="selected( /data/raison_alb , 'Autres')" required="true()" type="string"/>
-      <bind nodeset="/data/raison_pzq" required="true()" type="string"/>
-      <bind nodeset="/data/raison_pzq_autre" relevant="selected( /data/raison_pzq , 'Autres')" required="true()" type="string"/>
-      <bind nodeset="/data/lieu_ivm" required="true()" type="string"/>
-      <bind nodeset="/data/lieu_alb" required="true()" type="string"/>
-      <bind nodeset="/data/lieu_pzq" required="true()" type="string"/>
-      <bind nodeset="/data/information_amm" required="true()" type="string"/>
-      <bind nodeset="/data/information_amm_autre" relevant="selected( /data/information_amm , 'Autres')" required="true()" type="string"/>
-      <bind nodeset="/data/raison_non_traitement" required="true()" type="string"/>
-      <bind nodeset="/data/raison_non_traitement_aure" relevant="selected( /data/raison_non_traitement , 'Autres')" required="true()" type="string"/>
-      <bind nodeset="/data/notes" required="false()" type="string"/>
+      <bind nodeset="/data/code_repondant" required="true()" relevant=" /data/chef_men_consent  = 'Oui'" type="string" calculate="concat(/data/num_menage,'-', /data/meta/randomnum)" readonly="true()"/>
+      <bind nodeset="/data/repondand_consent" relevant=" /data/chef_men_consent  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/sexe" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/age_annee:jr:constraintMsg')" nodeset="/data/age_annee" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/temps_dans_menage" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/cible_med" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/centre_sante" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/passage_dc" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/present_dernier_amm" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/avale_ivm" relevant="selected( /data/cible_med , 'IVM') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/nombre_ivm_avale" relevant="selected( /data/avale_ivm , 'Oui') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/mesurer_avec_toise" relevant="selected( /data/cible_med , 'IVM') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" type="string"/>
+      <bind nodeset="/data/avale_alb" relevant="selected( /data/cible_med , 'ALB') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/nombre_alb_avale" relevant="selected( /data/avale_alb , 'Oui') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/avale_pzq" relevant="selected( /data/cible_med , 'PZQ') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/nombre_pzq_avale" relevant="selected( /data/avale_pzq , 'Oui') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/raison_ivm" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_ivm_autre" relevant="selected( /data/raison_ivm , 'Autres') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_alb" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_alb_autre" relevant="selected( /data/raison_alb , 'Autres') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_pzq" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_pzq_autre" relevant="selected( /data/raison_pzq , 'Autres') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/lieu_ivm" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/lieu_alb" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/lieu_pzq" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/information_amm" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/information_amm_autre" relevant="selected( /data/information_amm , 'Autres') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_non_traitement" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_non_traitement_aure" relevant="selected( /data/raison_non_traitement , 'Autres') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/info_fin" relevant="/data/chef_men_consent  = 'Non' or  /data/repondand_consent ='Non'" readonly="true()" type="string"/>
+      <bind nodeset="/data/notes" type="string"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,8)"/>
     </model>
   </h:head>
   <h:body>
@@ -503,6 +516,9 @@
     </input>
     <input ref="/data/num_menage">
       <label ref="jr:itext('/data/num_menage:label')"/>
+    </input>
+    <input ref="/data/num_menage2">
+      <label ref="jr:itext('/data/num_menage2:label')"/>
     </input>
     <select1 ref="/data/chef_men_consent">
       <label ref="jr:itext('/data/chef_men_consent:label')"/>
@@ -952,6 +968,9 @@
     </select>
     <input ref="/data/raison_non_traitement_aure">
       <label ref="jr:itext('/data/raison_non_traitement_aure:label')"/>
+    </input>
+    <input ref="/data/info_fin">
+      <label ref="jr:itext('/data/info_fin:label')"/>
     </input>
     <input ref="/data/notes">
       <label ref="jr:itext('/data/notes:label')"/>
