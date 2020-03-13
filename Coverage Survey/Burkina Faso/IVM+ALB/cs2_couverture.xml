@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -7,8 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Mars 2020) Couv ALB+IVM FL - 2. Formulaire Couverture</h:title>
-
+    <h:title>(BF - Mars 2020) Couv ALB+IVM FL - 2. Formulaire Couverture V2</h:title>
     <model >
 
       <instance>
@@ -16,6 +15,7 @@
           <code_enqueteur/>
           <csps/>
           <Code_grappe/>
+          <numero_Menage/>
           <repondant_questionnaire/>
           <age/>
           <Age_en_mois/>
@@ -268,8 +268,8 @@
           <text id="/data/g1/Volet_aime/6=Prise.supervisee:label">
             <value>6=Prise supervisée</value>
           </text>
-          <text id="/data/g1/Entendu_parle_FL/Oui:label">
-            <value>Oui</value>
+          <text id="/data/Types_effets/Courbature:label">
+            <value>4. Courbature</value>
           </text>
           <text id="/data/g1/Prise_medicaments_voisinage/Non:label">
             <value>Non</value>
@@ -334,6 +334,9 @@
           <text id="/data/Raisons_IVM_ALB_non_avale/Malade:label">
             <value>2.Malade</value>
           </text>
+          <text id="/data/numero_Menage:jr:constraintMsg">
+            <value>Le code doit contenir une lettre et trois chiffres</value>
+          </text>
           <text id="/data/g1/groupes_prenant_pas_med:label">
             <value>Est-ce que vous connaissez des personnes ou groupe de personnes qui n'acceptent pas prendre les médicaments</value>
           </text>
@@ -376,8 +379,8 @@
           <text id="/data/g1/Volet_pas_aime/2=Insuffisance.medicaments:label">
             <value>2=Insuffisance médicaments</value>
           </text>
-          <text id="/data/g1/Prise_medicaments_dernier_tdm/1:label">
-            <value>1</value>
+          <text id="/data/g1/Certitude_davaler/6:label">
+            <value>6</value>
           </text>
           <text id="/data/g1:label">
             <value>Connaissances sur la maladie pour les enquêtes de 18 ans et plus</value>
@@ -405,9 +408,6 @@
           </text>
           <text id="/data/g1/Certitude_davaler/7:label">
             <value>7</value>
-          </text>
-          <text id="/data/g1/Suggestions:label">
-            <value>Selon vous que peut-on faire pour que la prochaine campagne soit mieux organisée</value>
           </text>
           <text id="/data/g1/canal_imformaion/Tele:label">
             <value>8 Télé</value>
@@ -468,6 +468,9 @@
           </text>
           <text id="/data/age:jr:constraintMsg">
             <value>Entrer un age valide</value>
+          </text>
+          <text id="/data/g1/Prise_medicaments_dernier_tdm/1:label">
+            <value>1</value>
           </text>
           <text id="/data/Types_effets_autres:label">
             <value>Autres effet indésirables</value>
@@ -574,6 +577,9 @@
           <text id="/data/g1/Prevention_Hydrocele/4=Autres:label">
             <value>4=autres à préciser</value>
           </text>
+          <text id="/data/g1/Suggestions:label">
+            <value>Selon vous que peut-on faire pour que la prochaine campagne soit mieux organisée</value>
+          </text>
           <text id="/data/Raisons_IVM_ALB_non_avale/Autres:label">
             <value>6.Autre (spécifiez)</value>
           </text>
@@ -616,8 +622,8 @@
           <text id="/data/Raisons_IVM_ALB_non_recu/Peur.des.effets.indesirables:label">
             <value>2.Peur des effets indésirables</value>
           </text>
-          <text id="/data/g1/Certitude_davaler/6:label">
-            <value>6</value>
+          <text id="/data/Raisons_IVM_ALB_non_recu/Moins.de.5.ans:label">
+            <value>8. Moins de 5 ans</value>
           </text>
           <text id="/data/g1/Incidence_voyages:label">
             <value>Est-ce que vos voyages vous empêchent de prendre annuellement les médicaments ?</value>
@@ -703,8 +709,8 @@
           <text id="/data/Lieu_prise_IVM_ALB/Gare routiere:label">
             <value>3 Gare routière</value>
           </text>
-          <text id="/data/Types_effets/Courbature:label">
-            <value>4. Courbature</value>
+          <text id="/data/g1/Entendu_parle_FL/Oui:label">
+            <value>Oui</value>
           </text>
           <text id="/data/Profession/Menagere:label">
             <value>4 Ménagère</value>
@@ -772,6 +778,9 @@
           <text id="/data/g1/Prise_medicaments_voisinage:label">
             <value>Est-ce que dans votre voisinage, les gens prennent les médicaments ?</value>
           </text>
+          <text id="/data/numero_Menage:label">
+            <value>Numéro du ménage</value>
+          </text>
           <text id="/data/g1/Autonomie_prise_annuelle:label">
             <value>Mon ingestion annuelle des comprimés relève de mon choix. | Peu probable : ___1__ : ___2__ : ___3__ : ___4__ : ___5__ : ___6__ :___7___ : probable</value>
           </text>
@@ -789,13 +798,13 @@
           </text>
         </translation>
       </itext>
-
       <bind nodeset="/data/code_enqueteur" required="true()" type="string"/>
       <bind nodeset="/data/csps" required="true()" type="string" db_get="col_2"/>
       <bind nodeset="/data/Code_grappe" constraint=". &gt;=0 and . &lt;= 30" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/csps"/>
+      <bind nodeset="/data/numero_Menage"constraint="regex(.,'^[a-zA-Z]{1}[0-9]{2,3}$')" jr:constraintMsg="jr:itext('/data/numero_Menage:jr:constraintMsg')" type="string"/>
       <bind nodeset="/data/repondant_questionnaire" required="true()" type="string"/>
       <bind constraint=". &gt;=0 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" required="true()" type="int"/>
-      <bind constraint=". &gt;=0 and . &lt;= 36" nodeset="/data/Age_en_mois" relevant=" /data/age  = 0" required="true()" type="int"/>
+      <bind constraint=". &gt;=0 and . &lt;= 11" nodeset="/data/Age_en_mois" relevant=" /data/age  = 0" required="true()" type="int"/>
       <bind nodeset="/data/Sexe" required="true()" type="string"/>
       <bind nodeset="/data/Instruction" required="true()" type="string"/>
       <bind nodeset="/data/Profession" required="true()" type="string"/>
@@ -876,6 +885,9 @@
     </input>
     <input ref="/data/Code_grappe">
       <label ref="jr:itext('/data/Code_grappe:label')"/>
+    </input>
+    <input ref="/data/numero_Menage">
+      <label ref="jr:itext('/data/numero_Menage:label')"/>
     </input>
     <select1 ref="/data/repondant_questionnaire">
       <label ref="jr:itext('/data/repondant_questionnaire:label')"/>
@@ -1029,6 +1041,10 @@
       <item>
         <label ref="jr:itext('/data/Raisons_IVM_ALB_non_recu/Pas.informe:label')"/>
         <value>Pas.informe</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Raisons_IVM_ALB_non_recu/Moins.de.5.ans:label')"/>
+        <value>Moins.de.5.ans</value>
       </item>
       <item>
         <label ref="jr:itext('/data/Raisons_IVM_ALB_non_recu/Autres:label')"/>
@@ -1448,7 +1464,7 @@
       <input ref="/data/g1/Volet_aime_autre">
         <label ref="jr:itext('/data/g1/Volet_aime_autre:label')"/>
       </input>
-      <select1 ref="/data/g1/Volet_pas_aime">
+      <select ref="/data/g1/Volet_pas_aime">
         <label ref="jr:itext('/data/g1/Volet_pas_aime:label')"/>
         <item>
           <label ref="jr:itext('/data/g1/Volet_pas_aime/1=Site.de.distribution.eloign:label')"/>
@@ -1482,7 +1498,7 @@
           <label ref="jr:itext('/data/g1/Volet_pas_aime/8=Autres:label')"/>
           <value>8=Autres</value>
         </item>
-      </select1>
+      </select>
       <input ref="/data/g1/Suggestions">
         <label ref="jr:itext('/data/g1/Suggestions:label')"/>
       </input>
@@ -1738,3 +1754,4 @@
     </input>
   </h:body>
 </h:html>
+
