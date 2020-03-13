@@ -220,7 +220,7 @@
         </translation>
       </itext>
       <bind nodeset="/data/codeOperateur" required="true()" type="string"/>
-      <bind nodeset="/data/ue" required="true()" type="string"  db_get="col_1"/>
+      <bind nodeset="/data/ue" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/site" required="true()" type="string" db_get="col_3" db_filter_by_col_1="/data/ue"/>
       <bind nodeset="/data/code_site" relevant="/data/site != 'Autre'" required="true()" type="string" db_get="col_4" db_filter_by_col_1="/data/ue"/>
       <bind nodeset="/data/site2" relevant="selected( /data/site ,'Autre')" required="true()" type="string" db_get="col_5" db_filter_by_col_1="/data/ue"/>
