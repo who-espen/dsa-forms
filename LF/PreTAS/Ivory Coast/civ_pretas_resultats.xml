@@ -7,21 +7,22 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>3. Côte d'Ivoire - Pré TAS FL Résultats V3</h:title>
+    <h:title>3. Côte d'Ivoire - Pré TAS FL Résultats V4</h:title>
     <model >
 
       <instance>
-        <data id="ci_pretas_lf_resultats_v3" version="20200310">
+        <data id="ci_pretas_lf_resultats_v4" version="20200320">
           <code_operateur/>
           <optionscanner/>
           <code_barre/>
-          <code_genere/>
-          <code_genere2/>
+          <code_id/>
+          <code_id2/>
           <num_test/>
           <lot_fts/>
           <resultat_fts/>
           <fts_invalid_description/>
           <autre_expliquer_fts/>
+          <final_result/>
           <photo/>
           <defis_operationnels/>
           <defis_operationnels_autre/>
@@ -36,6 +37,9 @@
 
       <itext>
         <translation default="true()" lang="French">
+          <text id="/data/final_result/2_Négatif:label">
+            <value>2 Négatif</value>
+          </text>
           <text id="/data/fts_invalid_description/A_Absence_de_ligne_témoin:label">
             <value>A. Absence de ligne témoin</value>
           </text>
@@ -63,14 +67,14 @@
           <text id="/data/fts_invalid_description/C_Difficulté_d'absorption_d'échantillon:label">
             <value>C. Difficulté d'absorption d'échantillon</value>
           </text>
-          <text id="/data/code_genere2:label">
-            <value>1.b. Répéter le code généré</value>
-          </text>
-          <text id="/data/photo:label">
-            <value>7. Photos</value>
+          <text id="/data/code_operateur/11:label">
+            <value>11</value>
           </text>
           <text id="/data/code_operateur:label">
             <value>Code opérateurs</value>
+          </text>
+          <text id="/data/code_id:jr:constraintMsg">
+            <value>Le format est incorrect.</value>
           </text>
           <text id="/data/num_test/2:label">
             <value>2ème Test</value>
@@ -81,8 +85,17 @@
           <text id="/data/fts_invalid_description/D_Difficulté_de_migration_de_l'échantillon:label">
             <value>D. Difficulté de migration de l'échantillon</value>
           </text>
+          <text id="/data/code_id:hint">
+            <value>Exemple "190005"</value>
+          </text>
+          <text id="/data/code_id:label">
+            <value>1.a. Saisir le code d'identification Ce code doit aussi être inscrit dans le test de diagnostic rapide tels que le FTS</value>
+          </text>
           <text id="/data/defis_operationnels/Micropipette.absente:label">
             <value>Micropipette absente</value>
+          </text>
+          <text id="/data/observations:label">
+            <value>9. Observations</value>
           </text>
           <text id="/data/fts_invalid_description/G_Autre_expliquer:label">
             <value>G. Autre (expliquer)</value>
@@ -99,17 +112,20 @@
           <text id="/data/optionscanner/manuel:label">
             <value>Manuel</value>
           </text>
-          <text id="/data/code_genere:label">
-            <value>1.a. Saisir le code généré. Ce code doit aussi être inscrit dans le test de diagnostic rapide tels que le FTS</value>
+          <text id="/data/code_id2:hint">
+            <value>Exemple "190005"</value>
+          </text>
+          <text id="/data/code_id2:label">
+            <value>1.b. Répéter le code d'identification</value>
+          </text>
+          <text id="/data/code_id2:jr:constraintMsg">
+            <value>Le code n'est pas le même</value>
           </text>
           <text id="/data/code_operateur/18:label">
             <value>18</value>
           </text>
-          <text id="/data/fts_invalid_description:label">
-            <value>Description d'invalidation de test 1</value>
-          </text>
-          <text id="/data/observations:label">
-            <value>9. Observations</value>
+          <text id="/data/final_result/3_Invalide:label">
+            <value>3 Invalide</value>
           </text>
           <text id="/data/defis_operationnels/Teste.casse.et.non-utilise:label">
             <value>Teste casse et non-utilise</value>
@@ -139,7 +155,7 @@
             <value>15</value>
           </text>
           <text id="/data/autre_expliquer_fts:label">
-            <value>Si Autre (expliquer)</value>
+            <value>5b. Si Autre (expliquer)</value>
           </text>
           <text id="/data/code_operateur/13:label">
             <value>13</value>
@@ -153,14 +169,14 @@
           <text id="/data/defis_operationnels_autre:label">
             <value>Si autre précisez</value>
           </text>
+          <text id="/data/final_result/1_Positif:label">
+            <value>1 Positif</value>
+          </text>
           <text id="/data/defis_operationnels/Deshydratant.absent:label">
             <value>Déshydratant absent</value>
           </text>
-          <text id="/data/code_genere:hint">
-            <value>Exemple "100-0001"</value>
-          </text>
           <text id="/data/defis_operationnels:label">
-            <value>8. Défis opérationnels observés</value>
+            <value>7. Défis opérationnels observés</value>
           </text>
           <text id="/data/defis_operationnels/Aucun:label">
             <value>Aucun</value>
@@ -168,36 +184,35 @@
           <text id="/data/defis_operationnels/Plusieurs.kits.dans.un.seul.sachet:label">
             <value>Plusieurs kits dans un seul sachet</value>
           </text>
+          <text id="/data/final_result:label">
+            <value>8. Interprétation du résultat final des deux tests</value>
+          </text>
           <text id="/data/fts_invalid_description/B_Ligne_témoin_brisées/partielle:label">
             <value>B. Ligne témoin brisées/partielle</value>
           </text>
           <text id="/data/optionscanner:label">
             <value>Souhaitez-vous scanner ou saisir manuellement le code-barres?</value>
           </text>
-          <text id="/data/code_genere:jr:constraintMsg">
-            <value>Le format est incorrect. Il doit être du type 123-1234</value>
+          <text id="/data/fts_invalid_description:label">
+            <value>5a. Description d'invalidation de test 1</value>
           </text>
-          <text id="/data/code_genere2:hint">
-            <value>Exemple "100-0001"</value>
-          </text>
-          <text id="/data/code_genere2:jr:constraintMsg">
-            <value>Le code n'est pas le même</value>
-          </text>
-          <text id="/data/code_operateur/11:label">
-            <value>11</value>
+          <text id="/data/photo:label">
+            <value>6. Photos</value>
           </text>
         </translation>
       </itext>
+
       <bind nodeset="/data/code_operateur" required="true()" type="string"/>
       <bind nodeset="/data/optionscanner" required="true()" type="string"/>
       <bind nodeset="/data/code_barre" relevant=" /data/optionscanner ='scanner'" required="true()" type="barcode"/>
-      <bind constraint="regex(., '^[0-9]{3}-[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/code_genere:jr:constraintMsg')" nodeset="/data/code_genere" relevant=" /data/optionscanner ='manuel'" required="true()" type="string"/>
-      <bind constraint=". =  /data/code_genere " jr:constraintMsg="jr:itext('/data/code_genere2:jr:constraintMsg')" nodeset="/data/code_genere2" relevant=" /data/optionscanner ='manuel'" required="true()" type="string"/>
+      <bind constraint="regex(., '^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/code_id:jr:constraintMsg')" nodeset="/data/code_id" relevant=" /data/optionscanner ='manuel'" required="true()" type="int"/>
+      <bind constraint=". =  /data/code_id " jr:constraintMsg="jr:itext('/data/code_id2:jr:constraintMsg')" nodeset="/data/code_id2" relevant=" /data/optionscanner ='manuel'" required="true()" type="int"/>
       <bind constraint=".&gt;=1 and .&lt;=2" jr:constraintMsg="jr:itext('/data/num_test:jr:constraintMsg')" nodeset="/data/num_test" required="true()" type="string"/>
       <bind nodeset="/data/lot_fts" required="true()" type="string"/>
       <bind nodeset="/data/resultat_fts" required="true()" type="string"/>
       <bind nodeset="/data/fts_invalid_description" relevant=" /data/resultat_fts  = '3_Invalide'" type="string"/>
       <bind nodeset="/data/autre_expliquer_fts" relevant="selected( /data/fts_invalid_description , 'G_Autre_expliquer')" type="string"/>
+      <bind nodeset="/data/final_result" relevant=" /data/num_test  = '2'" required="true()" type="string"/>
       <bind nodeset="/data/photo" relevant=" /data/resultat_fts  = '1_Positif' or  /data/resultat_fts  = '3_Invalide'" type="binary"/>
       <bind nodeset="/data/defis_operationnels" type="string"/>
       <bind nodeset="/data/defis_operationnels_autre" relevant=" /data/defis_operationnels ='Autre'" type="string"/>
@@ -265,13 +280,13 @@
     <input ref="/data/code_barre">
       <label ref="jr:itext('/data/code_barre:label')"/>
     </input>
-    <input ref="/data/code_genere">
-      <label ref="jr:itext('/data/code_genere:label')"/>
-      <hint ref="jr:itext('/data/code_genere:hint')"/>
+    <input ref="/data/code_id">
+      <label ref="jr:itext('/data/code_id:label')"/>
+      <hint ref="jr:itext('/data/code_id:hint')"/>
     </input>
-    <input ref="/data/code_genere2">
-      <label ref="jr:itext('/data/code_genere2:label')"/>
-      <hint ref="jr:itext('/data/code_genere2:hint')"/>
+    <input ref="/data/code_id2">
+      <label ref="jr:itext('/data/code_id2:label')"/>
+      <hint ref="jr:itext('/data/code_id2:hint')"/>
     </input>
     <select1 ref="/data/num_test">
       <label ref="jr:itext('/data/num_test:label')"/>
@@ -370,6 +385,23 @@
     <input ref="/data/defis_operationnels_autre">
       <label ref="jr:itext('/data/defis_operationnels_autre:label')"/>
     </input>
+
+    <select1 ref="/data/final_result">
+      <label ref="jr:itext('/data/final_result:label')"/>
+      <item>
+        <label ref="jr:itext('/data/final_result/1_Positif:label')"/>
+        <value>1_Positif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/final_result/2_Négatif:label')"/>
+        <value>2_Négatif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/final_result/3_Invalide:label')"/>
+        <value>3_Invalide</value>
+      </item>
+    </select1>
+
     <input ref="/data/observations">
       <label ref="jr:itext('/data/observations:label')"/>
     </input>
