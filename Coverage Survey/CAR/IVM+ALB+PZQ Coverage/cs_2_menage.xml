@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>RCA Couverture ALB+IVM+PZQ (Mar. 2020) - 2. Ménage</h:title>
+    <model >
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/information_amm/eglise:label">
+            <value>Église</value>
+          </text>
+          <text id="/data/num_menage2:label">
+            <value>Répéter le numéro de ménage</value>
+          </text>
+          <text id="/data/information_amm/Agent.de.sante:label">
+            <value>Agent de santé</value>
+          </text>
+          <text id="/data/code_repondant:label">
+            <value>Numéro du répondant (membre du ménage)</value>
+          </text>
+          <text id="/data/code_operateur:jr:constraintMsg">
+            <value>Le code doit être composé d'un nombre à deux chiffres</value>
+          </text>
+          <text id="/data/raison_non_traitement/Manque.d'information:label">
+            <value>Manque d'information</value>
+          </text>
+          <text id="/data/raison_alb/Onchocercose:label">
+            <value>Onchocercose</value>
+          </text>
+          <text id="/data/lieu_alb:label">
+            <value>Où avez-vous reçu L'ALB</value>
+          </text>
+          <text id="/data/information_amm/Crieurs.Publics:label">
+            <value>Crieurs Publics</value>
+          </text>
+          <text id="/data/code_operateur:label">
+            <value>Code opérateur</value>
+          </text>
+          <text id="/data/raison_ivm/NSP:label">
+            <value>NSP</value>
+          </text>
+          <text id="/data/temps_dans_menage/Entre 1 mois et 3 mois:label">
+            <value>Entre 1 mois et 3 mois</value>
+          </text>
+          <text id="/data/raison_ivm/Onchocercose:label">
+            <value>Onchocercose</value>
+          </text>
+          <text id="/data/raison_non_traitement/Enfant.&lt;.5ans:label">
+            <value>Enfant &lt; 5ans</value>
+          </text>
+          <text id="/data/present_dernier_amm/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/raison_non_traitement_aure:label">
+            <value>Veuillez précisez les autres raisons de non traitements</value>
+          </text>
+          <text id="/data/raison_alb:label">
+            <value>Connaissez-vous les raisons de prise de ALB</value>
+          </text>
+          <text id="/data/mesurer_avec_toise/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/information_amm/Radio:label">
+            <value>Radio</value>
+          </text>
+          <text id="/data/avale_ivm:label">
+            <value>Avez-vous avalé les comprimés de Mectizan qui vous ont été donnés lors de la récente AMM ?</value>
+          </text>
+          <text id="/data/raison_alb/SCH:label">
+            <value>SCH (Schistosomiase)</value>
+          </text>
+          <text id="/data/notes:label">
+            <value>Observations</value>
+          </text>
+          <text id="/data/avale_pzq/Oui:label">
+            <value>Oui, avalé PZQ</value>
+          </text>
+          <text id="/data/passage_dc/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/lieu_alb/Chez.le.Chef.de.Village:label">
+            <value>Chez le Chef de Village</value>
+          </text>
+          <text id="/data/raison_pzq/Elephantiasis:label">
+            <value>Eléphantiasis</value>
+          </text>
+          <text id="/data/sexe/F:label">
+            <value>Féminin</value>
+          </text>
+          <text id="/data/raison_pzq/Filariose.lymphatique:label">
+            <value>Filariose lymphatique</value>
+          </text>
+          <text id="/data/raison_alb_autre:label">
+            <value>Autres raison de prise de ALB</value>
+          </text>
+          <text id="/data/raison_ivm/Autres:label">
+            <value>Autres à préciser</value>
+          </text>
+          <text id="/data/district:label">
+            <value>Sélectionner un district</value>
+          </text>
+          <text id="/data/age_annee:jr:constraintMsg">
+            <value>L'age doit être entre 5 et 120</value>
+          </text>
+          <text id="/data/lieu_ivm:label">
+            <value>Où avez-vous reçu l'IVM (Mectizan)</value>
+          </text>
+          <text id="/data/avale_ivm/Non:label">
+            <value>N'a pas avalé</value>
+          </text>
+          <text id="/data/avale_alb:hint">
+            <value>Montrez chaque comprimé séparément</value>
+          </text>
+          <text id="/data/mesurer_avec_toise/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/raison_alb/Hydrocele:label">
+            <value>Hydrocèle</value>
+          </text>
+          <text id="/data/raison_pzq:label">
+            <value>Connaissez-vous les raisons de prise de PZQ</value>
+          </text>
+          <text id="/data/cible_med/ALB:label">
+            <value>ALB</value>
+          </text>
+          <text id="/data/cible_med/IVM:label">
+            <value>IVM</value>
+          </text>
+          <text id="/data/information_amm/DC:label">
+            <value>DC</value>
+          </text>
+          <text id="/data/mesurer_avec_toise:label">
+            <value>Le distibuteur vous a-t-il mésurer l'aide d'une toise lors de la dernère distrinbution?</value>
+          </text>
+          <text id="/data/avale_pzq/Non:label">
+            <value>N'a pas avalé</value>
+          </text>
+          <text id="/data/raison_pzq/NSP:label">
+            <value>NSP</value>
+          </text>
+          <text id="/data/lieu_alb/A.l'ecole..A.la.maison:label">
+            <value>A l'école  A la maison</value>
+          </text>
+          <text id="/data/avale_ivm/Oui:label">
+            <value>Oui, avalé Mectizan</value>
+          </text>
+          <text id="/data/repondand_consent/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/information_amm/Autres:label">
+            <value>Autres à préciser</value>
+          </text>
+          <text id="/data/raison_ivm/Elephantiasis:label">
+            <value>Eléphantiasis</value>
+          </text>
+          <text id="/data/chef_men_consent:label">
+            <value>Le responsable du ménage a-t-il donné son consentement?</value>
+          </text>
+          <text id="/data/raison_ivm/STH:label">
+            <value>STH (Géo-helminthiases)</value>
+          </text>
+          <text id="/data/village:label">
+            <value>Sélectionner un village</value>
+          </text>
+          <text id="/data/raison_alb/Autres:label">
+            <value>Autres à préciser</value>
+          </text>
+          <text id="/data/raison_pzq/SCH:label">
+            <value>SCH (Schistosomiase)</value>
+          </text>
+          <text id="/data/raison_ivm/SCH:label">
+            <value>SCH (Schistosomiase)</value>
+          </text>
+          <text id="/data/temps_dans_menage/Plus de 3 mois:label">
+            <value>Plus de 3 mois</value>
+          </text>
+          <text id="/data/raison_alb/NSP:label">
+            <value>NSP</value>
+          </text>
+          <text id="/data/raison_pzq/Autres:label">
+            <value>Autres à préciser</value>
+          </text>
+          <text id="/data/sexe:label">
+            <value>Sexe du répondant</value>
+          </text>
+          <text id="/data/raison_non_traitement/Peur.des.effets.secondaires:label">
+            <value>Peur des effets secondaires</value>
+          </text>
+          <text id="/data/lieu_ivm/A.l'eglise..Au.marche:label">
+            <value>A l'Église  Au marché</value>
+          </text>
+          <text id="/data/temps_dans_menage:label">
+            <value>Nombre de mois passes dans le ménage</value>
+          </text>
+          <text id="/data/village_code:label">
+            <value>Sélectionner un village code</value>
+          </text>
+          <text id="/data/avale_alb:label">
+            <value>Avez-vous avalé les comprimés d'ALB qui vous ont été donnés lors de la récente AMM ?</value>
+          </text>
+          <text id="/data/raison_pzq/STH:label">
+            <value>STH (Géo-helminthiases)</value>
+          </text>
+          <text id="/data/temps_dans_menage/Moins de 1 mois:label">
+            <value>Moins de 1 mois</value>
+          </text>
+          <text id="/data/centre_sante:label">
+            <value>Nom du centre de santé le plus proche</value>
+          </text>
+          <text id="/data/avale_alb/Oui:label">
+            <value>Oui, avalé ALB</value>
+          </text>
+          <text id="/data/raison_non_traitement/Autres:label">
+            <value>Autres à préciser</value>
+          </text>
+          <text id="/data/lieu_ivm/A.l'ecole..A.la.maison:label">
+            <value>A l'école  A la maison</value>
+          </text>
+          <text id="/data/lieu_pzq/Au.centre.de.Sante:label">
+            <value>Au centre de Santé</value>
+          </text>
+          <text id="/data/lieu_pzq/A.l'eglise..Au.marche:label">
+            <value>A l'Église  Au marché</value>
+          </text>
+          <text id="/data/num_menage:label">
+            <value>Numéro de ménage</value>
+          </text>
+          <text id="/data/raison_alb/Trachome:label">
+            <value>Trachome</value>
+          </text>
+          <text id="/data/raison_alb/Elephantiasis:label">
+            <value>Eléphantiasis</value>
+          </text>
+          <text id="/data/repondand_consent:label">
+            <value>Le répondant a-t-il donné son consentement?</value>
+          </text>
+          <text id="/data/avale_pzq:hint">
+            <value>Montrez chaque comprimé séparément</value>
+          </text>
+          <text id="/data/lieu_ivm/Chez.le.DC:label">
+            <value>Chez le DC</value>
+          </text>
+          <text id="/data/lieu_ivm/Au.centre.de.Sante:label">
+            <value>Au centre de Santé</value>
+          </text>
+          <text id="/data/raison_pzq_autre:label">
+            <value>Autres raison de prise de PZQ</value>
+          </text>
+          <text id="/data/nombre_alb_avale:label">
+            <value>Si oui, combien de comprimés avez-vous reçu</value>
+          </text>
+          <text id="/data/information_amm:label">
+            <value>Où avez-vous entendu parler de la campagne de l'AMM</value>
+          </text>
+          <text id="/data/chef_men_consent/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/raison_pzq/Onchocercose:label">
+            <value>Onchocercose</value>
+          </text>
+          <text id="/data/raison_non_traitement/Femme.enceinte:label">
+            <value>Femme enceinte</value>
+          </text>
+          <text id="/data/cible_med/PZQ:label">
+            <value>PZQ</value>
+          </text>
+          <text id="/data/lieu_pzq/Chez.le.DC:label">
+            <value>Chez le DC</value>
+          </text>
+          <text id="/data/raison_ivm/Hydrocele:label">
+            <value>Hydrocèle</value>
+          </text>
+          <text id="/data/chef_men_consent/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/passage_dc:label">
+            <value>Le Distributeur communautaire/Agent de santé communautaire pour le programme AMM a-t-il rendu visite à votre ménage lors de la dernière campagne</value>
+          </text>
+          <text id="/data/raison_non_traitement/maladie.grave:label">
+            <value>maladie grave</value>
+          </text>
+          <text id="/data/nombre_ivm_avale:label">
+            <value>Si oui, combien de comprimés avez-vous reçu</value>
+          </text>
+          <text id="/data/avale_pzq:label">
+            <value>Avez-vous avalé les comprimés de PZQ qui vous ont été donnés lors de la récente AMM ?</value>
+          </text>
+          <text id="/data/information_amm_autre:label">
+            <value>Veuillez précisez les autres sources d'information de la campagne</value>
+          </text>
+          <text id="/data/present_dernier_amm/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/present_dernier_amm:label">
+            <value>Etiez-vous présent lors de la campagne</value>
+          </text>
+          <text id="/data/raison_pzq/Fievre:label">
+            <value>Fièvre</value>
+          </text>
+          <text id="/data/repondand_consent/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/nombre_pzq_avale:label">
+            <value>Si oui, combien de comprimés avez-vous reçu</value>
+          </text>
+          <text id="/data/raison_ivm/Paludisme:label">
+            <value>Paludisme</value>
+          </text>
+          <text id="/data/raison_ivm/Trachome:label">
+            <value>Trachome</value>
+          </text>
+          <text id="/data/avale_ivm:hint">
+            <value>Montrez chaque comprimé séparément</value>
+          </text>
+          <text id="/data/raison_non_traitement/Absent:label">
+            <value>Absent</value>
+          </text>
+          <text id="/data/lieu_pzq/Chez.le.Chef.de.Village:label">
+            <value>Chez le Chef de Village</value>
+          </text>
+          <text id="/data/raison_ivm:label">
+            <value>Connaissez-vous les raisons de prise du Mectizan</value>
+          </text>
+          <text id="/data/lieu_alb/A.l'eglise..Au.marche:label">
+            <value>A l'Église  Au marché</value>
+          </text>
+          <text id="/data/passage_dc/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/lieu_pzq:label">
+            <value>Où avez-vous reçu Le PZQ</value>
+          </text>
+          <text id="/data/num_menage2:jr:constraintMsg">
+            <value>Le numéro n'est pas le même</value>
+          </text>
+          <text id="/data/raison_non_traitement/Femme.allaitante.&lt;.8.jrs:label">
+            <value>Femme allaitante &lt; 8 jrs</value>
+          </text>
+          <text id="/data/lieu_alb/Chez.le.DC:label">
+            <value>Chez le DC</value>
+          </text>
+          <text id="/data/raison_pzq/Hydrocele:label">
+            <value>Hydrocèle</value>
+          </text>
+          <text id="/data/raison_non_traitement/Refus:label">
+            <value>Refus</value>
+          </text>
+          <text id="/data/raison_alb/Fievre:label">
+            <value>Fièvre</value>
+          </text>
+          <text id="/data/cible_med:label">
+            <value>Médicaments cibles pour le répondant</value>
+          </text>
+          <text id="/data/lieu_ivm/Chez.le.Chef.de.Village:label">
+            <value>Chez le Chef de Village</value>
+          </text>
+          <text id="/data/raison_ivm_autre:label">
+            <value>Autres raison de prise du mectizan</value>
+          </text>
+          <text id="/data/sexe/M:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/raison_pzq/Trachome:label">
+            <value>Trachome</value>
+          </text>
+          <text id="/data/raison_pzq/Paludisme:label">
+            <value>Paludisme</value>
+          </text>
+          <text id="/data/lieu_pzq/A.l'ecole..A.la.maison:label">
+            <value>A l'école  A la maison</value>
+          </text>
+          <text id="/data/info_fin:label">
+            <value>Vous venez d'entrer une information qui mettra fin l'enquête</value>
+          </text>
+          <text id="/data/raison_ivm/Fievre:label">
+            <value>Fièvre</value>
+          </text>
+          <text id="/data/raison_alb/Filariose.lymphatique:label">
+            <value>Filariose lymphatique</value>
+          </text>
+          <text id="/data/raison_non_traitement:label">
+            <value>Avez-vous des raisons particulières de ne pas prendre le ou les médicaments</value>
+          </text>
+          <text id="/data/raison_non_traitement/Rupture.medicament:label">
+            <value>Rupture médicament</value>
+          </text>
+          <text id="/data/age_annee:label">
+            <value>Age (en année)</value>
+          </text>
+          <text id="/data/raison_ivm/Filariose.lymphatique:label">
+            <value>Filariose lymphatique</value>
+          </text>
+          <text id="/data/information_amm/television:label">
+            <value>télévision</value>
+          </text>
+          <text id="/data/raison_alb/STH:label">
+            <value>STH (Géo-helminthiases)</value>
+          </text>
+          <text id="/data/lieu_alb/Au.centre.de.Sante:label">
+            <value>Au centre de Santé</value>
+          </text>
+          <text id="/data/raison_alb/Paludisme:label">
+            <value>Paludisme</value>
+          </text>
+          <text id="/data/avale_alb/Non:label">
+            <value>N'a pas avalé</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data id="cs_mar2020_manage" version="20200313">
+          <code_operateur/>
+          <district/>
+          <village/>
+          <village_code/>
+          <num_menage/>
+          <num_menage2/>
+          <chef_men_consent/>
+          <code_repondant/>
+          <repondand_consent/>
+          <sexe/>
+          <age_annee/>
+          <temps_dans_menage/>
+          <cible_med/>
+          <centre_sante/>
+          <passage_dc/>
+          <present_dernier_amm/>
+          <avale_ivm/>
+          <nombre_ivm_avale/>
+          <mesurer_avec_toise/>
+          <avale_alb/>
+          <nombre_alb_avale/>
+          <avale_pzq/>
+          <nombre_pzq_avale/>
+          <raison_ivm/>
+          <raison_ivm_autre/>
+          <raison_alb/>
+          <raison_alb_autre/>
+          <raison_pzq/>
+          <raison_pzq_autre/>
+          <lieu_ivm/>
+          <lieu_alb/>
+          <lieu_pzq/>
+          <information_amm/>
+          <information_amm_autre/>
+          <raison_non_traitement/>
+          <raison_non_traitement_aure/>
+          <info_fin/>
+          <notes/>
+          <meta>
+            <instanceID/>
+            <randomnum/>
+          </meta>
+        </data>
+      </instance>
+
+      <bind constraint="regex(., '^[0-9]{1,2}$')" jr:constraintMsg="jr:itext('/data/code_operateur:jr:constraintMsg')" nodeset="/data/code_operateur" required="true()" type="int"/>
+      <bind nodeset="/data/district" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/village" required="true()" type="string" db_get="col_3" db_filter_by_col_1="/data/district"/>
+      <bind nodeset="/data/village_code" required="true()" type="string" db_get="col_4" db_filter_by_col_1="/data/district"/>
+      <bind nodeset="/data/num_menage" required="true()" type="int"/>
+      <bind constraint=". =  /data/num_menage " jr:constraintMsg="jr:itext('/data/num_menage2:jr:constraintMsg')" nodeset="/data/num_menage2" required="true()" type="int"/>
+      <bind nodeset="/data/chef_men_consent" required="true()" type="string"/>
+      <bind nodeset="/data/code_repondant" required="true()" relevant=" /data/chef_men_consent  = 'Oui'" type="string" calculate="concat(/data/num_menage,'-', /data/meta/randomnum)" readonly="true()"/>
+      <bind nodeset="/data/repondand_consent" relevant=" /data/chef_men_consent  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/sexe" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/age_annee:jr:constraintMsg')" nodeset="/data/age_annee" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/temps_dans_menage" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/cible_med" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/centre_sante" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/passage_dc" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/present_dernier_amm" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/avale_ivm" relevant="selected( /data/cible_med , 'IVM') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/nombre_ivm_avale" relevant="selected( /data/avale_ivm , 'Oui') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/mesurer_avec_toise" relevant="selected( /data/cible_med , 'IVM') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" type="string"/>
+      <bind nodeset="/data/avale_alb" relevant="selected( /data/cible_med , 'ALB') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/nombre_alb_avale" relevant="selected( /data/avale_alb , 'Oui') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/avale_pzq" relevant="selected( /data/cible_med , 'PZQ') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/nombre_pzq_avale" relevant="selected( /data/avale_pzq , 'Oui') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/raison_ivm" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_ivm_autre" relevant="selected( /data/raison_ivm , 'Autres') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_alb" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_alb_autre" relevant="selected( /data/raison_alb , 'Autres') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_pzq" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_pzq_autre" relevant="selected( /data/raison_pzq , 'Autres') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/lieu_ivm" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/lieu_alb" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/lieu_pzq" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/information_amm" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/information_amm_autre" relevant="selected( /data/information_amm , 'Autres') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_non_traitement" relevant=" /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/raison_non_traitement_aure" relevant="selected( /data/raison_non_traitement , 'Autres') and  /data/chef_men_consent  = 'Oui' and  /data/repondand_consent ='Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/info_fin" relevant="/data/chef_men_consent  = 'Non' or  /data/repondand_consent ='Non'" readonly="true()" type="string"/>
+      <bind nodeset="/data/notes" type="string"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,8)"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/code_operateur">
+      <label ref="jr:itext('/data/code_operateur:label')"/>
+    </input>
+    <input ref="/data/district">
+      <label ref="jr:itext('/data/district:label')"/>
+    </input>
+    <input ref="/data/village">
+      <label ref="jr:itext('/data/village:label')"/>
+    </input>
+    <input ref="/data/village_code">
+      <label ref="jr:itext('/data/village_code:label')"/>
+    </input>
+    <input ref="/data/num_menage">
+      <label ref="jr:itext('/data/num_menage:label')"/>
+    </input>
+    <input ref="/data/num_menage2">
+      <label ref="jr:itext('/data/num_menage2:label')"/>
+    </input>
+    <select1 ref="/data/chef_men_consent">
+      <label ref="jr:itext('/data/chef_men_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/chef_men_consent/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/chef_men_consent/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/code_repondant">
+      <label ref="jr:itext('/data/code_repondant:label')"/>
+    </input>
+    <select1 ref="/data/repondand_consent">
+      <label ref="jr:itext('/data/repondand_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/repondand_consent/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/repondand_consent/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/sexe">
+      <label ref="jr:itext('/data/sexe:label')"/>
+      <item>
+        <label ref="jr:itext('/data/sexe/M:label')"/>
+        <value>M</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/sexe/F:label')"/>
+        <value>F</value>
+      </item>
+    </select1>
+    <input ref="/data/age_annee">
+      <label ref="jr:itext('/data/age_annee:label')"/>
+    </input>
+    <select1 ref="/data/temps_dans_menage">
+      <label ref="jr:itext('/data/temps_dans_menage:label')"/>
+      <item>
+        <label ref="jr:itext('/data/temps_dans_menage/Moins de 1 mois:label')"/>
+        <value>Moins de 1 mois</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/temps_dans_menage/Entre 1 mois et 3 mois:label')"/>
+        <value>Entre 1 mois et 3 mois</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/temps_dans_menage/Plus de 3 mois:label')"/>
+        <value>Plus de 3 mois</value>
+      </item>
+    </select1>
+    <select ref="/data/cible_med">
+      <label ref="jr:itext('/data/cible_med:label')"/>
+      <item>
+        <label ref="jr:itext('/data/cible_med/IVM:label')"/>
+        <value>IVM</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/cible_med/ALB:label')"/>
+        <value>ALB</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/cible_med/PZQ:label')"/>
+        <value>PZQ</value>
+      </item>
+    </select>
+    <input ref="/data/centre_sante">
+      <label ref="jr:itext('/data/centre_sante:label')"/>
+    </input>
+    <select1 ref="/data/passage_dc">
+      <label ref="jr:itext('/data/passage_dc:label')"/>
+      <item>
+        <label ref="jr:itext('/data/passage_dc/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/passage_dc/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/present_dernier_amm">
+      <label ref="jr:itext('/data/present_dernier_amm:label')"/>
+      <item>
+        <label ref="jr:itext('/data/present_dernier_amm/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/present_dernier_amm/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/avale_ivm">
+      <label ref="jr:itext('/data/avale_ivm:label')"/>
+      <hint ref="jr:itext('/data/avale_ivm:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/avale_ivm/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/avale_ivm/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/nombre_ivm_avale">
+      <label ref="jr:itext('/data/nombre_ivm_avale:label')"/>
+    </input>
+    <select1 ref="/data/mesurer_avec_toise">
+      <label ref="jr:itext('/data/mesurer_avec_toise:label')"/>
+      <item>
+        <label ref="jr:itext('/data/mesurer_avec_toise/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/mesurer_avec_toise/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/avale_alb">
+      <label ref="jr:itext('/data/avale_alb:label')"/>
+      <hint ref="jr:itext('/data/avale_alb:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/avale_alb/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/avale_alb/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/nombre_alb_avale">
+      <label ref="jr:itext('/data/nombre_alb_avale:label')"/>
+    </input>
+    <select1 ref="/data/avale_pzq">
+      <label ref="jr:itext('/data/avale_pzq:label')"/>
+      <hint ref="jr:itext('/data/avale_pzq:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/avale_pzq/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/avale_pzq/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/nombre_pzq_avale">
+      <label ref="jr:itext('/data/nombre_pzq_avale:label')"/>
+    </input>
+    <select ref="/data/raison_ivm">
+      <label ref="jr:itext('/data/raison_ivm:label')"/>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/Filariose.lymphatique:label')"/>
+        <value>Filariose.lymphatique</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/Hydrocele:label')"/>
+        <value>Hydrocele</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/Elephantiasis:label')"/>
+        <value>Elephantiasis</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/Onchocercose:label')"/>
+        <value>Onchocercose</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/STH:label')"/>
+        <value>STH</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/Trachome:label')"/>
+        <value>Trachome</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/SCH:label')"/>
+        <value>SCH</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/Paludisme:label')"/>
+        <value>Paludisme</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/Fievre:label')"/>
+        <value>Fievre</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/NSP:label')"/>
+        <value>NSP</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_ivm/Autres:label')"/>
+        <value>Autres</value>
+      </item>
+    </select>
+    <input ref="/data/raison_ivm_autre">
+      <label ref="jr:itext('/data/raison_ivm_autre:label')"/>
+    </input>
+    <select ref="/data/raison_alb">
+      <label ref="jr:itext('/data/raison_alb:label')"/>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/Filariose.lymphatique:label')"/>
+        <value>Filariose.lymphatique</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/Hydrocele:label')"/>
+        <value>Hydrocele</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/Elephantiasis:label')"/>
+        <value>Elephantiasis</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/Onchocercose:label')"/>
+        <value>Onchocercose</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/STH:label')"/>
+        <value>STH</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/Trachome:label')"/>
+        <value>Trachome</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/SCH:label')"/>
+        <value>SCH</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/Paludisme:label')"/>
+        <value>Paludisme</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/Fievre:label')"/>
+        <value>Fievre</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/NSP:label')"/>
+        <value>NSP</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_alb/Autres:label')"/>
+        <value>Autres</value>
+      </item>
+    </select>
+    <input ref="/data/raison_alb_autre">
+      <label ref="jr:itext('/data/raison_alb_autre:label')"/>
+    </input>
+    <select ref="/data/raison_pzq">
+      <label ref="jr:itext('/data/raison_pzq:label')"/>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/Filariose.lymphatique:label')"/>
+        <value>Filariose.lymphatique</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/Hydrocele:label')"/>
+        <value>Hydrocele</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/Elephantiasis:label')"/>
+        <value>Elephantiasis</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/Onchocercose:label')"/>
+        <value>Onchocercose</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/STH:label')"/>
+        <value>STH</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/Trachome:label')"/>
+        <value>Trachome</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/SCH:label')"/>
+        <value>SCH</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/Paludisme:label')"/>
+        <value>Paludisme</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/Fievre:label')"/>
+        <value>Fievre</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/NSP:label')"/>
+        <value>NSP</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_pzq/Autres:label')"/>
+        <value>Autres</value>
+      </item>
+    </select>
+    <input ref="/data/raison_pzq_autre">
+      <label ref="jr:itext('/data/raison_pzq_autre:label')"/>
+    </input>
+    <select ref="/data/lieu_ivm">
+      <label ref="jr:itext('/data/lieu_ivm:label')"/>
+      <item>
+        <label ref="jr:itext('/data/lieu_ivm/A.l'ecole..A.la.maison:label')"/>
+        <value>A.l'ecole..A.la.maison</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_ivm/Au.centre.de.Sante:label')"/>
+        <value>Au.centre.de.Sante</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_ivm/A.l'eglise..Au.marche:label')"/>
+        <value>A.l'eglise..Au.marche</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_ivm/Chez.le.DC:label')"/>
+        <value>Chez.le.DC</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_ivm/Chez.le.Chef.de.Village:label')"/>
+        <value>Chez.le.Chef.de.Village</value>
+      </item>
+    </select>
+    <select ref="/data/lieu_alb">
+      <label ref="jr:itext('/data/lieu_alb:label')"/>
+      <item>
+        <label ref="jr:itext('/data/lieu_alb/A.l'ecole..A.la.maison:label')"/>
+        <value>A.l'ecole..A.la.maison</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_alb/Au.centre.de.Sante:label')"/>
+        <value>Au.centre.de.Sante</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_alb/A.l'eglise..Au.marche:label')"/>
+        <value>A.l'eglise..Au.marche</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_alb/Chez.le.DC:label')"/>
+        <value>Chez.le.DC</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_alb/Chez.le.Chef.de.Village:label')"/>
+        <value>Chez.le.Chef.de.Village</value>
+      </item>
+    </select>
+    <select ref="/data/lieu_pzq">
+      <label ref="jr:itext('/data/lieu_pzq:label')"/>
+      <item>
+        <label ref="jr:itext('/data/lieu_pzq/A.l'ecole..A.la.maison:label')"/>
+        <value>A.l'ecole..A.la.maison</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_pzq/Au.centre.de.Sante:label')"/>
+        <value>Au.centre.de.Sante</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_pzq/A.l'eglise..Au.marche:label')"/>
+        <value>A.l'eglise..Au.marche</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_pzq/Chez.le.DC:label')"/>
+        <value>Chez.le.DC</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieu_pzq/Chez.le.Chef.de.Village:label')"/>
+        <value>Chez.le.Chef.de.Village</value>
+      </item>
+    </select>
+    <select ref="/data/information_amm">
+      <label ref="jr:itext('/data/information_amm:label')"/>
+      <item>
+        <label ref="jr:itext('/data/information_amm/Crieurs.Publics:label')"/>
+        <value>Crieurs.Publics</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/information_amm/DC:label')"/>
+        <value>DC</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/information_amm/Agent.de.sante:label')"/>
+        <value>Agent.de.sante</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/information_amm/Radio:label')"/>
+        <value>Radio</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/information_amm/television:label')"/>
+        <value>television</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/information_amm/eglise:label')"/>
+        <value>eglise</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/information_amm/Autres:label')"/>
+        <value>Autres</value>
+      </item>
+    </select>
+    <input ref="/data/information_amm_autre">
+      <label ref="jr:itext('/data/information_amm_autre:label')"/>
+    </input>
+    <select ref="/data/raison_non_traitement">
+      <label ref="jr:itext('/data/raison_non_traitement:label')"/>
+      <item>
+        <label ref="jr:itext('/data/raison_non_traitement/Refus:label')"/>
+        <value>Refus</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_non_traitement/maladie.grave:label')"/>
+        <value>maladie.grave</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_non_traitement/Femme.enceinte:label')"/>
+        <value>Femme.enceinte</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_non_traitement/Absent:label')"/>
+        <value>Absent</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_non_traitement/Enfant.&lt;.5ans:label')"/>
+        <value>Enfant.&lt;.5ans</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_non_traitement/Peur.des.effets.secondaires:label')"/>
+        <value>Peur.des.effets.secondaires</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_non_traitement/Femme.allaitante.&lt;.8.jrs:label')"/>
+        <value>Femme.allaitante.&lt;.8.jrs</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_non_traitement/Rupture.medicament:label')"/>
+        <value>Rupture.medicament</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_non_traitement/Manque.d'information:label')"/>
+        <value>Manque.d'information</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raison_non_traitement/Autres:label')"/>
+        <value>Autres</value>
+      </item>
+    </select>
+    <input ref="/data/raison_non_traitement_aure">
+      <label ref="jr:itext('/data/raison_non_traitement_aure:label')"/>
+    </input>
+    <input ref="/data/info_fin">
+      <label ref="jr:itext('/data/info_fin:label')"/>
+    </input>
+    <input ref="/data/notes">
+      <label ref="jr:itext('/data/notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
