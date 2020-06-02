@@ -8,7 +8,7 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>1. TAS2 FL Form Site</h:title>
-    <model >
+    <model>
       <instance>
         <data id="bj_lf_tas2_1_sites_202006." version="20200601">
           <c_recorder/>
@@ -16,11 +16,12 @@
           <c_eu_code/>
           <c_cluster_leader_name/>
           <c_cluster_leader_contact/>
+          <c_consent/>
           <c_population/>
           <c_present/>
           <c_absent/>
-          <c_consent/>
           <c_gps/>
+          <p_ending_survey_note/>
           <c_ClusterNotes/>
           <c_start/>
           <c_end/>
@@ -40,17 +41,20 @@
           <text id="/data/c_eu_code/102:label">
             <value>102</value>
           </text>
+          <text id="/data/c_absent:jr:constraintMsg">
+            <value>Le nombre d'absents ne doit pas dépasser le total d'élèves</value>
+          </text>
           <text id="/data/c_recorder:label">
             <value>Entrer l'identifiant de l'enregistreur</value>
           </text>
           <text id="/data/c_recorder:jr:constraintMsg">
-            <value>Le code doit être un nombre à deux chiffres entre 9 et 1000</value>
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
           </text>
           <text id="static_instance-eu_list_code-2">
             <value>103</value>
           </text>
-          <text id="static_instance-yes_no-0">
-            <value>Oui</value>
+          <text id="/data/c_present:jr:constraintMsg">
+            <value>Le nombre des présents ne doit pas dépasser le total d'élèves</value>
           </text>
           <text id="static_instance-eu_list-1">
             <value>Bonou</value>
@@ -91,6 +95,9 @@
           <text id="/data/c_population:label">
             <value>Selon les groupes d'âge ciblés (élèves de CI et CP), à peu près combien de participants éligibles sont inscrits dans cette école ?</value>
           </text>
+          <text id="static_instance-yes_no-0">
+            <value>Oui</value>
+          </text>
           <text id="/data/c_eu_name/Adja-Ouere:label">
             <value>Adja-Ouèrè</value>
           </text>
@@ -121,6 +128,9 @@
           <text id="static_instance-eu_list-0">
             <value>Allada</value>
           </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
+          </text>
           <text id="static_instance-eu_list_code-3">
             <value>104</value>
           </text>
@@ -150,17 +160,20 @@
           <text id="/data/c_eu_code/102:label">
             <value>102</value>
           </text>
+          <text id="/data/c_absent:jr:constraintMsg">
+            <value>The number of absents must not exceed the total of pupils</value>
+          </text>
           <text id="/data/c_recorder:label">
             <value>Enter Recorder ID</value>
           </text>
           <text id="/data/c_recorder:jr:constraintMsg">
-            <value>The code must be a two-digit number between 9 and 1000</value>
+            <value>The code must be a two-digit number between 9 and 100</value>
           </text>
           <text id="static_instance-eu_list_code-2">
             <value>103</value>
           </text>
-          <text id="static_instance-yes_no-0">
-            <value>Yes</value>
+          <text id="/data/c_present:jr:constraintMsg">
+            <value>The number of presents must not exceed the total of pupils</value>
           </text>
           <text id="static_instance-eu_list-1">
             <value>Bonou</value>
@@ -201,6 +214,9 @@
           <text id="/data/c_population:label">
             <value>Depending on the age groups targeted, approximately how many eligible participants are enrolled in this school or live in this village?</value>
           </text>
+          <text id="static_instance-yes_no-0">
+            <value>Yes</value>
+          </text>
           <text id="/data/c_eu_name/Adja-Ouere:label">
             <value>Adja-Ouèrè</value>
           </text>
@@ -230,6 +246,9 @@
           </text>
           <text id="static_instance-eu_list-0">
             <value>Allada</value>
+          </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>You just entered a value that will end the survey</value>
           </text>
           <text id="static_instance-eu_list_code-3">
             <value>104</value>
@@ -312,11 +331,12 @@
       <bind nodeset="/data/c_eu_code" required="true()" type="string" db_add_col_1="/data/c_eu_name" db_add_col_2="."/>
       <bind nodeset="/data/c_cluster_leader_name" required="true()" type="string"/>
       <bind nodeset="/data/c_cluster_leader_contact" required="true()" type="string"/>
-      <bind nodeset="/data/c_population" required="true()" type="int"/>
-      <bind constraint=". &lt;=  /data/c_population " nodeset="/data/c_present" required="true()" type="int"/>
-      <bind constraint=". &lt;=  /data/c_population " nodeset="/data/c_absent" required="true()" type="int"/>
       <bind nodeset="/data/c_consent" required="true()" type="string"/>
-      <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_present:jr:constraintMsg')" nodeset="/data/c_present" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_absent:jr:constraintMsg')" nodeset="/data/c_absent" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'No'" type="string"/>
       <bind nodeset="/data/c_ClusterNotes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
@@ -360,15 +380,6 @@
     <input ref="/data/c_cluster_leader_contact">
       <label ref="jr:itext('/data/c_cluster_leader_contact:label')"/>
     </input>
-    <input ref="/data/c_population">
-      <label ref="jr:itext('/data/c_population:label')"/>
-    </input>
-    <input ref="/data/c_present">
-      <label ref="jr:itext('/data/c_present:label')"/>
-    </input>
-    <input ref="/data/c_absent">
-      <label ref="jr:itext('/data/c_absent:label')"/>
-    </input>
     <select1 ref="/data/c_consent">
       <label ref="jr:itext('/data/c_consent:label')"/>
       <item>
@@ -380,9 +391,21 @@
         <value>No</value>
       </item>
     </select1>
+    <input ref="/data/c_population">
+      <label ref="jr:itext('/data/c_population:label')"/>
+    </input>
+    <input ref="/data/c_present">
+      <label ref="jr:itext('/data/c_present:label')"/>
+    </input>
+    <input ref="/data/c_absent">
+      <label ref="jr:itext('/data/c_absent:label')"/>
+    </input>
     <input ref="/data/c_gps">
       <label ref="jr:itext('/data/c_gps:label')"/>
       <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <input ref="/data/p_ending_survey_note">
+      <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
     </input>
     <input ref="/data/c_ClusterNotes">
       <label ref="jr:itext('/data/c_ClusterNotes:label')"/>

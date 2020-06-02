@@ -11,7 +11,7 @@
     <model >
       <instance>
         <data id="bj_lf_tas2_2_partcipants_202006" version="202006">
-          <p_recorderID/>
+          <p_recorder_id/>
           <p_eu_name/>
           <p_eu_code/>
           <p_consent/>
@@ -27,11 +27,12 @@
           <c_end/>
           <meta>
             <instanceID/>
+            <randomnum/>
           </meta>
         </data>
       </instance>
       <itext>
-        <translation lang="French">
+        <translation default="true()"  lang="French">
           <text id="/data/p_eu_code:label">
             <value>Sélectionner le code de l'unité d'évaluation (UE)</value>
           </text>
@@ -39,7 +40,7 @@
             <value>Le répondant a-t-il donné son consentement?</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>L'age doit être compris entre 5 et 7 ans</value>
+            <value>L'age doit être compris entre 5 et 12 ans</value>
           </text>
           <text id="/data/p_consent/No:label">
             <value>Non</value>
@@ -53,7 +54,7 @@
           <text id="/data/p_sex/Male:label">
             <value>Masculin</value>
           </text>
-          <text id="/data/p_recorderID:label">
+          <text id="/data/p_recorder_id:label">
             <value>Entrer l'identifiant de l'enregistreur</value>
           </text>
           <text id="/data/p_BarcodeID:label">
@@ -62,14 +63,14 @@
           <text id="/data/p_IDMethod/Scanner:label">
             <value>Scanner</value>
           </text>
-          <text id="/data/p_recorderID:hint">
+          <text id="/data/p_recorder_id:hint">
             <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui a été attribué à vous ou à votre équipe.</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Entrer l'âge du participant (en années)</value>
           </text>
-          <text id="/data/p_recorderID:jr:constraintMsg">
-            <value>Le code doit être un nombre à deux chiffres entre 9 et 1000</value>
+          <text id="/data/p_recorder_id:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
           </text>
           <text id="/data/p_GenerateID:label">
             <value>Veuiller enregistrer le code d'identification unique du participant qui apparait sur une liste séparée et sur chaque test de diagnostic administré</value>
@@ -99,7 +100,7 @@
             <value>Oui</value>
           </text>
         </translation>
-        <translation default="true()" lang="English">
+        <translation lang="English">
           <text id="/data/p_eu_code:label">
             <value>Select your evaluation unit (EU) Code</value>
           </text>
@@ -107,7 +108,7 @@
             <value>Does respondent provide consent?</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>The age must be between 5 and 7 years</value>
+            <value>The age must be between 5 and 12 years</value>
           </text>
           <text id="/data/p_consent/No:label">
             <value>No</value>
@@ -121,7 +122,7 @@
           <text id="/data/p_sex/Male:label">
             <value>Male</value>
           </text>
-          <text id="/data/p_recorderID:label">
+          <text id="/data/p_recorder_id:label">
             <value>Enter Recorder ID</value>
           </text>
           <text id="/data/p_BarcodeID:label">
@@ -130,14 +131,14 @@
           <text id="/data/p_IDMethod/Scanner:label">
             <value>Scanner</value>
           </text>
-          <text id="/data/p_recorderID:hint">
+          <text id="/data/p_recorder_id:hint">
             <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Enter age in years</value>
           </text>
-          <text id="/data/p_recorderID:jr:constraintMsg">
-            <value>The code must be a two-digit number between 9 and 1000</value>
+          <text id="/data/p_recorder_id:jr:constraintMsg">
+            <value>The code must be a two-digit number between 9 and 100</value>
           </text>
           <text id="/data/p_GenerateID:label">
             <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
@@ -168,27 +169,29 @@
           </text>
         </translation>
       </itext>
-      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorderID:jr:constraintMsg')" nodeset="/data/p_recorderID" required="true()" type="int"/>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/p_eu_name" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_eu_code" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_eu_name"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 7" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 12" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/p_IDMethod" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_BarcodeID" relevant=" /data/p_IDMethod  = 'Scanner' and  /data/p_consent  = 'Yes'" required="true()" type="barcode"/>
-      <bind nodeset="/data/p_GenerateID" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/p_GenerateID" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Yes'" required="true()" type="string" calculate="concat(/data/p_recorder_id, '-',/data/p_eu_code,'-',/data/meta/randomnum)" readonly="true()"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'No'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,9)"/>
+
     </model>
   </h:head>
   <h:body>
-    <input ref="/data/p_recorderID">
-      <label ref="jr:itext('/data/p_recorderID:label')"/>
-      <hint ref="jr:itext('/data/p_recorderID:hint')"/>
+    <input ref="/data/p_recorder_id">
+      <label ref="jr:itext('/data/p_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/p_recorder_id:hint')"/>
     </input>
     <input ref="/data/p_eu_name">
       <label ref="jr:itext('/data/p_eu_name:label')"/>
