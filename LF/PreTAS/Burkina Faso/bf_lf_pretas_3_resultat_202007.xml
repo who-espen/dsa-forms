@@ -7,10 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Juillet 2020) Pré TAS FL - 3. Résultats</h:title>
+    <h:title>(BF - Juillet 2020) Pré TAS FL - 3. Formulaire Résultats V2</h:title>
     <model >
+
       <instance>
-        <data id="bf_lf_pretas_3_resultat_202007" version="20200625">
+        <data id="bf_lf_pretas_3_resultat_202007_v2" version="20200625">
           <d_recorder_id/>
           <village/>
           <d_cluster_id/>
@@ -37,6 +38,7 @@
           </meta>
         </data>
       </instance>
+
       <itext>
         <translation default="true()" lang="French">
           <text id="/data/defis_operationnels_autre:label">
@@ -162,8 +164,8 @@
           <text id="/data/village/Dombghin:label">
             <value>Dombghin</value>
           </text>
-          <text id="/data/d_recorder_id/EN04:label">
-            <value>EN04</value>
+          <text id="/data/village/Wantanghin:label">
+            <value>Wantanghin</value>
           </text>
           <text id="/data/photo:hint">
             <value>Prendre les photos uniquement des invalide</value>
@@ -231,14 +233,17 @@
           <text id="/data/d_lotnumber2:label">
             <value>5. Lots FTS2</value>
           </text>
-          <text id="/data/village/Wantanghin:label">
-            <value>Wantanghin</value>
+          <text id="/data/village/Tengande:label">
+            <value>Tengandé</value>
           </text>
           <text id="/data/d_id_type:label">
             <value>Souhaitez-vous scanner ou saisir manuellement le code-barres?</value>
           </text>
           <text id="/data/d_cluster_id/WAN:label">
             <value>WAN</value>
+          </text>
+          <text id="static_instance-code_site_list-2">
+            <value>KIN</value>
           </text>
           <text id="static_instance-operateur-4">
             <value>EN05</value>
@@ -267,11 +272,8 @@
           <text id="/data/d_barcode_id:label">
             <value>Code barre</value>
           </text>
-          <text id="static_instance-code_site_list-2">
-            <value>KIN</value>
-          </text>
-          <text id="/data/village/Tengande:label">
-            <value>Tengandé</value>
+          <text id="/data/manual_code:hint">
+            <value>Exemple "PreTas0001"</value>
           </text>
           <text id="static_instance-code_site_list-9">
             <value>TIN</value>
@@ -369,8 +371,11 @@
           <text id="/data/d_result1/3_Invalide:label">
             <value>3 Invalide</value>
           </text>
-          <text id="/data/manual_code:hint">
-            <value>Exemple "PreTas0001"</value>
+          <text id="/data/d_lotnumber2/114745.20.12.26:label">
+            <value>114745.20.12.26</value>
+          </text>
+          <text id="/data/d_lotnumber1/114745.20.12.26:label">
+            <value>114745.20.12.26</value>
           </text>
           <text id="/data/d_recorder_id/EN08:label">
             <value>EN08</value>
@@ -414,6 +419,9 @@
           <text id="/data/manual_code:jr:constraintMsg">
             <value>Paramétrer pour prendre 10 caractère</value>
           </text>
+          <text id="static_instance-fts_lot-0">
+            <value>114745.20.12.26</value>
+          </text>
           <text id="/data/village/Tinonghin:label">
             <value>Tinonghin</value>
           </text>
@@ -426,8 +434,8 @@
           <text id="/data/d_result2/2_Négatif:label">
             <value>2 Négatif</value>
           </text>
-          <text id="/data/fts2_invalid_description/A_Absence_de_ligne_temoin:label">
-            <value>A. Absence de ligne témoin</value>
+          <text id="/data/d_recorder_id/EN04:label">
+            <value>EN04</value>
           </text>
           <text id="/data/fts1_invalid_description:hint">
             <value>Supprimer la modalité Other et si autre à précisez</value>
@@ -455,6 +463,9 @@
           </text>
           <text id="static_instance-invalid_desc_list-6">
             <value>G. Autre (expliquer)</value>
+          </text>
+          <text id="/data/fts2_invalid_description/A_Absence_de_ligne_temoin:label">
+            <value>A. Absence de ligne témoin</value>
           </text>
           <text id="static_instance-code_site_list-0">
             <value>BEN</value>
@@ -513,6 +524,14 @@
           <item>
             <itextId>static_instance-defis_operationnels-5</itextId>
             <name>S_Autre (expliquer)</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="fts_lot">
+        <root>
+          <item>
+            <itextId>static_instance-fts_lot-0</itextId>
+            <name>114745.20.12.26</name>
           </item>
         </root>
       </instance>
@@ -772,8 +791,8 @@
       <bind nodeset="/data/fts2_invalid_description" relevant=" /data/d_result2  = '3_Invalide'" type="string"/>
       <bind nodeset="/data/photo" relevant=" /data/d_result1  = '1_Positif' or  /data/d_result1  = '3_Invalide' or  /data/d_result2  = '1_Positif' or  /data/d_result2  = '3_Invalide'" type="binary"/>
       <bind nodeset="/data/defis_operationnels" type="string"/>
-      <bind nodeset="/data/defis_operationnels_autre" relevant=" /data/defis_operationnels ='S'" type="string"/>
-      <bind nodeset="/data/observations" required="true()" type="string"/>
+      <bind nodeset="/data/defis_operationnels_autre" relevant=" /data/defis_operationnels ='S_Autre (expliquer)'" type="string"/>
+      <bind nodeset="/data/observations" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
@@ -911,9 +930,13 @@
     <input ref="/data/nb_bandelette">
       <label ref="jr:itext('/data/nb_bandelette:label')"/>
     </input>
-    <input ref="/data/d_lotnumber1">
+    <select1 ref="/data/d_lotnumber1">
       <label ref="jr:itext('/data/d_lotnumber1:label')"/>
-    </input>
+      <item>
+        <label ref="jr:itext('/data/d_lotnumber1/114745.20.12.26:label')"/>
+        <value>114745.20.12.26</value>
+      </item>
+    </select1>
     <select1 ref="/data/d_result1">
       <label ref="jr:itext('/data/d_result1:label')"/>
       <item>
@@ -965,9 +988,13 @@
       <label ref="jr:itext('/data/autre_expliquer_fts1:label')"/>
       <hint ref="jr:itext('/data/autre_expliquer_fts1:hint')"/>
     </input>
-    <input ref="/data/d_lotnumber2">
+    <select1 ref="/data/d_lotnumber2">
       <label ref="jr:itext('/data/d_lotnumber2:label')"/>
-    </input>
+      <item>
+        <label ref="jr:itext('/data/d_lotnumber2/114745.20.12.26:label')"/>
+        <value>114745.20.12.26</value>
+      </item>
+    </select1>
     <select1 ref="/data/d_result2">
       <label ref="jr:itext('/data/d_result2:label')"/>
       <item>
