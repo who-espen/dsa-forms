@@ -7,7 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Juillet 2020) Pré TAS FL - 1. Formulaire Village</h:title>
+    <h:title>(BF - Juillet 2020) Pré TAS FL - 1. Formulaire Village V2</h:title>
     <model >
       <instance>
         <data id="bf_lf_pretas_1_sites_202007" version="20200625">
@@ -729,8 +729,8 @@
       <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/csps" db_add_col_3="."/>
       <bind nodeset="/data/c_cluster_id1" required="true()" type="string"  db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
       <bind constraint=".&gt;400" jr:constraintMsg="jr:itext('/data/c_population:jr:constraintMsg')" nodeset="/data/c_population" required="true()" type="int"/>
-      <bind nodeset="/data/couverture_tdm_2019" required="true()" type="decimal"/>
-      <bind nodeset="/data/gps" constraint=".&gt;=0 and .&lt;100"  required="true()" type="geopoint"/>
+      <bind nodeset="/data/couverture_tdm_2019" constraint=".&gt;=0 and .&lt;100" required="true()" type="decimal"/>
+      <bind nodeset="/data/gps"  required="true()" type="geopoint"/>
       <bind nodeset="/data/commentaires" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
