@@ -7,14 +7,12 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>3. Côte d'Ivoire - Pré TAS FL Résultats V4</h:title>
+    <h:title>3. Côte d'Ivoire - Pré TAS FL Résultats V5</h:title>
     <model >
 
       <instance>
-        <data id="ci_pretas_lf_resultats_v4" version="20200320">
+        <data id="ci_pretas_lf_resultats_v5" version="20200817">
           <code_operateur/>
-          <optionscanner/>
-          <code_barre/>
           <code_id/>
           <code_id2/>
           <num_test/>
@@ -58,9 +56,6 @@
           <text id="/data/code_operateur/16:label">
             <value>16</value>
           </text>
-          <text id="/data/optionscanner/scanner:label">
-            <value>Scanner</value>
-          </text>
           <text id="/data/fts_invalid_description/E_Trace_de_sang_persiste:label">
             <value>E. Trace de sang persiste</value>
           </text>
@@ -86,7 +81,7 @@
             <value>D. Difficulté de migration de l'échantillon</value>
           </text>
           <text id="/data/code_id:hint">
-            <value>Exemple "190005"</value>
+            <value>Exemple "190-123456"</value>
           </text>
           <text id="/data/code_id:label">
             <value>1.a. Saisir le code d'identification Ce code doit aussi être inscrit dans le test de diagnostic rapide tels que le FTS</value>
@@ -109,11 +104,8 @@
           <text id="/data/resultat_fts/1_Positif:label">
             <value>1 Positif</value>
           </text>
-          <text id="/data/optionscanner/manuel:label">
-            <value>Manuel</value>
-          </text>
           <text id="/data/code_id2:hint">
-            <value>Exemple "190005"</value>
+            <value>Exemple "190-123456"</value>
           </text>
           <text id="/data/code_id2:label">
             <value>1.b. Répéter le code d'identification</value>
@@ -144,9 +136,6 @@
           </text>
           <text id="/data/resultat_fts/2_Négatif:label">
             <value>2 Négatif</value>
-          </text>
-          <text id="/data/code_barre:label">
-            <value>1. Code barre</value>
           </text>
           <text id="/data/num_test/1:label">
             <value>1er Test</value>
@@ -190,9 +179,6 @@
           <text id="/data/fts_invalid_description/B_Ligne_témoin_brisées/partielle:label">
             <value>B. Ligne témoin brisées/partielle</value>
           </text>
-          <text id="/data/optionscanner:label">
-            <value>Souhaitez-vous scanner ou saisir manuellement le code-barres?</value>
-          </text>
           <text id="/data/fts_invalid_description:label">
             <value>5a. Description d'invalidation de test 1</value>
           </text>
@@ -203,10 +189,8 @@
       </itext>
 
       <bind nodeset="/data/code_operateur" required="true()" type="string"/>
-      <bind nodeset="/data/optionscanner" required="true()" type="string"/>
-      <bind nodeset="/data/code_barre" relevant=" /data/optionscanner ='scanner'" required="true()" type="barcode"/>
-      <bind constraint="regex(., '^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/code_id:jr:constraintMsg')" nodeset="/data/code_id" relevant=" /data/optionscanner ='manuel'" required="true()" type="int"/>
-      <bind constraint=". =  /data/code_id " jr:constraintMsg="jr:itext('/data/code_id2:jr:constraintMsg')" nodeset="/data/code_id2" relevant=" /data/optionscanner ='manuel'" required="true()" type="int"/>
+      <bind constraint="regex(., '^[0-9]{3}-[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/code_id:jr:constraintMsg')" nodeset="/data/code_id" required="true()" type="string"/>
+      <bind constraint=". =  /data/code_id " jr:constraintMsg="jr:itext('/data/code_id2:jr:constraintMsg')" nodeset="/data/code_id2" required="true()" type="string"/>
       <bind constraint=".&gt;=1 and .&lt;=2" jr:constraintMsg="jr:itext('/data/num_test:jr:constraintMsg')" nodeset="/data/num_test" required="true()" type="string"/>
       <bind nodeset="/data/lot_fts" required="true()" type="string"/>
       <bind nodeset="/data/resultat_fts" required="true()" type="string"/>
@@ -266,20 +250,6 @@
         <value>19</value>
       </item>
     </select1>
-    <select1 ref="/data/optionscanner">
-      <label ref="jr:itext('/data/optionscanner:label')"/>
-      <item>
-        <label ref="jr:itext('/data/optionscanner/scanner:label')"/>
-        <value>scanner</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/optionscanner/manuel:label')"/>
-        <value>manuel</value>
-      </item>
-    </select1>
-    <input ref="/data/code_barre">
-      <label ref="jr:itext('/data/code_barre:label')"/>
-    </input>
     <input ref="/data/code_id">
       <label ref="jr:itext('/data/code_id:label')"/>
       <hint ref="jr:itext('/data/code_id:hint')"/>
