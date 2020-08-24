@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. Côte d'Ivoire - Pré TAS FL Formulaire Enrôlement V6</h:title>
+    <h:title>2. Côte d'Ivoire - Pré TAS FL Formulaire Enrôlement V7</h:title>
     <model >
 
       <instance>
-        <data id="ci_pretas_lf_enrollement_v6" version="20200819">
+        <data id="ci_pretas_lf_enrollement_v7" version="20200819">
           <codeOperateur/>
           <ue/>
           <site/>
@@ -42,7 +42,7 @@
       <itext>
         <translation default="true()" lang="French">
           <text id="/data/codeOperateur:label">
-            <value>Code opérateurs</value>
+            <value>Code opérateurs (Enrollement)</value>
           </text>
           <text id="/data/codeOperateur/10:label">
             <value>10</value>
@@ -73,6 +73,36 @@
           </text>
           <text id="/data/codeOperateur/19:label">
             <value>19</value>
+          </text>
+          <text id="/data/codeOperateur/20:label">
+            <value>20</value>
+          </text>
+          <text id="/data/codeOperateur/21:label">
+            <value>21</value>
+          </text>
+          <text id="/data/codeOperateur/22:label">
+            <value>22</value>
+          </text>
+          <text id="/data/codeOperateur/23:label">
+            <value>23</value>
+          </text>
+          <text id="/data/codeOperateur/24:label">
+            <value>24</value>
+          </text>
+          <text id="/data/codeOperateur/25:label">
+            <value>25</value>
+          </text>
+          <text id="/data/codeOperateur/26:label">
+            <value>26</value>
+          </text>
+          <text id="/data/codeOperateur/27:label">
+            <value>27</value>
+          </text>
+          <text id="/data/codeOperateur/28:label">
+            <value>28</value>
+          </text>
+          <text id="/data/codeOperateur/29:label">
+            <value>29</value>
           </text>
           <text id="/data/ue:label">
             <value>Sélectionner une unité d'évaluation</value>
@@ -214,7 +244,6 @@
           </text>
         </translation>
       </itext>
-
       <bind nodeset="/data/codeOperateur" required="true()" type="string"/>
       <bind nodeset="/data/ue" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/site" required="true()" type="string" db_get="col_3" db_filter_by_col_1="/data/ue"/>
@@ -222,7 +251,7 @@
       <bind nodeset="/data/site2" relevant="selected( /data/site ,'Autre')" required="true()" type="string" db_get="col_5" db_filter_by_col_1="/data/ue"/>
       <bind nodeset="/data/code_site2" relevant="selected( /data/site ,'Autre')" required="true()" type="string" db_get="col_6" db_filter_by_col_1="/data/ue"/>
       <bind nodeset="/data/consentement" required="true()" type="string"/>
-      <bind calculate="concat( /data/code_site ,/data/code_site2 , '-', substr(random(),3,9))" jr:constraintMsg="jr:itext('/data/code_id:jr:constraintMsg')" nodeset="/data/code_id" readonly="true()" relevant=" /data/consentement  = 'Oui'" required="true()" type="string"/>
+      <bind calculate="concat( /data/code_site ,  /data/code_site2 , '-', substr(random(),3,9))" jr:constraintMsg="jr:itext('/data/code_id:jr:constraintMsg')" nodeset="/data/code_id" readonly="true()" relevant=" /data/consentement  = 'Oui'" required="true()" type="string"/>
       <bind constraint=".&gt;4 and .&lt;120" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" relevant=" /data/consentement  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/sexe" relevant=" /data/consentement  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/ivm_alb" relevant=" /data/consentement  = 'Oui'" required="true()" type="string"/>
@@ -281,6 +310,46 @@
       <item>
         <label ref="jr:itext('/data/codeOperateur/19:label')"/>
         <value>19</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/codeOperateur/20:label')"/>
+        <value>20</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/codeOperateur/21:label')"/>
+        <value>21</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/codeOperateur/22:label')"/>
+        <value>22</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/codeOperateur/23:label')"/>
+        <value>23</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/codeOperateur/24:label')"/>
+        <value>24</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/codeOperateur/25:label')"/>
+        <value>25</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/codeOperateur/26:label')"/>
+        <value>26</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/codeOperateur/27:label')"/>
+        <value>27</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/codeOperateur/28:label')"/>
+        <value>28</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/codeOperateur/29:label')"/>
+        <value>29</value>
       </item>
     </select1>
     <input ref="/data/ue">
