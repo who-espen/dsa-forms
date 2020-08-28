@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. Benin - TAS2 FL Form Participants (Août 2020)</h:title>
+    <h:title>2. Benin - TAS2 FL Form Participants (Août 2020) V2</h:title>
     <model >
 
       <instance>
-        <data id="bj_lf_tas2_2_partcipants_202008" version="20200818">
+        <data id="bj_lf_tas2_2_partcipants_202008_v2" version="20200828">
           <p_recorderID/>
           <p_eu_name/>
           <p_c_commune/>
@@ -30,12 +30,13 @@
           <c_end/>
           <meta>
             <instanceID/>
+            <randomnum/>
           </meta>
         </data>
       </instance>
 
       <itext>
-        <translation lang="French">
+        <translation default="true()" lang="French">
           <text id="/data/p_recorderID:jr:constraintMsg">
             <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
           </text>
@@ -109,7 +110,7 @@
             <value>Notes complémentaires</value>
           </text>
         </translation>
-        <translation default="true()" lang="English">
+        <translation lang="English">
           <text id="/data/p_recorderID:jr:constraintMsg">
             <value>The code must be a two-digit number between 9 and 100</value>
           </text>
@@ -196,12 +197,13 @@
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/p_IDMethod" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_BarcodeID" relevant=" /data/p_IDMethod  = 'Scanner' and  /data/p_consent  = 'Yes'" required="true()" type="barcode"/>
-      <bind nodeset="/data/p_GenerateID" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_recorderID , '-',  /data/p_cluster_id , '-', /data/meta/randomnum)" nodeset="/data/p_GenerateID" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Yes'" required="true()" readonly="true()" type="string"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'No'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,9)"/>
     </model>
   </h:head>
   <h:body>
