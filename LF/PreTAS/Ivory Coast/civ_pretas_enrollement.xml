@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. Côte d'Ivoire - Pré TAS FL Formulaire Enrôlement V7</h:title>
+    <h:title>2. Côte d'Ivoire - Pré TAS FL Formulaire Enrôlement V7.2</h:title>
     <model >
 
       <instance>
-        <data id="ci_pretas_lf_enrollement_v7" version="20200819">
+        <data id="ci_pretas_lf_enrollement_v7_2" version="20200819">
           <codeOperateur/>
           <ue/>
           <site/>
@@ -35,6 +35,7 @@
           <end/>
           <meta>
             <instanceID/>
+            <randomnum/>
           </meta>
         </data>
       </instance>
@@ -251,7 +252,7 @@
       <bind nodeset="/data/site2" relevant="selected( /data/site ,'Autre')" required="true()" type="string" db_get="col_5" db_filter_by_col_1="/data/ue"/>
       <bind nodeset="/data/code_site2" relevant="selected( /data/site ,'Autre')" required="true()" type="string" db_get="col_6" db_filter_by_col_1="/data/ue"/>
       <bind nodeset="/data/consentement" required="true()" type="string"/>
-      <bind calculate="concat( /data/code_site ,  /data/code_site2 , '-', substr(random(),3,9))" jr:constraintMsg="jr:itext('/data/code_id:jr:constraintMsg')" nodeset="/data/code_id" readonly="true()" relevant=" /data/consentement  = 'Oui'" required="true()" type="string"/>
+      <bind calculate="concat( /data/code_site ,  /data/code_site2 , '-', /data/meta/randomnum)" jr:constraintMsg="jr:itext('/data/code_id:jr:constraintMsg')" nodeset="/data/code_id" readonly="true()" relevant=" /data/consentement  = 'Oui'" required="true()" type="string"/>
       <bind constraint=".&gt;4 and .&lt;120" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" relevant=" /data/consentement  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/sexe" relevant=" /data/consentement  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/ivm_alb" relevant=" /data/consentement  = 'Oui'" required="true()" type="string"/>
@@ -266,6 +267,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,9)"/>
     </model>
   </h:head>
   <h:body>
