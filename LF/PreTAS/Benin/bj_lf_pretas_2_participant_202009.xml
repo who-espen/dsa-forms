@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. Pre-TAS FL Form Participants (Juillet 2020) V1.2 </h:title>
+    <h:title>(Septembre 2020) 2. Benin -  Pre TAS FL Formulaire Participants</h:title>
     <model >
 
       <instance>
-        <data id="sn_lf_pretas_2_partcipants_202009" version="202006">
+        <data id="bj_lf_pretas_2_participant_202009" version="20200904">
           <p_recorderID/>
           <p_district/>
           <p_cluster_name/>
@@ -20,21 +20,94 @@
           <p_sex/>
           <p_age_yrs/>
           <p_how_long_lived/>
-          <p_IDMethod/>
-          <p_BarcodeID/>
-          <p_GenerateID/>
+          <p_id_Method/>
+          <p_Barcode_id/>
+          <p_Generate_id/>
           <p_ending_survey_note/>
           <p_notes/>
           <c_start/>
           <c_end/>
           <meta>
             <instanceID/>
-            <randomnum/>
           </meta>
         </data>
       </instance>
 
       <itext>
+        <translation default="true()"  lang="French">
+          <text id="/data/p_recorderID:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
+          </text>
+          <text id="/data/p_recorderID:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/p_recorderID:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui vous a été attribué, à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/p_district:label">
+            <value>Sélectionner la commune</value>
+          </text>
+          <text id="/data/p_cluster_name:label">
+            <value>Sélectionner le grappe</value>
+          </text>
+          <text id="/data/p_cluster_name:hint">
+            <value>La grappe est une communauté (village)</value>
+          </text>
+          <text id="/data/p_cluster_id:label">
+            <value>Sélectionner le code de la grappe</value>
+          </text>
+          <text id="/data/p_consent:label">
+            <value>Le répondant a-t-il donné son consentement?</value>
+          </text>
+          <text id="/data/p_consent/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_consent/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_sex:label">
+            <value>Sexe du répondant</value>
+          </text>
+          <text id="/data/p_sex/Male:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/p_sex/Female:label">
+            <value>Féminin</value>
+          </text>
+          <text id="/data/p_age_yrs:jr:constraintMsg">
+            <value>L'age doit être compris entre 5 et 120 ans</value>
+          </text>
+          <text id="/data/p_age_yrs:label">
+            <value>Entrer l'âge en années</value>
+          </text>
+          <text id="/data/p_how_long_lived:jr:constraintMsg">
+            <value>La valeur ne doit pas être supérieure à l'âge</value>
+          </text>
+          <text id="/data/p_how_long_lived:label">
+            <value>Depuis combien d'années l'intimé habite-t-il dans la région?</value>
+          </text>
+          <text id="/data/p_id_Method:label">
+            <value>Comment l'ID unique de l'individu sera-t-il généré?</value>
+          </text>
+          <text id="/data/p_id_Method/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/p_id_Method/ID_generation:label">
+            <value>Génération automatique</value>
+          </text>
+          <text id="/data/p_Barcode_id:label">
+            <value>Scanner le code-barres maintenant</value>
+          </text>
+          <text id="/data/p_Generate_id:label">
+            <value>Veuiller enregistrer le code d'identification unique suivant pour le répondant sur une liste séparée et sur chaque test de diagnostic administré, y compris les tests OV16 RDT et Dry Blood Spot</value>
+          </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/p_notes:label">
+            <value>Notes complémentaires</value>
+          </text>
+        </translation>
         <translation lang="English">
           <text id="/data/p_recorderID:jr:constraintMsg">
             <value>The code must be a two-digit number between 9 and 100</value>
@@ -46,13 +119,13 @@
             <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
           </text>
           <text id="/data/p_district:label">
-            <value>Select your district</value>
+            <value>Select your District</value>
           </text>
           <text id="/data/p_cluster_name:label">
-            <value>Select your site</value>
+            <value>Select your cluster</value>
           </text>
           <text id="/data/p_cluster_id:label">
-            <value>Select your site Code</value>
+            <value>Select Cluster code</value>
           </text>
           <text id="/data/p_consent:label">
             <value>Does respondent provide consent?</value>
@@ -73,7 +146,7 @@
             <value>Female</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>The age must be between 5 and 12 years</value>
+            <value>The age must be between 5 and 120 years</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Enter age in years</value>
@@ -84,19 +157,19 @@
           <text id="/data/p_how_long_lived:label">
             <value>How many years has the respondent lived in the area?</value>
           </text>
-          <text id="/data/p_IDMethod:label">
+          <text id="/data/p_id_Method:label">
             <value>How will the individual's unique ID be generated?</value>
           </text>
-          <text id="/data/p_IDMethod/Scanner:label">
+          <text id="/data/p_id_Method/Scanner:label">
             <value>Scanner</value>
           </text>
-          <text id="/data/p_IDMethod/ID_generation:label">
+          <text id="/data/p_id_Method/ID_generation:label">
             <value>Automatic ID generation</value>
           </text>
-          <text id="/data/p_BarcodeID:label">
+          <text id="/data/p_Barcode_id:label">
             <value>Scan barcode now</value>
           </text>
-          <text id="/data/p_GenerateID:label">
+          <text id="/data/p_Generate_id:label">
             <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
@@ -105,76 +178,8 @@
           <text id="/data/p_notes:label">
             <value>Additional Notes</value>
           </text>
-        </translation>
-        <translation default="true()" lang="French">
-          <text id="/data/p_recorderID:jr:constraintMsg">
-            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
-          </text>
-          <text id="/data/p_recorderID:label">
-            <value>Entrer l'identifiant de l'enregistreur</value>
-          </text>
-          <text id="/data/p_recorderID:hint">
-            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui a été attribué à vous ou à votre équipe.</value>
-          </text>
-          <text id="/data/p_district:label">
-            <value>Sélectionner le district</value>
-          </text>
-          <text id="/data/p_cluster_name:label">
-            <value>Sélectionner le site</value>
-          </text>
-          <text id="/data/p_cluster_id:label">
-            <value>Sélectionner le code du site</value>
-          </text>
-          <text id="/data/p_consent:label">
-            <value>Le répondant a-t-il donné son consentement?</value>
-          </text>
-          <text id="/data/p_consent/Yes:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/p_consent/No:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/p_sex:label">
-            <value>Sexe du participant</value>
-          </text>
-          <text id="/data/p_sex/Male:label">
-            <value>Masculin</value>
-          </text>
-          <text id="/data/p_sex/Female:label">
-            <value>Féminin</value>
-          </text>
-          <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>L'age doit être compris entre 5 et 12 ans</value>
-          </text>
-          <text id="/data/p_age_yrs:label">
-            <value>Entrer l'âge du participant (en années)</value>
-          </text>
-          <text id="/data/p_how_long_lived:jr:constraintMsg">
-            <value>La valeur ne doit pas être supérieure à l'âge</value>
-          </text>
-          <text id="/data/p_how_long_lived:label">
-            <value>Depuis combien d'années le participant habite-t-il dans la communauté?</value>
-          </text>
-          <text id="/data/p_IDMethod:label">
-            <value>Comment l'ID unique de l'individu sera-t-il généré?</value>
-          </text>
-          <text id="/data/p_IDMethod/Scanner:label">
-            <value>Scanner</value>
-          </text>
-          <text id="/data/p_IDMethod/ID_generation:label">
-            <value>Génération automatique</value>
-          </text>
-          <text id="/data/p_BarcodeID:label">
-            <value>Scanner le code-barres maintenant</value>
-          </text>
-          <text id="/data/p_GenerateID:label">
-            <value>Veuiller enregistrer le code d'identification unique du participant qui apparait sur une liste séparée et sur chaque test de diagnostic administré</value>
-          </text>
-          <text id="/data/p_ending_survey_note:label">
-            <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
-          </text>
-          <text id="/data/p_notes:label">
-            <value>Notes complémentaires</value>
+          <text id="/data/p_cluster_name:hint">
+            <value>-</value>
           </text>
         </translation>
       </itext>
@@ -182,20 +187,19 @@
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorderID:jr:constraintMsg')" nodeset="/data/p_recorderID" required="true()" type="int"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
-      <bind nodeset="/data/p_cluster_id" requ²&ired="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 12" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
-      <bind nodeset="/data/p_IDMethod" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/p_BarcodeID" relevant=" /data/p_IDMethod  = 'Scanner' and  /data/p_consent  = 'Yes'" required="true()" type="barcode"/>
-      <bind calculate="concat( /data/p_cluster_id ,'-', /data/meta/randomnum)" nodeset="/data/p_GenerateID" readonly="true()" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/p_id_Method" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/p_Barcode_id" relevant=" /data/p_id_Method  = 'Scanner' and  /data/p_consent  = 'Yes'" required="true()" type="barcode"/>
+      <bind nodeset="/data/p_Generate_id" relevant=" /data/p_id_Method  = 'ID_generation' and  /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'No'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,9)"/>
     </model>
   </h:head>
   <h:body>
@@ -208,6 +212,7 @@
     </input>
     <input ref="/data/p_cluster_name">
       <label ref="jr:itext('/data/p_cluster_name:label')"/>
+      <hint ref="jr:itext('/data/p_cluster_name:hint')"/>
     </input>
     <input ref="/data/p_cluster_id">
       <label ref="jr:itext('/data/p_cluster_id:label')"/>
@@ -240,22 +245,22 @@
     <input ref="/data/p_how_long_lived">
       <label ref="jr:itext('/data/p_how_long_lived:label')"/>
     </input>
-    <select1 ref="/data/p_IDMethod">
-      <label ref="jr:itext('/data/p_IDMethod:label')"/>
+    <select1 ref="/data/p_id_Method">
+      <label ref="jr:itext('/data/p_id_Method:label')"/>
       <item>
-        <label ref="jr:itext('/data/p_IDMethod/Scanner:label')"/>
+        <label ref="jr:itext('/data/p_id_Method/Scanner:label')"/>
         <value>Scanner</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_IDMethod/ID_generation:label')"/>
+        <label ref="jr:itext('/data/p_id_Method/ID_generation:label')"/>
         <value>ID_generation</value>
       </item>
     </select1>
-    <input ref="/data/p_BarcodeID">
-      <label ref="jr:itext('/data/p_BarcodeID:label')"/>
+    <input ref="/data/p_Barcode_id">
+      <label ref="jr:itext('/data/p_Barcode_id:label')"/>
     </input>
-    <input ref="/data/p_GenerateID">
-      <label ref="jr:itext('/data/p_GenerateID:label')"/>
+    <input ref="/data/p_Generate_id">
+      <label ref="jr:itext('/data/p_Generate_id:label')"/>
     </input>
     <input ref="/data/p_ending_survey_note">
       <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
