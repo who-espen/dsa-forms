@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Septembre 2020) 3. Benin - Pre TAS FL Résultat FTS</h:title>
+    <h:title>(Septembre 2020) 3. Benin - Pre TAS FL Résultat FTS V2</h:title>
     <model >
 
       <instance>
-        <data id="bj_lf_pretas_3_resultat_fts_202009" version="20200904">
+        <data id="bj_lf_pretas_3_resultat_fts_202009_v2" version="20200908">
           <d_recorderID/>
           <d_commune/>
           <d_cluster_name/>
@@ -507,29 +507,30 @@
       <bind nodeset="/data/d_why_invalid2" relevant=" /data/d_result2  = 'Invalide'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid_other2" relevant="selected( /data/d_why_invalid2 ,'Other')" required="true()" type="string"/>
       <bind calculate=" /data/d_result2 " nodeset="/data/d_display_result2" relevant=" /data/d_result1  = 'Positif' or  /data/d_result1  = 'Invalide'" type="string"/>
-      <bind nodeset="/data/d_need_third_test" readonly="true()" relevant="( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Negatif')
+      <bind nodeset="/data/d_need_third_test" readonly="true()" relevant="( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Négatif')
 or ( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Invalide')
 or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="string"/>
-      <bind nodeset="/data/d_lotnumber3" relevant="( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Negatif')
+      <bind nodeset="/data/d_lotnumber3" relevant="( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Négatif')
 or ( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Invalide')
 or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" required="true()" type="string"/>
-      <bind nodeset="/data/d_result3" relevant="( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Negatif')
+      <bind nodeset="/data/d_result3" relevant="( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Négatif')
 or ( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Invalide')
 or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid3" relevant=" /data/d_result3  = 'Invalide'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid_other3" relevant="selected( /data/d_why_invalid3 ,'Other')" required="true()" type="string"/>
-      <bind calculate=" /data/d_result3 " nodeset="/data/d_display_result3" relevant="( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Negatif')
+      <bind calculate=" /data/d_result3 " nodeset="/data/d_display_result3" relevant="( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Négatif')
 or ( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Invalide')
 or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="string"/>
       <bind calculate="if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Positif&quot;, &quot;Positif&quot;,
- if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Negatif&quot; and  /data/d_result3 =&quot;Negatif&quot;, &quot;Negatif&quot;,
- if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Negatif&quot; and  /data/d_result3 =&quot;Positif&quot;, &quot;Positif&quot;,
- if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Invalide&quot; and  /data/d_result3 =&quot;Negatif&quot;, &quot;Negatif&quot;,
+ if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Négatif&quot; and  /data/d_result3 =&quot;Négatif&quot;, &quot;Négatif&quot;,
+ if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Négatif&quot; and  /data/d_result3 =&quot;Positif&quot;, &quot;Positif&quot;,
+ if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Invalide&quot; and  /data/d_result3 =&quot;Négatif&quot;, &quot;Négatif&quot;,
  if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Invalide&quot; and  /data/d_result3 =&quot;Positif&quot;, &quot;Positif&quot;,
  if( /data/d_result1 =&quot;Invalide&quot; and  /data/d_result2 =&quot;Positif&quot; and  /data/d_result3 =&quot;Positif&quot;, &quot;Positif&quot;,
- if( /data/d_result1 =&quot;Invalide&quot; and  /data/d_result2 =&quot;Positif&quot; and  /data/d_result3 =&quot;Negatif&quot;, &quot;Negatif&quot;,
+ if( /data/d_result1 =&quot;Invalide&quot; and  /data/d_result2 =&quot;Positif&quot; and  /data/d_result3 =&quot;Négatif&quot;, &quot;Négatif&quot;,
  if( /data/d_result1 =&quot;Invalide&quot; and  /data/d_result2 =&quot;Invalide&quot;, &quot;Invalide&quot;,
- if( /data/d_result1 =&quot;Invalide&quot; and  /data/d_result2 =&quot;Negatif&quot;, &quot;Negatif&quot;, &quot;Indetermine&quot; )
+ if( /data/d_result1 =&quot;Invalide&quot; and  /data/d_result2 =&quot;Négatif&quot;, &quot;Négatif&quot;,
+ if( /data/d_result1 =&quot;Négatif&quot; , &quot;Négatif&quot;, &quot;Indéterminé&quot; )
  )
  )
  )
@@ -537,8 +538,9 @@ or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="str
  )
  )
  )
-)" nodeset="/data/d_final_result" relevant=" /data/d_result1 != 'Negatif'" type="string"/>
-      <bind nodeset="/data/d_display_final_result" readonly="true()" relevant=" /data/d_result1 != 'Negatif'" type="string"/>
+ )
+)" nodeset="/data/d_final_result" type="string"/>
+      <bind nodeset="/data/d_display_final_result" readonly="true()" type="string"/>
       <bind nodeset="/data/d_positive_why_no_tx" relevant=" /data/d_final_result  = 'Positif'" type="string"/>
       <bind nodeset="/data/notes_part" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
