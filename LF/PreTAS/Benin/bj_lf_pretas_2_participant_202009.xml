@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Septembre 2020) 2. Benin -  Pre TAS FL Formulaire Participants V2</h:title>
+    <h:title>(Septembre 2020) 2. Benin -  Pre TAS FL Formulaire Participants V3</h:title>
     <model >
 
       <instance>
-        <data id="bj_lf_pretas_2_participant_202009_v2" version="20200908">
+        <data id="bj_lf_pretas_2_participant_202009_v3" version="20200917">
           <p_recorderID/>
           <p_district/>
           <p_cluster_name/>
@@ -20,16 +20,14 @@
           <p_sex/>
           <p_age_yrs/>
           <p_how_long_lived/>
-          <p_id_Method/>
-          <p_Barcode_id/>
-          <p_Generate_id/>
+          <p_id_sequence/>
+          <p_code_id/>
           <p_ending_survey_note/>
           <p_notes/>
           <c_start/>
           <c_end/>
           <meta>
             <instanceID/>
-            <randomnum/>
           </meta>
         </data>
       </instance>
@@ -87,19 +85,13 @@
           <text id="/data/p_how_long_lived:label">
             <value>Depuis combien d'années l'intimé habite-t-il dans la région?</value>
           </text>
-          <text id="/data/p_id_Method:label">
-            <value>Comment l'ID unique de l'individu sera-t-il généré?</value>
+          <text id="/data/p_id_sequence:jr:constraintMsg">
+            <value>Le chiffre doit être supérieur à zéro</value>
           </text>
-          <text id="/data/p_id_Method/Scanner:label">
-            <value>Scanner</value>
+          <text id="/data/p_id_sequence:label">
+            <value>Entrer le numéro du participant</value>
           </text>
-          <text id="/data/p_id_Method/ID_generation:label">
-            <value>Génération automatique</value>
-          </text>
-          <text id="/data/p_Barcode_id:label">
-            <value>Scanner le code-barres maintenant</value>
-          </text>
-          <text id="/data/p_Generate_id:label">
+          <text id="/data/p_code_id:label">
             <value>Veuiller enregistrer le code d'identification unique suivant pour le répondant sur une liste séparée et sur chaque test de diagnostic administré, y compris les tests FTS</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
@@ -158,19 +150,13 @@
           <text id="/data/p_how_long_lived:label">
             <value>How many years has the respondent lived in the area?</value>
           </text>
-          <text id="/data/p_id_Method:label">
-            <value>How will the individual's unique ID be generated?</value>
+          <text id="/data/p_id_sequence:jr:constraintMsg">
+            <value>The number must be greater than 0</value>
           </text>
-          <text id="/data/p_id_Method/Scanner:label">
-            <value>Scanner</value>
+          <text id="/data/p_id_sequence:label">
+            <value>Enter the sequence ID</value>
           </text>
-          <text id="/data/p_id_Method/ID_generation:label">
-            <value>Automatic ID generation</value>
-          </text>
-          <text id="/data/p_Barcode_id:label">
-            <value>Scan barcode now</value>
-          </text>
-          <text id="/data/p_Generate_id:label">
+          <text id="/data/p_code_id:label">
             <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
@@ -193,15 +179,13 @@
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
-      <bind nodeset="/data/p_id_Method" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/p_Barcode_id" relevant=" /data/p_id_Method  = 'Scanner' and  /data/p_consent  = 'Yes'" required="true()" type="barcode"/>
-      <bind calculate="concat( /data/p_cluster_id ,'-', /data/meta/randomnum)" nodeset="/data/p_Generate_id" relevant=" /data/p_id_Method  = 'ID_generation' and  /data/p_consent  = 'Yes'" required="true()" type="string" readonly="true()" />
+      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/p_id_sequence:jr:constraintMsg')" nodeset="/data/p_id_sequence" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind calculate="concat( /data/p_cluster_id , '-',  /data/p_id_sequence )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'No'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,9)"/>
     </model>
   </h:head>
   <h:body>
@@ -247,22 +231,11 @@
     <input ref="/data/p_how_long_lived">
       <label ref="jr:itext('/data/p_how_long_lived:label')"/>
     </input>
-    <select1 ref="/data/p_id_Method">
-      <label ref="jr:itext('/data/p_id_Method:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_id_Method/Scanner:label')"/>
-        <value>Scanner</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_id_Method/ID_generation:label')"/>
-        <value>ID_generation</value>
-      </item>
-    </select1>
-    <input ref="/data/p_Barcode_id">
-      <label ref="jr:itext('/data/p_Barcode_id:label')"/>
+    <input ref="/data/p_id_sequence">
+      <label ref="jr:itext('/data/p_id_sequence:label')"/>
     </input>
-    <input ref="/data/p_Generate_id">
-      <label ref="jr:itext('/data/p_Generate_id:label')"/>
+    <input ref="/data/p_code_id">
+      <label ref="jr:itext('/data/p_code_id:label')"/>
     </input>
     <input ref="/data/p_ending_survey_note">
       <label ref="jr:itext('/data/p_ending_survey_note:label')"/>

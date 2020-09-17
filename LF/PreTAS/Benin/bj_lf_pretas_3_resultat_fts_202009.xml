@@ -7,19 +7,17 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Septembre 2020) 3. Benin - Pre TAS FL Résultat FTS V2</h:title>
+    <h:title>(Septembre 2020) 3. Benin - Pre TAS FL Résultat FTS V3</h:title>
     <model >
 
       <instance>
-        <data id="bj_lf_pretas_3_resultat_fts_202009_v2" version="20200908">
+        <data id="bj_lf_pretas_3_resultat_fts_202009_v3" version="20200917">
           <d_recorderID/>
           <d_commune/>
           <d_cluster_name/>
           <d_cluster_id/>
-          <d_IDType/>
-          <d_Barcode_id/>
-          <d_Generate_id/>
-          <d_Generate_id2/>
+          <d_code_id/>
+          <d_code_id2/>
           <d_lotnumber1/>
           <d_result1/>
           <d_why_invalid1/>
@@ -48,8 +46,7 @@
           </meta>
         </data>
       </instance>
-
-      <itext>
+<itext>
         <translation default="true()" lang="French">
           <text id="/data/d_recorderID:jr:constraintMsg">
             <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
@@ -75,28 +72,16 @@
           <text id="/data/d_cluster_id:hint">
             <value>Le code a trois chiffre associé à chaque grappe</value>
           </text>
-          <text id="/data/d_IDType:label">
-            <value>Avez-vous besoin de scanner le code barre sur le test diagnostique</value>
+          <text id="/data/d_code_id:jr:constraintMsg">
+            <value>Doit être entré au format 123-123 uniquement avec desnombre et tirets</value>
           </text>
-          <text id="/data/d_IDType/Scanner:label">
-            <value>Scanner</value>
+          <text id="/data/d_code_id:label">
+            <value>Entrer le code d'identification unique du test de diagnostic (doit doit avoir le format 123-123 uniquement avec des nombres et des tirets)</value>
           </text>
-          <text id="/data/d_IDType/Generation automatique:label">
-            <value>Génération automatique</value>
-          </text>
-          <text id="/data/d_Barcode_id:label">
-            <value>Scanner le code-barres maintenant</value>
-          </text>
-          <text id="/data/d_Generate_id:jr:constraintMsg">
-            <value>Doit être entré au format 123-123456 uniquement avec desnombre et tirets</value>
-          </text>
-          <text id="/data/d_Generate_id:label">
-            <value>Entrer le code d'identification unique du test de diagnostic (doit doit avoir le format 123-123456 uniquement avec des nombres et des tirets)</value>
-          </text>
-          <text id="/data/d_Generate_id2:jr:constraintMsg">
+          <text id="/data/d_code_id2:jr:constraintMsg">
             <value>Le code répété doit être le même</value>
           </text>
-          <text id="/data/d_Generate_id2:label">
+          <text id="/data/d_code_id2:label">
             <value>Répéter l'identifiant unique</value>
           </text>
           <text id="/data/d_lotnumber1:label">
@@ -287,28 +272,16 @@
           <text id="/data/d_cluster_id:label">
             <value>Select your school id</value>
           </text>
-          <text id="/data/d_IDType:label">
-            <value>Does a bar code need to be scanned on the diagnostic test?</value>
+          <text id="/data/d_code_id:jr:constraintMsg">
+            <value>Must be entered as 123-123 only with number and dashes)</value>
           </text>
-          <text id="/data/d_IDType/Scanner:label">
-            <value>Scanner</value>
+          <text id="/data/d_code_id:label">
+            <value>Enter unique ID from the diagnostic test (must be entered as 123-123 upper case only with dashes)</value>
           </text>
-          <text id="/data/d_IDType/Generation automatique:label">
-            <value>Automatic ID generation</value>
-          </text>
-          <text id="/data/d_Barcode_id:label">
-            <value>Scan barcode now</value>
-          </text>
-          <text id="/data/d_Generate_id:jr:constraintMsg">
-            <value>Must be entered as 123-123456 only with number and dashes)</value>
-          </text>
-          <text id="/data/d_Generate_id:label">
-            <value>Enter unique ID from the diagnostic test (must be entered as 12-123-123456 upper case only with dashes)</value>
-          </text>
-          <text id="/data/d_Generate_id2:jr:constraintMsg">
+          <text id="/data/d_code_id2:jr:constraintMsg">
             <value>Le code répété doit être le même</value>
           </text>
-          <text id="/data/d_Generate_id2:label">
+          <text id="/data/d_code_id2:label">
             <value>Re-enter the unique ID</value>
           </text>
           <text id="/data/d_lotnumber1:label">
@@ -492,10 +465,8 @@
       <bind nodeset="/data/d_commune" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_commune"/>
       <bind nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_cluster_name"/>
-      <bind nodeset="/data/d_IDType" required="true()" type="string"/>
-      <bind nodeset="/data/d_Barcode_id" relevant=" /data/d_IDType  = &quot;Scanner&quot;" required="true()" type="barcode"/>
-      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_Generate_id:jr:constraintMsg')" nodeset="/data/d_Generate_id" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string"/>
-      <bind constraint=". =  /data/d_Generate_id " jr:constraintMsg="jr:itext('/data/d_Generate_id2:jr:constraintMsg')" nodeset="/data/d_Generate_id2" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{1,3}$')" jr:constraintMsg="jr:itext('/data/d_code_id:jr:constraintMsg')" nodeset="/data/d_code_id" required="true()" type="string"/>
+      <bind constraint=". =  /data/d_code_id " jr:constraintMsg="jr:itext('/data/d_code_id2:jr:constraintMsg')" nodeset="/data/d_code_id2" required="true()" type="string"/>
       <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalide'" required="true()" type="string"/>
@@ -564,25 +535,11 @@ or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="str
       <label ref="jr:itext('/data/d_cluster_id:label')"/>
       <hint ref="jr:itext('/data/d_cluster_id:hint')"/>
     </input>
-    <select1 ref="/data/d_IDType">
-      <label ref="jr:itext('/data/d_IDType:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_IDType/Scanner:label')"/>
-        <value>Scanner</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_IDType/Generation automatique:label')"/>
-        <value>Generation automatique</value>
-      </item>
-    </select1>
-    <input ref="/data/d_Barcode_id">
-      <label ref="jr:itext('/data/d_Barcode_id:label')"/>
+    <input ref="/data/d_code_id">
+      <label ref="jr:itext('/data/d_code_id:label')"/>
     </input>
-    <input ref="/data/d_Generate_id">
-      <label ref="jr:itext('/data/d_Generate_id:label')"/>
-    </input>
-    <input ref="/data/d_Generate_id2">
-      <label ref="jr:itext('/data/d_Generate_id2:label')"/>
+    <input ref="/data/d_code_id2">
+      <label ref="jr:itext('/data/d_code_id2:label')"/>
     </input>
     <input ref="/data/d_lotnumber1">
       <label ref="jr:itext('/data/d_lotnumber1:label')"/>
