@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>5. Benin - TAS2 FL Form Participants (Octobre 2020) V3</h:title>
+    <h:title>5. Benin - TAS2 FL Form Participants (Octobre 2020) V4</h:title>
     <model>
 
       <instance>
-        <data id="bj_lf_tas2_2_partcipants_202010_v2" version="20201006">
+        <data id="bj_lf_tas2_2_partcipants_202010_v3" version="20201006">
           <p_recorderID/>
           <p_eu_name/>
           <p_c_commune/>
@@ -75,7 +75,7 @@
             <value>Féminin</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>L'age doit être compris entre 5 et 120 ans</value>
+            <value>L'age doit être compris entre 4 et 12 ans</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Entrer l'âge du participant (en années)</value>
@@ -143,7 +143,7 @@
             <value>Female</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>The age must be between 5 and 120 years</value>
+            <value>The age must be between 4 and 12 years</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Enter age in years</value>
@@ -179,7 +179,7 @@
       <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 4 and . &lt;= 12" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/p_id_sequence:jr:constraintMsg')" nodeset="/data/p_id_sequence" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind calculate="concat( /data/p_cluster_id , '-',  /data/p_id_sequence )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
