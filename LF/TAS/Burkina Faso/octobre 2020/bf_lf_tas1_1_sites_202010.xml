@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(BF - Octobre 2020 ) TAS FL - 1. Formulaire Village</h:title>
+    <model >
+
+      <instance>
+        <data id="bf_lf_tas1_1_sites_202010" version="20201013">
+          <code_operateur/>
+          <ue/>
+          <type_tas/>
+          <association_sth/>
+          <ds/>
+          <nb_grappe/>
+          <nom_grappe/>
+          <code_grape/>
+          <gps/>
+          <commentaires/>
+          <debut_enregistrement/>
+          <fin_enregistrement/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation lang="French">
+          <text id="/data/code_operateur:label">
+            <value>Code opérateurs</value>
+          </text>
+          <text id="/data/code_operateur/01:label">
+            <value>01</value>
+          </text>
+          <text id="/data/code_operateur/02:label">
+            <value>02</value>
+          </text>
+          <text id="/data/code_operateur/03:label">
+            <value>03</value>
+          </text>
+          <text id="/data/code_operateur/04:label">
+            <value>04</value>
+          </text>
+          <text id="/data/ue:label">
+            <value>Sélectionner une UE</value>
+          </text>
+          <text id="/data/ue/Diebougou:label">
+            <value>Diébougou</value>
+          </text>
+          <text id="/data/ue/Koupela:label">
+            <value>Koupéla</value>
+          </text>
+          <text id="/data/ue/Po:label">
+            <value>Pô</value>
+          </text>
+          <text id="/data/type_tas:label">
+            <value>Type de TAS</value>
+          </text>
+          <text id="/data/type_tas/TAS1:label">
+            <value>TAS1</value>
+          </text>
+          <text id="/data/type_tas/TAS2:label">
+            <value>TAS2</value>
+          </text>
+          <text id="/data/association_sth:label">
+            <value>Association evaluation STH</value>
+          </text>
+          <text id="/data/association_sth/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/association_sth/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/ds:label">
+            <value>Sélectionner un DS</value>
+          </text>
+          <text id="/data/ds/Diebougou:label">
+            <value>Diébougou</value>
+          </text>
+          <text id="/data/ds/Koupela:label">
+            <value>Koupéla</value>
+          </text>
+          <text id="/data/ds/Po:label">
+            <value>Pô</value>
+          </text>
+          <text id="/data/nb_grappe:jr:constraintMsg">
+            <value>Le numéro doit être entre 1 et 35</value>
+          </text>
+          <text id="/data/nb_grappe:label">
+            <value>N° Grappe</value>
+          </text>
+          <text id="/data/nom_grappe:label">
+            <value>Nom de la grappe</value>
+          </text>
+          <text id="/data/code_grape:label">
+            <value>Code grappe</value>
+          </text>
+          <text id="/data/gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/data/gps:hint">
+            <value>Fonctionne mieux à l'extérieure des batiments</value>
+          </text>
+          <text id="/data/commentaires:label">
+            <value>Commentaires</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/code_operateur" required="true()" type="string"/>
+      <bind nodeset="/data/ue" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/type_tas" required="true()" type="string"/>
+      <bind nodeset="/data/association_sth" required="true()" type="string"/>
+      <bind nodeset="/data/ds" required="true()" type="string" db_add_col_1="/data/ue" db_add_col_2="."/>
+      <bind constraint=". &gt; 0 and . &lt;= 35" jr:constraintMsg="jr:itext('/data/nb_grappe:jr:constraintMsg')" nodeset="/data/nb_grappe" required="true()" type="int" db_add_col_2="/data/ds" db_add_col_3="."/>
+      <bind nodeset="/data/nom_grappe" type="string" db_add_col_3="/data/nb_grappe" db_add_col_4="."/>
+      <bind nodeset="/data/code_grape" type="string"/>
+      <bind nodeset="/data/gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/commentaires" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/debut_enregistrement" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/fin_enregistrement" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 ref="/data/code_operateur">
+      <label ref="jr:itext('/data/code_operateur:label')"/>
+      <item>
+        <label ref="jr:itext('/data/code_operateur/01:label')"/>
+        <value>01</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/code_operateur/02:label')"/>
+        <value>02</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/code_operateur/03:label')"/>
+        <value>03</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/code_operateur/04:label')"/>
+        <value>04</value>
+      </item>
+    </select1>
+    <select1 ref="/data/ue">
+      <label ref="jr:itext('/data/ue:label')"/>
+      <item>
+        <label ref="jr:itext('/data/ue/Diebougou:label')"/>
+        <value>Diebougou</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/ue/Koupela:label')"/>
+        <value>Koupela</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/ue/Po:label')"/>
+        <value>Po</value>
+      </item>
+    </select1>
+    <select1 ref="/data/type_tas">
+      <label ref="jr:itext('/data/type_tas:label')"/>
+      <item>
+        <label ref="jr:itext('/data/type_tas/TAS1:label')"/>
+        <value>TAS1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/type_tas/TAS2:label')"/>
+        <value>TAS2</value>
+      </item>
+    </select1>
+    <select1 ref="/data/association_sth">
+      <label ref="jr:itext('/data/association_sth:label')"/>
+      <item>
+        <label ref="jr:itext('/data/association_sth/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/association_sth/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/ds">
+      <label ref="jr:itext('/data/ds:label')"/>
+      <item>
+        <label ref="jr:itext('/data/ds/Diebougou:label')"/>
+        <value>Diebougou</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/ds/Koupela:label')"/>
+        <value>Koupela</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/ds/Po:label')"/>
+        <value>Po</value>
+      </item>
+    </select1>
+    <input ref="/data/nb_grappe">
+      <label ref="jr:itext('/data/nb_grappe:label')"/>
+    </input>
+    <input ref="/data/nom_grappe">
+      <label ref="jr:itext('/data/nom_grappe:label')"/>
+    </input>
+    <input ref="/data/code_grape">
+      <label ref="jr:itext('/data/code_grape:label')"/>
+    </input>
+    <input ref="/data/gps">
+      <label ref="jr:itext('/data/gps:label')"/>
+      <hint ref="jr:itext('/data/gps:hint')"/>
+    </input>
+    <input ref="/data/commentaires">
+      <label ref="jr:itext('/data/commentaires:label')"/>
+    </input>
+  </h:body>
+</h:html>
