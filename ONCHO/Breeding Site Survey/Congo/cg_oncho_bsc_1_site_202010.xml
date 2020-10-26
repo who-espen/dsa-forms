@@ -7,14 +7,15 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Prospection des gîtes larvaires</h:title>
+    <h:title>1. Prospection des gîtes larvaires</h:title>
     <model >
       <instance>
         <data id="cg_oncho_bsc_1_site_202010" version="20201023">
           <s_recorder_id/>
           <s_province/>
           <s_district/>
-          <s_equipe/>
+          <s_team/>
+          <s_code_team/>
           <s_river_basin_name/>
           <s_river_name/>
           <s_site_id/>
@@ -170,16 +171,17 @@
           </item>
         </root>
       </instance>
-      <bind constraint="regex(.,'^[0-9]{2}$')" nodeset="/data/s_recorder_id" required="true()" type="int"/>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="Le code doit être un nombre à deux chiffres entre 9 et 1000" nodeset="/data/s_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/s_province" required="true()" type="string"/>
       <bind nodeset="/data/s_district" required="true()" type="string" db_add_col_1="."/>
-      <bind nodeset="/data/s_equipe" required="true()" type="string"/>
+      <bind nodeset="/data/s_team" required="true()" type="string"/>
+      <bind nodeset="/data/s_code_team" required="true()" type="int"/>
       <bind nodeset="/data/s_river_basin_name" required="true()" type="string"/>
       <bind nodeset="/data/s_river_name" required="true()" type="string" db_add_col_1="/data/s_district" db_add_col_2="."/>
       <bind nodeset="/data/s_site_id" required="true()" type="string"/>
       <bind nodeset="/data/s_GPS" required="true()" type="geopoint"/>
       <bind nodeset="/data/s_density" required="true()" type="string"/>
-      <bind constraint=". &gt; 0 and . &lt; 80" nodeset="/data/s_temperature" required="true()" type="decimal"/>
+      <bind constraint=". &gt; 0 and . &lt; 80" jr:constraintMsg="La température n'est pas valide" nodeset="/data/s_temperature" required="true()" type="decimal"/>
       <bind nodeset="/data/s_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/s_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/s_end" type="dateTime"/>
@@ -213,8 +215,11 @@
         <label ref="label"/>
       </itemset>
     </select1>
-    <input ref="/data/s_equipe">
+    <input ref="/data/s_team">
       <label>Equipe de prospection</label>
+    </input>
+    <input ref="/data/s_code_team">
+      <label>N° de l'équipe</label>
     </input>
     <input ref="/data/s_river_basin_name">
       <label>Nom du bassin fluvial</label>
