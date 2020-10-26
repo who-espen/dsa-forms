@@ -17,6 +17,7 @@
           <b_code_team/>
           <b_captor_initial/>
           <b_hour/>
+          <b_nb_blackflies/>
           <b_weather/>
           <b_notes/>
           <b_start/>
@@ -32,6 +33,7 @@
       <bind nodeset="/data/b_code_team" required="true()" type="int"/>
       <bind constraint="regex(.,'^[a-zA-Z0-9]{2,5}$')" jr:constraintMsg="La longueur des initiales doit être comprise entre 2 et 5" nodeset="/data/b_captor_initial" required="true()" type="string"/>
       <bind nodeset="/data/b_hour" required="true()" type="string"/>
+      <bind nodeset="/data/b_nb_blackflies" required="true()" type="int"/>
       <bind nodeset="/data/b_weather" required="true()" type="string"/>
       <bind nodeset="/data/b_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/b_start" type="dateTime"/>
@@ -99,6 +101,9 @@
         <value>16:00 - 17:00</value>
       </item>
     </select1>
+    <input ref="/data/b_nb_blackflies">
+      <label>Nombre de simulies capturées</label>
+    </input>
     <select1 ref="/data/b_weather">
       <label>Observation climatique</label>
       <item>
