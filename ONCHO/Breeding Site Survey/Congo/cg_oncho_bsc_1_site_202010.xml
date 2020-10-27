@@ -7,10 +7,10 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>1. Prospection des gîtes larvaires</h:title>
+    <h:title>1. Prospection des gîtes larvaires V2</h:title>
     <model >
       <instance>
-        <data id="cg_oncho_bsc_1_site_202010" version="20201023">
+        <data id="cg_oncho_bsc_1_site_202010_v2" version="20201023">
           <s_recorder_id/>
           <s_province/>
           <s_district/>
@@ -30,6 +30,7 @@
           </meta>
         </data>
       </instance>
+
       <instance id="region_list">
         <root>
           <item>
@@ -46,6 +47,7 @@
           </item>
         </root>
       </instance>
+
       <instance id="district_list">
         <root>
           <item>
@@ -135,6 +137,7 @@
           </item>
         </root>
       </instance>
+
       <instance id="yesNoDontKnow">
         <root>
           <item>
@@ -151,6 +154,7 @@
           </item>
         </root>
       </instance>
+
       <instance id="densite_List">
         <root>
           <item>
@@ -173,11 +177,11 @@
       </instance>
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="Le code doit être un nombre à deux chiffres entre 9 et 1000" nodeset="/data/s_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/s_province" required="true()" type="string"/>
-      <bind nodeset="/data/s_district" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/s_district" required="true()" type="string"/>
       <bind nodeset="/data/s_team" required="true()" type="string"/>
       <bind nodeset="/data/s_code_team" required="true()" type="int"/>
       <bind nodeset="/data/s_river_basin_name" required="true()" type="string"/>
-      <bind nodeset="/data/s_river_name" required="true()" type="string" db_add_col_1="/data/s_district" db_add_col_2="."/>
+      <bind nodeset="/data/s_river_name" required="true()" type="string"/>
       <bind nodeset="/data/s_site_id" required="true()" type="string"/>
       <bind nodeset="/data/s_GPS" required="true()" type="geopoint"/>
       <bind nodeset="/data/s_density" required="true()" type="string"/>
@@ -261,3 +265,4 @@
     </input>
   </h:body>
 </h:html>
+
