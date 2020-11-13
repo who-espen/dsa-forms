@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>2. Fiche de collecte des Simulies par équipe V2</h:title>
+    <model >
+      <instance>
+        <data id="cg_oncho_bsc_2_capture_202010_v2" version="20201027">
+          <b_recorder_id/>
+          <b_province/>
+          <b_district/>
+          <b_site/>
+          <b_river_basin_name/>
+          <b_nom_captureurs/>
+          <b_date_capture/>
+          <b_code_team/>
+          <b_gps/>
+          <b_captor_initial/>
+          <b_nb_interval/>
+          <g1>
+            <b_hour1/>
+            <b_nb_blackflies1/>
+            <b_weather1/>
+          </g1>
+          <g2>
+            <b_hour2/>
+            <b_nb_blackflies2/>
+            <b_weather2/>
+          </g2>
+          <g3>
+            <b_hour3/>
+            <b_nb_blackflies3/>
+            <b_weather3/>
+          </g3>
+          <g4>
+            <b_hour4/>
+            <b_nb_blackflies4/>
+            <b_weather4/>
+          </g4>
+          <g5>
+            <b_hour5/>
+            <b_nb_blackflies5/>
+            <b_weather5/>
+          </g5>
+          <g6>
+            <b_hour6/>
+            <b_nb_blackflies6/>
+            <b_weather6/>
+          </g6>
+          <g7>
+            <b_hour7/>
+            <b_nb_blackflies7/>
+            <b_weather7/>
+          </g7>
+          <b_total_blackflies/>
+          <b_notes/>
+          <b_start/>
+          <b_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="time_liste">
+        <root>
+          <item>
+            <label>7:00 - 8:00</label>
+            <name>7:00 - 8:00</name>
+          </item>
+          <item>
+            <label>8:00 - 9:00</label>
+            <name>8:00 - 9:00</name>
+          </item>
+          <item>
+            <label>9:00 - 10:00</label>
+            <name>9:00 - 10:00</name>
+          </item>
+          <item>
+            <label>10:00 - 11:00</label>
+            <name>10:00 - 11:00</name>
+          </item>
+          <item>
+            <label>11:00 - 12:00</label>
+            <name>11:00 - 12:00</name>
+          </item>
+          <item>
+            <label>12:00 - 13:00</label>
+            <name>12:00 - 13:00</name>
+          </item>
+          <item>
+            <label>13:00 - 14:00</label>
+            <name>13:00 - 14:00</name>
+          </item>
+          <item>
+            <label>14:00 - 15:00</label>
+            <name>14:00 - 15:00</name>
+          </item>
+          <item>
+            <label>15:00 - 16:00</label>
+            <name>15:00 - 16:00</name>
+          </item>
+          <item>
+            <label>16:00 - 17:00</label>
+            <name>16:00 - 17:00</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="weather_list">
+        <root>
+          <item>
+            <label>Nuageux</label>
+            <name>Cloudy</name>
+          </item>
+          <item>
+            <label>Pluvieux</label>
+            <name>Rainy</name>
+          </item>
+          <item>
+            <label>Ensoleillé</label>
+            <name>Sunny</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <label>Bouenza</label>
+            <name>Bouenza</name>
+          </item>
+          <item>
+            <label>Niari</label>
+            <name>Niari</name>
+          </item>
+          <item>
+            <label>Pool</label>
+            <name>Pool</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <label>Boko</label>
+            <name>Boko</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Dolisie</label>
+            <name>Dolisie</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Goma Tse-Tse</label>
+            <name>Goma Tse-Tse</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Igne-Ngabe-Mayama</label>
+            <name>Igne-Ngabe-Mayama</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Kibangou</label>
+            <name>Kibangou</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Kimongo</label>
+            <name>Kimongo</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Kindamba</label>
+            <name>Kindamba</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Kinkala</label>
+            <name>Kinkala</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Kintele</label>
+            <name>Kintele</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Loudima</label>
+            <name>Loudima</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Loutete</label>
+            <name>Loutete</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Madingou</label>
+            <name>Madingou</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Mayoko</label>
+            <name>Mayoko</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Mindouli</label>
+            <name>Mindouli</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Mossendjo</label>
+            <name>Mossendjo</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Mouyondzi</label>
+            <name>Mouyondzi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Nkayi</label>
+            <name>Nkayi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="Le code doit être un nombre à deux chiffres entre 9 et 1000" nodeset="/data/b_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/b_province" required="true()" type="string"/>
+      <bind nodeset="/data/b_district" required="true()" type="string"/>
+      <bind nodeset="/data/b_site" required="true()" type="string"/>
+      <bind nodeset="/data/b_river_basin_name" required="true()" type="string"/>
+      <bind nodeset="/data/b_nom_captureurs" type="string"/>
+      <bind nodeset="/data/b_date_capture" type="date"/>
+      <bind nodeset="/data/b_code_team" required="true()" type="int"/>
+      <bind nodeset="/data/b_gps" required="true()" type="geopoint"/>
+      <bind constraint="regex(.,'^[a-zA-Z]{2,5}$')" jr:constraintMsg="La longueur des initiales doit être comprise entre 2 et 5" nodeset="/data/b_captor_initial" required="true()" type="string"/>
+      <bind constraint=". &gt; 0 and . &lt;= 7" jr:constraintMsg="Le nombre d'intervalles doit être entre 1 et 7" nodeset="/data/b_nb_interval" required="true()" type="int"/>
+      <bind nodeset="/data/g1/b_hour1" required="true()" type="string"/>
+      <bind nodeset="/data/g1/b_nb_blackflies1" required="true()" type="int"/>
+      <bind nodeset="/data/g1/b_weather1" required="true()" type="string"/>
+      <bind nodeset="/data/g2" relevant=" /data/b_nb_interval &gt;= 2"/>
+      <bind nodeset="/data/g2/b_hour2" required="true()" type="string"/>
+      <bind nodeset="/data/g2/b_nb_blackflies2" required="true()" type="int"/>
+      <bind nodeset="/data/g2/b_weather2" required="true()" type="string"/>
+      <bind nodeset="/data/g3" relevant=" /data/b_nb_interval &gt;= 3"/>
+      <bind nodeset="/data/g3/b_hour3" required="true()" type="string"/>
+      <bind nodeset="/data/g3/b_nb_blackflies3" required="true()" type="int"/>
+      <bind nodeset="/data/g3/b_weather3" required="true()" type="string"/>
+      <bind nodeset="/data/g4" relevant=" /data/b_nb_interval &gt;= 4"/>
+      <bind nodeset="/data/g4/b_hour4" required="true()" type="string"/>
+      <bind nodeset="/data/g4/b_nb_blackflies4" required="true()" type="int"/>
+      <bind nodeset="/data/g4/b_weather4" required="true()" type="string"/>
+      <bind nodeset="/data/g5" relevant=" /data/b_nb_interval &gt;= 5"/>
+      <bind nodeset="/data/g5/b_hour5" required="true()" type="string"/>
+      <bind nodeset="/data/g5/b_nb_blackflies5" required="true()" type="int"/>
+      <bind nodeset="/data/g5/b_weather5" required="true()" type="string"/>
+      <bind nodeset="/data/g6" relevant=" /data/b_nb_interval &gt;= 6"/>
+      <bind nodeset="/data/g6/b_hour6" required="true()" type="string"/>
+      <bind nodeset="/data/g6/b_nb_blackflies6" required="true()" type="int"/>
+      <bind nodeset="/data/g6/b_weather6" required="true()" type="string"/>
+      <bind nodeset="/data/g7" relevant=" /data/b_nb_interval &gt;= 7"/>
+      <bind nodeset="/data/g7/b_hour7" required="true()" type="string"/>
+      <bind nodeset="/data/g7/b_nb_blackflies7" required="true()" type="int"/>
+      <bind nodeset="/data/g7/b_weather7" required="true()" type="string"/>
+      <bind calculate="if( /data/b_nb_interval  = 1,  /data/g1/b_nb_blackflies1 ,
+ if( /data/b_nb_interval  = 2,  /data/g1/b_nb_blackflies1  +  /data/g2/b_nb_blackflies2 ,
+ if( /data/b_nb_interval  = 3,  /data/g1/b_nb_blackflies1  +  /data/g2/b_nb_blackflies2  +  /data/g3/b_nb_blackflies3 ,
+ if( /data/b_nb_interval  = 4,  /data/g1/b_nb_blackflies1  +  /data/g2/b_nb_blackflies2  +  /data/g3/b_nb_blackflies3  +  /data/g4/b_nb_blackflies4 ,
+ if( /data/b_nb_interval  = 5,  /data/g1/b_nb_blackflies1  +  /data/g2/b_nb_blackflies2  +  /data/g3/b_nb_blackflies3  +  /data/g4/b_nb_blackflies4  +  /data/g5/b_nb_blackflies5 ,
+ if( /data/b_nb_interval  = 6,  /data/g1/b_nb_blackflies1  +  /data/g2/b_nb_blackflies2  +  /data/g3/b_nb_blackflies3  +  /data/g4/b_nb_blackflies4  +  /data/g5/b_nb_blackflies5  +  /data/g6/b_nb_blackflies6 ,
+ if( /data/b_nb_interval  = 7,  /data/g1/b_nb_blackflies1  +  /data/g2/b_nb_blackflies2  +  /data/g3/b_nb_blackflies3  +  /data/g4/b_nb_blackflies4  +  /data/g5/b_nb_blackflies5  +  /data/g6/b_nb_blackflies6  +  /data/g7/b_nb_blackflies7 , 0)
+ )
+ )
+ )
+ )
+ )
+)" nodeset="/data/b_total_blackflies" readonly="true()" type="string"/>
+      <bind nodeset="/data/b_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/b_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/b_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/b_recorder_id">
+      <label>Entrer l'identifiant de l'enregistreur</label>
+      <hint>Code à deux chiffres qui vous a été assigné</hint>
+    </input>
+    <select1 ref="/data/b_province">
+      <label>Sélectionner un département</label>
+      <item>
+        <label>Bouenza</label>
+        <value>Bouenza</value>
+      </item>
+      <item>
+        <label>Niari</label>
+        <value>Niari</value>
+      </item>
+      <item>
+        <label>Pool</label>
+        <value>Pool</value>
+      </item>
+    </select1>
+    <select1 ref="/data/b_district">
+      <label>Sélectionner un district</label>
+      <itemset nodeset="instance('district_list')/root/item[region_list= /data/b_province ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <input ref="/data/b_site">
+      <label>site (village)</label>
+    </input>
+    <input ref="/data/b_river_basin_name">
+      <label>Bassin de capture</label>
+    </input>
+    <input ref="/data/b_nom_captureurs">
+      <label>Nom des captureurs</label>
+    </input>
+    <input ref="/data/b_date_capture">
+      <label>Date de capture</label>
+    </input>
+    <input ref="/data/b_code_team">
+      <label>Equipe de capture N°</label>
+    </input>
+    <input accuracyThreshold="10" ref="/data/b_gps">
+      <label>Collectez les données GPS</label>
+      <hint>Fonctionne mieux à l'extérieur des bâtiments</hint>
+    </input>
+    <input ref="/data/b_captor_initial">
+      <label>Initiales du captureur</label>
+    </input>
+    <input ref="/data/b_nb_interval">
+      <label>Entrer le nombre total d'interval de capture</label>
+      <hint>Une intervalle correspond à une heure. Si la capture a durée trois heures, il y aura trois intervales.</hint>
+    </input>
+    <group appearance="field-list" ref="/data/g1">
+      <label>Premier Intervalle</label>
+      <select1 appearance="minimal" ref="/data/g1/b_hour1">
+        <label>Sélectionner l'heure</label>
+        <item>
+          <label>7:00 - 8:00</label>
+          <value>7:00 - 8:00</value>
+        </item>
+        <item>
+          <label>8:00 - 9:00</label>
+          <value>8:00 - 9:00</value>
+        </item>
+        <item>
+          <label>9:00 - 10:00</label>
+          <value>9:00 - 10:00</value>
+        </item>
+        <item>
+          <label>10:00 - 11:00</label>
+          <value>10:00 - 11:00</value>
+        </item>
+        <item>
+          <label>11:00 - 12:00</label>
+          <value>11:00 - 12:00</value>
+        </item>
+        <item>
+          <label>12:00 - 13:00</label>
+          <value>12:00 - 13:00</value>
+        </item>
+        <item>
+          <label>13:00 - 14:00</label>
+          <value>13:00 - 14:00</value>
+        </item>
+        <item>
+          <label>14:00 - 15:00</label>
+          <value>14:00 - 15:00</value>
+        </item>
+        <item>
+          <label>15:00 - 16:00</label>
+          <value>15:00 - 16:00</value>
+        </item>
+        <item>
+          <label>16:00 - 17:00</label>
+          <value>16:00 - 17:00</value>
+        </item>
+      </select1>
+      <input ref="/data/g1/b_nb_blackflies1">
+        <label>Nombre de simulies capturées</label>
+      </input>
+      <select1 ref="/data/g1/b_weather1">
+        <label>Observation climatique</label>
+        <item>
+          <label>Nuageux</label>
+          <value>Cloudy</value>
+        </item>
+        <item>
+          <label>Pluvieux</label>
+          <value>Rainy</value>
+        </item>
+        <item>
+          <label>Ensoleillé</label>
+          <value>Sunny</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g2">
+      <label>Deuxième Intervalle</label>
+      <select1 appearance="minimal" ref="/data/g2/b_hour2">
+        <label>Sélectionner l'heure</label>
+        <item>
+          <label>7:00 - 8:00</label>
+          <value>7:00 - 8:00</value>
+        </item>
+        <item>
+          <label>8:00 - 9:00</label>
+          <value>8:00 - 9:00</value>
+        </item>
+        <item>
+          <label>9:00 - 10:00</label>
+          <value>9:00 - 10:00</value>
+        </item>
+        <item>
+          <label>10:00 - 11:00</label>
+          <value>10:00 - 11:00</value>
+        </item>
+        <item>
+          <label>11:00 - 12:00</label>
+          <value>11:00 - 12:00</value>
+        </item>
+        <item>
+          <label>12:00 - 13:00</label>
+          <value>12:00 - 13:00</value>
+        </item>
+        <item>
+          <label>13:00 - 14:00</label>
+          <value>13:00 - 14:00</value>
+        </item>
+        <item>
+          <label>14:00 - 15:00</label>
+          <value>14:00 - 15:00</value>
+        </item>
+        <item>
+          <label>15:00 - 16:00</label>
+          <value>15:00 - 16:00</value>
+        </item>
+        <item>
+          <label>16:00 - 17:00</label>
+          <value>16:00 - 17:00</value>
+        </item>
+      </select1>
+      <input ref="/data/g2/b_nb_blackflies2">
+        <label>Nombre de simulies capturées</label>
+      </input>
+      <select1 ref="/data/g2/b_weather2">
+        <label>Observation climatique</label>
+        <item>
+          <label>Nuageux</label>
+          <value>Cloudy</value>
+        </item>
+        <item>
+          <label>Pluvieux</label>
+          <value>Rainy</value>
+        </item>
+        <item>
+          <label>Ensoleillé</label>
+          <value>Sunny</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g3">
+      <label>Troisième Intervalle</label>
+      <select1 appearance="minimal" ref="/data/g3/b_hour3">
+        <label>Sélectionner l'heure</label>
+        <item>
+          <label>7:00 - 8:00</label>
+          <value>7:00 - 8:00</value>
+        </item>
+        <item>
+          <label>8:00 - 9:00</label>
+          <value>8:00 - 9:00</value>
+        </item>
+        <item>
+          <label>9:00 - 10:00</label>
+          <value>9:00 - 10:00</value>
+        </item>
+        <item>
+          <label>10:00 - 11:00</label>
+          <value>10:00 - 11:00</value>
+        </item>
+        <item>
+          <label>11:00 - 12:00</label>
+          <value>11:00 - 12:00</value>
+        </item>
+        <item>
+          <label>12:00 - 13:00</label>
+          <value>12:00 - 13:00</value>
+        </item>
+        <item>
+          <label>13:00 - 14:00</label>
+          <value>13:00 - 14:00</value>
+        </item>
+        <item>
+          <label>14:00 - 15:00</label>
+          <value>14:00 - 15:00</value>
+        </item>
+        <item>
+          <label>15:00 - 16:00</label>
+          <value>15:00 - 16:00</value>
+        </item>
+        <item>
+          <label>16:00 - 17:00</label>
+          <value>16:00 - 17:00</value>
+        </item>
+      </select1>
+      <input ref="/data/g3/b_nb_blackflies3">
+        <label>Nombre de simulies capturées</label>
+      </input>
+      <select1 ref="/data/g3/b_weather3">
+        <label>Observation climatique</label>
+        <item>
+          <label>Nuageux</label>
+          <value>Cloudy</value>
+        </item>
+        <item>
+          <label>Pluvieux</label>
+          <value>Rainy</value>
+        </item>
+        <item>
+          <label>Ensoleillé</label>
+          <value>Sunny</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g4">
+      <label>Quatrième Intervalle</label>
+      <select1 appearance="minimal" ref="/data/g4/b_hour4">
+        <label>Sélectionner l'heure</label>
+        <item>
+          <label>7:00 - 8:00</label>
+          <value>7:00 - 8:00</value>
+        </item>
+        <item>
+          <label>8:00 - 9:00</label>
+          <value>8:00 - 9:00</value>
+        </item>
+        <item>
+          <label>9:00 - 10:00</label>
+          <value>9:00 - 10:00</value>
+        </item>
+        <item>
+          <label>10:00 - 11:00</label>
+          <value>10:00 - 11:00</value>
+        </item>
+        <item>
+          <label>11:00 - 12:00</label>
+          <value>11:00 - 12:00</value>
+        </item>
+        <item>
+          <label>12:00 - 13:00</label>
+          <value>12:00 - 13:00</value>
+        </item>
+        <item>
+          <label>13:00 - 14:00</label>
+          <value>13:00 - 14:00</value>
+        </item>
+        <item>
+          <label>14:00 - 15:00</label>
+          <value>14:00 - 15:00</value>
+        </item>
+        <item>
+          <label>15:00 - 16:00</label>
+          <value>15:00 - 16:00</value>
+        </item>
+        <item>
+          <label>16:00 - 17:00</label>
+          <value>16:00 - 17:00</value>
+        </item>
+      </select1>
+      <input ref="/data/g4/b_nb_blackflies4">
+        <label>Nombre de simulies capturées</label>
+      </input>
+      <select1 ref="/data/g4/b_weather4">
+        <label>Observation climatique</label>
+        <item>
+          <label>Nuageux</label>
+          <value>Cloudy</value>
+        </item>
+        <item>
+          <label>Pluvieux</label>
+          <value>Rainy</value>
+        </item>
+        <item>
+          <label>Ensoleillé</label>
+          <value>Sunny</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g5">
+      <label>Cinquième Intervalle</label>
+      <select1 appearance="minimal" ref="/data/g5/b_hour5">
+        <label>Sélectionner l'heure</label>
+        <item>
+          <label>7:00 - 8:00</label>
+          <value>7:00 - 8:00</value>
+        </item>
+        <item>
+          <label>8:00 - 9:00</label>
+          <value>8:00 - 9:00</value>
+        </item>
+        <item>
+          <label>9:00 - 10:00</label>
+          <value>9:00 - 10:00</value>
+        </item>
+        <item>
+          <label>10:00 - 11:00</label>
+          <value>10:00 - 11:00</value>
+        </item>
+        <item>
+          <label>11:00 - 12:00</label>
+          <value>11:00 - 12:00</value>
+        </item>
+        <item>
+          <label>12:00 - 13:00</label>
+          <value>12:00 - 13:00</value>
+        </item>
+        <item>
+          <label>13:00 - 14:00</label>
+          <value>13:00 - 14:00</value>
+        </item>
+        <item>
+          <label>14:00 - 15:00</label>
+          <value>14:00 - 15:00</value>
+        </item>
+        <item>
+          <label>15:00 - 16:00</label>
+          <value>15:00 - 16:00</value>
+        </item>
+        <item>
+          <label>16:00 - 17:00</label>
+          <value>16:00 - 17:00</value>
+        </item>
+      </select1>
+      <input ref="/data/g5/b_nb_blackflies5">
+        <label>Nombre de simulies capturées</label>
+      </input>
+      <select1 ref="/data/g5/b_weather5">
+        <label>Observation climatique</label>
+        <item>
+          <label>Nuageux</label>
+          <value>Cloudy</value>
+        </item>
+        <item>
+          <label>Pluvieux</label>
+          <value>Rainy</value>
+        </item>
+        <item>
+          <label>Ensoleillé</label>
+          <value>Sunny</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g6">
+      <label>Sixième Intervalle</label>
+      <select1 appearance="minimal" ref="/data/g6/b_hour6">
+        <label>Sélectionner l'heure</label>
+        <item>
+          <label>7:00 - 8:00</label>
+          <value>7:00 - 8:00</value>
+        </item>
+        <item>
+          <label>8:00 - 9:00</label>
+          <value>8:00 - 9:00</value>
+        </item>
+        <item>
+          <label>9:00 - 10:00</label>
+          <value>9:00 - 10:00</value>
+        </item>
+        <item>
+          <label>10:00 - 11:00</label>
+          <value>10:00 - 11:00</value>
+        </item>
+        <item>
+          <label>11:00 - 12:00</label>
+          <value>11:00 - 12:00</value>
+        </item>
+        <item>
+          <label>12:00 - 13:00</label>
+          <value>12:00 - 13:00</value>
+        </item>
+        <item>
+          <label>13:00 - 14:00</label>
+          <value>13:00 - 14:00</value>
+        </item>
+        <item>
+          <label>14:00 - 15:00</label>
+          <value>14:00 - 15:00</value>
+        </item>
+        <item>
+          <label>15:00 - 16:00</label>
+          <value>15:00 - 16:00</value>
+        </item>
+        <item>
+          <label>16:00 - 17:00</label>
+          <value>16:00 - 17:00</value>
+        </item>
+      </select1>
+      <input ref="/data/g6/b_nb_blackflies6">
+        <label>Nombre de simulies capturées</label>
+      </input>
+      <select1 ref="/data/g6/b_weather6">
+        <label>Observation climatique</label>
+        <item>
+          <label>Nuageux</label>
+          <value>Cloudy</value>
+        </item>
+        <item>
+          <label>Pluvieux</label>
+          <value>Rainy</value>
+        </item>
+        <item>
+          <label>Ensoleillé</label>
+          <value>Sunny</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g7">
+      <label>Septième Intervalle</label>
+      <select1 appearance="minimal" ref="/data/g7/b_hour7">
+        <label>Sélectionner l'heure</label>
+        <item>
+          <label>7:00 - 8:00</label>
+          <value>7:00 - 8:00</value>
+        </item>
+        <item>
+          <label>8:00 - 9:00</label>
+          <value>8:00 - 9:00</value>
+        </item>
+        <item>
+          <label>9:00 - 10:00</label>
+          <value>9:00 - 10:00</value>
+        </item>
+        <item>
+          <label>10:00 - 11:00</label>
+          <value>10:00 - 11:00</value>
+        </item>
+        <item>
+          <label>11:00 - 12:00</label>
+          <value>11:00 - 12:00</value>
+        </item>
+        <item>
+          <label>12:00 - 13:00</label>
+          <value>12:00 - 13:00</value>
+        </item>
+        <item>
+          <label>13:00 - 14:00</label>
+          <value>13:00 - 14:00</value>
+        </item>
+        <item>
+          <label>14:00 - 15:00</label>
+          <value>14:00 - 15:00</value>
+        </item>
+        <item>
+          <label>15:00 - 16:00</label>
+          <value>15:00 - 16:00</value>
+        </item>
+        <item>
+          <label>16:00 - 17:00</label>
+          <value>16:00 - 17:00</value>
+        </item>
+      </select1>
+      <input ref="/data/g7/b_nb_blackflies7">
+        <label>Nombre de simulies capturées</label>
+      </input>
+      <select1 ref="/data/g7/b_weather7">
+        <label>Observation climatique</label>
+        <item>
+          <label>Nuageux</label>
+          <value>Cloudy</value>
+        </item>
+        <item>
+          <label>Pluvieux</label>
+          <value>Rainy</value>
+        </item>
+        <item>
+          <label>Ensoleillé</label>
+          <value>Sunny</value>
+        </item>
+      </select1>
+    </group>
+    <input ref="/data/b_total_blackflies">
+      <label>Total des mouches capturées</label>
+    </input>
+    <input ref="/data/b_notes">
+      <label>Informations additionnelles</label>
+    </input>
+  </h:body>
+</h:html>
