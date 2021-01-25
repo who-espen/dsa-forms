@@ -1,0 +1,3354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Janvier 2021) 1. TAS FL - Formulaire Site V3</h:title>
+    <model >
+
+      <instance>
+        <data id="sn_lf_tas_1_sites_202101_v3" version="20210119">
+          <c_recorder/>
+          <c_eu_name/>
+          <c_commune/>
+          <c_cluster_name/>
+          <c_cluster_id/>
+          <c_cluster_leader_name/>
+          <c_consent/>
+          <c_population/>
+          <c_present/>
+          <c_gps/>
+          <p_ending_survey_note/>
+          <c_ClusterNotes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui a été attribué à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/c_eu_name:label">
+            <value>Sélectionner l'unité d'évaluation (UE)</value>
+          </text>
+          <text id="/data/c_eu_name/Kidira:label">
+            <value>Kidira</value>
+          </text>
+          <text id="/data/c_eu_name/Koumpentoum:label">
+            <value>Koumpentoum</value>
+          </text>
+          <text id="/data/c_eu_name/TAMBACOUNDA:label">
+            <value>TAMBACOUNDA</value>
+          </text>
+          <text id="/data/c_commune:label">
+            <value>Sélectionner la commune</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Entrer le nom de l'école</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 99 et 1000</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Entrer le code de l'école</value>
+          </text>
+          <text id="/data/c_cluster_id:hint">
+            <value>Le code a trois chiffre associé à chaque école</value>
+          </text>
+          <text id="/data/c_cluster_leader_name:label">
+            <value>Nom du chef de village ou du chef d'établissement</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>L'école ou la communauté (à travers le directeur et l'APE ou le chef de lacommunauté) consent-elle à participer à cette enquête ?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Population du village ou nombre d'élève de l'école</value>
+          </text>
+          <text id="/data/c_present:jr:constraintMsg">
+            <value>Le nombre de participants admissibles doit toujours être inférieur au nombre d'élèves de l'école</value>
+          </text>
+          <text id="/data/c_present:label">
+            <value>Selon les groupes d'âge ciblés, combien de participants admissibles sont présents dans cette école ou communauté ?</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Prener vos coordonnées GPS :</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>Les coordonnées GPS sont plus faciles à collecter à l'extérieur. Délai d'attente de 2 min</value>
+          </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Informations supplémentaires</value>
+          </text>
+          <text id="district_list-0">
+            <value>Kidira</value>
+          </text>
+          <text id="district_list-1">
+            <value>Koumpentoum</value>
+          </text>
+          <text id="district_list-2">
+            <value>TAMBACOUNDA</value>
+          </text>
+          <text id="commune_list-0">
+            <value>Bele</value>
+          </text>
+          <text id="commune_list-1">
+            <value>Gathiari</value>
+          </text>
+          <text id="commune_list-2">
+            <value>Kidira</value>
+          </text>
+          <text id="commune_list-3">
+            <value>Madina Foulbe</value>
+          </text>
+          <text id="commune_list-4">
+            <value>Sadatou</value>
+          </text>
+          <text id="commune_list-5">
+            <value>Sinthiou Fissa</value>
+          </text>
+          <text id="commune_list-6">
+            <value>Toumboura</value>
+          </text>
+          <text id="commune_list-7">
+            <value>COM. KOUMPENTOUM</value>
+          </text>
+          <text id="commune_list-8">
+            <value>COM. MALEM NIANI</value>
+          </text>
+          <text id="commune_list-9">
+            <value>CR. BAMBA THIALENE</value>
+          </text>
+          <text id="commune_list-10">
+            <value>CR. KAHENE</value>
+          </text>
+          <text id="commune_list-11">
+            <value>CR. KOUTHIA GAYDI</value>
+          </text>
+          <text id="commune_list-12">
+            <value>CR. KOUTHIABA WOLOF</value>
+          </text>
+          <text id="commune_list-13">
+            <value>CR. MERETO</value>
+          </text>
+          <text id="commune_list-14">
+            <value>CR. N'DAME</value>
+          </text>
+          <text id="commune_list-15">
+            <value>CR. PASS KOTO</value>
+          </text>
+          <text id="commune_list-16">
+            <value>CR. PAYAR</value>
+          </text>
+          <text id="commune_list-17">
+            <value>DIALACOTO</value>
+          </text>
+          <text id="commune_list-18">
+            <value>KOUSSANAR</value>
+          </text>
+          <text id="commune_list-19">
+            <value>MISSIRAH</value>
+          </text>
+          <text id="commune_list-20">
+            <value>NETTEBOULOU</value>
+          </text>
+          <text id="commune_list-21">
+            <value>SINTHIOU MALEME</value>
+          </text>
+          <text id="commune_list-22">
+            <value>TAMBA</value>
+          </text>
+          <text id="site_list-0">
+            <value>ARIGABO</value>
+          </text>
+          <text id="site_list-1">
+            <value>BELE</value>
+          </text>
+          <text id="site_list-2">
+            <value>DAHARATOU</value>
+          </text>
+          <text id="site_list-3">
+            <value>DYABOUGOU MOSSI</value>
+          </text>
+          <text id="site_list-4">
+            <value>FETE GOLOMBI</value>
+          </text>
+          <text id="site_list-5">
+            <value>GOUREL BOCAR SAMBA</value>
+          </text>
+          <text id="site_list-6">
+            <value>GOUREL BOULY</value>
+          </text>
+          <text id="site_list-7">
+            <value>GUITTA</value>
+          </text>
+          <text id="site_list-8">
+            <value>NAYES</value>
+          </text>
+          <text id="site_list-9">
+            <value>SELING</value>
+          </text>
+          <text id="site_list-10">
+            <value>SENOUDEBOU</value>
+          </text>
+          <text id="site_list-11">
+            <value>WOUBOWOL</value>
+          </text>
+          <text id="site_list-12">
+            <value>BOUNTOU LOGO</value>
+          </text>
+          <text id="site_list-13">
+            <value>SABOU CIRE</value>
+          </text>
+          <text id="site_list-14">
+            <value>TAME</value>
+          </text>
+          <text id="site_list-15">
+            <value>ALAHINA BOCAR</value>
+          </text>
+          <text id="site_list-16">
+            <value>SINTHIOU DIOYE</value>
+          </text>
+          <text id="site_list-17">
+            <value>KENIEBA</value>
+          </text>
+          <text id="site_list-18">
+            <value>MADINA FOULBE</value>
+          </text>
+          <text id="site_list-19">
+            <value>TOMBOROMADJI</value>
+          </text>
+          <text id="site_list-20">
+            <value>DYALA BAKARY</value>
+          </text>
+          <text id="site_list-21">
+            <value>HEREMAKONO</value>
+          </text>
+          <text id="site_list-22">
+            <value>NIENIEKHO</value>
+          </text>
+          <text id="site_list-23">
+            <value>SANDINCOUNDA</value>
+          </text>
+          <text id="site_list-24">
+            <value>SENO KARE</value>
+          </text>
+          <text id="site_list-25">
+            <value>SORETO</value>
+          </text>
+          <text id="site_list-26">
+            <value>DIAM WELY PATHE MBAYE</value>
+          </text>
+          <text id="site_list-27">
+            <value>GUEDEKHO</value>
+          </text>
+          <text id="site_list-28">
+            <value>KOUNDEL</value>
+          </text>
+          <text id="site_list-29">
+            <value>SAKHOCOUNDA</value>
+          </text>
+          <text id="site_list-30">
+            <value>SAMBA COLO</value>
+          </text>
+          <text id="site_list-31">
+            <value>SEOUDJI</value>
+          </text>
+          <text id="site_list-32">
+            <value>SINTHIOU SAMBA NDIARDE</value>
+          </text>
+          <text id="site_list-33">
+            <value>SITABANTA</value>
+          </text>
+          <text id="site_list-34">
+            <value>TAKHOUTALA</value>
+          </text>
+          <text id="site_list-35">
+            <value>YOUPE HAMADY</value>
+          </text>
+          <text id="site_list-36">
+            <value>BANCOUBA</value>
+          </text>
+          <text id="site_list-37">
+            <value>DIDE GASSAMA</value>
+          </text>
+          <text id="site_list-38">
+            <value>GOUDANPHA</value>
+          </text>
+          <text id="site_list-39">
+            <value>TOUMBOURA</value>
+          </text>
+          <text id="site_list-40">
+            <value>KOUMPENTOUM 5</value>
+          </text>
+          <text id="site_list-41">
+            <value>MISSION CATHOLIQUE</value>
+          </text>
+          <text id="site_list-42">
+            <value>THIERNO SAKHO</value>
+          </text>
+          <text id="site_list-43">
+            <value>MALEME 2</value>
+          </text>
+          <text id="site_list-44">
+            <value>BAMBA THIALENE</value>
+          </text>
+          <text id="site_list-45">
+            <value>ELIHINA</value>
+          </text>
+          <text id="site_list-46">
+            <value>KOUNTOUATA</value>
+          </text>
+          <text id="site_list-47">
+            <value>DIALOTODJI</value>
+          </text>
+          <text id="site_list-48">
+            <value>NGUEYENE</value>
+          </text>
+          <text id="site_list-49">
+            <value>VILLAGE 15 (TIVAOUANE NIANI)</value>
+          </text>
+          <text id="site_list-50">
+            <value>LOFFE</value>
+          </text>
+          <text id="site_list-51">
+            <value>PIRE GOUNDO</value>
+          </text>
+          <text id="site_list-52">
+            <value>SARE SICOUNA</value>
+          </text>
+          <text id="site_list-53">
+            <value>SINTHIOU NDENE</value>
+          </text>
+          <text id="site_list-54">
+            <value>VELINGARA NGENTHE</value>
+          </text>
+          <text id="site_list-55">
+            <value>BOYNGAL DADI</value>
+          </text>
+          <text id="site_list-56">
+            <value>DAROU NDIAYENE</value>
+          </text>
+          <text id="site_list-57">
+            <value>FASS THIECKENE</value>
+          </text>
+          <text id="site_list-58">
+            <value>FRANCO ARABE DE KOUTHIABA</value>
+          </text>
+          <text id="site_list-59">
+            <value>GAWANE</value>
+          </text>
+          <text id="site_list-60">
+            <value>KOUKOUYEL PEULH</value>
+          </text>
+          <text id="site_list-61">
+            <value>KOUTHIABA PEULH</value>
+          </text>
+          <text id="site_list-62">
+            <value>PALANGUE HAMADI</value>
+          </text>
+          <text id="site_list-63">
+            <value>SARE BOYLI</value>
+          </text>
+          <text id="site_list-64">
+            <value>SARE GALLOROU</value>
+          </text>
+          <text id="site_list-65">
+            <value>SYLL PEULH</value>
+          </text>
+          <text id="site_list-66">
+            <value>KEUR DAOUDA</value>
+          </text>
+          <text id="site_list-67">
+            <value>BOUDOUCK</value>
+          </text>
+          <text id="site_list-68">
+            <value>BOULIMANGA</value>
+          </text>
+          <text id="site_list-69">
+            <value>FRANCO ARABE DAROU SALAM THIEKENE</value>
+          </text>
+          <text id="site_list-70">
+            <value>KEUR NGUIRENE</value>
+          </text>
+          <text id="site_list-71">
+            <value>MEDINA NDIOBENE</value>
+          </text>
+          <text id="site_list-72">
+            <value>NDOUMANE MBAYE</value>
+          </text>
+          <text id="site_list-73">
+            <value>Touba NIANI</value>
+          </text>
+          <text id="site_list-74">
+            <value>BOINGUEL</value>
+          </text>
+          <text id="site_list-75">
+            <value>DIAGLE NDAWENE</value>
+          </text>
+          <text id="site_list-76">
+            <value>DIAMWELI</value>
+          </text>
+          <text id="site_list-77">
+            <value>KALOM</value>
+          </text>
+          <text id="site_list-78">
+            <value>MEDINA KOBORENE</value>
+          </text>
+          <text id="site_list-79">
+            <value>PATOULANE IBRAHIMA NDAO</value>
+          </text>
+          <text id="site_list-80">
+            <value>VELINGARA COTO</value>
+          </text>
+          <text id="site_list-81">
+            <value>LOUMBY SIMBING</value>
+          </text>
+          <text id="site_list-82">
+            <value>NAYOM DIA</value>
+          </text>
+          <text id="site_list-83">
+            <value>SINTHIOU ASRE</value>
+          </text>
+          <text id="site_list-84">
+            <value>SOUTHIE</value>
+          </text>
+          <text id="site_list-85">
+            <value>Badi</value>
+          </text>
+          <text id="site_list-86">
+            <value>Dialacoto 2</value>
+          </text>
+          <text id="site_list-87">
+            <value>Medinacouta</value>
+          </text>
+          <text id="site_list-88">
+            <value>Soucouto</value>
+          </text>
+          <text id="site_list-89">
+            <value>Talicoring Bantancoly</value>
+          </text>
+          <text id="site_list-90">
+            <value>Fass Nguenthe</value>
+          </text>
+          <text id="site_list-91">
+            <value>Koussanar 3</value>
+          </text>
+          <text id="site_list-92">
+            <value>Maléme Wokou Wokou</value>
+          </text>
+          <text id="site_list-93">
+            <value>Mboul</value>
+          </text>
+          <text id="site_list-94">
+            <value>Sinthiou Dawady</value>
+          </text>
+          <text id="site_list-95">
+            <value>Bidiancoto</value>
+          </text>
+          <text id="site_list-96">
+            <value>Gourel Bocar</value>
+          </text>
+          <text id="site_list-97">
+            <value>Hamdallaye Tessan</value>
+          </text>
+          <text id="site_list-98">
+            <value>Kouar</value>
+          </text>
+          <text id="site_list-99">
+            <value>Mahina Coura</value>
+          </text>
+          <text id="site_list-100">
+            <value>Nguene</value>
+          </text>
+          <text id="site_list-101">
+            <value>Saby Mouless</value>
+          </text>
+          <text id="site_list-102">
+            <value>Safalou 2</value>
+          </text>
+          <text id="site_list-103">
+            <value>Sinthiou Mamoudou</value>
+          </text>
+          <text id="site_list-104">
+            <value>Velingara Leguel</value>
+          </text>
+          <text id="site_list-105">
+            <value>Coumba Koutou</value>
+          </text>
+          <text id="site_list-106">
+            <value>Dar Salam 1</value>
+          </text>
+          <text id="site_list-107">
+            <value>Koulary</value>
+          </text>
+          <text id="site_list-108">
+            <value>Netteboulou</value>
+          </text>
+          <text id="site_list-109">
+            <value>Segou Coura</value>
+          </text>
+          <text id="site_list-110">
+            <value>Sinthiou Kéniaba</value>
+          </text>
+          <text id="site_list-111">
+            <value>Diombodina</value>
+          </text>
+          <text id="site_list-112">
+            <value>Mansa Kaly Oualy</value>
+          </text>
+          <text id="site_list-113">
+            <value>Maribougou</value>
+          </text>
+          <text id="site_list-114">
+            <value>Sadioboulou</value>
+          </text>
+          <text id="site_list-115">
+            <value>Sare Ousmane</value>
+          </text>
+          <text id="site_list-116">
+            <value>Sirimandialla</value>
+          </text>
+          <text id="site_list-117">
+            <value>Thiorobougou</value>
+          </text>
+          <text id="site_list-118">
+            <value>Boukari counda</value>
+          </text>
+          <text id="site_list-119">
+            <value>Gourel Diadié 1</value>
+          </text>
+          <text id="site_list-120">
+            <value>Kandioura Noba</value>
+          </text>
+          <text id="site_list-121">
+            <value>Kothiarinding</value>
+          </text>
+          <text id="site_list-122">
+            <value>Sada Maka Sy</value>
+          </text>
+          <text id="site_list-123">
+            <value>SOS Tamora Toure</value>
+          </text>
+          <text id="site_list-124">
+            <value>Tamba Soce</value>
+          </text>
+          <text id="code_site_list-0">
+            <value>100</value>
+          </text>
+          <text id="code_site_list-1">
+            <value>101</value>
+          </text>
+          <text id="code_site_list-2">
+            <value>102</value>
+          </text>
+          <text id="code_site_list-3">
+            <value>103</value>
+          </text>
+          <text id="code_site_list-4">
+            <value>104</value>
+          </text>
+          <text id="code_site_list-5">
+            <value>105</value>
+          </text>
+          <text id="code_site_list-6">
+            <value>106</value>
+          </text>
+          <text id="code_site_list-7">
+            <value>107</value>
+          </text>
+          <text id="code_site_list-8">
+            <value>108</value>
+          </text>
+          <text id="code_site_list-9">
+            <value>109</value>
+          </text>
+          <text id="code_site_list-10">
+            <value>110</value>
+          </text>
+          <text id="code_site_list-11">
+            <value>111</value>
+          </text>
+          <text id="code_site_list-12">
+            <value>112</value>
+          </text>
+          <text id="code_site_list-13">
+            <value>113</value>
+          </text>
+          <text id="code_site_list-14">
+            <value>114</value>
+          </text>
+          <text id="code_site_list-15">
+            <value>115</value>
+          </text>
+          <text id="code_site_list-16">
+            <value>116</value>
+          </text>
+          <text id="code_site_list-17">
+            <value>117</value>
+          </text>
+          <text id="code_site_list-18">
+            <value>118</value>
+          </text>
+          <text id="code_site_list-19">
+            <value>119</value>
+          </text>
+          <text id="code_site_list-20">
+            <value>120</value>
+          </text>
+          <text id="code_site_list-21">
+            <value>121</value>
+          </text>
+          <text id="code_site_list-22">
+            <value>122</value>
+          </text>
+          <text id="code_site_list-23">
+            <value>123</value>
+          </text>
+          <text id="code_site_list-24">
+            <value>124</value>
+          </text>
+          <text id="code_site_list-25">
+            <value>125</value>
+          </text>
+          <text id="code_site_list-26">
+            <value>126</value>
+          </text>
+          <text id="code_site_list-27">
+            <value>127</value>
+          </text>
+          <text id="code_site_list-28">
+            <value>128</value>
+          </text>
+          <text id="code_site_list-29">
+            <value>129</value>
+          </text>
+          <text id="code_site_list-30">
+            <value>130</value>
+          </text>
+          <text id="code_site_list-31">
+            <value>131</value>
+          </text>
+          <text id="code_site_list-32">
+            <value>132</value>
+          </text>
+          <text id="code_site_list-33">
+            <value>133</value>
+          </text>
+          <text id="code_site_list-34">
+            <value>134</value>
+          </text>
+          <text id="code_site_list-35">
+            <value>135</value>
+          </text>
+          <text id="code_site_list-36">
+            <value>136</value>
+          </text>
+          <text id="code_site_list-37">
+            <value>137</value>
+          </text>
+          <text id="code_site_list-38">
+            <value>138</value>
+          </text>
+          <text id="code_site_list-39">
+            <value>139</value>
+          </text>
+          <text id="code_site_list-40">
+            <value>200</value>
+          </text>
+          <text id="code_site_list-41">
+            <value>201</value>
+          </text>
+          <text id="code_site_list-42">
+            <value>202</value>
+          </text>
+          <text id="code_site_list-43">
+            <value>203</value>
+          </text>
+          <text id="code_site_list-44">
+            <value>204</value>
+          </text>
+          <text id="code_site_list-45">
+            <value>205</value>
+          </text>
+          <text id="code_site_list-46">
+            <value>206</value>
+          </text>
+          <text id="code_site_list-47">
+            <value>207</value>
+          </text>
+          <text id="code_site_list-48">
+            <value>208</value>
+          </text>
+          <text id="code_site_list-49">
+            <value>209</value>
+          </text>
+          <text id="code_site_list-50">
+            <value>210</value>
+          </text>
+          <text id="code_site_list-51">
+            <value>211</value>
+          </text>
+          <text id="code_site_list-52">
+            <value>212</value>
+          </text>
+          <text id="code_site_list-53">
+            <value>213</value>
+          </text>
+          <text id="code_site_list-54">
+            <value>214</value>
+          </text>
+          <text id="code_site_list-55">
+            <value>215</value>
+          </text>
+          <text id="code_site_list-56">
+            <value>216</value>
+          </text>
+          <text id="code_site_list-57">
+            <value>217</value>
+          </text>
+          <text id="code_site_list-58">
+            <value>218</value>
+          </text>
+          <text id="code_site_list-59">
+            <value>219</value>
+          </text>
+          <text id="code_site_list-60">
+            <value>220</value>
+          </text>
+          <text id="code_site_list-61">
+            <value>221</value>
+          </text>
+          <text id="code_site_list-62">
+            <value>222</value>
+          </text>
+          <text id="code_site_list-63">
+            <value>223</value>
+          </text>
+          <text id="code_site_list-64">
+            <value>224</value>
+          </text>
+          <text id="code_site_list-65">
+            <value>225</value>
+          </text>
+          <text id="code_site_list-66">
+            <value>226</value>
+          </text>
+          <text id="code_site_list-67">
+            <value>227</value>
+          </text>
+          <text id="code_site_list-68">
+            <value>228</value>
+          </text>
+          <text id="code_site_list-69">
+            <value>229</value>
+          </text>
+          <text id="code_site_list-70">
+            <value>230</value>
+          </text>
+          <text id="code_site_list-71">
+            <value>231</value>
+          </text>
+          <text id="code_site_list-72">
+            <value>232</value>
+          </text>
+          <text id="code_site_list-73">
+            <value>233</value>
+          </text>
+          <text id="code_site_list-74">
+            <value>234</value>
+          </text>
+          <text id="code_site_list-75">
+            <value>235</value>
+          </text>
+          <text id="code_site_list-76">
+            <value>236</value>
+          </text>
+          <text id="code_site_list-77">
+            <value>237</value>
+          </text>
+          <text id="code_site_list-78">
+            <value>238</value>
+          </text>
+          <text id="code_site_list-79">
+            <value>239</value>
+          </text>
+          <text id="code_site_list-80">
+            <value>240</value>
+          </text>
+          <text id="code_site_list-81">
+            <value>241</value>
+          </text>
+          <text id="code_site_list-82">
+            <value>242</value>
+          </text>
+          <text id="code_site_list-83">
+            <value>243</value>
+          </text>
+          <text id="code_site_list-84">
+            <value>244</value>
+          </text>
+          <text id="code_site_list-85">
+            <value>300</value>
+          </text>
+          <text id="code_site_list-86">
+            <value>301</value>
+          </text>
+          <text id="code_site_list-87">
+            <value>302</value>
+          </text>
+          <text id="code_site_list-88">
+            <value>303</value>
+          </text>
+          <text id="code_site_list-89">
+            <value>304</value>
+          </text>
+          <text id="code_site_list-90">
+            <value>305</value>
+          </text>
+          <text id="code_site_list-91">
+            <value>306</value>
+          </text>
+          <text id="code_site_list-92">
+            <value>307</value>
+          </text>
+          <text id="code_site_list-93">
+            <value>308</value>
+          </text>
+          <text id="code_site_list-94">
+            <value>309</value>
+          </text>
+          <text id="code_site_list-95">
+            <value>310</value>
+          </text>
+          <text id="code_site_list-96">
+            <value>311</value>
+          </text>
+          <text id="code_site_list-97">
+            <value>312</value>
+          </text>
+          <text id="code_site_list-98">
+            <value>313</value>
+          </text>
+          <text id="code_site_list-99">
+            <value>314</value>
+          </text>
+          <text id="code_site_list-100">
+            <value>315</value>
+          </text>
+          <text id="code_site_list-101">
+            <value>316</value>
+          </text>
+          <text id="code_site_list-102">
+            <value>317</value>
+          </text>
+          <text id="code_site_list-103">
+            <value>318</value>
+          </text>
+          <text id="code_site_list-104">
+            <value>319</value>
+          </text>
+          <text id="code_site_list-105">
+            <value>320</value>
+          </text>
+          <text id="code_site_list-106">
+            <value>321</value>
+          </text>
+          <text id="code_site_list-107">
+            <value>322</value>
+          </text>
+          <text id="code_site_list-108">
+            <value>323</value>
+          </text>
+          <text id="code_site_list-109">
+            <value>324</value>
+          </text>
+          <text id="code_site_list-110">
+            <value>325</value>
+          </text>
+          <text id="code_site_list-111">
+            <value>326</value>
+          </text>
+          <text id="code_site_list-112">
+            <value>327</value>
+          </text>
+          <text id="code_site_list-113">
+            <value>328</value>
+          </text>
+          <text id="code_site_list-114">
+            <value>329</value>
+          </text>
+          <text id="code_site_list-115">
+            <value>330</value>
+          </text>
+          <text id="code_site_list-116">
+            <value>331</value>
+          </text>
+          <text id="code_site_list-117">
+            <value>332</value>
+          </text>
+          <text id="code_site_list-118">
+            <value>333</value>
+          </text>
+          <text id="code_site_list-119">
+            <value>334</value>
+          </text>
+          <text id="code_site_list-120">
+            <value>335</value>
+          </text>
+          <text id="code_site_list-121">
+            <value>336</value>
+          </text>
+          <text id="code_site_list-122">
+            <value>337</value>
+          </text>
+          <text id="code_site_list-123">
+            <value>338</value>
+          </text>
+          <text id="code_site_list-124">
+            <value>339</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Oui</value>
+          </text>
+          <text id="yes_no-1">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>-</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>-</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>The code must be a two-digit number between 9 and 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Enter Recorder ID</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
+          </text>
+          <text id="/data/c_eu_name:label">
+            <value>Select the evaluation unit (EU)</value>
+          </text>
+          <text id="/data/c_eu_name/Kidira:label">
+            <value>Kidira</value>
+          </text>
+          <text id="/data/c_eu_name/Koumpentoum:label">
+            <value>Koumpentoum</value>
+          </text>
+          <text id="/data/c_eu_name/TAMBACOUNDA:label">
+            <value>TAMBACOUNDA</value>
+          </text>
+          <text id="/data/c_commune:label">
+            <value>Select the commune</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Enter the school Name</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>The code must be a two-digit number between 99 and 1000</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Enter the cluster ID</value>
+          </text>
+          <text id="/data/c_cluster_id:hint">
+            <value>The three-digit code associated with each school</value>
+          </text>
+          <text id="/data/c_cluster_leader_name:label">
+            <value>Name of Village Leader or Head Teacher</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>Does the school or community consent to participating in this survey?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Village population or total number of pupils</value>
+          </text>
+          <text id="/data/c_present:jr:constraintMsg">
+            <value>The number of eligible participants must always be less than the number of students in the school</value>
+          </text>
+          <text id="/data/c_present:label">
+            <value>Depending on the age groups targeted, how many eligible participants are present in this school or community?</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Record your location:</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>GPS coordinates are easier to collect outside. 2 min timeout</value>
+          </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>You just entered a value that will end the survey</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Additional notes to add?</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="district_list-0">
+            <value>Kidira</value>
+          </text>
+          <text id="district_list-1">
+            <value>Koumpentoum</value>
+          </text>
+          <text id="district_list-2">
+            <value>TAMBACOUNDA</value>
+          </text>
+          <text id="commune_list-0">
+            <value>Bele</value>
+          </text>
+          <text id="commune_list-1">
+            <value>Gathiari</value>
+          </text>
+          <text id="commune_list-2">
+            <value>Kidira</value>
+          </text>
+          <text id="commune_list-3">
+            <value>Madina Foulbe</value>
+          </text>
+          <text id="commune_list-4">
+            <value>Sadatou</value>
+          </text>
+          <text id="commune_list-5">
+            <value>Sinthiou Fissa</value>
+          </text>
+          <text id="commune_list-6">
+            <value>Toumboura</value>
+          </text>
+          <text id="commune_list-7">
+            <value>COM. KOUMPENTOUM</value>
+          </text>
+          <text id="commune_list-8">
+            <value>COM. MALEM NIANI</value>
+          </text>
+          <text id="commune_list-9">
+            <value>CR. BAMBA THIALENE</value>
+          </text>
+          <text id="commune_list-10">
+            <value>CR. KAHENE</value>
+          </text>
+          <text id="commune_list-11">
+            <value>CR. KOUTHIA GAYDI</value>
+          </text>
+          <text id="commune_list-12">
+            <value>CR. KOUTHIABA WOLOF</value>
+          </text>
+          <text id="commune_list-13">
+            <value>CR. MERETO</value>
+          </text>
+          <text id="commune_list-14">
+            <value>CR. N'DAME</value>
+          </text>
+          <text id="commune_list-15">
+            <value>CR. PASS KOTO</value>
+          </text>
+          <text id="commune_list-16">
+            <value>CR. PAYAR</value>
+          </text>
+          <text id="commune_list-17">
+            <value>DIALACOTO</value>
+          </text>
+          <text id="commune_list-18">
+            <value>KOUSSANAR</value>
+          </text>
+          <text id="commune_list-19">
+            <value>MISSIRAH</value>
+          </text>
+          <text id="commune_list-20">
+            <value>NETTEBOULOU</value>
+          </text>
+          <text id="commune_list-21">
+            <value>SINTHIOU MALEME</value>
+          </text>
+          <text id="commune_list-22">
+            <value>TAMBA</value>
+          </text>
+          <text id="site_list-0">
+            <value>ARIGABO</value>
+          </text>
+          <text id="site_list-1">
+            <value>BELE</value>
+          </text>
+          <text id="site_list-2">
+            <value>DAHARATOU</value>
+          </text>
+          <text id="site_list-3">
+            <value>DYABOUGOU MOSSI</value>
+          </text>
+          <text id="site_list-4">
+            <value>FETE GOLOMBI</value>
+          </text>
+          <text id="site_list-5">
+            <value>GOUREL BOCAR SAMBA</value>
+          </text>
+          <text id="site_list-6">
+            <value>GOUREL BOULY</value>
+          </text>
+          <text id="site_list-7">
+            <value>GUITTA</value>
+          </text>
+          <text id="site_list-8">
+            <value>NAYES</value>
+          </text>
+          <text id="site_list-9">
+            <value>SELING</value>
+          </text>
+          <text id="site_list-10">
+            <value>SENOUDEBOU</value>
+          </text>
+          <text id="site_list-11">
+            <value>WOUBOWOL</value>
+          </text>
+          <text id="site_list-12">
+            <value>BOUNTOU LOGO</value>
+          </text>
+          <text id="site_list-13">
+            <value>SABOU CIRE</value>
+          </text>
+          <text id="site_list-14">
+            <value>TAME</value>
+          </text>
+          <text id="site_list-15">
+            <value>ALAHINA BOCAR</value>
+          </text>
+          <text id="site_list-16">
+            <value>SINTHIOU DIOYE</value>
+          </text>
+          <text id="site_list-17">
+            <value>KENIEBA</value>
+          </text>
+          <text id="site_list-18">
+            <value>MADINA FOULBE</value>
+          </text>
+          <text id="site_list-19">
+            <value>TOMBOROMADJI</value>
+          </text>
+          <text id="site_list-20">
+            <value>DYALA BAKARY</value>
+          </text>
+          <text id="site_list-21">
+            <value>HEREMAKONO</value>
+          </text>
+          <text id="site_list-22">
+            <value>NIENIEKHO</value>
+          </text>
+          <text id="site_list-23">
+            <value>SANDINCOUNDA</value>
+          </text>
+          <text id="site_list-24">
+            <value>SENO KARE</value>
+          </text>
+          <text id="site_list-25">
+            <value>SORETO</value>
+          </text>
+          <text id="site_list-26">
+            <value>DIAM WELY PATHE MBAYE</value>
+          </text>
+          <text id="site_list-27">
+            <value>GUEDEKHO</value>
+          </text>
+          <text id="site_list-28">
+            <value>KOUNDEL</value>
+          </text>
+          <text id="site_list-29">
+            <value>SAKHOCOUNDA</value>
+          </text>
+          <text id="site_list-30">
+            <value>SAMBA COLO</value>
+          </text>
+          <text id="site_list-31">
+            <value>SEOUDJI</value>
+          </text>
+          <text id="site_list-32">
+            <value>SINTHIOU SAMBA NDIARDE</value>
+          </text>
+          <text id="site_list-33">
+            <value>SITABANTA</value>
+          </text>
+          <text id="site_list-34">
+            <value>TAKHOUTALA</value>
+          </text>
+          <text id="site_list-35">
+            <value>YOUPE HAMADY</value>
+          </text>
+          <text id="site_list-36">
+            <value>BANCOUBA</value>
+          </text>
+          <text id="site_list-37">
+            <value>DIDE GASSAMA</value>
+          </text>
+          <text id="site_list-38">
+            <value>GOUDANPHA</value>
+          </text>
+          <text id="site_list-39">
+            <value>TOUMBOURA</value>
+          </text>
+          <text id="site_list-40">
+            <value>KOUMPENTOUM 5</value>
+          </text>
+          <text id="site_list-41">
+            <value>MISSION CATHOLIQUE</value>
+          </text>
+          <text id="site_list-42">
+            <value>THIERNO SAKHO</value>
+          </text>
+          <text id="site_list-43">
+            <value>MALEME 2</value>
+          </text>
+          <text id="site_list-44">
+            <value>BAMBA THIALENE</value>
+          </text>
+          <text id="site_list-45">
+            <value>ELIHINA</value>
+          </text>
+          <text id="site_list-46">
+            <value>KOUNTOUATA</value>
+          </text>
+          <text id="site_list-47">
+            <value>DIALOTODJI</value>
+          </text>
+          <text id="site_list-48">
+            <value>NGUEYENE</value>
+          </text>
+          <text id="site_list-49">
+            <value>VILLAGE 15 (TIVAOUANE NIANI)</value>
+          </text>
+          <text id="site_list-50">
+            <value>LOFFE</value>
+          </text>
+          <text id="site_list-51">
+            <value>PIRE GOUNDO</value>
+          </text>
+          <text id="site_list-52">
+            <value>SARE SICOUNA</value>
+          </text>
+          <text id="site_list-53">
+            <value>SINTHIOU NDENE</value>
+          </text>
+          <text id="site_list-54">
+            <value>VELINGARA NGENTHE</value>
+          </text>
+          <text id="site_list-55">
+            <value>BOYNGAL DADI</value>
+          </text>
+          <text id="site_list-56">
+            <value>DAROU NDIAYENE</value>
+          </text>
+          <text id="site_list-57">
+            <value>FASS THIECKENE</value>
+          </text>
+          <text id="site_list-58">
+            <value>FRANCO ARABE DE KOUTHIABA</value>
+          </text>
+          <text id="site_list-59">
+            <value>GAWANE</value>
+          </text>
+          <text id="site_list-60">
+            <value>KOUKOUYEL PEULH</value>
+          </text>
+          <text id="site_list-61">
+            <value>KOUTHIABA PEULH</value>
+          </text>
+          <text id="site_list-62">
+            <value>PALANGUE HAMADI</value>
+          </text>
+          <text id="site_list-63">
+            <value>SARE BOYLI</value>
+          </text>
+          <text id="site_list-64">
+            <value>SARE GALLOROU</value>
+          </text>
+          <text id="site_list-65">
+            <value>SYLL PEULH</value>
+          </text>
+          <text id="site_list-66">
+            <value>KEUR DAOUDA</value>
+          </text>
+          <text id="site_list-67">
+            <value>BOUDOUCK</value>
+          </text>
+          <text id="site_list-68">
+            <value>BOULIMANGA</value>
+          </text>
+          <text id="site_list-69">
+            <value>FRANCO ARABE DAROU SALAM THIEKENE</value>
+          </text>
+          <text id="site_list-70">
+            <value>KEUR NGUIRENE</value>
+          </text>
+          <text id="site_list-71">
+            <value>MEDINA NDIOBENE</value>
+          </text>
+          <text id="site_list-72">
+            <value>NDOUMANE MBAYE</value>
+          </text>
+          <text id="site_list-73">
+            <value>Touba NIANI</value>
+          </text>
+          <text id="site_list-74">
+            <value>BOINGUEL</value>
+          </text>
+          <text id="site_list-75">
+            <value>DIAGLE NDAWENE</value>
+          </text>
+          <text id="site_list-76">
+            <value>DIAMWELI</value>
+          </text>
+          <text id="site_list-77">
+            <value>KALOM</value>
+          </text>
+          <text id="site_list-78">
+            <value>MEDINA KOBORENE</value>
+          </text>
+          <text id="site_list-79">
+            <value>PATOULANE IBRAHIMA NDAO</value>
+          </text>
+          <text id="site_list-80">
+            <value>VELINGARA COTO</value>
+          </text>
+          <text id="site_list-81">
+            <value>LOUMBY SIMBING</value>
+          </text>
+          <text id="site_list-82">
+            <value>NAYOM DIA</value>
+          </text>
+          <text id="site_list-83">
+            <value>SINTHIOU ASRE</value>
+          </text>
+          <text id="site_list-84">
+            <value>SOUTHIE</value>
+          </text>
+          <text id="site_list-85">
+            <value>Badi</value>
+          </text>
+          <text id="site_list-86">
+            <value>Dialacoto 2</value>
+          </text>
+          <text id="site_list-87">
+            <value>Medinacouta</value>
+          </text>
+          <text id="site_list-88">
+            <value>Soucouto</value>
+          </text>
+          <text id="site_list-89">
+            <value>Talicoring Bantancoly</value>
+          </text>
+          <text id="site_list-90">
+            <value>Fass Nguenthe</value>
+          </text>
+          <text id="site_list-91">
+            <value>Koussanar 3</value>
+          </text>
+          <text id="site_list-92">
+            <value>Maléme Wokou Wokou</value>
+          </text>
+          <text id="site_list-93">
+            <value>Mboul</value>
+          </text>
+          <text id="site_list-94">
+            <value>Sinthiou Dawady</value>
+          </text>
+          <text id="site_list-95">
+            <value>Bidiancoto</value>
+          </text>
+          <text id="site_list-96">
+            <value>Gourel Bocar</value>
+          </text>
+          <text id="site_list-97">
+            <value>Hamdallaye Tessan</value>
+          </text>
+          <text id="site_list-98">
+            <value>Kouar</value>
+          </text>
+          <text id="site_list-99">
+            <value>Mahina Coura</value>
+          </text>
+          <text id="site_list-100">
+            <value>Nguene</value>
+          </text>
+          <text id="site_list-101">
+            <value>Saby Mouless</value>
+          </text>
+          <text id="site_list-102">
+            <value>Safalou 2</value>
+          </text>
+          <text id="site_list-103">
+            <value>Sinthiou Mamoudou</value>
+          </text>
+          <text id="site_list-104">
+            <value>Velingara Leguel</value>
+          </text>
+          <text id="site_list-105">
+            <value>Coumba Koutou</value>
+          </text>
+          <text id="site_list-106">
+            <value>Dar Salam 1</value>
+          </text>
+          <text id="site_list-107">
+            <value>Koulary</value>
+          </text>
+          <text id="site_list-108">
+            <value>Netteboulou</value>
+          </text>
+          <text id="site_list-109">
+            <value>Segou Coura</value>
+          </text>
+          <text id="site_list-110">
+            <value>Sinthiou Kéniaba</value>
+          </text>
+          <text id="site_list-111">
+            <value>Diombodina</value>
+          </text>
+          <text id="site_list-112">
+            <value>Mansa Kaly Oualy</value>
+          </text>
+          <text id="site_list-113">
+            <value>Maribougou</value>
+          </text>
+          <text id="site_list-114">
+            <value>Sadioboulou</value>
+          </text>
+          <text id="site_list-115">
+            <value>Sare Ousmane</value>
+          </text>
+          <text id="site_list-116">
+            <value>Sirimandialla</value>
+          </text>
+          <text id="site_list-117">
+            <value>Thiorobougou</value>
+          </text>
+          <text id="site_list-118">
+            <value>Boukari counda</value>
+          </text>
+          <text id="site_list-119">
+            <value>Gourel Diadié 1</value>
+          </text>
+          <text id="site_list-120">
+            <value>Kandioura Noba</value>
+          </text>
+          <text id="site_list-121">
+            <value>Kothiarinding</value>
+          </text>
+          <text id="site_list-122">
+            <value>Sada Maka Sy</value>
+          </text>
+          <text id="site_list-123">
+            <value>SOS Tamora Toure</value>
+          </text>
+          <text id="site_list-124">
+            <value>Tamba Soce</value>
+          </text>
+          <text id="code_site_list-0">
+            <value>100</value>
+          </text>
+          <text id="code_site_list-1">
+            <value>101</value>
+          </text>
+          <text id="code_site_list-2">
+            <value>102</value>
+          </text>
+          <text id="code_site_list-3">
+            <value>103</value>
+          </text>
+          <text id="code_site_list-4">
+            <value>104</value>
+          </text>
+          <text id="code_site_list-5">
+            <value>105</value>
+          </text>
+          <text id="code_site_list-6">
+            <value>106</value>
+          </text>
+          <text id="code_site_list-7">
+            <value>107</value>
+          </text>
+          <text id="code_site_list-8">
+            <value>108</value>
+          </text>
+          <text id="code_site_list-9">
+            <value>109</value>
+          </text>
+          <text id="code_site_list-10">
+            <value>110</value>
+          </text>
+          <text id="code_site_list-11">
+            <value>111</value>
+          </text>
+          <text id="code_site_list-12">
+            <value>112</value>
+          </text>
+          <text id="code_site_list-13">
+            <value>113</value>
+          </text>
+          <text id="code_site_list-14">
+            <value>114</value>
+          </text>
+          <text id="code_site_list-15">
+            <value>115</value>
+          </text>
+          <text id="code_site_list-16">
+            <value>116</value>
+          </text>
+          <text id="code_site_list-17">
+            <value>117</value>
+          </text>
+          <text id="code_site_list-18">
+            <value>118</value>
+          </text>
+          <text id="code_site_list-19">
+            <value>119</value>
+          </text>
+          <text id="code_site_list-20">
+            <value>120</value>
+          </text>
+          <text id="code_site_list-21">
+            <value>121</value>
+          </text>
+          <text id="code_site_list-22">
+            <value>122</value>
+          </text>
+          <text id="code_site_list-23">
+            <value>123</value>
+          </text>
+          <text id="code_site_list-24">
+            <value>124</value>
+          </text>
+          <text id="code_site_list-25">
+            <value>125</value>
+          </text>
+          <text id="code_site_list-26">
+            <value>126</value>
+          </text>
+          <text id="code_site_list-27">
+            <value>127</value>
+          </text>
+          <text id="code_site_list-28">
+            <value>128</value>
+          </text>
+          <text id="code_site_list-29">
+            <value>129</value>
+          </text>
+          <text id="code_site_list-30">
+            <value>130</value>
+          </text>
+          <text id="code_site_list-31">
+            <value>131</value>
+          </text>
+          <text id="code_site_list-32">
+            <value>132</value>
+          </text>
+          <text id="code_site_list-33">
+            <value>133</value>
+          </text>
+          <text id="code_site_list-34">
+            <value>134</value>
+          </text>
+          <text id="code_site_list-35">
+            <value>135</value>
+          </text>
+          <text id="code_site_list-36">
+            <value>136</value>
+          </text>
+          <text id="code_site_list-37">
+            <value>137</value>
+          </text>
+          <text id="code_site_list-38">
+            <value>138</value>
+          </text>
+          <text id="code_site_list-39">
+            <value>139</value>
+          </text>
+          <text id="code_site_list-40">
+            <value>200</value>
+          </text>
+          <text id="code_site_list-41">
+            <value>201</value>
+          </text>
+          <text id="code_site_list-42">
+            <value>202</value>
+          </text>
+          <text id="code_site_list-43">
+            <value>203</value>
+          </text>
+          <text id="code_site_list-44">
+            <value>204</value>
+          </text>
+          <text id="code_site_list-45">
+            <value>205</value>
+          </text>
+          <text id="code_site_list-46">
+            <value>206</value>
+          </text>
+          <text id="code_site_list-47">
+            <value>207</value>
+          </text>
+          <text id="code_site_list-48">
+            <value>208</value>
+          </text>
+          <text id="code_site_list-49">
+            <value>209</value>
+          </text>
+          <text id="code_site_list-50">
+            <value>210</value>
+          </text>
+          <text id="code_site_list-51">
+            <value>211</value>
+          </text>
+          <text id="code_site_list-52">
+            <value>212</value>
+          </text>
+          <text id="code_site_list-53">
+            <value>213</value>
+          </text>
+          <text id="code_site_list-54">
+            <value>214</value>
+          </text>
+          <text id="code_site_list-55">
+            <value>215</value>
+          </text>
+          <text id="code_site_list-56">
+            <value>216</value>
+          </text>
+          <text id="code_site_list-57">
+            <value>217</value>
+          </text>
+          <text id="code_site_list-58">
+            <value>218</value>
+          </text>
+          <text id="code_site_list-59">
+            <value>219</value>
+          </text>
+          <text id="code_site_list-60">
+            <value>220</value>
+          </text>
+          <text id="code_site_list-61">
+            <value>221</value>
+          </text>
+          <text id="code_site_list-62">
+            <value>222</value>
+          </text>
+          <text id="code_site_list-63">
+            <value>223</value>
+          </text>
+          <text id="code_site_list-64">
+            <value>224</value>
+          </text>
+          <text id="code_site_list-65">
+            <value>225</value>
+          </text>
+          <text id="code_site_list-66">
+            <value>226</value>
+          </text>
+          <text id="code_site_list-67">
+            <value>227</value>
+          </text>
+          <text id="code_site_list-68">
+            <value>228</value>
+          </text>
+          <text id="code_site_list-69">
+            <value>229</value>
+          </text>
+          <text id="code_site_list-70">
+            <value>230</value>
+          </text>
+          <text id="code_site_list-71">
+            <value>231</value>
+          </text>
+          <text id="code_site_list-72">
+            <value>232</value>
+          </text>
+          <text id="code_site_list-73">
+            <value>233</value>
+          </text>
+          <text id="code_site_list-74">
+            <value>234</value>
+          </text>
+          <text id="code_site_list-75">
+            <value>235</value>
+          </text>
+          <text id="code_site_list-76">
+            <value>236</value>
+          </text>
+          <text id="code_site_list-77">
+            <value>237</value>
+          </text>
+          <text id="code_site_list-78">
+            <value>238</value>
+          </text>
+          <text id="code_site_list-79">
+            <value>239</value>
+          </text>
+          <text id="code_site_list-80">
+            <value>240</value>
+          </text>
+          <text id="code_site_list-81">
+            <value>241</value>
+          </text>
+          <text id="code_site_list-82">
+            <value>242</value>
+          </text>
+          <text id="code_site_list-83">
+            <value>243</value>
+          </text>
+          <text id="code_site_list-84">
+            <value>244</value>
+          </text>
+          <text id="code_site_list-85">
+            <value>300</value>
+          </text>
+          <text id="code_site_list-86">
+            <value>301</value>
+          </text>
+          <text id="code_site_list-87">
+            <value>302</value>
+          </text>
+          <text id="code_site_list-88">
+            <value>303</value>
+          </text>
+          <text id="code_site_list-89">
+            <value>304</value>
+          </text>
+          <text id="code_site_list-90">
+            <value>305</value>
+          </text>
+          <text id="code_site_list-91">
+            <value>306</value>
+          </text>
+          <text id="code_site_list-92">
+            <value>307</value>
+          </text>
+          <text id="code_site_list-93">
+            <value>308</value>
+          </text>
+          <text id="code_site_list-94">
+            <value>309</value>
+          </text>
+          <text id="code_site_list-95">
+            <value>310</value>
+          </text>
+          <text id="code_site_list-96">
+            <value>311</value>
+          </text>
+          <text id="code_site_list-97">
+            <value>312</value>
+          </text>
+          <text id="code_site_list-98">
+            <value>313</value>
+          </text>
+          <text id="code_site_list-99">
+            <value>314</value>
+          </text>
+          <text id="code_site_list-100">
+            <value>315</value>
+          </text>
+          <text id="code_site_list-101">
+            <value>316</value>
+          </text>
+          <text id="code_site_list-102">
+            <value>317</value>
+          </text>
+          <text id="code_site_list-103">
+            <value>318</value>
+          </text>
+          <text id="code_site_list-104">
+            <value>319</value>
+          </text>
+          <text id="code_site_list-105">
+            <value>320</value>
+          </text>
+          <text id="code_site_list-106">
+            <value>321</value>
+          </text>
+          <text id="code_site_list-107">
+            <value>322</value>
+          </text>
+          <text id="code_site_list-108">
+            <value>323</value>
+          </text>
+          <text id="code_site_list-109">
+            <value>324</value>
+          </text>
+          <text id="code_site_list-110">
+            <value>325</value>
+          </text>
+          <text id="code_site_list-111">
+            <value>326</value>
+          </text>
+          <text id="code_site_list-112">
+            <value>327</value>
+          </text>
+          <text id="code_site_list-113">
+            <value>328</value>
+          </text>
+          <text id="code_site_list-114">
+            <value>329</value>
+          </text>
+          <text id="code_site_list-115">
+            <value>330</value>
+          </text>
+          <text id="code_site_list-116">
+            <value>331</value>
+          </text>
+          <text id="code_site_list-117">
+            <value>332</value>
+          </text>
+          <text id="code_site_list-118">
+            <value>333</value>
+          </text>
+          <text id="code_site_list-119">
+            <value>334</value>
+          </text>
+          <text id="code_site_list-120">
+            <value>335</value>
+          </text>
+          <text id="code_site_list-121">
+            <value>336</value>
+          </text>
+          <text id="code_site_list-122">
+            <value>337</value>
+          </text>
+          <text id="code_site_list-123">
+            <value>338</value>
+          </text>
+          <text id="code_site_list-124">
+            <value>339</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="yes_no-1">
+            <value>No</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>Kidira</name>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>Koumpentoum</name>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>TAMBACOUNDA</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="commune_list">
+        <root>
+          <item>
+            <itextId>commune_list-0</itextId>
+            <district_list>Kidira</district_list>
+            <name>Bele</name>
+          </item>
+          <item>
+            <itextId>commune_list-1</itextId>
+            <district_list>Kidira</district_list>
+            <name>Gathiari</name>
+          </item>
+          <item>
+            <itextId>commune_list-2</itextId>
+            <district_list>Kidira</district_list>
+            <name>Kidira</name>
+          </item>
+          <item>
+            <itextId>commune_list-3</itextId>
+            <district_list>Kidira</district_list>
+            <name>Madina Foulbe</name>
+          </item>
+          <item>
+            <itextId>commune_list-4</itextId>
+            <district_list>Kidira</district_list>
+            <name>Sadatou</name>
+          </item>
+          <item>
+            <itextId>commune_list-5</itextId>
+            <district_list>Kidira</district_list>
+            <name>Sinthiou Fissa</name>
+          </item>
+          <item>
+            <itextId>commune_list-6</itextId>
+            <district_list>Kidira</district_list>
+            <name>Toumboura</name>
+          </item>
+          <item>
+            <itextId>commune_list-7</itextId>
+            <district_list>Koumpentoum</district_list>
+            <name>COM. KOUMPENTOUM</name>
+          </item>
+          <item>
+            <itextId>commune_list-8</itextId>
+            <district_list>Koumpentoum</district_list>
+            <name>COM. MALEM NIANI</name>
+          </item>
+          <item>
+            <itextId>commune_list-9</itextId>
+            <district_list>Koumpentoum</district_list>
+            <name>CR. BAMBA THIALENE</name>
+          </item>
+          <item>
+            <itextId>commune_list-10</itextId>
+            <district_list>Koumpentoum</district_list>
+            <name>CR. KAHENE</name>
+          </item>
+          <item>
+            <itextId>commune_list-11</itextId>
+            <district_list>Koumpentoum</district_list>
+            <name>CR. KOUTHIA GAYDI</name>
+          </item>
+          <item>
+            <itextId>commune_list-12</itextId>
+            <district_list>Koumpentoum</district_list>
+            <name>CR. KOUTHIABA WOLOF</name>
+          </item>
+          <item>
+            <itextId>commune_list-13</itextId>
+            <district_list>Koumpentoum</district_list>
+            <name>CR. MERETO</name>
+          </item>
+          <item>
+            <itextId>commune_list-14</itextId>
+            <district_list>Koumpentoum</district_list>
+            <name>CR. N'DAME</name>
+          </item>
+          <item>
+            <itextId>commune_list-15</itextId>
+            <district_list>Koumpentoum</district_list>
+            <name>CR. PASS KOTO</name>
+          </item>
+          <item>
+            <itextId>commune_list-16</itextId>
+            <district_list>Koumpentoum</district_list>
+            <name>CR. PAYAR</name>
+          </item>
+          <item>
+            <itextId>commune_list-17</itextId>
+            <district_list>TAMBACOUNDA</district_list>
+            <name>DIALACOTO</name>
+          </item>
+          <item>
+            <itextId>commune_list-18</itextId>
+            <district_list>TAMBACOUNDA</district_list>
+            <name>KOUSSANAR</name>
+          </item>
+          <item>
+            <itextId>commune_list-19</itextId>
+            <district_list>TAMBACOUNDA</district_list>
+            <name>MISSIRAH</name>
+          </item>
+          <item>
+            <itextId>commune_list-20</itextId>
+            <district_list>TAMBACOUNDA</district_list>
+            <name>NETTEBOULOU</name>
+          </item>
+          <item>
+            <itextId>commune_list-21</itextId>
+            <district_list>TAMBACOUNDA</district_list>
+            <name>SINTHIOU MALEME</name>
+          </item>
+          <item>
+            <itextId>commune_list-22</itextId>
+            <district_list>TAMBACOUNDA</district_list>
+            <name>TAMBA</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_list">
+        <root>
+          <item>
+            <itextId>site_list-0</itextId>
+            <commune_list>Bele</commune_list>
+            <name>ARIGABO</name>
+          </item>
+          <item>
+            <itextId>site_list-1</itextId>
+            <commune_list>Bele</commune_list>
+            <name>BELE</name>
+          </item>
+          <item>
+            <itextId>site_list-2</itextId>
+            <commune_list>Bele</commune_list>
+            <name>DAHARATOU</name>
+          </item>
+          <item>
+            <itextId>site_list-3</itextId>
+            <commune_list>Bele</commune_list>
+            <name>DYABOUGOU MOSSI</name>
+          </item>
+          <item>
+            <itextId>site_list-4</itextId>
+            <commune_list>Bele</commune_list>
+            <name>FETE GOLOMBI</name>
+          </item>
+          <item>
+            <itextId>site_list-5</itextId>
+            <commune_list>Bele</commune_list>
+            <name>GOUREL BOCAR SAMBA</name>
+          </item>
+          <item>
+            <itextId>site_list-6</itextId>
+            <commune_list>Bele</commune_list>
+            <name>GOUREL BOULY</name>
+          </item>
+          <item>
+            <itextId>site_list-7</itextId>
+            <commune_list>Bele</commune_list>
+            <name>GUITTA</name>
+          </item>
+          <item>
+            <itextId>site_list-8</itextId>
+            <commune_list>Bele</commune_list>
+            <name>NAYES</name>
+          </item>
+          <item>
+            <itextId>site_list-9</itextId>
+            <commune_list>Bele</commune_list>
+            <name>SELING</name>
+          </item>
+          <item>
+            <itextId>site_list-10</itextId>
+            <commune_list>Bele</commune_list>
+            <name>SENOUDEBOU</name>
+          </item>
+          <item>
+            <itextId>site_list-11</itextId>
+            <commune_list>Bele</commune_list>
+            <name>WOUBOWOL</name>
+          </item>
+          <item>
+            <itextId>site_list-12</itextId>
+            <commune_list>Gathiari</commune_list>
+            <name>BOUNTOU LOGO</name>
+          </item>
+          <item>
+            <itextId>site_list-13</itextId>
+            <commune_list>Gathiari</commune_list>
+            <name>SABOU CIRE</name>
+          </item>
+          <item>
+            <itextId>site_list-14</itextId>
+            <commune_list>Gathiari</commune_list>
+            <name>TAME</name>
+          </item>
+          <item>
+            <itextId>site_list-15</itextId>
+            <commune_list>Kidira</commune_list>
+            <name>ALAHINA BOCAR</name>
+          </item>
+          <item>
+            <itextId>site_list-16</itextId>
+            <commune_list>Kidira</commune_list>
+            <name>SINTHIOU DIOYE</name>
+          </item>
+          <item>
+            <itextId>site_list-17</itextId>
+            <commune_list>Madina Foulbe</commune_list>
+            <name>KENIEBA</name>
+          </item>
+          <item>
+            <itextId>site_list-18</itextId>
+            <commune_list>Madina Foulbe</commune_list>
+            <name>MADINA FOULBE</name>
+          </item>
+          <item>
+            <itextId>site_list-19</itextId>
+            <commune_list>Madina Foulbe</commune_list>
+            <name>TOMBOROMADJI</name>
+          </item>
+          <item>
+            <itextId>site_list-20</itextId>
+            <commune_list>Sadatou</commune_list>
+            <name>DYALA BAKARY</name>
+          </item>
+          <item>
+            <itextId>site_list-21</itextId>
+            <commune_list>Sadatou</commune_list>
+            <name>HEREMAKONO</name>
+          </item>
+          <item>
+            <itextId>site_list-22</itextId>
+            <commune_list>Sadatou</commune_list>
+            <name>NIENIEKHO</name>
+          </item>
+          <item>
+            <itextId>site_list-23</itextId>
+            <commune_list>Sadatou</commune_list>
+            <name>SANDINCOUNDA</name>
+          </item>
+          <item>
+            <itextId>site_list-24</itextId>
+            <commune_list>Sadatou</commune_list>
+            <name>SENO KARE</name>
+          </item>
+          <item>
+            <itextId>site_list-25</itextId>
+            <commune_list>Sadatou</commune_list>
+            <name>SORETO</name>
+          </item>
+          <item>
+            <itextId>site_list-26</itextId>
+            <commune_list>Sinthiou Fissa</commune_list>
+            <name>DIAM WELY PATHE MBAYE</name>
+          </item>
+          <item>
+            <itextId>site_list-27</itextId>
+            <commune_list>Sinthiou Fissa</commune_list>
+            <name>GUEDEKHO</name>
+          </item>
+          <item>
+            <itextId>site_list-28</itextId>
+            <commune_list>Sinthiou Fissa</commune_list>
+            <name>KOUNDEL</name>
+          </item>
+          <item>
+            <itextId>site_list-29</itextId>
+            <commune_list>Sinthiou Fissa</commune_list>
+            <name>SAKHOCOUNDA</name>
+          </item>
+          <item>
+            <itextId>site_list-30</itextId>
+            <commune_list>Sinthiou Fissa</commune_list>
+            <name>SAMBA COLO</name>
+          </item>
+          <item>
+            <itextId>site_list-31</itextId>
+            <commune_list>Sinthiou Fissa</commune_list>
+            <name>SEOUDJI</name>
+          </item>
+          <item>
+            <itextId>site_list-32</itextId>
+            <commune_list>Sinthiou Fissa</commune_list>
+            <name>SINTHIOU SAMBA NDIARDE</name>
+          </item>
+          <item>
+            <itextId>site_list-33</itextId>
+            <commune_list>Sinthiou Fissa</commune_list>
+            <name>SITABANTA</name>
+          </item>
+          <item>
+            <itextId>site_list-34</itextId>
+            <commune_list>Sinthiou Fissa</commune_list>
+            <name>TAKHOUTALA</name>
+          </item>
+          <item>
+            <itextId>site_list-35</itextId>
+            <commune_list>Sinthiou Fissa</commune_list>
+            <name>YOUPE HAMADY</name>
+          </item>
+          <item>
+            <itextId>site_list-36</itextId>
+            <commune_list>Toumboura</commune_list>
+            <name>BANCOUBA</name>
+          </item>
+          <item>
+            <itextId>site_list-37</itextId>
+            <commune_list>Toumboura</commune_list>
+            <name>DIDE GASSAMA</name>
+          </item>
+          <item>
+            <itextId>site_list-38</itextId>
+            <commune_list>Toumboura</commune_list>
+            <name>GOUDANPHA</name>
+          </item>
+          <item>
+            <itextId>site_list-39</itextId>
+            <commune_list>Toumboura</commune_list>
+            <name>TOUMBOURA</name>
+          </item>
+          <item>
+            <itextId>site_list-40</itextId>
+            <commune_list>COM. KOUMPENTOUM</commune_list>
+            <name>KOUMPENTOUM 5</name>
+          </item>
+          <item>
+            <itextId>site_list-41</itextId>
+            <commune_list>COM. KOUMPENTOUM</commune_list>
+            <name>MISSION CATHOLIQUE</name>
+          </item>
+          <item>
+            <itextId>site_list-42</itextId>
+            <commune_list>COM. KOUMPENTOUM</commune_list>
+            <name>THIERNO SAKHO</name>
+          </item>
+          <item>
+            <itextId>site_list-43</itextId>
+            <commune_list>COM. MALEM NIANI</commune_list>
+            <name>MALEME 2</name>
+          </item>
+          <item>
+            <itextId>site_list-44</itextId>
+            <commune_list>CR. BAMBA THIALENE</commune_list>
+            <name>BAMBA THIALENE</name>
+          </item>
+          <item>
+            <itextId>site_list-45</itextId>
+            <commune_list>CR. BAMBA THIALENE</commune_list>
+            <name>ELIHINA</name>
+          </item>
+          <item>
+            <itextId>site_list-46</itextId>
+            <commune_list>CR. BAMBA THIALENE</commune_list>
+            <name>KOUNTOUATA</name>
+          </item>
+          <item>
+            <itextId>site_list-47</itextId>
+            <commune_list>CR. KAHENE</commune_list>
+            <name>DIALOTODJI</name>
+          </item>
+          <item>
+            <itextId>site_list-48</itextId>
+            <commune_list>CR. KAHENE</commune_list>
+            <name>NGUEYENE</name>
+          </item>
+          <item>
+            <itextId>site_list-49</itextId>
+            <commune_list>CR. KAHENE</commune_list>
+            <name>VILLAGE 15 (TIVAOUANE NIANI)</name>
+          </item>
+          <item>
+            <itextId>site_list-50</itextId>
+            <commune_list>CR. KOUTHIA GAYDI</commune_list>
+            <name>LOFFE</name>
+          </item>
+          <item>
+            <itextId>site_list-51</itextId>
+            <commune_list>CR. KOUTHIA GAYDI</commune_list>
+            <name>PIRE GOUNDO</name>
+          </item>
+          <item>
+            <itextId>site_list-52</itextId>
+            <commune_list>CR. KOUTHIA GAYDI</commune_list>
+            <name>SARE SICOUNA</name>
+          </item>
+          <item>
+            <itextId>site_list-53</itextId>
+            <commune_list>CR. KOUTHIA GAYDI</commune_list>
+            <name>SINTHIOU NDENE</name>
+          </item>
+          <item>
+            <itextId>site_list-54</itextId>
+            <commune_list>CR. KOUTHIA GAYDI</commune_list>
+            <name>VELINGARA NGENTHE</name>
+          </item>
+          <item>
+            <itextId>site_list-55</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>BOYNGAL DADI</name>
+          </item>
+          <item>
+            <itextId>site_list-56</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>DAROU NDIAYENE</name>
+          </item>
+          <item>
+            <itextId>site_list-57</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>FASS THIECKENE</name>
+          </item>
+          <item>
+            <itextId>site_list-58</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>FRANCO ARABE DE KOUTHIABA</name>
+          </item>
+          <item>
+            <itextId>site_list-59</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>GAWANE</name>
+          </item>
+          <item>
+            <itextId>site_list-60</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>KOUKOUYEL PEULH</name>
+          </item>
+          <item>
+            <itextId>site_list-61</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>KOUTHIABA PEULH</name>
+          </item>
+          <item>
+            <itextId>site_list-62</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>PALANGUE HAMADI</name>
+          </item>
+          <item>
+            <itextId>site_list-63</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>SARE BOYLI</name>
+          </item>
+          <item>
+            <itextId>site_list-64</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>SARE GALLOROU</name>
+          </item>
+          <item>
+            <itextId>site_list-65</itextId>
+            <commune_list>CR. KOUTHIABA WOLOF</commune_list>
+            <name>SYLL PEULH</name>
+          </item>
+          <item>
+            <itextId>site_list-66</itextId>
+            <commune_list>CR. MERETO</commune_list>
+            <name>KEUR DAOUDA</name>
+          </item>
+          <item>
+            <itextId>site_list-67</itextId>
+            <commune_list>CR. N'DAME</commune_list>
+            <name>BOUDOUCK</name>
+          </item>
+          <item>
+            <itextId>site_list-68</itextId>
+            <commune_list>CR. N'DAME</commune_list>
+            <name>BOULIMANGA</name>
+          </item>
+          <item>
+            <itextId>site_list-69</itextId>
+            <commune_list>CR. N'DAME</commune_list>
+            <name>FRANCO ARABE DAROU SALAM THIEKENE</name>
+          </item>
+          <item>
+            <itextId>site_list-70</itextId>
+            <commune_list>CR. N'DAME</commune_list>
+            <name>KEUR NGUIRENE</name>
+          </item>
+          <item>
+            <itextId>site_list-71</itextId>
+            <commune_list>CR. N'DAME</commune_list>
+            <name>MEDINA NDIOBENE</name>
+          </item>
+          <item>
+            <itextId>site_list-72</itextId>
+            <commune_list>CR. N'DAME</commune_list>
+            <name>NDOUMANE MBAYE</name>
+          </item>
+          <item>
+            <itextId>site_list-73</itextId>
+            <commune_list>CR. N'DAME</commune_list>
+            <name>Touba NIANI</name>
+          </item>
+          <item>
+            <itextId>site_list-74</itextId>
+            <commune_list>CR. PASS KOTO</commune_list>
+            <name>BOINGUEL</name>
+          </item>
+          <item>
+            <itextId>site_list-75</itextId>
+            <commune_list>CR. PASS KOTO</commune_list>
+            <name>DIAGLE NDAWENE</name>
+          </item>
+          <item>
+            <itextId>site_list-76</itextId>
+            <commune_list>CR. PASS KOTO</commune_list>
+            <name>DIAMWELI</name>
+          </item>
+          <item>
+            <itextId>site_list-77</itextId>
+            <commune_list>CR. PASS KOTO</commune_list>
+            <name>KALOM</name>
+          </item>
+          <item>
+            <itextId>site_list-78</itextId>
+            <commune_list>CR. PASS KOTO</commune_list>
+            <name>MEDINA KOBORENE</name>
+          </item>
+          <item>
+            <itextId>site_list-79</itextId>
+            <commune_list>CR. PASS KOTO</commune_list>
+            <name>PATOULANE IBRAHIMA NDAO</name>
+          </item>
+          <item>
+            <itextId>site_list-80</itextId>
+            <commune_list>CR. PASS KOTO</commune_list>
+            <name>VELINGARA COTO</name>
+          </item>
+          <item>
+            <itextId>site_list-81</itextId>
+            <commune_list>CR. PAYAR</commune_list>
+            <name>LOUMBY SIMBING</name>
+          </item>
+          <item>
+            <itextId>site_list-82</itextId>
+            <commune_list>CR. PAYAR</commune_list>
+            <name>NAYOM DIA</name>
+          </item>
+          <item>
+            <itextId>site_list-83</itextId>
+            <commune_list>CR. PAYAR</commune_list>
+            <name>SINTHIOU ASRE</name>
+          </item>
+          <item>
+            <itextId>site_list-84</itextId>
+            <commune_list>CR. PAYAR</commune_list>
+            <name>SOUTHIE</name>
+          </item>
+          <item>
+            <itextId>site_list-85</itextId>
+            <commune_list>DIALACOTO</commune_list>
+            <name>Badi</name>
+          </item>
+          <item>
+            <itextId>site_list-86</itextId>
+            <commune_list>DIALACOTO</commune_list>
+            <name>Dialacoto 2</name>
+          </item>
+          <item>
+            <itextId>site_list-87</itextId>
+            <commune_list>DIALACOTO</commune_list>
+            <name>Medinacouta</name>
+          </item>
+          <item>
+            <itextId>site_list-88</itextId>
+            <commune_list>DIALACOTO</commune_list>
+            <name>Soucouto</name>
+          </item>
+          <item>
+            <itextId>site_list-89</itextId>
+            <commune_list>DIALACOTO</commune_list>
+            <name>Talicoring Bantancoly</name>
+          </item>
+          <item>
+            <itextId>site_list-90</itextId>
+            <commune_list>KOUSSANAR</commune_list>
+            <name>Fass Nguenthe</name>
+          </item>
+          <item>
+            <itextId>site_list-91</itextId>
+            <commune_list>KOUSSANAR</commune_list>
+            <name>Koussanar 3</name>
+          </item>
+          <item>
+            <itextId>site_list-92</itextId>
+            <commune_list>KOUSSANAR</commune_list>
+            <name>Maleme Wokou Wokou</name>
+          </item>
+          <item>
+            <itextId>site_list-93</itextId>
+            <commune_list>KOUSSANAR</commune_list>
+            <name>Mboul</name>
+          </item>
+          <item>
+            <itextId>site_list-94</itextId>
+            <commune_list>KOUSSANAR</commune_list>
+            <name>Sinthiou Dawady</name>
+          </item>
+          <item>
+            <itextId>site_list-95</itextId>
+            <commune_list>MISSIRAH</commune_list>
+            <name>Bidiancoto</name>
+          </item>
+          <item>
+            <itextId>site_list-96</itextId>
+            <commune_list>MISSIRAH</commune_list>
+            <name>Gourel Bocar</name>
+          </item>
+          <item>
+            <itextId>site_list-97</itextId>
+            <commune_list>MISSIRAH</commune_list>
+            <name>Hamdallaye Tessan</name>
+          </item>
+          <item>
+            <itextId>site_list-98</itextId>
+            <commune_list>MISSIRAH</commune_list>
+            <name>Kouar</name>
+          </item>
+          <item>
+            <itextId>site_list-99</itextId>
+            <commune_list>MISSIRAH</commune_list>
+            <name>Mahina Coura</name>
+          </item>
+          <item>
+            <itextId>site_list-100</itextId>
+            <commune_list>MISSIRAH</commune_list>
+            <name>Nguene</name>
+          </item>
+          <item>
+            <itextId>site_list-101</itextId>
+            <commune_list>MISSIRAH</commune_list>
+            <name>Saby Mouless</name>
+          </item>
+          <item>
+            <itextId>site_list-102</itextId>
+            <commune_list>MISSIRAH</commune_list>
+            <name>Safalou 2</name>
+          </item>
+          <item>
+            <itextId>site_list-103</itextId>
+            <commune_list>MISSIRAH</commune_list>
+            <name>Sinthiou Mamoudou</name>
+          </item>
+          <item>
+            <itextId>site_list-104</itextId>
+            <commune_list>MISSIRAH</commune_list>
+            <name>Velingara Leguel</name>
+          </item>
+          <item>
+            <itextId>site_list-105</itextId>
+            <commune_list>NETTEBOULOU</commune_list>
+            <name>Coumba Koutou</name>
+          </item>
+          <item>
+            <itextId>site_list-106</itextId>
+            <commune_list>NETTEBOULOU</commune_list>
+            <name>Dar Salam 1</name>
+          </item>
+          <item>
+            <itextId>site_list-107</itextId>
+            <commune_list>NETTEBOULOU</commune_list>
+            <name>Koulary</name>
+          </item>
+          <item>
+            <itextId>site_list-108</itextId>
+            <commune_list>NETTEBOULOU</commune_list>
+            <name>Netteboulou</name>
+          </item>
+          <item>
+            <itextId>site_list-109</itextId>
+            <commune_list>NETTEBOULOU</commune_list>
+            <name>Segou Coura</name>
+          </item>
+          <item>
+            <itextId>site_list-110</itextId>
+            <commune_list>NETTEBOULOU</commune_list>
+            <name>Sinthiou Keniaba</name>
+          </item>
+          <item>
+            <itextId>site_list-111</itextId>
+            <commune_list>SINTHIOU MALEME</commune_list>
+            <name>Diombodina</name>
+          </item>
+          <item>
+            <itextId>site_list-112</itextId>
+            <commune_list>SINTHIOU MALEME</commune_list>
+            <name>Mansa Kaly Oualy</name>
+          </item>
+          <item>
+            <itextId>site_list-113</itextId>
+            <commune_list>SINTHIOU MALEME</commune_list>
+            <name>Maribougou</name>
+          </item>
+          <item>
+            <itextId>site_list-114</itextId>
+            <commune_list>SINTHIOU MALEME</commune_list>
+            <name>Sadioboulou</name>
+          </item>
+          <item>
+            <itextId>site_list-115</itextId>
+            <commune_list>SINTHIOU MALEME</commune_list>
+            <name>Sare Ousmane</name>
+          </item>
+          <item>
+            <itextId>site_list-116</itextId>
+            <commune_list>SINTHIOU MALEME</commune_list>
+            <name>Sirimandialla</name>
+          </item>
+          <item>
+            <itextId>site_list-117</itextId>
+            <commune_list>SINTHIOU MALEME</commune_list>
+            <name>Thiorobougou</name>
+          </item>
+          <item>
+            <itextId>site_list-118</itextId>
+            <commune_list>TAMBA</commune_list>
+            <name>Boukari counda</name>
+          </item>
+          <item>
+            <itextId>site_list-119</itextId>
+            <commune_list>TAMBA</commune_list>
+            <name>Gourel Diadie 1</name>
+          </item>
+          <item>
+            <itextId>site_list-120</itextId>
+            <commune_list>TAMBA</commune_list>
+            <name>Kandioura Noba</name>
+          </item>
+          <item>
+            <itextId>site_list-121</itextId>
+            <commune_list>TAMBA</commune_list>
+            <name>Kothiarinding</name>
+          </item>
+          <item>
+            <itextId>site_list-122</itextId>
+            <commune_list>TAMBA</commune_list>
+            <name>Sada Maka Sy</name>
+          </item>
+          <item>
+            <itextId>site_list-123</itextId>
+            <commune_list>TAMBA</commune_list>
+            <name>SOS Tamora Toure</name>
+          </item>
+          <item>
+            <itextId>site_list-124</itextId>
+            <commune_list>TAMBA</commune_list>
+            <name>Tamba Soce</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="code_site_list">
+        <root>
+          <item>
+            <itextId>code_site_list-0</itextId>
+            <name>100</name>
+            <site_list>ARIGABO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-1</itextId>
+            <name>101</name>
+            <site_list>BELE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-2</itextId>
+            <name>102</name>
+            <site_list>DAHARATOU</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-3</itextId>
+            <name>103</name>
+            <site_list>DYABOUGOU MOSSI</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-4</itextId>
+            <name>104</name>
+            <site_list>FETE GOLOMBI</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-5</itextId>
+            <name>105</name>
+            <site_list>GOUREL BOCAR SAMBA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-6</itextId>
+            <name>106</name>
+            <site_list>GOUREL BOULY</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-7</itextId>
+            <name>107</name>
+            <site_list>GUITTA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-8</itextId>
+            <name>108</name>
+            <site_list>NAYES</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-9</itextId>
+            <name>109</name>
+            <site_list>SELING</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-10</itextId>
+            <name>110</name>
+            <site_list>SENOUDEBOU</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-11</itextId>
+            <name>111</name>
+            <site_list>WOUBOWOL</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-12</itextId>
+            <name>112</name>
+            <site_list>BOUNTOU LOGO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-13</itextId>
+            <name>113</name>
+            <site_list>SABOU CIRE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-14</itextId>
+            <name>114</name>
+            <site_list>TAME</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-15</itextId>
+            <name>115</name>
+            <site_list>ALAHINA BOCAR</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-16</itextId>
+            <name>116</name>
+            <site_list>SINTHIOU DIOYE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-17</itextId>
+            <name>117</name>
+            <site_list>KENIEBA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-18</itextId>
+            <name>118</name>
+            <site_list>MADINA FOULBE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-19</itextId>
+            <name>119</name>
+            <site_list>TOMBOROMADJI</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-20</itextId>
+            <name>120</name>
+            <site_list>DYALA BAKARY</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-21</itextId>
+            <name>121</name>
+            <site_list>HEREMAKONO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-22</itextId>
+            <name>122</name>
+            <site_list>NIENIEKHO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-23</itextId>
+            <name>123</name>
+            <site_list>SANDINCOUNDA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-24</itextId>
+            <name>124</name>
+            <site_list>SENO KARE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-25</itextId>
+            <name>125</name>
+            <site_list>SORETO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-26</itextId>
+            <name>126</name>
+            <site_list>DIAM WELY PATHE MBAYE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-27</itextId>
+            <name>127</name>
+            <site_list>GUEDEKHO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-28</itextId>
+            <name>128</name>
+            <site_list>KOUNDEL</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-29</itextId>
+            <name>129</name>
+            <site_list>SAKHOCOUNDA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-30</itextId>
+            <name>130</name>
+            <site_list>SAMBA COLO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-31</itextId>
+            <name>131</name>
+            <site_list>SEOUDJI</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-32</itextId>
+            <name>132</name>
+            <site_list>SINTHIOU SAMBA NDIARDE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-33</itextId>
+            <name>133</name>
+            <site_list>SITABANTA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-34</itextId>
+            <name>134</name>
+            <site_list>TAKHOUTALA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-35</itextId>
+            <name>135</name>
+            <site_list>YOUPE HAMADY</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-36</itextId>
+            <name>136</name>
+            <site_list>BANCOUBA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-37</itextId>
+            <name>137</name>
+            <site_list>DIDE GASSAMA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-38</itextId>
+            <name>138</name>
+            <site_list>GOUDANPHA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-39</itextId>
+            <name>139</name>
+            <site_list>TOUMBOURA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-40</itextId>
+            <name>200</name>
+            <site_list>KOUMPENTOUM 5</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-41</itextId>
+            <name>201</name>
+            <site_list>MISSION CATHOLIQUE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-42</itextId>
+            <name>202</name>
+            <site_list>THIERNO SAKHO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-43</itextId>
+            <name>203</name>
+            <site_list>MALEME 2</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-44</itextId>
+            <name>204</name>
+            <site_list>BAMBA THIALENE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-45</itextId>
+            <name>205</name>
+            <site_list>ELIHINA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-46</itextId>
+            <name>206</name>
+            <site_list>KOUNTOUATA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-47</itextId>
+            <name>207</name>
+            <site_list>DIALOTODJI</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-48</itextId>
+            <name>208</name>
+            <site_list>NGUEYENE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-49</itextId>
+            <name>209</name>
+            <site_list>VILLAGE 15 (TIVAOUANE NIANI)</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-50</itextId>
+            <name>210</name>
+            <site_list>LOFFE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-51</itextId>
+            <name>211</name>
+            <site_list>PIRE GOUNDO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-52</itextId>
+            <name>212</name>
+            <site_list>SARE SICOUNA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-53</itextId>
+            <name>213</name>
+            <site_list>SINTHIOU NDENE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-54</itextId>
+            <name>214</name>
+            <site_list>VELINGARA NGENTHE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-55</itextId>
+            <name>215</name>
+            <site_list>BOYNGAL DADI</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-56</itextId>
+            <name>216</name>
+            <site_list>DAROU NDIAYENE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-57</itextId>
+            <name>217</name>
+            <site_list>FASS THIECKENE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-58</itextId>
+            <name>218</name>
+            <site_list>FRANCO ARABE DE KOUTHIABA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-59</itextId>
+            <name>219</name>
+            <site_list>GAWANE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-60</itextId>
+            <name>220</name>
+            <site_list>KOUKOUYEL PEULH</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-61</itextId>
+            <name>221</name>
+            <site_list>KOUTHIABA PEULH</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-62</itextId>
+            <name>222</name>
+            <site_list>PALANGUE HAMADI</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-63</itextId>
+            <name>223</name>
+            <site_list>SARE BOYLI</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-64</itextId>
+            <name>224</name>
+            <site_list>SARE GALLOROU</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-65</itextId>
+            <name>225</name>
+            <site_list>SYLL PEULH</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-66</itextId>
+            <name>226</name>
+            <site_list>KEUR DAOUDA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-67</itextId>
+            <name>227</name>
+            <site_list>BOUDOUCK</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-68</itextId>
+            <name>228</name>
+            <site_list>BOULIMANGA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-69</itextId>
+            <name>229</name>
+            <site_list>FRANCO ARABE DAROU SALAM THIEKENE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-70</itextId>
+            <name>230</name>
+            <site_list>KEUR NGUIRENE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-71</itextId>
+            <name>231</name>
+            <site_list>MEDINA NDIOBENE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-72</itextId>
+            <name>232</name>
+            <site_list>NDOUMANE MBAYE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-73</itextId>
+            <name>233</name>
+            <site_list>Touba NIANI</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-74</itextId>
+            <name>234</name>
+            <site_list>BOINGUEL</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-75</itextId>
+            <name>235</name>
+            <site_list>DIAGLE NDAWENE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-76</itextId>
+            <name>236</name>
+            <site_list>DIAMWELI</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-77</itextId>
+            <name>237</name>
+            <site_list>KALOM</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-78</itextId>
+            <name>238</name>
+            <site_list>MEDINA KOBORENE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-79</itextId>
+            <name>239</name>
+            <site_list>PATOULANE IBRAHIMA NDAO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-80</itextId>
+            <name>240</name>
+            <site_list>VELINGARA COTO</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-81</itextId>
+            <name>241</name>
+            <site_list>LOUMBY SIMBING</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-82</itextId>
+            <name>242</name>
+            <site_list>NAYOM DIA</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-83</itextId>
+            <name>243</name>
+            <site_list>SINTHIOU ASRE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-84</itextId>
+            <name>244</name>
+            <site_list>SOUTHIE</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-85</itextId>
+            <name>300</name>
+            <site_list>Badi</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-86</itextId>
+            <name>301</name>
+            <site_list>Dialacoto 2</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-87</itextId>
+            <name>302</name>
+            <site_list>Medinacouta</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-88</itextId>
+            <name>303</name>
+            <site_list>Soucouto</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-89</itextId>
+            <name>304</name>
+            <site_list>Talicoring Bantancoly</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-90</itextId>
+            <name>305</name>
+            <site_list>Fass Nguenthe</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-91</itextId>
+            <name>306</name>
+            <site_list>Koussanar 3</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-92</itextId>
+            <name>307</name>
+            <site_list>Maleme Wokou Wokou</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-93</itextId>
+            <name>308</name>
+            <site_list>Mboul</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-94</itextId>
+            <name>309</name>
+            <site_list>Sinthiou Dawady</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-95</itextId>
+            <name>310</name>
+            <site_list>Bidiancoto</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-96</itextId>
+            <name>311</name>
+            <site_list>Gourel Bocar</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-97</itextId>
+            <name>312</name>
+            <site_list>Hamdallaye Tessan</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-98</itextId>
+            <name>313</name>
+            <site_list>Kouar</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-99</itextId>
+            <name>314</name>
+            <site_list>Mahina Coura</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-100</itextId>
+            <name>315</name>
+            <site_list>Nguene</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-101</itextId>
+            <name>316</name>
+            <site_list>Saby Mouless</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-102</itextId>
+            <name>317</name>
+            <site_list>Safalou 2</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-103</itextId>
+            <name>318</name>
+            <site_list>Sinthiou Mamoudou</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-104</itextId>
+            <name>319</name>
+            <site_list>Velingara Leguel</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-105</itextId>
+            <name>320</name>
+            <site_list>Coumba Koutou</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-106</itextId>
+            <name>321</name>
+            <site_list>Dar Salam 1</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-107</itextId>
+            <name>322</name>
+            <site_list>Koulary</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-108</itextId>
+            <name>323</name>
+            <site_list>Netteboulou</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-109</itextId>
+            <name>324</name>
+            <site_list>Segou Coura</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-110</itextId>
+            <name>325</name>
+            <site_list>Sinthiou Keniaba</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-111</itextId>
+            <name>326</name>
+            <site_list>Diombodina</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-112</itextId>
+            <name>327</name>
+            <site_list>Mansa Kaly Oualy</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-113</itextId>
+            <name>328</name>
+            <site_list>Maribougou</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-114</itextId>
+            <name>329</name>
+            <site_list>Sadioboulou</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-115</itextId>
+            <name>330</name>
+            <site_list>Sare Ousmane</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-116</itextId>
+            <name>331</name>
+            <site_list>Sirimandialla</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-117</itextId>
+            <name>332</name>
+            <site_list>Thiorobougou</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-118</itextId>
+            <name>333</name>
+            <site_list>Boukari counda</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-119</itextId>
+            <name>334</name>
+            <site_list>Gourel Diadie 1</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-120</itextId>
+            <name>335</name>
+            <site_list>Kandioura Noba</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-121</itextId>
+            <name>336</name>
+            <site_list>Kothiarinding</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-122</itextId>
+            <name>337</name>
+            <site_list>Sada Maka Sy</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-123</itextId>
+            <name>338</name>
+            <site_list>SOS Tamora Toure</site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-124</itextId>
+            <name>339</name>
+            <site_list>Tamba Soce</site_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/c_recorder:jr:constraintMsg')" nodeset="/data/c_recorder" required="true()" type="int"/>
+      <bind nodeset="/data/c_eu_name" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_commune" required="true()" type="string" db_add_col_1="/data/c_eu_name" db_add_col_2="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_commune" db_add_col_3="."/>
+      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
+      <bind nodeset="/data/c_cluster_leader_name" required="true()" type="string"/>
+      <bind nodeset="/data/c_consent" required="true()" type="string"/>
+      <bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Yes'" required="false()" type="int"/>
+      <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_present:jr:constraintMsg')" nodeset="/data/c_present" relevant=" /data/c_consent  = 'Yes'" required="false()" type="int"/>
+      <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'No'" type="string"/>
+      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder">
+      <label ref="jr:itext('/data/c_recorder:label')"/>
+      <hint ref="jr:itext('/data/c_recorder:hint')"/>
+    </input>
+    <select1 ref="/data/c_eu_name">
+      <label ref="jr:itext('/data/c_eu_name:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/Kidira:label')"/>
+        <value>Kidira</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/Koumpentoum:label')"/>
+        <value>Koumpentoum</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/TAMBACOUNDA:label')"/>
+        <value>TAMBACOUNDA</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_commune">
+      <label ref="jr:itext('/data/c_commune:label')"/>
+      <itemset nodeset="instance('commune_list')/root/item[district_list =  /data/c_eu_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+      <itemset nodeset="instance('site_list')/root/item[commune_list =  /data/c_commune ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+      <hint ref="jr:itext('/data/c_cluster_id:hint')"/>
+      <itemset nodeset="instance('code_site_list')/root/item[site_list =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_cluster_leader_name">
+      <label ref="jr:itext('/data/c_cluster_leader_name:label')"/>
+    </input>
+    <select1 ref="/data/c_consent">
+      <label ref="jr:itext('/data/c_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_consent/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_consent/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/c_population">
+      <label ref="jr:itext('/data/c_population:label')"/>
+    </input>
+    <input ref="/data/c_present">
+      <label ref="jr:itext('/data/c_present:label')"/>
+    </input>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <input ref="/data/p_ending_survey_note">
+      <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
+    </input>
+    <input ref="/data/c_ClusterNotes">
+      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>
