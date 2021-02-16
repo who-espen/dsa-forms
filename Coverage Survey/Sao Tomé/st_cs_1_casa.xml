@@ -1,0 +1,1926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>1. Casa V2</h:title>
+    <model >
+
+      <instance>
+        <data id="st_cs_1_casa_v5" version="20210125">
+          <codigo_da_entrevista/>
+          <distrito/>
+          <localidade/>
+          <codigo_localidade/>
+          <num_casa/>
+          <data_entrevista/>
+          <populacao/>
+          <notas/>
+          <start_date/>
+          <end_date/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation lang="English">
+          <text id="/data/codigo_da_entrevista:jr:constraintMsg">
+            <value>The code must be between 0 and 100</value>
+          </text>
+          <text id="/data/codigo_da_entrevista:label">
+            <value>Interviewer Code</value>
+          </text>
+          <text id="/data/distrito:label">
+            <value>District</value>
+          </text>
+          <text id="/data/distrito/Aqua Grande:label">
+            <value>Aqua Grande</value>
+          </text>
+          <text id="/data/distrito/Me Zochi:label">
+            <value>Me Zochi</value>
+          </text>
+          <text id="/data/distrito/Principe:label">
+            <value>Principe</value>
+          </text>
+          <text id="/data/localidade:label">
+            <value>Subunit (EA/Village/Other)</value>
+          </text>
+          <text id="/data/codigo_localidade:label">
+            <value>Location ID</value>
+          </text>
+          <text id="/data/num_casa:label">
+            <value>Household code</value>
+          </text>
+          <text id="/data/data_entrevista:label">
+            <value>Date of interview (dd/mm/yyyy)</value>
+          </text>
+          <text id="/data/populacao:label">
+            <value>Survey population</value>
+          </text>
+          <text id="/data/notas:label">
+            <value>Additional notes</value>
+          </text>
+          <text id="districts-0">
+            <value>Aqua Grande</value>
+          </text>
+          <text id="districts-1">
+            <value>Me Zochi</value>
+          </text>
+          <text id="districts-2">
+            <value>Principe</value>
+          </text>
+          <text id="sub_districts-0">
+            <value>Água Bobô+ São Marçal</value>
+          </text>
+          <text id="sub_districts-1">
+            <value>Água Porca</value>
+          </text>
+          <text id="sub_districts-2">
+            <value>Água Serra</value>
+          </text>
+          <text id="sub_districts-3">
+            <value>Almeirim</value>
+          </text>
+          <text id="sub_districts-4">
+            <value>Atrás do Estádio</value>
+          </text>
+          <text id="sub_districts-5">
+            <value>Blublu</value>
+          </text>
+          <text id="sub_districts-6">
+            <value>Boa Morte</value>
+          </text>
+          <text id="sub_districts-7">
+            <value>Centro C. São Tomé</value>
+          </text>
+          <text id="sub_districts-8">
+            <value>Fruta Fruta</value>
+          </text>
+          <text id="sub_districts-9">
+            <value>Gonga</value>
+          </text>
+          <text id="sub_districts-10">
+            <value>Hospital</value>
+          </text>
+          <text id="sub_districts-11">
+            <value>Madre-de-Deus</value>
+          </text>
+          <text id="sub_districts-12">
+            <value>Oquê-del-Rei</value>
+          </text>
+          <text id="sub_districts-13">
+            <value>Pema Pema</value>
+          </text>
+          <text id="sub_districts-14">
+            <value>Penha</value>
+          </text>
+          <text id="sub_districts-15">
+            <value>Ponte Graça</value>
+          </text>
+          <text id="sub_districts-16">
+            <value>Praia Cruz</value>
+          </text>
+          <text id="sub_districts-17">
+            <value>Praia Gamboa</value>
+          </text>
+          <text id="sub_districts-18">
+            <value>Riboque</value>
+          </text>
+          <text id="sub_districts-19">
+            <value>Santo António</value>
+          </text>
+          <text id="sub_districts-20">
+            <value>São Gabriel</value>
+          </text>
+          <text id="sub_districts-21">
+            <value>São João da Vargen</value>
+          </text>
+          <text id="sub_districts-22">
+            <value>Saton</value>
+          </text>
+          <text id="sub_districts-23">
+            <value>Vila de Pantufo Centro</value>
+          </text>
+          <text id="sub_districts-24">
+            <value>Vila Fernanda</value>
+          </text>
+          <text id="sub_districts-25">
+            <value>Vila Maria</value>
+          </text>
+          <text id="sub_districts-26">
+            <value>Água Arroz</value>
+          </text>
+          <text id="sub_districts-27">
+            <value>Água Dago+ Amália</value>
+          </text>
+          <text id="sub_districts-28">
+            <value>António Vaz</value>
+          </text>
+          <text id="sub_districts-29">
+            <value>Belém</value>
+          </text>
+          <text id="sub_districts-30">
+            <value>C. Trindade Centro</value>
+          </text>
+          <text id="sub_districts-31">
+            <value>Caminho Novo</value>
+          </text>
+          <text id="sub_districts-32">
+            <value>Canga+ Água Seca+Mulembu+Água Tanque</value>
+          </text>
+          <text id="sub_districts-33">
+            <value>Cola Grande+Moreira Santo</value>
+          </text>
+          <text id="sub_districts-34">
+            <value>Cova Barro</value>
+          </text>
+          <text id="sub_districts-35">
+            <value>Cruzeiro</value>
+          </text>
+          <text id="sub_districts-36">
+            <value>Filipina</value>
+          </text>
+          <text id="sub_districts-37">
+            <value>Lemos</value>
+          </text>
+          <text id="sub_districts-38">
+            <value>Margarida Manuel</value>
+          </text>
+          <text id="sub_districts-39">
+            <value>Melhorada+ Brazileiro</value>
+          </text>
+          <text id="sub_districts-40">
+            <value>Monta Alegre</value>
+          </text>
+          <text id="sub_districts-41">
+            <value>Monte Café+São Carlos (Mé-Zóchi)+Santa Luzia</value>
+          </text>
+          <text id="sub_districts-42">
+            <value>Obo Izaquente+Diana</value>
+          </text>
+          <text id="sub_districts-43">
+            <value>Pedro Mateus+Quinta da Graça+ Ocá oco</value>
+          </text>
+          <text id="sub_districts-44">
+            <value>Piedade+Santy</value>
+          </text>
+          <text id="sub_districts-45">
+            <value>Plateau+ Santa Elvira+ Santa Adelaide+ São Januário+ Zampalma+ Zampile</value>
+          </text>
+          <text id="sub_districts-46">
+            <value>Praia Melão</value>
+          </text>
+          <text id="sub_districts-47">
+            <value>San Nguembu</value>
+          </text>
+          <text id="sub_districts-48">
+            <value>Santa Margarida</value>
+          </text>
+          <text id="sub_districts-49">
+            <value>São José Trindade</value>
+          </text>
+          <text id="sub_districts-50">
+            <value>Sto António (Boca Boca)+ Rio Lima</value>
+          </text>
+          <text id="sub_districts-51">
+            <value>Uba Budo</value>
+          </text>
+          <text id="sub_districts-52">
+            <value>Vaji Lido</value>
+          </text>
+          <text id="sub_districts-53">
+            <value>Vila de Almas</value>
+          </text>
+          <text id="sub_districts-54">
+            <value>Caixão Grande</value>
+          </text>
+          <text id="sub_districts-55">
+            <value>Praia Inhame</value>
+          </text>
+          <text id="sub_districts-56">
+            <value>Abade Praia e Roça+Portinho e Piedade</value>
+          </text>
+          <text id="sub_districts-57">
+            <value>Aeroporto</value>
+          </text>
+          <text id="sub_districts-58">
+            <value>Azeitona</value>
+          </text>
+          <text id="sub_districts-59">
+            <value>Belo Monte +Paciencia+Praia Campanha</value>
+          </text>
+          <text id="sub_districts-60">
+            <value>Budo Budo</value>
+          </text>
+          <text id="sub_districts-61">
+            <value>Centro Da Cidade+Lenta Pia+Santo António II+São Mateus</value>
+          </text>
+          <text id="sub_districts-62">
+            <value>Chimalô</value>
+          </text>
+          <text id="sub_districts-63">
+            <value>Gaspar Roça</value>
+          </text>
+          <text id="sub_districts-64">
+            <value>Hospital Velho+São João+Água Namoro</value>
+          </text>
+          <text id="sub_districts-65">
+            <value>Oquê Ponte+ Quintal Sto António+Praia Sto António</value>
+          </text>
+          <text id="sub_districts-66">
+            <value>Pincaté+Montalegre</value>
+          </text>
+          <text id="sub_districts-67">
+            <value>Ponta Sol+Daniel</value>
+          </text>
+          <text id="sub_districts-68">
+            <value>Porto Real</value>
+          </text>
+          <text id="sub_districts-69">
+            <value>Praia Burra</value>
+          </text>
+          <text id="sub_districts-70">
+            <value>Rua Dos Trabalhadores</value>
+          </text>
+          <text id="sub_districts-71">
+            <value>Rua Feliz</value>
+          </text>
+          <text id="sub_districts-72">
+            <value>Santa Rita+ Uba Caju</value>
+          </text>
+          <text id="sub_districts-73">
+            <value>Santo Cristo</value>
+          </text>
+          <text id="sub_districts-74">
+            <value>São Joaquim+Praia Lapa</value>
+          </text>
+          <text id="sub_districts-75">
+            <value>Sundy</value>
+          </text>
+          <text id="sub_districts-76">
+            <value>Tchada+Água Doutor+Ponta Forte</value>
+          </text>
+          <text id="sub_districts-77">
+            <value>Terreiro Velho+Praia Seca</value>
+          </text>
+          <text id="site_ids-0">
+            <value>101</value>
+          </text>
+          <text id="site_ids-1">
+            <value>102</value>
+          </text>
+          <text id="site_ids-2">
+            <value>103</value>
+          </text>
+          <text id="site_ids-3">
+            <value>104</value>
+          </text>
+          <text id="site_ids-4">
+            <value>105</value>
+          </text>
+          <text id="site_ids-5">
+            <value>106</value>
+          </text>
+          <text id="site_ids-6">
+            <value>107</value>
+          </text>
+          <text id="site_ids-7">
+            <value>108</value>
+          </text>
+          <text id="site_ids-8">
+            <value>109</value>
+          </text>
+          <text id="site_ids-9">
+            <value>110</value>
+          </text>
+          <text id="site_ids-10">
+            <value>111</value>
+          </text>
+          <text id="site_ids-11">
+            <value>112</value>
+          </text>
+          <text id="site_ids-12">
+            <value>113</value>
+          </text>
+          <text id="site_ids-13">
+            <value>114</value>
+          </text>
+          <text id="site_ids-14">
+            <value>115</value>
+          </text>
+          <text id="site_ids-15">
+            <value>116</value>
+          </text>
+          <text id="site_ids-16">
+            <value>117</value>
+          </text>
+          <text id="site_ids-17">
+            <value>118</value>
+          </text>
+          <text id="site_ids-18">
+            <value>119</value>
+          </text>
+          <text id="site_ids-19">
+            <value>120</value>
+          </text>
+          <text id="site_ids-20">
+            <value>121</value>
+          </text>
+          <text id="site_ids-21">
+            <value>122</value>
+          </text>
+          <text id="site_ids-22">
+            <value>123</value>
+          </text>
+          <text id="site_ids-23">
+            <value>124</value>
+          </text>
+          <text id="site_ids-24">
+            <value>125</value>
+          </text>
+          <text id="site_ids-25">
+            <value>126</value>
+          </text>
+          <text id="site_ids-26">
+            <value>127</value>
+          </text>
+          <text id="site_ids-27">
+            <value>201</value>
+          </text>
+          <text id="site_ids-28">
+            <value>202</value>
+          </text>
+          <text id="site_ids-29">
+            <value>203</value>
+          </text>
+          <text id="site_ids-30">
+            <value>204</value>
+          </text>
+          <text id="site_ids-31">
+            <value>205</value>
+          </text>
+          <text id="site_ids-32">
+            <value>206</value>
+          </text>
+          <text id="site_ids-33">
+            <value>207</value>
+          </text>
+          <text id="site_ids-34">
+            <value>208</value>
+          </text>
+          <text id="site_ids-35">
+            <value>209</value>
+          </text>
+          <text id="site_ids-36">
+            <value>210</value>
+          </text>
+          <text id="site_ids-37">
+            <value>211</value>
+          </text>
+          <text id="site_ids-38">
+            <value>212</value>
+          </text>
+          <text id="site_ids-39">
+            <value>213</value>
+          </text>
+          <text id="site_ids-40">
+            <value>214</value>
+          </text>
+          <text id="site_ids-41">
+            <value>215</value>
+          </text>
+          <text id="site_ids-42">
+            <value>216</value>
+          </text>
+          <text id="site_ids-43">
+            <value>217</value>
+          </text>
+          <text id="site_ids-44">
+            <value>218</value>
+          </text>
+          <text id="site_ids-45">
+            <value>219</value>
+          </text>
+          <text id="site_ids-46">
+            <value>220</value>
+          </text>
+          <text id="site_ids-47">
+            <value>221</value>
+          </text>
+          <text id="site_ids-48">
+            <value>222</value>
+          </text>
+          <text id="site_ids-49">
+            <value>223</value>
+          </text>
+          <text id="site_ids-50">
+            <value>224</value>
+          </text>
+          <text id="site_ids-51">
+            <value>225</value>
+          </text>
+          <text id="site_ids-52">
+            <value>226</value>
+          </text>
+          <text id="site_ids-53">
+            <value>227</value>
+          </text>
+          <text id="site_ids-54">
+            <value>228</value>
+          </text>
+          <text id="site_ids-55">
+            <value>301</value>
+          </text>
+          <text id="site_ids-56">
+            <value>302</value>
+          </text>
+          <text id="site_ids-57">
+            <value>303</value>
+          </text>
+          <text id="site_ids-58">
+            <value>304</value>
+          </text>
+          <text id="site_ids-59">
+            <value>305</value>
+          </text>
+          <text id="site_ids-60">
+            <value>306</value>
+          </text>
+          <text id="site_ids-61">
+            <value>307</value>
+          </text>
+          <text id="site_ids-62">
+            <value>308</value>
+          </text>
+          <text id="site_ids-63">
+            <value>309</value>
+          </text>
+          <text id="site_ids-64">
+            <value>310</value>
+          </text>
+          <text id="site_ids-65">
+            <value>311</value>
+          </text>
+          <text id="site_ids-66">
+            <value>312</value>
+          </text>
+          <text id="site_ids-67">
+            <value>313</value>
+          </text>
+          <text id="site_ids-68">
+            <value>314</value>
+          </text>
+          <text id="site_ids-69">
+            <value>315</value>
+          </text>
+          <text id="site_ids-70">
+            <value>316</value>
+          </text>
+          <text id="site_ids-71">
+            <value>317</value>
+          </text>
+          <text id="site_ids-72">
+            <value>318</value>
+          </text>
+          <text id="site_ids-73">
+            <value>319</value>
+          </text>
+          <text id="site_ids-74">
+            <value>320</value>
+          </text>
+          <text id="site_ids-75">
+            <value>321</value>
+          </text>
+          <text id="site_ids-76">
+            <value>322</value>
+          </text>
+          <text id="site_ids-77">
+            <value>323</value>
+          </text>
+        </translation>
+        <translation default="true()" lang="Portuguese">
+          <text id="/data/codigo_da_entrevista:jr:constraintMsg">
+            <value>O código deve estar entre 0 e 100</value>
+          </text>
+          <text id="/data/codigo_da_entrevista:label">
+            <value>Código da entrevista</value>
+          </text>
+          <text id="/data/distrito:label">
+            <value>Distrito</value>
+          </text>
+          <text id="/data/distrito/Aqua Grande:label">
+            <value>Aqua Grande</value>
+          </text>
+          <text id="/data/distrito/Me Zochi:label">
+            <value>Me Zochi</value>
+          </text>
+          <text id="/data/distrito/Principe:label">
+            <value>Principe</value>
+          </text>
+          <text id="/data/localidade:label">
+            <value>Localidade</value>
+          </text>
+          <text id="/data/codigo_localidade:label">
+            <value>Código Localidade</value>
+          </text>
+          <text id="/data/num_casa:label">
+            <value>Número da casa</value>
+          </text>
+          <text id="/data/data_entrevista:label">
+            <value>Data da entrevista</value>
+          </text>
+          <text id="/data/populacao:label">
+            <value>População da pesquisa</value>
+          </text>
+          <text id="/data/notas:label">
+            <value>Notas Adicionais</value>
+          </text>
+          <text id="districts-0">
+            <value>Aqua Grande</value>
+          </text>
+          <text id="districts-1">
+            <value>Me Zochi</value>
+          </text>
+          <text id="districts-2">
+            <value>Principe</value>
+          </text>
+          <text id="sub_districts-0">
+            <value>Água Bobô+ São Marçal</value>
+          </text>
+          <text id="sub_districts-1">
+            <value>Água Porca</value>
+          </text>
+          <text id="sub_districts-2">
+            <value>Água Serra</value>
+          </text>
+          <text id="sub_districts-3">
+            <value>Almeirim</value>
+          </text>
+          <text id="sub_districts-4">
+            <value>Atrás do Estádio</value>
+          </text>
+          <text id="sub_districts-5">
+            <value>Blublu</value>
+          </text>
+          <text id="sub_districts-6">
+            <value>Boa Morte</value>
+          </text>
+          <text id="sub_districts-7">
+            <value>Centro C. São Tomé</value>
+          </text>
+          <text id="sub_districts-8">
+            <value>Fruta Fruta</value>
+          </text>
+          <text id="sub_districts-9">
+            <value>Gonga</value>
+          </text>
+          <text id="sub_districts-10">
+            <value>Hospital</value>
+          </text>
+          <text id="sub_districts-11">
+            <value>Madre-de-Deus</value>
+          </text>
+          <text id="sub_districts-12">
+            <value>Oquê-del-Rei</value>
+          </text>
+          <text id="sub_districts-13">
+            <value>Pema Pema</value>
+          </text>
+          <text id="sub_districts-14">
+            <value>Penha</value>
+          </text>
+          <text id="sub_districts-15">
+            <value>Ponte Graça</value>
+          </text>
+          <text id="sub_districts-16">
+            <value>Praia Cruz</value>
+          </text>
+          <text id="sub_districts-17">
+            <value>Praia Gamboa</value>
+          </text>
+          <text id="sub_districts-18">
+            <value>Riboque</value>
+          </text>
+          <text id="sub_districts-19">
+            <value>Santo António</value>
+          </text>
+          <text id="sub_districts-20">
+            <value>São Gabriel</value>
+          </text>
+          <text id="sub_districts-21">
+            <value>São João da Vargen</value>
+          </text>
+          <text id="sub_districts-22">
+            <value>Saton</value>
+          </text>
+          <text id="sub_districts-23">
+            <value>Vila de Pantufo Centro</value>
+          </text>
+          <text id="sub_districts-24">
+            <value>Vila Fernanda</value>
+          </text>
+          <text id="sub_districts-25">
+            <value>Vila Maria</value>
+          </text>
+          <text id="sub_districts-26">
+            <value>Água Arroz</value>
+          </text>
+          <text id="sub_districts-27">
+            <value>Água Dago+ Amália</value>
+          </text>
+          <text id="sub_districts-28">
+            <value>António Vaz</value>
+          </text>
+          <text id="sub_districts-29">
+            <value>Belém</value>
+          </text>
+          <text id="sub_districts-30">
+            <value>C. Trindade Centro</value>
+          </text>
+          <text id="sub_districts-31">
+            <value>Caminho Novo</value>
+          </text>
+          <text id="sub_districts-32">
+            <value>Canga+ Água Seca+Mulembu+Água Tanque</value>
+          </text>
+          <text id="sub_districts-33">
+            <value>Cola Grande+Moreira Santo</value>
+          </text>
+          <text id="sub_districts-34">
+            <value>Cova Barro</value>
+          </text>
+          <text id="sub_districts-35">
+            <value>Cruzeiro</value>
+          </text>
+          <text id="sub_districts-36">
+            <value>Filipina</value>
+          </text>
+          <text id="sub_districts-37">
+            <value>Lemos</value>
+          </text>
+          <text id="sub_districts-38">
+            <value>Margarida Manuel</value>
+          </text>
+          <text id="sub_districts-39">
+            <value>Melhorada+ Brazileiro</value>
+          </text>
+          <text id="sub_districts-40">
+            <value>Monta Alegre</value>
+          </text>
+          <text id="sub_districts-41">
+            <value>Monte Café+São Carlos (Mé-Zóchi)+Santa Luzia</value>
+          </text>
+          <text id="sub_districts-42">
+            <value>Obo Izaquente+Diana</value>
+          </text>
+          <text id="sub_districts-43">
+            <value>Pedro Mateus+Quinta da Graça+ Ocá oco</value>
+          </text>
+          <text id="sub_districts-44">
+            <value>Piedade+Santy</value>
+          </text>
+          <text id="sub_districts-45">
+            <value>Plateau+ Santa Elvira+ Santa Adelaide+ São Januário+ Zampalma+ Zampile</value>
+          </text>
+          <text id="sub_districts-46">
+            <value>Praia Melão</value>
+          </text>
+          <text id="sub_districts-47">
+            <value>San Nguembu</value>
+          </text>
+          <text id="sub_districts-48">
+            <value>Santa Margarida</value>
+          </text>
+          <text id="sub_districts-49">
+            <value>São José Trindade</value>
+          </text>
+          <text id="sub_districts-50">
+            <value>Sto António (Boca Boca)+ Rio Lima</value>
+          </text>
+          <text id="sub_districts-51">
+            <value>Uba Budo</value>
+          </text>
+          <text id="sub_districts-52">
+            <value>Vaji Lido</value>
+          </text>
+          <text id="sub_districts-53">
+            <value>Vila de Almas</value>
+          </text>
+          <text id="sub_districts-54">
+            <value>Caixão Grande</value>
+          </text>
+          <text id="sub_districts-55">
+            <value>Praia Inhame</value>
+          </text>
+          <text id="sub_districts-56">
+            <value>Abade Praia e Roça+Portinho e Piedade</value>
+          </text>
+          <text id="sub_districts-57">
+            <value>Aeroporto</value>
+          </text>
+          <text id="sub_districts-58">
+            <value>Azeitona</value>
+          </text>
+          <text id="sub_districts-59">
+            <value>Belo Monte +Paciencia+Praia Campanha</value>
+          </text>
+          <text id="sub_districts-60">
+            <value>Budo Budo</value>
+          </text>
+          <text id="sub_districts-61">
+            <value>Centro Da Cidade+Lenta Pia+Santo António II+São Mateus</value>
+          </text>
+          <text id="sub_districts-62">
+            <value>Chimalô</value>
+          </text>
+          <text id="sub_districts-63">
+            <value>Gaspar Roça</value>
+          </text>
+          <text id="sub_districts-64">
+            <value>Hospital Velho+São João+Água Namoro</value>
+          </text>
+          <text id="sub_districts-65">
+            <value>Oquê Ponte+ Quintal Sto António+Praia Sto António</value>
+          </text>
+          <text id="sub_districts-66">
+            <value>Pincaté+Montalegre</value>
+          </text>
+          <text id="sub_districts-67">
+            <value>Ponta Sol+Daniel</value>
+          </text>
+          <text id="sub_districts-68">
+            <value>Porto Real</value>
+          </text>
+          <text id="sub_districts-69">
+            <value>Praia Burra</value>
+          </text>
+          <text id="sub_districts-70">
+            <value>Rua Dos Trabalhadores</value>
+          </text>
+          <text id="sub_districts-71">
+            <value>Rua Feliz</value>
+          </text>
+          <text id="sub_districts-72">
+            <value>Santa Rita+ Uba Caju</value>
+          </text>
+          <text id="sub_districts-73">
+            <value>Santo Cristo</value>
+          </text>
+          <text id="sub_districts-74">
+            <value>São Joaquim+Praia Lapa</value>
+          </text>
+          <text id="sub_districts-75">
+            <value>Sundy</value>
+          </text>
+          <text id="sub_districts-76">
+            <value>Tchada+Água Doutor+Ponta Forte</value>
+          </text>
+          <text id="sub_districts-77">
+            <value>Terreiro Velho+Praia Seca</value>
+          </text>
+          <text id="site_ids-0">
+            <value>101</value>
+          </text>
+          <text id="site_ids-1">
+            <value>102</value>
+          </text>
+          <text id="site_ids-2">
+            <value>103</value>
+          </text>
+          <text id="site_ids-3">
+            <value>104</value>
+          </text>
+          <text id="site_ids-4">
+            <value>105</value>
+          </text>
+          <text id="site_ids-5">
+            <value>106</value>
+          </text>
+          <text id="site_ids-6">
+            <value>107</value>
+          </text>
+          <text id="site_ids-7">
+            <value>108</value>
+          </text>
+          <text id="site_ids-8">
+            <value>109</value>
+          </text>
+          <text id="site_ids-9">
+            <value>110</value>
+          </text>
+          <text id="site_ids-10">
+            <value>111</value>
+          </text>
+          <text id="site_ids-11">
+            <value>112</value>
+          </text>
+          <text id="site_ids-12">
+            <value>113</value>
+          </text>
+          <text id="site_ids-13">
+            <value>114</value>
+          </text>
+          <text id="site_ids-14">
+            <value>115</value>
+          </text>
+          <text id="site_ids-15">
+            <value>116</value>
+          </text>
+          <text id="site_ids-16">
+            <value>117</value>
+          </text>
+          <text id="site_ids-17">
+            <value>118</value>
+          </text>
+          <text id="site_ids-18">
+            <value>119</value>
+          </text>
+          <text id="site_ids-19">
+            <value>120</value>
+          </text>
+          <text id="site_ids-20">
+            <value>121</value>
+          </text>
+          <text id="site_ids-21">
+            <value>122</value>
+          </text>
+          <text id="site_ids-22">
+            <value>123</value>
+          </text>
+          <text id="site_ids-23">
+            <value>124</value>
+          </text>
+          <text id="site_ids-24">
+            <value>125</value>
+          </text>
+          <text id="site_ids-25">
+            <value>126</value>
+          </text>
+          <text id="site_ids-26">
+            <value>127</value>
+          </text>
+          <text id="site_ids-27">
+            <value>201</value>
+          </text>
+          <text id="site_ids-28">
+            <value>202</value>
+          </text>
+          <text id="site_ids-29">
+            <value>203</value>
+          </text>
+          <text id="site_ids-30">
+            <value>204</value>
+          </text>
+          <text id="site_ids-31">
+            <value>205</value>
+          </text>
+          <text id="site_ids-32">
+            <value>206</value>
+          </text>
+          <text id="site_ids-33">
+            <value>207</value>
+          </text>
+          <text id="site_ids-34">
+            <value>208</value>
+          </text>
+          <text id="site_ids-35">
+            <value>209</value>
+          </text>
+          <text id="site_ids-36">
+            <value>210</value>
+          </text>
+          <text id="site_ids-37">
+            <value>211</value>
+          </text>
+          <text id="site_ids-38">
+            <value>212</value>
+          </text>
+          <text id="site_ids-39">
+            <value>213</value>
+          </text>
+          <text id="site_ids-40">
+            <value>214</value>
+          </text>
+          <text id="site_ids-41">
+            <value>215</value>
+          </text>
+          <text id="site_ids-42">
+            <value>216</value>
+          </text>
+          <text id="site_ids-43">
+            <value>217</value>
+          </text>
+          <text id="site_ids-44">
+            <value>218</value>
+          </text>
+          <text id="site_ids-45">
+            <value>219</value>
+          </text>
+          <text id="site_ids-46">
+            <value>220</value>
+          </text>
+          <text id="site_ids-47">
+            <value>221</value>
+          </text>
+          <text id="site_ids-48">
+            <value>222</value>
+          </text>
+          <text id="site_ids-49">
+            <value>223</value>
+          </text>
+          <text id="site_ids-50">
+            <value>224</value>
+          </text>
+          <text id="site_ids-51">
+            <value>225</value>
+          </text>
+          <text id="site_ids-52">
+            <value>226</value>
+          </text>
+          <text id="site_ids-53">
+            <value>227</value>
+          </text>
+          <text id="site_ids-54">
+            <value>228</value>
+          </text>
+          <text id="site_ids-55">
+            <value>301</value>
+          </text>
+          <text id="site_ids-56">
+            <value>302</value>
+          </text>
+          <text id="site_ids-57">
+            <value>303</value>
+          </text>
+          <text id="site_ids-58">
+            <value>304</value>
+          </text>
+          <text id="site_ids-59">
+            <value>305</value>
+          </text>
+          <text id="site_ids-60">
+            <value>306</value>
+          </text>
+          <text id="site_ids-61">
+            <value>307</value>
+          </text>
+          <text id="site_ids-62">
+            <value>308</value>
+          </text>
+          <text id="site_ids-63">
+            <value>309</value>
+          </text>
+          <text id="site_ids-64">
+            <value>310</value>
+          </text>
+          <text id="site_ids-65">
+            <value>311</value>
+          </text>
+          <text id="site_ids-66">
+            <value>312</value>
+          </text>
+          <text id="site_ids-67">
+            <value>313</value>
+          </text>
+          <text id="site_ids-68">
+            <value>314</value>
+          </text>
+          <text id="site_ids-69">
+            <value>315</value>
+          </text>
+          <text id="site_ids-70">
+            <value>316</value>
+          </text>
+          <text id="site_ids-71">
+            <value>317</value>
+          </text>
+          <text id="site_ids-72">
+            <value>318</value>
+          </text>
+          <text id="site_ids-73">
+            <value>319</value>
+          </text>
+          <text id="site_ids-74">
+            <value>320</value>
+          </text>
+          <text id="site_ids-75">
+            <value>321</value>
+          </text>
+          <text id="site_ids-76">
+            <value>322</value>
+          </text>
+          <text id="site_ids-77">
+            <value>323</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="districts">
+        <root>
+          <item>
+            <itextId>districts-0</itextId>
+            <name>Aqua Grande</name>
+          </item>
+          <item>
+            <itextId>districts-1</itextId>
+            <name>Me Zochi</name>
+          </item>
+          <item>
+            <itextId>districts-2</itextId>
+            <name>Principe</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sub_districts">
+        <root>
+          <item>
+            <itextId>sub_districts-0</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Agua Bobo+ Sao Marcal</name>
+          </item>
+          <item>
+            <itextId>sub_districts-1</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Agua Porca</name>
+          </item>
+          <item>
+            <itextId>sub_districts-2</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Agua Serra</name>
+          </item>
+          <item>
+            <itextId>sub_districts-3</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Almeirim</name>
+          </item>
+          <item>
+            <itextId>sub_districts-4</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Atras do Estadio</name>
+          </item>
+          <item>
+            <itextId>sub_districts-5</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Blublu</name>
+          </item>
+          <item>
+            <itextId>sub_districts-6</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Boa Morte</name>
+          </item>
+          <item>
+            <itextId>sub_districts-7</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Centro C. Sao Tome</name>
+          </item>
+          <item>
+            <itextId>sub_districts-8</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Fruta Fruta</name>
+          </item>
+          <item>
+            <itextId>sub_districts-9</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Gonga</name>
+          </item>
+          <item>
+            <itextId>sub_districts-10</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Hospital</name>
+          </item>
+          <item>
+            <itextId>sub_districts-11</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Madre-de-Deus</name>
+          </item>
+          <item>
+            <itextId>sub_districts-12</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Oque-del-Rei</name>
+          </item>
+          <item>
+            <itextId>sub_districts-13</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Pema Pema</name>
+          </item>
+          <item>
+            <itextId>sub_districts-14</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Penha</name>
+          </item>
+          <item>
+            <itextId>sub_districts-15</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Ponte Graca</name>
+          </item>
+          <item>
+            <itextId>sub_districts-16</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Praia Cruz</name>
+          </item>
+          <item>
+            <itextId>sub_districts-17</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Praia Gamboa</name>
+          </item>
+          <item>
+            <itextId>sub_districts-18</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Riboque</name>
+          </item>
+          <item>
+            <itextId>sub_districts-19</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Santo Antonio</name>
+          </item>
+          <item>
+            <itextId>sub_districts-20</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Sao Gabriel</name>
+          </item>
+          <item>
+            <itextId>sub_districts-21</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Sao Joao da Vargen</name>
+          </item>
+          <item>
+            <itextId>sub_districts-22</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Saton</name>
+          </item>
+          <item>
+            <itextId>sub_districts-23</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Vila de Pantufo Centro</name>
+          </item>
+          <item>
+            <itextId>sub_districts-24</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Vila Fernanda</name>
+          </item>
+          <item>
+            <itextId>sub_districts-25</itextId>
+            <districts>Aqua Grande</districts>
+            <name>Vila Maria</name>
+          </item>
+          <item>
+            <itextId>sub_districts-26</itextId>
+            <districts>Aqua Grande</districts>
+            <name>agua Arroz</name>
+          </item>
+          <item>
+            <itextId>sub_districts-27</itextId>
+            <districts>Me Zochi</districts>
+            <name>Agua Dago+ Amalia</name>
+          </item>
+          <item>
+            <itextId>sub_districts-28</itextId>
+            <districts>Me Zochi</districts>
+            <name>Antonio Vaz</name>
+          </item>
+          <item>
+            <itextId>sub_districts-29</itextId>
+            <districts>Me Zochi</districts>
+            <name>Belem</name>
+          </item>
+          <item>
+            <itextId>sub_districts-30</itextId>
+            <districts>Me Zochi</districts>
+            <name>C. Trindade Centro</name>
+          </item>
+          <item>
+            <itextId>sub_districts-31</itextId>
+            <districts>Me Zochi</districts>
+            <name>Caminho Novo</name>
+          </item>
+          <item>
+            <itextId>sub_districts-32</itextId>
+            <districts>Me Zochi</districts>
+            <name>Canga+Agua Seca+Mulembu+agua Tanque</name>
+          </item>
+          <item>
+            <itextId>sub_districts-33</itextId>
+            <districts>Me Zochi</districts>
+            <name>Cola Grande+Moreira Santo</name>
+          </item>
+          <item>
+            <itextId>sub_districts-34</itextId>
+            <districts>Me Zochi</districts>
+            <name>Cova Barro</name>
+          </item>
+          <item>
+            <itextId>sub_districts-35</itextId>
+            <districts>Me Zochi</districts>
+            <name>Cruzeiro</name>
+          </item>
+          <item>
+            <itextId>sub_districts-36</itextId>
+            <districts>Me Zochi</districts>
+            <name>Filipina</name>
+          </item>
+          <item>
+            <itextId>sub_districts-37</itextId>
+            <districts>Me Zochi</districts>
+            <name>Lemos</name>
+          </item>
+          <item>
+            <itextId>sub_districts-38</itextId>
+            <districts>Me Zochi</districts>
+            <name>Margarida Manuel</name>
+          </item>
+          <item>
+            <itextId>sub_districts-39</itextId>
+            <districts>Me Zochi</districts>
+            <name>Melhorada+ Brazileiro</name>
+          </item>
+          <item>
+            <itextId>sub_districts-40</itextId>
+            <districts>Me Zochi</districts>
+            <name>Monta Alegre</name>
+          </item>
+          <item>
+            <itextId>sub_districts-41</itextId>
+            <districts>Me Zochi</districts>
+            <name>Monte Cafe+Sao Carlos (Me-Zochi)+Santa Luzia</name>
+          </item>
+          <item>
+            <itextId>sub_districts-42</itextId>
+            <districts>Me Zochi</districts>
+            <name>Obo Izaquente+Diana</name>
+          </item>
+          <item>
+            <itextId>sub_districts-43</itextId>
+            <districts>Me Zochi</districts>
+            <name>Pedro Mateus+Quinta da Graca+ Oca oco</name>
+          </item>
+          <item>
+            <itextId>sub_districts-44</itextId>
+            <districts>Me Zochi</districts>
+            <name>Piedade+Santy</name>
+          </item>
+          <item>
+            <itextId>sub_districts-45</itextId>
+            <districts>Me Zochi</districts>
+            <name>Plateau+ Santa Elvira+ Santa Adelaide+ Sao Januario+ Zampalma+ Zampile</name>
+          </item>
+          <item>
+            <itextId>sub_districts-46</itextId>
+            <districts>Me Zochi</districts>
+            <name>Praia Melao</name>
+          </item>
+          <item>
+            <itextId>sub_districts-47</itextId>
+            <districts>Me Zochi</districts>
+            <name>San Nguembu</name>
+          </item>
+          <item>
+            <itextId>sub_districts-48</itextId>
+            <districts>Me Zochi</districts>
+            <name>Santa Margarida</name>
+          </item>
+          <item>
+            <itextId>sub_districts-49</itextId>
+            <districts>Me Zochi</districts>
+            <name>Sao Jose Trindade</name>
+          </item>
+          <item>
+            <itextId>sub_districts-50</itextId>
+            <districts>Me Zochi</districts>
+            <name>Sto Antonio (Boca Boca)+ Rio Lima</name>
+          </item>
+          <item>
+            <itextId>sub_districts-51</itextId>
+            <districts>Me Zochi</districts>
+            <name>Uba Budo</name>
+          </item>
+          <item>
+            <itextId>sub_districts-52</itextId>
+            <districts>Me Zochi</districts>
+            <name>Vaji Lido</name>
+          </item>
+          <item>
+            <itextId>sub_districts-53</itextId>
+            <districts>Me Zochi</districts>
+            <name>Vila de Almas</name>
+          </item>
+          <item>
+            <itextId>sub_districts-54</itextId>
+            <districts>Me Zochi</districts>
+            <name>Caixao Grande</name>
+          </item>
+          <item>
+            <itextId>sub_districts-55</itextId>
+            <districts>Principe</districts>
+            <name>Praia Inhame</name>
+          </item>
+          <item>
+            <itextId>sub_districts-56</itextId>
+            <districts>Principe</districts>
+            <name>Abade Praia e Roca+Portinho e Piedade</name>
+          </item>
+          <item>
+            <itextId>sub_districts-57</itextId>
+            <districts>Principe</districts>
+            <name>Aeroporto</name>
+          </item>
+          <item>
+            <itextId>sub_districts-58</itextId>
+            <districts>Principe</districts>
+            <name>Azeitona</name>
+          </item>
+          <item>
+            <itextId>sub_districts-59</itextId>
+            <districts>Principe</districts>
+            <name>Belo Monte +Paciencia+Praia Campanha</name>
+          </item>
+          <item>
+            <itextId>sub_districts-60</itextId>
+            <districts>Principe</districts>
+            <name>Budo Budo</name>
+          </item>
+          <item>
+            <itextId>sub_districts-61</itextId>
+            <districts>Principe</districts>
+            <name>Centro Da Cidade+Lenta Pia+Santo Antonio II+Sao Mateus</name>
+          </item>
+          <item>
+            <itextId>sub_districts-62</itextId>
+            <districts>Principe</districts>
+            <name>Chimalo</name>
+          </item>
+          <item>
+            <itextId>sub_districts-63</itextId>
+            <districts>Principe</districts>
+            <name>Gaspar Roca</name>
+          </item>
+          <item>
+            <itextId>sub_districts-64</itextId>
+            <districts>Principe</districts>
+            <name>Hospital Velho+Sao Joao+agua Namoro</name>
+          </item>
+          <item>
+            <itextId>sub_districts-65</itextId>
+            <districts>Principe</districts>
+            <name>Oque Ponte+ Quintal Sto Antonio+Praia Sto Antonio</name>
+          </item>
+          <item>
+            <itextId>sub_districts-66</itextId>
+            <districts>Principe</districts>
+            <name>Pincate+Montalegre</name>
+          </item>
+          <item>
+            <itextId>sub_districts-67</itextId>
+            <districts>Principe</districts>
+            <name>Ponta Sol+Daniel</name>
+          </item>
+          <item>
+            <itextId>sub_districts-68</itextId>
+            <districts>Principe</districts>
+            <name>Porto Real</name>
+          </item>
+          <item>
+            <itextId>sub_districts-69</itextId>
+            <districts>Principe</districts>
+            <name>Praia Burra</name>
+          </item>
+          <item>
+            <itextId>sub_districts-70</itextId>
+            <districts>Principe</districts>
+            <name>Rua Dos Trabalhadores</name>
+          </item>
+          <item>
+            <itextId>sub_districts-71</itextId>
+            <districts>Principe</districts>
+            <name>Rua Feliz</name>
+          </item>
+          <item>
+            <itextId>sub_districts-72</itextId>
+            <districts>Principe</districts>
+            <name>Santa Rita+ Uba Caju</name>
+          </item>
+          <item>
+            <itextId>sub_districts-73</itextId>
+            <districts>Principe</districts>
+            <name>Santo Cristo</name>
+          </item>
+          <item>
+            <itextId>sub_districts-74</itextId>
+            <districts>Principe</districts>
+            <name>Sao Joaquim+Praia Lapa</name>
+          </item>
+          <item>
+            <itextId>sub_districts-75</itextId>
+            <districts>Principe</districts>
+            <name>Sundy</name>
+          </item>
+          <item>
+            <itextId>sub_districts-76</itextId>
+            <districts>Principe</districts>
+            <name>Tchada+agua Doutor+Ponta Forte</name>
+          </item>
+          <item>
+            <itextId>sub_districts-77</itextId>
+            <districts>Principe</districts>
+            <name>Terreiro Velho+Praia Seca</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_ids">
+        <root>
+          <item>
+            <itextId>site_ids-0</itextId>
+            <name>101</name>
+            <sub_districts>Agua Bobo+ Sao Marcal</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-1</itextId>
+            <name>102</name>
+            <sub_districts>Agua Porca</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-2</itextId>
+            <name>103</name>
+            <sub_districts>Agua Serra</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-3</itextId>
+            <name>104</name>
+            <sub_districts>Almeirim</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-4</itextId>
+            <name>105</name>
+            <sub_districts>Atras do Estadio</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-5</itextId>
+            <name>106</name>
+            <sub_districts>Blublu</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-6</itextId>
+            <name>107</name>
+            <sub_districts>Boa Morte</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-7</itextId>
+            <name>108</name>
+            <sub_districts>Centro C. Sao Tome</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-8</itextId>
+            <name>109</name>
+            <sub_districts>Fruta Fruta</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-9</itextId>
+            <name>110</name>
+            <sub_districts>Gonga</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-10</itextId>
+            <name>111</name>
+            <sub_districts>Hospital</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-11</itextId>
+            <name>112</name>
+            <sub_districts>Madre-de-Deus</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-12</itextId>
+            <name>113</name>
+            <sub_districts>Oque-del-Rei</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-13</itextId>
+            <name>114</name>
+            <sub_districts>Pema Pema</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-14</itextId>
+            <name>115</name>
+            <sub_districts>Penha</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-15</itextId>
+            <name>116</name>
+            <sub_districts>Ponte Graca</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-16</itextId>
+            <name>117</name>
+            <sub_districts>Praia Cruz</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-17</itextId>
+            <name>118</name>
+            <sub_districts>Praia Gamboa</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-18</itextId>
+            <name>119</name>
+            <sub_districts>Riboque</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-19</itextId>
+            <name>120</name>
+            <sub_districts>Santo Antonio</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-20</itextId>
+            <name>121</name>
+            <sub_districts>Sao Gabriel</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-21</itextId>
+            <name>122</name>
+            <sub_districts>Sao Joao da Vargen</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-22</itextId>
+            <name>123</name>
+            <sub_districts>Saton</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-23</itextId>
+            <name>124</name>
+            <sub_districts>Vila de Pantufo Centro</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-24</itextId>
+            <name>125</name>
+            <sub_districts>Vila Fernanda</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-25</itextId>
+            <name>126</name>
+            <sub_districts>Vila Maria</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-26</itextId>
+            <name>127</name>
+            <sub_districts>agua Arroz</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-27</itextId>
+            <name>201</name>
+            <sub_districts>Agua Dago+ Amalia</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-28</itextId>
+            <name>202</name>
+            <sub_districts>Antonio Vaz</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-29</itextId>
+            <name>203</name>
+            <sub_districts>Belem</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-30</itextId>
+            <name>204</name>
+            <sub_districts>C. Trindade Centro</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-31</itextId>
+            <name>205</name>
+            <sub_districts>Caminho Novo</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-32</itextId>
+            <name>206</name>
+            <sub_districts>Canga+Agua Seca+Mulembu+agua Tanque</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-33</itextId>
+            <name>207</name>
+            <sub_districts>Cola Grande+Moreira Santo</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-34</itextId>
+            <name>208</name>
+            <sub_districts>Cova Barro</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-35</itextId>
+            <name>209</name>
+            <sub_districts>Cruzeiro</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-36</itextId>
+            <name>210</name>
+            <sub_districts>Filipina</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-37</itextId>
+            <name>211</name>
+            <sub_districts>Lemos</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-38</itextId>
+            <name>212</name>
+            <sub_districts>Margarida Manuel</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-39</itextId>
+            <name>213</name>
+            <sub_districts>Melhorada+ Brazileiro</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-40</itextId>
+            <name>214</name>
+            <sub_districts>Monta Alegre</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-41</itextId>
+            <name>215</name>
+            <sub_districts>Monte Cafe+Sao Carlos (Me-Zochi)+Santa Luzia</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-42</itextId>
+            <name>216</name>
+            <sub_districts>Obo Izaquente+Diana</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-43</itextId>
+            <name>217</name>
+            <sub_districts>Pedro Mateus+Quinta da Graca+ Oca oco</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-44</itextId>
+            <name>218</name>
+            <sub_districts>Piedade+Santy</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-45</itextId>
+            <name>219</name>
+            <sub_districts>Plateau+ Santa Elvira+ Santa Adelaide+ Sao Januario+ Zampalma+ Zampile</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-46</itextId>
+            <name>220</name>
+            <sub_districts>Praia Melao</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-47</itextId>
+            <name>221</name>
+            <sub_districts>San Nguembu</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-48</itextId>
+            <name>222</name>
+            <sub_districts>Santa Margarida</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-49</itextId>
+            <name>223</name>
+            <sub_districts>Sao Jose Trindade</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-50</itextId>
+            <name>224</name>
+            <sub_districts>Sto Antonio (Boca Boca)+ Rio Lima</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-51</itextId>
+            <name>225</name>
+            <sub_districts>Uba Budo</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-52</itextId>
+            <name>226</name>
+            <sub_districts>Vaji Lido</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-53</itextId>
+            <name>227</name>
+            <sub_districts>Vila de Almas</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-54</itextId>
+            <name>228</name>
+            <sub_districts>Caixao Grande</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-55</itextId>
+            <name>301</name>
+            <sub_districts>Praia Inhame</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-56</itextId>
+            <name>302</name>
+            <sub_districts>Abade Praia e Roca+Portinho e Piedade</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-57</itextId>
+            <name>303</name>
+            <sub_districts>Aeroporto</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-58</itextId>
+            <name>304</name>
+            <sub_districts>Azeitona</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-59</itextId>
+            <name>305</name>
+            <sub_districts>Belo Monte +Paciencia+Praia Campanha</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-60</itextId>
+            <name>306</name>
+            <sub_districts>Budo Budo</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-61</itextId>
+            <name>307</name>
+            <sub_districts>Centro Da Cidade+Lenta Pia+Santo Antonio II+Sao Mateus</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-62</itextId>
+            <name>308</name>
+            <sub_districts>Chimalo</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-63</itextId>
+            <name>309</name>
+            <sub_districts>Gaspar Roca</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-64</itextId>
+            <name>310</name>
+            <sub_districts>Hospital Velho+Sao Joao+agua Namoro</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-65</itextId>
+            <name>311</name>
+            <sub_districts>Oque Ponte+ Quintal Sto Antonio+Praia Sto Antonio</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-66</itextId>
+            <name>312</name>
+            <sub_districts>Pincate+Montalegre</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-67</itextId>
+            <name>313</name>
+            <sub_districts>Ponta Sol+Daniel</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-68</itextId>
+            <name>314</name>
+            <sub_districts>Porto Real</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-69</itextId>
+            <name>315</name>
+            <sub_districts>Praia Burra</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-70</itextId>
+            <name>316</name>
+            <sub_districts>Rua Dos Trabalhadores</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-71</itextId>
+            <name>317</name>
+            <sub_districts>Rua Feliz</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-72</itextId>
+            <name>318</name>
+            <sub_districts>Santa Rita+ Uba Caju</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-73</itextId>
+            <name>319</name>
+            <sub_districts>Santo Cristo</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-74</itextId>
+            <name>320</name>
+            <sub_districts>Sao Joaquim+Praia Lapa</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-75</itextId>
+            <name>321</name>
+            <sub_districts>Sundy</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-76</itextId>
+            <name>322</name>
+            <sub_districts>Tchada+agua Doutor+Ponta Forte</sub_districts>
+          </item>
+          <item>
+            <itextId>site_ids-77</itextId>
+            <name>323</name>
+            <sub_districts>Terreiro Velho+Praia Seca</sub_districts>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 0 and . &lt; 100" jr:constraintMsg="jr:itext('/data/codigo_da_entrevista:jr:constraintMsg')" nodeset="/data/codigo_da_entrevista" required="true()" type="int"/>
+      <bind nodeset="/data/distrito" required="true()" type="string"  db_add_col_1="."/>
+      <bind nodeset="/data/localidade" required="true()" type="string" db_add_col_1="/data/distrito" db_add_col_2="."/>
+      <bind nodeset="/data/codigo_localidade" required="true()" type="string" db_add_col_2="/data/localidade" db_add_col_3="."/>
+      <bind nodeset="/data/num_casa" required="true()" type="string" db_add_col_3="/data/codigo_localidade" db_add_col_4="."/>
+      <bind nodeset="/data/data_entrevista" required="true()" type="date"/>
+      <bind nodeset="/data/populacao" required="true()" type="int"/>
+      <bind nodeset="/data/notas" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start_date" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end_date" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/codigo_da_entrevista">
+      <label ref="jr:itext('/data/codigo_da_entrevista:label')"/>
+    </input>
+    <select1 ref="/data/distrito">
+      <label ref="jr:itext('/data/distrito:label')"/>
+      <item>
+        <label ref="jr:itext('/data/distrito/Aqua Grande:label')"/>
+        <value>Aqua Grande</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/distrito/Me Zochi:label')"/>
+        <value>Me Zochi</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/distrito/Principe:label')"/>
+        <value>Principe</value>
+      </item>
+    </select1>
+    <select1 ref="/data/localidade">
+      <label ref="jr:itext('/data/localidade:label')"/>
+      <itemset nodeset="instance('sub_districts')/root/item[districts =  /data/distrito ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/codigo_localidade">
+      <label ref="jr:itext('/data/codigo_localidade:label')"/>
+      <itemset nodeset="instance('site_ids')/root/item[sub_districts =  /data/localidade ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/num_casa">
+      <label ref="jr:itext('/data/num_casa:label')"/>
+    </input>
+    <input ref="/data/data_entrevista">
+      <label ref="jr:itext('/data/data_entrevista:label')"/>
+    </input>
+    <input ref="/data/populacao">
+      <label ref="jr:itext('/data/populacao:label')"/>
+    </input>
+    <input ref="/data/notas">
+      <label ref="jr:itext('/data/notas:label')"/>
+    </input>
+  </h:body>
+</h:html>
