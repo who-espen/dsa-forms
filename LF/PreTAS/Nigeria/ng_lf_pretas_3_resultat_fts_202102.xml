@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -7,12 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>3. Nigeria - Pre TAS FL FTS Results</h:title>
+    <h:title>3. Nigeria - Pre TAS LF FTS Results Form</h:title>
     <model >
 
       <instance>
-
-        <data id="ng_lf_pretas_3_resultat_fts_202102" version="20210216">
+        <data id="ng_lf_pretas_3_resultat_fts_202102_2" version="20210216">
           <d_recorderID/>
           <d_region/>
           <d_district/>
@@ -31,7 +30,6 @@
           <d_why_invalid2/>
           <d_why_invalid_other2/>
           <d_display_result2/>
-          <d_need_third_test/>
           <d_final_result/>
           <d_display_final_result/>
           <d_positive_why_no_tx/>
@@ -124,13 +122,13 @@
           <text id="/data/d_result1:hint">
             <value>Invalid includes testing errors and insufficient blood</value>
           </text>
-          <text id="/data/d_result1/Positif:label">
+          <text id="/data/d_result1/Positive:label">
             <value>Positif</value>
           </text>
-          <text id="/data/d_result1/Négatif:label">
+          <text id="/data/d_result1/Negative:label">
             <value>Négatif</value>
           </text>
-          <text id="/data/d_result1/Invalide:label">
+          <text id="/data/d_result1/Invalid:label">
             <value>Invalide</value>
           </text>
           <text id="/data/d_why_invalid1:label">
@@ -176,13 +174,13 @@
           <text id="/data/d_result2:hint">
             <value>Invalide comprend les erreurs de test et le sang insuffisant</value>
           </text>
-          <text id="/data/d_result2/Positif:label">
+          <text id="/data/d_result2/Positive:label">
             <value>Positif</value>
           </text>
-          <text id="/data/d_result2/Négatif:label">
+          <text id="/data/d_result2/Negative:label">
             <value>Négatif</value>
           </text>
-          <text id="/data/d_result2/Invalide:label">
+          <text id="/data/d_result2/Invalid:label">
             <value>Invalide</value>
           </text>
           <text id="/data/d_why_invalid2:label">
@@ -211,10 +209,6 @@
           </text>
           <text id="/data/d_why_invalid_other2:label">
             <value>Expliquer la raison 'Autre' d'invalidité du test 2</value>
-          </text>
-          <text id="/data/d_need_third_test:label">
-            <value>Le second résultat du test de ce participant est <output value=" /data/d_display_result2 "/>
-. Ce résultat nécessite un troisième test. Continuez ce questionnaire pour entrer le résultat du troisième du test du participant.</value>
           </text>
           <text id="/data/d_display_final_result:label">
             <value>Le résultat final de ce participant est: <output value=" /data/d_final_result "/>
@@ -1189,9 +1183,6 @@
           <text id="/data/d_why_invalid_other2:hint">
             <value>-</value>
           </text>
-          <text id="/data/d_need_third_test:hint">
-            <value>-</value>
-          </text>
         </translation>
         <translation default="true()" lang="English">
           <text id="/data/d_recorderID:jr:constraintMsg">
@@ -1249,7 +1240,7 @@
             <value>The code must be a three-digit number</value>
           </text>
           <text id="/data/d_cluster_id:label">
-            <value>Enter Site ID</value>
+            <value>Select the Site ID</value>
           </text>
           <text id="/data/d_code_id:jr:constraintMsg">
             <value>example 15-123-1 (only with number and dashes)</value>
@@ -1272,13 +1263,13 @@
           <text id="/data/d_result1:hint">
             <value>"Invalid" includes testing errors and insufficient blood</value>
           </text>
-          <text id="/data/d_result1/Positif:label">
+          <text id="/data/d_result1/Positive:label">
             <value>Positive</value>
           </text>
-          <text id="/data/d_result1/Négatif:label">
+          <text id="/data/d_result1/Negative:label">
             <value>Negative</value>
           </text>
-          <text id="/data/d_result1/Invalide:label">
+          <text id="/data/d_result1/Invalid:label">
             <value>Invalid</value>
           </text>
           <text id="/data/d_why_invalid1:label">
@@ -1321,13 +1312,13 @@
           <text id="/data/d_result2:hint">
             <value>"Invalid" includes testing errors and insufficient blood</value>
           </text>
-          <text id="/data/d_result2/Positif:label">
+          <text id="/data/d_result2/Positive:label">
             <value>Positive</value>
           </text>
-          <text id="/data/d_result2/Négatif:label">
+          <text id="/data/d_result2/Negative:label">
             <value>Negative</value>
           </text>
-          <text id="/data/d_result2/Invalide:label">
+          <text id="/data/d_result2/Invalid:label">
             <value>Invalid</value>
           </text>
           <text id="/data/d_why_invalid2:label">
@@ -1362,13 +1353,6 @@
           </text>
           <text id="/data/d_why_invalid_other2:hint">
             <value>text</value>
-          </text>
-          <text id="/data/d_need_third_test:label">
-            <value>This participant's first test result was <output value=" /data/d_display_result1 "/>
-. This result requires a second test. Continue this questionnaire to enter the participant's second test result.</value>
-          </text>
-          <text id="/data/d_need_third_test:hint">
-            <value>note</value>
           </text>
           <text id="/data/d_display_final_result:label">
             <value>This participant's final result is: <output value=" /data/d_final_result "/>
@@ -2342,7 +2326,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="yes_no">
         <root>
           <item>
@@ -2371,15 +2354,15 @@
         <root>
           <item>
             <itextId>results_list-0</itextId>
-            <name>Positif</name>
+            <name>Positive</name>
           </item>
           <item>
             <itextId>results_list-1</itextId>
-            <name>Négatif</name>
+            <name>Negative</name>
           </item>
           <item>
             <itextId>results_list-2</itextId>
-            <name>Invalide</name>
+            <name>Invalid</name>
           </item>
         </root>
       </instance>
@@ -3958,18 +3941,16 @@
       <bind constraint=". =  /data/d_code_id " jr:constraintMsg="jr:itext('/data/d_code_id2:jr:constraintMsg')" nodeset="/data/d_code_id2" required="true()" type="string"/>
       <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
-      <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalide'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalid'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid_other1" relevant="selected( /data/d_why_invalid1 ,'Other')" required="true()" type="string"/>
       <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result1" required="true()" type="string"/>
-      <bind nodeset="/data/d_need_second_test" readonly="true()" relevant=" /data/d_result1  = 'Positif' or  /data/d_result1  = 'Invalide'" type="string"/>
-      <bind nodeset="/data/d_lotnumber2" relevant=" /data/d_result1  = 'Positif' or  /data/d_result1  = 'Invalide'" required="true()" type="string"/>
-      <bind nodeset="/data/d_result2" relevant=" /data/d_result1  = 'Positif' or  /data/d_result1  = 'Invalide'" required="true()" type="string"/>
-      <bind nodeset="/data/d_why_invalid2" relevant=" /data/d_result2  = 'Invalide'" required="true()" type="string"/>
+      <bind nodeset="/data/d_need_second_test" readonly="true()" relevant=" /data/d_result1  = 'Positive' or  /data/d_result1  = 'Invalid'" type="string"/>
+      <bind nodeset="/data/d_lotnumber2" relevant=" /data/d_result1  = 'Positive' or  /data/d_result1  = 'Invalid'" required="true()" type="string"/>
+      <bind nodeset="/data/d_result2" relevant=" /data/d_result1  = 'Positive' or  /data/d_result1  = 'Invalid'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid2" relevant=" /data/d_result2  = 'Invalid'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid_other2" relevant="selected( /data/d_why_invalid2 ,'Other')" required="true()" type="string"/>
-      <bind calculate=" /data/d_result2 " nodeset="/data/d_display_result2" relevant=" /data/d_result1  = 'Positif' or  /data/d_result1  = 'Invalide'" type="string"/>
-      <bind nodeset="/data/d_need_third_test" readonly="true()" relevant="( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Négatif')
-or ( /data/d_result1  = 'Positif' and  /data/d_result2  = 'Invalide')
-or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="string"/>
+      <bind calculate=" /data/d_result2 " nodeset="/data/d_display_result2" relevant=" /data/d_result1  = 'Positive' or  /data/d_result1  = 'Invalid'" type="string"/>
+
       <bind calculate="if( /data/d_result1 =&quot;Positive&quot; and  /data/d_result2 =&quot;Positive&quot;, &quot;Positive&quot;,
  if( /data/d_result1 =&quot;Positive&quot; and  /data/d_result2 =&quot;Negative&quot;, &quot;Indeterminate&quot;,
  if( /data/d_result1 =&quot;Positive&quot; and  /data/d_result2 =&quot;Invalid&quot;, &quot;Positive&quot;,
@@ -3982,7 +3963,7 @@ or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="str
  )
 )" nodeset="/data/d_final_result" type="string"/>
       <bind nodeset="/data/d_display_final_result" readonly="true()" type="string"/>
-      <bind nodeset="/data/d_positive_why_no_tx" relevant=" /data/d_final_result  = 'Positif'" type="string"/>
+      <bind nodeset="/data/d_positive_why_no_tx" relevant=" /data/d_final_result  = 'Positive'" type="string"/>
       <bind nodeset="/data/notes_part" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
@@ -4075,16 +4056,16 @@ or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="str
       <label ref="jr:itext('/data/d_result1:label')"/>
       <hint ref="jr:itext('/data/d_result1:hint')"/>
       <item>
-        <label ref="jr:itext('/data/d_result1/Positif:label')"/>
-        <value>Positif</value>
+        <label ref="jr:itext('/data/d_result1/Positive:label')"/>
+        <value>Positive</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_result1/Négatif:label')"/>
-        <value>Négatif</value>
+        <label ref="jr:itext('/data/d_result1/Negative:label')"/>
+        <value>Negative</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_result1/Invalide:label')"/>
-        <value>Invalide</value>
+        <label ref="jr:itext('/data/d_result1/Invalid:label')"/>
+        <value>Invalid</value>
       </item>
     </select1>
     <select ref="/data/d_why_invalid1">
@@ -4132,16 +4113,16 @@ or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="str
       <label ref="jr:itext('/data/d_result2:label')"/>
       <hint ref="jr:itext('/data/d_result2:hint')"/>
       <item>
-        <label ref="jr:itext('/data/d_result2/Positif:label')"/>
-        <value>Positif</value>
+        <label ref="jr:itext('/data/d_result2/Positive:label')"/>
+        <value>Positive</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_result2/Négatif:label')"/>
-        <value>Négatif</value>
+        <label ref="jr:itext('/data/d_result2/Negative:label')"/>
+        <value>Negative</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_result2/Invalide:label')"/>
-        <value>Invalide</value>
+        <label ref="jr:itext('/data/d_result2/Invalid:label')"/>
+        <value>Invalid</value>
       </item>
     </select1>
     <select ref="/data/d_why_invalid2">
@@ -4179,10 +4160,6 @@ or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="str
     <input ref="/data/d_why_invalid_other2">
       <label ref="jr:itext('/data/d_why_invalid_other2:label')"/>
       <hint ref="jr:itext('/data/d_why_invalid_other2:hint')"/>
-    </input>
-    <input ref="/data/d_need_third_test">
-      <label ref="jr:itext('/data/d_need_third_test:label')"/>
-      <hint ref="jr:itext('/data/d_need_third_test:hint')"/>
     </input>
     <input ref="/data/d_display_final_result">
       <label ref="jr:itext('/data/d_display_final_result:label')"/>
