@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>1. Nigeria - Pre TAS LF Site Form</h:title>
+    <h:title>1. Nigeria - Pre TAS LF Site Form V2</h:title>
     <model >
 
       <instance>
-        <data id="ng_lf_pretas_1_site_202102" version="20200216">
+        <data id="ng_lf_pretas_1_site_202102_v2" version="20200219">
           <c_recorder/>
           <c_region/>
           <c_district/>
@@ -334,7 +334,7 @@
             <value>KwasaIIo</value>
           </text>
           <text id="site_liste-19">
-            <value>Turawa</value>
+            <value>Turawa-KD</value>
           </text>
           <text id="site_liste-20">
             <value>Abet</value>
@@ -364,7 +364,7 @@
             <value>Tinkis</value>
           </text>
           <text id="site_liste-29">
-            <value>Turawa</value>
+            <value>Turawa-KN</value>
           </text>
           <text id="site_liste-30">
             <value>Durba</value>
@@ -1353,7 +1353,7 @@
             <value>KwasaIIo</value>
           </text>
           <text id="site_liste-19">
-            <value>Turawa</value>
+            <value>Turawa-KD</value>
           </text>
           <text id="site_liste-20">
             <value>Abet</value>
@@ -1383,7 +1383,7 @@
             <value>Tinkis</value>
           </text>
           <text id="site_liste-29">
-            <value>Turawa</value>
+            <value>Turawa-KN</value>
           </text>
           <text id="site_liste-30">
             <value>Durba</value>
@@ -2421,7 +2421,7 @@
           </item>
           <item>
             <itextId>site_liste-19</itextId>
-            <name>Turawa</name>
+            <name>Turawa-KD</name>
             <ui_liste>Soba</ui_liste>
           </item>
           <item>
@@ -2471,7 +2471,7 @@
           </item>
           <item>
             <itextId>site_liste-29</itextId>
-            <name>Turawa</name>
+            <name>Turawa-KN</name>
             <ui_liste>Karaye</ui_liste>
           </item>
           <item>
@@ -2846,7 +2846,7 @@
           <item>
             <itextId>site_type-19</itextId>
             <name>Spot check site community</name>
-            <site_liste>Turawa</site_liste>
+            <site_liste>Turawa-KD</site_liste>
           </item>
           <item>
             <itextId>site_type-20</itextId>
@@ -2896,7 +2896,7 @@
           <item>
             <itextId>site_type-29</itextId>
             <name>Sentinel site community</name>
-            <site_liste>Turawa</site_liste>
+            <site_liste>Turawa-KN</site_liste>
           </item>
           <item>
             <itextId>site_type-30</itextId>
@@ -3270,7 +3270,7 @@
           <item>
             <itextId>site_code-19</itextId>
             <name>120</name>
-            <site_liste>Turawa</site_liste>
+            <site_liste>Turawa-KD</site_liste>
           </item>
           <item>
             <itextId>site_code-20</itextId>
@@ -3320,7 +3320,7 @@
           <item>
             <itextId>site_code-29</itextId>
             <name>130</name>
-            <site_liste>Turawa</site_liste>
+            <site_liste>Turawa-KN</site_liste>
           </item>
           <item>
             <itextId>site_code-30</itextId>
@@ -3607,11 +3607,11 @@
         </root>
       </instance>
       <bind constraint=". &gt; 9 and . &lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder:jr:constraintMsg')" nodeset="/data/c_recorder" required="true()" type="int"/>
-      <bind nodeset="/data/c_region" required="true()" type="string"  db_add_col_1="."/>
+      <bind nodeset="/data/c_region" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="/data/c_region" db_add_col_2="."/>
       <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_district" db_add_col_3="."/>
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
-      <bind nodeset="/data/c_site_type" required="true()" type="string" db_add_col_4="/data/c_cluster_name" db_add_col_5="."/>
+      <bind nodeset="/data/c_site_type" required="true()" type="string"/>
       <bind nodeset="/data/c_cluster_leader" required="true()" type="string"/>
       <bind nodeset="/data/c_consent" required="true()" type="string"/>
       <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
