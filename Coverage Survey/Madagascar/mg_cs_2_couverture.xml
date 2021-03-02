@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>2. Couverture</h:title>
+    <model >
+
+      <instance>
+        <data id="mg_cs_2_couverture" version="20210224">
+          <c_recorder_id/>
+          <c_district/>
+          <c_site/>
+          <c_site_id/>
+          <c_hh_code/>
+          <c_participant_id/>
+          <c_sex/>
+          <c_age_yrs/>
+          <c_age_month/>
+          <c_hh_present/>
+          <c_dec>
+            <a_recu_medicament1/>
+            <raison_pas_recu_med1/>
+            <raison_pas_recu_med_autres1/>
+            <a_avale_med1/>
+            <raison_avoir_avale1/>
+            <raison_avoir_avale_autres1/>
+            <raison_pas_avale1/>
+            <raison_pas_avale_autre1/>
+          </c_dec>
+          <ivm>
+            <a_recu_medicament2/>
+            <raison_pas_recu_med2/>
+            <raison_pas_recu_med_autres2/>
+            <a_avale_med2/>
+            <raison_avoir_avale2/>
+            <raison_avoir_avale_autres2/>
+            <raison_pas_avale2/>
+            <raison_pas_avale_autre2/>
+          </ivm>
+          <alb>
+            <a_recu_medicament3/>
+            <raison_pas_recu_med3/>
+            <raison_pas_recu_med_autres3/>
+            <a_avale_med3/>
+            <raison_avoir_avale3/>
+            <raison_avoir_avale_autres3/>
+            <raison_pas_avale3/>
+            <raison_pas_avale_autre3/>
+          </alb>
+          <notas/>
+          <start_date/>
+          <end_date/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/c_recorder_id:jr:constraintMsg">
+            <value>The code must be between 0 and 100</value>
+          </text>
+          <text id="/data/c_recorder_id:label">
+            <value>Code Opérateur</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>District</value>
+          </text>
+          <text id="/data/c_site:label">
+            <value>Localité</value>
+          </text>
+          <text id="/data/c_site_id:label">
+            <value>Code Localité</value>
+          </text>
+          <text id="/data/c_hh_code:label">
+            <value>Code ménage</value>
+          </text>
+          <text id="/data/c_participant_id:label">
+            <value>Code enquêté</value>
+          </text>
+          <text id="/data/c_sex:label">
+            <value>Sex</value>
+          </text>
+          <text id="/data/c_sex/M:label">
+            <value>M</value>
+          </text>
+          <text id="/data/c_sex/F:label">
+            <value>F</value>
+          </text>
+          <text id="/data/c_age_yrs:jr:constraintMsg">
+            <value>La valeur de l'âge est incorrecte</value>
+          </text>
+          <text id="/data/c_age_yrs:label">
+            <value>Age (Année)</value>
+          </text>
+          <text id="/data/c_age_month:jr:constraintMsg">
+            <value>La valeur de l'âge est incorrecte</value>
+          </text>
+          <text id="/data/c_age_month:label">
+            <value>Age (Moi)</value>
+          </text>
+          <text id="/data/c_hh_present:label">
+            <value>Membre du ménage présent</value>
+          </text>
+          <text id="/data/c_hh_present/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_hh_present/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_dec:label">
+            <value>DIETHYLECARBAMAZINE (DEC)</value>
+          </text>
+          <text id="/data/c_dec/a_recu_medicament1:label">
+            <value>(DEC) A reçu les médicaments</value>
+          </text>
+          <text id="/data/c_dec/a_recu_medicament1/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_dec/a_recu_medicament1/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_dec/a_recu_medicament1/Ne sais pas:label">
+            <value>Ne sais pas</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med1:label">
+            <value>(DEC) Raison pour laquelle n'avoir pas reçu les médicaments</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med1/1.Underage:label">
+            <value>1. Underage</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med1/2.Enceinte:label">
+            <value>2. Enceinte</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med1/3.Alletante:label">
+            <value>3. Alletante</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med1/4.Malade:label">
+            <value>4. Malade</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med1/5.Absent:label">
+            <value>5. Absent</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med1/6.N'ayant.été.informé.de.la.campagne:label">
+            <value>6. N'ayant été informé de la campagne</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med1/7.Plus.de.médicaments:label">
+            <value>7. Plus de médicaments</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med1/8.Le.DC.n'est.pas.venu:label">
+            <value>8. Le DC n'est pas venu</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med1/Autres:label">
+            <value>9. Autres</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_recu_med_autres1:label">
+            <value>(DEC) Veuillez préciser les autres raisons</value>
+          </text>
+          <text id="/data/c_dec/a_avale_med1:label">
+            <value>(DEC) A avaler le(s) médicament(s) ?</value>
+          </text>
+          <text id="/data/c_dec/a_avale_med1/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_dec/a_avale_med1/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_dec/a_avale_med1/Ne sais pas:label">
+            <value>Ne sais pas</value>
+          </text>
+          <text id="/data/c_dec/raison_avoir_avale1:label">
+            <value>(DEC) Raison d'avoir avalé</value>
+          </text>
+          <text id="/data/c_dec/raison_avoir_avale1/1.Peur.de.la.maladie:label">
+            <value>1. Peur de la maladie</value>
+          </text>
+          <text id="/data/c_dec/raison_avoir_avale1/2.Pour.traiter.la.maladie:label">
+            <value>2. Pour traiter la maladie</value>
+          </text>
+          <text id="/data/c_dec/raison_avoir_avale1/3.Parce.que.c'est.gratuit:label">
+            <value>3. Parce que c'est gratuit</value>
+          </text>
+          <text id="/data/c_dec/raison_avoir_avale1/4.Informations.utiles.ont.été.données.par.le.DC:label">
+            <value>4. Informations utiles ont été données par le DC</value>
+          </text>
+          <text id="/data/c_dec/raison_avoir_avale1/Autres:label">
+            <value>5. Autres</value>
+          </text>
+          <text id="/data/c_dec/raison_avoir_avale_autres1:label">
+            <value>(DEC) Veuillez préciser les autres raisons</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_avale1:label">
+            <value>(DEC) Raison de ne pas d'avoir avalé</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_avale1/1.Peur.des.effets.secondaires:label">
+            <value>1. Peur des effets secondaires</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_avale1/2.Mauvais.goût:label">
+            <value>2. Mauvais goût</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_avale1/3.Je.ne.suis.pas.malade:label">
+            <value>3. Je ne suis pas malade</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_avale1/4.Pas.assez.informé:label">
+            <value>4. Pas assez informé</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_avale1/Autres:label">
+            <value>5. Autres</value>
+          </text>
+          <text id="/data/c_dec/raison_pas_avale_autre1:label">
+            <value>(DEC) Veuillez préciser les autres raisons</value>
+          </text>
+          <text id="/data/ivm:label">
+            <value>Ivermectin (IVM)</value>
+          </text>
+          <text id="/data/ivm/a_recu_medicament2:label">
+            <value>(IVM) A reçu les médicaments</value>
+          </text>
+          <text id="/data/ivm/a_recu_medicament2/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/ivm/a_recu_medicament2/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/ivm/a_recu_medicament2/Ne sais pas:label">
+            <value>Ne sais pas</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med2:label">
+            <value>(IVM) Raison pour laquelle n'avoir pas reçu les médicaments</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med2/1.Underage:label">
+            <value>1. Underage</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med2/2.Enceinte:label">
+            <value>2. Enceinte</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med2/3.Alletante:label">
+            <value>3. Alletante</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med2/4.Malade:label">
+            <value>4. Malade</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med2/5.Absent:label">
+            <value>5. Absent</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med2/6.N'ayant.été.informé.de.la.campagne:label">
+            <value>6. N'ayant été informé de la campagne</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med2/7.Plus.de.médicaments:label">
+            <value>7. Plus de médicaments</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med2/8.Le.DC.n'est.pas.venu:label">
+            <value>8. Le DC n'est pas venu</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med2/Autres:label">
+            <value>9. Autres</value>
+          </text>
+          <text id="/data/ivm/raison_pas_recu_med_autres2:label">
+            <value>(IVM) Veuillez préciser les autres raisons</value>
+          </text>
+          <text id="/data/ivm/a_avale_med2:label">
+            <value>(IVM) A avaler le(s) médicament(s) ?</value>
+          </text>
+          <text id="/data/ivm/a_avale_med2/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/ivm/a_avale_med2/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/ivm/a_avale_med2/Ne sais pas:label">
+            <value>Ne sais pas</value>
+          </text>
+          <text id="/data/ivm/raison_avoir_avale2:label">
+            <value>(IVM) Raison d'avoir avalé</value>
+          </text>
+          <text id="/data/ivm/raison_avoir_avale2/1.Peur.de.la.maladie:label">
+            <value>1. Peur de la maladie</value>
+          </text>
+          <text id="/data/ivm/raison_avoir_avale2/2.Pour.traiter.la.maladie:label">
+            <value>2. Pour traiter la maladie</value>
+          </text>
+          <text id="/data/ivm/raison_avoir_avale2/3.Parce.que.c'est.gratuit:label">
+            <value>3. Parce que c'est gratuit</value>
+          </text>
+          <text id="/data/ivm/raison_avoir_avale2/4.Informations.utiles.ont.été.données.par.le.DC:label">
+            <value>4. Informations utiles ont été données par le DC</value>
+          </text>
+          <text id="/data/ivm/raison_avoir_avale2/Autres:label">
+            <value>5. Autres</value>
+          </text>
+          <text id="/data/ivm/raison_avoir_avale_autres2:label">
+            <value>(IVM)Veuillez préciser les autres raisons</value>
+          </text>
+          <text id="/data/ivm/raison_pas_avale2:label">
+            <value>(IVM) Raison de ne pas d'avoir avalé</value>
+          </text>
+          <text id="/data/ivm/raison_pas_avale2/1.Peur.des.effets.secondaires:label">
+            <value>1. Peur des effets secondaires</value>
+          </text>
+          <text id="/data/ivm/raison_pas_avale2/2.Mauvais.goût:label">
+            <value>2. Mauvais goût</value>
+          </text>
+          <text id="/data/ivm/raison_pas_avale2/3.Je.ne.suis.pas.malade:label">
+            <value>3. Je ne suis pas malade</value>
+          </text>
+          <text id="/data/ivm/raison_pas_avale2/4.Pas.assez.informé:label">
+            <value>4. Pas assez informé</value>
+          </text>
+          <text id="/data/ivm/raison_pas_avale2/Autres:label">
+            <value>5. Autres</value>
+          </text>
+          <text id="/data/ivm/raison_pas_avale_autre2:label">
+            <value>(IVM) Veuillez préciser les autres raisons</value>
+          </text>
+          <text id="/data/alb:label">
+            <value>ALBENDAZOLE (ALB)</value>
+          </text>
+          <text id="/data/alb/a_recu_medicament3:label">
+            <value>(ALB) A reçu les médicaments</value>
+          </text>
+          <text id="/data/alb/a_recu_medicament3/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/alb/a_recu_medicament3/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/alb/a_recu_medicament3/Ne sais pas:label">
+            <value>Ne sais pas</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med3:label">
+            <value>(ALB) Raison pour laquelle n'avoir pas reçu les médicaments</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med3/1.Underage:label">
+            <value>1. Underage</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med3/2.Enceinte:label">
+            <value>2. Enceinte</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med3/3.Alletante:label">
+            <value>3. Alletante</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med3/4.Malade:label">
+            <value>4. Malade</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med3/5.Absent:label">
+            <value>5. Absent</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med3/6.N'ayant.été.informé.de.la.campagne:label">
+            <value>6. N'ayant été informé de la campagne</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med3/7.Plus.de.médicaments:label">
+            <value>7. Plus de médicaments</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med3/8.Le.DC.n'est.pas.venu:label">
+            <value>8. Le DC n'est pas venu</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med3/Autres:label">
+            <value>9. Autres</value>
+          </text>
+          <text id="/data/alb/raison_pas_recu_med_autres3:label">
+            <value>(ALB) Veuillez préciser les autres raisons</value>
+          </text>
+          <text id="/data/alb/a_avale_med3:label">
+            <value>(ALB) A avaler le(s) médicament(s) ?</value>
+          </text>
+          <text id="/data/alb/a_avale_med3/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/alb/a_avale_med3/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/alb/a_avale_med3/Ne sais pas:label">
+            <value>Ne sais pas</value>
+          </text>
+          <text id="/data/alb/raison_avoir_avale3:label">
+            <value>(ALB) Raison d'avoir avalé</value>
+          </text>
+          <text id="/data/alb/raison_avoir_avale3/1.Peur.de.la.maladie:label">
+            <value>1. Peur de la maladie</value>
+          </text>
+          <text id="/data/alb/raison_avoir_avale3/2.Pour.traiter.la.maladie:label">
+            <value>2. Pour traiter la maladie</value>
+          </text>
+          <text id="/data/alb/raison_avoir_avale3/3.Parce.que.c'est.gratuit:label">
+            <value>3. Parce que c'est gratuit</value>
+          </text>
+          <text id="/data/alb/raison_avoir_avale3/4.Informations.utiles.ont.été.données.par.le.DC:label">
+            <value>4. Informations utiles ont été données par le DC</value>
+          </text>
+          <text id="/data/alb/raison_avoir_avale3/Autres:label">
+            <value>5. Autres</value>
+          </text>
+          <text id="/data/alb/raison_avoir_avale_autres3:label">
+            <value>(ALB) Veuillez préciser les autres raisons</value>
+          </text>
+          <text id="/data/alb/raison_pas_avale3:label">
+            <value>(ALB) Raison de ne pas d'avoir avalé</value>
+          </text>
+          <text id="/data/alb/raison_pas_avale3/1.Peur.des.effets.secondaires:label">
+            <value>1. Peur des effets secondaires</value>
+          </text>
+          <text id="/data/alb/raison_pas_avale3/2.Mauvais.goût:label">
+            <value>2. Mauvais goût</value>
+          </text>
+          <text id="/data/alb/raison_pas_avale3/3.Je.ne.suis.pas.malade:label">
+            <value>3. Je ne suis pas malade</value>
+          </text>
+          <text id="/data/alb/raison_pas_avale3/4.Pas.assez.informé:label">
+            <value>4. Pas assez informé</value>
+          </text>
+          <text id="/data/alb/raison_pas_avale3/Autres:label">
+            <value>5. Autres</value>
+          </text>
+          <text id="/data/alb/raison_pas_avale_autre3:label">
+            <value>(ALB) Veuillez préciser les autres raisons</value>
+          </text>
+          <text id="/data/notas:label">
+            <value>Notes additionnelles</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint=". &gt; 0 and . &lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/c_site" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/c_district"/>
+      <bind nodeset="/data/c_site_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/c_site_id"/>
+      <bind nodeset="/data/c_hh_code" required="true()" type="string"/>
+      <bind nodeset="/data/c_participant_id" required="true()" type="int"/>
+      <bind nodeset="/data/c_sex" required="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt; 120" jr:constraintMsg="jr:itext('/data/c_age_yrs:jr:constraintMsg')" nodeset="/data/c_age_yrs" required="true()" type="int"/>
+      <bind constraint=". &gt; 0 and . &lt;= 12" jr:constraintMsg="jr:itext('/data/c_age_month:jr:constraintMsg')" nodeset="/data/c_age_month" relevant=" /data/c_age_yrs  = 0" required="true()" type="int"/>
+      <bind nodeset="/data/c_hh_present" required="true()" type="string"/>
+      <bind nodeset="/data/c_dec/a_recu_medicament1" required="true()" type="string"/>
+      <bind nodeset="/data/c_dec/raison_pas_recu_med1" relevant="selected( /data/c_dec/a_recu_medicament1 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/c_dec/raison_pas_recu_med_autres1" relevant="selected( /data/c_dec/raison_pas_recu_med1 , 'Autres') and selected( /data/c_dec/a_recu_medicament1 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/c_dec/a_avale_med1" relevant="selected( /data/c_dec/a_recu_medicament1 , 'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/c_dec/raison_avoir_avale1" relevant="selected( /data/c_dec/a_avale_med1 , 'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/c_dec/raison_avoir_avale_autres1" relevant="selected( /data/c_dec/raison_avoir_avale1 , 'Autres') and selected( /data/c_dec/a_recu_medicament1 , 'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/c_dec/raison_pas_avale1" relevant="selected( /data/c_dec/a_avale_med1 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/c_dec/raison_pas_avale_autre1" relevant="selected( /data/c_dec/raison_pas_avale1 , 'Autres') and selected( /data/c_dec/a_avale_med1 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/ivm/a_recu_medicament2" required="true()" type="string"/>
+      <bind nodeset="/data/ivm/raison_pas_recu_med2" relevant="selected( /data/ivm/a_recu_medicament2 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/ivm/raison_pas_recu_med_autres2" relevant="selected( /data/ivm/raison_pas_recu_med2 , 'Autres') and selected( /data/ivm/a_recu_medicament2 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/ivm/a_avale_med2" relevant="selected( /data/ivm/a_recu_medicament2 , 'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/ivm/raison_avoir_avale2" relevant="selected( /data/ivm/a_avale_med2 , 'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/ivm/raison_avoir_avale_autres2" relevant="selected( /data/ivm/raison_avoir_avale2 , 'Autres') and selected( /data/ivm/a_recu_medicament2 , 'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/ivm/raison_pas_avale2" relevant="selected( /data/ivm/a_avale_med2 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/ivm/raison_pas_avale_autre2" relevant="selected( /data/ivm/raison_pas_avale2 , 'Autres') and selected( /data/ivm/a_avale_med2 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/alb/a_recu_medicament3" required="true()" type="string"/>
+      <bind nodeset="/data/alb/raison_pas_recu_med3" relevant="selected( /data/alb/a_recu_medicament3 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/alb/raison_pas_recu_med_autres3" relevant="selected( /data/alb/raison_pas_recu_med3 , 'Autres') and selected( /data/alb/a_recu_medicament3 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/alb/a_avale_med3" relevant="selected( /data/alb/a_recu_medicament3 , 'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/alb/raison_avoir_avale3" relevant="selected( /data/alb/a_avale_med3 , 'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/alb/raison_avoir_avale_autres3" relevant="selected( /data/alb/raison_avoir_avale3 , 'Autres') and selected( /data/alb/a_recu_medicament3 , 'Oui')" required="true()" type="string"/>
+      <bind nodeset="/data/alb/raison_pas_avale3" relevant="selected( /data/alb/a_avale_med3 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/alb/raison_pas_avale_autre3" relevant="selected( /data/alb/raison_pas_avale3 , 'Autres') and selected( /data/alb/a_avale_med3 , 'Non')" required="true()" type="string"/>
+      <bind nodeset="/data/notas" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start_date" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end_date" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder_id">
+      <label ref="jr:itext('/data/c_recorder_id:label')"/>
+    </input>
+    <input ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+    </input>
+    <input ref="/data/c_site">
+      <label ref="jr:itext('/data/c_site:label')"/>
+    </input>
+    <input ref="/data/c_site_id">
+      <label ref="jr:itext('/data/c_site_id:label')"/>
+    </input>
+    <input ref="/data/c_hh_code">
+      <label ref="jr:itext('/data/c_hh_code:label')"/>
+    </input>
+    <input ref="/data/c_participant_id">
+      <label ref="jr:itext('/data/c_participant_id:label')"/>
+    </input>
+    <select1 ref="/data/c_sex">
+      <label ref="jr:itext('/data/c_sex:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_sex/M:label')"/>
+        <value>M</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_sex/F:label')"/>
+        <value>F</value>
+      </item>
+    </select1>
+    <input ref="/data/c_age_yrs">
+      <label ref="jr:itext('/data/c_age_yrs:label')"/>
+    </input>
+    <input ref="/data/c_age_month">
+      <label ref="jr:itext('/data/c_age_month:label')"/>
+    </input>
+    <select1 ref="/data/c_hh_present">
+      <label ref="jr:itext('/data/c_hh_present:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_hh_present/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_hh_present/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <group ref="/data/c_dec">
+      <label ref="jr:itext('/data/c_dec:label')"/>
+      <select1 ref="/data/c_dec/a_recu_medicament1">
+        <label ref="jr:itext('/data/c_dec/a_recu_medicament1:label')"/>
+        <item>
+          <label ref="jr:itext('/data/c_dec/a_recu_medicament1/Oui:label')"/>
+          <value>Oui</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/a_recu_medicament1/Non:label')"/>
+          <value>Non</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/a_recu_medicament1/Ne sais pas:label')"/>
+          <value>Ne sais pas</value>
+        </item>
+      </select1>
+      <select ref="/data/c_dec/raison_pas_recu_med1">
+        <label ref="jr:itext('/data/c_dec/raison_pas_recu_med1:label')"/>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_recu_med1/1.Underage:label')"/>
+          <value>1.Underage</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_recu_med1/2.Enceinte:label')"/>
+          <value>2.Enceinte</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_recu_med1/3.Alletante:label')"/>
+          <value>3.Alletante</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_recu_med1/4.Malade:label')"/>
+          <value>4.Malade</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_recu_med1/5.Absent:label')"/>
+          <value>5.Absent</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_recu_med1/6.N'ayant.été.informé.de.la.campagne:label')"/>
+          <value>6.N'ayant.été.informé.de.la.campagne</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_recu_med1/7.Plus.de.médicaments:label')"/>
+          <value>7.Plus.de.médicaments</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_recu_med1/8.Le.DC.n'est.pas.venu:label')"/>
+          <value>8.Le.DC.n'est.pas.venu</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_recu_med1/Autres:label')"/>
+          <value>Autres</value>
+        </item>
+      </select>
+      <input ref="/data/c_dec/raison_pas_recu_med_autres1">
+        <label ref="jr:itext('/data/c_dec/raison_pas_recu_med_autres1:label')"/>
+      </input>
+      <select1 ref="/data/c_dec/a_avale_med1">
+        <label ref="jr:itext('/data/c_dec/a_avale_med1:label')"/>
+        <item>
+          <label ref="jr:itext('/data/c_dec/a_avale_med1/Oui:label')"/>
+          <value>Oui</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/a_avale_med1/Non:label')"/>
+          <value>Non</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/a_avale_med1/Ne sais pas:label')"/>
+          <value>Ne sais pas</value>
+        </item>
+      </select1>
+      <select ref="/data/c_dec/raison_avoir_avale1">
+        <label ref="jr:itext('/data/c_dec/raison_avoir_avale1:label')"/>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_avoir_avale1/1.Peur.de.la.maladie:label')"/>
+          <value>1.Peur.de.la.maladie</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_avoir_avale1/2.Pour.traiter.la.maladie:label')"/>
+          <value>2.Pour.traiter.la.maladie</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_avoir_avale1/3.Parce.que.c'est.gratuit:label')"/>
+          <value>3.Parce.que.c'est.gratuit</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_avoir_avale1/4.Informations.utiles.ont.été.données.par.le.DC:label')"/>
+          <value>4.Informations.utiles.ont.été.données.par.le.DC</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_avoir_avale1/Autres:label')"/>
+          <value>Autres</value>
+        </item>
+      </select>
+      <input ref="/data/c_dec/raison_avoir_avale_autres1">
+        <label ref="jr:itext('/data/c_dec/raison_avoir_avale_autres1:label')"/>
+      </input>
+      <select ref="/data/c_dec/raison_pas_avale1">
+        <label ref="jr:itext('/data/c_dec/raison_pas_avale1:label')"/>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_avale1/1.Peur.des.effets.secondaires:label')"/>
+          <value>1.Peur.des.effets.secondaires</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_avale1/2.Mauvais.goût:label')"/>
+          <value>2.Mauvais.goût</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_avale1/3.Je.ne.suis.pas.malade:label')"/>
+          <value>3.Je.ne.suis.pas.malade</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_avale1/4.Pas.assez.informé:label')"/>
+          <value>4.Pas.assez.informé</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/c_dec/raison_pas_avale1/Autres:label')"/>
+          <value>Autres</value>
+        </item>
+      </select>
+      <input ref="/data/c_dec/raison_pas_avale_autre1">
+        <label ref="jr:itext('/data/c_dec/raison_pas_avale_autre1:label')"/>
+      </input>
+    </group>
+    <group ref="/data/ivm">
+      <label ref="jr:itext('/data/ivm:label')"/>
+      <select1 ref="/data/ivm/a_recu_medicament2">
+        <label ref="jr:itext('/data/ivm/a_recu_medicament2:label')"/>
+        <item>
+          <label ref="jr:itext('/data/ivm/a_recu_medicament2/Oui:label')"/>
+          <value>Oui</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/a_recu_medicament2/Non:label')"/>
+          <value>Non</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/a_recu_medicament2/Ne sais pas:label')"/>
+          <value>Ne sais pas</value>
+        </item>
+      </select1>
+      <select ref="/data/ivm/raison_pas_recu_med2">
+        <label ref="jr:itext('/data/ivm/raison_pas_recu_med2:label')"/>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_recu_med2/1.Underage:label')"/>
+          <value>1.Underage</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_recu_med2/2.Enceinte:label')"/>
+          <value>2.Enceinte</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_recu_med2/3.Alletante:label')"/>
+          <value>3.Alletante</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_recu_med2/4.Malade:label')"/>
+          <value>4.Malade</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_recu_med2/5.Absent:label')"/>
+          <value>5.Absent</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_recu_med2/6.N'ayant.été.informé.de.la.campagne:label')"/>
+          <value>6.N'ayant.été.informé.de.la.campagne</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_recu_med2/7.Plus.de.médicaments:label')"/>
+          <value>7.Plus.de.médicaments</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_recu_med2/8.Le.DC.n'est.pas.venu:label')"/>
+          <value>8.Le.DC.n'est.pas.venu</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_recu_med2/Autres:label')"/>
+          <value>Autres</value>
+        </item>
+      </select>
+      <input ref="/data/ivm/raison_pas_recu_med_autres2">
+        <label ref="jr:itext('/data/ivm/raison_pas_recu_med_autres2:label')"/>
+      </input>
+      <select1 ref="/data/ivm/a_avale_med2">
+        <label ref="jr:itext('/data/ivm/a_avale_med2:label')"/>
+        <item>
+          <label ref="jr:itext('/data/ivm/a_avale_med2/Oui:label')"/>
+          <value>Oui</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/a_avale_med2/Non:label')"/>
+          <value>Non</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/a_avale_med2/Ne sais pas:label')"/>
+          <value>Ne sais pas</value>
+        </item>
+      </select1>
+      <select ref="/data/ivm/raison_avoir_avale2">
+        <label ref="jr:itext('/data/ivm/raison_avoir_avale2:label')"/>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_avoir_avale2/1.Peur.de.la.maladie:label')"/>
+          <value>1.Peur.de.la.maladie</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_avoir_avale2/2.Pour.traiter.la.maladie:label')"/>
+          <value>2.Pour.traiter.la.maladie</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_avoir_avale2/3.Parce.que.c'est.gratuit:label')"/>
+          <value>3.Parce.que.c'est.gratuit</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_avoir_avale2/4.Informations.utiles.ont.été.données.par.le.DC:label')"/>
+          <value>4.Informations.utiles.ont.été.données.par.le.DC</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_avoir_avale2/Autres:label')"/>
+          <value>Autres</value>
+        </item>
+      </select>
+      <input ref="/data/ivm/raison_avoir_avale_autres2">
+        <label ref="jr:itext('/data/ivm/raison_avoir_avale_autres2:label')"/>
+      </input>
+      <select ref="/data/ivm/raison_pas_avale2">
+        <label ref="jr:itext('/data/ivm/raison_pas_avale2:label')"/>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_avale2/1.Peur.des.effets.secondaires:label')"/>
+          <value>1.Peur.des.effets.secondaires</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_avale2/2.Mauvais.goût:label')"/>
+          <value>2.Mauvais.goût</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_avale2/3.Je.ne.suis.pas.malade:label')"/>
+          <value>3.Je.ne.suis.pas.malade</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_avale2/4.Pas.assez.informé:label')"/>
+          <value>4.Pas.assez.informé</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/ivm/raison_pas_avale2/Autres:label')"/>
+          <value>Autres</value>
+        </item>
+      </select>
+      <input ref="/data/ivm/raison_pas_avale_autre2">
+        <label ref="jr:itext('/data/ivm/raison_pas_avale_autre2:label')"/>
+      </input>
+    </group>
+    <group ref="/data/alb">
+      <label ref="jr:itext('/data/alb:label')"/>
+      <select1 ref="/data/alb/a_recu_medicament3">
+        <label ref="jr:itext('/data/alb/a_recu_medicament3:label')"/>
+        <item>
+          <label ref="jr:itext('/data/alb/a_recu_medicament3/Oui:label')"/>
+          <value>Oui</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/a_recu_medicament3/Non:label')"/>
+          <value>Non</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/a_recu_medicament3/Ne sais pas:label')"/>
+          <value>Ne sais pas</value>
+        </item>
+      </select1>
+      <select ref="/data/alb/raison_pas_recu_med3">
+        <label ref="jr:itext('/data/alb/raison_pas_recu_med3:label')"/>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_recu_med3/1.Underage:label')"/>
+          <value>1.Underage</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_recu_med3/2.Enceinte:label')"/>
+          <value>2.Enceinte</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_recu_med3/3.Alletante:label')"/>
+          <value>3.Alletante</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_recu_med3/4.Malade:label')"/>
+          <value>4.Malade</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_recu_med3/5.Absent:label')"/>
+          <value>5.Absent</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_recu_med3/6.N'ayant.été.informé.de.la.campagne:label')"/>
+          <value>6.N'ayant.été.informé.de.la.campagne</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_recu_med3/7.Plus.de.médicaments:label')"/>
+          <value>7.Plus.de.médicaments</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_recu_med3/8.Le.DC.n'est.pas.venu:label')"/>
+          <value>8.Le.DC.n'est.pas.venu</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_recu_med3/Autres:label')"/>
+          <value>Autres</value>
+        </item>
+      </select>
+      <input ref="/data/alb/raison_pas_recu_med_autres3">
+        <label ref="jr:itext('/data/alb/raison_pas_recu_med_autres3:label')"/>
+      </input>
+      <select1 ref="/data/alb/a_avale_med3">
+        <label ref="jr:itext('/data/alb/a_avale_med3:label')"/>
+        <item>
+          <label ref="jr:itext('/data/alb/a_avale_med3/Oui:label')"/>
+          <value>Oui</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/a_avale_med3/Non:label')"/>
+          <value>Non</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/a_avale_med3/Ne sais pas:label')"/>
+          <value>Ne sais pas</value>
+        </item>
+      </select1>
+      <select ref="/data/alb/raison_avoir_avale3">
+        <label ref="jr:itext('/data/alb/raison_avoir_avale3:label')"/>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_avoir_avale3/1.Peur.de.la.maladie:label')"/>
+          <value>1.Peur.de.la.maladie</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_avoir_avale3/2.Pour.traiter.la.maladie:label')"/>
+          <value>2.Pour.traiter.la.maladie</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_avoir_avale3/3.Parce.que.c'est.gratuit:label')"/>
+          <value>3.Parce.que.c'est.gratuit</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_avoir_avale3/4.Informations.utiles.ont.été.données.par.le.DC:label')"/>
+          <value>4.Informations.utiles.ont.été.données.par.le.DC</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_avoir_avale3/Autres:label')"/>
+          <value>Autres</value>
+        </item>
+      </select>
+      <input ref="/data/alb/raison_avoir_avale_autres3">
+        <label ref="jr:itext('/data/alb/raison_avoir_avale_autres3:label')"/>
+      </input>
+      <select ref="/data/alb/raison_pas_avale3">
+        <label ref="jr:itext('/data/alb/raison_pas_avale3:label')"/>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_avale3/1.Peur.des.effets.secondaires:label')"/>
+          <value>1.Peur.des.effets.secondaires</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_avale3/2.Mauvais.goût:label')"/>
+          <value>2.Mauvais.goût</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_avale3/3.Je.ne.suis.pas.malade:label')"/>
+          <value>3.Je.ne.suis.pas.malade</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_avale3/4.Pas.assez.informé:label')"/>
+          <value>4.Pas.assez.informé</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/alb/raison_pas_avale3/Autres:label')"/>
+          <value>Autres</value>
+        </item>
+      </select>
+      <input ref="/data/alb/raison_pas_avale_autre3">
+        <label ref="jr:itext('/data/alb/raison_pas_avale_autre3:label')"/>
+      </input>
+    </group>
+    <input ref="/data/notas">
+      <label ref="jr:itext('/data/notas:label')"/>
+    </input>
+  </h:body>
+</h:html>
