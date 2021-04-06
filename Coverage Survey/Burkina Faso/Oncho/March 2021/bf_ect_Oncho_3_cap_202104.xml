@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -8,7 +8,46 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>(BF - Avril 2021) - ECT TIDC Oncho 2021 - 3. Formulaire CAP</h:title>
-    <model odk:xforms-version="1.0.0">
+    <model >
+
+      <instance>
+        <data id="bf_ect_Oncho_3_cap_202104" version="20210329">
+          <Code_Equipe/>
+          <I1_District/>
+          <I2_CSPS/>
+          <I3_a_Nom_grappe/>
+          <I3_b_Numero_grappe/>
+          <I4_Numero_menage/>
+          <Q1_Age/>
+          <Q2_Sexe/>
+          <Q4_Niveau_instruction/>
+          <Q5_nbre_resident_menage/>
+          <Q6_nbre_resident_moins5ans/>
+          <Q7_Entendu_parler_Oncho/>
+          <Q8_Inquiet/>
+          <Q9_Manifestations/>
+          <Q9a_Autres_manisfestations/>
+          <Q10_Mode_transmission/>
+          <Q10a_Autres_transmission/>
+          <Q11_Prevention/>
+          <Q11a_Autres_prevention/>
+          <Q12_Cnce_Aveugle/>
+          <Q12_aNombre_aveugle/>
+          <Q13_Informe/>
+          <Q14_Canaux_information/>
+          <Q14a_Autres_canaux_information/>
+          <Q15_Existence_Perception_DC/>
+          <Q16_Perception_DC/>
+          <Q17_Suggestions/>
+          <Q18_commentaires/>
+          <date_debut/>
+          <date_fin/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
       <itext>
         <translation default="true()" lang="French">
           <text id="/data/Code_Equipe:label">
@@ -37,12 +76,6 @@
           </text>
           <text id="/data/I1_District:hint">
             <value>Selectionner le district</value>
-          </text>
-          <text id="/data/I1_District/Banfora:label">
-            <value>Banfora</value>
-          </text>
-          <text id="/data/I1_District/Mangodara:label">
-            <value>Mangodara</value>
           </text>
           <text id="/data/I2_CSPS:label">
             <value>I2. CSPS</value>
@@ -259,43 +292,6 @@
           </text>
         </translation>
       </itext>
-      <instance>
-        <data id="bf_ect_Oncho_3_cap_202104" version="20210329">
-          <Code_Equipe/>
-          <I1_District/>
-          <I2_CSPS/>
-          <I3_a_Nom_grappe/>
-          <I3_b_Numero_grappe/>
-          <I4_Numero_menage/>
-          <Q1_Age/>
-          <Q2_Sexe/>
-          <Q4_Niveau_instruction/>
-          <Q5_nbre_resident_menage/>
-          <Q6_nbre_resident_moins5ans/>
-          <Q7_Entendu_parler_Oncho/>
-          <Q8_Inquiet/>
-          <Q9_Manifestations/>
-          <Q9a_Autres_manisfestations/>
-          <Q10_Mode_transmission/>
-          <Q10a_Autres_transmission/>
-          <Q11_Prevention/>
-          <Q11a_Autres_prevention/>
-          <Q12_Cnce_Aveugle/>
-          <Q12_aNombre_aveugle/>
-          <Q13_Informe/>
-          <Q14_Canaux_information/>
-          <Q14a_Autres_canaux_information/>
-          <Q15_Existence_Perception_DC/>
-          <Q16_Perception_DC/>
-          <Q17_Suggestions/>
-          <Q18_commentaires/>
-          <date_debut/>
-          <date_fin/>
-          <meta>
-            <instanceID/>
-          </meta>
-        </data>
-      </instance>
       <bind nodeset="/data/Code_Equipe" required="true()" type="string"/>
       <bind nodeset="/data/I1_District" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/I2_CSPS" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/I1_District"/>
@@ -305,15 +301,15 @@
       <bind constraint=". &gt;= 18" jr:constraintMsg="jr:itext('/data/Q1_Age:jr:constraintMsg')" nodeset="/data/Q1_Age" required="true()" type="int"/>
       <bind nodeset="/data/Q2_Sexe" required="true()" type="string"/>
       <bind nodeset="/data/Q4_Niveau_instruction" required="true()" type="string"/>
-      <bind nodeset="/data/Q5_nbre_resident_menage" required="true()" type="int"/>
-      <bind nodeset="/data/Q6_nbre_resident_moins5ans" required="true()" type="int"/>
+      <bind constraint=". &lt; 30" nodeset="/data/Q5_nbre_resident_menage" required="true()" type="int"/>
+      <bind constraint=". &lt; 30" nodeset="/data/Q6_nbre_resident_moins5ans" required="true()" type="int"/>
       <bind nodeset="/data/Q7_Entendu_parler_Oncho" required="true()" type="string"/>
       <bind nodeset="/data/Q8_Inquiet" relevant=" /data/Q7_Entendu_parler_Oncho  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/Q9_Manifestations" relevant=" /data/Q7_Entendu_parler_Oncho  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/Q9a_Autres_manisfestations" relevant=" /data/Q7_Entendu_parler_Oncho  = 'Oui' and selected( /data/Q9_Manifestations , 'Other')" required="false()" type="string"/>
       <bind nodeset="/data/Q10_Mode_transmission" relevant=" /data/Q7_Entendu_parler_Oncho  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/Q10a_Autres_transmission" relevant=" /data/Q7_Entendu_parler_Oncho  = 'Oui' and selected( /data/Q9_Manifestations , 'Other')" required="false()" type="string"/>
-      <bind nodeset="/data/Q11_Prevention" required="false()" type="string"/>
+      <bind nodeset="/data/Q11_Prevention" relevant=" /data/Q7_Entendu_parler_Oncho  = 'Oui'" required="false()" type="string"/>
       <bind nodeset="/data/Q11a_Autres_prevention" relevant="selected( /data/Q11_Prevention , 'Other')" required="false()" type="string"/>
       <bind nodeset="/data/Q12_Cnce_Aveugle" relevant=" /data/Q7_Entendu_parler_Oncho  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/Q12_aNombre_aveugle" relevant=" /data/Q12_Cnce_Aveugle  = 'Oui'" required="true()" type="int"/>
@@ -357,14 +353,6 @@
     <input ref="/data/I1_District">
       <label ref="jr:itext('/data/I1_District:label')"/>
       <hint ref="jr:itext('/data/I1_District:hint')"/>
-      <item>
-        <label ref="jr:itext('/data/I1_District/Banfora:label')"/>
-        <value>Banfora</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/I1_District/Mangodara:label')"/>
-        <value>Mangodara</value>
-      </item>
     </input>
     <input ref="/data/I2_CSPS">
       <label ref="jr:itext('/data/I2_CSPS:label')"/>
