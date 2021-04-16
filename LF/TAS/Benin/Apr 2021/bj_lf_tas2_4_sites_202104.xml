@@ -1,0 +1,5851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>4. Benin - TAS2 FL Form Site (Avril 2021)</h:title>
+    <model >
+
+      <instance>
+        <data id="bj_lf_tas2_4_sites_202104" version="20210412">
+          <c_recorder/>
+          <c_eu_name/>
+          <c_commune/>
+          <c_cluster_name/>
+          <c_cluster_id1/>
+          <c_cluster_leader_name/>
+          <c_cluster_leader_contact/>
+          <c_consent/>
+          <c_population/>
+          <c_present/>
+          <c_absent/>
+          <c_gps/>
+          <p_ending_survey_note/>
+          <c_ClusterNotes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation lang="English">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>The code must be a two-digit number between 9 and 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Enter Recorder ID</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
+          </text>
+          <text id="/data/c_eu_name:label">
+            <value>Select the evaluation unit (EU)</value>
+          </text>
+          <text id="/data/c_eu_name/Abomey:label">
+            <value>Abomey</value>
+          </text>
+          <text id="/data/c_eu_name/Adjohoun:label">
+            <value>Adjohoun</value>
+          </text>
+          <text id="/data/c_eu_name/Aguegues:label">
+            <value>Aguégués</value>
+          </text>
+          <text id="/data/c_eu_name/Avrankou:label">
+            <value>Avrankou</value>
+          </text>
+          <text id="/data/c_eu_name/Ifangni:label">
+            <value>Ifangni</value>
+          </text>
+          <text id="/data/c_eu_name/Pobe:label">
+            <value>Pobè</value>
+          </text>
+          <text id="/data/c_commune:label">
+            <value>Select the commune</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Enter the school Name</value>
+          </text>
+          <text id="/data/c_cluster_id1:jr:constraintMsg">
+            <value>The code must be a two-digit number between 99 and 1000</value>
+          </text>
+          <text id="/data/c_cluster_id1:label">
+            <value>Enter the cluster ID</value>
+          </text>
+          <text id="/data/c_cluster_id1:hint">
+            <value>The three-digit code associated with each school</value>
+          </text>
+          <text id="/data/c_cluster_leader_name:label">
+            <value>Name of Head Teacher</value>
+          </text>
+          <text id="/data/c_cluster_leader_contact:label">
+            <value>Contact of Head Teacher</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>Does the school or community consent to participating in this survey?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Depending on the age groups targeted, approximately how many eligible participants are enrolled in this school or live in this village?</value>
+          </text>
+          <text id="/data/c_present:jr:constraintMsg">
+            <value>The number of presents must not exceed the total of pupils</value>
+          </text>
+          <text id="/data/c_present:label">
+            <value>Depending on the age groups targeted, how many eligible participants are present in this school or community?</value>
+          </text>
+          <text id="/data/c_absent:jr:constraintMsg">
+            <value>The number of absents must not exceed the total of pupils</value>
+          </text>
+          <text id="/data/c_absent:label">
+            <value>Depending on the age groups targeted, how many eligible participants are absent in this school or community?</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Record your location:</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>GPS coordinates are easier to collect outside. 2 min timeout</value>
+          </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>You just entered a value that will end the survey</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Additional notes to add?</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="eu_list-0">
+            <value>Abomey</value>
+          </text>
+          <text id="eu_list-1">
+            <value>Adjohoun</value>
+          </text>
+          <text id="eu_list-2">
+            <value>Aguégués</value>
+          </text>
+          <text id="eu_list-3">
+            <value>Avrankou</value>
+          </text>
+          <text id="eu_list-4">
+            <value>Ifangni</value>
+          </text>
+          <text id="eu_list-5">
+            <value>Pobè</value>
+          </text>
+          <text id="commune_list-0">
+            <value>Abomey</value>
+          </text>
+          <text id="commune_list-1">
+            <value>Bohicon</value>
+          </text>
+          <text id="commune_list-2">
+            <value>Adjohoun</value>
+          </text>
+          <text id="commune_list-3">
+            <value>Dangbo</value>
+          </text>
+          <text id="commune_list-4">
+            <value>Aguégués</value>
+          </text>
+          <text id="commune_list-5">
+            <value>Sèmè-Kpodji</value>
+          </text>
+          <text id="commune_list-6">
+            <value>Adjarra</value>
+          </text>
+          <text id="commune_list-7">
+            <value>Akpro-Missérété</value>
+          </text>
+          <text id="commune_list-8">
+            <value>Avrankou</value>
+          </text>
+          <text id="commune_list-9">
+            <value>Ifangni</value>
+          </text>
+          <text id="commune_list-10">
+            <value>Sakété</value>
+          </text>
+          <text id="commune_list-11">
+            <value>Pobè</value>
+          </text>
+          <text id="site_list-0">
+            <value>Djime/A</value>
+          </text>
+          <text id="site_list-1">
+            <value>Gbecon Houegbo/C</value>
+          </text>
+          <text id="site_list-2">
+            <value>Agblome/B</value>
+          </text>
+          <text id="site_list-3">
+            <value>Agblome/C</value>
+          </text>
+          <text id="site_list-4">
+            <value>Agnangnan/A</value>
+          </text>
+          <text id="site_list-5">
+            <value>Agnangnan/B</value>
+          </text>
+          <text id="site_list-6">
+            <value>Frere Et Soeur</value>
+          </text>
+          <text id="site_list-7">
+            <value>Gbecon Hounli/B</value>
+          </text>
+          <text id="site_list-8">
+            <value>Institut Des Aveugles D'Abomey</value>
+          </text>
+          <text id="site_list-9">
+            <value>La Competence</value>
+          </text>
+          <text id="site_list-10">
+            <value>Les Merveilles De L'Academie</value>
+          </text>
+          <text id="site_list-11">
+            <value>Houeli</value>
+          </text>
+          <text id="site_list-12">
+            <value>Abomey/A</value>
+          </text>
+          <text id="site_list-13">
+            <value>Abomey/C</value>
+          </text>
+          <text id="site_list-14">
+            <value>Ahouaga/C</value>
+          </text>
+          <text id="site_list-15">
+            <value>Catholique Bon Pasteur</value>
+          </text>
+          <text id="site_list-16">
+            <value>Dozoeme</value>
+          </text>
+          <text id="site_list-17">
+            <value>Houenoussou Grace Divine</value>
+          </text>
+          <text id="site_list-18">
+            <value>Oukanme/B</value>
+          </text>
+          <text id="site_list-19">
+            <value>Zounzonme</value>
+          </text>
+          <text id="site_list-20">
+            <value>Agabgon/C</value>
+          </text>
+          <text id="site_list-21">
+            <value>Agbadjagon/B</value>
+          </text>
+          <text id="site_list-22">
+            <value>Catholique Saint Francois D'Assise</value>
+          </text>
+          <text id="site_list-23">
+            <value>Djognangbo</value>
+          </text>
+          <text id="site_list-24">
+            <value>Bohicon/B</value>
+          </text>
+          <text id="site_list-25">
+            <value>Bon Citoyen</value>
+          </text>
+          <text id="site_list-26">
+            <value>La Clef</value>
+          </text>
+          <text id="site_list-27">
+            <value>Leopold Sedar Senghor</value>
+          </text>
+          <text id="site_list-28">
+            <value>Notre Dame De Toutes Graces</value>
+          </text>
+          <text id="site_list-29">
+            <value>Zakpo/C</value>
+          </text>
+          <text id="site_list-30">
+            <value>Houekpa/A</value>
+          </text>
+          <text id="site_list-31">
+            <value>Akpadanou/B</value>
+          </text>
+          <text id="site_list-32">
+            <value>Akpadanou/C</value>
+          </text>
+          <text id="site_list-33">
+            <value>Assigui Gbongodo</value>
+          </text>
+          <text id="site_list-34">
+            <value>Azowlisse Centre/B</value>
+          </text>
+          <text id="site_list-35">
+            <value>Houngon</value>
+          </text>
+          <text id="site_list-36">
+            <value>Kouhoue</value>
+          </text>
+          <text id="site_list-37">
+            <value>Gogbo/B</value>
+          </text>
+          <text id="site_list-38">
+            <value>Gouke</value>
+          </text>
+          <text id="site_list-39">
+            <value>Canaan</value>
+          </text>
+          <text id="site_list-40">
+            <value>Don Divin</value>
+          </text>
+          <text id="site_list-41">
+            <value>Ke/A</value>
+          </text>
+          <text id="site_list-42">
+            <value>La Grace De Dieu</value>
+          </text>
+          <text id="site_list-43">
+            <value>Le Meilleur</value>
+          </text>
+          <text id="site_list-44">
+            <value>Le Nouveau Citoyen</value>
+          </text>
+          <text id="site_list-45">
+            <value>Dekin Kodekpomey</value>
+          </text>
+          <text id="site_list-46">
+            <value>Agbanta</value>
+          </text>
+          <text id="site_list-47">
+            <value>Gbeko/A</value>
+          </text>
+          <text id="site_list-48">
+            <value>Agongue/A</value>
+          </text>
+          <text id="site_list-49">
+            <value>Akpame/B</value>
+          </text>
+          <text id="site_list-50">
+            <value>Djigbe/A</value>
+          </text>
+          <text id="site_list-51">
+            <value>Hozin/B</value>
+          </text>
+          <text id="site_list-52">
+            <value>Saint Hilaire</value>
+          </text>
+          <text id="site_list-53">
+            <value>Akokponawa</value>
+          </text>
+          <text id="site_list-54">
+            <value>Les Vertes Vallees</value>
+          </text>
+          <text id="site_list-55">
+            <value>Nelson Mandela Madiba Dine</value>
+          </text>
+          <text id="site_list-56">
+            <value>Sai Lagare</value>
+          </text>
+          <text id="site_list-57">
+            <value>Sai Lagare/B</value>
+          </text>
+          <text id="site_list-58">
+            <value>Yokon/B</value>
+          </text>
+          <text id="site_list-59">
+            <value>Zounta-Aga</value>
+          </text>
+          <text id="site_list-60">
+            <value>Houedome 2/B</value>
+          </text>
+          <text id="site_list-61">
+            <value>Donoukpa</value>
+          </text>
+          <text id="site_list-62">
+            <value>Agbalilame/A</value>
+          </text>
+          <text id="site_list-63">
+            <value>Agbalilame/B</value>
+          </text>
+          <text id="site_list-64">
+            <value>Aubaine</value>
+          </text>
+          <text id="site_list-65">
+            <value>Copernic</value>
+          </text>
+          <text id="site_list-66">
+            <value>Davatin/B</value>
+          </text>
+          <text id="site_list-67">
+            <value>La Gazelle</value>
+          </text>
+          <text id="site_list-68">
+            <value>Le Prestige</value>
+          </text>
+          <text id="site_list-69">
+            <value>Le Temps</value>
+          </text>
+          <text id="site_list-70">
+            <value>Ketonou/A</value>
+          </text>
+          <text id="site_list-71">
+            <value>Saint Christophe Ii</value>
+          </text>
+          <text id="site_list-72">
+            <value>Jesude</value>
+          </text>
+          <text id="site_list-73">
+            <value>Djeffa/B</value>
+          </text>
+          <text id="site_list-74">
+            <value>Dodognon</value>
+          </text>
+          <text id="site_list-75">
+            <value>Ekpe Kanhonou/A</value>
+          </text>
+          <text id="site_list-76">
+            <value>La Cime</value>
+          </text>
+          <text id="site_list-77">
+            <value>La Releve</value>
+          </text>
+          <text id="site_list-78">
+            <value>L'Avenir</value>
+          </text>
+          <text id="site_list-79">
+            <value>Marie La Reine</value>
+          </text>
+          <text id="site_list-80">
+            <value>Sainte Philomene</value>
+          </text>
+          <text id="site_list-81">
+            <value>Na Se We</value>
+          </text>
+          <text id="site_list-82">
+            <value>Africa Progress</value>
+          </text>
+          <text id="site_list-83">
+            <value>Decroly</value>
+          </text>
+          <text id="site_list-84">
+            <value>Kpoguidi/B</value>
+          </text>
+          <text id="site_list-85">
+            <value>La Croissance</value>
+          </text>
+          <text id="site_list-86">
+            <value>La Grace Divine</value>
+          </text>
+          <text id="site_list-87">
+            <value>Le Flambeau Des Enfants</value>
+          </text>
+          <text id="site_list-88">
+            <value>Tohoue/B</value>
+          </text>
+          <text id="site_list-89">
+            <value>La Bonne Nouvelle</value>
+          </text>
+          <text id="site_list-90">
+            <value>Hounhoueko/A</value>
+          </text>
+          <text id="site_list-91">
+            <value>Etoile D'Orient</value>
+          </text>
+          <text id="site_list-92">
+            <value>Houegbo/A</value>
+          </text>
+          <text id="site_list-93">
+            <value>Akpakanme Avaligbo</value>
+          </text>
+          <text id="site_list-94">
+            <value>Akpro Hanzoume/A</value>
+          </text>
+          <text id="site_list-95">
+            <value>Danme Lokonon/B</value>
+          </text>
+          <text id="site_list-96">
+            <value>La Cite Des Savants</value>
+          </text>
+          <text id="site_list-97">
+            <value>Le Formateur D'Abogome</value>
+          </text>
+          <text id="site_list-98">
+            <value>Le Relais</value>
+          </text>
+          <text id="site_list-99">
+            <value>Les Trois Savoirs Amis</value>
+          </text>
+          <text id="site_list-100">
+            <value>Les Gagnants De Demain</value>
+          </text>
+          <text id="site_list-101">
+            <value>Bambino Village</value>
+          </text>
+          <text id="site_list-102">
+            <value>Afandji Tanme/B</value>
+          </text>
+          <text id="site_list-103">
+            <value>Lotin Gbedjehouin/A</value>
+          </text>
+          <text id="site_list-104">
+            <value>Sekanme/B</value>
+          </text>
+          <text id="site_list-105">
+            <value>Houngon Djinon</value>
+          </text>
+          <text id="site_list-106">
+            <value>Gome Doko/B</value>
+          </text>
+          <text id="site_list-107">
+            <value>Gome Sota/B</value>
+          </text>
+          <text id="site_list-108">
+            <value>Tchoukou Kpevi/B</value>
+          </text>
+          <text id="site_list-109">
+            <value>Katagon/C</value>
+          </text>
+          <text id="site_list-110">
+            <value>Vante</value>
+          </text>
+          <text id="site_list-111">
+            <value>Kouti Centre/C</value>
+          </text>
+          <text id="site_list-112">
+            <value>Tanme/C</value>
+          </text>
+          <text id="site_list-113">
+            <value>Enfant Epanoui</value>
+          </text>
+          <text id="site_list-114">
+            <value>Kotan/A</value>
+          </text>
+          <text id="site_list-115">
+            <value>Baptiste Sodohome</value>
+          </text>
+          <text id="site_list-116">
+            <value>Les Anges De Dieu</value>
+          </text>
+          <text id="site_list-117">
+            <value>Saint Jean Baptiste</value>
+          </text>
+          <text id="site_list-118">
+            <value>Vako Anago</value>
+          </text>
+          <text id="site_list-119">
+            <value>Tony Beni</value>
+          </text>
+          <text id="site_list-120">
+            <value>Akadja/A</value>
+          </text>
+          <text id="site_list-121">
+            <value>Banigbe Gare/B</value>
+          </text>
+          <text id="site_list-122">
+            <value>Banigbe Lokossa</value>
+          </text>
+          <text id="site_list-123">
+            <value>Banigbe Nagot/A</value>
+          </text>
+          <text id="site_list-124">
+            <value>Catholique Laudato Si Banigbe</value>
+          </text>
+          <text id="site_list-125">
+            <value>Daagbe/B</value>
+          </text>
+          <text id="site_list-126">
+            <value>Gblogblo/A</value>
+          </text>
+          <text id="site_list-127">
+            <value>Ayetedjou/B</value>
+          </text>
+          <text id="site_list-128">
+            <value>Idi Oro/C</value>
+          </text>
+          <text id="site_list-129">
+            <value>La Belle Etoile</value>
+          </text>
+          <text id="site_list-130">
+            <value>Houmbo/A</value>
+          </text>
+          <text id="site_list-131">
+            <value>Lagbe/B</value>
+          </text>
+          <text id="site_list-132">
+            <value>Zian/B</value>
+          </text>
+          <text id="site_list-133">
+            <value>Saint Vincent De Tchaada</value>
+          </text>
+          <text id="site_list-134">
+            <value>Akpechi</value>
+          </text>
+          <text id="site_list-135">
+            <value>Assa Game</value>
+          </text>
+          <text id="site_list-136">
+            <value>Elewoure</value>
+          </text>
+          <text id="site_list-137">
+            <value>Ilougou Ikpedjile</value>
+          </text>
+          <text id="site_list-138">
+            <value>Ita Alabe</value>
+          </text>
+          <text id="site_list-139">
+            <value>Kossomi</value>
+          </text>
+          <text id="site_list-140">
+            <value>Igba/B</value>
+          </text>
+          <text id="site_list-141">
+            <value>Ita Djebou Centre/B</value>
+          </text>
+          <text id="site_list-142">
+            <value>Kadjola</value>
+          </text>
+          <text id="site_list-143">
+            <value>Markaz</value>
+          </text>
+          <text id="site_list-144">
+            <value>Odanyogoun/B</value>
+          </text>
+          <text id="site_list-145">
+            <value>Agonsa</value>
+          </text>
+          <text id="site_list-146">
+            <value>Igbo Akpa Ita Gbokou</value>
+          </text>
+          <text id="site_list-147">
+            <value>Ita Gbokou</value>
+          </text>
+          <text id="site_list-148">
+            <value>Akadja Takon</value>
+          </text>
+          <text id="site_list-149">
+            <value>La Prunelle De Djohoun-Kolle</value>
+          </text>
+          <text id="site_list-150">
+            <value>Agbidi Idioro</value>
+          </text>
+          <text id="site_list-151">
+            <value>Igbere Okeita/B</value>
+          </text>
+          <text id="site_list-152">
+            <value>Eguelou</value>
+          </text>
+          <text id="site_list-153">
+            <value>Illemon</value>
+          </text>
+          <text id="site_list-154">
+            <value>Araromi</value>
+          </text>
+          <text id="site_list-155">
+            <value>Idjakou</value>
+          </text>
+          <text id="site_list-156">
+            <value>Igbo Ekpe</value>
+          </text>
+          <text id="site_list-157">
+            <value>Igbo Ewe</value>
+          </text>
+          <text id="site_list-158">
+            <value>Igbodje</value>
+          </text>
+          <text id="site_list-159">
+            <value>Illoulofin</value>
+          </text>
+          <text id="site_list-160">
+            <value>Onigbolo Usine/C</value>
+          </text>
+          <text id="site_list-161">
+            <value>Agbarou</value>
+          </text>
+          <text id="site_list-162">
+            <value>Apostolique</value>
+          </text>
+          <text id="site_list-163">
+            <value>Damacy/B</value>
+          </text>
+          <text id="site_list-164">
+            <value>Divins Tresors</value>
+          </text>
+          <text id="site_list-165">
+            <value>Espoir Pobe</value>
+          </text>
+          <text id="site_list-166">
+            <value>Le Plateau/B</value>
+          </text>
+          <text id="site_list-167">
+            <value>Les Lys Nda</value>
+          </text>
+          <text id="site_list-168">
+            <value>Markaz Al Amir</value>
+          </text>
+          <text id="site_list-169">
+            <value>Nonvide Boussari/B</value>
+          </text>
+          <text id="site_list-170">
+            <value>Oke Ata/C</value>
+          </text>
+          <text id="site_list-171">
+            <value>Pobe / A</value>
+          </text>
+          <text id="site_list-172">
+            <value>Pobe/D</value>
+          </text>
+          <text id="site_list-173">
+            <value>Abodjoukpa</value>
+          </text>
+          <text id="site_list-174">
+            <value>Ibate</value>
+          </text>
+          <text id="site_list-175">
+            <value>Igbo Ede Chaffou</value>
+          </text>
+          <text id="site_list-176">
+            <value>Issokou Oniwere</value>
+          </text>
+          <text id="site_list-177">
+            <value>Lafenwa</value>
+          </text>
+          <text id="site_list-178">
+            <value>Oke Odja</value>
+          </text>
+          <text id="site_list-179">
+            <value>Towe/B</value>
+          </text>
+          <text id="site_list-180">
+            <value>Ahouaga/B</value>
+          </text>
+          <text id="site_list-181">
+            <value>Djegbe/B</value>
+          </text>
+          <text id="site_list-182">
+            <value>Les Semences</value>
+          </text>
+          <text id="site_list-183">
+            <value>Alikpa</value>
+          </text>
+          <text id="site_list-184">
+            <value>Anne Et Pierre</value>
+          </text>
+          <text id="site_list-185">
+            <value>Ecole Chretienne De Zounkpa</value>
+          </text>
+          <text id="site_list-186">
+            <value>Hezonho/B</value>
+          </text>
+          <text id="site_list-187">
+            <value>La Seve</value>
+          </text>
+          <text id="site_list-188">
+            <value>Vehou/B</value>
+          </text>
+          <text id="site_list-189">
+            <value>Zouzonme Avogbanna</value>
+          </text>
+          <text id="site_list-190">
+            <value>Ague Kpota</value>
+          </text>
+          <text id="site_list-191">
+            <value>Awo Godo</value>
+          </text>
+          <text id="site_list-192">
+            <value>Centre Pere Paul Rival</value>
+          </text>
+          <text id="site_list-193">
+            <value>Gangban/C</value>
+          </text>
+          <text id="site_list-194">
+            <value>Klogbome</value>
+          </text>
+          <text id="site_list-195">
+            <value>Saharo Centre</value>
+          </text>
+          <text id="site_list-196">
+            <value>Fingninkanme</value>
+          </text>
+          <text id="site_list-197">
+            <value>Le Pionnier Ii</value>
+          </text>
+          <text id="site_list-198">
+            <value>Saint Marc De Dekin Honhoue</value>
+          </text>
+          <text id="site_list-199">
+            <value>Tokpa Blihoue</value>
+          </text>
+          <text id="site_list-200">
+            <value>Aniviekome</value>
+          </text>
+          <text id="site_list-201">
+            <value>Salem</value>
+          </text>
+          <text id="site_list-202">
+            <value>Cite De Grace De Djeffa</value>
+          </text>
+          <text id="site_list-203">
+            <value>Djeregbe/C</value>
+          </text>
+          <text id="site_list-204">
+            <value>Horoca</value>
+          </text>
+          <text id="site_list-205">
+            <value>Le Miracle De Tohoue</value>
+          </text>
+          <text id="site_list-206">
+            <value>Le Phenix</value>
+          </text>
+          <text id="site_list-207">
+            <value>Notre Dame De L'Atlantique/B</value>
+          </text>
+          <text id="site_list-208">
+            <value>Saint Antoine De Padoue Ekpe</value>
+          </text>
+          <text id="site_list-209">
+            <value>Sainte Genevieve</value>
+          </text>
+          <text id="site_list-210">
+            <value>Abogome/A</value>
+          </text>
+          <text id="site_list-211">
+            <value>Abogome/B</value>
+          </text>
+          <text id="site_list-212">
+            <value>Adjina/B</value>
+          </text>
+          <text id="site_list-213">
+            <value>Akpakanme/A</value>
+          </text>
+          <text id="site_list-214">
+            <value>Kouve/A</value>
+          </text>
+          <text id="site_list-215">
+            <value>Les Erudits</value>
+          </text>
+          <text id="site_list-216">
+            <value>Les Petits Genies De Lotin</value>
+          </text>
+          <text id="site_list-217">
+            <value>Tanzoun/A</value>
+          </text>
+          <text id="site_list-218">
+            <value>Saint Laurent</value>
+          </text>
+          <text id="site_list-219">
+            <value>Tchakou/A</value>
+          </text>
+          <text id="site_list-220">
+            <value>Ketou Gbecon/B</value>
+          </text>
+          <text id="site_list-221">
+            <value>Ketoukpe</value>
+          </text>
+          <text id="site_list-222">
+            <value>Ko Koumonlou/B</value>
+          </text>
+          <text id="site_list-223">
+            <value>La Source Du Savoir Banigbe</value>
+          </text>
+          <text id="site_list-224">
+            <value>Migbehoue</value>
+          </text>
+          <text id="site_list-225">
+            <value>Videkon</value>
+          </text>
+          <text id="site_list-226">
+            <value>Coeur Immaculee De Marie</value>
+          </text>
+          <text id="site_list-227">
+            <value>Iliro Sodji</value>
+          </text>
+          <text id="site_list-228">
+            <value>Modogan</value>
+          </text>
+          <text id="site_list-229">
+            <value>Sahoro Nagot</value>
+          </text>
+          <text id="site_list-230">
+            <value>Akouho/A</value>
+          </text>
+          <text id="site_list-231">
+            <value>Akpate Ayekou</value>
+          </text>
+          <text id="site_list-232">
+            <value>Gbagui</value>
+          </text>
+          <text id="site_list-233">
+            <value>Igbo Itche Ogouba</value>
+          </text>
+          <text id="site_list-234">
+            <value>La Confiance Talala Pobe</value>
+          </text>
+          <text id="site_list-235">
+            <value>Oke Ata/B</value>
+          </text>
+          <text id="site_list-236">
+            <value>Okere</value>
+          </text>
+          <text id="site_list-237">
+            <value>Onigbolo Usine/B</value>
+          </text>
+          <text id="site_list-238">
+            <value>Terre Promise</value>
+          </text>
+          <text id="site_list-239">
+            <value>Zone Residentielle/A (Mamague)</value>
+          </text>
+          <text id="site_list_id-0">
+            <value>100</value>
+          </text>
+          <text id="site_list_id-1">
+            <value>101</value>
+          </text>
+          <text id="site_list_id-2">
+            <value>102</value>
+          </text>
+          <text id="site_list_id-3">
+            <value>103</value>
+          </text>
+          <text id="site_list_id-4">
+            <value>104</value>
+          </text>
+          <text id="site_list_id-5">
+            <value>105</value>
+          </text>
+          <text id="site_list_id-6">
+            <value>106</value>
+          </text>
+          <text id="site_list_id-7">
+            <value>107</value>
+          </text>
+          <text id="site_list_id-8">
+            <value>108</value>
+          </text>
+          <text id="site_list_id-9">
+            <value>109</value>
+          </text>
+          <text id="site_list_id-10">
+            <value>110</value>
+          </text>
+          <text id="site_list_id-11">
+            <value>111</value>
+          </text>
+          <text id="site_list_id-12">
+            <value>112</value>
+          </text>
+          <text id="site_list_id-13">
+            <value>113</value>
+          </text>
+          <text id="site_list_id-14">
+            <value>114</value>
+          </text>
+          <text id="site_list_id-15">
+            <value>115</value>
+          </text>
+          <text id="site_list_id-16">
+            <value>116</value>
+          </text>
+          <text id="site_list_id-17">
+            <value>117</value>
+          </text>
+          <text id="site_list_id-18">
+            <value>118</value>
+          </text>
+          <text id="site_list_id-19">
+            <value>119</value>
+          </text>
+          <text id="site_list_id-20">
+            <value>120</value>
+          </text>
+          <text id="site_list_id-21">
+            <value>121</value>
+          </text>
+          <text id="site_list_id-22">
+            <value>122</value>
+          </text>
+          <text id="site_list_id-23">
+            <value>123</value>
+          </text>
+          <text id="site_list_id-24">
+            <value>124</value>
+          </text>
+          <text id="site_list_id-25">
+            <value>125</value>
+          </text>
+          <text id="site_list_id-26">
+            <value>126</value>
+          </text>
+          <text id="site_list_id-27">
+            <value>127</value>
+          </text>
+          <text id="site_list_id-28">
+            <value>128</value>
+          </text>
+          <text id="site_list_id-29">
+            <value>129</value>
+          </text>
+          <text id="site_list_id-30">
+            <value>130</value>
+          </text>
+          <text id="site_list_id-31">
+            <value>131</value>
+          </text>
+          <text id="site_list_id-32">
+            <value>132</value>
+          </text>
+          <text id="site_list_id-33">
+            <value>133</value>
+          </text>
+          <text id="site_list_id-34">
+            <value>134</value>
+          </text>
+          <text id="site_list_id-35">
+            <value>135</value>
+          </text>
+          <text id="site_list_id-36">
+            <value>136</value>
+          </text>
+          <text id="site_list_id-37">
+            <value>137</value>
+          </text>
+          <text id="site_list_id-38">
+            <value>138</value>
+          </text>
+          <text id="site_list_id-39">
+            <value>139</value>
+          </text>
+          <text id="site_list_id-40">
+            <value>140</value>
+          </text>
+          <text id="site_list_id-41">
+            <value>141</value>
+          </text>
+          <text id="site_list_id-42">
+            <value>142</value>
+          </text>
+          <text id="site_list_id-43">
+            <value>143</value>
+          </text>
+          <text id="site_list_id-44">
+            <value>144</value>
+          </text>
+          <text id="site_list_id-45">
+            <value>145</value>
+          </text>
+          <text id="site_list_id-46">
+            <value>146</value>
+          </text>
+          <text id="site_list_id-47">
+            <value>147</value>
+          </text>
+          <text id="site_list_id-48">
+            <value>148</value>
+          </text>
+          <text id="site_list_id-49">
+            <value>149</value>
+          </text>
+          <text id="site_list_id-50">
+            <value>150</value>
+          </text>
+          <text id="site_list_id-51">
+            <value>151</value>
+          </text>
+          <text id="site_list_id-52">
+            <value>152</value>
+          </text>
+          <text id="site_list_id-53">
+            <value>153</value>
+          </text>
+          <text id="site_list_id-54">
+            <value>154</value>
+          </text>
+          <text id="site_list_id-55">
+            <value>155</value>
+          </text>
+          <text id="site_list_id-56">
+            <value>156</value>
+          </text>
+          <text id="site_list_id-57">
+            <value>157</value>
+          </text>
+          <text id="site_list_id-58">
+            <value>158</value>
+          </text>
+          <text id="site_list_id-59">
+            <value>159</value>
+          </text>
+          <text id="site_list_id-60">
+            <value>160</value>
+          </text>
+          <text id="site_list_id-61">
+            <value>161</value>
+          </text>
+          <text id="site_list_id-62">
+            <value>162</value>
+          </text>
+          <text id="site_list_id-63">
+            <value>163</value>
+          </text>
+          <text id="site_list_id-64">
+            <value>164</value>
+          </text>
+          <text id="site_list_id-65">
+            <value>165</value>
+          </text>
+          <text id="site_list_id-66">
+            <value>166</value>
+          </text>
+          <text id="site_list_id-67">
+            <value>167</value>
+          </text>
+          <text id="site_list_id-68">
+            <value>168</value>
+          </text>
+          <text id="site_list_id-69">
+            <value>169</value>
+          </text>
+          <text id="site_list_id-70">
+            <value>170</value>
+          </text>
+          <text id="site_list_id-71">
+            <value>171</value>
+          </text>
+          <text id="site_list_id-72">
+            <value>172</value>
+          </text>
+          <text id="site_list_id-73">
+            <value>173</value>
+          </text>
+          <text id="site_list_id-74">
+            <value>174</value>
+          </text>
+          <text id="site_list_id-75">
+            <value>175</value>
+          </text>
+          <text id="site_list_id-76">
+            <value>176</value>
+          </text>
+          <text id="site_list_id-77">
+            <value>177</value>
+          </text>
+          <text id="site_list_id-78">
+            <value>178</value>
+          </text>
+          <text id="site_list_id-79">
+            <value>179</value>
+          </text>
+          <text id="site_list_id-80">
+            <value>180</value>
+          </text>
+          <text id="site_list_id-81">
+            <value>181</value>
+          </text>
+          <text id="site_list_id-82">
+            <value>182</value>
+          </text>
+          <text id="site_list_id-83">
+            <value>183</value>
+          </text>
+          <text id="site_list_id-84">
+            <value>184</value>
+          </text>
+          <text id="site_list_id-85">
+            <value>185</value>
+          </text>
+          <text id="site_list_id-86">
+            <value>186</value>
+          </text>
+          <text id="site_list_id-87">
+            <value>187</value>
+          </text>
+          <text id="site_list_id-88">
+            <value>188</value>
+          </text>
+          <text id="site_list_id-89">
+            <value>189</value>
+          </text>
+          <text id="site_list_id-90">
+            <value>190</value>
+          </text>
+          <text id="site_list_id-91">
+            <value>191</value>
+          </text>
+          <text id="site_list_id-92">
+            <value>192</value>
+          </text>
+          <text id="site_list_id-93">
+            <value>193</value>
+          </text>
+          <text id="site_list_id-94">
+            <value>194</value>
+          </text>
+          <text id="site_list_id-95">
+            <value>195</value>
+          </text>
+          <text id="site_list_id-96">
+            <value>196</value>
+          </text>
+          <text id="site_list_id-97">
+            <value>197</value>
+          </text>
+          <text id="site_list_id-98">
+            <value>198</value>
+          </text>
+          <text id="site_list_id-99">
+            <value>199</value>
+          </text>
+          <text id="site_list_id-100">
+            <value>200</value>
+          </text>
+          <text id="site_list_id-101">
+            <value>201</value>
+          </text>
+          <text id="site_list_id-102">
+            <value>202</value>
+          </text>
+          <text id="site_list_id-103">
+            <value>203</value>
+          </text>
+          <text id="site_list_id-104">
+            <value>204</value>
+          </text>
+          <text id="site_list_id-105">
+            <value>205</value>
+          </text>
+          <text id="site_list_id-106">
+            <value>206</value>
+          </text>
+          <text id="site_list_id-107">
+            <value>207</value>
+          </text>
+          <text id="site_list_id-108">
+            <value>208</value>
+          </text>
+          <text id="site_list_id-109">
+            <value>209</value>
+          </text>
+          <text id="site_list_id-110">
+            <value>210</value>
+          </text>
+          <text id="site_list_id-111">
+            <value>211</value>
+          </text>
+          <text id="site_list_id-112">
+            <value>212</value>
+          </text>
+          <text id="site_list_id-113">
+            <value>213</value>
+          </text>
+          <text id="site_list_id-114">
+            <value>214</value>
+          </text>
+          <text id="site_list_id-115">
+            <value>215</value>
+          </text>
+          <text id="site_list_id-116">
+            <value>216</value>
+          </text>
+          <text id="site_list_id-117">
+            <value>217</value>
+          </text>
+          <text id="site_list_id-118">
+            <value>218</value>
+          </text>
+          <text id="site_list_id-119">
+            <value>219</value>
+          </text>
+          <text id="site_list_id-120">
+            <value>220</value>
+          </text>
+          <text id="site_list_id-121">
+            <value>221</value>
+          </text>
+          <text id="site_list_id-122">
+            <value>222</value>
+          </text>
+          <text id="site_list_id-123">
+            <value>223</value>
+          </text>
+          <text id="site_list_id-124">
+            <value>224</value>
+          </text>
+          <text id="site_list_id-125">
+            <value>225</value>
+          </text>
+          <text id="site_list_id-126">
+            <value>226</value>
+          </text>
+          <text id="site_list_id-127">
+            <value>227</value>
+          </text>
+          <text id="site_list_id-128">
+            <value>228</value>
+          </text>
+          <text id="site_list_id-129">
+            <value>229</value>
+          </text>
+          <text id="site_list_id-130">
+            <value>230</value>
+          </text>
+          <text id="site_list_id-131">
+            <value>231</value>
+          </text>
+          <text id="site_list_id-132">
+            <value>232</value>
+          </text>
+          <text id="site_list_id-133">
+            <value>233</value>
+          </text>
+          <text id="site_list_id-134">
+            <value>234</value>
+          </text>
+          <text id="site_list_id-135">
+            <value>235</value>
+          </text>
+          <text id="site_list_id-136">
+            <value>236</value>
+          </text>
+          <text id="site_list_id-137">
+            <value>237</value>
+          </text>
+          <text id="site_list_id-138">
+            <value>238</value>
+          </text>
+          <text id="site_list_id-139">
+            <value>239</value>
+          </text>
+          <text id="site_list_id-140">
+            <value>240</value>
+          </text>
+          <text id="site_list_id-141">
+            <value>241</value>
+          </text>
+          <text id="site_list_id-142">
+            <value>242</value>
+          </text>
+          <text id="site_list_id-143">
+            <value>243</value>
+          </text>
+          <text id="site_list_id-144">
+            <value>244</value>
+          </text>
+          <text id="site_list_id-145">
+            <value>245</value>
+          </text>
+          <text id="site_list_id-146">
+            <value>246</value>
+          </text>
+          <text id="site_list_id-147">
+            <value>247</value>
+          </text>
+          <text id="site_list_id-148">
+            <value>248</value>
+          </text>
+          <text id="site_list_id-149">
+            <value>249</value>
+          </text>
+          <text id="site_list_id-150">
+            <value>250</value>
+          </text>
+          <text id="site_list_id-151">
+            <value>251</value>
+          </text>
+          <text id="site_list_id-152">
+            <value>252</value>
+          </text>
+          <text id="site_list_id-153">
+            <value>253</value>
+          </text>
+          <text id="site_list_id-154">
+            <value>254</value>
+          </text>
+          <text id="site_list_id-155">
+            <value>255</value>
+          </text>
+          <text id="site_list_id-156">
+            <value>256</value>
+          </text>
+          <text id="site_list_id-157">
+            <value>257</value>
+          </text>
+          <text id="site_list_id-158">
+            <value>258</value>
+          </text>
+          <text id="site_list_id-159">
+            <value>259</value>
+          </text>
+          <text id="site_list_id-160">
+            <value>260</value>
+          </text>
+          <text id="site_list_id-161">
+            <value>261</value>
+          </text>
+          <text id="site_list_id-162">
+            <value>262</value>
+          </text>
+          <text id="site_list_id-163">
+            <value>263</value>
+          </text>
+          <text id="site_list_id-164">
+            <value>264</value>
+          </text>
+          <text id="site_list_id-165">
+            <value>265</value>
+          </text>
+          <text id="site_list_id-166">
+            <value>266</value>
+          </text>
+          <text id="site_list_id-167">
+            <value>267</value>
+          </text>
+          <text id="site_list_id-168">
+            <value>268</value>
+          </text>
+          <text id="site_list_id-169">
+            <value>269</value>
+          </text>
+          <text id="site_list_id-170">
+            <value>270</value>
+          </text>
+          <text id="site_list_id-171">
+            <value>271</value>
+          </text>
+          <text id="site_list_id-172">
+            <value>272</value>
+          </text>
+          <text id="site_list_id-173">
+            <value>273</value>
+          </text>
+          <text id="site_list_id-174">
+            <value>274</value>
+          </text>
+          <text id="site_list_id-175">
+            <value>275</value>
+          </text>
+          <text id="site_list_id-176">
+            <value>276</value>
+          </text>
+          <text id="site_list_id-177">
+            <value>277</value>
+          </text>
+          <text id="site_list_id-178">
+            <value>278</value>
+          </text>
+          <text id="site_list_id-179">
+            <value>279</value>
+          </text>
+          <text id="site_list_id-180">
+            <value>281</value>
+          </text>
+          <text id="site_list_id-181">
+            <value>280</value>
+          </text>
+          <text id="site_list_id-182">
+            <value>282</value>
+          </text>
+          <text id="site_list_id-183">
+            <value>287</value>
+          </text>
+          <text id="site_list_id-184">
+            <value>284</value>
+          </text>
+          <text id="site_list_id-185">
+            <value>288</value>
+          </text>
+          <text id="site_list_id-186">
+            <value>283</value>
+          </text>
+          <text id="site_list_id-187">
+            <value>285</value>
+          </text>
+          <text id="site_list_id-188">
+            <value>289</value>
+          </text>
+          <text id="site_list_id-189">
+            <value>286</value>
+          </text>
+          <text id="site_list_id-190">
+            <value>291</value>
+          </text>
+          <text id="site_list_id-191">
+            <value>292</value>
+          </text>
+          <text id="site_list_id-192">
+            <value>290</value>
+          </text>
+          <text id="site_list_id-193">
+            <value>295</value>
+          </text>
+          <text id="site_list_id-194">
+            <value>293</value>
+          </text>
+          <text id="site_list_id-195">
+            <value>294</value>
+          </text>
+          <text id="site_list_id-196">
+            <value>299</value>
+          </text>
+          <text id="site_list_id-197">
+            <value>297</value>
+          </text>
+          <text id="site_list_id-198">
+            <value>296</value>
+          </text>
+          <text id="site_list_id-199">
+            <value>298</value>
+          </text>
+          <text id="site_list_id-200">
+            <value>300</value>
+          </text>
+          <text id="site_list_id-201">
+            <value>301</value>
+          </text>
+          <text id="site_list_id-202">
+            <value>306</value>
+          </text>
+          <text id="site_list_id-203">
+            <value>303</value>
+          </text>
+          <text id="site_list_id-204">
+            <value>304</value>
+          </text>
+          <text id="site_list_id-205">
+            <value>308</value>
+          </text>
+          <text id="site_list_id-206">
+            <value>302</value>
+          </text>
+          <text id="site_list_id-207">
+            <value>305</value>
+          </text>
+          <text id="site_list_id-208">
+            <value>307</value>
+          </text>
+          <text id="site_list_id-209">
+            <value>309</value>
+          </text>
+          <text id="site_list_id-210">
+            <value>311</value>
+          </text>
+          <text id="site_list_id-211">
+            <value>312</value>
+          </text>
+          <text id="site_list_id-212">
+            <value>310</value>
+          </text>
+          <text id="site_list_id-213">
+            <value>313</value>
+          </text>
+          <text id="site_list_id-214">
+            <value>314</value>
+          </text>
+          <text id="site_list_id-215">
+            <value>316</value>
+          </text>
+          <text id="site_list_id-216">
+            <value>317</value>
+          </text>
+          <text id="site_list_id-217">
+            <value>315</value>
+          </text>
+          <text id="site_list_id-218">
+            <value>319</value>
+          </text>
+          <text id="site_list_id-219">
+            <value>318</value>
+          </text>
+          <text id="site_list_id-220">
+            <value>324</value>
+          </text>
+          <text id="site_list_id-221">
+            <value>325</value>
+          </text>
+          <text id="site_list_id-222">
+            <value>321</value>
+          </text>
+          <text id="site_list_id-223">
+            <value>320</value>
+          </text>
+          <text id="site_list_id-224">
+            <value>322</value>
+          </text>
+          <text id="site_list_id-225">
+            <value>323</value>
+          </text>
+          <text id="site_list_id-226">
+            <value>328</value>
+          </text>
+          <text id="site_list_id-227">
+            <value>326</value>
+          </text>
+          <text id="site_list_id-228">
+            <value>327</value>
+          </text>
+          <text id="site_list_id-229">
+            <value>329</value>
+          </text>
+          <text id="site_list_id-230">
+            <value>332</value>
+          </text>
+          <text id="site_list_id-231">
+            <value>338</value>
+          </text>
+          <text id="site_list_id-232">
+            <value>330</value>
+          </text>
+          <text id="site_list_id-233">
+            <value>333</value>
+          </text>
+          <text id="site_list_id-234">
+            <value>334</value>
+          </text>
+          <text id="site_list_id-235">
+            <value>335</value>
+          </text>
+          <text id="site_list_id-236">
+            <value>339</value>
+          </text>
+          <text id="site_list_id-237">
+            <value>331</value>
+          </text>
+          <text id="site_list_id-238">
+            <value>336</value>
+          </text>
+          <text id="site_list_id-239">
+            <value>337</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="yes_no-1">
+            <value>No</value>
+          </text>
+        </translation>
+        <translation default="true()" lang="French">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui a été attribué à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/c_eu_name:label">
+            <value>Sélectionner l'unité d'évaluation (UE)</value>
+          </text>
+          <text id="/data/c_eu_name/Abomey:label">
+            <value>Abomey</value>
+          </text>
+          <text id="/data/c_eu_name/Adjohoun:label">
+            <value>Adjohoun</value>
+          </text>
+          <text id="/data/c_eu_name/Aguegues:label">
+            <value>Aguégués</value>
+          </text>
+          <text id="/data/c_eu_name/Avrankou:label">
+            <value>Avrankou</value>
+          </text>
+          <text id="/data/c_eu_name/Ifangni:label">
+            <value>Ifangni</value>
+          </text>
+          <text id="/data/c_eu_name/Pobe:label">
+            <value>Pobè</value>
+          </text>
+          <text id="/data/c_commune:label">
+            <value>Sélectionner la commune</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Entrer le nom de l'école</value>
+          </text>
+          <text id="/data/c_cluster_id1:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 99 et 1000</value>
+          </text>
+          <text id="/data/c_cluster_id1:label">
+            <value>Entrer le code de l'école</value>
+          </text>
+          <text id="/data/c_cluster_id1:hint">
+            <value>Le code a trois chiffre associé à chaque école</value>
+          </text>
+          <text id="/data/c_cluster_leader_name:label">
+            <value>Nom du directeur d'école</value>
+          </text>
+          <text id="/data/c_cluster_leader_contact:label">
+            <value>Contact du directeur d'école</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>L'école (à travers le directeur et l'APE) consent-elle à participer à cette enquête ?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Selon les groupes d'âge ciblés (élèves de CI et CP), à peu près combien de participants éligibles sont inscrits dans cette école ?</value>
+          </text>
+          <text id="/data/c_present:jr:constraintMsg">
+            <value>Le nombre des présents ne doit pas dépasser le total d'élèves</value>
+          </text>
+          <text id="/data/c_present:label">
+            <value>Selon les groupes d'âge ciblés (élèves de CI et CP), combien de participants admissibles sont présents dans cette école ?</value>
+          </text>
+          <text id="/data/c_absent:jr:constraintMsg">
+            <value>Le nombre d'absents ne doit pas dépasser le total d'élèves</value>
+          </text>
+          <text id="/data/c_absent:label">
+            <value>Selon les groupes d'âge ciblés (élèves de CI et CP), combien de participants admissibles sont absents dans cette école ?</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Prener vos coordonnées GPS :</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>Les coordonnées GPS sont plus faciles à collecter à l'extérieur. Délai d'attente de 2 min</value>
+          </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Informations supplémentaires</value>
+          </text>
+          <text id="eu_list-0">
+            <value>Abomey</value>
+          </text>
+          <text id="eu_list-1">
+            <value>Adjohoun</value>
+          </text>
+          <text id="eu_list-2">
+            <value>Aguégués</value>
+          </text>
+          <text id="eu_list-3">
+            <value>Avrankou</value>
+          </text>
+          <text id="eu_list-4">
+            <value>Ifangni</value>
+          </text>
+          <text id="eu_list-5">
+            <value>Pobè</value>
+          </text>
+          <text id="commune_list-0">
+            <value>Abomey</value>
+          </text>
+          <text id="commune_list-1">
+            <value>Bohicon</value>
+          </text>
+          <text id="commune_list-2">
+            <value>Adjohoun</value>
+          </text>
+          <text id="commune_list-3">
+            <value>Dangbo</value>
+          </text>
+          <text id="commune_list-4">
+            <value>Aguégués</value>
+          </text>
+          <text id="commune_list-5">
+            <value>Sèmè-Kpodji</value>
+          </text>
+          <text id="commune_list-6">
+            <value>Adjarra</value>
+          </text>
+          <text id="commune_list-7">
+            <value>Akpro-Missérété</value>
+          </text>
+          <text id="commune_list-8">
+            <value>Avrankou</value>
+          </text>
+          <text id="commune_list-9">
+            <value>Ifangni</value>
+          </text>
+          <text id="commune_list-10">
+            <value>Sakété</value>
+          </text>
+          <text id="commune_list-11">
+            <value>Pobè</value>
+          </text>
+          <text id="site_list-0">
+            <value>Djime/A</value>
+          </text>
+          <text id="site_list-1">
+            <value>Gbecon Houegbo/C</value>
+          </text>
+          <text id="site_list-2">
+            <value>Agblome/B</value>
+          </text>
+          <text id="site_list-3">
+            <value>Agblome/C</value>
+          </text>
+          <text id="site_list-4">
+            <value>Agnangnan/A</value>
+          </text>
+          <text id="site_list-5">
+            <value>Agnangnan/B</value>
+          </text>
+          <text id="site_list-6">
+            <value>Frere Et Soeur</value>
+          </text>
+          <text id="site_list-7">
+            <value>Gbecon Hounli/B</value>
+          </text>
+          <text id="site_list-8">
+            <value>Institut Des Aveugles D'Abomey</value>
+          </text>
+          <text id="site_list-9">
+            <value>La Competence</value>
+          </text>
+          <text id="site_list-10">
+            <value>Les Merveilles De L'Academie</value>
+          </text>
+          <text id="site_list-11">
+            <value>Houeli</value>
+          </text>
+          <text id="site_list-12">
+            <value>Abomey/A</value>
+          </text>
+          <text id="site_list-13">
+            <value>Abomey/C</value>
+          </text>
+          <text id="site_list-14">
+            <value>Ahouaga/C</value>
+          </text>
+          <text id="site_list-15">
+            <value>Catholique Bon Pasteur</value>
+          </text>
+          <text id="site_list-16">
+            <value>Dozoeme</value>
+          </text>
+          <text id="site_list-17">
+            <value>Houenoussou Grace Divine</value>
+          </text>
+          <text id="site_list-18">
+            <value>Oukanme/B</value>
+          </text>
+          <text id="site_list-19">
+            <value>Zounzonme</value>
+          </text>
+          <text id="site_list-20">
+            <value>Agabgon/C</value>
+          </text>
+          <text id="site_list-21">
+            <value>Agbadjagon/B</value>
+          </text>
+          <text id="site_list-22">
+            <value>Catholique Saint Francois D'Assise</value>
+          </text>
+          <text id="site_list-23">
+            <value>Djognangbo</value>
+          </text>
+          <text id="site_list-24">
+            <value>Bohicon/B</value>
+          </text>
+          <text id="site_list-25">
+            <value>Bon Citoyen</value>
+          </text>
+          <text id="site_list-26">
+            <value>La Clef</value>
+          </text>
+          <text id="site_list-27">
+            <value>Leopold Sedar Senghor</value>
+          </text>
+          <text id="site_list-28">
+            <value>Notre Dame De Toutes Graces</value>
+          </text>
+          <text id="site_list-29">
+            <value>Zakpo/C</value>
+          </text>
+          <text id="site_list-30">
+            <value>Houekpa/A</value>
+          </text>
+          <text id="site_list-31">
+            <value>Akpadanou/B</value>
+          </text>
+          <text id="site_list-32">
+            <value>Akpadanou/C</value>
+          </text>
+          <text id="site_list-33">
+            <value>Assigui Gbongodo</value>
+          </text>
+          <text id="site_list-34">
+            <value>Azowlisse Centre/B</value>
+          </text>
+          <text id="site_list-35">
+            <value>Houngon</value>
+          </text>
+          <text id="site_list-36">
+            <value>Kouhoue</value>
+          </text>
+          <text id="site_list-37">
+            <value>Gogbo/B</value>
+          </text>
+          <text id="site_list-38">
+            <value>Gouke</value>
+          </text>
+          <text id="site_list-39">
+            <value>Canaan</value>
+          </text>
+          <text id="site_list-40">
+            <value>Don Divin</value>
+          </text>
+          <text id="site_list-41">
+            <value>Ke/A</value>
+          </text>
+          <text id="site_list-42">
+            <value>La Grace De Dieu</value>
+          </text>
+          <text id="site_list-43">
+            <value>Le Meilleur</value>
+          </text>
+          <text id="site_list-44">
+            <value>Le Nouveau Citoyen</value>
+          </text>
+          <text id="site_list-45">
+            <value>Dekin Kodekpomey</value>
+          </text>
+          <text id="site_list-46">
+            <value>Agbanta</value>
+          </text>
+          <text id="site_list-47">
+            <value>Gbeko/A</value>
+          </text>
+          <text id="site_list-48">
+            <value>Agongue/A</value>
+          </text>
+          <text id="site_list-49">
+            <value>Akpame/B</value>
+          </text>
+          <text id="site_list-50">
+            <value>Djigbe/A</value>
+          </text>
+          <text id="site_list-51">
+            <value>Hozin/B</value>
+          </text>
+          <text id="site_list-52">
+            <value>Saint Hilaire</value>
+          </text>
+          <text id="site_list-53">
+            <value>Akokponawa</value>
+          </text>
+          <text id="site_list-54">
+            <value>Les Vertes Vallees</value>
+          </text>
+          <text id="site_list-55">
+            <value>Nelson Mandela Madiba Dine</value>
+          </text>
+          <text id="site_list-56">
+            <value>Sai Lagare</value>
+          </text>
+          <text id="site_list-57">
+            <value>Sai Lagare/B</value>
+          </text>
+          <text id="site_list-58">
+            <value>Yokon/B</value>
+          </text>
+          <text id="site_list-59">
+            <value>Zounta-Aga</value>
+          </text>
+          <text id="site_list-60">
+            <value>Houedome 2/B</value>
+          </text>
+          <text id="site_list-61">
+            <value>Donoukpa</value>
+          </text>
+          <text id="site_list-62">
+            <value>Agbalilame/A</value>
+          </text>
+          <text id="site_list-63">
+            <value>Agbalilame/B</value>
+          </text>
+          <text id="site_list-64">
+            <value>Aubaine</value>
+          </text>
+          <text id="site_list-65">
+            <value>Copernic</value>
+          </text>
+          <text id="site_list-66">
+            <value>Davatin/B</value>
+          </text>
+          <text id="site_list-67">
+            <value>La Gazelle</value>
+          </text>
+          <text id="site_list-68">
+            <value>Le Prestige</value>
+          </text>
+          <text id="site_list-69">
+            <value>Le Temps</value>
+          </text>
+          <text id="site_list-70">
+            <value>Ketonou/A</value>
+          </text>
+          <text id="site_list-71">
+            <value>Saint Christophe Ii</value>
+          </text>
+          <text id="site_list-72">
+            <value>Jesude</value>
+          </text>
+          <text id="site_list-73">
+            <value>Djeffa/B</value>
+          </text>
+          <text id="site_list-74">
+            <value>Dodognon</value>
+          </text>
+          <text id="site_list-75">
+            <value>Ekpe Kanhonou/A</value>
+          </text>
+          <text id="site_list-76">
+            <value>La Cime</value>
+          </text>
+          <text id="site_list-77">
+            <value>La Releve</value>
+          </text>
+          <text id="site_list-78">
+            <value>L'Avenir</value>
+          </text>
+          <text id="site_list-79">
+            <value>Marie La Reine</value>
+          </text>
+          <text id="site_list-80">
+            <value>Sainte Philomene</value>
+          </text>
+          <text id="site_list-81">
+            <value>Na Se We</value>
+          </text>
+          <text id="site_list-82">
+            <value>Africa Progress</value>
+          </text>
+          <text id="site_list-83">
+            <value>Decroly</value>
+          </text>
+          <text id="site_list-84">
+            <value>Kpoguidi/B</value>
+          </text>
+          <text id="site_list-85">
+            <value>La Croissance</value>
+          </text>
+          <text id="site_list-86">
+            <value>La Grace Divine</value>
+          </text>
+          <text id="site_list-87">
+            <value>Le Flambeau Des Enfants</value>
+          </text>
+          <text id="site_list-88">
+            <value>Tohoue/B</value>
+          </text>
+          <text id="site_list-89">
+            <value>La Bonne Nouvelle</value>
+          </text>
+          <text id="site_list-90">
+            <value>Hounhoueko/A</value>
+          </text>
+          <text id="site_list-91">
+            <value>Etoile D'Orient</value>
+          </text>
+          <text id="site_list-92">
+            <value>Houegbo/A</value>
+          </text>
+          <text id="site_list-93">
+            <value>Akpakanme Avaligbo</value>
+          </text>
+          <text id="site_list-94">
+            <value>Akpro Hanzoume/A</value>
+          </text>
+          <text id="site_list-95">
+            <value>Danme Lokonon/B</value>
+          </text>
+          <text id="site_list-96">
+            <value>La Cite Des Savants</value>
+          </text>
+          <text id="site_list-97">
+            <value>Le Formateur D'Abogome</value>
+          </text>
+          <text id="site_list-98">
+            <value>Le Relais</value>
+          </text>
+          <text id="site_list-99">
+            <value>Les Trois Savoirs Amis</value>
+          </text>
+          <text id="site_list-100">
+            <value>Les Gagnants De Demain</value>
+          </text>
+          <text id="site_list-101">
+            <value>Bambino Village</value>
+          </text>
+          <text id="site_list-102">
+            <value>Afandji Tanme/B</value>
+          </text>
+          <text id="site_list-103">
+            <value>Lotin Gbedjehouin/A</value>
+          </text>
+          <text id="site_list-104">
+            <value>Sekanme/B</value>
+          </text>
+          <text id="site_list-105">
+            <value>Houngon Djinon</value>
+          </text>
+          <text id="site_list-106">
+            <value>Gome Doko/B</value>
+          </text>
+          <text id="site_list-107">
+            <value>Gome Sota/B</value>
+          </text>
+          <text id="site_list-108">
+            <value>Tchoukou Kpevi/B</value>
+          </text>
+          <text id="site_list-109">
+            <value>Katagon/C</value>
+          </text>
+          <text id="site_list-110">
+            <value>Vante</value>
+          </text>
+          <text id="site_list-111">
+            <value>Kouti Centre/C</value>
+          </text>
+          <text id="site_list-112">
+            <value>Tanme/C</value>
+          </text>
+          <text id="site_list-113">
+            <value>Enfant Epanoui</value>
+          </text>
+          <text id="site_list-114">
+            <value>Kotan/A</value>
+          </text>
+          <text id="site_list-115">
+            <value>Baptiste Sodohome</value>
+          </text>
+          <text id="site_list-116">
+            <value>Les Anges De Dieu</value>
+          </text>
+          <text id="site_list-117">
+            <value>Saint Jean Baptiste</value>
+          </text>
+          <text id="site_list-118">
+            <value>Vako Anago</value>
+          </text>
+          <text id="site_list-119">
+            <value>Tony Beni</value>
+          </text>
+          <text id="site_list-120">
+            <value>Akadja/A</value>
+          </text>
+          <text id="site_list-121">
+            <value>Banigbe Gare/B</value>
+          </text>
+          <text id="site_list-122">
+            <value>Banigbe Lokossa</value>
+          </text>
+          <text id="site_list-123">
+            <value>Banigbe Nagot/A</value>
+          </text>
+          <text id="site_list-124">
+            <value>Catholique Laudato Si Banigbe</value>
+          </text>
+          <text id="site_list-125">
+            <value>Daagbe/B</value>
+          </text>
+          <text id="site_list-126">
+            <value>Gblogblo/A</value>
+          </text>
+          <text id="site_list-127">
+            <value>Ayetedjou/B</value>
+          </text>
+          <text id="site_list-128">
+            <value>Idi Oro/C</value>
+          </text>
+          <text id="site_list-129">
+            <value>La Belle Etoile</value>
+          </text>
+          <text id="site_list-130">
+            <value>Houmbo/A</value>
+          </text>
+          <text id="site_list-131">
+            <value>Lagbe/B</value>
+          </text>
+          <text id="site_list-132">
+            <value>Zian/B</value>
+          </text>
+          <text id="site_list-133">
+            <value>Saint Vincent De Tchaada</value>
+          </text>
+          <text id="site_list-134">
+            <value>Akpechi</value>
+          </text>
+          <text id="site_list-135">
+            <value>Assa Game</value>
+          </text>
+          <text id="site_list-136">
+            <value>Elewoure</value>
+          </text>
+          <text id="site_list-137">
+            <value>Ilougou Ikpedjile</value>
+          </text>
+          <text id="site_list-138">
+            <value>Ita Alabe</value>
+          </text>
+          <text id="site_list-139">
+            <value>Kossomi</value>
+          </text>
+          <text id="site_list-140">
+            <value>Igba/B</value>
+          </text>
+          <text id="site_list-141">
+            <value>Ita Djebou Centre/B</value>
+          </text>
+          <text id="site_list-142">
+            <value>Kadjola</value>
+          </text>
+          <text id="site_list-143">
+            <value>Markaz</value>
+          </text>
+          <text id="site_list-144">
+            <value>Odanyogoun/B</value>
+          </text>
+          <text id="site_list-145">
+            <value>Agonsa</value>
+          </text>
+          <text id="site_list-146">
+            <value>Igbo Akpa Ita Gbokou</value>
+          </text>
+          <text id="site_list-147">
+            <value>Ita Gbokou</value>
+          </text>
+          <text id="site_list-148">
+            <value>Akadja Takon</value>
+          </text>
+          <text id="site_list-149">
+            <value>La Prunelle De Djohoun-Kolle</value>
+          </text>
+          <text id="site_list-150">
+            <value>Agbidi Idioro</value>
+          </text>
+          <text id="site_list-151">
+            <value>Igbere Okeita/B</value>
+          </text>
+          <text id="site_list-152">
+            <value>Eguelou</value>
+          </text>
+          <text id="site_list-153">
+            <value>Illemon</value>
+          </text>
+          <text id="site_list-154">
+            <value>Araromi</value>
+          </text>
+          <text id="site_list-155">
+            <value>Idjakou</value>
+          </text>
+          <text id="site_list-156">
+            <value>Igbo Ekpe</value>
+          </text>
+          <text id="site_list-157">
+            <value>Igbo Ewe</value>
+          </text>
+          <text id="site_list-158">
+            <value>Igbodje</value>
+          </text>
+          <text id="site_list-159">
+            <value>Illoulofin</value>
+          </text>
+          <text id="site_list-160">
+            <value>Onigbolo Usine/C</value>
+          </text>
+          <text id="site_list-161">
+            <value>Agbarou</value>
+          </text>
+          <text id="site_list-162">
+            <value>Apostolique</value>
+          </text>
+          <text id="site_list-163">
+            <value>Damacy/B</value>
+          </text>
+          <text id="site_list-164">
+            <value>Divins Tresors</value>
+          </text>
+          <text id="site_list-165">
+            <value>Espoir Pobe</value>
+          </text>
+          <text id="site_list-166">
+            <value>Le Plateau/B</value>
+          </text>
+          <text id="site_list-167">
+            <value>Les Lys Nda</value>
+          </text>
+          <text id="site_list-168">
+            <value>Markaz Al Amir</value>
+          </text>
+          <text id="site_list-169">
+            <value>Nonvide Boussari/B</value>
+          </text>
+          <text id="site_list-170">
+            <value>Oke Ata/C</value>
+          </text>
+          <text id="site_list-171">
+            <value>Pobe / A</value>
+          </text>
+          <text id="site_list-172">
+            <value>Pobe/D</value>
+          </text>
+          <text id="site_list-173">
+            <value>Abodjoukpa</value>
+          </text>
+          <text id="site_list-174">
+            <value>Ibate</value>
+          </text>
+          <text id="site_list-175">
+            <value>Igbo Ede Chaffou</value>
+          </text>
+          <text id="site_list-176">
+            <value>Issokou Oniwere</value>
+          </text>
+          <text id="site_list-177">
+            <value>Lafenwa</value>
+          </text>
+          <text id="site_list-178">
+            <value>Oke Odja</value>
+          </text>
+          <text id="site_list-179">
+            <value>Towe/B</value>
+          </text>
+          <text id="site_list-180">
+            <value>Ahouaga/B</value>
+          </text>
+          <text id="site_list-181">
+            <value>Djegbe/B</value>
+          </text>
+          <text id="site_list-182">
+            <value>Les Semences</value>
+          </text>
+          <text id="site_list-183">
+            <value>Alikpa</value>
+          </text>
+          <text id="site_list-184">
+            <value>Anne Et Pierre</value>
+          </text>
+          <text id="site_list-185">
+            <value>Ecole Chretienne De Zounkpa</value>
+          </text>
+          <text id="site_list-186">
+            <value>Hezonho/B</value>
+          </text>
+          <text id="site_list-187">
+            <value>La Seve</value>
+          </text>
+          <text id="site_list-188">
+            <value>Vehou/B</value>
+          </text>
+          <text id="site_list-189">
+            <value>Zouzonme Avogbanna</value>
+          </text>
+          <text id="site_list-190">
+            <value>Ague Kpota</value>
+          </text>
+          <text id="site_list-191">
+            <value>Awo Godo</value>
+          </text>
+          <text id="site_list-192">
+            <value>Centre Pere Paul Rival</value>
+          </text>
+          <text id="site_list-193">
+            <value>Gangban/C</value>
+          </text>
+          <text id="site_list-194">
+            <value>Klogbome</value>
+          </text>
+          <text id="site_list-195">
+            <value>Saharo Centre</value>
+          </text>
+          <text id="site_list-196">
+            <value>Fingninkanme</value>
+          </text>
+          <text id="site_list-197">
+            <value>Le Pionnier Ii</value>
+          </text>
+          <text id="site_list-198">
+            <value>Saint Marc De Dekin Honhoue</value>
+          </text>
+          <text id="site_list-199">
+            <value>Tokpa Blihoue</value>
+          </text>
+          <text id="site_list-200">
+            <value>Aniviekome</value>
+          </text>
+          <text id="site_list-201">
+            <value>Salem</value>
+          </text>
+          <text id="site_list-202">
+            <value>Cite De Grace De Djeffa</value>
+          </text>
+          <text id="site_list-203">
+            <value>Djeregbe/C</value>
+          </text>
+          <text id="site_list-204">
+            <value>Horoca</value>
+          </text>
+          <text id="site_list-205">
+            <value>Le Miracle De Tohoue</value>
+          </text>
+          <text id="site_list-206">
+            <value>Le Phenix</value>
+          </text>
+          <text id="site_list-207">
+            <value>Notre Dame De L'Atlantique/B</value>
+          </text>
+          <text id="site_list-208">
+            <value>Saint Antoine De Padoue Ekpe</value>
+          </text>
+          <text id="site_list-209">
+            <value>Sainte Genevieve</value>
+          </text>
+          <text id="site_list-210">
+            <value>Abogome/A</value>
+          </text>
+          <text id="site_list-211">
+            <value>Abogome/B</value>
+          </text>
+          <text id="site_list-212">
+            <value>Adjina/B</value>
+          </text>
+          <text id="site_list-213">
+            <value>Akpakanme/A</value>
+          </text>
+          <text id="site_list-214">
+            <value>Kouve/A</value>
+          </text>
+          <text id="site_list-215">
+            <value>Les Erudits</value>
+          </text>
+          <text id="site_list-216">
+            <value>Les Petits Genies De Lotin</value>
+          </text>
+          <text id="site_list-217">
+            <value>Tanzoun/A</value>
+          </text>
+          <text id="site_list-218">
+            <value>Saint Laurent</value>
+          </text>
+          <text id="site_list-219">
+            <value>Tchakou/A</value>
+          </text>
+          <text id="site_list-220">
+            <value>Ketou Gbecon/B</value>
+          </text>
+          <text id="site_list-221">
+            <value>Ketoukpe</value>
+          </text>
+          <text id="site_list-222">
+            <value>Ko Koumonlou/B</value>
+          </text>
+          <text id="site_list-223">
+            <value>La Source Du Savoir Banigbe</value>
+          </text>
+          <text id="site_list-224">
+            <value>Migbehoue</value>
+          </text>
+          <text id="site_list-225">
+            <value>Videkon</value>
+          </text>
+          <text id="site_list-226">
+            <value>Coeur Immaculee De Marie</value>
+          </text>
+          <text id="site_list-227">
+            <value>Iliro Sodji</value>
+          </text>
+          <text id="site_list-228">
+            <value>Modogan</value>
+          </text>
+          <text id="site_list-229">
+            <value>Sahoro Nagot</value>
+          </text>
+          <text id="site_list-230">
+            <value>Akouho/A</value>
+          </text>
+          <text id="site_list-231">
+            <value>Akpate Ayekou</value>
+          </text>
+          <text id="site_list-232">
+            <value>Gbagui</value>
+          </text>
+          <text id="site_list-233">
+            <value>Igbo Itche Ogouba</value>
+          </text>
+          <text id="site_list-234">
+            <value>La Confiance Talala Pobe</value>
+          </text>
+          <text id="site_list-235">
+            <value>Oke Ata/B</value>
+          </text>
+          <text id="site_list-236">
+            <value>Okere</value>
+          </text>
+          <text id="site_list-237">
+            <value>Onigbolo Usine/B</value>
+          </text>
+          <text id="site_list-238">
+            <value>Terre Promise</value>
+          </text>
+          <text id="site_list-239">
+            <value>Zone Residentielle/A (Mamague)</value>
+          </text>
+          <text id="site_list_id-0">
+            <value>100</value>
+          </text>
+          <text id="site_list_id-1">
+            <value>101</value>
+          </text>
+          <text id="site_list_id-2">
+            <value>102</value>
+          </text>
+          <text id="site_list_id-3">
+            <value>103</value>
+          </text>
+          <text id="site_list_id-4">
+            <value>104</value>
+          </text>
+          <text id="site_list_id-5">
+            <value>105</value>
+          </text>
+          <text id="site_list_id-6">
+            <value>106</value>
+          </text>
+          <text id="site_list_id-7">
+            <value>107</value>
+          </text>
+          <text id="site_list_id-8">
+            <value>108</value>
+          </text>
+          <text id="site_list_id-9">
+            <value>109</value>
+          </text>
+          <text id="site_list_id-10">
+            <value>110</value>
+          </text>
+          <text id="site_list_id-11">
+            <value>111</value>
+          </text>
+          <text id="site_list_id-12">
+            <value>112</value>
+          </text>
+          <text id="site_list_id-13">
+            <value>113</value>
+          </text>
+          <text id="site_list_id-14">
+            <value>114</value>
+          </text>
+          <text id="site_list_id-15">
+            <value>115</value>
+          </text>
+          <text id="site_list_id-16">
+            <value>116</value>
+          </text>
+          <text id="site_list_id-17">
+            <value>117</value>
+          </text>
+          <text id="site_list_id-18">
+            <value>118</value>
+          </text>
+          <text id="site_list_id-19">
+            <value>119</value>
+          </text>
+          <text id="site_list_id-20">
+            <value>120</value>
+          </text>
+          <text id="site_list_id-21">
+            <value>121</value>
+          </text>
+          <text id="site_list_id-22">
+            <value>122</value>
+          </text>
+          <text id="site_list_id-23">
+            <value>123</value>
+          </text>
+          <text id="site_list_id-24">
+            <value>124</value>
+          </text>
+          <text id="site_list_id-25">
+            <value>125</value>
+          </text>
+          <text id="site_list_id-26">
+            <value>126</value>
+          </text>
+          <text id="site_list_id-27">
+            <value>127</value>
+          </text>
+          <text id="site_list_id-28">
+            <value>128</value>
+          </text>
+          <text id="site_list_id-29">
+            <value>129</value>
+          </text>
+          <text id="site_list_id-30">
+            <value>130</value>
+          </text>
+          <text id="site_list_id-31">
+            <value>131</value>
+          </text>
+          <text id="site_list_id-32">
+            <value>132</value>
+          </text>
+          <text id="site_list_id-33">
+            <value>133</value>
+          </text>
+          <text id="site_list_id-34">
+            <value>134</value>
+          </text>
+          <text id="site_list_id-35">
+            <value>135</value>
+          </text>
+          <text id="site_list_id-36">
+            <value>136</value>
+          </text>
+          <text id="site_list_id-37">
+            <value>137</value>
+          </text>
+          <text id="site_list_id-38">
+            <value>138</value>
+          </text>
+          <text id="site_list_id-39">
+            <value>139</value>
+          </text>
+          <text id="site_list_id-40">
+            <value>140</value>
+          </text>
+          <text id="site_list_id-41">
+            <value>141</value>
+          </text>
+          <text id="site_list_id-42">
+            <value>142</value>
+          </text>
+          <text id="site_list_id-43">
+            <value>143</value>
+          </text>
+          <text id="site_list_id-44">
+            <value>144</value>
+          </text>
+          <text id="site_list_id-45">
+            <value>145</value>
+          </text>
+          <text id="site_list_id-46">
+            <value>146</value>
+          </text>
+          <text id="site_list_id-47">
+            <value>147</value>
+          </text>
+          <text id="site_list_id-48">
+            <value>148</value>
+          </text>
+          <text id="site_list_id-49">
+            <value>149</value>
+          </text>
+          <text id="site_list_id-50">
+            <value>150</value>
+          </text>
+          <text id="site_list_id-51">
+            <value>151</value>
+          </text>
+          <text id="site_list_id-52">
+            <value>152</value>
+          </text>
+          <text id="site_list_id-53">
+            <value>153</value>
+          </text>
+          <text id="site_list_id-54">
+            <value>154</value>
+          </text>
+          <text id="site_list_id-55">
+            <value>155</value>
+          </text>
+          <text id="site_list_id-56">
+            <value>156</value>
+          </text>
+          <text id="site_list_id-57">
+            <value>157</value>
+          </text>
+          <text id="site_list_id-58">
+            <value>158</value>
+          </text>
+          <text id="site_list_id-59">
+            <value>159</value>
+          </text>
+          <text id="site_list_id-60">
+            <value>160</value>
+          </text>
+          <text id="site_list_id-61">
+            <value>161</value>
+          </text>
+          <text id="site_list_id-62">
+            <value>162</value>
+          </text>
+          <text id="site_list_id-63">
+            <value>163</value>
+          </text>
+          <text id="site_list_id-64">
+            <value>164</value>
+          </text>
+          <text id="site_list_id-65">
+            <value>165</value>
+          </text>
+          <text id="site_list_id-66">
+            <value>166</value>
+          </text>
+          <text id="site_list_id-67">
+            <value>167</value>
+          </text>
+          <text id="site_list_id-68">
+            <value>168</value>
+          </text>
+          <text id="site_list_id-69">
+            <value>169</value>
+          </text>
+          <text id="site_list_id-70">
+            <value>170</value>
+          </text>
+          <text id="site_list_id-71">
+            <value>171</value>
+          </text>
+          <text id="site_list_id-72">
+            <value>172</value>
+          </text>
+          <text id="site_list_id-73">
+            <value>173</value>
+          </text>
+          <text id="site_list_id-74">
+            <value>174</value>
+          </text>
+          <text id="site_list_id-75">
+            <value>175</value>
+          </text>
+          <text id="site_list_id-76">
+            <value>176</value>
+          </text>
+          <text id="site_list_id-77">
+            <value>177</value>
+          </text>
+          <text id="site_list_id-78">
+            <value>178</value>
+          </text>
+          <text id="site_list_id-79">
+            <value>179</value>
+          </text>
+          <text id="site_list_id-80">
+            <value>180</value>
+          </text>
+          <text id="site_list_id-81">
+            <value>181</value>
+          </text>
+          <text id="site_list_id-82">
+            <value>182</value>
+          </text>
+          <text id="site_list_id-83">
+            <value>183</value>
+          </text>
+          <text id="site_list_id-84">
+            <value>184</value>
+          </text>
+          <text id="site_list_id-85">
+            <value>185</value>
+          </text>
+          <text id="site_list_id-86">
+            <value>186</value>
+          </text>
+          <text id="site_list_id-87">
+            <value>187</value>
+          </text>
+          <text id="site_list_id-88">
+            <value>188</value>
+          </text>
+          <text id="site_list_id-89">
+            <value>189</value>
+          </text>
+          <text id="site_list_id-90">
+            <value>190</value>
+          </text>
+          <text id="site_list_id-91">
+            <value>191</value>
+          </text>
+          <text id="site_list_id-92">
+            <value>192</value>
+          </text>
+          <text id="site_list_id-93">
+            <value>193</value>
+          </text>
+          <text id="site_list_id-94">
+            <value>194</value>
+          </text>
+          <text id="site_list_id-95">
+            <value>195</value>
+          </text>
+          <text id="site_list_id-96">
+            <value>196</value>
+          </text>
+          <text id="site_list_id-97">
+            <value>197</value>
+          </text>
+          <text id="site_list_id-98">
+            <value>198</value>
+          </text>
+          <text id="site_list_id-99">
+            <value>199</value>
+          </text>
+          <text id="site_list_id-100">
+            <value>200</value>
+          </text>
+          <text id="site_list_id-101">
+            <value>201</value>
+          </text>
+          <text id="site_list_id-102">
+            <value>202</value>
+          </text>
+          <text id="site_list_id-103">
+            <value>203</value>
+          </text>
+          <text id="site_list_id-104">
+            <value>204</value>
+          </text>
+          <text id="site_list_id-105">
+            <value>205</value>
+          </text>
+          <text id="site_list_id-106">
+            <value>206</value>
+          </text>
+          <text id="site_list_id-107">
+            <value>207</value>
+          </text>
+          <text id="site_list_id-108">
+            <value>208</value>
+          </text>
+          <text id="site_list_id-109">
+            <value>209</value>
+          </text>
+          <text id="site_list_id-110">
+            <value>210</value>
+          </text>
+          <text id="site_list_id-111">
+            <value>211</value>
+          </text>
+          <text id="site_list_id-112">
+            <value>212</value>
+          </text>
+          <text id="site_list_id-113">
+            <value>213</value>
+          </text>
+          <text id="site_list_id-114">
+            <value>214</value>
+          </text>
+          <text id="site_list_id-115">
+            <value>215</value>
+          </text>
+          <text id="site_list_id-116">
+            <value>216</value>
+          </text>
+          <text id="site_list_id-117">
+            <value>217</value>
+          </text>
+          <text id="site_list_id-118">
+            <value>218</value>
+          </text>
+          <text id="site_list_id-119">
+            <value>219</value>
+          </text>
+          <text id="site_list_id-120">
+            <value>220</value>
+          </text>
+          <text id="site_list_id-121">
+            <value>221</value>
+          </text>
+          <text id="site_list_id-122">
+            <value>222</value>
+          </text>
+          <text id="site_list_id-123">
+            <value>223</value>
+          </text>
+          <text id="site_list_id-124">
+            <value>224</value>
+          </text>
+          <text id="site_list_id-125">
+            <value>225</value>
+          </text>
+          <text id="site_list_id-126">
+            <value>226</value>
+          </text>
+          <text id="site_list_id-127">
+            <value>227</value>
+          </text>
+          <text id="site_list_id-128">
+            <value>228</value>
+          </text>
+          <text id="site_list_id-129">
+            <value>229</value>
+          </text>
+          <text id="site_list_id-130">
+            <value>230</value>
+          </text>
+          <text id="site_list_id-131">
+            <value>231</value>
+          </text>
+          <text id="site_list_id-132">
+            <value>232</value>
+          </text>
+          <text id="site_list_id-133">
+            <value>233</value>
+          </text>
+          <text id="site_list_id-134">
+            <value>234</value>
+          </text>
+          <text id="site_list_id-135">
+            <value>235</value>
+          </text>
+          <text id="site_list_id-136">
+            <value>236</value>
+          </text>
+          <text id="site_list_id-137">
+            <value>237</value>
+          </text>
+          <text id="site_list_id-138">
+            <value>238</value>
+          </text>
+          <text id="site_list_id-139">
+            <value>239</value>
+          </text>
+          <text id="site_list_id-140">
+            <value>240</value>
+          </text>
+          <text id="site_list_id-141">
+            <value>241</value>
+          </text>
+          <text id="site_list_id-142">
+            <value>242</value>
+          </text>
+          <text id="site_list_id-143">
+            <value>243</value>
+          </text>
+          <text id="site_list_id-144">
+            <value>244</value>
+          </text>
+          <text id="site_list_id-145">
+            <value>245</value>
+          </text>
+          <text id="site_list_id-146">
+            <value>246</value>
+          </text>
+          <text id="site_list_id-147">
+            <value>247</value>
+          </text>
+          <text id="site_list_id-148">
+            <value>248</value>
+          </text>
+          <text id="site_list_id-149">
+            <value>249</value>
+          </text>
+          <text id="site_list_id-150">
+            <value>250</value>
+          </text>
+          <text id="site_list_id-151">
+            <value>251</value>
+          </text>
+          <text id="site_list_id-152">
+            <value>252</value>
+          </text>
+          <text id="site_list_id-153">
+            <value>253</value>
+          </text>
+          <text id="site_list_id-154">
+            <value>254</value>
+          </text>
+          <text id="site_list_id-155">
+            <value>255</value>
+          </text>
+          <text id="site_list_id-156">
+            <value>256</value>
+          </text>
+          <text id="site_list_id-157">
+            <value>257</value>
+          </text>
+          <text id="site_list_id-158">
+            <value>258</value>
+          </text>
+          <text id="site_list_id-159">
+            <value>259</value>
+          </text>
+          <text id="site_list_id-160">
+            <value>260</value>
+          </text>
+          <text id="site_list_id-161">
+            <value>261</value>
+          </text>
+          <text id="site_list_id-162">
+            <value>262</value>
+          </text>
+          <text id="site_list_id-163">
+            <value>263</value>
+          </text>
+          <text id="site_list_id-164">
+            <value>264</value>
+          </text>
+          <text id="site_list_id-165">
+            <value>265</value>
+          </text>
+          <text id="site_list_id-166">
+            <value>266</value>
+          </text>
+          <text id="site_list_id-167">
+            <value>267</value>
+          </text>
+          <text id="site_list_id-168">
+            <value>268</value>
+          </text>
+          <text id="site_list_id-169">
+            <value>269</value>
+          </text>
+          <text id="site_list_id-170">
+            <value>270</value>
+          </text>
+          <text id="site_list_id-171">
+            <value>271</value>
+          </text>
+          <text id="site_list_id-172">
+            <value>272</value>
+          </text>
+          <text id="site_list_id-173">
+            <value>273</value>
+          </text>
+          <text id="site_list_id-174">
+            <value>274</value>
+          </text>
+          <text id="site_list_id-175">
+            <value>275</value>
+          </text>
+          <text id="site_list_id-176">
+            <value>276</value>
+          </text>
+          <text id="site_list_id-177">
+            <value>277</value>
+          </text>
+          <text id="site_list_id-178">
+            <value>278</value>
+          </text>
+          <text id="site_list_id-179">
+            <value>279</value>
+          </text>
+          <text id="site_list_id-180">
+            <value>281</value>
+          </text>
+          <text id="site_list_id-181">
+            <value>280</value>
+          </text>
+          <text id="site_list_id-182">
+            <value>282</value>
+          </text>
+          <text id="site_list_id-183">
+            <value>287</value>
+          </text>
+          <text id="site_list_id-184">
+            <value>284</value>
+          </text>
+          <text id="site_list_id-185">
+            <value>288</value>
+          </text>
+          <text id="site_list_id-186">
+            <value>283</value>
+          </text>
+          <text id="site_list_id-187">
+            <value>285</value>
+          </text>
+          <text id="site_list_id-188">
+            <value>289</value>
+          </text>
+          <text id="site_list_id-189">
+            <value>286</value>
+          </text>
+          <text id="site_list_id-190">
+            <value>291</value>
+          </text>
+          <text id="site_list_id-191">
+            <value>292</value>
+          </text>
+          <text id="site_list_id-192">
+            <value>290</value>
+          </text>
+          <text id="site_list_id-193">
+            <value>295</value>
+          </text>
+          <text id="site_list_id-194">
+            <value>293</value>
+          </text>
+          <text id="site_list_id-195">
+            <value>294</value>
+          </text>
+          <text id="site_list_id-196">
+            <value>299</value>
+          </text>
+          <text id="site_list_id-197">
+            <value>297</value>
+          </text>
+          <text id="site_list_id-198">
+            <value>296</value>
+          </text>
+          <text id="site_list_id-199">
+            <value>298</value>
+          </text>
+          <text id="site_list_id-200">
+            <value>300</value>
+          </text>
+          <text id="site_list_id-201">
+            <value>301</value>
+          </text>
+          <text id="site_list_id-202">
+            <value>306</value>
+          </text>
+          <text id="site_list_id-203">
+            <value>303</value>
+          </text>
+          <text id="site_list_id-204">
+            <value>304</value>
+          </text>
+          <text id="site_list_id-205">
+            <value>308</value>
+          </text>
+          <text id="site_list_id-206">
+            <value>302</value>
+          </text>
+          <text id="site_list_id-207">
+            <value>305</value>
+          </text>
+          <text id="site_list_id-208">
+            <value>307</value>
+          </text>
+          <text id="site_list_id-209">
+            <value>309</value>
+          </text>
+          <text id="site_list_id-210">
+            <value>311</value>
+          </text>
+          <text id="site_list_id-211">
+            <value>312</value>
+          </text>
+          <text id="site_list_id-212">
+            <value>310</value>
+          </text>
+          <text id="site_list_id-213">
+            <value>313</value>
+          </text>
+          <text id="site_list_id-214">
+            <value>314</value>
+          </text>
+          <text id="site_list_id-215">
+            <value>316</value>
+          </text>
+          <text id="site_list_id-216">
+            <value>317</value>
+          </text>
+          <text id="site_list_id-217">
+            <value>315</value>
+          </text>
+          <text id="site_list_id-218">
+            <value>319</value>
+          </text>
+          <text id="site_list_id-219">
+            <value>318</value>
+          </text>
+          <text id="site_list_id-220">
+            <value>324</value>
+          </text>
+          <text id="site_list_id-221">
+            <value>325</value>
+          </text>
+          <text id="site_list_id-222">
+            <value>321</value>
+          </text>
+          <text id="site_list_id-223">
+            <value>320</value>
+          </text>
+          <text id="site_list_id-224">
+            <value>322</value>
+          </text>
+          <text id="site_list_id-225">
+            <value>323</value>
+          </text>
+          <text id="site_list_id-226">
+            <value>328</value>
+          </text>
+          <text id="site_list_id-227">
+            <value>326</value>
+          </text>
+          <text id="site_list_id-228">
+            <value>327</value>
+          </text>
+          <text id="site_list_id-229">
+            <value>329</value>
+          </text>
+          <text id="site_list_id-230">
+            <value>332</value>
+          </text>
+          <text id="site_list_id-231">
+            <value>338</value>
+          </text>
+          <text id="site_list_id-232">
+            <value>330</value>
+          </text>
+          <text id="site_list_id-233">
+            <value>333</value>
+          </text>
+          <text id="site_list_id-234">
+            <value>334</value>
+          </text>
+          <text id="site_list_id-235">
+            <value>335</value>
+          </text>
+          <text id="site_list_id-236">
+            <value>339</value>
+          </text>
+          <text id="site_list_id-237">
+            <value>331</value>
+          </text>
+          <text id="site_list_id-238">
+            <value>336</value>
+          </text>
+          <text id="site_list_id-239">
+            <value>337</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Oui</value>
+          </text>
+          <text id="yes_no-1">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>-</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="eu_list">
+        <root>
+          <item>
+            <itextId>eu_list-0</itextId>
+            <name>Abomey</name>
+          </item>
+          <item>
+            <itextId>eu_list-1</itextId>
+            <name>Adjohoun</name>
+          </item>
+          <item>
+            <itextId>eu_list-2</itextId>
+            <name>Aguegues</name>
+          </item>
+          <item>
+            <itextId>eu_list-3</itextId>
+            <name>Avrankou</name>
+          </item>
+          <item>
+            <itextId>eu_list-4</itextId>
+            <name>Ifangni</name>
+          </item>
+          <item>
+            <itextId>eu_list-5</itextId>
+            <name>Pobe</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="commune_list">
+        <root>
+          <item>
+            <itextId>commune_list-0</itextId>
+            <eu_list>Abomey</eu_list>
+            <name>Abomey</name>
+          </item>
+          <item>
+            <itextId>commune_list-1</itextId>
+            <eu_list>Abomey</eu_list>
+            <name>Bohicon</name>
+          </item>
+          <item>
+            <itextId>commune_list-2</itextId>
+            <eu_list>Adjohoun</eu_list>
+            <name>Adjohoun</name>
+          </item>
+          <item>
+            <itextId>commune_list-3</itextId>
+            <eu_list>Adjohoun</eu_list>
+            <name>Dangbo</name>
+          </item>
+          <item>
+            <itextId>commune_list-4</itextId>
+            <eu_list>Aguegues</eu_list>
+            <name>Aguegues</name>
+          </item>
+          <item>
+            <itextId>commune_list-5</itextId>
+            <eu_list>Aguegues</eu_list>
+            <name>Seme-Kpodji</name>
+          </item>
+          <item>
+            <itextId>commune_list-6</itextId>
+            <eu_list>Avrankou</eu_list>
+            <name>Adjarra</name>
+          </item>
+          <item>
+            <itextId>commune_list-7</itextId>
+            <eu_list>Avrankou</eu_list>
+            <name>Akpro-Misserete</name>
+          </item>
+          <item>
+            <itextId>commune_list-8</itextId>
+            <eu_list>Avrankou</eu_list>
+            <name>Avrankou</name>
+          </item>
+          <item>
+            <itextId>commune_list-9</itextId>
+            <eu_list>Ifangni</eu_list>
+            <name>Ifangni</name>
+          </item>
+          <item>
+            <itextId>commune_list-10</itextId>
+            <eu_list>Ifangni</eu_list>
+            <name>Sakete</name>
+          </item>
+          <item>
+            <itextId>commune_list-11</itextId>
+            <eu_list>Pobe</eu_list>
+            <name>Pobe</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_list">
+        <root>
+          <item>
+            <itextId>site_list-0</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Djime/A</name>
+          </item>
+          <item>
+            <itextId>site_list-1</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Gbecon Houegbo/C</name>
+          </item>
+          <item>
+            <itextId>site_list-2</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Agblome/B</name>
+          </item>
+          <item>
+            <itextId>site_list-3</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Agblome/C</name>
+          </item>
+          <item>
+            <itextId>site_list-4</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Agnangnan/A</name>
+          </item>
+          <item>
+            <itextId>site_list-5</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Agnangnan/B</name>
+          </item>
+          <item>
+            <itextId>site_list-6</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Frere Et Soeur</name>
+          </item>
+          <item>
+            <itextId>site_list-7</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Gbecon Hounli/B</name>
+          </item>
+          <item>
+            <itextId>site_list-8</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Institut Des Aveugles D'Abomey</name>
+          </item>
+          <item>
+            <itextId>site_list-9</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>La Competence</name>
+          </item>
+          <item>
+            <itextId>site_list-10</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Les Merveilles De L'Academie</name>
+          </item>
+          <item>
+            <itextId>site_list-11</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Houeli</name>
+          </item>
+          <item>
+            <itextId>site_list-12</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Abomey/A</name>
+          </item>
+          <item>
+            <itextId>site_list-13</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Abomey/C</name>
+          </item>
+          <item>
+            <itextId>site_list-14</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Ahouaga/C</name>
+          </item>
+          <item>
+            <itextId>site_list-15</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Catholique Bon Pasteur</name>
+          </item>
+          <item>
+            <itextId>site_list-16</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Dozoeme</name>
+          </item>
+          <item>
+            <itextId>site_list-17</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Houenoussou Grace Divine</name>
+          </item>
+          <item>
+            <itextId>site_list-18</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Oukanme/B</name>
+          </item>
+          <item>
+            <itextId>site_list-19</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Zounzonme</name>
+          </item>
+          <item>
+            <itextId>site_list-20</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Agabgon/C</name>
+          </item>
+          <item>
+            <itextId>site_list-21</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Agbadjagon/B</name>
+          </item>
+          <item>
+            <itextId>site_list-22</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Catholique Saint Francois D'Assise</name>
+          </item>
+          <item>
+            <itextId>site_list-23</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Djognangbo</name>
+          </item>
+          <item>
+            <itextId>site_list-24</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Bohicon/B</name>
+          </item>
+          <item>
+            <itextId>site_list-25</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Bon Citoyen</name>
+          </item>
+          <item>
+            <itextId>site_list-26</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>La Clef</name>
+          </item>
+          <item>
+            <itextId>site_list-27</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Leopold Sedar Senghor</name>
+          </item>
+          <item>
+            <itextId>site_list-28</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Notre Dame De Toutes Graces</name>
+          </item>
+          <item>
+            <itextId>site_list-29</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Zakpo/C</name>
+          </item>
+          <item>
+            <itextId>site_list-30</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Houekpa/A</name>
+          </item>
+          <item>
+            <itextId>site_list-31</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Akpadanou/B</name>
+          </item>
+          <item>
+            <itextId>site_list-32</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Akpadanou/C</name>
+          </item>
+          <item>
+            <itextId>site_list-33</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Assigui Gbongodo</name>
+          </item>
+          <item>
+            <itextId>site_list-34</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Azowlisse Centre/B</name>
+          </item>
+          <item>
+            <itextId>site_list-35</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Houngon</name>
+          </item>
+          <item>
+            <itextId>site_list-36</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Kouhoue</name>
+          </item>
+          <item>
+            <itextId>site_list-37</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Gogbo/B</name>
+          </item>
+          <item>
+            <itextId>site_list-38</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Gouke</name>
+          </item>
+          <item>
+            <itextId>site_list-39</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Canaan</name>
+          </item>
+          <item>
+            <itextId>site_list-40</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Don Divin</name>
+          </item>
+          <item>
+            <itextId>site_list-41</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Ke/A</name>
+          </item>
+          <item>
+            <itextId>site_list-42</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>La Grace De Dieu</name>
+          </item>
+          <item>
+            <itextId>site_list-43</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Le Meilleur</name>
+          </item>
+          <item>
+            <itextId>site_list-44</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Le Nouveau Citoyen</name>
+          </item>
+          <item>
+            <itextId>site_list-45</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Dekin Kodekpomey</name>
+          </item>
+          <item>
+            <itextId>site_list-46</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Agbanta</name>
+          </item>
+          <item>
+            <itextId>site_list-47</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Gbeko/A</name>
+          </item>
+          <item>
+            <itextId>site_list-48</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Agongue/A</name>
+          </item>
+          <item>
+            <itextId>site_list-49</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Akpame/B</name>
+          </item>
+          <item>
+            <itextId>site_list-50</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Djigbe/A</name>
+          </item>
+          <item>
+            <itextId>site_list-51</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Hozin/B</name>
+          </item>
+          <item>
+            <itextId>site_list-52</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Saint Hilaire</name>
+          </item>
+          <item>
+            <itextId>site_list-53</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Akokponawa</name>
+          </item>
+          <item>
+            <itextId>site_list-54</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Les Vertes Vallees</name>
+          </item>
+          <item>
+            <itextId>site_list-55</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Nelson Mandela Madiba Dine</name>
+          </item>
+          <item>
+            <itextId>site_list-56</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Sai Lagare</name>
+          </item>
+          <item>
+            <itextId>site_list-57</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Sai Lagare/B</name>
+          </item>
+          <item>
+            <itextId>site_list-58</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Yokon/B</name>
+          </item>
+          <item>
+            <itextId>site_list-59</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Zounta-Aga</name>
+          </item>
+          <item>
+            <itextId>site_list-60</itextId>
+            <commune_list>Aguegues</commune_list>
+            <name>Houedome 2/B</name>
+          </item>
+          <item>
+            <itextId>site_list-61</itextId>
+            <commune_list>Aguegues</commune_list>
+            <name>Donoukpa</name>
+          </item>
+          <item>
+            <itextId>site_list-62</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Agbalilame/A</name>
+          </item>
+          <item>
+            <itextId>site_list-63</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Agbalilame/B</name>
+          </item>
+          <item>
+            <itextId>site_list-64</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Aubaine</name>
+          </item>
+          <item>
+            <itextId>site_list-65</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Copernic</name>
+          </item>
+          <item>
+            <itextId>site_list-66</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Davatin/B</name>
+          </item>
+          <item>
+            <itextId>site_list-67</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>La Gazelle</name>
+          </item>
+          <item>
+            <itextId>site_list-68</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Le Prestige</name>
+          </item>
+          <item>
+            <itextId>site_list-69</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Le Temps</name>
+          </item>
+          <item>
+            <itextId>site_list-70</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Ketonou/A</name>
+          </item>
+          <item>
+            <itextId>site_list-71</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Saint Christophe Ii</name>
+          </item>
+          <item>
+            <itextId>site_list-72</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Jesude</name>
+          </item>
+          <item>
+            <itextId>site_list-73</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Djeffa/B</name>
+          </item>
+          <item>
+            <itextId>site_list-74</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Dodognon</name>
+          </item>
+          <item>
+            <itextId>site_list-75</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Ekpe Kanhonou/A</name>
+          </item>
+          <item>
+            <itextId>site_list-76</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>La Cime</name>
+          </item>
+          <item>
+            <itextId>site_list-77</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>La Releve</name>
+          </item>
+          <item>
+            <itextId>site_list-78</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>L'Avenir</name>
+          </item>
+          <item>
+            <itextId>site_list-79</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Marie La Reine</name>
+          </item>
+          <item>
+            <itextId>site_list-80</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Sainte Philomene</name>
+          </item>
+          <item>
+            <itextId>site_list-81</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Na Se We</name>
+          </item>
+          <item>
+            <itextId>site_list-82</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Africa Progress</name>
+          </item>
+          <item>
+            <itextId>site_list-83</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Decroly</name>
+          </item>
+          <item>
+            <itextId>site_list-84</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Kpoguidi/B</name>
+          </item>
+          <item>
+            <itextId>site_list-85</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>La Croissance</name>
+          </item>
+          <item>
+            <itextId>site_list-86</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>La Grace Divine</name>
+          </item>
+          <item>
+            <itextId>site_list-87</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Le Flambeau Des Enfants</name>
+          </item>
+          <item>
+            <itextId>site_list-88</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Tohoue/B</name>
+          </item>
+          <item>
+            <itextId>site_list-89</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>La Bonne Nouvelle</name>
+          </item>
+          <item>
+            <itextId>site_list-90</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Hounhoueko/A</name>
+          </item>
+          <item>
+            <itextId>site_list-91</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Etoile D'Orient</name>
+          </item>
+          <item>
+            <itextId>site_list-92</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Houegbo/A</name>
+          </item>
+          <item>
+            <itextId>site_list-93</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Akpakanme Avaligbo</name>
+          </item>
+          <item>
+            <itextId>site_list-94</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Akpro Hanzoume/A</name>
+          </item>
+          <item>
+            <itextId>site_list-95</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Danme Lokonon/B</name>
+          </item>
+          <item>
+            <itextId>site_list-96</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>La Cite Des Savants</name>
+          </item>
+          <item>
+            <itextId>site_list-97</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Le Formateur D'Abogome</name>
+          </item>
+          <item>
+            <itextId>site_list-98</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Le Relais</name>
+          </item>
+          <item>
+            <itextId>site_list-99</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Les Trois Savoirs Amis</name>
+          </item>
+          <item>
+            <itextId>site_list-100</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Les Gagnants De Demain</name>
+          </item>
+          <item>
+            <itextId>site_list-101</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Bambino Village</name>
+          </item>
+          <item>
+            <itextId>site_list-102</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Afandji Tanme/B</name>
+          </item>
+          <item>
+            <itextId>site_list-103</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Lotin Gbedjehouin/A</name>
+          </item>
+          <item>
+            <itextId>site_list-104</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Sekanme/B</name>
+          </item>
+          <item>
+            <itextId>site_list-105</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Houngon Djinon</name>
+          </item>
+          <item>
+            <itextId>site_list-106</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Gome Doko/B</name>
+          </item>
+          <item>
+            <itextId>site_list-107</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Gome Sota/B</name>
+          </item>
+          <item>
+            <itextId>site_list-108</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Tchoukou Kpevi/B</name>
+          </item>
+          <item>
+            <itextId>site_list-109</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Katagon/C</name>
+          </item>
+          <item>
+            <itextId>site_list-110</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Vante</name>
+          </item>
+          <item>
+            <itextId>site_list-111</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Kouti Centre/C</name>
+          </item>
+          <item>
+            <itextId>site_list-112</itextId>
+            <commune_list>Avrankou</commune_list>
+            <name>Tanme/C</name>
+          </item>
+          <item>
+            <itextId>site_list-113</itextId>
+            <commune_list>Avrankou</commune_list>
+            <name>Enfant Epanoui</name>
+          </item>
+          <item>
+            <itextId>site_list-114</itextId>
+            <commune_list>Avrankou</commune_list>
+            <name>Kotan/A</name>
+          </item>
+          <item>
+            <itextId>site_list-115</itextId>
+            <commune_list>Avrankou</commune_list>
+            <name>Baptiste Sodohome</name>
+          </item>
+          <item>
+            <itextId>site_list-116</itextId>
+            <commune_list>Avrankou</commune_list>
+            <name>Les Anges De Dieu</name>
+          </item>
+          <item>
+            <itextId>site_list-117</itextId>
+            <commune_list>Avrankou</commune_list>
+            <name>Saint Jean Baptiste</name>
+          </item>
+          <item>
+            <itextId>site_list-118</itextId>
+            <commune_list>Avrankou</commune_list>
+            <name>Vako Anago</name>
+          </item>
+          <item>
+            <itextId>site_list-119</itextId>
+            <commune_list>Avrankou</commune_list>
+            <name>Tony Beni</name>
+          </item>
+          <item>
+            <itextId>site_list-120</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Akadja/A</name>
+          </item>
+          <item>
+            <itextId>site_list-121</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Banigbe Gare/B</name>
+          </item>
+          <item>
+            <itextId>site_list-122</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Banigbe Lokossa</name>
+          </item>
+          <item>
+            <itextId>site_list-123</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Banigbe Nagot/A</name>
+          </item>
+          <item>
+            <itextId>site_list-124</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Catholique Laudato Si Banigbe</name>
+          </item>
+          <item>
+            <itextId>site_list-125</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Daagbe/B</name>
+          </item>
+          <item>
+            <itextId>site_list-126</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Gblogblo/A</name>
+          </item>
+          <item>
+            <itextId>site_list-127</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Ayetedjou/B</name>
+          </item>
+          <item>
+            <itextId>site_list-128</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Idi Oro/C</name>
+          </item>
+          <item>
+            <itextId>site_list-129</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>La Belle Etoile</name>
+          </item>
+          <item>
+            <itextId>site_list-130</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Houmbo/A</name>
+          </item>
+          <item>
+            <itextId>site_list-131</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Lagbe/B</name>
+          </item>
+          <item>
+            <itextId>site_list-132</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Zian/B</name>
+          </item>
+          <item>
+            <itextId>site_list-133</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Saint Vincent De Tchaada</name>
+          </item>
+          <item>
+            <itextId>site_list-134</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Akpechi</name>
+          </item>
+          <item>
+            <itextId>site_list-135</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Assa Game</name>
+          </item>
+          <item>
+            <itextId>site_list-136</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Elewoure</name>
+          </item>
+          <item>
+            <itextId>site_list-137</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Ilougou Ikpedjile</name>
+          </item>
+          <item>
+            <itextId>site_list-138</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Ita Alabe</name>
+          </item>
+          <item>
+            <itextId>site_list-139</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Kossomi</name>
+          </item>
+          <item>
+            <itextId>site_list-140</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Igba/B</name>
+          </item>
+          <item>
+            <itextId>site_list-141</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Ita Djebou Centre/B</name>
+          </item>
+          <item>
+            <itextId>site_list-142</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Kadjola</name>
+          </item>
+          <item>
+            <itextId>site_list-143</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Markaz</name>
+          </item>
+          <item>
+            <itextId>site_list-144</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Odanyogoun/B</name>
+          </item>
+          <item>
+            <itextId>site_list-145</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Agonsa</name>
+          </item>
+          <item>
+            <itextId>site_list-146</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Igbo Akpa Ita Gbokou</name>
+          </item>
+          <item>
+            <itextId>site_list-147</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Ita Gbokou</name>
+          </item>
+          <item>
+            <itextId>site_list-148</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Akadja Takon</name>
+          </item>
+          <item>
+            <itextId>site_list-149</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>La Prunelle De Djohoun-Kolle</name>
+          </item>
+          <item>
+            <itextId>site_list-150</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Agbidi Idioro</name>
+          </item>
+          <item>
+            <itextId>site_list-151</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Igbere Okeita/B</name>
+          </item>
+          <item>
+            <itextId>site_list-152</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Eguelou</name>
+          </item>
+          <item>
+            <itextId>site_list-153</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Illemon</name>
+          </item>
+          <item>
+            <itextId>site_list-154</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Araromi</name>
+          </item>
+          <item>
+            <itextId>site_list-155</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Idjakou</name>
+          </item>
+          <item>
+            <itextId>site_list-156</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Igbo Ekpe</name>
+          </item>
+          <item>
+            <itextId>site_list-157</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Igbo Ewe</name>
+          </item>
+          <item>
+            <itextId>site_list-158</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Igbodje</name>
+          </item>
+          <item>
+            <itextId>site_list-159</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Illoulofin</name>
+          </item>
+          <item>
+            <itextId>site_list-160</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Onigbolo Usine/C</name>
+          </item>
+          <item>
+            <itextId>site_list-161</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Agbarou</name>
+          </item>
+          <item>
+            <itextId>site_list-162</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Apostolique</name>
+          </item>
+          <item>
+            <itextId>site_list-163</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Damacy/B</name>
+          </item>
+          <item>
+            <itextId>site_list-164</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Divins Tresors</name>
+          </item>
+          <item>
+            <itextId>site_list-165</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Espoir Pobe</name>
+          </item>
+          <item>
+            <itextId>site_list-166</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Le Plateau/B</name>
+          </item>
+          <item>
+            <itextId>site_list-167</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Les Lys Nda</name>
+          </item>
+          <item>
+            <itextId>site_list-168</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Markaz Al Amir</name>
+          </item>
+          <item>
+            <itextId>site_list-169</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Nonvide Boussari/B</name>
+          </item>
+          <item>
+            <itextId>site_list-170</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Oke Ata/C</name>
+          </item>
+          <item>
+            <itextId>site_list-171</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Pobe / A</name>
+          </item>
+          <item>
+            <itextId>site_list-172</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Pobe/D</name>
+          </item>
+          <item>
+            <itextId>site_list-173</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Abodjoukpa</name>
+          </item>
+          <item>
+            <itextId>site_list-174</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Ibate</name>
+          </item>
+          <item>
+            <itextId>site_list-175</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Igbo Ede Chaffou</name>
+          </item>
+          <item>
+            <itextId>site_list-176</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Issokou Oniwere</name>
+          </item>
+          <item>
+            <itextId>site_list-177</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Lafenwa</name>
+          </item>
+          <item>
+            <itextId>site_list-178</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Oke Odja</name>
+          </item>
+          <item>
+            <itextId>site_list-179</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Towe/B</name>
+          </item>
+          <item>
+            <itextId>site_list-180</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Ahouaga/B</name>
+          </item>
+          <item>
+            <itextId>site_list-181</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Djegbe/B</name>
+          </item>
+          <item>
+            <itextId>site_list-182</itextId>
+            <commune_list>Abomey</commune_list>
+            <name>Les Semences</name>
+          </item>
+          <item>
+            <itextId>site_list-183</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Alikpa</name>
+          </item>
+          <item>
+            <itextId>site_list-184</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Anne Et Pierre</name>
+          </item>
+          <item>
+            <itextId>site_list-185</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Ecole Chretienne De Zounkpa</name>
+          </item>
+          <item>
+            <itextId>site_list-186</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Hezonho/B</name>
+          </item>
+          <item>
+            <itextId>site_list-187</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>La Seve</name>
+          </item>
+          <item>
+            <itextId>site_list-188</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Vehou/B</name>
+          </item>
+          <item>
+            <itextId>site_list-189</itextId>
+            <commune_list>Bohicon</commune_list>
+            <name>Zouzonme Avogbanna</name>
+          </item>
+          <item>
+            <itextId>site_list-190</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Ague Kpota</name>
+          </item>
+          <item>
+            <itextId>site_list-191</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Awo Godo</name>
+          </item>
+          <item>
+            <itextId>site_list-192</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Centre Pere Paul Rival</name>
+          </item>
+          <item>
+            <itextId>site_list-193</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Gangban/C</name>
+          </item>
+          <item>
+            <itextId>site_list-194</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Klogbome</name>
+          </item>
+          <item>
+            <itextId>site_list-195</itextId>
+            <commune_list>Adjohoun</commune_list>
+            <name>Saharo Centre</name>
+          </item>
+          <item>
+            <itextId>site_list-196</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Fingninkanme</name>
+          </item>
+          <item>
+            <itextId>site_list-197</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Le Pionnier Ii</name>
+          </item>
+          <item>
+            <itextId>site_list-198</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Saint Marc De Dekin Honhoue</name>
+          </item>
+          <item>
+            <itextId>site_list-199</itextId>
+            <commune_list>Dangbo</commune_list>
+            <name>Tokpa Blihoue</name>
+          </item>
+          <item>
+            <itextId>site_list-200</itextId>
+            <commune_list>Aguegues</commune_list>
+            <name>Aniviekome</name>
+          </item>
+          <item>
+            <itextId>site_list-201</itextId>
+            <commune_list>Aguegues</commune_list>
+            <name>Salem</name>
+          </item>
+          <item>
+            <itextId>site_list-202</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Cite De Grace De Djeffa</name>
+          </item>
+          <item>
+            <itextId>site_list-203</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Djeregbe/C</name>
+          </item>
+          <item>
+            <itextId>site_list-204</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Horoca</name>
+          </item>
+          <item>
+            <itextId>site_list-205</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Le Miracle De Tohoue</name>
+          </item>
+          <item>
+            <itextId>site_list-206</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Le Phenix</name>
+          </item>
+          <item>
+            <itextId>site_list-207</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Notre Dame De L'Atlantique/B</name>
+          </item>
+          <item>
+            <itextId>site_list-208</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Saint Antoine De Padoue Ekpe</name>
+          </item>
+          <item>
+            <itextId>site_list-209</itextId>
+            <commune_list>Seme-Kpodji</commune_list>
+            <name>Sainte Genevieve</name>
+          </item>
+          <item>
+            <itextId>site_list-210</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Abogome/A</name>
+          </item>
+          <item>
+            <itextId>site_list-211</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Abogome/B</name>
+          </item>
+          <item>
+            <itextId>site_list-212</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Adjina/B</name>
+          </item>
+          <item>
+            <itextId>site_list-213</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Akpakanme/A</name>
+          </item>
+          <item>
+            <itextId>site_list-214</itextId>
+            <commune_list>Adjarra</commune_list>
+            <name>Kouve/A</name>
+          </item>
+          <item>
+            <itextId>site_list-215</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Les Erudits</name>
+          </item>
+          <item>
+            <itextId>site_list-216</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Les Petits Genies De Lotin</name>
+          </item>
+          <item>
+            <itextId>site_list-217</itextId>
+            <commune_list>Akpro-Misserete</commune_list>
+            <name>Tanzoun/A</name>
+          </item>
+          <item>
+            <itextId>site_list-218</itextId>
+            <commune_list>Avrankou</commune_list>
+            <name>Saint Laurent</name>
+          </item>
+          <item>
+            <itextId>site_list-219</itextId>
+            <commune_list>Avrankou</commune_list>
+            <name>Tchakou/A</name>
+          </item>
+          <item>
+            <itextId>site_list-220</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Ketou Gbecon/B</name>
+          </item>
+          <item>
+            <itextId>site_list-221</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Ketoukpe</name>
+          </item>
+          <item>
+            <itextId>site_list-222</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Ko Koumonlou/B</name>
+          </item>
+          <item>
+            <itextId>site_list-223</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>La Source Du Savoir Banigbe</name>
+          </item>
+          <item>
+            <itextId>site_list-224</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Migbehoue</name>
+          </item>
+          <item>
+            <itextId>site_list-225</itextId>
+            <commune_list>Ifangni</commune_list>
+            <name>Videkon</name>
+          </item>
+          <item>
+            <itextId>site_list-226</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Coeur Immaculee De Marie</name>
+          </item>
+          <item>
+            <itextId>site_list-227</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Iliro Sodji</name>
+          </item>
+          <item>
+            <itextId>site_list-228</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Modogan</name>
+          </item>
+          <item>
+            <itextId>site_list-229</itextId>
+            <commune_list>Sakete</commune_list>
+            <name>Sahoro Nagot</name>
+          </item>
+          <item>
+            <itextId>site_list-230</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Akouho/A</name>
+          </item>
+          <item>
+            <itextId>site_list-231</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Akpate Ayekou</name>
+          </item>
+          <item>
+            <itextId>site_list-232</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Gbagui</name>
+          </item>
+          <item>
+            <itextId>site_list-233</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Igbo Itche Ogouba</name>
+          </item>
+          <item>
+            <itextId>site_list-234</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>La Confiance Talala Pobe</name>
+          </item>
+          <item>
+            <itextId>site_list-235</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Oke Ata/B</name>
+          </item>
+          <item>
+            <itextId>site_list-236</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Okere</name>
+          </item>
+          <item>
+            <itextId>site_list-237</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Onigbolo Usine/B</name>
+          </item>
+          <item>
+            <itextId>site_list-238</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Terre Promise</name>
+          </item>
+          <item>
+            <itextId>site_list-239</itextId>
+            <commune_list>Pobe</commune_list>
+            <name>Zone Residentielle/A (Mamague)</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_list_id">
+        <root>
+          <item>
+            <itextId>site_list_id-0</itextId>
+            <name>100</name>
+            <site_list>Djime/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-1</itextId>
+            <name>101</name>
+            <site_list>Gbecon Houegbo/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-2</itextId>
+            <name>102</name>
+            <site_list>Agblome/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-3</itextId>
+            <name>103</name>
+            <site_list>Agblome/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-4</itextId>
+            <name>104</name>
+            <site_list>Agnangnan/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-5</itextId>
+            <name>105</name>
+            <site_list>Agnangnan/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-6</itextId>
+            <name>106</name>
+            <site_list>Frere Et Soeur</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-7</itextId>
+            <name>107</name>
+            <site_list>Gbecon Hounli/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-8</itextId>
+            <name>108</name>
+            <site_list>Institut Des Aveugles D'Abomey</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-9</itextId>
+            <name>109</name>
+            <site_list>La Competence</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-10</itextId>
+            <name>110</name>
+            <site_list>Les Merveilles De L'Academie</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-11</itextId>
+            <name>111</name>
+            <site_list>Houeli</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-12</itextId>
+            <name>112</name>
+            <site_list>Abomey/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-13</itextId>
+            <name>113</name>
+            <site_list>Abomey/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-14</itextId>
+            <name>114</name>
+            <site_list>Ahouaga/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-15</itextId>
+            <name>115</name>
+            <site_list>Catholique Bon Pasteur</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-16</itextId>
+            <name>116</name>
+            <site_list>Dozoeme</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-17</itextId>
+            <name>117</name>
+            <site_list>Houenoussou Grace Divine</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-18</itextId>
+            <name>118</name>
+            <site_list>Oukanme/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-19</itextId>
+            <name>119</name>
+            <site_list>Zounzonme</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-20</itextId>
+            <name>120</name>
+            <site_list>Agabgon/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-21</itextId>
+            <name>121</name>
+            <site_list>Agbadjagon/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-22</itextId>
+            <name>122</name>
+            <site_list>Catholique Saint Francois D'Assise</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-23</itextId>
+            <name>123</name>
+            <site_list>Djognangbo</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-24</itextId>
+            <name>124</name>
+            <site_list>Bohicon/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-25</itextId>
+            <name>125</name>
+            <site_list>Bon Citoyen</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-26</itextId>
+            <name>126</name>
+            <site_list>La Clef</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-27</itextId>
+            <name>127</name>
+            <site_list>Leopold Sedar Senghor</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-28</itextId>
+            <name>128</name>
+            <site_list>Notre Dame De Toutes Graces</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-29</itextId>
+            <name>129</name>
+            <site_list>Zakpo/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-30</itextId>
+            <name>130</name>
+            <site_list>Houekpa/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-31</itextId>
+            <name>131</name>
+            <site_list>Akpadanou/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-32</itextId>
+            <name>132</name>
+            <site_list>Akpadanou/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-33</itextId>
+            <name>133</name>
+            <site_list>Assigui Gbongodo</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-34</itextId>
+            <name>134</name>
+            <site_list>Azowlisse Centre/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-35</itextId>
+            <name>135</name>
+            <site_list>Houngon</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-36</itextId>
+            <name>136</name>
+            <site_list>Kouhoue</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-37</itextId>
+            <name>137</name>
+            <site_list>Gogbo/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-38</itextId>
+            <name>138</name>
+            <site_list>Gouke</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-39</itextId>
+            <name>139</name>
+            <site_list>Canaan</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-40</itextId>
+            <name>140</name>
+            <site_list>Don Divin</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-41</itextId>
+            <name>141</name>
+            <site_list>Ke/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-42</itextId>
+            <name>142</name>
+            <site_list>La Grace De Dieu</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-43</itextId>
+            <name>143</name>
+            <site_list>Le Meilleur</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-44</itextId>
+            <name>144</name>
+            <site_list>Le Nouveau Citoyen</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-45</itextId>
+            <name>145</name>
+            <site_list>Dekin Kodekpomey</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-46</itextId>
+            <name>146</name>
+            <site_list>Agbanta</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-47</itextId>
+            <name>147</name>
+            <site_list>Gbeko/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-48</itextId>
+            <name>148</name>
+            <site_list>Agongue/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-49</itextId>
+            <name>149</name>
+            <site_list>Akpame/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-50</itextId>
+            <name>150</name>
+            <site_list>Djigbe/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-51</itextId>
+            <name>151</name>
+            <site_list>Hozin/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-52</itextId>
+            <name>152</name>
+            <site_list>Saint Hilaire</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-53</itextId>
+            <name>153</name>
+            <site_list>Akokponawa</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-54</itextId>
+            <name>154</name>
+            <site_list>Les Vertes Vallees</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-55</itextId>
+            <name>155</name>
+            <site_list>Nelson Mandela Madiba Dine</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-56</itextId>
+            <name>156</name>
+            <site_list>Sai Lagare</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-57</itextId>
+            <name>157</name>
+            <site_list>Sai Lagare/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-58</itextId>
+            <name>158</name>
+            <site_list>Yokon/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-59</itextId>
+            <name>159</name>
+            <site_list>Zounta-Aga</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-60</itextId>
+            <name>160</name>
+            <site_list>Houedome 2/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-61</itextId>
+            <name>161</name>
+            <site_list>Donoukpa</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-62</itextId>
+            <name>162</name>
+            <site_list>Agbalilame/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-63</itextId>
+            <name>163</name>
+            <site_list>Agbalilame/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-64</itextId>
+            <name>164</name>
+            <site_list>Aubaine</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-65</itextId>
+            <name>165</name>
+            <site_list>Copernic</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-66</itextId>
+            <name>166</name>
+            <site_list>Davatin/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-67</itextId>
+            <name>167</name>
+            <site_list>La Gazelle</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-68</itextId>
+            <name>168</name>
+            <site_list>Le Prestige</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-69</itextId>
+            <name>169</name>
+            <site_list>Le Temps</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-70</itextId>
+            <name>170</name>
+            <site_list>Ketonou/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-71</itextId>
+            <name>171</name>
+            <site_list>Saint Christophe Ii</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-72</itextId>
+            <name>172</name>
+            <site_list>Jesude</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-73</itextId>
+            <name>173</name>
+            <site_list>Djeffa/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-74</itextId>
+            <name>174</name>
+            <site_list>Dodognon</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-75</itextId>
+            <name>175</name>
+            <site_list>Ekpe Kanhonou/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-76</itextId>
+            <name>176</name>
+            <site_list>La Cime</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-77</itextId>
+            <name>177</name>
+            <site_list>La Releve</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-78</itextId>
+            <name>178</name>
+            <site_list>L'Avenir</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-79</itextId>
+            <name>179</name>
+            <site_list>Marie La Reine</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-80</itextId>
+            <name>180</name>
+            <site_list>Sainte Philomene</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-81</itextId>
+            <name>181</name>
+            <site_list>Na Se We</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-82</itextId>
+            <name>182</name>
+            <site_list>Africa Progress</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-83</itextId>
+            <name>183</name>
+            <site_list>Decroly</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-84</itextId>
+            <name>184</name>
+            <site_list>Kpoguidi/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-85</itextId>
+            <name>185</name>
+            <site_list>La Croissance</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-86</itextId>
+            <name>186</name>
+            <site_list>La Grace Divine</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-87</itextId>
+            <name>187</name>
+            <site_list>Le Flambeau Des Enfants</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-88</itextId>
+            <name>188</name>
+            <site_list>Tohoue/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-89</itextId>
+            <name>189</name>
+            <site_list>La Bonne Nouvelle</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-90</itextId>
+            <name>190</name>
+            <site_list>Hounhoueko/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-91</itextId>
+            <name>191</name>
+            <site_list>Etoile D'Orient</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-92</itextId>
+            <name>192</name>
+            <site_list>Houegbo/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-93</itextId>
+            <name>193</name>
+            <site_list>Akpakanme Avaligbo</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-94</itextId>
+            <name>194</name>
+            <site_list>Akpro Hanzoume/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-95</itextId>
+            <name>195</name>
+            <site_list>Danme Lokonon/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-96</itextId>
+            <name>196</name>
+            <site_list>La Cite Des Savants</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-97</itextId>
+            <name>197</name>
+            <site_list>Le Formateur D'Abogome</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-98</itextId>
+            <name>198</name>
+            <site_list>Le Relais</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-99</itextId>
+            <name>199</name>
+            <site_list>Les Trois Savoirs Amis</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-100</itextId>
+            <name>200</name>
+            <site_list>Les Gagnants De Demain</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-101</itextId>
+            <name>201</name>
+            <site_list>Bambino Village</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-102</itextId>
+            <name>202</name>
+            <site_list>Afandji Tanme/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-103</itextId>
+            <name>203</name>
+            <site_list>Lotin Gbedjehouin/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-104</itextId>
+            <name>204</name>
+            <site_list>Sekanme/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-105</itextId>
+            <name>205</name>
+            <site_list>Houngon Djinon</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-106</itextId>
+            <name>206</name>
+            <site_list>Gome Doko/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-107</itextId>
+            <name>207</name>
+            <site_list>Gome Sota/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-108</itextId>
+            <name>208</name>
+            <site_list>Tchoukou Kpevi/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-109</itextId>
+            <name>209</name>
+            <site_list>Katagon/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-110</itextId>
+            <name>210</name>
+            <site_list>Vante</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-111</itextId>
+            <name>211</name>
+            <site_list>Kouti Centre/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-112</itextId>
+            <name>212</name>
+            <site_list>Tanme/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-113</itextId>
+            <name>213</name>
+            <site_list>Enfant Epanoui</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-114</itextId>
+            <name>214</name>
+            <site_list>Kotan/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-115</itextId>
+            <name>215</name>
+            <site_list>Baptiste Sodohome</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-116</itextId>
+            <name>216</name>
+            <site_list>Les Anges De Dieu</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-117</itextId>
+            <name>217</name>
+            <site_list>Saint Jean Baptiste</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-118</itextId>
+            <name>218</name>
+            <site_list>Vako Anago</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-119</itextId>
+            <name>219</name>
+            <site_list>Tony Beni</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-120</itextId>
+            <name>220</name>
+            <site_list>Akadja/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-121</itextId>
+            <name>221</name>
+            <site_list>Banigbe Gare/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-122</itextId>
+            <name>222</name>
+            <site_list>Banigbe Lokossa</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-123</itextId>
+            <name>223</name>
+            <site_list>Banigbe Nagot/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-124</itextId>
+            <name>224</name>
+            <site_list>Catholique Laudato Si Banigbe</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-125</itextId>
+            <name>225</name>
+            <site_list>Daagbe/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-126</itextId>
+            <name>226</name>
+            <site_list>Gblogblo/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-127</itextId>
+            <name>227</name>
+            <site_list>Ayetedjou/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-128</itextId>
+            <name>228</name>
+            <site_list>Idi Oro/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-129</itextId>
+            <name>229</name>
+            <site_list>La Belle Etoile</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-130</itextId>
+            <name>230</name>
+            <site_list>Houmbo/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-131</itextId>
+            <name>231</name>
+            <site_list>Lagbe/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-132</itextId>
+            <name>232</name>
+            <site_list>Zian/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-133</itextId>
+            <name>233</name>
+            <site_list>Saint Vincent De Tchaada</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-134</itextId>
+            <name>234</name>
+            <site_list>Akpechi</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-135</itextId>
+            <name>235</name>
+            <site_list>Assa Game</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-136</itextId>
+            <name>236</name>
+            <site_list>Elewoure</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-137</itextId>
+            <name>237</name>
+            <site_list>Ilougou Ikpedjile</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-138</itextId>
+            <name>238</name>
+            <site_list>Ita Alabe</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-139</itextId>
+            <name>239</name>
+            <site_list>Kossomi</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-140</itextId>
+            <name>240</name>
+            <site_list>Igba/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-141</itextId>
+            <name>241</name>
+            <site_list>Ita Djebou Centre/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-142</itextId>
+            <name>242</name>
+            <site_list>Kadjola</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-143</itextId>
+            <name>243</name>
+            <site_list>Markaz</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-144</itextId>
+            <name>244</name>
+            <site_list>Odanyogoun/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-145</itextId>
+            <name>245</name>
+            <site_list>Agonsa</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-146</itextId>
+            <name>246</name>
+            <site_list>Igbo Akpa Ita Gbokou</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-147</itextId>
+            <name>247</name>
+            <site_list>Ita Gbokou</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-148</itextId>
+            <name>248</name>
+            <site_list>Akadja Takon</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-149</itextId>
+            <name>249</name>
+            <site_list>La Prunelle De Djohoun-Kolle</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-150</itextId>
+            <name>250</name>
+            <site_list>Agbidi Idioro</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-151</itextId>
+            <name>251</name>
+            <site_list>Igbere Okeita/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-152</itextId>
+            <name>252</name>
+            <site_list>Eguelou</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-153</itextId>
+            <name>253</name>
+            <site_list>Illemon</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-154</itextId>
+            <name>254</name>
+            <site_list>Araromi</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-155</itextId>
+            <name>255</name>
+            <site_list>Idjakou</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-156</itextId>
+            <name>256</name>
+            <site_list>Igbo Ekpe</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-157</itextId>
+            <name>257</name>
+            <site_list>Igbo Ewe</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-158</itextId>
+            <name>258</name>
+            <site_list>Igbodje</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-159</itextId>
+            <name>259</name>
+            <site_list>Illoulofin</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-160</itextId>
+            <name>260</name>
+            <site_list>Onigbolo Usine/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-161</itextId>
+            <name>261</name>
+            <site_list>Agbarou</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-162</itextId>
+            <name>262</name>
+            <site_list>Apostolique</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-163</itextId>
+            <name>263</name>
+            <site_list>Damacy/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-164</itextId>
+            <name>264</name>
+            <site_list>Divins Tresors</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-165</itextId>
+            <name>265</name>
+            <site_list>Espoir Pobe</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-166</itextId>
+            <name>266</name>
+            <site_list>Le Plateau/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-167</itextId>
+            <name>267</name>
+            <site_list>Les Lys Nda</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-168</itextId>
+            <name>268</name>
+            <site_list>Markaz Al Amir</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-169</itextId>
+            <name>269</name>
+            <site_list>Nonvide Boussari/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-170</itextId>
+            <name>270</name>
+            <site_list>Oke Ata/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-171</itextId>
+            <name>271</name>
+            <site_list>Pobe / A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-172</itextId>
+            <name>272</name>
+            <site_list>Pobe/D</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-173</itextId>
+            <name>273</name>
+            <site_list>Abodjoukpa</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-174</itextId>
+            <name>274</name>
+            <site_list>Ibate</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-175</itextId>
+            <name>275</name>
+            <site_list>Igbo Ede Chaffou</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-176</itextId>
+            <name>276</name>
+            <site_list>Issokou Oniwere</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-177</itextId>
+            <name>277</name>
+            <site_list>Lafenwa</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-178</itextId>
+            <name>278</name>
+            <site_list>Oke Odja</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-179</itextId>
+            <name>279</name>
+            <site_list>Towe/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-180</itextId>
+            <name>281</name>
+            <site_list>Ahouaga/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-181</itextId>
+            <name>280</name>
+            <site_list>Djegbe/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-182</itextId>
+            <name>282</name>
+            <site_list>Les Semences</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-183</itextId>
+            <name>287</name>
+            <site_list>Alikpa</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-184</itextId>
+            <name>284</name>
+            <site_list>Anne Et Pierre</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-185</itextId>
+            <name>288</name>
+            <site_list>Ecole Chretienne De Zounkpa</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-186</itextId>
+            <name>283</name>
+            <site_list>Hezonho/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-187</itextId>
+            <name>285</name>
+            <site_list>La Seve</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-188</itextId>
+            <name>289</name>
+            <site_list>Vehou/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-189</itextId>
+            <name>286</name>
+            <site_list>Zouzonme Avogbanna</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-190</itextId>
+            <name>291</name>
+            <site_list>Ague Kpota</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-191</itextId>
+            <name>292</name>
+            <site_list>Awo Godo</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-192</itextId>
+            <name>290</name>
+            <site_list>Centre Pere Paul Rival</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-193</itextId>
+            <name>295</name>
+            <site_list>Gangban/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-194</itextId>
+            <name>293</name>
+            <site_list>Klogbome</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-195</itextId>
+            <name>294</name>
+            <site_list>Saharo Centre</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-196</itextId>
+            <name>299</name>
+            <site_list>Fingninkanme</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-197</itextId>
+            <name>297</name>
+            <site_list>Le Pionnier Ii</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-198</itextId>
+            <name>296</name>
+            <site_list>Saint Marc De Dekin Honhoue</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-199</itextId>
+            <name>298</name>
+            <site_list>Tokpa Blihoue</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-200</itextId>
+            <name>300</name>
+            <site_list>Aniviekome</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-201</itextId>
+            <name>301</name>
+            <site_list>Salem</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-202</itextId>
+            <name>306</name>
+            <site_list>Cite De Grace De Djeffa</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-203</itextId>
+            <name>303</name>
+            <site_list>Djeregbe/C</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-204</itextId>
+            <name>304</name>
+            <site_list>Horoca</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-205</itextId>
+            <name>308</name>
+            <site_list>Le Miracle De Tohoue</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-206</itextId>
+            <name>302</name>
+            <site_list>Le Phenix</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-207</itextId>
+            <name>305</name>
+            <site_list>Notre Dame De L'Atlantique/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-208</itextId>
+            <name>307</name>
+            <site_list>Saint Antoine De Padoue Ekpe</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-209</itextId>
+            <name>309</name>
+            <site_list>Sainte Genevieve</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-210</itextId>
+            <name>311</name>
+            <site_list>Abogome/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-211</itextId>
+            <name>312</name>
+            <site_list>Abogome/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-212</itextId>
+            <name>310</name>
+            <site_list>Adjina/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-213</itextId>
+            <name>313</name>
+            <site_list>Akpakanme/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-214</itextId>
+            <name>314</name>
+            <site_list>Kouve/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-215</itextId>
+            <name>316</name>
+            <site_list>Les Erudits</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-216</itextId>
+            <name>317</name>
+            <site_list>Les Petits Genies De Lotin</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-217</itextId>
+            <name>315</name>
+            <site_list>Tanzoun/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-218</itextId>
+            <name>319</name>
+            <site_list>Saint Laurent</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-219</itextId>
+            <name>318</name>
+            <site_list>Tchakou/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-220</itextId>
+            <name>324</name>
+            <site_list>Ketou Gbecon/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-221</itextId>
+            <name>325</name>
+            <site_list>Ketoukpe</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-222</itextId>
+            <name>321</name>
+            <site_list>Ko Koumonlou/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-223</itextId>
+            <name>320</name>
+            <site_list>La Source Du Savoir Banigbe</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-224</itextId>
+            <name>322</name>
+            <site_list>Migbehoue</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-225</itextId>
+            <name>323</name>
+            <site_list>Videkon</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-226</itextId>
+            <name>328</name>
+            <site_list>Coeur Immaculee De Marie</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-227</itextId>
+            <name>326</name>
+            <site_list>Iliro Sodji</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-228</itextId>
+            <name>327</name>
+            <site_list>Modogan</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-229</itextId>
+            <name>329</name>
+            <site_list>Sahoro Nagot</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-230</itextId>
+            <name>332</name>
+            <site_list>Akouho/A</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-231</itextId>
+            <name>338</name>
+            <site_list>Akpate Ayekou</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-232</itextId>
+            <name>330</name>
+            <site_list>Gbagui</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-233</itextId>
+            <name>333</name>
+            <site_list>Igbo Itche Ogouba</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-234</itextId>
+            <name>334</name>
+            <site_list>La Confiance Talala Pobe</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-235</itextId>
+            <name>335</name>
+            <site_list>Oke Ata/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-236</itextId>
+            <name>339</name>
+            <site_list>Okere</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-237</itextId>
+            <name>331</name>
+            <site_list>Onigbolo Usine/B</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-238</itextId>
+            <name>336</name>
+            <site_list>Terre Promise</site_list>
+          </item>
+          <item>
+            <itextId>site_list_id-239</itextId>
+            <name>337</name>
+            <site_list>Zone Residentielle/A (Mamague)</site_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/c_recorder:jr:constraintMsg')" nodeset="/data/c_recorder" required="true()" type="int"/>
+      <bind nodeset="/data/c_eu_name" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_commune" required="true()" type="string" db_add_col_1="/data/c_eu_name" db_add_col_2="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_commune" db_add_col_3="."/>
+      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id1:jr:constraintMsg')" nodeset="/data/c_cluster_id1" required="true()" type="int" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
+      <bind nodeset="/data/c_cluster_leader_name" required="true()" type="string"/>
+      <bind nodeset="/data/c_cluster_leader_contact" required="true()" type="int"/>
+      <bind nodeset="/data/c_consent" required="true()" type="string"/>
+      <bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_present:jr:constraintMsg')" nodeset="/data/c_present" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_absent:jr:constraintMsg')" nodeset="/data/c_absent" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'No'" type="string"/>
+      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder">
+      <label ref="jr:itext('/data/c_recorder:label')"/>
+      <hint ref="jr:itext('/data/c_recorder:hint')"/>
+    </input>
+    <select1 ref="/data/c_eu_name">
+      <label ref="jr:itext('/data/c_eu_name:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/Abomey:label')"/>
+        <value>Abomey</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/Adjohoun:label')"/>
+        <value>Adjohoun</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/Aguegues:label')"/>
+        <value>Aguegues</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/Avrankou:label')"/>
+        <value>Avrankou</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/Ifangni:label')"/>
+        <value>Ifangni</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/Pobe:label')"/>
+        <value>Pobe</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_commune">
+      <label ref="jr:itext('/data/c_commune:label')"/>
+      <itemset nodeset="instance('commune_list')/root/item[eu_list =  /data/c_eu_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+      <itemset nodeset="instance('site_list')/root/item[commune_list =  /data/c_commune ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_id1">
+      <label ref="jr:itext('/data/c_cluster_id1:label')"/>
+      <hint ref="jr:itext('/data/c_cluster_id1:hint')"/>
+      <itemset nodeset="instance('site_list_id')/root/item[site_list =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_cluster_leader_name">
+      <label ref="jr:itext('/data/c_cluster_leader_name:label')"/>
+    </input>
+    <input ref="/data/c_cluster_leader_contact">
+      <label ref="jr:itext('/data/c_cluster_leader_contact:label')"/>
+    </input>
+    <select1 ref="/data/c_consent">
+      <label ref="jr:itext('/data/c_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_consent/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_consent/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/c_population">
+      <label ref="jr:itext('/data/c_population:label')"/>
+    </input>
+    <input ref="/data/c_present">
+      <label ref="jr:itext('/data/c_present:label')"/>
+    </input>
+    <input ref="/data/c_absent">
+      <label ref="jr:itext('/data/c_absent:label')"/>
+    </input>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <input ref="/data/p_ending_survey_note">
+      <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
+    </input>
+    <input ref="/data/c_ClusterNotes">
+      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>
