@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>1. Benin - Re TAS1 FL Form Site (Avril 2021)</h:title>
+    <h:title>1. Benin - Re TAS1 FL Formulaire Site (Avril 2021) V2</h:title>
     <model >
 
       <instance>
-        <data id="bj_lf_retas1_1_sites_202104" version="20210412">
+        <data id="bj_lf_retas1_1_sites_202104_v2" version="20210412">
           <c_recorder/>
           <c_eu_name/>
           <c_commune/>
@@ -54,12 +54,6 @@
           </text>
           <text id="/data/c_eu_name/Ouinhi:label">
             <value>Ouinhi</value>
-          </text>
-          <text id="/data/c_eu_name/Zagnanado:label">
-            <value>Zagnanado</value>
-          </text>
-          <text id="/data/c_eu_name/Za-Kpota:label">
-            <value>Za-Kpota</value>
           </text>
           <text id="/data/c_commune:label">
             <value>Select the commune</value>
@@ -136,12 +130,6 @@
           <text id="eu_list-1">
             <value>Ouinhi</value>
           </text>
-          <text id="eu_list-2">
-            <value>Zagnanado</value>
-          </text>
-          <text id="eu_list-3">
-            <value>Za-Kpota</value>
-          </text>
           <text id="commune_list-0">
             <value>Covè</value>
           </text>
@@ -179,12 +167,6 @@
           </text>
           <text id="/data/c_eu_name/Ouinhi:label">
             <value>Ouinhi</value>
-          </text>
-          <text id="/data/c_eu_name/Zagnanado:label">
-            <value>Zagnanado</value>
-          </text>
-          <text id="/data/c_eu_name/Za-Kpota:label">
-            <value>Za-Kpota</value>
           </text>
           <text id="/data/c_commune:label">
             <value>Sélectionner la commune</value>
@@ -255,12 +237,6 @@
           <text id="eu_list-1">
             <value>Ouinhi</value>
           </text>
-          <text id="eu_list-2">
-            <value>Zagnanado</value>
-          </text>
-          <text id="eu_list-3">
-            <value>Za-Kpota</value>
-          </text>
           <text id="commune_list-0">
             <value>Cove</value>
           </text>
@@ -297,14 +273,6 @@
             <itextId>eu_list-1</itextId>
             <name>Ouinhi</name>
           </item>
-          <item>
-            <itextId>eu_list-2</itextId>
-            <name>Zagnanado</name>
-          </item>
-          <item>
-            <itextId>eu_list-3</itextId>
-            <name>Za-Kpota</name>
-          </item>
         </root>
       </instance>
       <instance id="commune_list">
@@ -321,12 +289,12 @@
           </item>
           <item>
             <itextId>commune_list-2</itextId>
-            <eu_list>Zagnanado</eu_list>
+            <eu_list>Ouinhi</eu_list>
             <name>Zagnanado</name>
           </item>
           <item>
             <itextId>commune_list-3</itextId>
-            <eu_list>Za-Kpota</eu_list>
+            <eu_list>Cove</eu_list>
             <name>Za-Kpota</name>
           </item>
         </root>
@@ -350,7 +318,7 @@
       <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id1:jr:constraintMsg')" nodeset="/data/c_cluster_id1" required="true()" type="int" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
       <bind constraint=". =  /data/c_cluster_id1 " jr:constraintMsg="jr:itext('/data/c_cluster_id2:jr:constraintMsg')" nodeset="/data/c_cluster_id2" required="true()" type="int"/>
       <bind nodeset="/data/c_cluster_leader_name" required="true()" type="string"/>
-      <bind nodeset="/data/c_cluster_leader_contact" required="true()" type="string"/>
+      <bind nodeset="/data/c_cluster_leader_contact" required="true()" type="int"/>
       <bind nodeset="/data/c_consent" required="true()" type="string"/>
       <bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_present:jr:constraintMsg')" nodeset="/data/c_present" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
@@ -377,14 +345,6 @@
       <item>
         <label ref="jr:itext('/data/c_eu_name/Ouinhi:label')"/>
         <value>Ouinhi</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/c_eu_name/Zagnanado:label')"/>
-        <value>Zagnanado</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/c_eu_name/Za-Kpota:label')"/>
-        <value>Za-Kpota</value>
       </item>
     </select1>
     <select1 ref="/data/c_commune">
