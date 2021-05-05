@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. Student Knowledge, Attitudes and Practices (KAP) Questionnaire</h:title>
+    <h:title>2. Formar criança - Conhecimentos, Atitudes e Práticas dos Estudantes</h:title>
     <model >
 
       <instance>
-        <data id="ao_sch_sth_baseline_2_child_kap_202105" version="20210504">
+        <data id="ao_sch_sth_baseline_2_child_kap_202105_v2" version="20210504">
           <p_date/>
           <p_RecorderID/>
           <p_Recorder_code/>
@@ -103,6 +103,7 @@
           <p_end_time/>
           <meta>
             <instanceID/>
+            <randomnum/>
           </meta>
         </data>
       </instance>
@@ -152,19 +153,31 @@
             <value>Feminino</value>
           </text>
           <text id="/data/p_year_birth:jr:constraintMsg">
-            <value>A idade deve ser entre os 6 e 9 anos</value>
+            <value>O ano deve ser entre 6 e 9 (2012 e 2015)</value>
           </text>
           <text id="/data/p_year_birth:label">
             <value>2.a. Ano oh nascimento</value>
           </text>
+          <text id="/data/p_year_birth:hint">
+            <value>O ano deve ser entre 6 e 9 (2012 e 2015)</value>
+          </text>
+          <text id="/data/p_month_birth:jr:constraintMsg">
+            <value>O mês é inválido</value>
+          </text>
           <text id="/data/p_month_birth:label">
             <value>2.b. Mês de nascimento</value>
+          </text>
+          <text id="/data/p_day_birth:jr:constraintMsg">
+            <value>O dia é inválido</value>
           </text>
           <text id="/data/p_day_birth:label">
             <value>2.c. Dia de nascimento</value>
           </text>
           <text id="/data/p_date_birth:label">
             <value>2. Data de nascimento (ou idade) (YYYY-MM-DD)</value>
+          </text>
+          <text id="/data/p_school_grade:jr:constraintMsg">
+            <value>Deve ser maior que zero</value>
           </text>
           <text id="/data/p_school_grade:label">
             <value>3. Qual é a tua classe?</value>
@@ -1360,19 +1373,31 @@
             <value>Female</value>
           </text>
           <text id="/data/p_year_birth:jr:constraintMsg">
-            <value>The age must be between 6 to 9 years</value>
+            <value>The year must be between 6 and 9 (2012 and 2015)</value>
           </text>
           <text id="/data/p_year_birth:label">
             <value>2.a. Year oh birth</value>
           </text>
+          <text id="/data/p_year_birth:hint">
+            <value>The year must be between 6 and 9 (2012 and 2015)</value>
+          </text>
+          <text id="/data/p_month_birth:jr:constraintMsg">
+            <value>The month is invalid</value>
+          </text>
           <text id="/data/p_month_birth:label">
             <value>2.b. Month of birth</value>
+          </text>
+          <text id="/data/p_day_birth:jr:constraintMsg">
+            <value>The day is invalid</value>
           </text>
           <text id="/data/p_day_birth:label">
             <value>2.c. Day of birth</value>
           </text>
           <text id="/data/p_date_birth:label">
             <value>2. Date of birth (YYYY-MM-DD)</value>
+          </text>
+          <text id="/data/p_school_grade:jr:constraintMsg">
+            <value>Must be greater than zero</value>
           </text>
           <text id="/data/p_school_grade:label">
             <value>3. What school grade are you in?</value>
@@ -2534,14 +2559,14 @@
       <bind nodeset="/data/p_school" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_commune"/>
       <bind nodeset="/data/p_school_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_school"/>
       <bind nodeset="/data/note1" readonly="true()" type="string"/>
-      <bind nodeset="/data/p_generate_id" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/data/p_generate_id" readonly="true()" required="true()" calculate="concat(/data/p_school_id,'-', /data/meta/randomnum)" type="string"/>
       <bind nodeset="/data/p_sex" required="true()" type="string"/>
-      <bind constraint=". &lt; 2015 and . &gt; 2010" jr:constraintMsg="jr:itext('/data/p_year_birth:jr:constraintMsg')" nodeset="/data/p_year_birth" type="int"/>
-      <bind constraint=". &lt;= 12" nodeset="/data/p_month_birth" type="int"/>
-      <bind constraint=". &lt;=31" nodeset="/data/p_day_birth" type="int"/>
+      <bind constraint=". &lt;= 2015 and . &gt;= 2012" jr:constraintMsg="jr:itext('/data/p_year_birth:jr:constraintMsg')" nodeset="/data/p_year_birth" required="true()" type="int"/>
+      <bind constraint=". &gt; 0 and . &lt;= 12" jr:constraintMsg="jr:itext('/data/p_month_birth:jr:constraintMsg')" nodeset="/data/p_month_birth" required="true()" type="int"/>
+      <bind constraint=".&gt; 0 and . &lt;=31" jr:constraintMsg="jr:itext('/data/p_day_birth:jr:constraintMsg')" nodeset="/data/p_day_birth" required="true()" type="int"/>
       <bind calculate="concat( /data/p_year_birth ,'-', /data/p_month_birth ,'-', /data/p_day_birth )" nodeset="/data/p_date_birth" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/data/p_school_grade" required="true()" type="string"/>
-      <bind constraint=". &lt; 20" jr:constraintMsg="jr:itext('/data/p_people_home:jr:constraintMsg')" nodeset="/data/p_people_home" required="true()" type="int"/>
+      <bind constraint=".&gt;0" jr:constraintMsg="jr:itext('/data/p_school_grade:jr:constraintMsg')" nodeset="/data/p_school_grade" required="true()" type="string"/>
+      <bind constraint=".&gt; 0 and . &lt; 20" jr:constraintMsg="jr:itext('/data/p_people_home:jr:constraintMsg')" nodeset="/data/p_people_home" required="true()" type="int"/>
       <bind nodeset="/data/note2" readonly="true()" type="string"/>
       <bind nodeset="/data/p_water_source" required="true()" type="string"/>
       <bind nodeset="/data/p_water_source_other" relevant="selected( /data/p_water_source , 'other')" required="true()" type="string"/>
@@ -2615,6 +2640,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start_time" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end_time" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,9), '-',substr(random(),3,6))"/>
     </model>
   </h:head>
   <h:body>
@@ -2661,6 +2687,7 @@
     </select1>
     <input ref="/data/p_year_birth">
       <label ref="jr:itext('/data/p_year_birth:label')"/>
+      <hint ref="jr:itext('/data/p_year_birth:hint')"/>
     </input>
     <input ref="/data/p_month_birth">
       <label ref="jr:itext('/data/p_month_birth:label')"/>
