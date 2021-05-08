@@ -12695,7 +12695,7 @@
       <bind nodeset="/data/u_commune" required="true()" type="string"/>
       <bind nodeset="/data/u_school" required="true()" type="string"/>
       <bind nodeset="/data/u_school_id" required="true()" type="string"/>
-      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}-[0-3]{3}$')" jr:constraintMsg="jr:itext('/data/u_generate_id:jr:constraintMsg')" nodeset="/data/u_generate_id" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/u_generate_id:jr:constraintMsg')" nodeset="/data/u_generate_id" required="true()" type="string"/>
       <bind constraint=". =  /data/u_generate_id " jr:constraintMsg="jr:itext('/data/u_generate_id2:jr:constraintMsg')" nodeset="/data/u_generate_id2" required="true()" type="string"/>
       <bind nodeset="/data/u_exam" required="true()" type="string"/>
       <bind nodeset="/data/u_sh_egp_10ml" relevant="selected( /data/u_exam , '1.Filtração.de.urina')" required="true()" type="int"/>
