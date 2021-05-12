@@ -9,7 +9,7 @@
   <h:head>
     <h:title>2. Côte d'Ivoire -  Pre TAS FL Formulaire Participants</h:title>
     <model >
-    
+
       <instance>
         <data id="ci_lf_pretas_2_participant_202105_v2" version="20210511">
           <p_recorderID/>
@@ -104,7 +104,7 @@
             <value>Depuis combien d'années le répondant habite-t-il dans la région?</value>
           </text>
           <text id="/data/p_code_id:label">
-            <value>Code d'identification du répondant</value>
+            <value>Code d'identification du répondant (Veuillez recopier ce code tel qu'il est quelque part entre autre sur les test de diagnostique)</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
             <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
@@ -191,9 +191,8 @@
           </text>
         </translation>
       </itext>
-
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorderID:jr:constraintMsg')" nodeset="/data/p_recorderID" required="true()" type="int"/>
-      
+
       <bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
       <bind nodeset="/data/p_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
