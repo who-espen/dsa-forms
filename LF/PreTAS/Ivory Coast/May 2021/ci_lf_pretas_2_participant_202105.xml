@@ -7,7 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. Côte d'Ivoire -  Pre TAS FL Formulaire Participants</h:title>
+    <h:title>(May 2021) 2. Côte d'Ivoire -  Pre TAS FL Formulaire Participants</h:title>
     <model >
 
       <instance>
@@ -201,7 +201,7 @@
       <bind nodeset="/data/p_site_id2" relevant=" /data/p_site_name  = 'Autre'" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_site_name2"/>
 
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
-      <bind constraint=". &gt; 0 and . &lt;= 300" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" required="true()" type="int"/>
+      <bind constraint=". &gt; 0 and . &lt;= 300" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num"  relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
