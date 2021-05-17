@@ -754,6 +754,9 @@
           <text id="/data/w_kind_toilet_other:label">
             <value>Outros, Especificar</value>
           </text>
+          <text id="/data/w_toilet_observation:jr:constraintMsg">
+            <value>Se "(11) Não podia observar" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/w_toilet_observation:label">
             <value>24. Observe as instalações da sanita/latrina e marque todas as observações relevantes.</value>
           </text>
@@ -4667,6 +4670,9 @@
           </text>
           <text id="/data/w_kind_toilet_other:label">
             <value>If other, please specify</value>
+          </text>
+          <text id="/data/w_toilet_observation:jr:constraintMsg">
+            <value>If "11.Could not observe" is selected, no other response is allowed.</value>
           </text>
           <text id="/data/w_toilet_observation:label">
             <value>24. Observe the toilet / latrine facilities and choose all relevant observations.</value>
@@ -11240,6 +11246,9 @@
           <text id="/data/w_kind_toilet_other:label">
             <value>-</value>
           </text>
+          <text id="/data/w_toilet_observation:jr:constraintMsg">
+            <value>-</value>
+          </text>
           <text id="/data/w_toilet_observation:label">
             <value>-</value>
           </text>
@@ -17031,10 +17040,19 @@
       <bind calculate=" /data/w_22/b_male_latrine  +  /data/w_22/c_female_latrine " nodeset="/data/w_22/a_total_latrine" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/data/w_kind_toilet" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_kind_toilet_other" relevant="selected( /data/w_kind_toilet , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
-      <bind nodeset="/data/w_toilet_observation" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'11.Nao.podia.observar'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/w_toilet_observation:jr:constraintMsg')" nodeset="/data/w_toilet_observation" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_toilet_observation_other" relevant="selected( /data/w_toilet_observation , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
-      <bind nodeset="/data/w_toilet_has_door" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim') and  /data/w_toilet_observation !='11.Could not observe'" required="true()" type="string"/>
-      <bind nodeset="/data/w_toilet_can_lock" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim') and  /data/w_toilet_observation !='11.Could not observe'" required="true()" type="string"/>
+      <bind nodeset="/data/w_toilet_has_door" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim') and ( /data/w_toilet_observation  = '1.A.sanita.esta.limpa.(sem.urina,.fezes,.moscas)' or
+ /data/w_toilet_observation  = '2.Agua.ou.outros.materiais.de.limpeza.pessoais.sao.evidentes' or
+ /data/w_toilet_observation  = '3.Existe.uma.tampa.de.buraco' or
+ /data/w_toilet_observation  = '4.Urina.na.pia' or
+ /data/w_toilet_observation  = '5.Fezes.na.pia' or
+ /data/w_toilet_observation  = '6.Urina.no.chao./.paredes' or
+ /data/w_toilet_observation  = '7.Fezes.no.chao/paredes' or
+ /data/w_toilet_observation  = '8.Odor' or
+ /data/w_toilet_observation  = '9.Moscas.presentes' or
+ /data/w_toilet_observation  = '10.Outros')" required="true()" type="string"/>
+      <bind nodeset="/data/w_toilet_can_lock" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/note_hygiene" readonly="true()" relevant="selected( /data/w_consent , '1.Sim')" type="string"/>
       <bind nodeset="/data/w_handwashing_facilities" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_handwashing_type" relevant="selected( /data/w_handwashing_facilities , '1.Sim') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
@@ -17716,7 +17734,7 @@
         <value>5.Sem resposta/ observaçao</value>
       </item>
     </select1>
-    <group  ref="/data/w_22">
+    <group ref="/data/w_22">
       <label ref="jr:itext('/data/w_22:label')"/>
       <input ref="/data/w_22/note_question22">
         <label ref="jr:itext('/data/w_22/note_question22:label')"/>

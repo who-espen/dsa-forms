@@ -8,7 +8,34 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>5. Formulário de Resultados da haematuria e  CCA V3</h:title>
-    <model odk:xforms-version="1.0.0">
+    <model >
+
+      <instance>
+        <data id="ao_sch_sth_baseline_5_Hemastix_CCA _202105_v3" version="202105">
+          <h_province/>
+          <h_municipality/>
+          <h_commune/>
+          <h_commune_other/>
+          <h_school/>
+          <h_school_other/>
+          <h_school_id/>
+          <h_school_id_other/>
+          <h_RecorderID/>
+          <h_date/>
+          <h_generate_id/>
+          <h_generate_id2/>
+          <h_cca/>
+          <h_haematuria/>
+          <h_grading/>
+          <h_remarks/>
+          <h_start/>
+          <h_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
       <itext>
         <translation lang="French">
           <text id="/data/h_province:label">
@@ -2825,6 +2852,9 @@
           <text id="code_school-385">
             <value>514</value>
           </text>
+          <text id="/data/h_school:jr:constraintMsg">
+            <value>-</value>
+          </text>
         </translation>
         <translation default="true()" lang="Portugues">
           <text id="/data/h_province:label">
@@ -2844,6 +2874,9 @@
           </text>
           <text id="/data/h_commune_other:label">
             <value>Digite o nome da comuna</value>
+          </text>
+          <text id="/data/h_school:jr:constraintMsg">
+            <value>The code must be greater than 514</value>
           </text>
           <text id="/data/h_school:label">
             <value>Selecione a escola</value>
@@ -5661,6 +5694,9 @@
           <text id="/data/h_commune_other:label">
             <value>Enter the commune</value>
           </text>
+          <text id="/data/h_school:jr:constraintMsg">
+            <value>O código deve ser maior que 514</value>
+          </text>
           <text id="/data/h_school:label">
             <value>Select the school</value>
           </text>
@@ -8459,31 +8495,6 @@
           </text>
         </translation>
       </itext>
-      <instance>
-        <data id="ao_sch_sth_baseline_5_Hemastix_CCA _202105_v3" version="202105">
-          <h_province/>
-          <h_municipality/>
-          <h_commune/>
-          <h_commune_other/>
-          <h_school/>
-          <h_school_other/>
-          <h_school_id/>
-          <h_school_id_other/>
-          <h_RecorderID/>
-          <h_date/>
-          <h_generate_id/>
-          <h_generate_id2/>
-          <h_cca/>
-          <h_haematuria/>
-          <h_grading/>
-          <h_remarks/>
-          <h_start/>
-          <h_end/>
-          <meta>
-            <instanceID/>
-          </meta>
-        </data>
-      </instance>
       <instance id="u_haematuria">
         <root>
           <item>
@@ -13018,8 +13029,8 @@
       <bind nodeset="/data/h_municipality" required="true()" type="string"/>
       <bind nodeset="/data/h_commune" required="true()" type="string"/>
       <bind nodeset="/data/h_commune_other" relevant=" /data/h_commune  = 'Outros'" required="true()" type="string"/>
-      <bind nodeset="/data/h_school" relevant=" /data/h_commune != 'Outros'" required="true()" type="string"/>
-      <bind nodeset="/data/h_school_other" relevant=" /data/h_commune  = 'Outros'" required="true()" type="string"/>
+      <bind constraint=". &gt; 514" jr:constraintMsg="jr:itext('/data/h_school:jr:constraintMsg')" nodeset="/data/h_school" relevant=" /data/h_commune != 'Outros'" required="true()" type="string"/>
+      <bind nodeset="/data/h_school_other" relevant=" /data/h_commune  = 'Outros'" required="true()" type="int"/>
       <bind nodeset="/data/h_school_id" relevant=" /data/h_commune != 'Outros'" required="true()" type="string"/>
       <bind nodeset="/data/h_school_id_other" relevant=" /data/h_commune  = 'Outros'" required="true()" type="string"/>
       <bind nodeset="/data/h_RecorderID" required="true()" type="string"/>

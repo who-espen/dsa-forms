@@ -8,7 +8,7 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>3. Formulário de Resultados das Fezes – Kato Katz V3</h:title>
-    <model odk:xforms-version="1.0.0">
+    <model >
 
       <instance>
         <data id="ao_sch_sth_baseline_3_kato_katz_202105_v3" version="20210504">
@@ -2764,6 +2764,9 @@
           <text id="code_school-385">
             <value>514</value>
           </text>
+          <text id="/data/k_school_id_other:jr:constraintMsg">
+            <value>-</value>
+          </text>
           <text id="/data/k_RecorderID:label">
             <value>-</value>
           </text>
@@ -2810,6 +2813,9 @@
           </text>
           <text id="/data/k_school_id:label">
             <value>Selecione o código da escola</value>
+          </text>
+          <text id="/data/k_school_id_other:jr:constraintMsg">
+            <value>The code must be greater than 514</value>
           </text>
           <text id="/data/k_school_id_other:label">
             <value>Digite o código da escola</value>
@@ -5551,6 +5557,9 @@
           </text>
           <text id="/data/k_school_id:label">
             <value>Select the school code</value>
+          </text>
+          <text id="/data/k_school_id_other:jr:constraintMsg">
+            <value>O código deve ser maior que 514</value>
           </text>
           <text id="/data/k_school_id_other:label">
             <value>Enter the school code</value>
@@ -12729,9 +12738,9 @@
       <bind nodeset="/data/k_commune" required="true()" type="string"/>
       <bind nodeset="/data/k_commune_other" relevant=" /data/k_commune  = 'Outros'" required="true()" type="string"/>
       <bind nodeset="/data/k_school" relevant=" /data/k_commune != 'Outros'" required="true()" type="string"/>
-      <bind nodeset="/data/k_school_other" relevant=" /data/k_commune  = 'Outros'" required="true()" type="string"/>
+      <bind nodeset="/data/k_school_other" relevant=" /data/k_commune  = 'Outros'" required="true()" type="int"/>
       <bind nodeset="/data/k_school_id" relevant=" /data/k_commune != 'Outros'" required="true()" type="string"/>
-      <bind nodeset="/data/k_school_id_other" relevant=" /data/k_commune  = 'Outros'" required="true()" type="string"/>
+      <bind constraint=". &gt; 514" jr:constraintMsg="jr:itext('/data/k_school_id_other:jr:constraintMsg')" nodeset="/data/k_school_id_other" relevant=" /data/k_commune  = 'Outros'" required="true()" type="string"/>
       <bind nodeset="/data/k_RecorderID" required="true()" type="string"/>
       <bind nodeset="/data/k_date" required="true()" type="date"/>
       <bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/k_generate_id:jr:constraintMsg')" nodeset="/data/k_generate_id" required="true()" type="string"/>

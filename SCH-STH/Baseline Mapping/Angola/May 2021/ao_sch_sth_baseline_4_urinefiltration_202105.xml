@@ -2805,6 +2805,9 @@
           <text id="code_school-385">
             <value>514</value>
           </text>
+          <text id="/data/u_school_id_other:jr:constraintMsg">
+            <value>-</value>
+          </text>
         </translation>
         <translation default="true()" lang="Portugues">
           <text id="/data/u_province:label">
@@ -2833,6 +2836,9 @@
           </text>
           <text id="/data/u_school_id:label">
             <value>Selecione o código da escola</value>
+          </text>
+          <text id="/data/u_school_id_other:jr:constraintMsg">
+            <value>The code must be greater than 514</value>
           </text>
           <text id="/data/u_school_id_other:label">
             <value>Digite o código da escola</value>
@@ -5605,6 +5611,9 @@
           <text id="/data/u_school_id:label">
             <value>Select the school code</value>
           </text>
+          <text id="/data/u_school_id_other:jr:constraintMsg">
+            <value>O código deve ser maior que 514</value>
+          </text>
           <text id="/data/u_school_id_other:label">
             <value>Enter the school code</value>
           </text>
@@ -8349,7 +8358,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="exameType">
         <root>
           <item>
@@ -12899,7 +12907,7 @@
       <bind nodeset="/data/u_school" relevant=" /data/u_commune != 'Outros'" required="true()" type="string"/>
       <bind nodeset="/data/u_school_other" relevant=" /data/u_commune  = 'Outros'" required="true()" type="string"/>
       <bind nodeset="/data/u_school_id" relevant=" /data/u_commune != 'Outros'" required="true()" type="string"/>
-      <bind nodeset="/data/u_school_id_other" relevant=" /data/u_commune  = 'Outros'" required="true()" type="string"/>
+      <bind constraint=". &gt; 514" jr:constraintMsg="jr:itext('/data/u_school_id_other:jr:constraintMsg')" nodeset="/data/u_school_id_other" relevant=" /data/u_commune  = 'Outros'" required="true()" type="int"/>
       <bind nodeset="/data/u_RecorderID" required="true()" type="string"/>
       <bind nodeset="/data/u_date" required="true()" type="date"/>
       <bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/u_generate_id:jr:constraintMsg')" nodeset="/data/u_generate_id" required="true()" type="string"/>
