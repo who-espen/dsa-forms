@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(May 2021) 3. Côte d'Ivoire - Pre TAS FL Résultat FTS</h:title>
+    <h:title>(May 2021) 3. Côte d'Ivoire - Pre TAS FL Résultat FTS V3</h:title>
     <model >
 
       <instance>
-        <data id="ci_lf_pretas_3_resultat_fts_202105_v2" version="20210522">
+        <data id="ci_lf_pretas_3_resultat_fts_202105_v3" version="20210522">
           <d_recorderID/>
           <d_district/>
           <d_site/>
@@ -24,6 +24,7 @@
           <d_result/>
           <d_why_invalid/>
           <d_why_invalid_other/>
+          <d_image/>
           <notes_part/>
           <c_start/>
           <c_end/>
@@ -168,7 +169,7 @@
             <value>La valeur doit être compris entre 1 et 300</value>
           </text>
           <text id="/data/d_num:label">
-            <value>Enter the order number</value>
+            <value>Entrer le numéro d'ordre</value>
           </text>
           <text id="/data/d_num:hint">
             <value>Doit être compris entre 1 et 300</value>
@@ -232,6 +233,9 @@
           </text>
           <text id="/data/d_why_invalid_other:hint">
             <value>Les resultats Invalides incluent les erreurs de test et les cas d'insuffisance de sang</value>
+          </text>
+          <text id="/data/d_image:label">
+            <value>Prenez l'image du test positif ou invalid</value>
           </text>
           <text id="/data/notes_part:label">
             <value>Notes additionnelles</value>
@@ -1205,7 +1209,7 @@
             <value>The value must be between 1 and 300</value>
           </text>
           <text id="/data/d_num:label">
-            <value>Entrer le numéro d'ordre</value>
+            <value>Enter the order number</value>
           </text>
           <text id="/data/d_num:hint">
             <value>Must be between 1 and 300</value>
@@ -1266,6 +1270,9 @@
           </text>
           <text id="/data/d_why_invalid_other:label">
             <value>Give reason for invalid test</value>
+          </text>
+          <text id="/data/d_image:label">
+            <value>Take the picture of the positive or invalid test</value>
           </text>
           <text id="/data/notes_part:label">
             <value>Additional Notes on form</value>
@@ -2121,6 +2128,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="yes_no">
         <root>
           <item>
@@ -3520,6 +3528,7 @@
       <bind nodeset="/data/d_result" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid" relevant=" /data/d_result  = 'Invalide'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid_other" relevant="selected( /data/d_why_invalid ,'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/d_image" relevant=" /data/d_result  = 'Invalide' or  /data/d_result  = 'Positif'" required="true()" type="binary"/>
       <bind nodeset="/data/notes_part" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
@@ -3762,6 +3771,9 @@
       <label ref="jr:itext('/data/d_why_invalid_other:label')"/>
       <hint ref="jr:itext('/data/d_why_invalid_other:hint')"/>
     </input>
+    <upload mediatype="image/*" ref="/data/d_image">
+      <label ref="jr:itext('/data/d_image:label')"/>
+    </upload>
     <input ref="/data/notes_part">
       <label ref="jr:itext('/data/notes_part:label')"/>
     </input>
