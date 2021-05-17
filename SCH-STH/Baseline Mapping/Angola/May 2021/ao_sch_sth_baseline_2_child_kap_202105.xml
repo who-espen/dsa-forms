@@ -7,7 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. Formar criança - Conhecimentos, Atitudes e Práticas dos Estudantes</h:title>
+    <h:title>2. Formulário Individual da Criança - Conhecimentos, Atitudes e Práticas dos Alunos na Escola Hookworm V3</h:title>
     <model >
 
       <instance>
@@ -18,17 +18,22 @@
           <p_province/>
           <p_municipality/>
           <p_commune/>
+          <p_commune_other/>
           <p_school/>
+          <p_school_other/>
           <p_school_id/>
-          <note1/>
-          <p_generate_id/>
-          <p_sex/>
-          <p_year_birth/>
-          <p_month_birth/>
-          <p_day_birth/>
-          <p_date_birth/>
-          <p_school_grade/>
-          <p_people_home/>
+          <p_school_id_other/>
+          <p_consent/>
+          <Group1>
+            <p_generate_id/>
+            <p_sex/>
+            <p_year_birth/>
+            <p_month_birth/>
+            <p_day_birth/>
+            <p_date_birth/>
+            <p_school_grade/>
+            <p_people_home/>
+          </Group1>
           <note2/>
           <p_water_source/>
           <p_water_source_other/>
@@ -96,9 +101,11 @@
           <p_why_dontake_schmed_concerns/>
           <p_where_prefer_schmed/>
           <p_where_prefer_schmed_other/>
-          <end_time/>
           <p_outcome_interview/>
+          <p_outcome_interview_inc/>
           <p_end_note/>
+          <w_end_note/>
+          <w_additional_notes/>
           <p_start_time/>
           <p_end_time/>
           <meta>
@@ -131,61 +138,85 @@
           <text id="/data/p_commune:label">
             <value>Comuna</value>
           </text>
+          <text id="/data/p_commune_other:label">
+            <value>Digite o nome da comuna</value>
+          </text>
           <text id="/data/p_school:label">
             <value>Nome da escola</value>
+          </text>
+          <text id="/data/p_school_other:label">
+            <value>Digite o nome da escola</value>
           </text>
           <text id="/data/p_school_id:label">
             <value>Código da escola</value>
           </text>
-          <text id="/data/note1:label">
+          <text id="/data/p_school_id_other:label">
+            <value>Digite o código da escola</value>
+          </text>
+          <text id="/data/p_consent:label">
+            <value>O consentimento informado foi obtido?</value>
+          </text>
+          <text id="/data/p_consent:hint">
+            <value>Proceder apenas se sim</value>
+          </text>
+          <text id="/data/p_consent/1.Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/p_consent/2.Nao:label">
+            <value>Não</value>
+          </text>
+          <text id="/data/Group1:label">
             <value>Informação demográfica</value>
           </text>
-          <text id="/data/p_generate_id:label">
+          <text id="/data/Group1/p_generate_id:label">
             <value>Registre o seguinte código de ID exclusivo para o entrevistado em uma lista separada e em cada teste de diagnóstico administrado</value>
           </text>
-          <text id="/data/p_sex:label">
+          <text id="/data/Group1/p_sex:label">
             <value>1. Sexo</value>
           </text>
-          <text id="/data/p_sex/M:label">
+          <text id="/data/Group1/p_sex/M:label">
             <value>Masculino</value>
           </text>
-          <text id="/data/p_sex/F:label">
+          <text id="/data/Group1/p_sex/F:label">
             <value>Feminino</value>
           </text>
-          <text id="/data/p_year_birth:jr:constraintMsg">
+          <text id="/data/Group1/p_year_birth:jr:constraintMsg">
             <value>O ano deve ser entre 6 e 9 (2012 e 2015)</value>
           </text>
-          <text id="/data/p_year_birth:label">
-            <value>2.a. Ano oh nascimento</value>
+          <text id="/data/Group1/p_year_birth:label">
+            <value>2.a. Ano de nascimento</value>
           </text>
-          <text id="/data/p_year_birth:hint">
-            <value>O ano deve ser entre 6 e 9 (2012 e 2015)</value>
+          <text id="/data/Group1/p_year_birth:hint">
+            <value>O ano deve ser entre 2012 e 2015</value>
           </text>
-          <text id="/data/p_month_birth:jr:constraintMsg">
+          <text id="/data/Group1/p_month_birth:jr:constraintMsg">
             <value>O mês é inválido</value>
           </text>
-          <text id="/data/p_month_birth:label">
+          <text id="/data/Group1/p_month_birth:label">
             <value>2.b. Mês de nascimento</value>
           </text>
-          <text id="/data/p_day_birth:jr:constraintMsg">
+          <text id="/data/Group1/p_month_birth:hint">
+            <value>A resposta precisa ser numérica</value>
+          </text>
+          <text id="/data/Group1/p_day_birth:jr:constraintMsg">
             <value>O dia é inválido</value>
           </text>
-          <text id="/data/p_day_birth:label">
+          <text id="/data/Group1/p_day_birth:label">
             <value>2.c. Dia de nascimento</value>
           </text>
-          <text id="/data/p_date_birth:label">
+          <text id="/data/Group1/p_date_birth:label">
             <value>2. Data de nascimento (ou idade) (YYYY-MM-DD)</value>
           </text>
-          <text id="/data/p_school_grade:jr:constraintMsg">
-            <value>Deve ser maior que zero</value>
+          <text id="/data/Group1/p_school_grade:jr:constraintMsg">
+            <value>De 1 a 9</value>
           </text>
-          <text id="/data/p_school_grade:label">
+          <text id="/data/Group1/p_school_grade:label">
             <value>3. Qual é a tua classe?</value>
           </text>
-          <text id="/data/p_people_home:jr:constraintMsg">
-            <value>O valor é incorrecto</value>
+          <text id="/data/Group1/p_people_home:jr:constraintMsg">
+            <value>De 1 a 19</value>
           </text>
-          <text id="/data/p_people_home:label">
+          <text id="/data/Group1/p_people_home:label">
             <value>4. Quantas pessoas vivem em casa?</value>
           </text>
           <text id="/data/note2:label">
@@ -245,6 +276,9 @@
           <text id="/data/p_water_source_other:label">
             <value>Outros, Especificar</value>
           </text>
+          <text id="/data/p_defecation_place:jr:constraintMsg">
+            <value>Se "No capim", "Não sei" ou "Sem resposta" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/p_defecation_place:label">
             <value>6. Qual é o principal lugar de defecação em casa?</value>
           </text>
@@ -260,16 +294,13 @@
           <text id="/data/p_defecation_place/2.Latrina.com.fossa.a.Com.tampo:label">
             <value>(2) Latrina com fossa (a) Com tampo</value>
           </text>
-          <text id="/data/p_defecation_place/2.Latrina.com.fossa.a.Com.tampo.i.Sem.descarga.tiro.direto:label">
-            <value>(2) Latrina com fossa (a) Com tampo (i) Sem descarga (tiro direto)</value>
+          <text id="/data/p_defecation_place/2.Latrina.com.fossa.a.Sem.tampo.i.Sem.descarga.tiro.direto:label">
+            <value>(2) Latrina com fossa (a) Sem tampo (i) Sem descarga (tiro direto)</value>
           </text>
-          <text id="/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo:label">
-            <value>(2) Latrina com fossa (b) Sem tampo</value>
-          </text>
-          <text id="/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.agua.fossa.individual:label">
+          <text id="/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.água.(fossa.individual):label">
             <value>(2) Latrina com fossa (b) Sem tampo (ii) Descarga com água (fossa individual)</value>
           </text>
-          <text id="/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.agua.fossa.comum:label">
+          <text id="/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.água.(fossa.comum):label">
             <value>(2) Latrina com fossa (b) Sem tampo (iii) Decarga com água (fossa comum)</value>
           </text>
           <text id="/data/p_defecation_place/3.Sanita.de.compostagem:label">
@@ -296,8 +327,11 @@
           <text id="/data/p_defecation_place_other:label">
             <value>Outros, Especificar</value>
           </text>
+          <text id="/data/p_defecation_school:jr:constraintMsg">
+            <value>Se "No capim", "Não sei" ou "Sem resposta" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/p_defecation_school:label">
-            <value>7. Qual é o principal lugar de defecação na escola?</value>
+            <value>7. Qual é o principal lugar de defecação na escola? (Não selecione "Sem resposta" ou "Não sei" junto com outras respostas)</value>
           </text>
           <text id="/data/p_defecation_school:hint">
             <value>Pode utilizar folhas de imagem como guia para diferentes tipos de sanitas. Marque todos os itens mencionados</value>
@@ -311,16 +345,13 @@
           <text id="/data/p_defecation_school/2.Latrina.com.fossa.a.Com.tampo:label">
             <value>(2) Latrina com fossa (a) Com tampo</value>
           </text>
-          <text id="/data/p_defecation_school/2.Latrina.com.fossa.a.Com.tampo.i.Sem.descarga.tiro.direto:label">
-            <value>(2) Latrina com fossa (a) Com tampo (i) Sem descarga (tiro direto)</value>
+          <text id="/data/p_defecation_school/2.Latrina.com.fossa.a.Sem.tampo.i.Sem.descarga.tiro.direto:label">
+            <value>(2) Latrina com fossa (a) Sem tampo (i) Sem descarga (tiro direto)</value>
           </text>
-          <text id="/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo:label">
-            <value>(2) Latrina com fossa (b) Sem tampo</value>
-          </text>
-          <text id="/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.agua.fossa.individual:label">
+          <text id="/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.água.(fossa.individual):label">
             <value>(2) Latrina com fossa (b) Sem tampo (ii) Descarga com água (fossa individual)</value>
           </text>
-          <text id="/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.agua.fossa.comum:label">
+          <text id="/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.água.(fossa.comum):label">
             <value>(2) Latrina com fossa (b) Sem tampo (iii) Decarga com água (fossa comum)</value>
           </text>
           <text id="/data/p_defecation_school/3.Sanita.de.compostagem:label">
@@ -570,7 +601,7 @@
             <value>(6) Sem resposta</value>
           </text>
           <text id="/data/note3:label">
-            <value>Conhecimentos sobre Helmintíases transmitidas pelo solo (lombrigas), sintomas, transmissão e controlo</value>
+            <value>Conhecimentos sobre Nioka zavumu (Helmintíases Trasmitidas pelo Solo) (lombrigas), sintomas, transmissão e controlo</value>
           </text>
           <text id="/data/p_know_worms:label">
             <value>17. Já ouviste falar de vermes intestinais (lombrigas)?</value>
@@ -672,10 +703,10 @@
             <value>Outros, Especificar</value>
           </text>
           <text id="/data/note4:label">
-            <value>Conhecimentos sobre Schistosomíase, sintomas, transmissão e controlo</value>
+            <value>Conhecimentos sobre kimbevo ki subisanga omenga (Schistosomíase), sintomas, transmissão e controlo</value>
           </text>
           <text id="/data/p_know_sch:label">
-            <value>21. Já ouviste falar de Schistosomíase (Nioka N'Kawa)?</value>
+            <value>21. Já ouviste falar de kimbevo ki subisanga omenga (Schistosomíase)?</value>
           </text>
           <text id="/data/p_know_sch/1. Sim:label">
             <value>(1) Sim</value>
@@ -690,7 +721,7 @@
             <value>(4) Sem resposta</value>
           </text>
           <text id="/data/p_had_sch:label">
-            <value>22. Já tiveste Schistosomíase?</value>
+            <value>22. Já tiveste kimbevo ki subisanga omenga (Schistosomíase)?</value>
           </text>
           <text id="/data/p_had_sch/1. Sim:label">
             <value>(1) Sim</value>
@@ -705,7 +736,7 @@
             <value>(4) Sem resposta</value>
           </text>
           <text id="/data/p_where_know_sch:label">
-            <value>23. Onde é que te explicaram o que é a Schistosomíase?</value>
+            <value>23. Onde é que te explicaram o que é a kimbevo ki subisanga omenga (Schistosomíase)?</value>
           </text>
           <text id="/data/p_where_know_sch:hint">
             <value>Leia todas as opções, marque todas as opções mencionadas</value>
@@ -744,7 +775,7 @@
             <value>Outros, Especificar</value>
           </text>
           <text id="/data/p_treatment_sch:label">
-            <value>24. Como se pode tratar a Schistosomíase?</value>
+            <value>24. Como se pode tratar a kimbevo ki subisanga omenga (Schistosomíase)?</value>
           </text>
           <text id="/data/p_treatment_sch:hint">
             <value>Perguntar apenas para crianças com idade superior a 9 anos. Leia todas as opções, marque todas as opções mencionadas</value>
@@ -777,19 +808,22 @@
             <value>Outros, Especificar</value>
           </text>
           <text id="/data/note5:label">
-            <value>Consciência e aceitabilidade da distribuição em larga escala de medicamentos para controlar os vermes intestinais (lombrigas) ou Schistosomíase</value>
+            <value>Consciência e aceitabilidade da distribuição em larga escala de medicamentos para controlar os vermes intestinais (lombrigas) ou kimbevo ki subisanga omenga (Schistosomíase)</value>
+          </text>
+          <text id="/data/p_school_visit_med:jr:constraintMsg">
+            <value>Se "Não sei" ou "Sem resposta" for selecionado, nenhuma outra resposta será permitida.</value>
           </text>
           <text id="/data/p_school_visit_med:label">
             <value>25. No ano passado houve uma visita à escola onde foi dado um medicamento a todas as crianças. Sabes para que era o medicamento?</value>
           </text>
           <text id="/data/p_school_visit_med:hint">
-            <value>Leia todas as opções, marque todas as opções mencionadas</value>
+            <value>Leia todas as opções, marque todas as opções mencionadas. (Não selecione "Sem resposta" ou "Não sei" junto com outras respostas)</value>
           </text>
           <text id="/data/p_school_visit_med/1.Controlar.os.vermes.intestinais.lombrigas:label">
             <value>(1) Controlar os vermes intestinais (lombrigas)</value>
           </text>
           <text id="/data/p_school_visit_med/2.Controlar.a.Schistosomíase:label">
-            <value>(2) Controlar a Schistosomíase</value>
+            <value>(2) Controlar a kimbevo ki subisanga omenga</value>
           </text>
           <text id="/data/p_school_visit_med/Outros:label">
             <value>(3) Outros</value>
@@ -818,8 +852,11 @@
           <text id="/data/p_school_med_lastyear/4.Sem resposta:label">
             <value>4.Sem resposta</value>
           </text>
+          <text id="/data/p_why_take_medicine:jr:constraintMsg">
+            <value>Se "Não sei", ou "Sem resposta" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/p_why_take_medicine:label">
-            <value>27. Porque é que tomaste o medicamento?</value>
+            <value>27. Porque é que tomaste o medicamento? (Não selecione "Sem resposta" ou "Não sei" junto com outras respostas)</value>
           </text>
           <text id="/data/p_why_take_medicine:hint">
             <value>Leia todas as opções, marque todas as opções mencionadas</value>
@@ -830,17 +867,17 @@
           <text id="/data/p_why_take_medicine/2.Podia..ter.vermes.intestinais.lombrigas:label">
             <value>(2) Podia  ter vermes intestinais (lombrigas)</value>
           </text>
-          <text id="/data/p_why_take_medicine/3.Para.prevenir.vermes.intestinais.lombrigas:label">
-            <value>(3) Para prevenir vermes intestinais (lombrigas)</value>
+          <text id="/data/p_why_take_medicine/3.Para.evitar.vermes.intestinais.lombrigas:label">
+            <value>(3) Para evitar vermes intestinais (lombrigas)</value>
           </text>
           <text id="/data/p_why_take_medicine/4.Eu.tinha.Schistosomíase:label">
-            <value>(4) Eu tinha Schistosomíase</value>
+            <value>(4) Eu tinha kimbevo ki subisanga omenga</value>
           </text>
           <text id="/data/p_why_take_medicine/5.Podia.ter.Schistosomíase:label">
-            <value>(5) Podia ter Schistosomíase</value>
+            <value>(5) Podia ter kimbevo ki subisanga omenga</value>
           </text>
           <text id="/data/p_why_take_medicine/6.Para.evitar.a.Schistosomíase:label">
-            <value>(6) Para evitar a Schistosomíase</value>
+            <value>(6) Para evitar a kimbevo ki subisanga omenga</value>
           </text>
           <text id="/data/p_why_take_medicine/7.Para.o.tratamento.de.uma.doenca.do.estomago:label">
             <value>(7) Para o tratamento de uma doença do estomago</value>
@@ -887,8 +924,11 @@
           <text id="/data/p_easy_take_med/4.Sem resposta:label">
             <value>(4) Sem resposta</value>
           </text>
+          <text id="/data/p_side_effects_med:jr:constraintMsg">
+            <value>Se "Sim, mas não sei qual medicamento", "Não", "Não sei" ou "Sem resposta" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/p_side_effects_med:label">
-            <value>29. Tiveste algum efeito secundário depois de tomar algum dos medicamentos?</value>
+            <value>29. Tiveste algum efeito secundário depois de tomar algum dos medicamentos? (Não responda "Sim" e "Não" ao mesmo tempo)</value>
           </text>
           <text id="/data/p_side_effects_med:hint">
             <value>Leia todas as opções, marque todas as opções mencionadas</value>
@@ -897,7 +937,7 @@
             <value>(1) Sim, ao medicamento para os vermes intestinais (lombrigas)</value>
           </text>
           <text id="/data/p_side_effects_med/2.Sim,.ao.medicamento.para.a.Schistosomíase:label">
-            <value>(2) Sim, ao medicamento para a Schistosomíase</value>
+            <value>(2) Sim, ao medicamento para a kimbevo ki subisanga omenga</value>
           </text>
           <text id="/data/p_side_effects_med/3.Sim,.mas.nao.sei.qual.medicamento:label">
             <value>(3) Sim, mas não sei qual medicamento</value>
@@ -910,6 +950,9 @@
           </text>
           <text id="/data/p_side_effects_med/6.Sem.resposta:label">
             <value>(6) Sem resposta</value>
+          </text>
+          <text id="/data/p_side_effects_spec:jr:constraintMsg">
+            <value>Se "Não me lembro" for selecionado, nenhuma outra resposta será permitida.</value>
           </text>
           <text id="/data/p_side_effects_spec:label">
             <value>30. Podes especificar qual foi o efeito secundário que sentiste?</value>
@@ -941,8 +984,11 @@
           <text id="/data/p_side_effects_spec_other:label">
             <value>Outros, Especificar</value>
           </text>
+          <text id="/data/p_side_effects_man:jr:constraintMsg">
+            <value>Se "Outros" ou "Não me lembro" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/p_side_effects_man:label">
-            <value>31. Como é que estes efeitos secundários foram tratados?</value>
+            <value>31. Como é que estes efeitos secundários foram tratados? (Não selecione "Nao me lembro" ou "outro" junto com outras respostas )</value>
           </text>
           <text id="/data/p_side_effects_man:hint">
             <value>Leia todas as opções, marque todas as opções mencionadas</value>
@@ -962,8 +1008,8 @@
           <text id="/data/p_side_effects_man/Outros:label">
             <value>(5) Outros</value>
           </text>
-          <text id="/data/p_side_effects_man/7.Nao.me.lembro:label">
-            <value>(7) Não me lembro</value>
+          <text id="/data/p_side_effects_man/6.Nao.me.lembro:label">
+            <value>(6) Não me lembro</value>
           </text>
           <text id="/data/p_side_effects_man_other:label">
             <value>Outros, Especificar</value>
@@ -972,7 +1018,7 @@
             <value>32. Porque é que não tomaste o medicamento?</value>
           </text>
           <text id="/data/p_didnot_med:hint">
-            <value>pergunta apenas para crianças que não tomaram o medicamento (ou seja, respondeu "Não" à pergunta 26).</value>
+            <value>Pergunta apenas para crianças que não tomaram o medicamento (ou seja, respondeu "Não" à pergunta 26).</value>
           </text>
           <text id="/data/p_didnot_med/1.Nao.estava.doente./.com.sintomas:label">
             <value>(1) Não estava doente / com sintomas</value>
@@ -1044,7 +1090,7 @@
             <value>(3) Sem resposta</value>
           </text>
           <text id="/data/p_take_med_school:label">
-            <value>35. Está feliz por o medicamento para matar as Schistosomas ter sido entregue na escola?</value>
+            <value>35. Está feliz por o medicamento para matar as kimbevo ki subisanga omenga (Schistosomíase) ter sido entregue na escola?</value>
           </text>
           <text id="/data/p_take_med_school/1.Sim:label">
             <value>(1) Sim</value>
@@ -1055,8 +1101,11 @@
           <text id="/data/p_take_med_school/3.Sem.resposta:label">
             <value>(3) Sem resposta</value>
           </text>
+          <text id="/data/p_why_take_med:jr:constraintMsg">
+            <value>Se "Outros", "Sem resposta" ou "Não sei" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/p_why_take_med:label">
-            <value>36. Ficaste satisfeito com o facto de os professores te terem dado o medicamento para matar as Schistosomase?</value>
+            <value>36. Ficaste satisfeito com o facto de os professores te terem dado o medicamento para matar as kimbevo ki subisanga omenga (Schistosomíase)?</value>
           </text>
           <text id="/data/p_why_take_med:hint">
             <value>Leia todas as opções, marque todas as opções mencionadas</value>
@@ -1136,8 +1185,11 @@
           <text id="/data/p_why_dontake_med_concerns:label">
             <value>Se escolheu a resposta 2, especifique as preocupações</value>
           </text>
+          <text id="/data/p_where_prefer_med:jr:constraintMsg">
+            <value>Se "Sem resposta" ou "Não sei" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/p_where_prefer_med:label">
-            <value>38. Porque é que tomarias o medicamento para matar os vermes intestinais (lombrigas) se fosse oferecido a todas as crianças da escola?</value>
+            <value>38. Onde é que tomarias o medicamento para matar os vermes intestinais (lombrigas) se fosse oferecido a todas as crianças da escola?</value>
           </text>
           <text id="/data/p_where_prefer_med:hint">
             <value>Leia todas as opções, marque todas as opções mencionadas</value>
@@ -1164,7 +1216,7 @@
             <value>Outros, Especificar</value>
           </text>
           <text id="/data/p_happy_med_school:label">
-            <value>39. Are you happy with the medicine to kill schistosomiasis (bilharzíase) being delivered to you at school?</value>
+            <value>39. Você está feliz com o remédio para matar a kimbevo ki subisanga omenga (Schistosomíase) sendo entregue a você na escola ?</value>
           </text>
           <text id="/data/p_happy_med_school/1.Sim:label">
             <value>(1) Sim</value>
@@ -1176,7 +1228,7 @@
             <value>(3) Sem resposta</value>
           </text>
           <text id="/data/p_happy_teachers_med:label">
-            <value>40. Were you happy with the teachers giving you the medicine to kill schistosomiasis (bilharzíase)?</value>
+            <value>40. Você ficou feliz com os professores dando a você o remédio para matar a kimbevo ki subisanga omenga (Schistosomíase)?</value>
           </text>
           <text id="/data/p_happy_teachers_med/1.Sim:label">
             <value>(1) Sim</value>
@@ -1188,7 +1240,7 @@
             <value>(3) Sem resposta</value>
           </text>
           <text id="/data/p_med_willing_take:label">
-            <value>41. Se o medicamento matar as Schistosomas fosse oferecido no futuro a todas as crianças da escola estaria disposta a tomá-lo?</value>
+            <value>41. Se o medicamento matar as kimbevo ki subisanga omenga (Schistosomíase) fosse oferecido no futuro a todas as crianças da escola estaria disposta a tomá-lo?</value>
           </text>
           <text id="/data/p_med_willing_take/1.Sim:label">
             <value>(1) Sim</value>
@@ -1199,17 +1251,20 @@
           <text id="/data/p_med_willing_take/3.Sem.resposta:label">
             <value>(3) Sem resposta</value>
           </text>
+          <text id="/data/p_why_take_schmed:jr:constraintMsg">
+            <value>Se "Sem resposta" ou "Não sei" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/p_why_take_schmed:label">
-            <value>42. Porque é que tomarias o medicamento para matar as Schistosomas se fosse oferecido a todas as crianças da escola?</value>
+            <value>42. Porque é que tomarias o medicamento para matar as kimbevo ki subisanga omenga (Schistosomíase) se fosse oferecido a todas as crianças da escola?</value>
           </text>
           <text id="/data/p_why_take_schmed:hint">
-            <value>Leia todas as opções, marque todas as opções mencionadas</value>
+            <value>Leia todas as opções, marque todas as opções mencionadas (Não selecione "Nao me lembro" ou "outro" junto com outras respostas</value>
           </text>
           <text id="/data/p_why_take_schmed/1.Para.tratar.a.Schistosomíase:label">
-            <value>(1) Para tratar a Schistosomíase</value>
+            <value>(1) Para tratar a kimbevo ki subisanga omenga</value>
           </text>
           <text id="/data/p_why_take_schmed/2.Para.prevenir.a.Schistosomíase:label">
-            <value>(2) Para prevenir a Schistosomíase</value>
+            <value>(2) Para prevenir a kimbevo ki subisanga omenga</value>
           </text>
           <text id="/data/p_why_take_schmed/3.Porque.os.outros.tomam:label">
             <value>(3) Porque os outros tomam</value>
@@ -1232,11 +1287,14 @@
           <text id="/data/p_why_take_schmed_other:label">
             <value>Outros, Especificar</value>
           </text>
+          <text id="/data/p_why_dontake_schmed:jr:constraintMsg">
+            <value>Se "Sem resposta" ou "Não sei" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/p_why_dontake_schmed:label">
-            <value>43. Porque é que não tomarias os medicamentos para matar as Schistosomas fosse oferecido a todas as crianças da escola?</value>
+            <value>43. Porque é que não tomarias os medicamentos para matar as kimbevo ki subisanga omenga (Schistosomíase) fosse oferecido a todas as crianças da escola?</value>
           </text>
           <text id="/data/p_why_dontake_schmed:hint">
-            <value>Leia todas as opções, marque todas as opções mencionadas</value>
+            <value>Leia todas as opções, marque todas as opções mencionadas (Não selecione "Nao me lembro" ou "outro" junto com outras respostas)</value>
           </text>
           <text id="/data/p_why_dontake_schmed/1.Nao.estava.doente:label">
             <value>(1) Não estava doente</value>
@@ -1280,8 +1338,14 @@
           <text id="/data/p_why_dontake_schmed_concerns:label">
             <value>Se escolheu a resposta 2, especifique as preocupações</value>
           </text>
+          <text id="/data/p_where_prefer_schmed:jr:constraintMsg">
+            <value>Se "Sem resposta" ou "Não sei" for selecionado, nenhuma outra resposta será permitida.</value>
+          </text>
           <text id="/data/p_where_prefer_schmed:label">
-            <value>44. Se pudesses escolher, como ou onde preferirias que o medicamento que matar as Schistosomas fosse dado?</value>
+            <value>44. Se pudesses escolher, como ou onde preferirias que o medicamento que matar as kimbevo ki subisanga omenga (Schistosomíase) fosse dado?</value>
+          </text>
+          <text id="/data/p_where_prefer_schmed:hint">
+            <value>Leia todas as opções, marque todas as opções mencionadas. (Do not select "cannot remember" or "other" along with other responses at same time)</value>
           </text>
           <text id="/data/p_where_prefer_schmed/1.Escolas:label">
             <value>(1) Escolas</value>
@@ -1319,10 +1383,16 @@
           <text id="/data/p_outcome_interview/3 Recusado:label">
             <value>(3) Recusado</value>
           </text>
-          <text id="/data/p_material_wash_hand_school:hint">
-            <value>-</value>
+          <text id="/data/p_outcome_interview_inc:label">
+            <value>Por que a entrevista está incompleta?</value>
           </text>
-          <text id="/data/p_where_prefer_schmed:hint">
+          <text id="/data/w_end_note:label">
+            <value>Você acabou de inserir uma resposta que encerrará a pesquisa. Tem certeza de que deseja continuar?</value>
+          </text>
+          <text id="/data/w_additional_notes:label">
+            <value>Quaisquer notas adicionais:</value>
+          </text>
+          <text id="/data/p_material_wash_hand_school:hint">
             <value>-</value>
           </text>
           <text id="/data/p_end_note:label">
@@ -1351,61 +1421,85 @@
           <text id="/data/p_commune:label">
             <value>Select the commune</value>
           </text>
+          <text id="/data/p_commune_other:label">
+            <value>Enter the commune</value>
+          </text>
           <text id="/data/p_school:label">
             <value>School name</value>
+          </text>
+          <text id="/data/p_school_other:label">
+            <value>Enter the school name</value>
           </text>
           <text id="/data/p_school_id:label">
             <value>School code</value>
           </text>
-          <text id="/data/note1:label">
+          <text id="/data/p_school_id_other:label">
+            <value>Enter the school code</value>
+          </text>
+          <text id="/data/p_consent:label">
+            <value>Has written consent been obtained?</value>
+          </text>
+          <text id="/data/p_consent:hint">
+            <value>only proceed if yes</value>
+          </text>
+          <text id="/data/p_consent/1.Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/p_consent/2.Nao:label">
+            <value>No</value>
+          </text>
+          <text id="/data/Group1:label">
             <value>Demographic information</value>
           </text>
-          <text id="/data/p_generate_id:label">
+          <text id="/data/Group1/p_generate_id:label">
             <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
           </text>
-          <text id="/data/p_sex:label">
+          <text id="/data/Group1/p_sex:label">
             <value>1. Sex</value>
           </text>
-          <text id="/data/p_sex/M:label">
+          <text id="/data/Group1/p_sex/M:label">
             <value>Male</value>
           </text>
-          <text id="/data/p_sex/F:label">
+          <text id="/data/Group1/p_sex/F:label">
             <value>Female</value>
           </text>
-          <text id="/data/p_year_birth:jr:constraintMsg">
+          <text id="/data/Group1/p_year_birth:jr:constraintMsg">
             <value>The year must be between 6 and 9 (2012 and 2015)</value>
           </text>
-          <text id="/data/p_year_birth:label">
+          <text id="/data/Group1/p_year_birth:label">
             <value>2.a. Year oh birth</value>
           </text>
-          <text id="/data/p_year_birth:hint">
-            <value>The year must be between 6 and 9 (2012 and 2015)</value>
+          <text id="/data/Group1/p_year_birth:hint">
+            <value>The year must be between 2012 and 2015</value>
           </text>
-          <text id="/data/p_month_birth:jr:constraintMsg">
+          <text id="/data/Group1/p_month_birth:jr:constraintMsg">
             <value>The month is invalid</value>
           </text>
-          <text id="/data/p_month_birth:label">
+          <text id="/data/Group1/p_month_birth:label">
             <value>2.b. Month of birth</value>
           </text>
-          <text id="/data/p_day_birth:jr:constraintMsg">
+          <text id="/data/Group1/p_month_birth:hint">
+            <value>Answer needs to be numeric</value>
+          </text>
+          <text id="/data/Group1/p_day_birth:jr:constraintMsg">
             <value>The day is invalid</value>
           </text>
-          <text id="/data/p_day_birth:label">
+          <text id="/data/Group1/p_day_birth:label">
             <value>2.c. Day of birth</value>
           </text>
-          <text id="/data/p_date_birth:label">
+          <text id="/data/Group1/p_date_birth:label">
             <value>2. Date of birth (YYYY-MM-DD)</value>
           </text>
-          <text id="/data/p_school_grade:jr:constraintMsg">
-            <value>Must be greater than zero</value>
+          <text id="/data/Group1/p_school_grade:jr:constraintMsg">
+            <value>From 1 to 9</value>
           </text>
-          <text id="/data/p_school_grade:label">
+          <text id="/data/Group1/p_school_grade:label">
             <value>3. What school grade are you in?</value>
           </text>
-          <text id="/data/p_people_home:jr:constraintMsg">
-            <value>The value is incorrect</value>
+          <text id="/data/Group1/p_people_home:jr:constraintMsg">
+            <value>From 1 to 19</value>
           </text>
-          <text id="/data/p_people_home:label">
+          <text id="/data/Group1/p_people_home:label">
             <value>4. How many people live at home?</value>
           </text>
           <text id="/data/note2:label">
@@ -1465,6 +1559,9 @@
           <text id="/data/p_water_source_other:label">
             <value>If other, please specify</value>
           </text>
+          <text id="/data/p_defecation_place:jr:constraintMsg">
+            <value>If "No structure", "Don't know" or "No answer" is selected, no other response is allowed.</value>
+          </text>
           <text id="/data/p_defecation_place:label">
             <value>6. What is your main place of defecation at home?</value>
           </text>
@@ -1472,25 +1569,22 @@
             <value>May use picture sheets to as guide to different toilet types. Choose all items mentioned.</value>
           </text>
           <text id="/data/p_defecation_place/1.Autoclismo:label">
-            <value>1.Flush toilet</value>
+            <value>(1) Flush toilet</value>
           </text>
           <text id="/data/p_defecation_place/2.Latrina.com.fossa:label">
-            <value>2.Pit latrine</value>
+            <value>(2) Pit latrine</value>
           </text>
           <text id="/data/p_defecation_place/2.Latrina.com.fossa.a.Com.tampo:label">
-            <value>2.a.Pit latrine with slab</value>
+            <value>(2) Pit latrine (a) with slab</value>
           </text>
-          <text id="/data/p_defecation_place/2.Latrina.com.fossa.a.Com.tampo.i.Sem.descarga.tiro.direto:label">
-            <value>2.a.1.Do not flush (direct pit)</value>
+          <text id="/data/p_defecation_place/2.Latrina.com.fossa.a.Sem.tampo.i.Sem.descarga.tiro.direto:label">
+            <value>(2) Pit latrine (a) without slab (i) Do not flush (direct pit)</value>
           </text>
-          <text id="/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo:label">
-            <value>2.b.Pit latrine without slab</value>
+          <text id="/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.água.(fossa.individual):label">
+            <value>(2) Pit latrine (b) without slab (ii) Flush with water (near house)</value>
           </text>
-          <text id="/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.agua.fossa.individual:label">
-            <value>2.b.1.Flush with water (near house)</value>
-          </text>
-          <text id="/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.agua.fossa.comum:label">
-            <value>2.b.2.Flush with water (away from house)</value>
+          <text id="/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.água.(fossa.comum):label">
+            <value>(2) Pit latrine (b) without slab (iii) Flush with water (away from house)</value>
           </text>
           <text id="/data/p_defecation_place/3.Sanita.de.compostagem:label">
             <value>3.Composting toilet</value>
@@ -1516,6 +1610,9 @@
           <text id="/data/p_defecation_place_other:label">
             <value>If other, please specify</value>
           </text>
+          <text id="/data/p_defecation_school:jr:constraintMsg">
+            <value>If "No structure", "Don't know" or "No answer" is selected, no other response is allowed.</value>
+          </text>
           <text id="/data/p_defecation_school:label">
             <value>7. Where do you defecate at school?</value>
           </text>
@@ -1523,25 +1620,22 @@
             <value>May use picture sheets to as guide to different toilet types. Choose all items mentioned.</value>
           </text>
           <text id="/data/p_defecation_school/1.Autoclismo:label">
-            <value>1.Flush toilet</value>
+            <value>(1) Flush toilet</value>
           </text>
           <text id="/data/p_defecation_school/2.Latrina.com.fossa:label">
-            <value>2.Pit latrine</value>
+            <value>(2) Pit latrine</value>
           </text>
           <text id="/data/p_defecation_school/2.Latrina.com.fossa.a.Com.tampo:label">
-            <value>2.a.Pit latrine with slab</value>
+            <value>(2) Pit latrine (a) with slab</value>
           </text>
-          <text id="/data/p_defecation_school/2.Latrina.com.fossa.a.Com.tampo.i.Sem.descarga.tiro.direto:label">
-            <value>2.a.1.Do not flush (direct pit)</value>
+          <text id="/data/p_defecation_school/2.Latrina.com.fossa.a.Sem.tampo.i.Sem.descarga.tiro.direto:label">
+            <value>(2) Pit latrine (a) without slab (i) Do not flush (direct pit)</value>
           </text>
-          <text id="/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo:label">
-            <value>2.b.Pit latrine without slab</value>
+          <text id="/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.água.(fossa.individual):label">
+            <value>(2) Pit latrine (b) without slab (ii) Flush with water (near house)</value>
           </text>
-          <text id="/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.agua.fossa.individual:label">
-            <value>2.b.1.Flush with water (near house)</value>
-          </text>
-          <text id="/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.agua.fossa.comum:label">
-            <value>2.b.2.Flush with water (away from house)</value>
+          <text id="/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.água.(fossa.comum):label">
+            <value>(2) Pit latrine (b) without slab (iii) Flush with water (away from house)</value>
           </text>
           <text id="/data/p_defecation_school/3.Sanita.de.compostagem:label">
             <value>3.Composting toilet</value>
@@ -1553,7 +1647,7 @@
             <value>5.Hanging latrine</value>
           </text>
           <text id="/data/p_defecation_school/6.No.capim:label">
-            <value>6.No structure / outdoors</value>
+            <value>6.No structure / outdoors (in the bush)</value>
           </text>
           <text id="/data/p_defecation_school/Outros:label">
             <value>7.Other</value>
@@ -1996,6 +2090,9 @@
           <text id="/data/note5:label">
             <value>Awareness and acceptability of large-scale distribution of medicine to control intestinal worms (lombrigas) or schistosomiasis (bilharzíase)</value>
           </text>
+          <text id="/data/p_school_visit_med:jr:constraintMsg">
+            <value>If "Don't know" or "No answer" is selected, no other response is allowed.</value>
+          </text>
           <text id="/data/p_school_visit_med:label">
             <value>25. There was a visit to the school last year where medicine was given to all children. Do you know what the medicine was for?</value>
           </text>
@@ -2035,6 +2132,9 @@
           <text id="/data/p_school_med_lastyear/4.Sem resposta:label">
             <value>4.No answer</value>
           </text>
+          <text id="/data/p_why_take_medicine:jr:constraintMsg">
+            <value>If "Don't know" or "No answer" is selected, no other response is allowed.</value>
+          </text>
           <text id="/data/p_why_take_medicine:label">
             <value>27. Why did you take the medicine?</value>
           </text>
@@ -2047,7 +2147,7 @@
           <text id="/data/p_why_take_medicine/2.Podia..ter.vermes.intestinais.lombrigas:label">
             <value>2.I thought that I might have intestinal worms at the time of distribution (lombrigas)</value>
           </text>
-          <text id="/data/p_why_take_medicine/3.Para.prevenir.vermes.intestinais.lombrigas:label">
+          <text id="/data/p_why_take_medicine/3.Para.evitar.vermes.intestinais.lombrigas:label">
             <value>3.To prevent intestinal worms (lombrigas)</value>
           </text>
           <text id="/data/p_why_take_medicine/4.Eu.tinha.Schistosomíase:label">
@@ -2104,6 +2204,9 @@
           <text id="/data/p_easy_take_med/4.Sem resposta:label">
             <value>4.No answer</value>
           </text>
+          <text id="/data/p_side_effects_med:jr:constraintMsg">
+            <value>If "Yes, but not sure which medicine", "No", "Don't know" or "No answer" is selected, no other response is allowed.</value>
+          </text>
           <text id="/data/p_side_effects_med:label">
             <value>29. Did you have any side effects after taking the medicine?</value>
           </text>
@@ -2127,6 +2230,9 @@
           </text>
           <text id="/data/p_side_effects_med/6.Sem.resposta:label">
             <value>6.No answer</value>
+          </text>
+          <text id="/data/p_side_effects_spec:jr:constraintMsg">
+            <value>If "Cannot remember" is selected, no other response is allowed.</value>
           </text>
           <text id="/data/p_side_effects_spec:label">
             <value>30. Could you please specify some of the side effects?</value>
@@ -2158,6 +2264,9 @@
           <text id="/data/p_side_effects_spec_other:label">
             <value>If other, please specify</value>
           </text>
+          <text id="/data/p_side_effects_man:jr:constraintMsg">
+            <value>If "Other" or "Cannot remember" is selected, no other response is allowed.</value>
+          </text>
           <text id="/data/p_side_effects_man:label">
             <value>31. How were these side effects managed?</value>
           </text>
@@ -2179,7 +2288,7 @@
           <text id="/data/p_side_effects_man/Outros:label">
             <value>5.Other</value>
           </text>
-          <text id="/data/p_side_effects_man/7.Nao.me.lembro:label">
+          <text id="/data/p_side_effects_man/6.Nao.me.lembro:label">
             <value>6.Cannot remember</value>
           </text>
           <text id="/data/p_side_effects_man_other:label">
@@ -2249,7 +2358,7 @@
             <value>3.No answer</value>
           </text>
           <text id="/data/p_happy_kill_sch:label">
-            <value>34. Were you happy with the teachers giving you the medicine to kill intestinal worms (lombrigas) or schistosomiasis (bilharzíase)?</value>
+            <value>34. Were you happy with the teachers giving you the medicine to kill intestinal worms (lombrigas)?</value>
           </text>
           <text id="/data/p_happy_kill_sch/1.Sim:label">
             <value>1.Yes</value>
@@ -2271,6 +2380,9 @@
           </text>
           <text id="/data/p_take_med_school/3.Sem.resposta:label">
             <value>3.No answer</value>
+          </text>
+          <text id="/data/p_why_take_med:jr:constraintMsg">
+            <value>If "Other", "Don't know" or "No answer" is selected, no other response is allowed.</value>
           </text>
           <text id="/data/p_why_take_med:label">
             <value>36. Why would you take the medicine to kill intestinal worms (lombrigas) if there is future delivery of medicines in your school to all school children?</value>
@@ -2353,6 +2465,9 @@
           <text id="/data/p_why_dontake_med_concerns:label">
             <value>If choosen answer 2, please specify concerns</value>
           </text>
+          <text id="/data/p_where_prefer_med:jr:constraintMsg">
+            <value>If "Don't know" or "No answer" is selected, no other response is allowed.</value>
+          </text>
           <text id="/data/p_where_prefer_med:label">
             <value>38. If given a choice, how or where would you prefer the medicine to kill intestinal worms (lombrigas) be given?</value>
           </text>
@@ -2416,6 +2531,9 @@
           <text id="/data/p_med_willing_take/3.Sem.resposta:label">
             <value>3.No answer</value>
           </text>
+          <text id="/data/p_why_take_schmed:jr:constraintMsg">
+            <value>If "Don't know" or "No answer" is selected, no other response is allowed.</value>
+          </text>
           <text id="/data/p_why_take_schmed:label">
             <value>42. Why would you take the medicine to kill schistosomiasis (bilharzíase) if there is future delivery of medicines in your school to all school children?</value>
           </text>
@@ -2448,6 +2566,9 @@
           </text>
           <text id="/data/p_why_take_schmed_other:label">
             <value>If other, please specify</value>
+          </text>
+          <text id="/data/p_why_dontake_schmed:jr:constraintMsg">
+            <value>If "Don't know" or "No answer" is selected, no other response is allowed.</value>
           </text>
           <text id="/data/p_why_dontake_schmed:label">
             <value>43. Why would you not take medicine to kill schistosomiasis (bilharzíase) if there is future delivery of medicines in your school to all school children?</value>
@@ -2497,6 +2618,9 @@
           <text id="/data/p_why_dontake_schmed_concerns:label">
             <value>If choosen answer 2, please specify concerns</value>
           </text>
+          <text id="/data/p_where_prefer_schmed:jr:constraintMsg">
+            <value>If "Don't know" or "No answer" is selected, no other response is allowed.</value>
+          </text>
           <text id="/data/p_where_prefer_schmed:label">
             <value>44. If given a choice, how or where would you prefer the medicine to kill schistosomiasis (bilharzíase) be given?</value>
           </text>
@@ -2536,8 +2660,17 @@
           <text id="/data/p_outcome_interview/3 Recusado:label">
             <value>3.Declined</value>
           </text>
+          <text id="/data/p_outcome_interview_inc:label">
+            <value>Why the interview is incomplete?</value>
+          </text>
           <text id="/data/p_end_note:label">
             <value>This completes the questionnaire. We are grateful for your participation, thank you.</value>
+          </text>
+          <text id="/data/w_end_note:label">
+            <value>You just entered an answer that will end the survey, are you sure you want to continue?</value>
+          </text>
+          <text id="/data/w_additional_notes:label">
+            <value>Any additional notes:</value>
           </text>
           <text id="/data/p_material_wash_hand_school_other:hint">
             <value>-</value>
@@ -2550,99 +2683,104 @@
           </text>
         </translation>
       </itext>
-
       <bind nodeset="/data/p_date" required="true()" type="date"/>
       <bind nodeset="/data/p_RecorderID" required="true()" type="string"/>
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_Recorder_code:jr:constraintMsg')" nodeset="/data/p_Recorder_code" required="true()" type="int"/>
       <bind nodeset="/data/p_province" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_municipality" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_province"/>
       <bind nodeset="/data/p_commune" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_municipality"/>
-      <bind nodeset="/data/p_school" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_commune"/>
-      <bind nodeset="/data/p_school_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_school"/>
-      <bind nodeset="/data/note1" readonly="true()" type="string"/>
-      <bind nodeset="/data/p_generate_id" readonly="true()" required="true()" calculate="concat(/data/p_school_id,'-', /data/meta/randomnum)" type="string"/>
-      <bind nodeset="/data/p_sex" required="true()" type="string"/>
-      <bind constraint=". &lt;= 2015 and . &gt;= 2012" jr:constraintMsg="jr:itext('/data/p_year_birth:jr:constraintMsg')" nodeset="/data/p_year_birth" required="true()" type="int"/>
-      <bind constraint=". &gt; 0 and . &lt;= 12" jr:constraintMsg="jr:itext('/data/p_month_birth:jr:constraintMsg')" nodeset="/data/p_month_birth" required="true()" type="int"/>
-      <bind constraint=".&gt; 0 and . &lt;=31" jr:constraintMsg="jr:itext('/data/p_day_birth:jr:constraintMsg')" nodeset="/data/p_day_birth" required="true()" type="int"/>
-      <bind calculate="concat( /data/p_year_birth ,'-', /data/p_month_birth ,'-', /data/p_day_birth )" nodeset="/data/p_date_birth" readonly="true()" required="true()" type="string"/>
-      <bind constraint=".&gt;0" jr:constraintMsg="jr:itext('/data/p_school_grade:jr:constraintMsg')" nodeset="/data/p_school_grade" required="true()" type="string"/>
-      <bind constraint=".&gt; 0 and . &lt; 20" jr:constraintMsg="jr:itext('/data/p_people_home:jr:constraintMsg')" nodeset="/data/p_people_home" required="true()" type="int"/>
-      <bind nodeset="/data/note2" readonly="true()" type="string"/>
-      <bind nodeset="/data/p_water_source" required="true()" type="string"/>
+      <bind nodeset="/data/p_commune_other" relevant=" /data/p_commune  = 'Outros'" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/p_municipality"/>
+      <bind nodeset="/data/p_school" relevant=" /data/p_commune != 'Outros'" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/p_commune"/>
+      <bind nodeset="/data/p_school_other" relevant=" /data/p_commune  = 'Outros'" required="true()" type="string" db_get="col_6" db_filter_by_col_4="/data/p_commune_other"/>
+      <bind nodeset="/data/p_school_id" relevant=" /data/p_commune != 'Outros'" required="true()" type="string" db_get="col_7" db_filter_by_col_5="/data/p_school"/>
+      <bind nodeset="/data/p_school_id_other" relevant=" /data/p_commune  = 'Outros'" required="true()" type="string" db_get="col_8" db_filter_by_col_6="/data/p_school_other"/>
+      <bind nodeset="/data/p_consent" required="true()" type="string"/>
+      <bind nodeset="/data/Group1" relevant="selected( /data/p_consent , '1.Sim')"/>
+      <bind nodeset="/data/Group1/p_generate_id" readonly="true()" calculate="if(/data/p_commune = 'Outros', concat(/data/p_school_id_other,'-', /data/meta/randomnum), concat(/data/p_school_id,'-', /data/meta/randomnum))" required="true()" type="string"/>
+      <bind nodeset="/data/Group1/p_sex" required="true()" type="string"/>
+      <bind constraint=". &lt;= 2015 and . &gt;= 2012" jr:constraintMsg="jr:itext('/data/Group1/p_year_birth:jr:constraintMsg')" nodeset="/data/Group1/p_year_birth" required="true()" type="int"/>
+      <bind constraint=". &gt; 0 and . &lt;= 12" jr:constraintMsg="jr:itext('/data/Group1/p_month_birth:jr:constraintMsg')" nodeset="/data/Group1/p_month_birth" required="true()" type="int"/>
+      <bind constraint=".&gt; 0 and . &lt;=31" jr:constraintMsg="jr:itext('/data/Group1/p_day_birth:jr:constraintMsg')" nodeset="/data/Group1/p_day_birth" required="true()" type="int"/>
+      <bind calculate="concat( /data/Group1/p_year_birth ,'-', /data/Group1/p_month_birth ,'-', /data/Group1/p_day_birth )" nodeset="/data/Group1/p_date_birth" readonly="true()" required="true()" type="string"/>
+      <bind constraint=".&gt;0 and .&lt;=9" jr:constraintMsg="jr:itext('/data/Group1/p_school_grade:jr:constraintMsg')" nodeset="/data/Group1/p_school_grade" required="true()" type="string"/>
+      <bind constraint=".&gt; 0 and . &lt; 20" jr:constraintMsg="jr:itext('/data/Group1/p_people_home:jr:constraintMsg')" nodeset="/data/Group1/p_people_home" required="true()" type="int"/>
+      <bind nodeset="/data/note2" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
+      <bind nodeset="/data/p_water_source" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/p_water_source_other" relevant="selected( /data/p_water_source , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_defecation_place" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'6.No.capim') or selected(.,'8.Nao.sei') or selected(.,'9.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_defecation_place:jr:constraintMsg')" nodeset="/data/p_defecation_place" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/p_defecation_place_other" relevant="selected( /data/p_defecation_place , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_defecation_school" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'6.No.capim') or selected(.,'8.Nao.sei') or selected(.,'9.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_defecation_school:jr:constraintMsg')" nodeset="/data/p_defecation_school" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/p_defecation_school_other" relevant="selected( /data/p_defecation_school , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_wash_hand_home" required="true()" type="string"/>
-      <bind nodeset="/data/p_wash_hand_school" required="true()" type="string"/>
-      <bind nodeset="/data/p_wash_hand_meals_home" required="true()" type="string"/>
-      <bind nodeset="/data/p_wash_hand_meals_school" required="true()" type="string"/>
-      <bind nodeset="/data/p_material_wash_hand_home" required="true()" type="string"/>
+      <bind nodeset="/data/p_wash_hand_home" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_wash_hand_school" relevant=" /data/p_wash_hand_home != '4.Nunca'" required="true()" type="string"/>
+      <bind nodeset="/data/p_wash_hand_meals_home" relevant=" /data/p_wash_hand_home != '4.Nunca' and  /data/p_wash_hand_school != '4.Nunca'" required="true()" type="string"/>
+      <bind nodeset="/data/p_wash_hand_meals_school" relevant=" /data/p_wash_hand_home != '4.Nunca' and  /data/p_wash_hand_school != '4.Nunca' and  /data/p_wash_hand_meals_home != '4.Nunca'" required="true()" type="string"/>
+      <bind nodeset="/data/p_material_wash_hand_home" relevant=" /data/p_wash_hand_home != '4.Nunca' and  /data/p_wash_hand_school != '4.Nunca' and  /data/p_wash_hand_meals_home != '4.Nunca'" required="true()" type="string"/>
       <bind nodeset="/data/p_material_wash_hand_home_other" relevant="selected( /data/p_material_wash_hand_home , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_material_wash_hand_school" type="string"/>
+      <bind nodeset="/data/p_material_wash_hand_school" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_wash_hand_school != '4.Nunca' and  /data/p_wash_hand_meals_school != '4.Nunca'" required="true()" type="string"/>
       <bind nodeset="/data/p_material_wash_hand_school_other" relevant="selected( /data/p_material_wash_hand_school , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_shoes_outdoors" required="true()" type="string"/>
-      <bind nodeset="/data/p_wear_shoes_defecating" required="true()" type="string"/>
-      <bind nodeset="/data/p_wear_shoes_urinating" required="true()" type="string"/>
-      <bind nodeset="/data/note3" readonly="true()" type="string"/>
-      <bind nodeset="/data/p_know_worms" required="true()" type="string"/>
-      <bind nodeset="/data/p_had_worms" required="true()" type="string"/>
-      <bind nodeset="/data/p_where_know_worms" relevant=" /data/p_know_worms  = '1.Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/p_shoes_outdoors" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_wear_shoes_defecating" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_wear_shoes_urinating" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/note3" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
+      <bind nodeset="/data/p_know_worms" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_had_worms" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_where_know_worms" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_know_worms  = '1.Sim' or  /data/p_had_worms != '2. Nao')" required="true()" type="string"/>
       <bind nodeset="/data/p_where_know_worms_other" relevant="selected( /data/p_where_know_worms , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_treatment_worms" required="true()" type="string"/>
+      <bind nodeset="/data/p_treatment_worms" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_had_worms != '2. Nao'" required="true()" type="string"/>
       <bind nodeset="/data/p_treatment_worms_other" relevant="selected( /data/p_treatment_worms , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/note4" readonly="true()" type="string"/>
-      <bind nodeset="/data/p_know_sch" required="true()" type="string"/>
-      <bind nodeset="/data/p_had_sch" required="true()" type="string"/>
-      <bind nodeset="/data/p_where_know_sch" relevant=" /data/p_know_sch  = '1.Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/note4" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
+      <bind nodeset="/data/p_know_sch" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_had_sch" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_know_sch != '2. Nao'" required="true()" type="string"/>
+      <bind nodeset="/data/p_where_know_sch" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_know_sch  = '1.Sim' or  /data/p_know_sch != '2. Nao')" required="true()" type="string"/>
       <bind nodeset="/data/p_where_know_sch_other" relevant="selected( /data/p_where_know_sch , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_treatment_sch" required="true()" type="string"/>
+      <bind nodeset="/data/p_treatment_sch" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_know_sch != '2. Nao'" required="true()" type="string"/>
       <bind nodeset="/data/p_treatment_sch_other" relevant="selected( /data/p_treatment_sch , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/note5" readonly="true()" type="string"/>
-      <bind nodeset="/data/p_school_visit_med" required="true()" type="string"/>
+      <bind nodeset="/data/note5" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
+      <bind constraint="if(selected(.,'4.Nao.sei./.nao.se.lembra') or selected(.,'5.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_school_visit_med:jr:constraintMsg')" nodeset="/data/p_school_visit_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/p_school_visit_med_other" relevant="selected( /data/p_school_visit_med , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_school_med_lastyear" required="true()" type="string"/>
-      <bind nodeset="/data/p_why_take_medicine" relevant=" /data/p_school_med_lastyear  = '1.Sim'" type="string"/>
+      <bind nodeset="/data/p_school_med_lastyear" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'14.Nao.sei./.nao.se.lembra') or selected(.,'15.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_take_medicine:jr:constraintMsg')" nodeset="/data/p_why_take_medicine" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" type="string"/>
       <bind nodeset="/data/p_why_take_medicine_other" relevant="selected( /data/p_why_take_medicine , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_easy_take_med" relevant=" /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="string"/>
-      <bind nodeset="/data/p_side_effects_med" relevant=" /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="string"/>
-      <bind nodeset="/data/p_side_effects_spec" relevant=" /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/p_easy_take_med" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'3.Sim,.mas.nao.sei.qual.medicamento') or selected(.,'4.Nao') or selected(.,'5.Nao.sei./.nao.se.lembra') or selected(.,'6.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_med:jr:constraintMsg')" nodeset="/data/p_side_effects_med" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'7.Nao.me.lembro'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_spec:jr:constraintMsg')" nodeset="/data/p_side_effects_spec" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '1.Sim' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" required="true()" type="string"/>
       <bind nodeset="/data/p_side_effects_spec_other" relevant="selected( /data/p_side_effects_spec , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_side_effects_man" relevant=" /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'Outros') or selected(.,'6.Nao.me.lembro'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_man:jr:constraintMsg')" nodeset="/data/p_side_effects_man" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '1.Sim' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" required="true()" type="string"/>
       <bind nodeset="/data/p_side_effects_man_other" relevant="selected( /data/p_side_effects_man , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_didnot_med" relevant=" /data/p_school_med_lastyear  = '2.No'" type="string"/>
+      <bind nodeset="/data/p_didnot_med" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '2.No' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" type="string"/>
       <bind nodeset="/data/p_didnot_med_other" relevant="selected( /data/p_didnot_med , 'Outros')" required="true()" type="string"/>
       <bind nodeset="/data/p_didnot_med_concerns" relevant="selected( /data/p_didnot_med , '3.Fear of side effects (mention some)')" required="true()" type="string"/>
-      <bind nodeset="/data/p_happy_kill_worms" required="true()" type="string"/>
-      <bind nodeset="/data/p_happy_kill_sch" required="true()" type="string"/>
-      <bind nodeset="/data/p_take_med_school" required="true()" type="string"/>
-      <bind nodeset="/data/p_why_take_med" required="true()" type="string"/>
+      <bind nodeset="/data/p_happy_kill_worms" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_happy_kill_sch" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_take_med_school" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'Outros') or selected(.,'7.Nao.sei') or selected(.,'8.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_take_med:jr:constraintMsg')" nodeset="/data/p_why_take_med" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_take_med_school ,'1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/p_why_take_med_other" relevant="selected( /data/p_why_take_med , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_why_dontake_med" required="true()" type="string"/>
+      <bind nodeset="/data/p_why_dontake_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/p_why_dontake_med_other" relevant="selected( /data/p_why_dontake_med , 'Outros')" required="true()" type="string"/>
       <bind nodeset="/data/p_why_dontake_med_concerns" relevant="selected( /data/p_why_dontake_med , '2.Fear of side effects (mention some)')" required="true()" type="string"/>
-      <bind nodeset="/data/p_where_prefer_med" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'5.Nao.sei') or selected(.,'6.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_where_prefer_med:jr:constraintMsg')" nodeset="/data/p_where_prefer_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/p_where_prefer_med_other" relevant="selected( /data/p_where_prefer_med , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_happy_med_school" required="true()" type="string"/>
-      <bind nodeset="/data/p_happy_teachers_med" required="true()" type="string"/>
-      <bind nodeset="/data/p_med_willing_take" required="true()" type="string"/>
-      <bind nodeset="/data/p_why_take_schmed" required="true()" type="string"/>
+      <bind nodeset="/data/p_happy_med_school" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_happy_teachers_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_med_willing_take" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'7.Nao.sei') or selected(.,'8.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_take_schmed:jr:constraintMsg')" nodeset="/data/p_why_take_schmed" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_med_willing_take !='2.Nao'" required="true()" type="string"/>
       <bind nodeset="/data/p_why_take_schmed_other" relevant="selected( /data/p_why_take_schmed , 'Outros')" required="true()" type="string"/>
-      <bind nodeset="/data/p_why_dontake_schmed" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'11.Nao.sei') or selected(.,'12.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_dontake_schmed:jr:constraintMsg')" nodeset="/data/p_why_dontake_schmed" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/p_why_dontake_schmed_other" relevant="selected( /data/p_why_dontake_schmed , 'Outros')" required="true()" type="string"/>
       <bind nodeset="/data/p_why_dontake_schmed_concerns" relevant="selected( /data/p_why_dontake_schmed , '2.Fear of side effects (mention some)')" required="true()" type="string"/>
-      <bind nodeset="/data/p_where_prefer_schmed" required="true()" type="string"/>
+      <bind constraint="if(selected(.,'5.Nao.sei') or selected(.,'6.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_where_prefer_schmed:jr:constraintMsg')" nodeset="/data/p_where_prefer_schmed" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/p_where_prefer_schmed_other" relevant="selected( /data/p_where_prefer_schmed , 'Outros')" required="true()" type="string"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end_time" type="dateTime"/>
-      <bind nodeset="/data/p_outcome_interview" required="true()" type="string"/>
-      <bind nodeset="/data/p_end_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/p_outcome_interview" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/p_outcome_interview_inc" relevant="selected( /data/p_outcome_interview , '2 Incompleto')" required="true()" type="string"/>
+      <bind nodeset="/data/p_end_note" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
+      <bind nodeset="/data/w_end_note" readonly="true()" relevant=" /data/p_consent  = '2.Nao'" type="string"/>
+      <bind nodeset="/data/w_additional_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start_time" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end_time" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-      <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,9), '-',substr(random(),3,6))"/>
-    </model>
+        <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,9), '-',substr(random(),3,6))"/>
+        </model>
   </h:head>
   <h:body>
     <input ref="/data/p_date">
@@ -2663,48 +2801,70 @@
     <input ref="/data/p_commune">
       <label ref="jr:itext('/data/p_commune:label')"/>
     </input>
+    <input ref="/data/p_commune_other">
+      <label ref="jr:itext('/data/p_commune_other:label')"/>
+    </input>
     <input ref="/data/p_school">
       <label ref="jr:itext('/data/p_school:label')"/>
+    </input>
+    <input ref="/data/p_school_other">
+      <label ref="jr:itext('/data/p_school_other:label')"/>
     </input>
     <input ref="/data/p_school_id">
       <label ref="jr:itext('/data/p_school_id:label')"/>
     </input>
-    <input ref="/data/note1">
-      <label ref="jr:itext('/data/note1:label')"/>
+    <input ref="/data/p_school_id_other">
+      <label ref="jr:itext('/data/p_school_id_other:label')"/>
     </input>
-    <input ref="/data/p_generate_id">
-      <label ref="jr:itext('/data/p_generate_id:label')"/>
-    </input>
-    <select1 ref="/data/p_sex">
-      <label ref="jr:itext('/data/p_sex:label')"/>
+    <select1 ref="/data/p_consent">
+      <label ref="jr:itext('/data/p_consent:label')"/>
+      <hint ref="jr:itext('/data/p_consent:hint')"/>
       <item>
-        <label ref="jr:itext('/data/p_sex/M:label')"/>
-        <value>M</value>
+        <label ref="jr:itext('/data/p_consent/1.Sim:label')"/>
+        <value>1.Sim</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_sex/F:label')"/>
-        <value>F</value>
+        <label ref="jr:itext('/data/p_consent/2.Nao:label')"/>
+        <value>2.Nao</value>
       </item>
     </select1>
-    <input ref="/data/p_year_birth">
-      <label ref="jr:itext('/data/p_year_birth:label')"/>
-      <hint ref="jr:itext('/data/p_year_birth:hint')"/>
-    </input>
-    <input ref="/data/p_month_birth">
-      <label ref="jr:itext('/data/p_month_birth:label')"/>
-    </input>
-    <input ref="/data/p_day_birth">
-      <label ref="jr:itext('/data/p_day_birth:label')"/>
-    </input>
-    <input ref="/data/p_date_birth">
-      <label ref="jr:itext('/data/p_date_birth:label')"/>
-    </input>
-    <input ref="/data/p_school_grade">
-      <label ref="jr:itext('/data/p_school_grade:label')"/>
-    </input>
-    <input ref="/data/p_people_home">
-      <label ref="jr:itext('/data/p_people_home:label')"/>
-    </input>
+    <group ref="/data/Group1">
+      <label ref="jr:itext('/data/Group1:label')"/>
+      <input ref="/data/Group1/p_generate_id">
+        <label ref="jr:itext('/data/Group1/p_generate_id:label')"/>
+      </input>
+      <select1 ref="/data/Group1/p_sex">
+        <label ref="jr:itext('/data/Group1/p_sex:label')"/>
+        <item>
+          <label ref="jr:itext('/data/Group1/p_sex/M:label')"/>
+          <value>M</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Group1/p_sex/F:label')"/>
+          <value>F</value>
+        </item>
+      </select1>
+      <input ref="/data/Group1/p_year_birth">
+        <label ref="jr:itext('/data/Group1/p_year_birth:label')"/>
+        <hint ref="jr:itext('/data/Group1/p_year_birth:hint')"/>
+      </input>
+      <input ref="/data/Group1/p_month_birth">
+        <label ref="jr:itext('/data/Group1/p_month_birth:label')"/>
+        <hint ref="jr:itext('/data/Group1/p_month_birth:hint')"/>
+      </input>
+      <input ref="/data/Group1/p_day_birth">
+        <label ref="jr:itext('/data/Group1/p_day_birth:label')"/>
+      </input>
+      <input ref="/data/Group1/p_date_birth">
+        <label ref="jr:itext('/data/Group1/p_date_birth:label')"/>
+      </input>
+      <input ref="/data/Group1/p_school_grade">
+        <label ref="jr:itext('/data/Group1/p_school_grade:label')"/>
+      </input>
+      <input ref="/data/Group1/p_people_home">
+        <label ref="jr:itext('/data/Group1/p_people_home:label')"/>
+      </input>
+    </group>
     <input ref="/data/note2">
       <label ref="jr:itext('/data/note2:label')"/>
     </input>
@@ -2791,20 +2951,16 @@
         <value>2.Latrina.com.fossa.a.Com.tampo</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_defecation_place/2.Latrina.com.fossa.a.Com.tampo.i.Sem.descarga.tiro.direto:label')"/>
-        <value>2.Latrina.com.fossa.a.Com.tampo.i.Sem.descarga.tiro.direto</value>
+        <label ref="jr:itext('/data/p_defecation_place/2.Latrina.com.fossa.a.Sem.tampo.i.Sem.descarga.tiro.direto:label')"/>
+        <value>2.Latrina.com.fossa.a.Sem.tampo.i.Sem.descarga.tiro.direto</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo:label')"/>
-        <value>2.Latrina.com.fossa.b.Sem.tampo</value>
+        <label ref="jr:itext('/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.água.(fossa.individual):label')"/>
+        <value>2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.água.(fossa.individual)</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.agua.fossa.individual:label')"/>
-        <value>2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.agua.fossa.individual</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.agua.fossa.comum:label')"/>
-        <value>2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.agua.fossa.comum</value>
+        <label ref="jr:itext('/data/p_defecation_place/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.água.(fossa.comum):label')"/>
+        <value>2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.água.(fossa.comum)</value>
       </item>
       <item>
         <label ref="jr:itext('/data/p_defecation_place/3.Sanita.de.compostagem:label')"/>
@@ -2854,20 +3010,16 @@
         <value>2.Latrina.com.fossa.a.Com.tampo</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_defecation_school/2.Latrina.com.fossa.a.Com.tampo.i.Sem.descarga.tiro.direto:label')"/>
-        <value>2.Latrina.com.fossa.a.Com.tampo.i.Sem.descarga.tiro.direto</value>
+        <label ref="jr:itext('/data/p_defecation_school/2.Latrina.com.fossa.a.Sem.tampo.i.Sem.descarga.tiro.direto:label')"/>
+        <value>2.Latrina.com.fossa.a.Sem.tampo.i.Sem.descarga.tiro.direto</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo:label')"/>
-        <value>2.Latrina.com.fossa.b.Sem.tampo</value>
+        <label ref="jr:itext('/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.água.(fossa.individual):label')"/>
+        <value>2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.água.(fossa.individual)</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.agua.fossa.individual:label')"/>
-        <value>2.Latrina.com.fossa.b.Sem.tampo.ii.Descarga.com.agua.fossa.individual</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.agua.fossa.comum:label')"/>
-        <value>2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.agua.fossa.comum</value>
+        <label ref="jr:itext('/data/p_defecation_school/2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.água.(fossa.comum):label')"/>
+        <value>2.Latrina.com.fossa.b.Sem.tampo.iii.Decarga.com.água.(fossa.comum)</value>
       </item>
       <item>
         <label ref="jr:itext('/data/p_defecation_school/3.Sanita.de.compostagem:label')"/>
@@ -3471,8 +3623,8 @@
         <value>2.Podia..ter.vermes.intestinais.lombrigas</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_why_take_medicine/3.Para.prevenir.vermes.intestinais.lombrigas:label')"/>
-        <value>3.Para.prevenir.vermes.intestinais.lombrigas</value>
+        <label ref="jr:itext('/data/p_why_take_medicine/3.Para.evitar.vermes.intestinais.lombrigas:label')"/>
+        <value>3.Para.evitar.vermes.intestinais.lombrigas</value>
       </item>
       <item>
         <label ref="jr:itext('/data/p_why_take_medicine/4.Eu.tinha.Schistosomíase:label')"/>
@@ -3632,8 +3784,8 @@
         <value>Outros</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_side_effects_man/7.Nao.me.lembro:label')"/>
-        <value>7.Nao.me.lembro</value>
+        <label ref="jr:itext('/data/p_side_effects_man/6.Nao.me.lembro:label')"/>
+        <value>6.Nao.me.lembro</value>
       </item>
     </select>
     <input ref="/data/p_side_effects_man_other">
@@ -4063,8 +4215,17 @@
         <value>3 Recusado</value>
       </item>
     </select1>
+    <input ref="/data/p_outcome_interview_inc">
+      <label ref="jr:itext('/data/p_outcome_interview_inc:label')"/>
+    </input>
     <input ref="/data/p_end_note">
       <label ref="jr:itext('/data/p_end_note:label')"/>
+    </input>
+    <input ref="/data/w_end_note">
+      <label ref="jr:itext('/data/w_end_note:label')"/>
+    </input>
+    <input ref="/data/w_additional_notes">
+      <label ref="jr:itext('/data/w_additional_notes:label')"/>
     </input>
   </h:body>
 </h:html>

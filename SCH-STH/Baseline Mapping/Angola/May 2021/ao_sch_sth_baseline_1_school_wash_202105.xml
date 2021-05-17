@@ -7,20 +7,25 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>1. Sítio do formulário - Questionário de Água, Saneamento e Higiene Escolar (WASH)</h:title>
-    <model odk:xforms-version="1.0.0">
+    <h:title>1. Formulário info-escolar da Criança - Questionário sobre Água, Saneamento e Higiene Escolar V3</h:title>
+    <model >
 
       <instance>
-        <data id="ao_sch_sth_baseline_1_school_wash_202105_v2" version="20210504">
+        <data id="ao_sch_sth_baseline_1_school_wash_202105_v3" version="20210504">
           <w_date/>
           <w_RecorderID/>
           <w_Recorder_code/>
           <w_province/>
           <w_municipality/>
           <w_commune/>
+          <w_commune_other/>
           <w_school/>
+          <w_school_other/>
           <w_school_id/>
+          <w_school_id_other/>
           <w_gps/>
+          <w_lat/>
+          <w_lng/>
           <w_consent/>
           <w_school_director/>
           <note_schooldata/>
@@ -125,8 +130,14 @@
           <text id="/data/w_commune:label">
             <value>Comuna</value>
           </text>
+          <text id="/data/w_commune_other:label">
+            <value>Digite o nome da comuna</value>
+          </text>
           <text id="/data/w_school:label">
             <value>Nome da escola</value>
+          </text>
+          <text id="/data/w_school_other:label">
+            <value>Digite o nome da escola</value>
           </text>
           <text id="/data/w_school_id:jr:constraintMsg">
             <value>O código deve ser um número de seis dígitos</value>
@@ -134,11 +145,29 @@
           <text id="/data/w_school_id:label">
             <value>Código da escola</value>
           </text>
+          <text id="/data/w_school_id_other:jr:constraintMsg">
+            <value>O código deve ser maior que 514</value>
+          </text>
+          <text id="/data/w_school_id_other:label">
+            <value>Digite o código da escola</value>
+          </text>
           <text id="/data/w_gps:label">
             <value>Identificação GPS</value>
           </text>
           <text id="/data/w_gps:hint">
             <value>Funciona melhor fora de edifícios</value>
+          </text>
+          <text id="/data/w_lat:label">
+            <value>Insira a latitude em graus decimais</value>
+          </text>
+          <text id="/data/w_lat:hint">
+            <value>O valor deve ser em graus decimais</value>
+          </text>
+          <text id="/data/w_lng:label">
+            <value>Insira a latitude em graus decimais</value>
+          </text>
+          <text id="/data/w_lng:hint">
+            <value>O valor deve ser em graus decimais</value>
           </text>
           <text id="/data/w_consent:label">
             <value>O consentimento informado foi obtido?</value>
@@ -159,13 +188,13 @@
             <value>Dados sobre a escola</value>
           </text>
           <text id="/data/w_nb_girls:jr:constraintMsg">
-            <value>O valor deve ser superior a 0</value>
+            <value>O valor deve ser maior ou igual a 0</value>
           </text>
           <text id="/data/w_nb_girls:label">
             <value>Nº matriculados (F)</value>
           </text>
           <text id="/data/w_nb_boys:jr:constraintMsg">
-            <value>O valor deve ser superior a 0</value>
+            <value>O valor deve ser maior ou igual a 0</value>
           </text>
           <text id="/data/w_nb_boys:label">
             <value>Nº matriculados (M)</value>
@@ -174,13 +203,13 @@
             <value>Nº total de estudantes matriculdos</value>
           </text>
           <text id="/data/w_nb_f_teachers:jr:constraintMsg">
-            <value>O valor deve ser superior a 0</value>
+            <value>O valor deve ser maior ou igual a 0</value>
           </text>
           <text id="/data/w_nb_f_teachers:label">
             <value>Nº professores (F)</value>
           </text>
           <text id="/data/w_nb_m_teachers:jr:constraintMsg">
-            <value>O valor deve ser superior a 0</value>
+            <value>O valor deve ser maior ou igual a 0</value>
           </text>
           <text id="/data/w_nb_m_teachers:label">
             <value>Nº professores (M)</value>
@@ -189,10 +218,10 @@
             <value>Nº de professores</value>
           </text>
           <text id="/data/w_nb_grades_taught:jr:constraintMsg">
-            <value>O valor deve ser superior a 0</value>
+            <value>O valor deve ser maior ou igual a 0</value>
           </text>
           <text id="/data/w_nb_grades_taught:label">
-            <value>Nº classes na escola</value>
+            <value>Quantas turmas</value>
           </text>
           <text id="/data/w_villages_school:label">
             <value>Aldeias que enviam crianças a esta escola</value>
@@ -215,14 +244,14 @@
           <text id="/data/w_source_type/3.Torneira ligada a rede pública – fora do recinto escolar:label">
             <value>(3) Torneira ligada à rede pública – fora do recinto escolar</value>
           </text>
-          <text id="/data/w_source_type/4.Agua de poco/cacimba – poço protegido:label">
-            <value>(4) Água de poço/cacimba – poço protegido</value>
+          <text id="/data/w_source_type/4.Poco/cacimba – poço protegido:label">
+            <value>(4) Poço/cacimba – poço protegido</value>
           </text>
-          <text id="/data/w_source_type/5.Agua de poco/cacimba – poço nao protegido:label">
-            <value>(5) Água de poço/cacimba – poço não protegido</value>
+          <text id="/data/w_source_type/5.Poco/cacimba – poço nao protegido:label">
+            <value>(5) Poço/cacimba – poço não protegido</value>
           </text>
-          <text id="/data/w_source_type/6.Agua de– furo com bomba:label">
-            <value>(6) Água de– furo com bomba</value>
+          <text id="/data/w_source_type/6.Furo com bomba:label">
+            <value>(6) Furo com bomba</value>
           </text>
           <text id="/data/w_source_type/7.agua engarrafada:label">
             <value>(7) Água engarrafada</value>
@@ -271,6 +300,9 @@
           </text>
           <text id="/data/w_water_availability/4.Sem reposta:label">
             <value>(4) Sem reposta</value>
+          </text>
+          <text id="/data/w_water_availability/5.Nunca:label">
+            <value>(5) Nunca</value>
           </text>
           <text id="/data/w_water_non_availability:label">
             <value>3. Se a fonte de água não está disponível ao longo de todo o ano. Com que frequência a fonte de água está disponível?</value>
@@ -410,6 +442,9 @@
           <text id="/data/w_container_water/6.Sem.resposta:label">
             <value>(6) Sem resposta</value>
           </text>
+          <text id="/data/w_container_water/7.Cisterna:label">
+            <value>(7) Cisterna</value>
+          </text>
           <text id="/data/w_container_water_other:label">
             <value>Outros, Especificar</value>
           </text>
@@ -450,7 +485,7 @@
             <value>Nenhum</value>
           </text>
           <text id="/data/w_treat_water:label">
-            <value>9. Do you treat/ boil any of the school water?</value>
+            <value>9. Trata ou ferve alguma água da escola?</value>
           </text>
           <text id="/data/w_treat_water/1.Sim:label">
             <value>(1) Sim</value>
@@ -465,7 +500,7 @@
             <value>(4) Sem resposta</value>
           </text>
           <text id="/data/w_purposes_water:label">
-            <value>10. For what purposes would you use the treated water for?</value>
+            <value>10. Para que fins usaria a a água tratada/fervida?</value>
           </text>
           <text id="/data/w_purposes_water:hint">
             <value>Leia as opções e marque todos os itens mencionados</value>
@@ -492,7 +527,7 @@
             <value>Outros, Especificar</value>
           </text>
           <text id="/data/w_treat_water_with:label">
-            <value>11. Com é que trata a água?</value>
+            <value>11. Com e que e?</value>
           </text>
           <text id="/data/w_treat_water_with:hint">
             <value>Leia as opções e marque todos os itens mencionados</value>
@@ -686,9 +721,6 @@
           <text id="/data/w_kind_toilet/1.Autoclismo:label">
             <value>(1) Autoclismo</value>
           </text>
-          <text id="/data/w_kind_toilet/2.Latrina.com.fossa.(a).Com.tampo:label">
-            <value>(2) Latrina com fossa (a) Com tampo</value>
-          </text>
           <text id="/data/w_kind_toilet/2.Latrina.com.fossa.(a).Com.tampo.(i).Sem.descarga.(poço.direto):label">
             <value>(2) Latrina com fossa (a) Com tampo (i) Sem descarga (poço direto)</value>
           </text>
@@ -812,10 +844,10 @@
           <text id="/data/w_handwashing_facilities/2.Nao:label">
             <value>(2) Não</value>
           </text>
-          <text id="/data/w_handwashing_facilities/3..Nao.sei:label">
+          <text id="/data/w_handwashing_facilities/3..Nao sei:label">
             <value>(3) Não sei</value>
           </text>
-          <text id="/data/w_handwashing_facilities/4..Nenhuma.resposta./.nao.podia.observar:label">
+          <text id="/data/w_handwashing_facilities/4..Nenhuma resposta / nao podia observar:label">
             <value>(4) Nenhuma resposta / não podia observar</value>
           </text>
           <text id="/data/w_handwashing_type:label">
@@ -906,13 +938,13 @@
             <value>(3) Torneira ligada à rede pública – fora do recinto escolar</value>
           </text>
           <text id="source_type-3">
-            <value>(4) Água de poço/cacimba – poço protegido</value>
+            <value>(4) Poço/cacimba – poço protegido</value>
           </text>
           <text id="source_type-4">
-            <value>(5) Água de poço/cacimba – poço não protegido</value>
+            <value>(5) Poço/cacimba – poço não protegido</value>
           </text>
           <text id="source_type-5">
-            <value>(6) Água de– furo com bomba</value>
+            <value>(6) Furo com bomba</value>
           </text>
           <text id="source_type-6">
             <value>(7) Água engarrafada</value>
@@ -952,6 +984,9 @@
           </text>
           <text id="water_availability-3">
             <value>(4) Sem reposta</value>
+          </text>
+          <text id="water_availability-4">
+            <value>(5) Nunca</value>
           </text>
           <text id="water_non_availability-0">
             <value>(1) Pelo menos uma vez por dia</value>
@@ -1051,6 +1086,9 @@
           </text>
           <text id="container_water-5">
             <value>(6) Sem resposta</value>
+          </text>
+          <text id="container_water-6">
+            <value>(7) Cisterna</value>
           </text>
           <text id="container_water_details-0">
             <value>Todos</value>
@@ -1182,36 +1220,33 @@
             <value>(1) Autoclismo</value>
           </text>
           <text id="kind_toilet-1">
-            <value>(2) Latrina com fossa (a) Com tampo</value>
-          </text>
-          <text id="kind_toilet-2">
             <value>(2) Latrina com fossa (a) Com tampo (i) Sem descarga (poço direto)</value>
           </text>
-          <text id="kind_toilet-3">
+          <text id="kind_toilet-2">
             <value>(2) Latrina com fossa (b) Sem tampo (ii) Descarga com água (poço compensado)</value>
           </text>
-          <text id="kind_toilet-4">
+          <text id="kind_toilet-3">
             <value>(2) Latrina com fossa (b) Sem tampo (iii) Descarga com água (lave em outros lugares)</value>
           </text>
-          <text id="kind_toilet-5">
+          <text id="kind_toilet-4">
             <value>(3) Sanita de compostagem</value>
           </text>
-          <text id="kind_toilet-6">
+          <text id="kind_toilet-5">
             <value>(4) Latrina de balde</value>
           </text>
-          <text id="kind_toilet-7">
+          <text id="kind_toilet-6">
             <value>(5) Latrina pendurada</value>
           </text>
-          <text id="kind_toilet-8">
+          <text id="kind_toilet-7">
             <value>(6) Sem estrutura / exterior</value>
           </text>
-          <text id="kind_toilet-9">
+          <text id="kind_toilet-8">
             <value>(7) Outros</value>
           </text>
-          <text id="kind_toilet-10">
+          <text id="kind_toilet-9">
             <value>(8) Não sei</value>
           </text>
-          <text id="kind_toilet-11">
+          <text id="kind_toilet-10">
             <value>(9) Sem resposta</value>
           </text>
           <text id="toilet_observation-0">
@@ -1588,6 +1623,72 @@
           </text>
           <text id="commune_list-65">
             <value>Tomboco Sede</value>
+          </text>
+          <text id="commune_list-66">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-67">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-68">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-69">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-70">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-71">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-72">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-73">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-74">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-75">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-76">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-77">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-78">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-79">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-80">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-81">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-82">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-83">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-84">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-85">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-86">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-87">
+            <value>Outro</value>
           </text>
           <text id="school_list-0">
             <value>Colégio Quipedro/Quipedro</value>
@@ -3946,8 +4047,14 @@
           <text id="/data/w_commune:label">
             <value>Select the commune</value>
           </text>
+          <text id="/data/w_commune_other:label">
+            <value>Enter the commune</value>
+          </text>
           <text id="/data/w_school:label">
             <value>School name</value>
+          </text>
+          <text id="/data/w_school_other:label">
+            <value>Enter the school name</value>
           </text>
           <text id="/data/w_school_id:jr:constraintMsg">
             <value>The code must be a six-digit number</value>
@@ -3955,11 +4062,29 @@
           <text id="/data/w_school_id:label">
             <value>School code</value>
           </text>
+          <text id="/data/w_school_id_other:jr:constraintMsg">
+            <value>The code must be greater than 514</value>
+          </text>
+          <text id="/data/w_school_id_other:label">
+            <value>Enter the school code</value>
+          </text>
           <text id="/data/w_gps:label">
             <value>Collect GPS Coordinates</value>
           </text>
           <text id="/data/w_gps:hint">
             <value>Works best outside of buildings</value>
+          </text>
+          <text id="/data/w_lat:label">
+            <value>Enter the latitude in decimal degree</value>
+          </text>
+          <text id="/data/w_lat:hint">
+            <value>The value must be in degree decimal</value>
+          </text>
+          <text id="/data/w_lng:label">
+            <value>Enter the longitude in decimal degree</value>
+          </text>
+          <text id="/data/w_lng:hint">
+            <value>The value must be in degree decimal</value>
           </text>
           <text id="/data/w_consent:label">
             <value>Has written consent been obtained?</value>
@@ -3980,13 +4105,13 @@
             <value>School data</value>
           </text>
           <text id="/data/w_nb_girls:jr:constraintMsg">
-            <value>The value must be greater than 0</value>
+            <value>The value must be greater than or equal to 0</value>
           </text>
           <text id="/data/w_nb_girls:label">
             <value>Number of girls</value>
           </text>
           <text id="/data/w_nb_boys:jr:constraintMsg">
-            <value>The value must be greater than 0</value>
+            <value>The value must be greater than or equal to 1</value>
           </text>
           <text id="/data/w_nb_boys:label">
             <value>Number of boys</value>
@@ -3995,13 +4120,13 @@
             <value>Total enrolled students</value>
           </text>
           <text id="/data/w_nb_f_teachers:jr:constraintMsg">
-            <value>The value must be greater than 0</value>
+            <value>The value must be greater than or equal to 1</value>
           </text>
           <text id="/data/w_nb_f_teachers:label">
             <value>Number of female teachers</value>
           </text>
           <text id="/data/w_nb_m_teachers:jr:constraintMsg">
-            <value>The value must be greater than 0</value>
+            <value>The value must be greater than or equal to 1</value>
           </text>
           <text id="/data/w_nb_m_teachers:label">
             <value>Number of male teachers</value>
@@ -4010,7 +4135,7 @@
             <value>Number of teachers</value>
           </text>
           <text id="/data/w_nb_grades_taught:jr:constraintMsg">
-            <value>The value must be greater than 0</value>
+            <value>The value must be greater than or equal to 1</value>
           </text>
           <text id="/data/w_nb_grades_taught:label">
             <value>Number of grades taught</value>
@@ -4039,13 +4164,13 @@
           <text id="/data/w_source_type/3.Torneira ligada a rede pública – fora do recinto escolar:label">
             <value>3.Piped water to yard / plot (outside)</value>
           </text>
-          <text id="/data/w_source_type/4.Agua de poco/cacimba – poço protegido:label">
+          <text id="/data/w_source_type/4.Poco/cacimba – poço protegido:label">
             <value>4Tubewell or borehole</value>
           </text>
-          <text id="/data/w_source_type/5.Agua de poco/cacimba – poço nao protegido:label">
+          <text id="/data/w_source_type/5.Poco/cacimba – poço nao protegido:label">
             <value>5.Protected dug well</value>
           </text>
-          <text id="/data/w_source_type/6.Agua de– furo com bomba:label">
+          <text id="/data/w_source_type/6.Furo com bomba:label">
             <value>6.Protected spring</value>
           </text>
           <text id="/data/w_source_type/7.agua engarrafada:label">
@@ -4092,6 +4217,9 @@
           </text>
           <text id="/data/w_water_availability/4.Sem reposta:label">
             <value>4.No answer</value>
+          </text>
+          <text id="/data/w_water_availability/5.Nunca:label">
+            <value>5.Never</value>
           </text>
           <text id="/data/w_water_non_availability:label">
             <value>3. If water is not available all year round, how often is it not available?</value>
@@ -4220,13 +4348,16 @@
             <value>(3) Ceramic pot</value>
           </text>
           <text id="/data/w_container_water/Outros:label">
-            <value>other</value>
+            <value>Other</value>
           </text>
           <text id="/data/w_container_water/5.Nao.sei:label">
-            <value>(5)Don't know</value>
+            <value>(5) Don't know</value>
           </text>
           <text id="/data/w_container_water/6.Sem.resposta:label">
-            <value>(6)No Answer</value>
+            <value>(6) No Answer</value>
+          </text>
+          <text id="/data/w_container_water/7.Cisterna:label">
+            <value>(7) Cistern</value>
           </text>
           <text id="/data/w_container_water_other:label">
             <value>If other, please specify</value>
@@ -4504,9 +4635,6 @@
           <text id="/data/w_kind_toilet/1.Autoclismo:label">
             <value>(1) Flush toilet</value>
           </text>
-          <text id="/data/w_kind_toilet/2.Latrina.com.fossa.(a).Com.tampo:label">
-            <value>(2) Pit latrine (a) With slab</value>
-          </text>
           <text id="/data/w_kind_toilet/2.Latrina.com.fossa.(a).Com.tampo.(i).Sem.descarga.(poço.direto):label">
             <value>(2) Pit latrine (a) With slab (i) Do not flush (direct pit)</value>
           </text>
@@ -4636,10 +4764,10 @@
           <text id="/data/w_handwashing_facilities/2.Nao:label">
             <value>2.No</value>
           </text>
-          <text id="/data/w_handwashing_facilities/3..Nao.sei:label">
+          <text id="/data/w_handwashing_facilities/3..Nao sei:label">
             <value>3.Don't know</value>
           </text>
-          <text id="/data/w_handwashing_facilities/4..Nenhuma.resposta./.nao.podia.observar:label">
+          <text id="/data/w_handwashing_facilities/4..Nenhuma resposta / nao podia observar:label">
             <value>4.No answer / could not observe</value>
           </text>
           <text id="/data/w_handwashing_type:label">
@@ -4774,6 +4902,9 @@
           <text id="water_availability-3">
             <value>4.No answer</value>
           </text>
+          <text id="water_availability-4">
+            <value>5.Never</value>
+          </text>
           <text id="water_non_availability-0">
             <value>1.At least once per day</value>
           </text>
@@ -4865,13 +4996,16 @@
             <value>(3) Ceramic pot</value>
           </text>
           <text id="container_water-3">
-            <value>other</value>
+            <value>Other</value>
           </text>
           <text id="container_water-4">
-            <value>(5)Don't know</value>
+            <value>(5) Don't know</value>
           </text>
           <text id="container_water-5">
-            <value>(6)No Answer</value>
+            <value>(6) No Answer</value>
+          </text>
+          <text id="container_water-6">
+            <value>(7) Cistern</value>
           </text>
           <text id="container_water_details-0">
             <value>All</value>
@@ -5003,36 +5137,33 @@
             <value>(1) Flush toilet</value>
           </text>
           <text id="kind_toilet-1">
-            <value>(2) Pit latrine (a) With slab</value>
-          </text>
-          <text id="kind_toilet-2">
             <value>(2) Pit latrine (a) With slab (i) Do not flush (direct pit)</value>
           </text>
-          <text id="kind_toilet-3">
+          <text id="kind_toilet-2">
             <value>(2) Pit latrine (b) Without slab (ii) Flush with water (offset pit)</value>
           </text>
-          <text id="kind_toilet-4">
+          <text id="kind_toilet-3">
             <value>(2) Pit latrine (b) Without slab (iii) Flush with water (flush elsewhere)</value>
           </text>
-          <text id="kind_toilet-5">
+          <text id="kind_toilet-4">
             <value>(3) Composting toilet</value>
           </text>
-          <text id="kind_toilet-6">
+          <text id="kind_toilet-5">
             <value>(4) Bucket latrine</value>
           </text>
-          <text id="kind_toilet-7">
+          <text id="kind_toilet-6">
             <value>(5) Hanging latrine</value>
           </text>
-          <text id="kind_toilet-8">
+          <text id="kind_toilet-7">
             <value>(6) No structure / outdoors</value>
           </text>
-          <text id="kind_toilet-9">
+          <text id="kind_toilet-8">
             <value>(7) Other</value>
           </text>
-          <text id="kind_toilet-10">
+          <text id="kind_toilet-9">
             <value>(8) Don't know</value>
           </text>
-          <text id="kind_toilet-11">
+          <text id="kind_toilet-10">
             <value>(9) No answer</value>
           </text>
           <text id="toilet_observation-0">
@@ -5409,6 +5540,72 @@
           </text>
           <text id="commune_list-65">
             <value>Tomboco Sede</value>
+          </text>
+          <text id="commune_list-66">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-67">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-68">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-69">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-70">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-71">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-72">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-73">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-74">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-75">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-76">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-77">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-78">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-79">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-80">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-81">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-82">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-83">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-84">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-85">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-86">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-87">
+            <value>Other</value>
           </text>
           <text id="school_list-0">
             <value>Colégio Quipedro/Quipedro</value>
@@ -8016,6 +8213,72 @@
           <text id="commune_list-65">
             <value>Tomboco Sede</value>
           </text>
+          <text id="commune_list-66">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-67">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-68">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-69">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-70">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-71">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-72">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-73">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-74">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-75">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-76">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-77">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-78">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-79">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-80">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-81">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-82">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-83">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-84">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-85">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-86">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-87">
+            <value>Autre</value>
+          </text>
           <text id="school_list-0">
             <value>Colégio Quipedro/Quipedro</value>
           </text>
@@ -10353,7 +10616,13 @@
           <text id="/data/w_commune:label">
             <value>-</value>
           </text>
+          <text id="/data/w_commune_other:label">
+            <value>-</value>
+          </text>
           <text id="/data/w_school:label">
+            <value>-</value>
+          </text>
+          <text id="/data/w_school_other:label">
             <value>-</value>
           </text>
           <text id="/data/w_school_id:jr:constraintMsg">
@@ -10362,10 +10631,28 @@
           <text id="/data/w_school_id:label">
             <value>-</value>
           </text>
+          <text id="/data/w_school_id_other:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/w_school_id_other:label">
+            <value>-</value>
+          </text>
           <text id="/data/w_gps:label">
             <value>-</value>
           </text>
           <text id="/data/w_gps:hint">
+            <value>-</value>
+          </text>
+          <text id="/data/w_lat:label">
+            <value>-</value>
+          </text>
+          <text id="/data/w_lat:hint">
+            <value>-</value>
+          </text>
+          <text id="/data/w_lng:label">
+            <value>-</value>
+          </text>
+          <text id="/data/w_lng:hint">
             <value>-</value>
           </text>
           <text id="/data/w_consent:label">
@@ -10443,13 +10730,13 @@
           <text id="/data/w_source_type/3.Torneira ligada a rede pública – fora do recinto escolar:label">
             <value>-</value>
           </text>
-          <text id="/data/w_source_type/4.Agua de poco/cacimba – poço protegido:label">
+          <text id="/data/w_source_type/4.Poco/cacimba – poço protegido:label">
             <value>-</value>
           </text>
-          <text id="/data/w_source_type/5.Agua de poco/cacimba – poço nao protegido:label">
+          <text id="/data/w_source_type/5.Poco/cacimba – poço nao protegido:label">
             <value>-</value>
           </text>
-          <text id="/data/w_source_type/6.Agua de– furo com bomba:label">
+          <text id="/data/w_source_type/6.Furo com bomba:label">
             <value>-</value>
           </text>
           <text id="/data/w_source_type/7.agua engarrafada:label">
@@ -10498,6 +10785,9 @@
             <value>-</value>
           </text>
           <text id="/data/w_water_availability/4.Sem reposta:label">
+            <value>-</value>
+          </text>
+          <text id="/data/w_water_availability/5.Nunca:label">
             <value>-</value>
           </text>
           <text id="/data/w_water_non_availability:label">
@@ -10636,6 +10926,9 @@
             <value>-</value>
           </text>
           <text id="/data/w_container_water/6.Sem.resposta:label">
+            <value>-</value>
+          </text>
+          <text id="/data/w_container_water/7.Cisterna:label">
             <value>-</value>
           </text>
           <text id="/data/w_container_water_other:label">
@@ -10914,9 +11207,6 @@
           <text id="/data/w_kind_toilet/1.Autoclismo:label">
             <value>-</value>
           </text>
-          <text id="/data/w_kind_toilet/2.Latrina.com.fossa.(a).Com.tampo:label">
-            <value>-</value>
-          </text>
           <text id="/data/w_kind_toilet/2.Latrina.com.fossa.(a).Com.tampo.(i).Sem.descarga.(poço.direto):label">
             <value>-</value>
           </text>
@@ -11040,10 +11330,10 @@
           <text id="/data/w_handwashing_facilities/2.Nao:label">
             <value>-</value>
           </text>
-          <text id="/data/w_handwashing_facilities/3..Nao.sei:label">
+          <text id="/data/w_handwashing_facilities/3..Nao sei:label">
             <value>-</value>
           </text>
-          <text id="/data/w_handwashing_facilities/4..Nenhuma.resposta./.nao.podia.observar:label">
+          <text id="/data/w_handwashing_facilities/4..Nenhuma resposta / nao podia observar:label">
             <value>-</value>
           </text>
           <text id="/data/w_handwashing_type:label">
@@ -11181,6 +11471,9 @@
           <text id="water_availability-3">
             <value>-</value>
           </text>
+          <text id="water_availability-4">
+            <value>-</value>
+          </text>
           <text id="water_non_availability-0">
             <value>-</value>
           </text>
@@ -11278,6 +11571,9 @@
             <value>-</value>
           </text>
           <text id="container_water-5">
+            <value>-</value>
+          </text>
+          <text id="container_water-6">
             <value>-</value>
           </text>
           <text id="container_water_details-0">
@@ -11439,9 +11735,6 @@
           <text id="kind_toilet-10">
             <value>-</value>
           </text>
-          <text id="kind_toilet-11">
-            <value>-</value>
-          </text>
           <text id="toilet_observation-0">
             <value>-</value>
           </text>
@@ -11589,15 +11882,15 @@
           </item>
           <item>
             <itextId>source_type-3</itextId>
-            <name>4.Agua de poco/cacimba – poço protegido</name>
+            <name>4.Poco/cacimba – poço protegido</name>
           </item>
           <item>
             <itextId>source_type-4</itextId>
-            <name>5.Agua de poco/cacimba – poço nao protegido</name>
+            <name>5.Poco/cacimba – poço nao protegido</name>
           </item>
           <item>
             <itextId>source_type-5</itextId>
-            <name>6.Agua de– furo com bomba</name>
+            <name>6.Furo com bomba</name>
           </item>
           <item>
             <itextId>source_type-6</itextId>
@@ -11654,6 +11947,10 @@
           <item>
             <itextId>water_availability-3</itextId>
             <name>4.Sem reposta</name>
+          </item>
+          <item>
+            <itextId>water_availability-4</itextId>
+            <name>5.Nunca</name>
           </item>
         </root>
       </instance>
@@ -11810,6 +12107,10 @@
           <item>
             <itextId>container_water-5</itextId>
             <name>6.Sem.resposta</name>
+          </item>
+          <item>
+            <itextId>container_water-6</itextId>
+            <name>7.Cisterna</name>
           </item>
         </root>
       </instance>
@@ -12025,46 +12326,42 @@
           </item>
           <item>
             <itextId>kind_toilet-1</itextId>
-            <name>2.Latrina.com.fossa.(a).Com.tampo</name>
-          </item>
-          <item>
-            <itextId>kind_toilet-2</itextId>
             <name>2.Latrina.com.fossa.(a).Com.tampo.(i).Sem.descarga.(poço.direto)</name>
           </item>
           <item>
-            <itextId>kind_toilet-3</itextId>
+            <itextId>kind_toilet-2</itextId>
             <name>2.Latrina.com.fossa.(b).Sem.tampo.(ii).Descarga.com.agua.(poço.compensado)</name>
           </item>
           <item>
-            <itextId>kind_toilet-4</itextId>
+            <itextId>kind_toilet-3</itextId>
             <name>2.Latrina.com.fossa.(b).Sem.tampo.(iii).Descarga.com.agua.(lave.em.outros.lugares)</name>
           </item>
           <item>
-            <itextId>kind_toilet-5</itextId>
+            <itextId>kind_toilet-4</itextId>
             <name>3.Sanita.de.compostagem</name>
           </item>
           <item>
-            <itextId>kind_toilet-6</itextId>
+            <itextId>kind_toilet-5</itextId>
             <name>4.Latrina.de.balde</name>
           </item>
           <item>
-            <itextId>kind_toilet-7</itextId>
+            <itextId>kind_toilet-6</itextId>
             <name>5.Latrina.pendurada</name>
           </item>
           <item>
-            <itextId>kind_toilet-8</itextId>
+            <itextId>kind_toilet-7</itextId>
             <name>6.Sem.estrutura./.exterior</name>
           </item>
           <item>
-            <itextId>kind_toilet-9</itextId>
+            <itextId>kind_toilet-8</itextId>
             <name>Outros</name>
           </item>
           <item>
-            <itextId>kind_toilet-10</itextId>
+            <itextId>kind_toilet-9</itextId>
             <name>8.Nao.sei</name>
           </item>
           <item>
-            <itextId>kind_toilet-11</itextId>
+            <itextId>kind_toilet-10</itextId>
             <name>9.Sem.resposta</name>
           </item>
         </root>
@@ -12153,11 +12450,11 @@
           </item>
           <item>
             <itextId>handwashing_facilities-2</itextId>
-            <name>3..Nao.sei</name>
+            <name>3..Nao sei</name>
           </item>
           <item>
             <itextId>handwashing_facilities-3</itextId>
-            <name>4..Nenhuma.resposta./.nao.podia.observar</name>
+            <name>4..Nenhuma resposta / nao podia observar</name>
           </item>
         </root>
       </instance>
@@ -12686,6 +12983,116 @@
             <itextId>commune_list-65</itextId>
             <municipality_list>Tomboc</municipality_list>
             <name>Tomboco Sede</name>
+          </item>
+          <item>
+            <itextId>commune_list-66</itextId>
+            <municipality_list>Ambuila</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-67</itextId>
+            <municipality_list>Bembe</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-68</itextId>
+            <municipality_list>Buengas</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-69</itextId>
+            <municipality_list>Bungo</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-70</itextId>
+            <municipality_list>Cangola</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-71</itextId>
+            <municipality_list>Damba</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-72</itextId>
+            <municipality_list>M.Do Zo</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-73</itextId>
+            <municipality_list>Milunga</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-74</itextId>
+            <municipality_list>Mucaba</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-75</itextId>
+            <municipality_list>Negage</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-76</itextId>
+            <municipality_list>Puri</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-77</itextId>
+            <municipality_list>Quimbel</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-78</itextId>
+            <municipality_list>Quitexe</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-79</itextId>
+            <municipality_list>Sanza P</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-80</itextId>
+            <municipality_list>Songo</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-81</itextId>
+            <municipality_list>Uige</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-82</itextId>
+            <municipality_list>Kuimba</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-83</itextId>
+            <municipality_list>Mbanza</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-84</itextId>
+            <municipality_list>Noqui</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-85</itextId>
+            <municipality_list>Nzeto</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-86</itextId>
+            <municipality_list>Soyo</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-87</itextId>
+            <municipality_list>Tomboc</municipality_list>
+            <name>Outros</name>
           </item>
         </root>
       </instance>
@@ -16563,25 +16970,30 @@
       <bind nodeset="/data/w_province" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/w_municipality" required="true()" type="string" db_add_col_1="/data/w_province" db_add_col_2="."/>
       <bind nodeset="/data/w_commune" required="true()" type="string" db_add_col_2="/data/w_municipality" db_add_col_3="."/>
-      <bind nodeset="/data/w_school" required="true()" type="string" db_add_col_3="/data/w_commune" db_add_col_4="."/>
-      <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/w_school_id:jr:constraintMsg')" nodeset="/data/w_school_id" required="true()" type="string" db_add_col_4="/data/w_school" db_add_col_5="."/>
-      <bind nodeset="/data/w_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/w_commune_other" relevant=" /data/w_commune  = 'Outros'" required="true()" type="string" db_add_col_2="/data/w_municipality" db_add_col_4="."/>
+      <bind nodeset="/data/w_school" relevant=" /data/w_commune != 'Outros'" required="true()" type="string" db_add_col_3="/data/w_commune" db_add_col_5="."/>
+      <bind nodeset="/data/w_school_other" relevant=" /data/w_commune  = 'Outros'" required="true()" type="string" db_add_col_4="/data/w_commune_other" db_add_col_6="."/>
+      <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/w_school_id:jr:constraintMsg')" nodeset="/data/w_school_id" relevant=" /data/w_commune != 'Outros'" required="true()" type="string" db_add_col_5="/data/w_school" db_add_col_7="."/>
+      <bind constraint=". &gt; 514" jr:constraintMsg="jr:itext('/data/w_school_id_other:jr:constraintMsg')" nodeset="/data/w_school_id_other" relevant=" /data/w_commune  = 'Outros'" required="true()" type="string" db_add_col_6="/data/w_school_other" db_add_col_8="."/>
+      <bind nodeset="/data/w_gps" type="geopoint"/>
+      <bind nodeset="/data/w_lat" type="decimal"/>
+      <bind nodeset="/data/w_lng" type="decimal"/>
       <bind nodeset="/data/w_consent" required="true()" type="string"/>
       <bind nodeset="/data/w_school_director" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/note_schooldata" readonly="true()" relevant="selected( /data/w_consent , '1.Sim')" type="string"/>
-      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/w_nb_girls:jr:constraintMsg')" nodeset="/data/w_nb_girls" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
-      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/w_nb_boys:jr:constraintMsg')" nodeset="/data/w_nb_boys" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="jr:itext('/data/w_nb_girls:jr:constraintMsg')" nodeset="/data/w_nb_girls" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="jr:itext('/data/w_nb_boys:jr:constraintMsg')" nodeset="/data/w_nb_boys" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
       <bind calculate=" /data/w_nb_girls  +  /data/w_nb_boys " nodeset="/data/w_total_student" readonly="true()" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
-      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/w_nb_f_teachers:jr:constraintMsg')" nodeset="/data/w_nb_f_teachers" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
-      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/w_nb_m_teachers:jr:constraintMsg')" nodeset="/data/w_nb_m_teachers" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="jr:itext('/data/w_nb_f_teachers:jr:constraintMsg')" nodeset="/data/w_nb_f_teachers" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="jr:itext('/data/w_nb_m_teachers:jr:constraintMsg')" nodeset="/data/w_nb_m_teachers" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
       <bind calculate=" /data/w_nb_f_teachers  +  /data/w_nb_m_teachers " nodeset="/data/w_total_teachers" readonly="true()" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
-      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/w_nb_grades_taught:jr:constraintMsg')" nodeset="/data/w_nb_grades_taught" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="jr:itext('/data/w_nb_grades_taught:jr:constraintMsg')" nodeset="/data/w_nb_grades_taught" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="int"/>
       <bind nodeset="/data/w_villages_school" relevant="selected( /data/w_consent , '1.Sim')" type="string"/>
       <bind nodeset="/data/note_water" readonly="true()" relevant="selected( /data/w_consent , '1.Sim')" type="string"/>
       <bind nodeset="/data/w_source_type" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_source_type_other" relevant="selected( /data/w_source_type , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_water_availability" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
-      <bind nodeset="/data/w_water_non_availability" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/w_water_non_availability" relevant="selected( /data/w_consent , '1.Sim') and ( selected( /data/w_water_availability , '1.Sempre. Ao longo de todo o ano.') or selected( /data/w_water_availability , '2.Apenas na epoca das chuvas'))" required="true()" type="string"/>
       <bind nodeset="/data/w_water_non_availability_other" relevant="selected( /data/w_water_non_availability , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_water_source" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_water_source_other" relevant="selected( /data/w_water_source , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
@@ -16589,22 +17001,22 @@
       <bind nodeset="/data/w_responsible_water_yes" relevant="selected( /data/w_responsible_water , '1.Sim') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_distance_water" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_store_water" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
-      <bind nodeset="/data/w_container_water" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/w_container_water" relevant="selected( /data/w_consent , '1.Sim') and (selected( /data/w_store_water , '1.Sim') or selected( /data/w_store_water , '4.Sem resposta'))" required="true()" type="string"/>
       <bind nodeset="/data/w_container_water_other" relevant="selected( /data/w_container_water , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_jerycan_detail" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_container_water , '(1)Jerry-can')" required="true()" type="string"/>
       <bind nodeset="/data/w_bucket_detail" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_container_water , '(2)Plastic.bucket')" required="true()" type="string"/>
       <bind nodeset="/data/w_ceramic_detail" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_container_water , '(3)Ceramic.pot')" required="true()" type="string"/>
       <bind nodeset="/data/w_treat_water" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
-      <bind nodeset="/data/w_purposes_water" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/w_purposes_water" relevant="selected( /data/w_consent , '1.Sim') and (selected( /data/w_treat_water , '1.Sim') or selected( /data/w_treat_water , '4.Sem resposta'))" required="true()" type="string"/>
       <bind nodeset="/data/w_purposes_water_other" relevant="selected( /data/w_purposes_water , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
-      <bind nodeset="/data/w_treat_water_with" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/w_treat_water_with" relevant="selected( /data/w_consent , '1.Sim') and (selected( /data/w_treat_water , '1.Sim') or selected( /data/w_treat_water , '4.Sem resposta'))" required="true()" type="string"/>
       <bind nodeset="/data/w_treat_water_with_other" relevant="selected( /data/w_treat_water_with , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/note_sanitation" readonly="true()" relevant="selected( /data/w_consent , '1.Sim')" type="string"/>
       <bind nodeset="/data/w_school_free_faeces" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_school_free_urine" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_has_hygiene_club" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_toilet_available" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
-      <bind nodeset="/data/w_not_toilets_why" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/w_not_toilets_why" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '2.Nao')" required="true()" type="string"/>
       <bind nodeset="/data/w_not_toilets_why_other" relevant="selected( /data/w_not_toilets_why , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_toilets_number" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="int"/>
       <bind nodeset="/data/w_toilet_built" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
@@ -16612,7 +17024,7 @@
       <bind nodeset="/data/w_toilets_used" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_date_toilet_start" relevant="selected( /data/w_toilets_used , 'yes') and selected( /data/w_consent , '1.Sim')" required="true()" type="date"/>
       <bind nodeset="/data/w_toilets_functional" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
-      <bind nodeset="/data/w_22" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim') and ( /data/w_toilets_functional != '3.Nenhuma' )"/>
+      <bind nodeset="/data/w_22" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim') and(( /data/w_toilets_functional != '3.Nenhuma' or  /data/w_toilets_functional != '4.Nao sei' ))"/>
       <bind nodeset="/data/w_22/note_question22" readonly="true()" type="string"/>
       <bind nodeset="/data/w_22/b_male_latrine" required="true()" type="int"/>
       <bind nodeset="/data/w_22/c_female_latrine" required="true()" type="int"/>
@@ -16621,8 +17033,8 @@
       <bind nodeset="/data/w_kind_toilet_other" relevant="selected( /data/w_kind_toilet , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_toilet_observation" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_toilet_observation_other" relevant="selected( /data/w_toilet_observation , 'Outros') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
-      <bind nodeset="/data/w_toilet_has_door" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
-      <bind nodeset="/data/w_toilet_can_lock" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim')" required="true()" type="string"/>
+      <bind nodeset="/data/w_toilet_has_door" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim') and  /data/w_toilet_observation !='11.Could not observe'" required="true()" type="string"/>
+      <bind nodeset="/data/w_toilet_can_lock" relevant="selected( /data/w_consent , '1.Sim') and selected( /data/w_toilet_available , '1.Sim') and  /data/w_toilet_observation !='11.Could not observe'" required="true()" type="string"/>
       <bind nodeset="/data/note_hygiene" readonly="true()" relevant="selected( /data/w_consent , '1.Sim')" type="string"/>
       <bind nodeset="/data/w_handwashing_facilities" relevant="selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
       <bind nodeset="/data/w_handwashing_type" relevant="selected( /data/w_handwashing_facilities , '1.Sim') and selected( /data/w_consent , '1.Sim')" required="true()" type="string"/>
@@ -16672,6 +17084,9 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <input ref="/data/w_commune_other">
+      <label ref="jr:itext('/data/w_commune_other:label')"/>
+    </input>
     <select1 ref="/data/w_school">
       <label ref="jr:itext('/data/w_school:label')"/>
       <itemset nodeset="instance('school_list')/root/item[commune_list =  /data/w_commune ]">
@@ -16679,6 +17094,9 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <input ref="/data/w_school_other">
+      <label ref="jr:itext('/data/w_school_other:label')"/>
+    </input>
     <select1 ref="/data/w_school_id">
       <label ref="jr:itext('/data/w_school_id:label')"/>
       <itemset nodeset="instance('code_school')/root/item[school_list =  /data/w_school ]">
@@ -16686,9 +17104,20 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <input ref="/data/w_school_id_other">
+      <label ref="jr:itext('/data/w_school_id_other:label')"/>
+    </input>
     <input ref="/data/w_gps">
       <label ref="jr:itext('/data/w_gps:label')"/>
       <hint ref="jr:itext('/data/w_gps:hint')"/>
+    </input>
+    <input ref="/data/w_lat">
+      <label ref="jr:itext('/data/w_lat:label')"/>
+      <hint ref="jr:itext('/data/w_lat:hint')"/>
+    </input>
+    <input ref="/data/w_lng">
+      <label ref="jr:itext('/data/w_lng:label')"/>
+      <hint ref="jr:itext('/data/w_lng:hint')"/>
     </input>
     <select1 ref="/data/w_consent">
       <label ref="jr:itext('/data/w_consent:label')"/>
@@ -16752,16 +17181,16 @@
         <value>3.Torneira ligada a rede pública – fora do recinto escolar</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/w_source_type/4.Agua de poco/cacimba – poço protegido:label')"/>
-        <value>4.Agua de poco/cacimba – poço protegido</value>
+        <label ref="jr:itext('/data/w_source_type/4.Poco/cacimba – poço protegido:label')"/>
+        <value>4.Poco/cacimba – poço protegido</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/w_source_type/5.Agua de poco/cacimba – poço nao protegido:label')"/>
-        <value>5.Agua de poco/cacimba – poço nao protegido</value>
+        <label ref="jr:itext('/data/w_source_type/5.Poco/cacimba – poço nao protegido:label')"/>
+        <value>5.Poco/cacimba – poço nao protegido</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/w_source_type/6.Agua de– furo com bomba:label')"/>
-        <value>6.Agua de– furo com bomba</value>
+        <label ref="jr:itext('/data/w_source_type/6.Furo com bomba:label')"/>
+        <value>6.Furo com bomba</value>
       </item>
       <item>
         <label ref="jr:itext('/data/w_source_type/7.agua engarrafada:label')"/>
@@ -16821,6 +17250,10 @@
       <item>
         <label ref="jr:itext('/data/w_water_availability/4.Sem reposta:label')"/>
         <value>4.Sem reposta</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/w_water_availability/5.Nunca:label')"/>
+        <value>5.Nunca</value>
       </item>
     </select1>
     <select1 ref="/data/w_water_non_availability">
@@ -16984,6 +17417,10 @@
       <item>
         <label ref="jr:itext('/data/w_container_water/6.Sem.resposta:label')"/>
         <value>6.Sem.resposta</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/w_container_water/7.Cisterna:label')"/>
+        <value>7.Cisterna</value>
       </item>
     </select>
     <input ref="/data/w_container_water_other">
@@ -17279,7 +17716,7 @@
         <value>5.Sem resposta/ observaçao</value>
       </item>
     </select1>
-    <group appearance="field-list" ref="/data/w_22">
+    <group  ref="/data/w_22">
       <label ref="jr:itext('/data/w_22:label')"/>
       <input ref="/data/w_22/note_question22">
         <label ref="jr:itext('/data/w_22/note_question22:label')"/>
@@ -17301,10 +17738,6 @@
       <item>
         <label ref="jr:itext('/data/w_kind_toilet/1.Autoclismo:label')"/>
         <value>1.Autoclismo</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/w_kind_toilet/2.Latrina.com.fossa.(a).Com.tampo:label')"/>
-        <value>2.Latrina.com.fossa.(a).Com.tampo</value>
       </item>
       <item>
         <label ref="jr:itext('/data/w_kind_toilet/2.Latrina.com.fossa.(a).Com.tampo.(i).Sem.descarga.(poço.direto):label')"/>
@@ -17451,7 +17884,7 @@
     <input ref="/data/note_hygiene">
       <label ref="jr:itext('/data/note_hygiene:label')"/>
     </input>
-    <select ref="/data/w_handwashing_facilities">
+    <select1 ref="/data/w_handwashing_facilities">
       <label ref="jr:itext('/data/w_handwashing_facilities:label')"/>
       <hint ref="jr:itext('/data/w_handwashing_facilities:hint')"/>
       <item>
@@ -17463,14 +17896,14 @@
         <value>2.Nao</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/w_handwashing_facilities/3..Nao.sei:label')"/>
-        <value>3..Nao.sei</value>
+        <label ref="jr:itext('/data/w_handwashing_facilities/3..Nao sei:label')"/>
+        <value>3..Nao sei</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/w_handwashing_facilities/4..Nenhuma.resposta./.nao.podia.observar:label')"/>
-        <value>4..Nenhuma.resposta./.nao.podia.observar</value>
+        <label ref="jr:itext('/data/w_handwashing_facilities/4..Nenhuma resposta / nao podia observar:label')"/>
+        <value>4..Nenhuma resposta / nao podia observar</value>
       </item>
-    </select>
+    </select1>
     <select ref="/data/w_handwashing_type">
       <label ref="jr:itext('/data/w_handwashing_type:label')"/>
       <hint ref="jr:itext('/data/w_handwashing_type:hint')"/>
@@ -17510,7 +17943,7 @@
     <input ref="/data/w_handwashing_type_other">
       <label ref="jr:itext('/data/w_handwashing_type_other:label')"/>
     </input>
-    <select1 ref="/data/w_handwashing_elements">
+    <select ref="/data/w_handwashing_elements">
       <label ref="jr:itext('/data/w_handwashing_elements:label')"/>
       <item>
         <label ref="jr:itext('/data/w_handwashing_elements/1.Sabao:label')"/>
@@ -17540,7 +17973,7 @@
         <label ref="jr:itext('/data/w_handwashing_elements/7.Nenhuma.resposta./.nao.podia.observar:label')"/>
         <value>7.Nenhuma.resposta./.nao.podia.observar</value>
       </item>
-    </select1>
+    </select>
     <input ref="/data/w_handwashing_elements_other">
       <label ref="jr:itext('/data/w_handwashing_elements_other:label')"/>
     </input>

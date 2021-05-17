@@ -7,24 +7,24 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>4. Resultados do formulário - Urine Filtration CCA</h:title>
+    <h:title>4. Formulário de Filtração de Urina – CCA V3</h:title>
     <model >
 
       <instance>
-        <data id="ao_sch_sth_baseline_4_urinefiltration_202105" version="202105">
-          <u_recorder_id/>
+        <data id="ao_sch_sth_baseline_4_urinefiltration_202105_v3" version="202105">
           <u_province/>
           <u_municipality/>
           <u_commune/>
+          <u_commune_other/>
           <u_school/>
+          <u_school_other/>
           <u_school_id/>
+          <u_school_id_other/>
+          <u_RecorderID/>
+          <u_date/>
           <u_generate_id/>
           <u_generate_id2/>
-          <u_exam/>
-          <u_sh_egp_10ml/>
-          <u_haematuria/>
-          <u_grading/>
-          <u_cca/>
+          <u_nbr_eggs/>
           <u_remarks/>
           <u_start/>
           <u_end/>
@@ -36,12 +36,6 @@
 
       <itext>
         <translation lang="French">
-          <text id="/data/u_recorder_id:jr:constraintMsg">
-            <value>Le code doit être un nombre à deux chiffres entre 9 et 91</value>
-          </text>
-          <text id="/data/u_recorder_id:label">
-            <value>Code de l'enquêteur</value>
-          </text>
           <text id="/data/u_province:label">
             <value>Sélectionner la province</value>
           </text>
@@ -57,89 +51,41 @@
           <text id="/data/u_commune:label">
             <value>Sélectionner la commune</value>
           </text>
+          <text id="/data/u_commune_other:label">
+            <value>Entrer la commune</value>
+          </text>
           <text id="/data/u_school:label">
             <value>Sélectionner l'école</value>
           </text>
+          <text id="/data/u_school_other:label">
+            <value>Entrer le nom de l'école</value>
+          </text>
           <text id="/data/u_school_id:label">
             <value>Séléctionner le code de l'école</value>
+          </text>
+          <text id="/data/u_school_id_other:label">
+            <value>Entrer le code de l'école</value>
+          </text>
+          <text id="/data/u_RecorderID:label">
+            <value>Initiales de l'enquêteur</value>
+          </text>
+          <text id="/data/u_date:label">
+            <value>Date de l'enquête</value>
           </text>
           <text id="/data/u_generate_id:jr:constraintMsg">
             <value>Le format doit être 123-123456-123</value>
           </text>
           <text id="/data/u_generate_id:label">
-            <value>Entrer l'identifiant unique du test de diagnostique (Doit avoir le format 123-123456-123 Majuscule avec des tirets seulement)</value>
+            <value>ID unique du participant: Entrer l'identifiant unique du test de diagnostique (Doit avoir le format 123-123456-123 Majuscule avec des tirets seulement)</value>
           </text>
           <text id="/data/u_generate_id2:jr:constraintMsg">
-            <value>Le code répété doit être le même</value>
+            <value>Le code doit être le même</value>
           </text>
           <text id="/data/u_generate_id2:label">
-            <value>Répéter l'identifiant unique</value>
+            <value>Veuillez répéter l'identifiant unique du participant</value>
           </text>
-          <text id="/data/u_exam:label">
-            <value>Sélectionnez l'examen utilisé</value>
-          </text>
-          <text id="/data/u_exam/1.Filtração.de.urina:label">
-            <value>1.Filtration Urinaire</value>
-          </text>
-          <text id="/data/u_exam/2.POC-CCA:label">
-            <value>2.POC-CCA</value>
-          </text>
-          <text id="/data/u_sh_egp_10ml:label">
-            <value>Nombre d'œufs par 10 ml</value>
-          </text>
-          <text id="/data/u_haematuria:label">
-            <value>Hématurie (couleur de l'urine)</value>
-          </text>
-          <text id="/data/u_haematuria/1.Sangrento:label">
-            <value>1 Rouge (Avec du sang)</value>
-          </text>
-          <text id="/data/u_haematuria/2.âmbar / escuro:label">
-            <value>2 Ambre /nuageux</value>
-          </text>
-          <text id="/data/u_haematuria/3.âmbar / claro:label">
-            <value>3 Ambre / clair</value>
-          </text>
-          <text id="/data/u_haematuria/4.amarelo pálido / claro:label">
-            <value>4 Jaune pâle / transparent</value>
-          </text>
-          <text id="/data/u_haematuria/5.amarelo pálido / escuro:label">
-            <value>5 jaune pâle / nuageux</value>
-          </text>
-          <text id="/data/u_grading:label">
-            <value>Graduation de la microhématurie</value>
-          </text>
-          <text id="/data/u_grading/1.Negativo:label">
-            <value>Négatif</value>
-          </text>
-          <text id="/data/u_grading/2.Traço hemolisado:label">
-            <value>Trace hémolysée</value>
-          </text>
-          <text id="/data/u_grading/3.Traço não hemolisado:label">
-            <value>Trace non hémolysée</value>
-          </text>
-          <text id="/data/u_grading/4.+:label">
-            <value>+</value>
-          </text>
-          <text id="/data/u_grading/5.++:label">
-            <value>++</value>
-          </text>
-          <text id="/data/u_grading/6.+++:label">
-            <value>+++</value>
-          </text>
-          <text id="/data/u_cca:label">
-            <value>Résultat POC-CCA</value>
-          </text>
-          <text id="/data/u_cca/1.Positivo:label">
-            <value>Positif</value>
-          </text>
-          <text id="/data/u_cca/2.Negativo:label">
-            <value>Négatif</value>
-          </text>
-          <text id="/data/u_cca/3.Não válido:label">
-            <value>Invalide</value>
-          </text>
-          <text id="/data/u_cca/4.Não testado:label">
-            <value>Pas testé</value>
+          <text id="/data/u_nbr_eggs:label">
+            <value>Nombre d'oeufs</value>
           </text>
           <text id="/data/u_remarks:label">
             <value>Notes additionnelles</value>
@@ -194,6 +140,18 @@
           </text>
           <text id="ccaResults-3">
             <value>Pas testé</value>
+          </text>
+          <text id="other_com_schoolid-0">
+            <value>1. La commune, le nom de l'école et l'identifiant de l'école ne sont pas dans la liste et doivent être saisis manuellement</value>
+          </text>
+          <text id="other_com_schoolid-1">
+            <value>2. Le nom et l'ID de l'école ne figurent pas dans la liste et doivent être saisis manuellement</value>
+          </text>
+          <text id="other_com_schoolid-2">
+            <value>3. L'identifiant de l'école est erroné et doit être saisi manuellement</value>
+          </text>
+          <text id="other_com_schoolid-3">
+            <value>4. Tout est correct dans la liste, pas besoin de saisir manuellement</value>
           </text>
           <text id="province_list-0">
             <value>Uige</value>
@@ -464,6 +422,72 @@
           </text>
           <text id="commune_list-65">
             <value>Tomboco Sede</value>
+          </text>
+          <text id="commune_list-66">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-67">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-68">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-69">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-70">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-71">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-72">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-73">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-74">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-75">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-76">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-77">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-78">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-79">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-80">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-81">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-82">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-83">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-84">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-85">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-86">
+            <value>Autre</value>
+          </text>
+          <text id="commune_list-87">
+            <value>Autre</value>
           </text>
           <text id="school_list-0">
             <value>Colégio Quipedro/Quipedro</value>
@@ -2783,12 +2807,6 @@
           </text>
         </translation>
         <translation default="true()" lang="Portugues">
-          <text id="/data/u_recorder_id:jr:constraintMsg">
-            <value>O código deve ser um número de dois dígitos entre 9 e 91</value>
-          </text>
-          <text id="/data/u_recorder_id:label">
-            <value>ID do registrador</value>
-          </text>
           <text id="/data/u_province:label">
             <value>Província</value>
           </text>
@@ -2804,92 +2822,44 @@
           <text id="/data/u_commune:label">
             <value>Comuna</value>
           </text>
+          <text id="/data/u_commune_other:label">
+            <value>Digite o nome da comuna</value>
+          </text>
           <text id="/data/u_school:label">
             <value>Selecione a escola</value>
           </text>
+          <text id="/data/u_school_other:label">
+            <value>Digite o nome da escola</value>
+          </text>
           <text id="/data/u_school_id:label">
             <value>Selecione o código da escola</value>
+          </text>
+          <text id="/data/u_school_id_other:label">
+            <value>Digite o código da escola</value>
+          </text>
+          <text id="/data/u_RecorderID:label">
+            <value>Iniciais do entrevistador</value>
+          </text>
+          <text id="/data/u_date:label">
+            <value>Data do questionário</value>
           </text>
           <text id="/data/u_generate_id:jr:constraintMsg">
             <value>O formato deve ser 123-123456-123</value>
           </text>
           <text id="/data/u_generate_id:label">
-            <value>Insira ID exclusivo a partir do teste de diagnóstico (deve ser insierido como 123-123456-123 letras maiúsculas com traços)</value>
+            <value>ID exclusivo do participante: Insira ID exclusivo a partir do teste de diagnóstico (deve ser insierido como 123-123456-123 letras maiúsculas com traços)</value>
           </text>
           <text id="/data/u_generate_id2:jr:constraintMsg">
-            <value>O código repetido deve ser o mesmo</value>
+            <value>O código deve ser o mesmo</value>
           </text>
           <text id="/data/u_generate_id2:label">
-            <value>Re-insira o ID exclusivo.</value>
+            <value>Por favor, repita o ID único</value>
           </text>
-          <text id="/data/u_exam:label">
-            <value>Selecione o tipo de exame usado.</value>
-          </text>
-          <text id="/data/u_exam/1.Filtração.de.urina:label">
-            <value>1.Filtração de urina</value>
-          </text>
-          <text id="/data/u_exam/2.POC-CCA:label">
-            <value>2.POC-CCA</value>
-          </text>
-          <text id="/data/u_sh_egp_10ml:label">
-            <value>SH egp 10 ml</value>
-          </text>
-          <text id="/data/u_haematuria:label">
-            <value>Haematuria (color da urina)</value>
-          </text>
-          <text id="/data/u_haematuria/1.Sangrento:label">
-            <value>1.Sangrento</value>
-          </text>
-          <text id="/data/u_haematuria/2.âmbar / escuro:label">
-            <value>2.âmbar / escuro</value>
-          </text>
-          <text id="/data/u_haematuria/3.âmbar / claro:label">
-            <value>3.âmbar / claro</value>
-          </text>
-          <text id="/data/u_haematuria/4.amarelo pálido / claro:label">
-            <value>4.amarelo pálido / claro</value>
-          </text>
-          <text id="/data/u_haematuria/5.amarelo pálido / escuro:label">
-            <value>5.amarelo pálido / escuro</value>
-          </text>
-          <text id="/data/u_grading:label">
-            <value>Classificação da microhaematuria</value>
-          </text>
-          <text id="/data/u_grading/1.Negativo:label">
-            <value>1.Negativo</value>
-          </text>
-          <text id="/data/u_grading/2.Traço hemolisado:label">
-            <value>2.Traço hemolisado</value>
-          </text>
-          <text id="/data/u_grading/3.Traço não hemolisado:label">
-            <value>3.Traço não hemolisado</value>
-          </text>
-          <text id="/data/u_grading/4.+:label">
-            <value>4.+</value>
-          </text>
-          <text id="/data/u_grading/5.++:label">
-            <value>5.++</value>
-          </text>
-          <text id="/data/u_grading/6.+++:label">
-            <value>6.+++</value>
-          </text>
-          <text id="/data/u_cca:label">
-            <value>Resultados da POC-CCA</value>
-          </text>
-          <text id="/data/u_cca/1.Positivo:label">
-            <value>1.Positivo</value>
-          </text>
-          <text id="/data/u_cca/2.Negativo:label">
-            <value>2.Negativo</value>
-          </text>
-          <text id="/data/u_cca/3.Não válido:label">
-            <value>3.Não válido</value>
-          </text>
-          <text id="/data/u_cca/4.Não testado:label">
-            <value>4.Não testado</value>
+          <text id="/data/u_nbr_eggs:label">
+            <value>Numero de ovos</value>
           </text>
           <text id="/data/u_remarks:label">
-            <value>Comentários adicionais / Quer adicionar algum comentário sobre esta amostra?</value>
+            <value>Comentários adicionais:</value>
           </text>
           <text id="exameType-0">
             <value>1.Filtração de urina</value>
@@ -2941,6 +2911,18 @@
           </text>
           <text id="ccaResults-3">
             <value>4.Não testado</value>
+          </text>
+          <text id="other_com_schoolid-0">
+            <value>1. Commune, School name and School ID are not in the list and has to be entered manually</value>
+          </text>
+          <text id="other_com_schoolid-1">
+            <value>2. O nome da escola e a ID da escola não estão na lista e devem ser inseridos manualmente</value>
+          </text>
+          <text id="other_com_schoolid-2">
+            <value>3. O código da escola está errado e deve ser inserido manualmente</value>
+          </text>
+          <text id="other_com_schoolid-3">
+            <value>4. Tudo está correto na lista, não há necessidade de inserir manualmente</value>
           </text>
           <text id="province_list-0">
             <value>Uige</value>
@@ -3211,6 +3193,72 @@
           </text>
           <text id="commune_list-65">
             <value>Tomboco Sede</value>
+          </text>
+          <text id="commune_list-66">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-67">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-68">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-69">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-70">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-71">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-72">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-73">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-74">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-75">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-76">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-77">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-78">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-79">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-80">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-81">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-82">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-83">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-84">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-85">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-86">
+            <value>Outro</value>
+          </text>
+          <text id="commune_list-87">
+            <value>Outro</value>
           </text>
           <text id="school_list-0">
             <value>Colégio Quipedro/Quipedro</value>
@@ -5530,12 +5578,6 @@
           </text>
         </translation>
         <translation lang="English">
-          <text id="/data/u_recorder_id:jr:constraintMsg">
-            <value>The code must be a two-digit number between 9 and 91</value>
-          </text>
-          <text id="/data/u_recorder_id:label">
-            <value>Recorder ID</value>
-          </text>
           <text id="/data/u_province:label">
             <value>Select the province</value>
           </text>
@@ -5551,89 +5593,41 @@
           <text id="/data/u_commune:label">
             <value>Select the sub-district</value>
           </text>
+          <text id="/data/u_commune_other:label">
+            <value>Enter the commune</value>
+          </text>
           <text id="/data/u_school:label">
             <value>Select the school</value>
           </text>
+          <text id="/data/u_school_other:label">
+            <value>Enter the school name</value>
+          </text>
           <text id="/data/u_school_id:label">
             <value>Select the school code</value>
+          </text>
+          <text id="/data/u_school_id_other:label">
+            <value>Enter the school code</value>
+          </text>
+          <text id="/data/u_RecorderID:label">
+            <value>Interviewer initials</value>
+          </text>
+          <text id="/data/u_date:label">
+            <value>Date of questionnaire</value>
           </text>
           <text id="/data/u_generate_id:jr:constraintMsg">
             <value>The format must be 123-123456-123</value>
           </text>
           <text id="/data/u_generate_id:label">
-            <value>Enter unique ID from the diagnostic test (must be entered as 123-123456-123 upper case only with dashes)</value>
+            <value>Participant Unique ID: Enter unique ID from the diagnostic test (must be entered as 123-123456-123 upper case only with dashes)</value>
           </text>
           <text id="/data/u_generate_id2:jr:constraintMsg">
-            <value>The repeated code must be the same</value>
+            <value>The code must be the same</value>
           </text>
           <text id="/data/u_generate_id2:label">
-            <value>Re-enter the unique ID</value>
+            <value>Please, repeat the unique ID</value>
           </text>
-          <text id="/data/u_exam:label">
-            <value>Select the exam used</value>
-          </text>
-          <text id="/data/u_exam/1.Filtração.de.urina:label">
-            <value>1.Urine Filtration</value>
-          </text>
-          <text id="/data/u_exam/2.POC-CCA:label">
-            <value>2.POC-CCA</value>
-          </text>
-          <text id="/data/u_sh_egp_10ml:label">
-            <value>SH egp 10 ml</value>
-          </text>
-          <text id="/data/u_haematuria:label">
-            <value>Haematuria (urine colour)</value>
-          </text>
-          <text id="/data/u_haematuria/1.Sangrento:label">
-            <value>1 Bloody</value>
-          </text>
-          <text id="/data/u_haematuria/2.âmbar / escuro:label">
-            <value>2 Amber/cloudy</value>
-          </text>
-          <text id="/data/u_haematuria/3.âmbar / claro:label">
-            <value>3 Amber/clear</value>
-          </text>
-          <text id="/data/u_haematuria/4.amarelo pálido / claro:label">
-            <value>4 Pale yellow/clear</value>
-          </text>
-          <text id="/data/u_haematuria/5.amarelo pálido / escuro:label">
-            <value>5 Pale yellow/cloudy</value>
-          </text>
-          <text id="/data/u_grading:label">
-            <value>Microhaematuria grading</value>
-          </text>
-          <text id="/data/u_grading/1.Negativo:label">
-            <value>Negative</value>
-          </text>
-          <text id="/data/u_grading/2.Traço hemolisado:label">
-            <value>Trace haemolysed</value>
-          </text>
-          <text id="/data/u_grading/3.Traço não hemolisado:label">
-            <value>Trace non-haemolysed</value>
-          </text>
-          <text id="/data/u_grading/4.+:label">
-            <value>+</value>
-          </text>
-          <text id="/data/u_grading/5.++:label">
-            <value>++</value>
-          </text>
-          <text id="/data/u_grading/6.+++:label">
-            <value>+++</value>
-          </text>
-          <text id="/data/u_cca:label">
-            <value>POC-CCA Results</value>
-          </text>
-          <text id="/data/u_cca/1.Positivo:label">
-            <value>Positive</value>
-          </text>
-          <text id="/data/u_cca/2.Negativo:label">
-            <value>Negative</value>
-          </text>
-          <text id="/data/u_cca/3.Não válido:label">
-            <value>Invalid</value>
-          </text>
-          <text id="/data/u_cca/4.Não testado:label">
-            <value>Not tested</value>
+          <text id="/data/u_nbr_eggs:label">
+            <value>Number of eggs</value>
           </text>
           <text id="/data/u_remarks:label">
             <value>Additional comment</value>
@@ -5688,6 +5682,18 @@
           </text>
           <text id="ccaResults-3">
             <value>Not tested</value>
+          </text>
+          <text id="other_com_schoolid-0">
+            <value>1. Commune, School name and School ID are not in the list and has to be entered manually</value>
+          </text>
+          <text id="other_com_schoolid-1">
+            <value>2. School name and School ID are not in the list and has to be entered manually</value>
+          </text>
+          <text id="other_com_schoolid-2">
+            <value>3. School ID is wrong and has to be entered manually</value>
+          </text>
+          <text id="other_com_schoolid-3">
+            <value>4. All is correct in the list, no need to enter manually</value>
           </text>
           <text id="province_list-0">
             <value>Uige</value>
@@ -5958,6 +5964,72 @@
           </text>
           <text id="commune_list-65">
             <value>Tomboco Sede</value>
+          </text>
+          <text id="commune_list-66">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-67">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-68">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-69">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-70">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-71">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-72">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-73">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-74">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-75">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-76">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-77">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-78">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-79">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-80">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-81">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-82">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-83">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-84">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-85">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-86">
+            <value>Other</value>
+          </text>
+          <text id="commune_list-87">
+            <value>Other</value>
           </text>
           <text id="school_list-0">
             <value>Colégio Quipedro/Quipedro</value>
@@ -8277,6 +8349,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="exameType">
         <root>
           <item>
@@ -8358,6 +8431,26 @@
           <item>
             <itextId>ccaResults-3</itextId>
             <name>4.Não testado</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="other_com_schoolid">
+        <root>
+          <item>
+            <itextId>other_com_schoolid-0</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>other_com_schoolid-1</itextId>
+            <name>2</name>
+          </item>
+          <item>
+            <itextId>other_com_schoolid-2</itextId>
+            <name>3</name>
+          </item>
+          <item>
+            <itextId>other_com_schoolid-3</itextId>
+            <name>4</name>
           </item>
         </root>
       </instance>
@@ -8818,6 +8911,116 @@
             <itextId>commune_list-65</itextId>
             <municipality_list>Tomboc</municipality_list>
             <name>Tomboco Sede</name>
+          </item>
+          <item>
+            <itextId>commune_list-66</itextId>
+            <municipality_list>Ambuila</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-67</itextId>
+            <municipality_list>Bembe</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-68</itextId>
+            <municipality_list>Buengas</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-69</itextId>
+            <municipality_list>Bungo</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-70</itextId>
+            <municipality_list>Cangola</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-71</itextId>
+            <municipality_list>Damba</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-72</itextId>
+            <municipality_list>M.Do Zo</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-73</itextId>
+            <municipality_list>Milunga</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-74</itextId>
+            <municipality_list>Mucaba</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-75</itextId>
+            <municipality_list>Negage</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-76</itextId>
+            <municipality_list>Puri</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-77</itextId>
+            <municipality_list>Quimbel</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-78</itextId>
+            <municipality_list>Quitexe</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-79</itextId>
+            <municipality_list>Sanza P</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-80</itextId>
+            <municipality_list>Songo</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-81</itextId>
+            <municipality_list>Uige</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-82</itextId>
+            <municipality_list>Kuimba</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-83</itextId>
+            <municipality_list>Mbanza</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-84</itextId>
+            <municipality_list>Noqui</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-85</itextId>
+            <municipality_list>Nzeto</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-86</itextId>
+            <municipality_list>Soyo</municipality_list>
+            <name>Outros</name>
+          </item>
+          <item>
+            <itextId>commune_list-87</itextId>
+            <municipality_list>Tomboc</municipality_list>
+            <name>Outros</name>
           </item>
         </root>
       </instance>
@@ -12689,19 +12892,19 @@
           </item>
         </root>
       </instance>
-      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/u_recorder_id:jr:constraintMsg')" nodeset="/data/u_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/u_province" required="true()" type="string"/>
       <bind nodeset="/data/u_municipality" required="true()" type="string"/>
       <bind nodeset="/data/u_commune" required="true()" type="string"/>
-      <bind nodeset="/data/u_school" required="true()" type="string"/>
-      <bind nodeset="/data/u_school_id" required="true()" type="string"/>
+      <bind nodeset="/data/u_commune_other" relevant=" /data/u_commune  = 'Outros'" required="true()" type="string"/>
+      <bind nodeset="/data/u_school" relevant=" /data/u_commune != 'Outros'" required="true()" type="string"/>
+      <bind nodeset="/data/u_school_other" relevant=" /data/u_commune  = 'Outros'" required="true()" type="string"/>
+      <bind nodeset="/data/u_school_id" relevant=" /data/u_commune != 'Outros'" required="true()" type="string"/>
+      <bind nodeset="/data/u_school_id_other" relevant=" /data/u_commune  = 'Outros'" required="true()" type="string"/>
+      <bind nodeset="/data/u_RecorderID" required="true()" type="string"/>
+      <bind nodeset="/data/u_date" required="true()" type="date"/>
       <bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/u_generate_id:jr:constraintMsg')" nodeset="/data/u_generate_id" required="true()" type="string"/>
       <bind constraint=". =  /data/u_generate_id " jr:constraintMsg="jr:itext('/data/u_generate_id2:jr:constraintMsg')" nodeset="/data/u_generate_id2" required="true()" type="string"/>
-      <bind nodeset="/data/u_exam" required="true()" type="string"/>
-      <bind nodeset="/data/u_sh_egp_10ml" relevant="selected( /data/u_exam , '1.Filtração.de.urina')" required="true()" type="int"/>
-      <bind nodeset="/data/u_haematuria" relevant="selected( /data/u_exam , '1.Filtração.de.urina')" required="true()" type="string"/>
-      <bind nodeset="/data/u_grading" relevant="selected( /data/u_exam , '1.Filtração.de.urina')" required="true()" type="string"/>
-      <bind nodeset="/data/u_cca" relevant="selected( /data/u_exam , '2.POC-CCA')" required="true()" type="string"/>
+      <bind nodeset="/data/u_nbr_eggs" required="true()" type="int"/>
       <bind nodeset="/data/u_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
@@ -12709,9 +12912,6 @@
     </model>
   </h:head>
   <h:body>
-    <input ref="/data/u_recorder_id">
-      <label ref="jr:itext('/data/u_recorder_id:label')"/>
-    </input>
     <select1 ref="/data/u_province">
       <label ref="jr:itext('/data/u_province:label')"/>
       <item>
@@ -12737,6 +12937,9 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <input ref="/data/u_commune_other">
+      <label ref="jr:itext('/data/u_commune_other:label')"/>
+    </input>
     <select1 ref="/data/u_school">
       <label ref="jr:itext('/data/u_school:label')"/>
       <itemset nodeset="instance('school_list')/root/item[commune_list =  /data/u_commune ]">
@@ -12744,6 +12947,9 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <input ref="/data/u_school_other">
+      <label ref="jr:itext('/data/u_school_other:label')"/>
+    </input>
     <select1 ref="/data/u_school_id">
       <label ref="jr:itext('/data/u_school_id:label')"/>
       <itemset nodeset="instance('code_school')/root/item[school_list =  /data/u_school ]">
@@ -12751,95 +12957,24 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <input ref="/data/u_school_id_other">
+      <label ref="jr:itext('/data/u_school_id_other:label')"/>
+    </input>
+    <input ref="/data/u_RecorderID">
+      <label ref="jr:itext('/data/u_RecorderID:label')"/>
+    </input>
+    <input ref="/data/u_date">
+      <label ref="jr:itext('/data/u_date:label')"/>
+    </input>
     <input ref="/data/u_generate_id">
       <label ref="jr:itext('/data/u_generate_id:label')"/>
     </input>
     <input ref="/data/u_generate_id2">
       <label ref="jr:itext('/data/u_generate_id2:label')"/>
     </input>
-    <select ref="/data/u_exam">
-      <label ref="jr:itext('/data/u_exam:label')"/>
-      <item>
-        <label ref="jr:itext('/data/u_exam/1.Filtração.de.urina:label')"/>
-        <value>1.Filtração.de.urina</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_exam/2.POC-CCA:label')"/>
-        <value>2.POC-CCA</value>
-      </item>
-    </select>
-    <input ref="/data/u_sh_egp_10ml">
-      <label ref="jr:itext('/data/u_sh_egp_10ml:label')"/>
+    <input ref="/data/u_nbr_eggs">
+      <label ref="jr:itext('/data/u_nbr_eggs:label')"/>
     </input>
-    <select1 ref="/data/u_haematuria">
-      <label ref="jr:itext('/data/u_haematuria:label')"/>
-      <item>
-        <label ref="jr:itext('/data/u_haematuria/1.Sangrento:label')"/>
-        <value>1.Sangrento</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_haematuria/2.âmbar / escuro:label')"/>
-        <value>2.âmbar / escuro</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_haematuria/3.âmbar / claro:label')"/>
-        <value>3.âmbar / claro</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_haematuria/4.amarelo pálido / claro:label')"/>
-        <value>4.amarelo pálido / claro</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_haematuria/5.amarelo pálido / escuro:label')"/>
-        <value>5.amarelo pálido / escuro</value>
-      </item>
-    </select1>
-    <select1 ref="/data/u_grading">
-      <label ref="jr:itext('/data/u_grading:label')"/>
-      <item>
-        <label ref="jr:itext('/data/u_grading/1.Negativo:label')"/>
-        <value>1.Negativo</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_grading/2.Traço hemolisado:label')"/>
-        <value>2.Traço hemolisado</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_grading/3.Traço não hemolisado:label')"/>
-        <value>3.Traço não hemolisado</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_grading/4.+:label')"/>
-        <value>4.+</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_grading/5.++:label')"/>
-        <value>5.++</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_grading/6.+++:label')"/>
-        <value>6.+++</value>
-      </item>
-    </select1>
-    <select1 ref="/data/u_cca">
-      <label ref="jr:itext('/data/u_cca:label')"/>
-      <item>
-        <label ref="jr:itext('/data/u_cca/1.Positivo:label')"/>
-        <value>1.Positivo</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_cca/2.Negativo:label')"/>
-        <value>2.Negativo</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_cca/3.Não válido:label')"/>
-        <value>3.Não válido</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_cca/4.Não testado:label')"/>
-        <value>4.Não testado</value>
-      </item>
-    </select1>
     <input ref="/data/u_remarks">
       <label ref="jr:itext('/data/u_remarks:label')"/>
     </input>
