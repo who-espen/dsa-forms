@@ -1,0 +1,4136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(May 2021) 1. Côte d'Ivoire - Pre TAS FL Fromulaire Site V3</h:title>
+    <model >
+
+      <instance>
+        <data id="ci_lf_pretas_1_site_202105_v3" version="20210511">
+          <c_recorder/>
+          <c_region/>
+          <c_district/>
+          <c_type_site/>
+          <c_site/>
+          <c_site_id/>
+          <c_site2/>
+          <c_site_id2/>
+          <c_population/>
+          <c_site_leader/>
+          <c_site_leader_contact/>
+          <c_consent/>
+          <c_gps/>
+          <c_ending_survey_note/>
+          <c_ClusterNotes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui vous a été attribué, à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/c_region:label">
+            <value>Sélectionner la région</value>
+          </text>
+          <text id="/data/c_region/ABIDJAN 1:label">
+            <value>ABIDJAN 1</value>
+          </text>
+          <text id="/data/c_region/ABIDJAN 2:label">
+            <value>ABIDJAN 2</value>
+          </text>
+          <text id="/data/c_region/AGNEBY-TIASSA:label">
+            <value>AGNEBY-TIASSA</value>
+          </text>
+          <text id="/data/c_region/BOUKANI:label">
+            <value>BOUKANI</value>
+          </text>
+          <text id="/data/c_region/GBEKE:label">
+            <value>GBEKE</value>
+          </text>
+          <text id="/data/c_region/GBOKLE:label">
+            <value>GBOKLE</value>
+          </text>
+          <text id="/data/c_region/GOH:label">
+            <value>GOH</value>
+          </text>
+          <text id="/data/c_region/GRANDS PONTS:label">
+            <value>GRANDS PONTS</value>
+          </text>
+          <text id="/data/c_region/GUEMON:label">
+            <value>GUEMON</value>
+          </text>
+          <text id="/data/c_region/HAUT SASSANDRA:label">
+            <value>HAUT SASSANDRA</value>
+          </text>
+          <text id="/data/c_region/IFFOU:label">
+            <value>IFFOU</value>
+          </text>
+          <text id="/data/c_region/INDENIE-DJUABLIN:label">
+            <value>INDENIE-DJUABLIN</value>
+          </text>
+          <text id="/data/c_region/LOH-DJIBOUA:label">
+            <value>LOH-DJIBOUA</value>
+          </text>
+          <text id="/data/c_region/MARAHOUE:label">
+            <value>MARAHOUE</value>
+          </text>
+          <text id="/data/c_region/WORODOUGOU:label">
+            <value>WORODOUGOU</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/c_type_site:label">
+            <value>Sélectionner le type de site</value>
+          </text>
+          <text id="/data/c_type_site/1. site sentinel:label">
+            <value>Site sentinel</value>
+          </text>
+          <text id="/data/c_type_site/2. site de controle:label">
+            <value>Site de contrôle</value>
+          </text>
+          <text id="/data/c_site:label">
+            <value>Sélectionner le site</value>
+          </text>
+          <text id="/data/c_site_id:label">
+            <value>Select the sentinel site ID</value>
+          </text>
+          <text id="/data/c_site2:label">
+            <value>Entrer le nom du nouveau site</value>
+          </text>
+          <text id="/data/c_site2:hint">
+            <value>Site de substitution</value>
+          </text>
+          <text id="/data/c_site_id2:label">
+            <value>Sélectionner le site remplacé</value>
+          </text>
+          <text id="/data/c_site_id2:hint">
+            <value>Site prévue à l'avance</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Taille de la population</value>
+          </text>
+          <text id="/data/c_site_leader:label">
+            <value>Nom et contact du chef village</value>
+          </text>
+          <text id="/data/c_site_leader_contact:label">
+            <value>Contact du chef village</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>Le chef de village consent-il à la mise en oeuvre de cette enquête ?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Prener vos coordonnées GPS :</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>Les coordonnées GPS sont plus faciles à collecter à l'extérieur. Délai d'attente de 2 min</value>
+          </text>
+          <text id="/data/c_ending_survey_note:label">
+            <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Informations supplémentaires</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Oui</value>
+          </text>
+          <text id="yes_no-1">
+            <value>Non</value>
+          </text>
+          <text id="region_list-0">
+            <value>ABIDJAN 1</value>
+          </text>
+          <text id="region_list-1">
+            <value>ABIDJAN 2</value>
+          </text>
+          <text id="region_list-2">
+            <value>AGNEBY-TIASSA</value>
+          </text>
+          <text id="region_list-3">
+            <value>BOUKANI</value>
+          </text>
+          <text id="region_list-4">
+            <value>GBEKE</value>
+          </text>
+          <text id="region_list-5">
+            <value>GBOKLE</value>
+          </text>
+          <text id="region_list-6">
+            <value>GOH</value>
+          </text>
+          <text id="region_list-7">
+            <value>GRANDS PONTS</value>
+          </text>
+          <text id="region_list-8">
+            <value>GUEMON</value>
+          </text>
+          <text id="region_list-9">
+            <value>HAUT SASSANDRA</value>
+          </text>
+          <text id="region_list-10">
+            <value>IFFOU</value>
+          </text>
+          <text id="region_list-11">
+            <value>INDENIE-DJUABLIN</value>
+          </text>
+          <text id="region_list-12">
+            <value>LOH-DJIBOUA</value>
+          </text>
+          <text id="region_list-13">
+            <value>MARAHOUE</value>
+          </text>
+          <text id="region_list-14">
+            <value>WORODOUGOU</value>
+          </text>
+          <text id="district_list-0">
+            <value>AGBOVILLE</value>
+          </text>
+          <text id="district_list-1">
+            <value>BANGOLO</value>
+          </text>
+          <text id="district_list-2">
+            <value>BEOUMI</value>
+          </text>
+          <text id="district_list-3">
+            <value>BETTIE</value>
+          </text>
+          <text id="district_list-4">
+            <value>BOTRO</value>
+          </text>
+          <text id="district_list-5">
+            <value>BOUAKE NORD-EST</value>
+          </text>
+          <text id="district_list-6">
+            <value>BOUAKE NORD-OUEST</value>
+          </text>
+          <text id="district_list-7">
+            <value>COCODY-BINGERVILLE</value>
+          </text>
+          <text id="district_list-8">
+            <value>DALOA</value>
+          </text>
+          <text id="district_list-9">
+            <value>DIVO</value>
+          </text>
+          <text id="district_list-10">
+            <value>DUEKOUE</value>
+          </text>
+          <text id="district_list-11">
+            <value>FRESCO</value>
+          </text>
+          <text id="district_list-12">
+            <value>GAGNOA 1</value>
+          </text>
+          <text id="district_list-13">
+            <value>GAGNOA 2</value>
+          </text>
+          <text id="district_list-14">
+            <value>GRAND-LAHOU</value>
+          </text>
+          <text id="district_list-15">
+            <value>GUITRY</value>
+          </text>
+          <text id="district_list-16">
+            <value>ISSIA</value>
+          </text>
+          <text id="district_list-17">
+            <value>JACQUEVILLE</value>
+          </text>
+          <text id="district_list-18">
+            <value>KANI</value>
+          </text>
+          <text id="district_list-19">
+            <value>KOUIBLY</value>
+          </text>
+          <text id="district_list-20">
+            <value>LAKOTA</value>
+          </text>
+          <text id="district_list-21">
+            <value>NASSIAN</value>
+          </text>
+          <text id="district_list-22">
+            <value>OUME</value>
+          </text>
+          <text id="district_list-23">
+            <value>PRIKRO</value>
+          </text>
+          <text id="district_list-24">
+            <value>SAKASSOU</value>
+          </text>
+          <text id="district_list-25">
+            <value>SEGUELA</value>
+          </text>
+          <text id="district_list-26">
+            <value>SIKENSI</value>
+          </text>
+          <text id="district_list-27">
+            <value>SINFRA</value>
+          </text>
+          <text id="district_list-28">
+            <value>VAVOUA</value>
+          </text>
+          <text id="district_list-29">
+            <value>YOPOUGON EST</value>
+          </text>
+          <text id="district_list-30">
+            <value>YOPOUGON OUEST</value>
+          </text>
+          <text id="district_list-31">
+            <value>ZOUKOUGBEU</value>
+          </text>
+          <text id="district_list-32">
+            <value>ZUENOULA</value>
+          </text>
+          <text id="type_site-0">
+            <value>Site sentinel</value>
+          </text>
+          <text id="type_site-1">
+            <value>Site de contrôle</value>
+          </text>
+          <text id="site_list-0">
+            <value>ADDAH</value>
+          </text>
+          <text id="site_list-1">
+            <value>ANDOKOI</value>
+          </text>
+          <text id="site_list-2">
+            <value>BAKANOU A</value>
+          </text>
+          <text id="site_list-3">
+            <value>BARATA</value>
+          </text>
+          <text id="site_list-4">
+            <value>BIBITA 1</value>
+          </text>
+          <text id="site_list-5">
+            <value>BLAFELY</value>
+          </text>
+          <text id="site_list-6">
+            <value>CPT AMANI (Blondeu)</value>
+          </text>
+          <text id="site_list-7">
+            <value>CPT ZIBOUYAOKRO</value>
+          </text>
+          <text id="site_list-8">
+            <value>DETROYA</value>
+          </text>
+          <text id="site_list-9">
+            <value>EUGENEKRO</value>
+          </text>
+          <text id="site_list-10">
+            <value>FETEKRO</value>
+          </text>
+          <text id="site_list-11">
+            <value>GBOKRO</value>
+          </text>
+          <text id="site_list-12">
+            <value>GBONA</value>
+          </text>
+          <text id="site_list-13">
+            <value>GNANOUFLA</value>
+          </text>
+          <text id="site_list-14">
+            <value>GROBIASSOUME</value>
+          </text>
+          <text id="site_list-15">
+            <value>GROH</value>
+          </text>
+          <text id="site_list-16">
+            <value>KOUENOU</value>
+          </text>
+          <text id="site_list-17">
+            <value>KRAZANDOUGOU</value>
+          </text>
+          <text id="site_list-18">
+            <value>LOKOUA</value>
+          </text>
+          <text id="site_list-19">
+            <value>LONGOGARA</value>
+          </text>
+          <text id="site_list-20">
+            <value>M'BADON</value>
+          </text>
+          <text id="site_list-21">
+            <value>MOUSSADOUGOU</value>
+          </text>
+          <text id="site_list-22">
+            <value>NAMANE</value>
+          </text>
+          <text id="site_list-23">
+            <value>NANDIBO 1</value>
+          </text>
+          <text id="site_list-24">
+            <value>NANGRE</value>
+          </text>
+          <text id="site_list-25">
+            <value>N'GUESSAN-KOUAMEKRO</value>
+          </text>
+          <text id="site_list-26">
+            <value>NIAMAYO</value>
+          </text>
+          <text id="site_list-27">
+            <value>NOAGUIHIO</value>
+          </text>
+          <text id="site_list-28">
+            <value>PEDEHOUA</value>
+          </text>
+          <text id="site_list-29">
+            <value>PINHOU-ZARABAHON</value>
+          </text>
+          <text id="site_list-30">
+            <value>POHIZRA</value>
+          </text>
+          <text id="site_list-31">
+            <value>TELEBODAN</value>
+          </text>
+          <text id="site_list-32">
+            <value>TIEMELEKRO</value>
+          </text>
+          <text id="site_list-33">
+            <value>AHOUGNANFOUTOU</value>
+          </text>
+          <text id="site_list-34">
+            <value>ALLANY</value>
+          </text>
+          <text id="site_list-35">
+            <value>ASSANDRE</value>
+          </text>
+          <text id="site_list-36">
+            <value>BADASSO</value>
+          </text>
+          <text id="site_list-37">
+            <value>BANOUFLA 3</value>
+          </text>
+          <text id="site_list-38">
+            <value>BINAO 2</value>
+          </text>
+          <text id="site_list-39">
+            <value>BOBO 2</value>
+          </text>
+          <text id="site_list-40">
+            <value>BOGOPINFLA</value>
+          </text>
+          <text id="site_list-41">
+            <value>COMIKRO</value>
+          </text>
+          <text id="site_list-42">
+            <value>DALIGUEPALEGNOA</value>
+          </text>
+          <text id="site_list-43">
+            <value>DEMAKRO</value>
+          </text>
+          <text id="site_list-44">
+            <value>DIDIZO</value>
+          </text>
+          <text id="site_list-45">
+            <value>DIGBAPIA</value>
+          </text>
+          <text id="site_list-46">
+            <value>DJIBROSSO</value>
+          </text>
+          <text id="site_list-47">
+            <value>DOUAGBO</value>
+          </text>
+          <text id="site_list-48">
+            <value>FARRIBLY</value>
+          </text>
+          <text id="site_list-49">
+            <value>GARAGE CFA</value>
+          </text>
+          <text id="site_list-50">
+            <value>GBEZIO</value>
+          </text>
+          <text id="site_list-51">
+            <value>GBOYO</value>
+          </text>
+          <text id="site_list-52">
+            <value>GBRAKRO</value>
+          </text>
+          <text id="site_list-53">
+            <value>HAOUSSABOUGOU</value>
+          </text>
+          <text id="site_list-54">
+            <value>JEANNOKRO</value>
+          </text>
+          <text id="site_list-55">
+            <value>KPEREDI</value>
+          </text>
+          <text id="site_list-56">
+            <value>LIGROHOUIN</value>
+          </text>
+          <text id="site_list-57">
+            <value>LOHOU</value>
+          </text>
+          <text id="site_list-58">
+            <value>PARIS BOUAKE</value>
+          </text>
+          <text id="site_list-59">
+            <value>PAYS BAS</value>
+          </text>
+          <text id="site_list-60">
+            <value>PETIT AHOUANOU</value>
+          </text>
+          <text id="site_list-61">
+            <value>PETIT BOUAKE</value>
+          </text>
+          <text id="site_list-62">
+            <value>PEZOAN</value>
+          </text>
+          <text id="site_list-63">
+            <value>SOMINASSE</value>
+          </text>
+          <text id="site_list-64">
+            <value>TCHELEKRO</value>
+          </text>
+          <text id="site_list-65">
+            <value>TIEGBAHI</value>
+          </text>
+          <text id="site_list-66">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-67">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-68">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-69">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-70">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-71">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-72">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-73">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-74">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-75">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-76">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-77">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-78">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-79">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-80">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-81">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-82">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-83">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-84">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-85">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-86">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-87">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-88">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-89">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-90">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-91">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-92">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-93">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-94">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-95">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-96">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-97">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-98">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-99">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-100">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-101">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-102">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-103">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-104">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-105">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-106">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-107">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-108">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-109">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-110">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-111">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-112">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-113">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-114">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-115">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-116">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-117">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-118">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-119">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-120">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-121">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-122">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-123">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-124">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-125">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-126">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-127">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-128">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-129">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-130">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-131">
+            <value>Autre</value>
+          </text>
+          <text id="code_site-0">
+            <value>101</value>
+          </text>
+          <text id="code_site-1">
+            <value>102</value>
+          </text>
+          <text id="code_site-2">
+            <value>103</value>
+          </text>
+          <text id="code_site-3">
+            <value>104</value>
+          </text>
+          <text id="code_site-4">
+            <value>105</value>
+          </text>
+          <text id="code_site-5">
+            <value>106</value>
+          </text>
+          <text id="code_site-6">
+            <value>107</value>
+          </text>
+          <text id="code_site-7">
+            <value>108</value>
+          </text>
+          <text id="code_site-8">
+            <value>109</value>
+          </text>
+          <text id="code_site-9">
+            <value>110</value>
+          </text>
+          <text id="code_site-10">
+            <value>111</value>
+          </text>
+          <text id="code_site-11">
+            <value>112</value>
+          </text>
+          <text id="code_site-12">
+            <value>113</value>
+          </text>
+          <text id="code_site-13">
+            <value>114</value>
+          </text>
+          <text id="code_site-14">
+            <value>115</value>
+          </text>
+          <text id="code_site-15">
+            <value>116</value>
+          </text>
+          <text id="code_site-16">
+            <value>117</value>
+          </text>
+          <text id="code_site-17">
+            <value>118</value>
+          </text>
+          <text id="code_site-18">
+            <value>119</value>
+          </text>
+          <text id="code_site-19">
+            <value>120</value>
+          </text>
+          <text id="code_site-20">
+            <value>121</value>
+          </text>
+          <text id="code_site-21">
+            <value>122</value>
+          </text>
+          <text id="code_site-22">
+            <value>123</value>
+          </text>
+          <text id="code_site-23">
+            <value>124</value>
+          </text>
+          <text id="code_site-24">
+            <value>125</value>
+          </text>
+          <text id="code_site-25">
+            <value>126</value>
+          </text>
+          <text id="code_site-26">
+            <value>127</value>
+          </text>
+          <text id="code_site-27">
+            <value>128</value>
+          </text>
+          <text id="code_site-28">
+            <value>129</value>
+          </text>
+          <text id="code_site-29">
+            <value>130</value>
+          </text>
+          <text id="code_site-30">
+            <value>131</value>
+          </text>
+          <text id="code_site-31">
+            <value>132</value>
+          </text>
+          <text id="code_site-32">
+            <value>133</value>
+          </text>
+          <text id="code_site-33">
+            <value>134</value>
+          </text>
+          <text id="code_site-34">
+            <value>135</value>
+          </text>
+          <text id="code_site-35">
+            <value>136</value>
+          </text>
+          <text id="code_site-36">
+            <value>137</value>
+          </text>
+          <text id="code_site-37">
+            <value>138</value>
+          </text>
+          <text id="code_site-38">
+            <value>139</value>
+          </text>
+          <text id="code_site-39">
+            <value>140</value>
+          </text>
+          <text id="code_site-40">
+            <value>141</value>
+          </text>
+          <text id="code_site-41">
+            <value>142</value>
+          </text>
+          <text id="code_site-42">
+            <value>143</value>
+          </text>
+          <text id="code_site-43">
+            <value>144</value>
+          </text>
+          <text id="code_site-44">
+            <value>145</value>
+          </text>
+          <text id="code_site-45">
+            <value>146</value>
+          </text>
+          <text id="code_site-46">
+            <value>147</value>
+          </text>
+          <text id="code_site-47">
+            <value>148</value>
+          </text>
+          <text id="code_site-48">
+            <value>149</value>
+          </text>
+          <text id="code_site-49">
+            <value>150</value>
+          </text>
+          <text id="code_site-50">
+            <value>151</value>
+          </text>
+          <text id="code_site-51">
+            <value>152</value>
+          </text>
+          <text id="code_site-52">
+            <value>153</value>
+          </text>
+          <text id="code_site-53">
+            <value>154</value>
+          </text>
+          <text id="code_site-54">
+            <value>155</value>
+          </text>
+          <text id="code_site-55">
+            <value>156</value>
+          </text>
+          <text id="code_site-56">
+            <value>157</value>
+          </text>
+          <text id="code_site-57">
+            <value>158</value>
+          </text>
+          <text id="code_site-58">
+            <value>159</value>
+          </text>
+          <text id="code_site-59">
+            <value>160</value>
+          </text>
+          <text id="code_site-60">
+            <value>161</value>
+          </text>
+          <text id="code_site-61">
+            <value>162</value>
+          </text>
+          <text id="code_site-62">
+            <value>163</value>
+          </text>
+          <text id="code_site-63">
+            <value>164</value>
+          </text>
+          <text id="code_site-64">
+            <value>165</value>
+          </text>
+          <text id="code_site-65">
+            <value>166</value>
+          </text>
+          <text id="code_site_2-0">
+            <value>ANDOKOI (101)</value>
+          </text>
+          <text id="code_site_2-1">
+            <value>LOKOUA (102)</value>
+          </text>
+          <text id="code_site_2-2">
+            <value>M'BADON (103)</value>
+          </text>
+          <text id="code_site_2-3">
+            <value>CPT AMANI (Blondeu) (104)</value>
+          </text>
+          <text id="code_site_2-4">
+            <value>BAKANOU A (105)</value>
+          </text>
+          <text id="code_site_2-5">
+            <value>LONGOGARA (106)</value>
+          </text>
+          <text id="code_site_2-6">
+            <value>NANGRE (107)</value>
+          </text>
+          <text id="code_site_2-7">
+            <value>GROH (108)</value>
+          </text>
+          <text id="code_site_2-8">
+            <value>FETEKRO (109)</value>
+          </text>
+          <text id="code_site_2-9">
+            <value>TELEBODAN (110)</value>
+          </text>
+          <text id="code_site_2-10">
+            <value>KOUENOU (111)</value>
+          </text>
+          <text id="code_site_2-11">
+            <value>BLAFELY (112)</value>
+          </text>
+          <text id="code_site_2-12">
+            <value>NOAGUIHIO (113)</value>
+          </text>
+          <text id="code_site_2-13">
+            <value>CPT ZIBOUYAOKRO (114)</value>
+          </text>
+          <text id="code_site_2-14">
+            <value>GNANOUFLA (115)</value>
+          </text>
+          <text id="code_site_2-15">
+            <value>NANDIBO 1 (116)</value>
+          </text>
+          <text id="code_site_2-16">
+            <value>ADDAH (117)</value>
+          </text>
+          <text id="code_site_2-17">
+            <value>PINHOU-ZARABAHON (118)</value>
+          </text>
+          <text id="code_site_2-18">
+            <value>KRAZANDOUGOU (119)</value>
+          </text>
+          <text id="code_site_2-19">
+            <value>BIBITA 1 (120)</value>
+          </text>
+          <text id="code_site_2-20">
+            <value>NIAMAYO (121)</value>
+          </text>
+          <text id="code_site_2-21">
+            <value>NAMANE (122)</value>
+          </text>
+          <text id="code_site_2-22">
+            <value>N'GUESSAN-KOUAMEKRO (123)</value>
+          </text>
+          <text id="code_site_2-23">
+            <value>DETROYA (124)</value>
+          </text>
+          <text id="code_site_2-24">
+            <value>PEDEHOUA (125)</value>
+          </text>
+          <text id="code_site_2-25">
+            <value>TIEMELEKRO (126)</value>
+          </text>
+          <text id="code_site_2-26">
+            <value>GROBIASSOUME (127)</value>
+          </text>
+          <text id="code_site_2-27">
+            <value>EUGENEKRO (128)</value>
+          </text>
+          <text id="code_site_2-28">
+            <value>MOUSSADOUGOU (129)</value>
+          </text>
+          <text id="code_site_2-29">
+            <value>BARATA (130)</value>
+          </text>
+          <text id="code_site_2-30">
+            <value>POHIZRA (131)</value>
+          </text>
+          <text id="code_site_2-31">
+            <value>GBOKRO (132)</value>
+          </text>
+          <text id="code_site_2-32">
+            <value>GBONA (133)</value>
+          </text>
+          <text id="code_site_2-33">
+            <value>HAOUSSABOUGOU (134)</value>
+          </text>
+          <text id="code_site_2-34">
+            <value>PAYS BAS (135)</value>
+          </text>
+          <text id="code_site_2-35">
+            <value>GARAGE CFA (136)</value>
+          </text>
+          <text id="code_site_2-36">
+            <value>ALLANY (137)</value>
+          </text>
+          <text id="code_site_2-37">
+            <value>BADASSO (138)</value>
+          </text>
+          <text id="code_site_2-38">
+            <value>SOMINASSE (139)</value>
+          </text>
+          <text id="code_site_2-39">
+            <value>DEMAKRO (140)</value>
+          </text>
+          <text id="code_site_2-40">
+            <value>AHOUGNANFOUTOU (141)</value>
+          </text>
+          <text id="code_site_2-41">
+            <value>PARIS BOUAKE (142)</value>
+          </text>
+          <text id="code_site_2-42">
+            <value>TCHELEKRO (143)</value>
+          </text>
+          <text id="code_site_2-43">
+            <value>ASSANDRE (144)</value>
+          </text>
+          <text id="code_site_2-44">
+            <value>JEANNOKRO (145)</value>
+          </text>
+          <text id="code_site_2-45">
+            <value>DALIGUEPALEGNOA (146)</value>
+          </text>
+          <text id="code_site_2-46">
+            <value>TIEGBAHI (147)</value>
+          </text>
+          <text id="code_site_2-47">
+            <value>DOUAGBO (148)</value>
+          </text>
+          <text id="code_site_2-48">
+            <value>PETIT AHOUANOU (149)</value>
+          </text>
+          <text id="code_site_2-49">
+            <value>GBOYO (150)</value>
+          </text>
+          <text id="code_site_2-50">
+            <value>FARRIBLY (151)</value>
+          </text>
+          <text id="code_site_2-51">
+            <value>BINAO 2 (152)</value>
+          </text>
+          <text id="code_site_2-52">
+            <value>GBEZIO (153)</value>
+          </text>
+          <text id="code_site_2-53">
+            <value>DIGBAPIA (154)</value>
+          </text>
+          <text id="code_site_2-54">
+            <value>PEZOAN (155)</value>
+          </text>
+          <text id="code_site_2-55">
+            <value>BANOUFLA 3 (156)</value>
+          </text>
+          <text id="code_site_2-56">
+            <value>BOBO 2 (157)</value>
+          </text>
+          <text id="code_site_2-57">
+            <value>GBRAKRO (158)</value>
+          </text>
+          <text id="code_site_2-58">
+            <value>COMIKRO (159)</value>
+          </text>
+          <text id="code_site_2-59">
+            <value>KPEREDI (160)</value>
+          </text>
+          <text id="code_site_2-60">
+            <value>DIDIZO (161)</value>
+          </text>
+          <text id="code_site_2-61">
+            <value>LIGROHOUIN (162)</value>
+          </text>
+          <text id="code_site_2-62">
+            <value>PETIT BOUAKE (163)</value>
+          </text>
+          <text id="code_site_2-63">
+            <value>BOGOPINFLA (164)</value>
+          </text>
+          <text id="code_site_2-64">
+            <value>DJIBROSSO (165)</value>
+          </text>
+          <text id="code_site_2-65">
+            <value>LOHOU (166)</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>-</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>-</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>The code must be a two-digit number between 9 and 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Enter Recorder ID</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
+          </text>
+          <text id="/data/c_region:label">
+            <value>Select your region</value>
+          </text>
+          <text id="/data/c_region/ABIDJAN 1:label">
+            <value>ABIDJAN 1</value>
+          </text>
+          <text id="/data/c_region/ABIDJAN 2:label">
+            <value>ABIDJAN 2</value>
+          </text>
+          <text id="/data/c_region/AGNEBY-TIASSA:label">
+            <value>AGNEBY-TIASSA</value>
+          </text>
+          <text id="/data/c_region/BOUKANI:label">
+            <value>BOUKANI</value>
+          </text>
+          <text id="/data/c_region/GBEKE:label">
+            <value>GBEKE</value>
+          </text>
+          <text id="/data/c_region/GBOKLE:label">
+            <value>GBOKLE</value>
+          </text>
+          <text id="/data/c_region/GOH:label">
+            <value>GOH</value>
+          </text>
+          <text id="/data/c_region/GRANDS PONTS:label">
+            <value>GRANDS PONTS</value>
+          </text>
+          <text id="/data/c_region/GUEMON:label">
+            <value>GUEMON</value>
+          </text>
+          <text id="/data/c_region/HAUT SASSANDRA:label">
+            <value>HAUT SASSANDRA</value>
+          </text>
+          <text id="/data/c_region/IFFOU:label">
+            <value>IFFOU</value>
+          </text>
+          <text id="/data/c_region/INDENIE-DJUABLIN:label">
+            <value>INDENIE-DJUABLIN</value>
+          </text>
+          <text id="/data/c_region/LOH-DJIBOUA:label">
+            <value>LOH-DJIBOUA</value>
+          </text>
+          <text id="/data/c_region/MARAHOUE:label">
+            <value>MARAHOUE</value>
+          </text>
+          <text id="/data/c_region/WORODOUGOU:label">
+            <value>WORODOUGOU</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Select your district</value>
+          </text>
+          <text id="/data/c_type_site:label">
+            <value>Select the type of site</value>
+          </text>
+          <text id="/data/c_type_site/1. site sentinel:label">
+            <value>Sentinel site</value>
+          </text>
+          <text id="/data/c_type_site/2. site de controle:label">
+            <value>Control site</value>
+          </text>
+          <text id="/data/c_site:label">
+            <value>Select the sentinel site</value>
+          </text>
+          <text id="/data/c_site_id:label">
+            <value>Select the Sentinel site ID</value>
+          </text>
+          <text id="/data/c_site2:label">
+            <value>Enter the name of the new site</value>
+          </text>
+          <text id="/data/c_site2:hint">
+            <value>Substitute site</value>
+          </text>
+          <text id="/data/c_site_id2:label">
+            <value>Select the name of the replaced site</value>
+          </text>
+          <text id="/data/c_site_id2:hint">
+            <value>Site planned in advance</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Population size</value>
+          </text>
+          <text id="/data/c_site_leader:label">
+            <value>Name of Village Leader or Head Teacher</value>
+          </text>
+          <text id="/data/c_site_leader_contact:label">
+            <value>Contact of Village Leader or Head Teacher</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>Does the school or community consent to participating in this survey?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Record your location:</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>GPS coordinates are easier to collect outside. 2 min timeout</value>
+          </text>
+          <text id="/data/c_ending_survey_note:label">
+            <value>You just entered a value that will end the survey</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Additional notes to add?</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="yes_no-1">
+            <value>No</value>
+          </text>
+          <text id="region_list-0">
+            <value>ABIDJAN 1</value>
+          </text>
+          <text id="region_list-1">
+            <value>ABIDJAN 2</value>
+          </text>
+          <text id="region_list-2">
+            <value>AGNEBY-TIASSA</value>
+          </text>
+          <text id="region_list-3">
+            <value>BOUKANI</value>
+          </text>
+          <text id="region_list-4">
+            <value>GBEKE</value>
+          </text>
+          <text id="region_list-5">
+            <value>GBOKLE</value>
+          </text>
+          <text id="region_list-6">
+            <value>GOH</value>
+          </text>
+          <text id="region_list-7">
+            <value>GRANDS PONTS</value>
+          </text>
+          <text id="region_list-8">
+            <value>GUEMON</value>
+          </text>
+          <text id="region_list-9">
+            <value>HAUT SASSANDRA</value>
+          </text>
+          <text id="region_list-10">
+            <value>IFFOU</value>
+          </text>
+          <text id="region_list-11">
+            <value>INDENIE-DJUABLIN</value>
+          </text>
+          <text id="region_list-12">
+            <value>LOH-DJIBOUA</value>
+          </text>
+          <text id="region_list-13">
+            <value>MARAHOUE</value>
+          </text>
+          <text id="region_list-14">
+            <value>WORODOUGOU</value>
+          </text>
+          <text id="district_list-0">
+            <value>AGBOVILLE</value>
+          </text>
+          <text id="district_list-1">
+            <value>BANGOLO</value>
+          </text>
+          <text id="district_list-2">
+            <value>BEOUMI</value>
+          </text>
+          <text id="district_list-3">
+            <value>BETTIE</value>
+          </text>
+          <text id="district_list-4">
+            <value>BOTRO</value>
+          </text>
+          <text id="district_list-5">
+            <value>BOUAKE NORD-EST</value>
+          </text>
+          <text id="district_list-6">
+            <value>BOUAKE NORD-OUEST</value>
+          </text>
+          <text id="district_list-7">
+            <value>COCODY-BINGERVILLE</value>
+          </text>
+          <text id="district_list-8">
+            <value>DALOA</value>
+          </text>
+          <text id="district_list-9">
+            <value>DIVO</value>
+          </text>
+          <text id="district_list-10">
+            <value>DUEKOUE</value>
+          </text>
+          <text id="district_list-11">
+            <value>FRESCO</value>
+          </text>
+          <text id="district_list-12">
+            <value>GAGNOA 1</value>
+          </text>
+          <text id="district_list-13">
+            <value>GAGNOA 2</value>
+          </text>
+          <text id="district_list-14">
+            <value>GRAND-LAHOU</value>
+          </text>
+          <text id="district_list-15">
+            <value>GUITRY</value>
+          </text>
+          <text id="district_list-16">
+            <value>ISSIA</value>
+          </text>
+          <text id="district_list-17">
+            <value>JACQUEVILLE</value>
+          </text>
+          <text id="district_list-18">
+            <value>KANI</value>
+          </text>
+          <text id="district_list-19">
+            <value>KOUIBLY</value>
+          </text>
+          <text id="district_list-20">
+            <value>LAKOTA</value>
+          </text>
+          <text id="district_list-21">
+            <value>NASSIAN</value>
+          </text>
+          <text id="district_list-22">
+            <value>OUME</value>
+          </text>
+          <text id="district_list-23">
+            <value>PRIKRO</value>
+          </text>
+          <text id="district_list-24">
+            <value>SAKASSOU</value>
+          </text>
+          <text id="district_list-25">
+            <value>SEGUELA</value>
+          </text>
+          <text id="district_list-26">
+            <value>SIKENSI</value>
+          </text>
+          <text id="district_list-27">
+            <value>SINFRA</value>
+          </text>
+          <text id="district_list-28">
+            <value>VAVOUA</value>
+          </text>
+          <text id="district_list-29">
+            <value>YOPOUGON EST</value>
+          </text>
+          <text id="district_list-30">
+            <value>YOPOUGON OUEST</value>
+          </text>
+          <text id="district_list-31">
+            <value>ZOUKOUGBEU</value>
+          </text>
+          <text id="district_list-32">
+            <value>ZUENOULA</value>
+          </text>
+          <text id="type_site-0">
+            <value>Sentinel site</value>
+          </text>
+          <text id="type_site-1">
+            <value>Control site</value>
+          </text>
+          <text id="site_list-0">
+            <value>ADDAH</value>
+          </text>
+          <text id="site_list-1">
+            <value>ANDOKOI</value>
+          </text>
+          <text id="site_list-2">
+            <value>BAKANOU A</value>
+          </text>
+          <text id="site_list-3">
+            <value>BARATA</value>
+          </text>
+          <text id="site_list-4">
+            <value>BIBITA 1</value>
+          </text>
+          <text id="site_list-5">
+            <value>BLAFELY</value>
+          </text>
+          <text id="site_list-6">
+            <value>CPT AMANI (Blondeu)</value>
+          </text>
+          <text id="site_list-7">
+            <value>CPT ZIBOUYAOKRO</value>
+          </text>
+          <text id="site_list-8">
+            <value>DETROYA</value>
+          </text>
+          <text id="site_list-9">
+            <value>EUGENEKRO</value>
+          </text>
+          <text id="site_list-10">
+            <value>FETEKRO</value>
+          </text>
+          <text id="site_list-11">
+            <value>GBOKRO</value>
+          </text>
+          <text id="site_list-12">
+            <value>GBONA</value>
+          </text>
+          <text id="site_list-13">
+            <value>GNANOUFLA</value>
+          </text>
+          <text id="site_list-14">
+            <value>GROBIASSOUME</value>
+          </text>
+          <text id="site_list-15">
+            <value>GROH</value>
+          </text>
+          <text id="site_list-16">
+            <value>KOUENOU</value>
+          </text>
+          <text id="site_list-17">
+            <value>KRAZANDOUGOU</value>
+          </text>
+          <text id="site_list-18">
+            <value>LOKOUA</value>
+          </text>
+          <text id="site_list-19">
+            <value>LONGOGARA</value>
+          </text>
+          <text id="site_list-20">
+            <value>M'BADON</value>
+          </text>
+          <text id="site_list-21">
+            <value>MOUSSADOUGOU</value>
+          </text>
+          <text id="site_list-22">
+            <value>NAMANE</value>
+          </text>
+          <text id="site_list-23">
+            <value>NANDIBO 1</value>
+          </text>
+          <text id="site_list-24">
+            <value>NANGRE</value>
+          </text>
+          <text id="site_list-25">
+            <value>N'GUESSAN-KOUAMEKRO</value>
+          </text>
+          <text id="site_list-26">
+            <value>NIAMAYO</value>
+          </text>
+          <text id="site_list-27">
+            <value>NOAGUIHIO</value>
+          </text>
+          <text id="site_list-28">
+            <value>PEDEHOUA</value>
+          </text>
+          <text id="site_list-29">
+            <value>PINHOU-ZARABAHON</value>
+          </text>
+          <text id="site_list-30">
+            <value>POHIZRA</value>
+          </text>
+          <text id="site_list-31">
+            <value>TELEBODAN</value>
+          </text>
+          <text id="site_list-32">
+            <value>TIEMELEKRO</value>
+          </text>
+          <text id="site_list-33">
+            <value>AHOUGNANFOUTOU</value>
+          </text>
+          <text id="site_list-34">
+            <value>ALLANY</value>
+          </text>
+          <text id="site_list-35">
+            <value>ASSANDRE</value>
+          </text>
+          <text id="site_list-36">
+            <value>BADASSO</value>
+          </text>
+          <text id="site_list-37">
+            <value>BANOUFLA 3</value>
+          </text>
+          <text id="site_list-38">
+            <value>BINAO 2</value>
+          </text>
+          <text id="site_list-39">
+            <value>BOBO 2</value>
+          </text>
+          <text id="site_list-40">
+            <value>BOGOPINFLA</value>
+          </text>
+          <text id="site_list-41">
+            <value>COMIKRO</value>
+          </text>
+          <text id="site_list-42">
+            <value>DALIGUEPALEGNOA</value>
+          </text>
+          <text id="site_list-43">
+            <value>DEMAKRO</value>
+          </text>
+          <text id="site_list-44">
+            <value>DIDIZO</value>
+          </text>
+          <text id="site_list-45">
+            <value>DIGBAPIA</value>
+          </text>
+          <text id="site_list-46">
+            <value>DJIBROSSO</value>
+          </text>
+          <text id="site_list-47">
+            <value>DOUAGBO</value>
+          </text>
+          <text id="site_list-48">
+            <value>FARRIBLY</value>
+          </text>
+          <text id="site_list-49">
+            <value>GARAGE CFA</value>
+          </text>
+          <text id="site_list-50">
+            <value>GBEZIO</value>
+          </text>
+          <text id="site_list-51">
+            <value>GBOYO</value>
+          </text>
+          <text id="site_list-52">
+            <value>GBRAKRO</value>
+          </text>
+          <text id="site_list-53">
+            <value>HAOUSSABOUGOU</value>
+          </text>
+          <text id="site_list-54">
+            <value>JEANNOKRO</value>
+          </text>
+          <text id="site_list-55">
+            <value>KPEREDI</value>
+          </text>
+          <text id="site_list-56">
+            <value>LIGROHOUIN</value>
+          </text>
+          <text id="site_list-57">
+            <value>LOHOU</value>
+          </text>
+          <text id="site_list-58">
+            <value>PARIS BOUAKE</value>
+          </text>
+          <text id="site_list-59">
+            <value>PAYS BAS</value>
+          </text>
+          <text id="site_list-60">
+            <value>PETIT AHOUANOU</value>
+          </text>
+          <text id="site_list-61">
+            <value>PETIT BOUAKE</value>
+          </text>
+          <text id="site_list-62">
+            <value>PEZOAN</value>
+          </text>
+          <text id="site_list-63">
+            <value>SOMINASSE</value>
+          </text>
+          <text id="site_list-64">
+            <value>TCHELEKRO</value>
+          </text>
+          <text id="site_list-65">
+            <value>TIEGBAHI</value>
+          </text>
+          <text id="site_list-66">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-67">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-68">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-69">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-70">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-71">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-72">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-73">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-74">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-75">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-76">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-77">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-78">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-79">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-80">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-81">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-82">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-83">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-84">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-85">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-86">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-87">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-88">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-89">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-90">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-91">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-92">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-93">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-94">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-95">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-96">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-97">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-98">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-99">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-100">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-101">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-102">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-103">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-104">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-105">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-106">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-107">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-108">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-109">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-110">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-111">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-112">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-113">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-114">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-115">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-116">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-117">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-118">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-119">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-120">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-121">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-122">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-123">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-124">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-125">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-126">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-127">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-128">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-129">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-130">
+            <value>Autre</value>
+          </text>
+          <text id="site_list-131">
+            <value>Autre</value>
+          </text>
+          <text id="code_site-0">
+            <value>101</value>
+          </text>
+          <text id="code_site-1">
+            <value>102</value>
+          </text>
+          <text id="code_site-2">
+            <value>103</value>
+          </text>
+          <text id="code_site-3">
+            <value>104</value>
+          </text>
+          <text id="code_site-4">
+            <value>105</value>
+          </text>
+          <text id="code_site-5">
+            <value>106</value>
+          </text>
+          <text id="code_site-6">
+            <value>107</value>
+          </text>
+          <text id="code_site-7">
+            <value>108</value>
+          </text>
+          <text id="code_site-8">
+            <value>109</value>
+          </text>
+          <text id="code_site-9">
+            <value>110</value>
+          </text>
+          <text id="code_site-10">
+            <value>111</value>
+          </text>
+          <text id="code_site-11">
+            <value>112</value>
+          </text>
+          <text id="code_site-12">
+            <value>113</value>
+          </text>
+          <text id="code_site-13">
+            <value>114</value>
+          </text>
+          <text id="code_site-14">
+            <value>115</value>
+          </text>
+          <text id="code_site-15">
+            <value>116</value>
+          </text>
+          <text id="code_site-16">
+            <value>117</value>
+          </text>
+          <text id="code_site-17">
+            <value>118</value>
+          </text>
+          <text id="code_site-18">
+            <value>119</value>
+          </text>
+          <text id="code_site-19">
+            <value>120</value>
+          </text>
+          <text id="code_site-20">
+            <value>121</value>
+          </text>
+          <text id="code_site-21">
+            <value>122</value>
+          </text>
+          <text id="code_site-22">
+            <value>123</value>
+          </text>
+          <text id="code_site-23">
+            <value>124</value>
+          </text>
+          <text id="code_site-24">
+            <value>125</value>
+          </text>
+          <text id="code_site-25">
+            <value>126</value>
+          </text>
+          <text id="code_site-26">
+            <value>127</value>
+          </text>
+          <text id="code_site-27">
+            <value>128</value>
+          </text>
+          <text id="code_site-28">
+            <value>129</value>
+          </text>
+          <text id="code_site-29">
+            <value>130</value>
+          </text>
+          <text id="code_site-30">
+            <value>131</value>
+          </text>
+          <text id="code_site-31">
+            <value>132</value>
+          </text>
+          <text id="code_site-32">
+            <value>133</value>
+          </text>
+          <text id="code_site-33">
+            <value>134</value>
+          </text>
+          <text id="code_site-34">
+            <value>135</value>
+          </text>
+          <text id="code_site-35">
+            <value>136</value>
+          </text>
+          <text id="code_site-36">
+            <value>137</value>
+          </text>
+          <text id="code_site-37">
+            <value>138</value>
+          </text>
+          <text id="code_site-38">
+            <value>139</value>
+          </text>
+          <text id="code_site-39">
+            <value>140</value>
+          </text>
+          <text id="code_site-40">
+            <value>141</value>
+          </text>
+          <text id="code_site-41">
+            <value>142</value>
+          </text>
+          <text id="code_site-42">
+            <value>143</value>
+          </text>
+          <text id="code_site-43">
+            <value>144</value>
+          </text>
+          <text id="code_site-44">
+            <value>145</value>
+          </text>
+          <text id="code_site-45">
+            <value>146</value>
+          </text>
+          <text id="code_site-46">
+            <value>147</value>
+          </text>
+          <text id="code_site-47">
+            <value>148</value>
+          </text>
+          <text id="code_site-48">
+            <value>149</value>
+          </text>
+          <text id="code_site-49">
+            <value>150</value>
+          </text>
+          <text id="code_site-50">
+            <value>151</value>
+          </text>
+          <text id="code_site-51">
+            <value>152</value>
+          </text>
+          <text id="code_site-52">
+            <value>153</value>
+          </text>
+          <text id="code_site-53">
+            <value>154</value>
+          </text>
+          <text id="code_site-54">
+            <value>155</value>
+          </text>
+          <text id="code_site-55">
+            <value>156</value>
+          </text>
+          <text id="code_site-56">
+            <value>157</value>
+          </text>
+          <text id="code_site-57">
+            <value>158</value>
+          </text>
+          <text id="code_site-58">
+            <value>159</value>
+          </text>
+          <text id="code_site-59">
+            <value>160</value>
+          </text>
+          <text id="code_site-60">
+            <value>161</value>
+          </text>
+          <text id="code_site-61">
+            <value>162</value>
+          </text>
+          <text id="code_site-62">
+            <value>163</value>
+          </text>
+          <text id="code_site-63">
+            <value>164</value>
+          </text>
+          <text id="code_site-64">
+            <value>165</value>
+          </text>
+          <text id="code_site-65">
+            <value>166</value>
+          </text>
+          <text id="code_site_2-0">
+            <value>ANDOKOI (101)</value>
+          </text>
+          <text id="code_site_2-1">
+            <value>LOKOUA (102)</value>
+          </text>
+          <text id="code_site_2-2">
+            <value>M'BADON (103)</value>
+          </text>
+          <text id="code_site_2-3">
+            <value>CPT AMANI (Blondeu) (104)</value>
+          </text>
+          <text id="code_site_2-4">
+            <value>BAKANOU A (105)</value>
+          </text>
+          <text id="code_site_2-5">
+            <value>LONGOGARA (106)</value>
+          </text>
+          <text id="code_site_2-6">
+            <value>NANGRE (107)</value>
+          </text>
+          <text id="code_site_2-7">
+            <value>GROH (108)</value>
+          </text>
+          <text id="code_site_2-8">
+            <value>FETEKRO (109)</value>
+          </text>
+          <text id="code_site_2-9">
+            <value>TELEBODAN (110)</value>
+          </text>
+          <text id="code_site_2-10">
+            <value>KOUENOU (111)</value>
+          </text>
+          <text id="code_site_2-11">
+            <value>BLAFELY (112)</value>
+          </text>
+          <text id="code_site_2-12">
+            <value>NOAGUIHIO (113)</value>
+          </text>
+          <text id="code_site_2-13">
+            <value>CPT ZIBOUYAOKRO (114)</value>
+          </text>
+          <text id="code_site_2-14">
+            <value>GNANOUFLA (115)</value>
+          </text>
+          <text id="code_site_2-15">
+            <value>NANDIBO 1 (116)</value>
+          </text>
+          <text id="code_site_2-16">
+            <value>ADDAH (117)</value>
+          </text>
+          <text id="code_site_2-17">
+            <value>PINHOU-ZARABAHON (118)</value>
+          </text>
+          <text id="code_site_2-18">
+            <value>KRAZANDOUGOU (119)</value>
+          </text>
+          <text id="code_site_2-19">
+            <value>BIBITA 1 (120)</value>
+          </text>
+          <text id="code_site_2-20">
+            <value>NIAMAYO (121)</value>
+          </text>
+          <text id="code_site_2-21">
+            <value>NAMANE (122)</value>
+          </text>
+          <text id="code_site_2-22">
+            <value>N'GUESSAN-KOUAMEKRO (123)</value>
+          </text>
+          <text id="code_site_2-23">
+            <value>DETROYA (124)</value>
+          </text>
+          <text id="code_site_2-24">
+            <value>PEDEHOUA (125)</value>
+          </text>
+          <text id="code_site_2-25">
+            <value>TIEMELEKRO (126)</value>
+          </text>
+          <text id="code_site_2-26">
+            <value>GROBIASSOUME (127)</value>
+          </text>
+          <text id="code_site_2-27">
+            <value>EUGENEKRO (128)</value>
+          </text>
+          <text id="code_site_2-28">
+            <value>MOUSSADOUGOU (129)</value>
+          </text>
+          <text id="code_site_2-29">
+            <value>BARATA (130)</value>
+          </text>
+          <text id="code_site_2-30">
+            <value>POHIZRA (131)</value>
+          </text>
+          <text id="code_site_2-31">
+            <value>GBOKRO (132)</value>
+          </text>
+          <text id="code_site_2-32">
+            <value>GBONA (133)</value>
+          </text>
+          <text id="code_site_2-33">
+            <value>HAOUSSABOUGOU (134)</value>
+          </text>
+          <text id="code_site_2-34">
+            <value>PAYS BAS (135)</value>
+          </text>
+          <text id="code_site_2-35">
+            <value>GARAGE CFA (136)</value>
+          </text>
+          <text id="code_site_2-36">
+            <value>ALLANY (137)</value>
+          </text>
+          <text id="code_site_2-37">
+            <value>BADASSO (138)</value>
+          </text>
+          <text id="code_site_2-38">
+            <value>SOMINASSE (139)</value>
+          </text>
+          <text id="code_site_2-39">
+            <value>DEMAKRO (140)</value>
+          </text>
+          <text id="code_site_2-40">
+            <value>AHOUGNANFOUTOU (141)</value>
+          </text>
+          <text id="code_site_2-41">
+            <value>PARIS BOUAKE (142)</value>
+          </text>
+          <text id="code_site_2-42">
+            <value>TCHELEKRO (143)</value>
+          </text>
+          <text id="code_site_2-43">
+            <value>ASSANDRE (144)</value>
+          </text>
+          <text id="code_site_2-44">
+            <value>JEANNOKRO (145)</value>
+          </text>
+          <text id="code_site_2-45">
+            <value>DALIGUEPALEGNOA (146)</value>
+          </text>
+          <text id="code_site_2-46">
+            <value>TIEGBAHI (147)</value>
+          </text>
+          <text id="code_site_2-47">
+            <value>DOUAGBO (148)</value>
+          </text>
+          <text id="code_site_2-48">
+            <value>PETIT AHOUANOU (149)</value>
+          </text>
+          <text id="code_site_2-49">
+            <value>GBOYO (150)</value>
+          </text>
+          <text id="code_site_2-50">
+            <value>FARRIBLY (151)</value>
+          </text>
+          <text id="code_site_2-51">
+            <value>BINAO 2 (152)</value>
+          </text>
+          <text id="code_site_2-52">
+            <value>GBEZIO (153)</value>
+          </text>
+          <text id="code_site_2-53">
+            <value>DIGBAPIA (154)</value>
+          </text>
+          <text id="code_site_2-54">
+            <value>PEZOAN (155)</value>
+          </text>
+          <text id="code_site_2-55">
+            <value>BANOUFLA 3 (156)</value>
+          </text>
+          <text id="code_site_2-56">
+            <value>BOBO 2 (157)</value>
+          </text>
+          <text id="code_site_2-57">
+            <value>GBRAKRO (158)</value>
+          </text>
+          <text id="code_site_2-58">
+            <value>COMIKRO (159)</value>
+          </text>
+          <text id="code_site_2-59">
+            <value>KPEREDI (160)</value>
+          </text>
+          <text id="code_site_2-60">
+            <value>DIDIZO (161)</value>
+          </text>
+          <text id="code_site_2-61">
+            <value>LIGROHOUIN (162)</value>
+          </text>
+          <text id="code_site_2-62">
+            <value>PETIT BOUAKE (163)</value>
+          </text>
+          <text id="code_site_2-63">
+            <value>BOGOPINFLA (164)</value>
+          </text>
+          <text id="code_site_2-64">
+            <value>DJIBROSSO (165)</value>
+          </text>
+          <text id="code_site_2-65">
+            <value>LOHOU (166)</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <itextId>region_list-0</itextId>
+            <name>ABIDJAN 1</name>
+          </item>
+          <item>
+            <itextId>region_list-1</itextId>
+            <name>ABIDJAN 2</name>
+          </item>
+          <item>
+            <itextId>region_list-2</itextId>
+            <name>AGNEBY-TIASSA</name>
+          </item>
+          <item>
+            <itextId>region_list-3</itextId>
+            <name>BOUKANI</name>
+          </item>
+          <item>
+            <itextId>region_list-4</itextId>
+            <name>GBEKE</name>
+          </item>
+          <item>
+            <itextId>region_list-5</itextId>
+            <name>GBOKLE</name>
+          </item>
+          <item>
+            <itextId>region_list-6</itextId>
+            <name>GOH</name>
+          </item>
+          <item>
+            <itextId>region_list-7</itextId>
+            <name>GRANDS PONTS</name>
+          </item>
+          <item>
+            <itextId>region_list-8</itextId>
+            <name>GUEMON</name>
+          </item>
+          <item>
+            <itextId>region_list-9</itextId>
+            <name>HAUT SASSANDRA</name>
+          </item>
+          <item>
+            <itextId>region_list-10</itextId>
+            <name>IFFOU</name>
+          </item>
+          <item>
+            <itextId>region_list-11</itextId>
+            <name>INDENIE-DJUABLIN</name>
+          </item>
+          <item>
+            <itextId>region_list-12</itextId>
+            <name>LOH-DJIBOUA</name>
+          </item>
+          <item>
+            <itextId>region_list-13</itextId>
+            <name>MARAHOUE</name>
+          </item>
+          <item>
+            <itextId>region_list-14</itextId>
+            <name>WORODOUGOU</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>AGBOVILLE</name>
+            <region_list>AGNEBY-TIASSA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>BANGOLO</name>
+            <region_list>GUEMON</region_list>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>BEOUMI</name>
+            <region_list>GBEKE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-3</itextId>
+            <name>BETTIE</name>
+            <region_list>INDENIE-DJUABLIN</region_list>
+          </item>
+          <item>
+            <itextId>district_list-4</itextId>
+            <name>BOTRO</name>
+            <region_list>GBEKE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-5</itextId>
+            <name>BOUAKE NORD-EST</name>
+            <region_list>GBEKE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-6</itextId>
+            <name>BOUAKE NORD-OUEST</name>
+            <region_list>GBEKE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-7</itextId>
+            <name>COCODY-BINGERVILLE</name>
+            <region_list>ABIDJAN 2</region_list>
+          </item>
+          <item>
+            <itextId>district_list-8</itextId>
+            <name>DALOA</name>
+            <region_list>HAUT SASSANDRA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-9</itextId>
+            <name>DIVO</name>
+            <region_list>LOH-DJIBOUA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-10</itextId>
+            <name>DUEKOUE</name>
+            <region_list>GUEMON</region_list>
+          </item>
+          <item>
+            <itextId>district_list-11</itextId>
+            <name>FRESCO</name>
+            <region_list>GBOKLE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-12</itextId>
+            <name>GAGNOA 1</name>
+            <region_list>GOH</region_list>
+          </item>
+          <item>
+            <itextId>district_list-13</itextId>
+            <name>GAGNOA 2</name>
+            <region_list>GOH</region_list>
+          </item>
+          <item>
+            <itextId>district_list-14</itextId>
+            <name>GRAND-LAHOU</name>
+            <region_list>GRANDS PONTS</region_list>
+          </item>
+          <item>
+            <itextId>district_list-15</itextId>
+            <name>GUITRY</name>
+            <region_list>LOH-DJIBOUA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-16</itextId>
+            <name>ISSIA</name>
+            <region_list>HAUT SASSANDRA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-17</itextId>
+            <name>JACQUEVILLE</name>
+            <region_list>GRANDS PONTS</region_list>
+          </item>
+          <item>
+            <itextId>district_list-18</itextId>
+            <name>KANI</name>
+            <region_list>WORODOUGOU</region_list>
+          </item>
+          <item>
+            <itextId>district_list-19</itextId>
+            <name>KOUIBLY</name>
+            <region_list>GUEMON</region_list>
+          </item>
+          <item>
+            <itextId>district_list-20</itextId>
+            <name>LAKOTA</name>
+            <region_list>LOH-DJIBOUA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-21</itextId>
+            <name>NASSIAN</name>
+            <region_list>BOUKANI</region_list>
+          </item>
+          <item>
+            <itextId>district_list-22</itextId>
+            <name>OUME</name>
+            <region_list>GOH</region_list>
+          </item>
+          <item>
+            <itextId>district_list-23</itextId>
+            <name>PRIKRO</name>
+            <region_list>IFFOU</region_list>
+          </item>
+          <item>
+            <itextId>district_list-24</itextId>
+            <name>SAKASSOU</name>
+            <region_list>GBEKE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-25</itextId>
+            <name>SEGUELA</name>
+            <region_list>WORODOUGOU</region_list>
+          </item>
+          <item>
+            <itextId>district_list-26</itextId>
+            <name>SIKENSI</name>
+            <region_list>AGNEBY-TIASSA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-27</itextId>
+            <name>SINFRA</name>
+            <region_list>MARAHOUE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-28</itextId>
+            <name>VAVOUA</name>
+            <region_list>HAUT SASSANDRA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-29</itextId>
+            <name>YOPOUGON EST</name>
+            <region_list>ABIDJAN 1</region_list>
+          </item>
+          <item>
+            <itextId>district_list-30</itextId>
+            <name>YOPOUGON OUEST</name>
+            <region_list>ABIDJAN 1</region_list>
+          </item>
+          <item>
+            <itextId>district_list-31</itextId>
+            <name>ZOUKOUGBEU</name>
+            <region_list>HAUT SASSANDRA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-32</itextId>
+            <name>ZUENOULA</name>
+            <region_list>MARAHOUE</region_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="type_site">
+        <root>
+          <item>
+            <itextId>type_site-0</itextId>
+            <name>1. site sentinel</name>
+          </item>
+          <item>
+            <itextId>type_site-1</itextId>
+            <name>2. site de controle</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_list">
+        <root>
+          <item>
+            <itextId>site_list-0</itextId>
+            <district_list>JACQUEVILLE</district_list>
+            <name>ADDAH</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-1</itextId>
+            <district_list>YOPOUGON EST</district_list>
+            <name>ANDOKOI</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-2</itextId>
+            <district_list>SIKENSI</district_list>
+            <name>BAKANOU A</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-3</itextId>
+            <district_list>SINFRA</district_list>
+            <name>BARATA</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-4</itextId>
+            <district_list>KOUIBLY</district_list>
+            <name>BIBITA 1</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-5</itextId>
+            <district_list>FRESCO</district_list>
+            <name>BLAFELY</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-6</itextId>
+            <district_list>AGBOVILLE</district_list>
+            <name>CPT AMANI (Blondeu)</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-7</itextId>
+            <district_list>GAGNOA 2</district_list>
+            <name>CPT ZIBOUYAOKRO</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-8</itextId>
+            <district_list>ZOUKOUGBEU</district_list>
+            <name>DETROYA</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-9</itextId>
+            <district_list>GUITRY</district_list>
+            <name>EUGENEKRO</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-10</itextId>
+            <district_list>BOUAKE NORD-EST</district_list>
+            <name>FETEKRO</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-11</itextId>
+            <district_list>KANI</district_list>
+            <name>GBOKRO</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-12</itextId>
+            <district_list>SEGUELA</district_list>
+            <name>GBONA</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-13</itextId>
+            <district_list>OUME</district_list>
+            <name>GNANOUFLA</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-14</itextId>
+            <district_list>DIVO</district_list>
+            <name>GROBIASSOUME</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-15</itextId>
+            <district_list>BOTRO</district_list>
+            <name>GROH</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-16</itextId>
+            <district_list>SAKASSOU</district_list>
+            <name>KOUENOU</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-17</itextId>
+            <district_list>DUEKOUE</district_list>
+            <name>KRAZANDOUGOU</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-18</itextId>
+            <district_list>YOPOUGON OUEST</district_list>
+            <name>LOKOUA</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-19</itextId>
+            <district_list>NASSIAN</district_list>
+            <name>LONGOGARA</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-20</itextId>
+            <district_list>COCODY-BINGERVILLE</district_list>
+            <name>M'BADON</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-21</itextId>
+            <district_list>LAKOTA</district_list>
+            <name>MOUSSADOUGOU</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-22</itextId>
+            <district_list>ISSIA</district_list>
+            <name>NAMANE</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-23</itextId>
+            <district_list>GRAND-LAHOU</district_list>
+            <name>NANDIBO 1</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-24</itextId>
+            <district_list>BEOUMI</district_list>
+            <name>NANGRE</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-25</itextId>
+            <district_list>VAVOUA</district_list>
+            <name>N'GUESSAN-KOUAMEKRO</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-26</itextId>
+            <district_list>DALOA</district_list>
+            <name>NIAMAYO</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-27</itextId>
+            <district_list>GAGNOA 1</district_list>
+            <name>NOAGUIHIO</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-28</itextId>
+            <district_list>PRIKRO</district_list>
+            <name>PEDEHOUA</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-29</itextId>
+            <district_list>BANGOLO</district_list>
+            <name>PINHOU-ZARABAHON</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-30</itextId>
+            <district_list>ZUENOULA</district_list>
+            <name>POHIZRA</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-31</itextId>
+            <district_list>BOUAKE NORD-OUEST</district_list>
+            <name>TELEBODAN</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-32</itextId>
+            <district_list>BETTIE</district_list>
+            <name>TIEMELEKRO</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-33</itextId>
+            <district_list>BOTRO</district_list>
+            <name>AHOUGNANFOUTOU</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-34</itextId>
+            <district_list>AGBOVILLE</district_list>
+            <name>ALLANY</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-35</itextId>
+            <district_list>SAKASSOU</district_list>
+            <name>ASSANDRE</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-36</itextId>
+            <district_list>SIKENSI</district_list>
+            <name>BADASSO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-37</itextId>
+            <district_list>VAVOUA</district_list>
+            <name>BANOUFLA 3</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-38</itextId>
+            <district_list>DUEKOUE</district_list>
+            <name>BINAO 2</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-39</itextId>
+            <district_list>ZOUKOUGBEU</district_list>
+            <name>BOBO 2</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-40</itextId>
+            <district_list>ZUENOULA</district_list>
+            <name>BOGOPINFLA</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-41</itextId>
+            <district_list>BETTIE</district_list>
+            <name>COMIKRO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-42</itextId>
+            <district_list>GAGNOA 1</district_list>
+            <name>DALIGUEPALEGNOA</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-43</itextId>
+            <district_list>BEOUMI</district_list>
+            <name>DEMAKRO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-44</itextId>
+            <district_list>GUITRY</district_list>
+            <name>DIDIZO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-45</itextId>
+            <district_list>DALOA</district_list>
+            <name>DIGBAPIA</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-46</itextId>
+            <district_list>KANI</district_list>
+            <name>DJIBROSSO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-47</itextId>
+            <district_list>OUME</district_list>
+            <name>DOUAGBO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-48</itextId>
+            <district_list>BANGOLO</district_list>
+            <name>FARRIBLY</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-49</itextId>
+            <district_list>COCODY-BINGERVILLE</district_list>
+            <name>GARAGE CFA</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-50</itextId>
+            <district_list>KOUIBLY</district_list>
+            <name>GBEZIO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-51</itextId>
+            <district_list>JACQUEVILLE</district_list>
+            <name>GBOYO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-52</itextId>
+            <district_list>PRIKRO</district_list>
+            <name>GBRAKRO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-53</itextId>
+            <district_list>YOPOUGON EST</district_list>
+            <name>HAOUSSABOUGOU</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-54</itextId>
+            <district_list>FRESCO</district_list>
+            <name>JEANNOKRO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-55</itextId>
+            <district_list>DIVO</district_list>
+            <name>KPEREDI</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-56</itextId>
+            <district_list>LAKOTA</district_list>
+            <name>LIGROHOUIN</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-57</itextId>
+            <district_list>SEGUELA</district_list>
+            <name>LOHOU</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-58</itextId>
+            <district_list>BOUAKE NORD-EST</district_list>
+            <name>PARIS BOUAKE</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-59</itextId>
+            <district_list>YOPOUGON OUEST</district_list>
+            <name>PAYS BAS</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-60</itextId>
+            <district_list>GRAND-LAHOU</district_list>
+            <name>PETIT AHOUANOU</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-61</itextId>
+            <district_list>SINFRA</district_list>
+            <name>PETIT BOUAKE</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-62</itextId>
+            <district_list>ISSIA</district_list>
+            <name>PEZOAN</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-63</itextId>
+            <district_list>NASSIAN</district_list>
+            <name>SOMINASSE</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-64</itextId>
+            <district_list>BOUAKE NORD-OUEST</district_list>
+            <name>TCHELEKRO</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-65</itextId>
+            <district_list>GAGNOA 2</district_list>
+            <name>TIEGBAHI</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-66</itextId>
+            <district_list>JACQUEVILLE</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-67</itextId>
+            <district_list>YOPOUGON EST</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-68</itextId>
+            <district_list>SIKENSI</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-69</itextId>
+            <district_list>SINFRA</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-70</itextId>
+            <district_list>KOUIBLY</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-71</itextId>
+            <district_list>FRESCO</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-72</itextId>
+            <district_list>AGBOVILLE</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-73</itextId>
+            <district_list>GAGNOA 2</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-74</itextId>
+            <district_list>ZOUKOUGBEU</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-75</itextId>
+            <district_list>GUITRY</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-76</itextId>
+            <district_list>BOUAKE NORD-EST</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-77</itextId>
+            <district_list>KANI</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-78</itextId>
+            <district_list>SEGUELA</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-79</itextId>
+            <district_list>OUME</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-80</itextId>
+            <district_list>DIVO</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-81</itextId>
+            <district_list>BOTRO</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-82</itextId>
+            <district_list>SAKASSOU</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-83</itextId>
+            <district_list>DUEKOUE</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-84</itextId>
+            <district_list>YOPOUGON OUEST</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-85</itextId>
+            <district_list>NASSIAN</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-86</itextId>
+            <district_list>COCODY-BINGERVILLE</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-87</itextId>
+            <district_list>LAKOTA</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-88</itextId>
+            <district_list>ISSIA</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-89</itextId>
+            <district_list>GRAND-LAHOU</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-90</itextId>
+            <district_list>BEOUMI</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-91</itextId>
+            <district_list>VAVOUA</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-92</itextId>
+            <district_list>DALOA</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-93</itextId>
+            <district_list>GAGNOA 1</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-94</itextId>
+            <district_list>PRIKRO</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-95</itextId>
+            <district_list>BANGOLO</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-96</itextId>
+            <district_list>ZUENOULA</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-97</itextId>
+            <district_list>BOUAKE NORD-OUEST</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-98</itextId>
+            <district_list>BETTIE</district_list>
+            <name>Autre</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>site_list-99</itextId>
+            <district_list>BOTRO</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-100</itextId>
+            <district_list>AGBOVILLE</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-101</itextId>
+            <district_list>SAKASSOU</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-102</itextId>
+            <district_list>SIKENSI</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-103</itextId>
+            <district_list>VAVOUA</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-104</itextId>
+            <district_list>DUEKOUE</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-105</itextId>
+            <district_list>ZOUKOUGBEU</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-106</itextId>
+            <district_list>ZUENOULA</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-107</itextId>
+            <district_list>BETTIE</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-108</itextId>
+            <district_list>GAGNOA 1</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-109</itextId>
+            <district_list>BEOUMI</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-110</itextId>
+            <district_list>GUITRY</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-111</itextId>
+            <district_list>DALOA</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-112</itextId>
+            <district_list>KANI</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-113</itextId>
+            <district_list>OUME</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-114</itextId>
+            <district_list>BANGOLO</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-115</itextId>
+            <district_list>COCODY-BINGERVILLE</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-116</itextId>
+            <district_list>KOUIBLY</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-117</itextId>
+            <district_list>JACQUEVILLE</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-118</itextId>
+            <district_list>PRIKRO</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-119</itextId>
+            <district_list>YOPOUGON EST</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-120</itextId>
+            <district_list>FRESCO</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-121</itextId>
+            <district_list>DIVO</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-122</itextId>
+            <district_list>LAKOTA</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-123</itextId>
+            <district_list>SEGUELA</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-124</itextId>
+            <district_list>BOUAKE NORD-EST</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-125</itextId>
+            <district_list>YOPOUGON OUEST</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-126</itextId>
+            <district_list>GRAND-LAHOU</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-127</itextId>
+            <district_list>SINFRA</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-128</itextId>
+            <district_list>ISSIA</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-129</itextId>
+            <district_list>NASSIAN</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-130</itextId>
+            <district_list>BOUAKE NORD-OUEST</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>site_list-131</itextId>
+            <district_list>GAGNOA 2</district_list>
+            <name>Autre</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+        </root>
+      </instance>
+      <instance id="code_site">
+        <root>
+          <item>
+            <itextId>code_site-0</itextId>
+            <name>101</name>
+            <site_list>ANDOKOI</site_list>
+          </item>
+          <item>
+            <itextId>code_site-1</itextId>
+            <name>102</name>
+            <site_list>LOKOUA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-2</itextId>
+            <name>103</name>
+            <site_list>M'BADON</site_list>
+          </item>
+          <item>
+            <itextId>code_site-3</itextId>
+            <name>104</name>
+            <site_list>CPT AMANI (Blondeu)</site_list>
+          </item>
+          <item>
+            <itextId>code_site-4</itextId>
+            <name>105</name>
+            <site_list>BAKANOU A</site_list>
+          </item>
+          <item>
+            <itextId>code_site-5</itextId>
+            <name>106</name>
+            <site_list>LONGOGARA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-6</itextId>
+            <name>107</name>
+            <site_list>NANGRE</site_list>
+          </item>
+          <item>
+            <itextId>code_site-7</itextId>
+            <name>108</name>
+            <site_list>GROH</site_list>
+          </item>
+          <item>
+            <itextId>code_site-8</itextId>
+            <name>109</name>
+            <site_list>FETEKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-9</itextId>
+            <name>110</name>
+            <site_list>TELEBODAN</site_list>
+          </item>
+          <item>
+            <itextId>code_site-10</itextId>
+            <name>111</name>
+            <site_list>KOUENOU</site_list>
+          </item>
+          <item>
+            <itextId>code_site-11</itextId>
+            <name>112</name>
+            <site_list>BLAFELY</site_list>
+          </item>
+          <item>
+            <itextId>code_site-12</itextId>
+            <name>113</name>
+            <site_list>NOAGUIHIO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-13</itextId>
+            <name>114</name>
+            <site_list>CPT ZIBOUYAOKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-14</itextId>
+            <name>115</name>
+            <site_list>GNANOUFLA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-15</itextId>
+            <name>116</name>
+            <site_list>NANDIBO 1</site_list>
+          </item>
+          <item>
+            <itextId>code_site-16</itextId>
+            <name>117</name>
+            <site_list>ADDAH</site_list>
+          </item>
+          <item>
+            <itextId>code_site-17</itextId>
+            <name>118</name>
+            <site_list>PINHOU-ZARABAHON</site_list>
+          </item>
+          <item>
+            <itextId>code_site-18</itextId>
+            <name>119</name>
+            <site_list>KRAZANDOUGOU</site_list>
+          </item>
+          <item>
+            <itextId>code_site-19</itextId>
+            <name>120</name>
+            <site_list>BIBITA 1</site_list>
+          </item>
+          <item>
+            <itextId>code_site-20</itextId>
+            <name>121</name>
+            <site_list>NIAMAYO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-21</itextId>
+            <name>122</name>
+            <site_list>NAMANE</site_list>
+          </item>
+          <item>
+            <itextId>code_site-22</itextId>
+            <name>123</name>
+            <site_list>N'GUESSAN-KOUAMEKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-23</itextId>
+            <name>124</name>
+            <site_list>DETROYA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-24</itextId>
+            <name>125</name>
+            <site_list>PEDEHOUA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-25</itextId>
+            <name>126</name>
+            <site_list>TIEMELEKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-26</itextId>
+            <name>127</name>
+            <site_list>GROBIASSOUME</site_list>
+          </item>
+          <item>
+            <itextId>code_site-27</itextId>
+            <name>128</name>
+            <site_list>EUGENEKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-28</itextId>
+            <name>129</name>
+            <site_list>MOUSSADOUGOU</site_list>
+          </item>
+          <item>
+            <itextId>code_site-29</itextId>
+            <name>130</name>
+            <site_list>BARATA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-30</itextId>
+            <name>131</name>
+            <site_list>POHIZRA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-31</itextId>
+            <name>132</name>
+            <site_list>GBOKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-32</itextId>
+            <name>133</name>
+            <site_list>GBONA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-33</itextId>
+            <name>134</name>
+            <site_list>HAOUSSABOUGOU</site_list>
+          </item>
+          <item>
+            <itextId>code_site-34</itextId>
+            <name>135</name>
+            <site_list>PAYS BAS</site_list>
+          </item>
+          <item>
+            <itextId>code_site-35</itextId>
+            <name>136</name>
+            <site_list>GARAGE CFA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-36</itextId>
+            <name>137</name>
+            <site_list>ALLANY</site_list>
+          </item>
+          <item>
+            <itextId>code_site-37</itextId>
+            <name>138</name>
+            <site_list>BADASSO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-38</itextId>
+            <name>139</name>
+            <site_list>SOMINASSE</site_list>
+          </item>
+          <item>
+            <itextId>code_site-39</itextId>
+            <name>140</name>
+            <site_list>DEMAKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-40</itextId>
+            <name>141</name>
+            <site_list>AHOUGNANFOUTOU</site_list>
+          </item>
+          <item>
+            <itextId>code_site-41</itextId>
+            <name>142</name>
+            <site_list>PARIS BOUAKE</site_list>
+          </item>
+          <item>
+            <itextId>code_site-42</itextId>
+            <name>143</name>
+            <site_list>TCHELEKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-43</itextId>
+            <name>144</name>
+            <site_list>ASSANDRE</site_list>
+          </item>
+          <item>
+            <itextId>code_site-44</itextId>
+            <name>145</name>
+            <site_list>JEANNOKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-45</itextId>
+            <name>146</name>
+            <site_list>DALIGUEPALEGNOA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-46</itextId>
+            <name>147</name>
+            <site_list>TIEGBAHI</site_list>
+          </item>
+          <item>
+            <itextId>code_site-47</itextId>
+            <name>148</name>
+            <site_list>DOUAGBO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-48</itextId>
+            <name>149</name>
+            <site_list>PETIT AHOUANOU</site_list>
+          </item>
+          <item>
+            <itextId>code_site-49</itextId>
+            <name>150</name>
+            <site_list>GBOYO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-50</itextId>
+            <name>151</name>
+            <site_list>FARRIBLY</site_list>
+          </item>
+          <item>
+            <itextId>code_site-51</itextId>
+            <name>152</name>
+            <site_list>BINAO 2</site_list>
+          </item>
+          <item>
+            <itextId>code_site-52</itextId>
+            <name>153</name>
+            <site_list>GBEZIO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-53</itextId>
+            <name>154</name>
+            <site_list>DIGBAPIA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-54</itextId>
+            <name>155</name>
+            <site_list>PEZOAN</site_list>
+          </item>
+          <item>
+            <itextId>code_site-55</itextId>
+            <name>156</name>
+            <site_list>BANOUFLA 3</site_list>
+          </item>
+          <item>
+            <itextId>code_site-56</itextId>
+            <name>157</name>
+            <site_list>BOBO 2</site_list>
+          </item>
+          <item>
+            <itextId>code_site-57</itextId>
+            <name>158</name>
+            <site_list>GBRAKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-58</itextId>
+            <name>159</name>
+            <site_list>COMIKRO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-59</itextId>
+            <name>160</name>
+            <site_list>KPEREDI</site_list>
+          </item>
+          <item>
+            <itextId>code_site-60</itextId>
+            <name>161</name>
+            <site_list>DIDIZO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-61</itextId>
+            <name>162</name>
+            <site_list>LIGROHOUIN</site_list>
+          </item>
+          <item>
+            <itextId>code_site-62</itextId>
+            <name>163</name>
+            <site_list>PETIT BOUAKE</site_list>
+          </item>
+          <item>
+            <itextId>code_site-63</itextId>
+            <name>164</name>
+            <site_list>BOGOPINFLA</site_list>
+          </item>
+          <item>
+            <itextId>code_site-64</itextId>
+            <name>165</name>
+            <site_list>DJIBROSSO</site_list>
+          </item>
+          <item>
+            <itextId>code_site-65</itextId>
+            <name>166</name>
+            <site_list>LOHOU</site_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="code_site_2">
+        <root>
+          <item>
+            <itextId>code_site_2-0</itextId>
+            <district_list>YOPOUGON EST</district_list>
+            <name>101</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-1</itextId>
+            <district_list>YOPOUGON OUEST</district_list>
+            <name>102</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-2</itextId>
+            <district_list>COCODY-BINGERVILLE</district_list>
+            <name>103</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-3</itextId>
+            <district_list>AGBOVILLE</district_list>
+            <name>104</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-4</itextId>
+            <district_list>SIKENSI</district_list>
+            <name>105</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-5</itextId>
+            <district_list>NASSIAN</district_list>
+            <name>106</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-6</itextId>
+            <district_list>BEOUMI</district_list>
+            <name>107</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-7</itextId>
+            <district_list>BOTRO</district_list>
+            <name>108</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-8</itextId>
+            <district_list>BOUAKE NORD-EST</district_list>
+            <name>109</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-9</itextId>
+            <district_list>BOUAKE NORD-OUEST</district_list>
+            <name>110</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-10</itextId>
+            <district_list>SAKASSOU</district_list>
+            <name>111</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-11</itextId>
+            <district_list>FRESCO</district_list>
+            <name>112</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-12</itextId>
+            <district_list>GAGNOA 1</district_list>
+            <name>113</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-13</itextId>
+            <district_list>GAGNOA 2</district_list>
+            <name>114</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-14</itextId>
+            <district_list>OUME</district_list>
+            <name>115</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-15</itextId>
+            <district_list>GRAND-LAHOU</district_list>
+            <name>116</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-16</itextId>
+            <district_list>JACQUEVILLE</district_list>
+            <name>117</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-17</itextId>
+            <district_list>BANGOLO</district_list>
+            <name>118</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-18</itextId>
+            <district_list>DUEKOUE</district_list>
+            <name>119</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-19</itextId>
+            <district_list>KOUIBLY</district_list>
+            <name>120</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-20</itextId>
+            <district_list>DALOA</district_list>
+            <name>121</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-21</itextId>
+            <district_list>ISSIA</district_list>
+            <name>122</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-22</itextId>
+            <district_list>VAVOUA</district_list>
+            <name>123</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-23</itextId>
+            <district_list>ZOUKOUGBEU</district_list>
+            <name>124</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-24</itextId>
+            <district_list>PRIKRO</district_list>
+            <name>125</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-25</itextId>
+            <district_list>BETTIE</district_list>
+            <name>126</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-26</itextId>
+            <district_list>DIVO</district_list>
+            <name>127</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-27</itextId>
+            <district_list>GUITRY</district_list>
+            <name>128</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-28</itextId>
+            <district_list>LAKOTA</district_list>
+            <name>129</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-29</itextId>
+            <district_list>SINFRA</district_list>
+            <name>130</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-30</itextId>
+            <district_list>ZUENOULA</district_list>
+            <name>131</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-31</itextId>
+            <district_list>KANI</district_list>
+            <name>132</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-32</itextId>
+            <district_list>SEGUELA</district_list>
+            <name>133</name>
+            <type_site>1. site sentinel</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-33</itextId>
+            <district_list>YOPOUGON EST</district_list>
+            <name>134</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-34</itextId>
+            <district_list>YOPOUGON OUEST</district_list>
+            <name>135</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-35</itextId>
+            <district_list>COCODY-BINGERVILLE</district_list>
+            <name>136</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-36</itextId>
+            <district_list>AGBOVILLE</district_list>
+            <name>137</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-37</itextId>
+            <district_list>SIKENSI</district_list>
+            <name>138</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-38</itextId>
+            <district_list>NASSIAN</district_list>
+            <name>139</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-39</itextId>
+            <district_list>BEOUMI</district_list>
+            <name>140</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-40</itextId>
+            <district_list>BOTRO</district_list>
+            <name>141</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-41</itextId>
+            <district_list>BOUAKE NORD-EST</district_list>
+            <name>142</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-42</itextId>
+            <district_list>BOUAKE NORD-OUEST</district_list>
+            <name>143</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-43</itextId>
+            <district_list>SAKASSOU</district_list>
+            <name>144</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-44</itextId>
+            <district_list>FRESCO</district_list>
+            <name>145</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-45</itextId>
+            <district_list>GAGNOA 1</district_list>
+            <name>146</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-46</itextId>
+            <district_list>GAGNOA 2</district_list>
+            <name>147</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-47</itextId>
+            <district_list>OUME</district_list>
+            <name>148</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-48</itextId>
+            <district_list>GRAND-LAHOU</district_list>
+            <name>149</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-49</itextId>
+            <district_list>JACQUEVILLE</district_list>
+            <name>150</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-50</itextId>
+            <district_list>BANGOLO</district_list>
+            <name>151</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-51</itextId>
+            <district_list>DUEKOUE</district_list>
+            <name>152</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-52</itextId>
+            <district_list>KOUIBLY</district_list>
+            <name>153</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-53</itextId>
+            <district_list>DALOA</district_list>
+            <name>154</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-54</itextId>
+            <district_list>ISSIA</district_list>
+            <name>155</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-55</itextId>
+            <district_list>VAVOUA</district_list>
+            <name>156</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-56</itextId>
+            <district_list>ZOUKOUGBEU</district_list>
+            <name>157</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-57</itextId>
+            <district_list>PRIKRO</district_list>
+            <name>158</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-58</itextId>
+            <district_list>BETTIE</district_list>
+            <name>159</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-59</itextId>
+            <district_list>DIVO</district_list>
+            <name>160</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-60</itextId>
+            <district_list>GUITRY</district_list>
+            <name>161</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-61</itextId>
+            <district_list>LAKOTA</district_list>
+            <name>162</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-62</itextId>
+            <district_list>SINFRA</district_list>
+            <name>163</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-63</itextId>
+            <district_list>ZUENOULA</district_list>
+            <name>164</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-64</itextId>
+            <district_list>KANI</district_list>
+            <name>165</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+          <item>
+            <itextId>code_site_2-65</itextId>
+            <district_list>SEGUELA</district_list>
+            <name>166</name>
+            <type_site>2. site de controle</type_site>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and . &lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder:jr:constraintMsg')" nodeset="/data/c_recorder" required="true()" type="int"/>
+      <bind nodeset="/data/c_region" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_2="." db_add_col_1="/data/c_region"/>
+      <bind nodeset="/data/c_type_site" required="true()" type="string"/>
+      <bind nodeset="/data/c_site" required="true()" type="string" db_add_col_3="." db_add_col_2="/data/c_district"/>
+      <bind nodeset="/data/c_site_id" relevant=" /data/c_site != 'Autre'" required="true()" type="string" db_add_col_4="." db_add_col_3="/data/c_site"/>
+      <bind nodeset="/data/c_site2" relevant=" /data/c_site  = 'Autre'" required="true()" type="string" db_add_col_5="." db_add_col_2="/data/c_district"/>
+      <bind nodeset="/data/c_site_id2" relevant=" /data/c_site  = 'Autre'" required="true()" type="string" db_add_col_6="." db_add_col_5="/data/c_site2"/>
+      <bind nodeset="/data/c_population" type="int"/>
+      <bind nodeset="/data/c_site_leader" required="true()" type="string"/>
+      <bind nodeset="/data/c_site_leader_contact" type="string"/>
+      <bind nodeset="/data/c_consent" required="true()" type="string"/>
+      <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'No'" type="string"/>
+      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder">
+      <label ref="jr:itext('/data/c_recorder:label')"/>
+      <hint ref="jr:itext('/data/c_recorder:hint')"/>
+    </input>
+    <select1 ref="/data/c_region">
+      <label ref="jr:itext('/data/c_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_region/ABIDJAN 1:label')"/>
+        <value>ABIDJAN 1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/ABIDJAN 2:label')"/>
+        <value>ABIDJAN 2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/AGNEBY-TIASSA:label')"/>
+        <value>AGNEBY-TIASSA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/BOUKANI:label')"/>
+        <value>BOUKANI</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/GBEKE:label')"/>
+        <value>GBEKE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/GBOKLE:label')"/>
+        <value>GBOKLE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/GOH:label')"/>
+        <value>GOH</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/GRANDS PONTS:label')"/>
+        <value>GRANDS PONTS</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/GUEMON:label')"/>
+        <value>GUEMON</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/HAUT SASSANDRA:label')"/>
+        <value>HAUT SASSANDRA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/IFFOU:label')"/>
+        <value>IFFOU</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/INDENIE-DJUABLIN:label')"/>
+        <value>INDENIE-DJUABLIN</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/LOH-DJIBOUA:label')"/>
+        <value>LOH-DJIBOUA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/MARAHOUE:label')"/>
+        <value>MARAHOUE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/WORODOUGOU:label')"/>
+        <value>WORODOUGOU</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[region_list =  /data/c_region ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_type_site">
+      <label ref="jr:itext('/data/c_type_site:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_type_site/1. site sentinel:label')"/>
+        <value>1. site sentinel</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_type_site/2. site de controle:label')"/>
+        <value>2. site de controle</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_site">
+      <label ref="jr:itext('/data/c_site:label')"/>
+      <itemset nodeset="instance('site_list')/root/item[district_list =  /data/c_district  and type_site=  /data/c_type_site ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_site_id">
+      <label ref="jr:itext('/data/c_site_id:label')"/>
+      <itemset nodeset="instance('code_site')/root/item[site_list =  /data/c_site ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_site2">
+      <label ref="jr:itext('/data/c_site2:label')"/>
+      <hint ref="jr:itext('/data/c_site2:hint')"/>
+    </input>
+    <select1 ref="/data/c_site_id2">
+      <label ref="jr:itext('/data/c_site_id2:label')"/>
+      <hint ref="jr:itext('/data/c_site_id2:hint')"/>
+      <itemset nodeset="instance('code_site_2')/root/item[district_list =  /data/c_district  and type_site=  /data/c_type_site ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_population">
+      <label ref="jr:itext('/data/c_population:label')"/>
+    </input>
+    <input ref="/data/c_site_leader">
+      <label ref="jr:itext('/data/c_site_leader:label')"/>
+    </input>
+    <input ref="/data/c_site_leader_contact">
+      <label ref="jr:itext('/data/c_site_leader_contact:label')"/>
+    </input>
+    <select1 ref="/data/c_consent">
+      <label ref="jr:itext('/data/c_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_consent/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_consent/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <input ref="/data/c_ending_survey_note">
+      <label ref="jr:itext('/data/c_ending_survey_note:label')"/>
+    </input>
+    <input ref="/data/c_ClusterNotes">
+      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>
