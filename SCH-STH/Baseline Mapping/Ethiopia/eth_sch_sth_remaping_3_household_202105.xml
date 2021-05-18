@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<h:head>
-		<h:title>3. Ethiopia - Reassessment Form Household</h:title>
+		<h:title>3. Ethiopia - Reassessment Form Household V2</h:title>
 		<model >
 			<instance>
-				<data id="eth_sch_sth_remaping_3_household_202105" version="202105">
+				<data id="eth_sch_sth_remaping_3_household_202105_V2" version="202105_V2">
 					<h_Start_survey/>
 					<h_date/>
 					<h_int_id/>
@@ -2772,9 +2772,9 @@
 			<bind calculate="concat( /data/h_kebele_other ,'-', /data/h_house_number )" nodeset="/data/h_household_id2" relevant="selected( /data/h_region , 'Somali')" required="true()" type="string"/>
 			<bind nodeset="/data/h_interviewed_hh" required="true()" type="string"/>
 			<bind nodeset="/data/h_notint_hh" relevant="selected( /data/h_interviewed_hh , '1.No')" required="true()" type="string"/>
-			<bind nodeset="/data/h_notint_oth" relevant="selected( /data/h_notint_hh , 'Other')" required="true()" type="string"/>
-			<bind nodeset="/data/h_consent_hoh" required="true()" type="string"/>
-			<bind nodeset="/data/h_consent_other" relevant="selected( /data/h_consent_hoh , '2.N')" required="true()" type="string"/>
+			<bind nodeset="/data/h_notint_oth" relevant="selected( /data/h_interviewed_hh , '1.No') and selected( /data/h_notint_hh , 'Other')" required="true()" type="string"/>
+			<bind nodeset="/data/h_consent_hoh" relevant="not(selected( /data/h_interviewed_hh , '1.No'))" required="true()" type="string"/>
+			<bind nodeset="/data/h_consent_other" relevant="not(selected( /data/h_interviewed_hh , '1.No')) and selected( /data/h_consent_hoh , '1.Yes')" required="true()" type="string"/>
 			<bind nodeset="/data/h_consent_relation" relevant="selected( /data/h_consent_hoh , '1.Yes')" required="true()" type="string"/>
 			<bind nodeset="/data/h_consent_relation_other" relevant="selected( /data/h_consent_relation , 'Other')" required="true()" type="string"/>
 			<bind nodeset="/data/Household_questions1" readonly="true()" relevant="selected( /data/h_consent_hoh , '1.Yes')" type="string"/>
