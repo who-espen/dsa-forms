@@ -7,17 +7,18 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(May 2021) 3. Côte d'Ivoire - Pre TAS FL Résultat FTS V3</h:title>
+    <h:title>(May 2021) 3. Côte d'Ivoire - Pre TAS FL Résultat FTS V4</h:title>
     <model >
 
       <instance>
-        <data id="ci_lf_pretas_3_resultat_fts_202105_v3" version="20210522">
+        <data id="ci_lf_pretas_3_resultat_fts_202105_v4" version="20210522">
           <d_recorderID/>
           <d_district/>
           <d_site/>
           <d_site_id/>
           <d_site_id2/>
           <d_num/>
+          <d_num2/>
           <d_code_id/>
           <d_num_test/>
           <d_lotnumber/>
@@ -166,13 +167,22 @@
             <value>Site prévue à l'avance</value>
           </text>
           <text id="/data/d_num:jr:constraintMsg">
-            <value>La valeur doit être compris entre 1 et 300</value>
+            <value>La valeur doit être compris entre 1 et 500</value>
           </text>
           <text id="/data/d_num:label">
             <value>Entrer le numéro d'ordre</value>
           </text>
           <text id="/data/d_num:hint">
-            <value>Doit être compris entre 1 et 300</value>
+            <value>Doit être compris entre 1 et 500</value>
+          </text>
+          <text id="/data/d_num2:jr:constraintMsg">
+            <value>Le numéro d'ordre doit être le même</value>
+          </text>
+          <text id="/data/d_num2:label">
+            <value>Répéter le numéro d'ordre</value>
+          </text>
+          <text id="/data/d_num2:hint">
+            <value>Doit être compris entre 1 et 500</value>
           </text>
           <text id="/data/d_code_id:label">
             <value>Entrer le code d'identification unique du test de diagnostic</value>
@@ -1206,13 +1216,22 @@
             <value>Site planned in advance</value>
           </text>
           <text id="/data/d_num:jr:constraintMsg">
-            <value>The value must be between 1 and 300</value>
+            <value>The value must be between 1 and 500</value>
           </text>
           <text id="/data/d_num:label">
             <value>Enter the order number</value>
           </text>
           <text id="/data/d_num:hint">
-            <value>Must be between 1 and 300</value>
+            <value>Must be between 1 and 500</value>
+          </text>
+          <text id="/data/d_num2:jr:constraintMsg">
+            <value>The order number must be the same</value>
+          </text>
+          <text id="/data/d_num2:label">
+            <value>Repeat order number</value>
+          </text>
+          <text id="/data/d_num2:hint">
+            <value>Must be between 1 and 500</value>
           </text>
           <text id="/data/d_code_id:label">
             <value>Enter unique ID from the diagnostic test</value>
@@ -3521,7 +3540,8 @@
       <bind nodeset="/data/d_site" required="true()" type="string"/>
       <bind nodeset="/data/d_site_id" relevant=" /data/d_site != 'Autre'" required="true()" type="string"/>
       <bind nodeset="/data/d_site_id2" relevant=" /data/d_site  = 'Autre'" required="true()" type="string"/>
-      <bind constraint=". &gt; 0 and . &lt;= 300" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
+      <bind constraint=". &gt; 0 and . &lt;= 500" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
+      <bind constraint=". =  /data/d_num " jr:constraintMsg="jr:itext('/data/d_num2:jr:constraintMsg')" nodeset="/data/d_num2" required="true()" type="int"/>
       <bind calculate="if( /data/d_site  = 'Autre', concat( /data/d_site_id2 , '-' , /data/d_num ), concat( /data/d_site_id , '-' , /data/d_num ))" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/d_num_test" required="true()" type="string"/>
       <bind nodeset="/data/d_lotnumber" required="true()" type="string"/>
@@ -3702,6 +3722,10 @@
     <input ref="/data/d_num">
       <label ref="jr:itext('/data/d_num:label')"/>
       <hint ref="jr:itext('/data/d_num:hint')"/>
+    </input>
+    <input ref="/data/d_num2">
+      <label ref="jr:itext('/data/d_num2:label')"/>
+      <hint ref="jr:itext('/data/d_num2:hint')"/>
     </input>
     <input ref="/data/d_code_id">
       <label ref="jr:itext('/data/d_code_id:label')"/>
