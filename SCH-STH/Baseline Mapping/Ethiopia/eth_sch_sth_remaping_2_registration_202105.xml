@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<h:head>
-		<h:title>2. Ethiopia - Reassessment Form Participant V2</h:title>
+		<h:title>2. Ethiopia – Reassessment Registration Form V3</h:title>
 		<model >
 
 			<instance>
-				<data id="eth_sch_sth_remaping_2_registration_202105_V2" version="202105_V2">
+				<data id="eth_sch_sth_remaping_2_registration_202105_v3" version="2021053">
+					<p_technicianInit/>
 					<p_start_survey/>
 					<p_visitDate/>
 					<p_region/>
@@ -16,7 +17,6 @@
 					<p_school_code/>
 					<p_school_other/>
 					<p_school_code_other/>
-					<p_technicianInit/>
 					<p_note2/>
 					<p_name/>
 					<p_code_pupil/>
@@ -34,7 +34,7 @@
 					<p_end/>
 					<meta>
 						<instanceID/>
-							<randomnum/>
+						<randomnum/>
 					</meta>
 				</data>
 			</instance>
@@ -61,6 +61,8 @@
 					</text>
 				</translation>
 			</itext>
+
+			<bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="The code must be a two-digit number between 9 and 91" nodeset="/data/p_technicianInit" required="true()" type="int"/>
 			<bind nodeset="/data/p_start_survey" readonly="true()" type="string"/>
 			<bind nodeset="/data/p_visitDate" required="true()" type="date"/>
 			<bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
@@ -71,10 +73,9 @@
 			<bind nodeset="/data/p_school_code" relevant="not(selected( /data/p_region , 'Somali'))" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_school"/>
 			<bind nodeset="/data/p_school_other" relevant="selected( /data/p_region , 'Somali')" required="true()" type="string" db_get="col_7" db_filter_by_col_4="/data/p_kebele_other"/>
 			<bind nodeset="/data/p_school_code_other" relevant="selected( /data/p_region , 'Somali')" type="string" db_get="col_8" db_add_col_7="/data/p_school_other"/>
-			<bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="The code must be a two-digit number between 9 and 91" nodeset="/data/p_technicianInit" required="true()" type="int"/>
 			<bind nodeset="/data/p_note2" readonly="true()" type="string"/>
 			<bind nodeset="/data/p_name" required="true()" type="string"/>
-			<bind nodeset="/data/p_code_pupil" calculate="if(/data/p_region = 'Somali' ,concat(/data/p_school_code_other, '-', /data/meta/randomnum) , concat(/data/p_school_code, '-', /data/meta/randomnum))" readonly="true()" required="true()" type="string"/>
+			<bind nodeset="/data/p_code_pupil" required="true()" type="string" calculate="if(/data/p_region = 'Somali' ,concat(/data/p_school_code_other, '-', /data/meta/randomnum) , concat(/data/p_school_code, '-', /data/meta/randomnum))" readonly="true()"/>
 			<bind constraint=".&gt;=9 and .&lt;=14" nodeset="/data/p_age" required="true()" type="int"/>
 			<bind nodeset="/data/p_sex" required="true()" type="string"/>
 			<bind constraint=".&gt;=1 and .&lt;=8" nodeset="/data/p_grade" required="true()" type="int"/>
@@ -92,6 +93,10 @@
 		</model>
 	</h:head>
 	<h:body>
+		<input ref="/data/p_technicianInit">
+			<label>2. Technician's code</label>
+			<hint>2 digit code assigned to you</hint>
+		</input>
 		<input ref="/data/p_start_survey">
 			<label>Start of Site Questions</label>
 		</input>
@@ -121,10 +126,6 @@
 		</input>
 		<input ref="/data/p_school_code_other">
 			<label>6.a School code</label>
-		</input>
-		<input ref="/data/p_technicianInit">
-			<label>2. Technician's code</label>
-			<hint>2 digit code assigned to you</hint>
 		</input>
 		<input ref="/data/p_note2">
 			<label>Start of individual registration</label>
