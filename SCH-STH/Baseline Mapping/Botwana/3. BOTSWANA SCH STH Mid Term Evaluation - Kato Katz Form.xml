@@ -51,10 +51,10 @@
 						<value>Scan barcode now</value>
 					</text>
 					<text id="/data/k_generate_id:jr:constraintMsg">
-						<value>The format must be 123-123456</value>
+						<value>The format must be 123-123456-123</value>
 					</text>
 					<text id="/data/k_generate_id:label">
-						<value>Enter unique ID from the diagnostic test (must be entered as 123-123456 number only with dashes)</value>
+						<value>Enter unique ID from the diagnostic test (must be entered as 123-123456-123 number only with dashes)</value>
 					</text>
 					<text id="/data/k_generate_id2:jr:constraintMsg">
 						<value>The repeated code must be the same</value>
@@ -1301,7 +1301,7 @@
 			<bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/k_school_id:jr:constraintMsg')" nodeset="/data/k_school_id" required="true()" type="string"/>
 			<bind nodeset="/data/k_id_type" required="true()" type="string"/>
 			<bind nodeset="/data/k_barcode_id" relevant=" /data/k_id_type  = 'Scanner'" required="true()" type="barcode"/>
-			<bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/k_generate_id:jr:constraintMsg')" nodeset="/data/k_generate_id" relevant=" /data/k_id_type  != 'Scanner'" required="true()" type="string"/>
+			<bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/k_generate_id:jr:constraintMsg')" nodeset="/data/k_generate_id" relevant=" /data/k_id_type  != 'Scanner'" required="true()" type="string"/>
 			<bind constraint=". =  /data/k_generate_id " jr:constraintMsg="jr:itext('/data/k_generate_id2:jr:constraintMsg')" nodeset="/data/k_generate_id2" relevant=" /data/k_id_type  != 'Scanner'" required="true()" type="string"/>
 			<bind nodeset="/data/k_sch_man_sa" required="true()" type="int"/>
 			<bind nodeset="/data/k_sch_man_sb" required="true()" type="int"/>
