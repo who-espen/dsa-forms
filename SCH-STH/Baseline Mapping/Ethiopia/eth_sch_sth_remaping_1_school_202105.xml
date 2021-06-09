@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<h:head>
-		<h:title>1. Ethiopia-Reassessment School Form V3</h:title>
+		<h:title>1. Ethiopia-Reassessment School Form V3.1</h:title>
 		<model >
 			<instance>
-				<data id="eth_sch_sth_remaping_1_school_202105_V3" version="2021053">
+				<data id="eth_sch_sth_remaping_1_school_202105_v3_1" version="202105_V3">
 					<c_InterviewerInit/>
 					<note1/>
 					<c_visitDate/>
@@ -2226,9 +2226,9 @@
 			<bind nodeset="/data/c_kebele_other" relevant="selected( /data/c_region , 'Somali')" required="true()" type="string" db_add_col_4="." db_add_col_2="/data/c_woreda"/>
 			<bind nodeset="/data/c_location" required="true()" type="geopoint"/>
 			<bind nodeset="/data/c_school" relevant="not(selected( /data/c_region , 'Somali'))" required="true()" type="string" db_add_col_5="." db_add_col_3="/data/c_kebele"/>
-			<bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="The code must be between 99 and 1000" nodeset="/data/c_school_code" relevant="not(selected( /data/c_region , 'Somali'))" required="true()" type="int" db_add_col_6="." db_add_col_5="/data/c_school"/>
+			<bind constraint=". &gt; 99 and . &lt; 10000" jr:constraintMsg="The code must be between 99 and 10000" nodeset="/data/c_school_code" relevant="not(selected( /data/c_region , 'Somali'))" required="true()" type="int" db_add_col_6="." db_add_col_5="/data/c_school"/>
 			<bind nodeset="/data/c_school_other" relevant="selected( /data/c_region , 'Somali')" required="true()" type="string" db_add_col_7="." db_add_col_4="/data/c_kebele_other"/>
-			<bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="The code must be between 99 and 1000" nodeset="/data/c_school_code_other" relevant="selected( /data/c_region , 'Somali')" required="true()" type="int" db_add_col_8="." db_add_col_7="/data/c_school_other"/>
+			<bind constraint=". &gt; 99 and . &lt; 10000" jr:constraintMsg="The code must be between 99 and 10000" nodeset="/data/c_school_code_other" relevant="selected( /data/c_region , 'Somali')" required="true()" type="int" db_add_col_8="." db_add_col_7="/data/c_school_other"/>
 			<bind nodeset="/data/c_headmaster" required="true()" type="string"/>
 			<bind constraint="regex(.,'^09[0-9]{8}$')" jr:constraintMsg="The phone number is restricted to 10 digits, starting with 09" nodeset="/data/c_headmasterTel" required="true()" type="string"/>
 			<bind nodeset="/data/c_treated" required="true()" type="string"/>
@@ -2297,17 +2297,17 @@
 	</h:head>
 	<h:body>
 		<input ref="/data/c_InterviewerInit">
-			<label>2. Reporter's code</label>
+			<label>1. Reporter's code</label>
 			<hint>2 digit code assigned to you</hint>
 		</input>
 		<input ref="/data/note1">
 			<label>Start of Survey Questions</label>
 		</input>
 		<input ref="/data/c_visitDate">
-			<label>1. Date of survey</label>
+			<label>2. Date of survey</label>
 		</input>
 		<select1 ref="/data/c_region">
-			<label>2. Region</label>
+			<label>3. Region</label>
 			<item>
 				<label>Afar</label>
 				<value>Afar</value>
@@ -2340,32 +2340,32 @@
 			</itemset>
 		</select1>
 		<input ref="/data/c_kebele_other">
-			<label>5a. Please write the kebele name</label>
+			<label>5. Please write the kebele name</label>
 		</input>
 		<input ref="/data/c_location">
-			<label>5. Record the GPS coordinates of the village</label>
+			<label>6. Record the GPS coordinates of the village</label>
 		</input>
 		<input ref="/data/c_school">
-			<label>6. School name</label>
+			<label>7. School name</label>
 		</input>
 		<input ref="/data/c_school_code">
-			<label>7. Record school code</label>
+			<label>8. Record school code</label>
 		</input>
 		<input ref="/data/c_school_other">
-			<label>6. School name</label>
+			<label>7. School name</label>
 		</input>
 		<input ref="/data/c_school_code_other">
-			<label>7. Record school code</label>
+			<label>8. Record school code</label>
 		</input>
 		<input ref="/data/c_headmaster">
-			<label>8. Name of headteacher</label>
+			<label>9. Name of headteacher</label>
 		</input>
 		<input ref="/data/c_headmasterTel">
-			<label>9. Contact number of headteacher</label>
+			<label>10. Contact number of headteacher</label>
 			<hint>The pattern should be like 09xxxxxxxx</hint>
 		</input>
 		<select1 ref="/data/c_treated">
-			<label>10. How long ago did pupils in your school last receive deworming treatment (PZQ or ALB/MBD or both)?</label>
+			<label>11. How long ago did pupils in your school last receive deworming treatment (PZQ or ALB/MBD or both)?</label>
 			<item>
 				<label>Don't know</label>
 				<value>Don't know</value>
@@ -2400,10 +2400,10 @@
 			</item>
 		</select1>
 		<input ref="/data/c_lowestGrade">
-			<label>11. Lowest standard taught</label>
+			<label>12.a. Lowest standard taught</label>
 		</input>
 		<input ref="/data/c_highestGrade">
-			<label>12. Highest standard taught</label>
+			<label>12.b. Highest standard taught</label>
 			<hint>Between 1 and 8 and greater than or equal to lowest grade</hint>
 		</input>
 		<input ref="/data/c_boysGrade1">
