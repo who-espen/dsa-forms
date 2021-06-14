@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(May 2021) 1. Côte d'Ivoire - Pre TAS FL Fromulaire Site V3</h:title>
+    <h:title>(May 2021) 1. Côte d'Ivoire - Pre TAS FL Formulaire Site V4</h:title>
     <model >
 
       <instance>
-        <data id="ci_lf_pretas_1_site_202105_v3" version="20210511">
+        <data id="ci_lf_pretas_1_site_202105_v4" version="20210511">
           <c_recorder/>
           <c_region/>
           <c_district/>
@@ -128,7 +128,7 @@
             <value>Taille de la population</value>
           </text>
           <text id="/data/c_site_leader:label">
-            <value>Nom et contact du chef village</value>
+            <value>Nom du chef village</value>
           </text>
           <text id="/data/c_site_leader_contact:label">
             <value>Contact du chef village</value>
@@ -3970,6 +3970,7 @@
           </item>
         </root>
       </instance>
+      
       <bind constraint=". &gt; 9 and . &lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder:jr:constraintMsg')" nodeset="/data/c_recorder" required="true()" type="int"/>
       <bind nodeset="/data/c_region" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_2="." db_add_col_1="/data/c_region"/>

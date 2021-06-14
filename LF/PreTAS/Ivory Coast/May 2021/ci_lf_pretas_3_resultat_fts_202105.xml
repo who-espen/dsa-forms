@@ -7,17 +7,20 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(May 2021) 3. Côte d'Ivoire - Pre TAS FL Résultat FTS V3</h:title>
+    <h:title>(May 2021) 3. Côte d'Ivoire - Pre TAS FL Résultat FTS V4.2</h:title>
     <model >
 
       <instance>
-        <data id="ci_lf_pretas_3_resultat_fts_202105_v3" version="20210522">
+        <data id="ci_lf_pretas_3_resultat_fts_202105_v4_2" version="20210522">
           <d_recorderID/>
           <d_district/>
           <d_site/>
           <d_site_id/>
           <d_site_id2/>
           <d_num/>
+          <d_num2/>
+          <d_age_yrs/>
+          <d_sex/>
           <d_code_id/>
           <d_num_test/>
           <d_lotnumber/>
@@ -166,13 +169,37 @@
             <value>Site prévue à l'avance</value>
           </text>
           <text id="/data/d_num:jr:constraintMsg">
-            <value>La valeur doit être compris entre 1 et 300</value>
+            <value>La valeur doit être compris entre 1 et 500</value>
           </text>
           <text id="/data/d_num:label">
-            <value>Entrer le numéro d'ordre</value>
+            <value>Numéro d'ordre</value>
           </text>
           <text id="/data/d_num:hint">
-            <value>Doit être compris entre 1 et 300</value>
+            <value>Doit être compris entre 1 et 500</value>
+          </text>
+          <text id="/data/d_num2:jr:constraintMsg">
+            <value>Le numéro d'ordre doit être le même</value>
+          </text>
+          <text id="/data/d_num2:label">
+            <value>Répéter le numéro d'ordre</value>
+          </text>
+          <text id="/data/d_num2:hint">
+            <value>Doit être compris entre 1 et 500</value>
+          </text>
+          <text id="/data/d_age_yrs:jr:constraintMsg">
+            <value>L'age doit être compris entre 5 et 120 ans</value>
+          </text>
+          <text id="/data/d_age_yrs:label">
+            <value>Entrer l'âge en années</value>
+          </text>
+          <text id="/data/d_sex:label">
+            <value>Sexe du répondant</value>
+          </text>
+          <text id="/data/d_sex/Male:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/d_sex/Female:label">
+            <value>Féminin</value>
           </text>
           <text id="/data/d_code_id:label">
             <value>Entrer le code d'identification unique du test de diagnostic</value>
@@ -245,6 +272,12 @@
           </text>
           <text id="yes_no-1">
             <value>Non</value>
+          </text>
+          <text id="sex_list-0">
+            <value>Masculin</value>
+          </text>
+          <text id="sex_list-1">
+            <value>Féminin</value>
           </text>
           <text id="id_list-0">
             <value>Scanner</value>
@@ -1206,13 +1239,37 @@
             <value>Site planned in advance</value>
           </text>
           <text id="/data/d_num:jr:constraintMsg">
-            <value>The value must be between 1 and 300</value>
+            <value>The value must be between 1 and 500</value>
           </text>
           <text id="/data/d_num:label">
             <value>Enter the order number</value>
           </text>
           <text id="/data/d_num:hint">
-            <value>Must be between 1 and 300</value>
+            <value>Must be between 1 and 500</value>
+          </text>
+          <text id="/data/d_num2:jr:constraintMsg">
+            <value>The order number must be the same</value>
+          </text>
+          <text id="/data/d_num2:label">
+            <value>Repeat order number</value>
+          </text>
+          <text id="/data/d_num2:hint">
+            <value>Must be between 1 and 500</value>
+          </text>
+          <text id="/data/d_age_yrs:jr:constraintMsg">
+            <value>The age must be between 5 and 120 years</value>
+          </text>
+          <text id="/data/d_age_yrs:label">
+            <value>Enter age in years</value>
+          </text>
+          <text id="/data/d_sex:label">
+            <value>Sex of respondent</value>
+          </text>
+          <text id="/data/d_sex/Male:label">
+            <value>Male</value>
+          </text>
+          <text id="/data/d_sex/Female:label">
+            <value>Female</value>
           </text>
           <text id="/data/d_code_id:label">
             <value>Enter unique ID from the diagnostic test</value>
@@ -1282,6 +1339,12 @@
           </text>
           <text id="yes_no-1">
             <value>No</value>
+          </text>
+          <text id="sex_list-0">
+            <value>Male</value>
+          </text>
+          <text id="sex_list-1">
+            <value>Female</value>
           </text>
           <text id="id_list-0">
             <value>Scanner</value>
@@ -2128,7 +2191,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="yes_no">
         <root>
           <item>
@@ -2138,6 +2200,18 @@
           <item>
             <itextId>yes_no-1</itextId>
             <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sex_list">
+        <root>
+          <item>
+            <itextId>sex_list-0</itextId>
+            <name>Male</name>
+          </item>
+          <item>
+            <itextId>sex_list-1</itextId>
+            <name>Female</name>
           </item>
         </root>
       </instance>
@@ -3521,7 +3595,10 @@
       <bind nodeset="/data/d_site" required="true()" type="string"/>
       <bind nodeset="/data/d_site_id" relevant=" /data/d_site != 'Autre'" required="true()" type="string"/>
       <bind nodeset="/data/d_site_id2" relevant=" /data/d_site  = 'Autre'" required="true()" type="string"/>
-      <bind constraint=". &gt; 0 and . &lt;= 300" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
+      <bind constraint=". &gt; 0 and . &lt;= 500" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
+      <bind constraint=". =  /data/d_num " jr:constraintMsg="jr:itext('/data/d_num2:jr:constraintMsg')" nodeset="/data/d_num2" required="true()" type="int"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/d_age_yrs:jr:constraintMsg')" nodeset="/data/d_age_yrs" required="true()" type="int"/>
+      <bind nodeset="/data/d_sex" required="true()" type="string"/>
       <bind calculate="if( /data/d_site  = 'Autre', concat( /data/d_site_id2 , '-' , /data/d_num ), concat( /data/d_site_id , '-' , /data/d_num ))" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/d_num_test" required="true()" type="string"/>
       <bind nodeset="/data/d_lotnumber" required="true()" type="string"/>
@@ -3703,6 +3780,24 @@
       <label ref="jr:itext('/data/d_num:label')"/>
       <hint ref="jr:itext('/data/d_num:hint')"/>
     </input>
+    <input ref="/data/d_num2">
+      <label ref="jr:itext('/data/d_num2:label')"/>
+      <hint ref="jr:itext('/data/d_num2:hint')"/>
+    </input>
+    <input ref="/data/d_age_yrs">
+      <label ref="jr:itext('/data/d_age_yrs:label')"/>
+    </input>
+    <select1 ref="/data/d_sex">
+      <label ref="jr:itext('/data/d_sex:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_sex/Male:label')"/>
+        <value>Male</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_sex/Female:label')"/>
+        <value>Female</value>
+      </item>
+    </select1>
     <input ref="/data/d_code_id">
       <label ref="jr:itext('/data/d_code_id:label')"/>
     </input>
