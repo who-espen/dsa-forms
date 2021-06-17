@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(BF - Juin 2021) Pré TAS FL - 1. Formulaire Village</h:title>
+    <model >
+
+      <instance>
+        <data id="bf_lf_pretas_1_sites_202106" version="20210605">
+          <c_recorder/>
+          <c_drs/>
+          <c_district/>
+          <c_csps/>
+          <c_cluster_name/>
+          <c_site/>
+          <c_site_type/>
+          <c_cluster_id1/>
+          <c_population/>
+          <couverture_tdm_2020/>
+          <gps/>
+          <commentaires/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation lang="French">
+          <text id="/data/c_recorder:label">
+            <value>Code opérateurs</value>
+          </text>
+          <text id="/data/c_recorder/EN01:label">
+            <value>EN01</value>
+          </text>
+          <text id="/data/c_recorder/EN02:label">
+            <value>EN02</value>
+          </text>
+          <text id="/data/c_recorder/EN03:label">
+            <value>EN03</value>
+          </text>
+          <text id="/data/c_recorder/EN04:label">
+            <value>EN04</value>
+          </text>
+          <text id="/data/c_recorder/EN05:label">
+            <value>EN05</value>
+          </text>
+          <text id="/data/c_recorder/EN06:label">
+            <value>EN06</value>
+          </text>
+          <text id="/data/c_recorder/EN07:label">
+            <value>EN07</value>
+          </text>
+          <text id="/data/c_recorder/EN08:label">
+            <value>EN08</value>
+          </text>
+          <text id="/data/c_drs:label">
+            <value>Sélectionner un DRS</value>
+          </text>
+          <text id="/data/c_drs/Sud-Ouest:label">
+            <value>Sud-Ouest</value>
+          </text>
+          <text id="/data/c_drs/Centre-Est:label">
+            <value>Centre-Est</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Sélectionner un DS</value>
+          </text>
+          <text id="/data/c_csps:label">
+            <value>CSPS</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Noms des Sites sentinelles/contrôle</value>
+          </text>
+          <text id="/data/c_site:label">
+            <value>Le site est-il une école ou une communauté</value>
+          </text>
+          <text id="/data/c_site/Ecole:label">
+            <value>Ecole</value>
+          </text>
+          <text id="/data/c_site/Communaute:label">
+            <value>Communauté</value>
+          </text>
+          <text id="/data/c_site_type:label">
+            <value>Est-ce un site sentinelle ou un site de control ponctuelle</value>
+          </text>
+          <text id="/data/c_site_type/Site sentinelle:label">
+            <value>Site sentinelle</value>
+          </text>
+          <text id="/data/c_site_type/Site de contrôle ponctuel:label">
+            <value>Site de contrôle ponctuel</value>
+          </text>
+          <text id="/data/c_cluster_id1:label">
+            <value>Code du site</value>
+          </text>
+          <text id="/data/c_cluster_id1:hint">
+            <value>Trois lettres majuscules</value>
+          </text>
+          <text id="/data/c_population:jr:constraintMsg">
+            <value>La valeur saisie doit être supérieure à 400</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Population 2020</value>
+          </text>
+          <text id="/data/couverture_tdm_2020:jr:constraintMsg">
+            <value>La valeur saisie doit être en décimal à 2 chiffres après la virgule</value>
+          </text>
+          <text id="/data/couverture_tdm_2020:label">
+            <value>Couverture thérapeutique TDM FL 2019</value>
+          </text>
+          <text id="/data/couverture_tdm_2020:hint">
+            <value>La valeur saisie doit être en décimal à 2 chiffres après la virgule</value>
+          </text>
+          <text id="/data/gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/data/commentaires:label">
+            <value>Commentaires</value>
+          </text>
+          <text id="operateur-0">
+            <value>EN01</value>
+          </text>
+          <text id="operateur-1">
+            <value>EN02</value>
+          </text>
+          <text id="operateur-2">
+            <value>EN03</value>
+          </text>
+          <text id="operateur-3">
+            <value>EN04</value>
+          </text>
+          <text id="operateur-4">
+            <value>EN05</value>
+          </text>
+          <text id="operateur-5">
+            <value>EN06</value>
+          </text>
+          <text id="operateur-6">
+            <value>EN07</value>
+          </text>
+          <text id="operateur-7">
+            <value>EN08</value>
+          </text>
+          <text id="drs_list-0">
+            <value>Sud-Ouest</value>
+          </text>
+          <text id="drs_list-1">
+            <value>Centre-Est</value>
+          </text>
+          <text id="ds_list-0">
+            <value>Batie</value>
+          </text>
+          <text id="ds_list-1">
+            <value>Gaoua</value>
+          </text>
+          <text id="ds_list-2">
+            <value>Kampti</value>
+          </text>
+          <text id="ds_list-3">
+            <value>Bittou</value>
+          </text>
+          <text id="ds_list-4">
+            <value>Ouargaye</value>
+          </text>
+          <text id="site_list-0">
+            <value>Ecole</value>
+          </text>
+          <text id="site_list-1">
+            <value>Communauté</value>
+          </text>
+          <text id="sentinel_Type_list-0">
+            <value>Site sentinelle</value>
+          </text>
+          <text id="sentinel_Type_list-1">
+            <value>Site de contrôle ponctuel</value>
+          </text>
+          <text id="csps_list-0">
+            <value>Bilgmdoure</value>
+          </text>
+          <text id="csps_list-1">
+            <value>CM Gaoua</value>
+          </text>
+          <text id="csps_list-2">
+            <value>CM Kampti</value>
+          </text>
+          <text id="csps_list-3">
+            <value>Gbalara</value>
+          </text>
+          <text id="csps_list-4">
+            <value>Holly</value>
+          </text>
+          <text id="csps_list-5">
+            <value>Koriba</value>
+          </text>
+          <text id="csps_list-6">
+            <value>Kosso</value>
+          </text>
+          <text id="csps_list-7">
+            <value>Latara</value>
+          </text>
+          <text id="csps_list-8">
+            <value>Legmoin</value>
+          </text>
+          <text id="csps_list-9">
+            <value>Lerghin</value>
+          </text>
+          <text id="csps_list-10">
+            <value>Loaba</value>
+          </text>
+          <text id="csps_list-11">
+            <value>Niampira</value>
+          </text>
+          <text id="csps_list-12">
+            <value>Ouada</value>
+          </text>
+          <text id="csps_list-13">
+            <value>Perigban</value>
+          </text>
+          <text id="csps_list-14">
+            <value>Salembaore</value>
+          </text>
+          <text id="csps_list-15">
+            <value>Sawenga</value>
+          </text>
+          <text id="sentinel_site_list-0">
+            <value>Bilgmdoure</value>
+          </text>
+          <text id="sentinel_site_list-1">
+            <value>Djegbanao</value>
+          </text>
+          <text id="sentinel_site_list-2">
+            <value>Fofora</value>
+          </text>
+          <text id="sentinel_site_list-3">
+            <value>Gbangbankora</value>
+          </text>
+          <text id="sentinel_site_list-4">
+            <value>Kosso</value>
+          </text>
+          <text id="sentinel_site_list-5">
+            <value>Koul campement</value>
+          </text>
+          <text id="sentinel_site_list-6">
+            <value>Lerghin</value>
+          </text>
+          <text id="sentinel_site_list-7">
+            <value>Loaba Peulh</value>
+          </text>
+          <text id="sentinel_site_list-8">
+            <value>Lougan</value>
+          </text>
+          <text id="sentinel_site_list-9">
+            <value>Naboudin</value>
+          </text>
+          <text id="sentinel_site_list-10">
+            <value>Niampira</value>
+          </text>
+          <text id="sentinel_site_list-11">
+            <value>Niorgho</value>
+          </text>
+          <text id="sentinel_site_list-12">
+            <value>Ouatinao</value>
+          </text>
+          <text id="sentinel_site_list-13">
+            <value>Sidoumoukar</value>
+          </text>
+          <text id="sentinel_site_list-14">
+            <value>Soadin</value>
+          </text>
+          <text id="sentinel_site_list-15">
+            <value>Zindi</value>
+          </text>
+          <text id="sentinel_site_list-16">
+            <value>Zinkapoko</value>
+          </text>
+          <text id="code_site_list-0">
+            <value>BIL</value>
+          </text>
+          <text id="code_site_list-1">
+            <value>DJE</value>
+          </text>
+          <text id="code_site_list-2">
+            <value>FOF</value>
+          </text>
+          <text id="code_site_list-3">
+            <value>GBA</value>
+          </text>
+          <text id="code_site_list-4">
+            <value>KOS</value>
+          </text>
+          <text id="code_site_list-5">
+            <value>KOU</value>
+          </text>
+          <text id="code_site_list-6">
+            <value>LER</value>
+          </text>
+          <text id="code_site_list-7">
+            <value>LOA</value>
+          </text>
+          <text id="code_site_list-8">
+            <value>LOU</value>
+          </text>
+          <text id="code_site_list-9">
+            <value>NAB</value>
+          </text>
+          <text id="code_site_list-10">
+            <value>NIA</value>
+          </text>
+          <text id="code_site_list-11">
+            <value>NIO</value>
+          </text>
+          <text id="code_site_list-12">
+            <value>OUA</value>
+          </text>
+          <text id="code_site_list-13">
+            <value>SID</value>
+          </text>
+          <text id="code_site_list-14">
+            <value>SOA</value>
+          </text>
+          <text id="code_site_list-15">
+            <value>ZIN</value>
+          </text>
+          <text id="code_site_list-16">
+            <value>ZND</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="operateur">
+        <root>
+          <item>
+            <itextId>operateur-0</itextId>
+            <name>EN01</name>
+          </item>
+          <item>
+            <itextId>operateur-1</itextId>
+            <name>EN02</name>
+          </item>
+          <item>
+            <itextId>operateur-2</itextId>
+            <name>EN03</name>
+          </item>
+          <item>
+            <itextId>operateur-3</itextId>
+            <name>EN04</name>
+          </item>
+          <item>
+            <itextId>operateur-4</itextId>
+            <name>EN05</name>
+          </item>
+          <item>
+            <itextId>operateur-5</itextId>
+            <name>EN06</name>
+          </item>
+          <item>
+            <itextId>operateur-6</itextId>
+            <name>EN07</name>
+          </item>
+          <item>
+            <itextId>operateur-7</itextId>
+            <name>EN08</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="drs_list">
+        <root>
+          <item>
+            <itextId>drs_list-0</itextId>
+            <name>Sud-Ouest</name>
+          </item>
+          <item>
+            <itextId>drs_list-1</itextId>
+            <name>Centre-Est</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="ds_list">
+        <root>
+          <item>
+            <itextId>ds_list-0</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <name>Batié</name>
+          </item>
+          <item>
+            <itextId>ds_list-1</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <name>Gaoua</name>
+          </item>
+          <item>
+            <itextId>ds_list-2</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <name>Kampti</name>
+          </item>
+          <item>
+            <itextId>ds_list-3</itextId>
+            <drs_list>Centre-Est</drs_list>
+            <name>Bittou</name>
+          </item>
+          <item>
+            <itextId>ds_list-4</itextId>
+            <drs_list>Centre-Est</drs_list>
+            <name>Ouargaye</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_list">
+        <root>
+          <item>
+            <itextId>site_list-0</itextId>
+            <name>Ecole</name>
+          </item>
+          <item>
+            <itextId>site_list-1</itextId>
+            <name>Communaute</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sentinel_Type_list">
+        <root>
+          <item>
+            <itextId>sentinel_Type_list-0</itextId>
+            <name>Site sentinelle</name>
+          </item>
+          <item>
+            <itextId>sentinel_Type_list-1</itextId>
+            <name>Site de contrôle ponctuel</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="csps_list">
+        <root>
+          <item>
+            <itextId>csps_list-0</itextId>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>Bilgmdoure</name>
+          </item>
+          <item>
+            <itextId>csps_list-1</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Gaoua</ds_list>
+            <name>CM Gaoua</name>
+          </item>
+          <item>
+            <itextId>csps_list-2</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>CM Kampti</name>
+          </item>
+          <item>
+            <itextId>csps_list-3</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>Gbalara</name>
+          </item>
+          <item>
+            <itextId>csps_list-4</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Gaoua</ds_list>
+            <name>Holly</name>
+          </item>
+          <item>
+            <itextId>csps_list-5</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Batié</ds_list>
+            <name>Koriba</name>
+          </item>
+          <item>
+            <itextId>csps_list-6</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Batié</ds_list>
+            <name>Kosso</name>
+          </item>
+          <item>
+            <itextId>csps_list-7</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>Latara</name>
+          </item>
+          <item>
+            <itextId>csps_list-8</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Batié</ds_list>
+            <name>Legmoin</name>
+          </item>
+          <item>
+            <itextId>csps_list-9</itextId>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>Lerghin</name>
+          </item>
+          <item>
+            <itextId>csps_list-10</itextId>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Bittou</ds_list>
+            <name>Loaba</name>
+          </item>
+          <item>
+            <itextId>csps_list-11</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Gaoua</ds_list>
+            <name>Niampira</name>
+          </item>
+          <item>
+            <itextId>csps_list-12</itextId>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Bittou</ds_list>
+            <name>Ouada</name>
+          </item>
+          <item>
+            <itextId>csps_list-13</itextId>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>Perigban</name>
+          </item>
+          <item>
+            <itextId>csps_list-14</itextId>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>Salembaore</name>
+          </item>
+          <item>
+            <itextId>csps_list-15</itextId>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Bittou</ds_list>
+            <name>Sawenga</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sentinel_site_list">
+        <root>
+          <item>
+            <itextId>sentinel_site_list-0</itextId>
+            <csps_list>Bilgmdoure</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>Bilgmdoure</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-1</itextId>
+            <csps_list>Perigban</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>Djegbanao</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-2</itextId>
+            <csps_list>CM Kampti</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>Fofora</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-3</itextId>
+            <csps_list>Gbalara</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>Gbangbankora</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-4</itextId>
+            <csps_list>Kosso</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Batié</ds_list>
+            <name>Kosso</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-5</itextId>
+            <csps_list>Holly</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Gaoua</ds_list>
+            <name>Koul campement</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-6</itextId>
+            <csps_list>Lerghin</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>Lerghin</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-7</itextId>
+            <csps_list>Loaba</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Bittou</ds_list>
+            <name>Loaba Peulh</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-8</itextId>
+            <csps_list>Sawenga</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Bittou</ds_list>
+            <name>Lougan</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-9</itextId>
+            <csps_list>Lerghin</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>Naboudin</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-10</itextId>
+            <csps_list>Niampira</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Gaoua</ds_list>
+            <name>Niampira</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-11</itextId>
+            <csps_list>Salembaore</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>Niorgho</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-12</itextId>
+            <csps_list>Latara</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>Ouatinao</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-13</itextId>
+            <csps_list>CM Gaoua</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Gaoua</ds_list>
+            <name>Sidoumoukar</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-14</itextId>
+            <csps_list>Ouada</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Bittou</ds_list>
+            <name>Soadin</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-15</itextId>
+            <csps_list>Koriba</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Batié</ds_list>
+            <name>Zindi</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-16</itextId>
+            <csps_list>Legmoin</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Batié</ds_list>
+            <name>Zinkapoko</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="code_site_list">
+        <root>
+          <item>
+            <itextId>code_site_list-0</itextId>
+            <csps_list>Bilgmdoure</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>BIL</name>
+            <sentinel_site_list>Bilgmdoure</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-1</itextId>
+            <csps_list>Perigban</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>DJE</name>
+            <sentinel_site_list>Djegbanao</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-2</itextId>
+            <csps_list>CM Kampti</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>FOF</name>
+            <sentinel_site_list>Fofora</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-3</itextId>
+            <csps_list>Gbalara</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>GBA</name>
+            <sentinel_site_list>Gbangbankora</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-4</itextId>
+            <csps_list>Kosso</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Batié</ds_list>
+            <name>KOS</name>
+            <sentinel_site_list>Kosso</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-5</itextId>
+            <csps_list>Holly</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Gaoua</ds_list>
+            <name>KOU</name>
+            <sentinel_site_list>Koul campement</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-6</itextId>
+            <csps_list>Lerghin</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>LER</name>
+            <sentinel_site_list>Lerghin</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-7</itextId>
+            <csps_list>Loaba</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Bittou</ds_list>
+            <name>LOA</name>
+            <sentinel_site_list>Loaba Peulh</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-8</itextId>
+            <csps_list>Sawenga</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Bittou</ds_list>
+            <name>LOU</name>
+            <sentinel_site_list>Lougan</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-9</itextId>
+            <csps_list>Lerghin</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>NAB</name>
+            <sentinel_site_list>Naboudin</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-10</itextId>
+            <csps_list>Niampira</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Gaoua</ds_list>
+            <name>NIA</name>
+            <sentinel_site_list>Niampira</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-11</itextId>
+            <csps_list>Salembaore</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Ouargaye</ds_list>
+            <name>NIO</name>
+            <sentinel_site_list>Niorgho</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-12</itextId>
+            <csps_list>Latara</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Kampti</ds_list>
+            <name>OUA</name>
+            <sentinel_site_list>Ouatinao</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-13</itextId>
+            <csps_list>CM Gaoua</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Gaoua</ds_list>
+            <name>SID</name>
+            <sentinel_site_list>Sidoumoukar</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-14</itextId>
+            <csps_list>Ouada</csps_list>
+            <drs_list>Centre-Est</drs_list>
+            <ds_list>Bittou</ds_list>
+            <name>SOA</name>
+            <sentinel_site_list>Soadin</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-15</itextId>
+            <csps_list>Legmoin</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Batié</ds_list>
+            <name>ZIN</name>
+            <sentinel_site_list>Zinkapoko</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-16</itextId>
+            <csps_list>Koriba</csps_list>
+            <drs_list>Sud-Ouest</drs_list>
+            <ds_list>Batié</ds_list>
+            <name>ZND</name>
+            <sentinel_site_list>Zindi</sentinel_site_list>
+          </item>
+        </root>
+      </instance>
+
+      <bind nodeset="/data/c_recorder" required="true()" type="string"/>
+      <bind nodeset="/data/c_drs" required="true()" type="string"  db_add_col_1="."/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="/data/c_drs" db_add_col_2="."/>
+      <bind nodeset="/data/c_csps" required="true()" type="string" db_add_col_2="/data/c_district" db_add_col_3="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_3="/data/c_csps" db_add_col_4="."/>
+      <bind nodeset="/data/c_site" required="true()" type="string"/>
+      <bind nodeset="/data/c_site_type" required="true()" type="string"/>
+      <bind nodeset="/data/c_cluster_id1" required="true()" type="string" db_add_col_4="/data/c_cluster_name" db_add_col_5="."/>
+      <bind constraint=".&gt;400" jr:constraintMsg="jr:itext('/data/c_population:jr:constraintMsg')" nodeset="/data/c_population" required="true()" type="int"/>
+      <bind jr:constraintMsg="jr:itext('/data/couverture_tdm_2020:jr:constraintMsg')" nodeset="/data/couverture_tdm_2020" required="true()" type="decimal"/>
+      <bind nodeset="/data/gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/commentaires" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 ref="/data/c_recorder">
+      <label ref="jr:itext('/data/c_recorder:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN01:label')"/>
+        <value>EN01</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN02:label')"/>
+        <value>EN02</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN03:label')"/>
+        <value>EN03</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN04:label')"/>
+        <value>EN04</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN05:label')"/>
+        <value>EN05</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN06:label')"/>
+        <value>EN06</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN07:label')"/>
+        <value>EN07</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN08:label')"/>
+        <value>EN08</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_drs">
+      <label ref="jr:itext('/data/c_drs:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_drs/Sud-Ouest:label')"/>
+        <value>Sud-Ouest</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_drs/Centre-Est:label')"/>
+        <value>Centre-Est</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+      <itemset nodeset="instance('ds_list')/root/item[drs_list =  /data/c_drs ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_csps">
+      <label ref="jr:itext('/data/c_csps:label')"/>
+      <itemset nodeset="instance('csps_list')/root/item[ds_list =  /data/c_district ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+      <itemset nodeset="instance('sentinel_site_list')/root/item[csps_list =  /data/c_csps ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_site">
+      <label ref="jr:itext('/data/c_site:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_site/Ecole:label')"/>
+        <value>Ecole</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_site/Communaute:label')"/>
+        <value>Communaute</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_site_type">
+      <label ref="jr:itext('/data/c_site_type:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_site_type/Site sentinelle:label')"/>
+        <value>Site sentinelle</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_site_type/Site de contrôle ponctuel:label')"/>
+        <value>Site de contrôle ponctuel</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_cluster_id1">
+      <label ref="jr:itext('/data/c_cluster_id1:label')"/>
+      <hint ref="jr:itext('/data/c_cluster_id1:hint')"/>
+      <itemset nodeset="instance('code_site_list')/root/item[sentinel_site_list =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_population">
+      <label ref="jr:itext('/data/c_population:label')"/>
+    </input>
+    <input ref="/data/couverture_tdm_2020">
+      <label ref="jr:itext('/data/couverture_tdm_2020:label')"/>
+      <hint ref="jr:itext('/data/couverture_tdm_2020:hint')"/>
+    </input>
+    <input ref="/data/gps">
+      <label ref="jr:itext('/data/gps:label')"/>
+    </input>
+    <input ref="/data/commentaires">
+      <label ref="jr:itext('/data/commentaires:label')"/>
+    </input>
+  </h:body>
+</h:html>
