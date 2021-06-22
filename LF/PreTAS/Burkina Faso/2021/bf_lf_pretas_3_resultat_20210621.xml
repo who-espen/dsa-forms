@@ -7,8 +7,9 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Juillet 2020) Pré TAS FL - 3. Formulaire Résultats V2</h:title>
+    <h:title>(BF - Juin 2021) Pré TAS FL - 3. Formulaire Résultats V2</h:title>
     <model >
+
 
       <instance>
         <data id="bf_lf_pretas_3_resultat_202007_v2_1" version="20200625">
@@ -162,6 +163,12 @@
           <text id="/data/nb_bandelette:label">
             <value>8. Nombre de Bandelette FTS utilisée pour tester l'individu</value>
           </text>
+          <text id="/data/nb_bandelette/1:label">
+            <value>1</value>
+          </text>
+          <text id="/data/nb_bandelette/2:label">
+            <value>2</value>
+          </text>
           <text id="/data/d_lotnumber1:label">
             <value>9. Lots FTS1</value>
           </text>
@@ -210,12 +217,6 @@
           <text id="/data/autre_expliquer_fts1:hint">
             <value>Si Autre (expliquer)</value>
           </text>
-          <text id="/data/photo1:jr:constraintMsg">
-            <value>
-              <output value=" /data/d_result1 "/>
- = '1_Positif' or <output value=" /data/d_result1 "/>
- = '3_Invalide'</value>
-          </text>
           <text id="/data/photo1:label">
             <value>13. Photo FTS1</value>
           </text>
@@ -263,12 +264,6 @@
           </text>
           <text id="/data/fts2_invalid_description/G_Autre_expliquer:label">
             <value>G. Autre (expliquer)</value>
-          </text>
-          <text id="/data/photo2:jr:constraintMsg">
-            <value>
-              <output value=" /data/d_result2 "/>
- = '1_Positif' or <output value=" /data/d_result2 "/>
- = '3_Invalide'</value>
           </text>
           <text id="/data/photo2:label">
             <value>17. Photos FTS2</value>
@@ -485,6 +480,12 @@
           </text>
           <text id="fts_lot-0">
             <value>Lot:141647 Exp:11/01/2022</value>
+          </text>
+          <text id="nb_test-0">
+            <value>1</value>
+          </text>
+          <text id="nb_test-1">
+            <value>2</value>
           </text>
         </translation>
       </itext>
@@ -781,23 +782,35 @@
           </item>
         </root>
       </instance>
+      <instance id="nb_test">
+        <root>
+          <item>
+            <itextId>nb_test-0</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>nb_test-1</itextId>
+            <name>2</name>
+          </item>
+        </root>
+      </instance>
       <bind nodeset="/data/d_recorder_id" required="true()" type="string"/>
       <bind nodeset="/data/village" required="true()" type="string"/>
       <bind nodeset="/data/d_cluster_id" required="true()" type="string"/>
       <bind nodeset="/data/d_id_type" required="true()" type="string"/>
       <bind nodeset="/data/d_barcode_id" relevant=" /data/d_id_type ='scanner'" required="true()" type="barcode"/>
       <bind constraint="string-length(.)=10 and regex(.,'^[a-zA-Z]{6}[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/manual_code:jr:constraintMsg')" nodeset="/data/manual_code" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
-      <bind constraint="string-length(.)=10 and . =  /data/manual_code" jr:constraintMsg="jr:itext('/data/manual_code2:jr:constraintMsg')" nodeset="/data/manual_code2" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
-      <bind constraint=".&gt;=1 and .&lt;=2" nodeset="/data/nb_bandelette" required="true()" type="int"/>
+      <bind constraint="string-length(.)=10 and . = /data/manual_code" jr:constraintMsg="jr:itext('/data/manual_code2:jr:constraintMsg')" nodeset="/data/manual_code2" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
+      <bind constraint=".&gt;=1 and .&lt;=2" nodeset="/data/nb_bandelette" required="true()" type="string"/>
       <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/fts1_invalid_description" relevant=" /data/d_result1  = '3_Invalide'" required="true()" type="string"/>
       <bind nodeset="/data/autre_expliquer_fts1" relevant=" /data/fts1_invalid_description ='G_Autre_expliquer'" required="true()" type="string"/>
-      <bind jr:constraintMsg="jr:itext('/data/photo1:jr:constraintMsg')" nodeset="/data/photo1" relevant="true()" required="true()" type="binary"/>
+      <bind nodeset="/data/photo1" relevant=" /data/d_result1  = '1_Positif' or  /data/d_result1  = '3_Invalide'" required="true()" type="binary"/>
       <bind nodeset="/data/d_lotnumber2" relevant=" /data/nb_bandelette  &gt; 1" required="true()" type="string"/>
       <bind nodeset="/data/d_result2" relevant=" /data/nb_bandelette  &gt; 1" required="true()" type="string"/>
       <bind nodeset="/data/fts2_invalid_description" relevant=" /data/d_result2  = '3_Invalide'" required="true()" type="string"/>
-      <bind jr:constraintMsg="jr:itext('/data/photo2:jr:constraintMsg')" nodeset="/data/photo2" relevant="true()" required="true()" type="binary"/>
+      <bind nodeset="/data/photo2" relevant=" /data/d_result2  = '1_Positif' or  /data/d_result2  = '3_Invalide'" required="true()" type="binary"/>
       <bind nodeset="/data/defis_operationnels" required="true()" type="string"/>
       <bind nodeset="/data/defis_operationnels_autre" relevant=" /data/defis_operationnels ='S_Autre (expliquer)'" required="true()" type="string"/>
       <bind nodeset="/data/observations" type="string"/>
@@ -943,9 +956,17 @@
       <label ref="jr:itext('/data/manual_code2:label')"/>
       <hint ref="jr:itext('/data/manual_code2:hint')"/>
     </input>
-    <input ref="/data/nb_bandelette">
+    <select1 ref="/data/nb_bandelette">
       <label ref="jr:itext('/data/nb_bandelette:label')"/>
-    </input>
+      <item>
+        <label ref="jr:itext('/data/nb_bandelette/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/nb_bandelette/2:label')"/>
+        <value>2</value>
+      </item>
+    </select1>
     <select1 ref="/data/d_lotnumber1">
       <label ref="jr:itext('/data/d_lotnumber1:label')"/>
       <item>

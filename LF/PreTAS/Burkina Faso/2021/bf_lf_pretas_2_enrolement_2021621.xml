@@ -8,10 +8,10 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>(BF - Juin 2021) Pré TAS FL - 2. Formulaire Enrôlement V2</h:title>
-    <model odk:xforms-version="1.0.0">
+    <model >
 
     <instance>
-      <data id="bf_lf_pretas_2_enrolement_202106_v2" version="20210605">
+      <data id="bf_lf_pretas_2_enrolement_202106_v2_1" version="20210605">
         <p_recorder_id/>
         <ds/>
         <csps/>
@@ -108,7 +108,7 @@
             <value>Code barre</value>
           </text>
           <text id="/data/manual_code:jr:constraintMsg">
-            <value>Paramétrer pour prendre 10 caractère</value>
+            <value>Paramétrer pour prendre 10 caractère. Doit avoir le format Pretas0001</value>
           </text>
           <text id="/data/manual_code:label">
             <value>Saisir le code barre</value>
@@ -262,7 +262,7 @@
     <bind nodeset="/data/status" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind nodeset="/data/ivm_alb" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind nodeset="/data/avm_alb_derniere_campagne" relevant=" /data/ivm_alb ='1_Oui' and  /data/p_consent  = '1_oui'" required="true()" type="string"/>
-    <bind constraint=".&gt;0 and .&lt;5" nodeset="/data/nb_fois_ivm_alb" relevant=" /data/ivm_alb ='1_Oui' and  /data/p_consent  = '1_oui'" required="true()" type="int"/>
+    <bind constraint=".&gt;0 and .&lt;6" nodeset="/data/nb_fois_ivm_alb" relevant=" /data/ivm_alb ='1_Oui' and  /data/p_consent  = '1_oui'" required="true()" type="int"/>
     <bind nodeset="/data/migration" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind nodeset="/data/migration_autre" relevant=" /data/migration ='13_autre_pays' and  /data/p_consent  = '1_oui'" type="string"/>
     <bind nodeset="/data/lymphoedeme" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
