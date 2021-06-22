@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Juin 2021) Pré TAS FL - 3. Formulaire Résultats V2</h:title>
+    <h:title>(BF - Juillet 2020) Pré TAS FL - 3. Formulaire Résultats V2</h:title>
     <model >
 
       <instance>
-        <data id="bf_lf_pretas_3_resultat_202106" version="20200625">
+        <data id="bf_lf_pretas_3_resultat_202007_v2_1" version="20200625">
           <d_recorder_id/>
           <village/>
           <d_cluster_id/>
@@ -72,8 +72,44 @@
           <text id="/data/village:label">
             <value>2.Village/site</value>
           </text>
+          <text id="/data/village/Lougan:label">
+            <value>Lougan</value>
+          </text>
+          <text id="/data/village/Soadin:label">
+            <value>Soadin</value>
+          </text>
+          <text id="/data/village/Loaba Peulh:label">
+            <value>Loaba Peulh</value>
+          </text>
           <text id="/data/village/Bilgmdoure:label">
             <value>Bilgmdoure</value>
+          </text>
+          <text id="/data/village/Niorgho:label">
+            <value>Niorgho</value>
+          </text>
+          <text id="/data/village/Lerghin:label">
+            <value>Lerghin</value>
+          </text>
+          <text id="/data/village/Naboudin:label">
+            <value>Naboudin</value>
+          </text>
+          <text id="/data/village/Kosso:label">
+            <value>Kosso</value>
+          </text>
+          <text id="/data/village/Zinkapoko:label">
+            <value>Zinkapoko</value>
+          </text>
+          <text id="/data/village/Zindi:label">
+            <value>Zindi</value>
+          </text>
+          <text id="/data/village/Koul campement:label">
+            <value>Koul campement</value>
+          </text>
+          <text id="/data/village/Niampira:label">
+            <value>Niampira</value>
+          </text>
+          <text id="/data/village/Sidoumoukar:label">
+            <value>Sidoumoukar</value>
           </text>
           <text id="/data/village/Djegbanao:label">
             <value>Djegbanao</value>
@@ -81,47 +117,11 @@
           <text id="/data/village/Fofora:label">
             <value>Fofora</value>
           </text>
-          <text id="/data/village/Gbangbankora:label">
-            <value>Gbangbankora</value>
-          </text>
-          <text id="/data/village/Kosso:label">
-            <value>Kosso</value>
-          </text>
-          <text id="/data/village/Koul campement:label">
-            <value>Koul campement</value>
-          </text>
-          <text id="/data/village/Lerghin:label">
-            <value>Lerghin</value>
-          </text>
-          <text id="/data/village/Loaba Peulh:label">
-            <value>Loaba Peulh</value>
-          </text>
-          <text id="/data/village/Lougan:label">
-            <value>Lougan</value>
-          </text>
-          <text id="/data/village/Naboudin:label">
-            <value>Naboudin</value>
-          </text>
-          <text id="/data/village/Niampira:label">
-            <value>Niampira</value>
-          </text>
-          <text id="/data/village/Niorgho:label">
-            <value>Niorgho</value>
-          </text>
           <text id="/data/village/Ouatinao:label">
             <value>Ouatinao</value>
           </text>
-          <text id="/data/village/Sidoumoukar:label">
-            <value>Sidoumoukar</value>
-          </text>
-          <text id="/data/village/Soadin:label">
-            <value>Soadin</value>
-          </text>
-          <text id="/data/village/Zindi:label">
-            <value>Zindi</value>
-          </text>
-          <text id="/data/village/Zinkapoko:label">
-            <value>Zinkapoko</value>
+          <text id="/data/village/Gbangbankora:label">
+            <value>Gbangbankora</value>
           </text>
           <text id="/data/d_cluster_id:label">
             <value>3.Code site</value>
@@ -142,7 +142,7 @@
             <value>Obtenir code barre</value>
           </text>
           <text id="/data/manual_code:jr:constraintMsg">
-            <value>Paramétrer pour prendre 10 caractère</value>
+            <value>Paramétrer pour prendre 10 caractère. Doit avoir le format Pretas0001</value>
           </text>
           <text id="/data/manual_code:label">
             <value>6.Saisir le code barre</value>
@@ -151,7 +151,7 @@
             <value>Exemple "PreTas0001"</value>
           </text>
           <text id="/data/manual_code2:jr:constraintMsg">
-            <value>Paramétrer pour prendre 10 caractère</value>
+            <value>Le code répété doit être le même</value>
           </text>
           <text id="/data/manual_code2:label">
             <value>7.Saisir le code barre à nouveau</value>
@@ -220,7 +220,7 @@
             <value>13. Photo FTS1</value>
           </text>
           <text id="/data/photo1:hint">
-            <value>Prendre les photos uniquement des invalide</value>
+            <value>Prendre les photos si positif ou invalide</value>
           </text>
           <text id="/data/d_lotnumber2:label">
             <value>14. Lots FTS2</value>
@@ -266,8 +266,7 @@
           </text>
           <text id="/data/photo2:jr:constraintMsg">
             <value>
-              <output value=" /data/d_result1 "/>
- =              <output value=" /data/d_result2 "/>
+              <output value=" /data/d_result2 "/>
  = '1_Positif' or <output value=" /data/d_result2 "/>
  = '3_Invalide'</value>
           </text>
@@ -275,7 +274,7 @@
             <value>17. Photos FTS2</value>
           </text>
           <text id="/data/photo2:hint">
-            <value>Prendre les photos uniquement des invalide</value>
+            <value>Prendre les photos si positif ou invalide</value>
           </text>
           <text id="/data/defis_operationnels:label">
             <value>18. Défis opérationnels observés</value>
@@ -303,6 +302,57 @@
           </text>
           <text id="/data/observations:label">
             <value>20. Observations</value>
+          </text>
+          <text id="code_site_list-0">
+            <value>LOU</value>
+          </text>
+          <text id="code_site_list-1">
+            <value>SOA</value>
+          </text>
+          <text id="code_site_list-2">
+            <value>LOA</value>
+          </text>
+          <text id="code_site_list-3">
+            <value>BIL</value>
+          </text>
+          <text id="code_site_list-4">
+            <value>NIO</value>
+          </text>
+          <text id="code_site_list-5">
+            <value>LER</value>
+          </text>
+          <text id="code_site_list-6">
+            <value>NAB</value>
+          </text>
+          <text id="code_site_list-7">
+            <value>KOS</value>
+          </text>
+          <text id="code_site_list-8">
+            <value>ZIN</value>
+          </text>
+          <text id="code_site_list-9">
+            <value>ZND</value>
+          </text>
+          <text id="code_site_list-10">
+            <value>KOU</value>
+          </text>
+          <text id="code_site_list-11">
+            <value>NIA</value>
+          </text>
+          <text id="code_site_list-12">
+            <value>SID</value>
+          </text>
+          <text id="code_site_list-13">
+            <value>DJE</value>
+          </text>
+          <text id="code_site_list-14">
+            <value>FOF</value>
+          </text>
+          <text id="code_site_list-15">
+            <value>OUA</value>
+          </text>
+          <text id="code_site_list-16">
+            <value>GBA</value>
           </text>
           <text id="d_id_type-0">
             <value>Manuel</value>
@@ -382,114 +432,151 @@
           <text id="resultat_list-2">
             <value>3 Invalide</value>
           </text>
+          <text id="sentinel_site_list-0">
+            <value>Lougan</value>
+          </text>
+          <text id="sentinel_site_list-1">
+            <value>Soadin</value>
+          </text>
+          <text id="sentinel_site_list-2">
+            <value>Loaba Peulh</value>
+          </text>
+          <text id="sentinel_site_list-3">
+            <value>Bilgmdoure</value>
+          </text>
+          <text id="sentinel_site_list-4">
+            <value>Niorgho</value>
+          </text>
+          <text id="sentinel_site_list-5">
+            <value>Lerghin</value>
+          </text>
+          <text id="sentinel_site_list-6">
+            <value>Naboudin</value>
+          </text>
+          <text id="sentinel_site_list-7">
+            <value>Kosso</value>
+          </text>
+          <text id="sentinel_site_list-8">
+            <value>Zinkapoko</value>
+          </text>
+          <text id="sentinel_site_list-9">
+            <value>Zindi</value>
+          </text>
+          <text id="sentinel_site_list-10">
+            <value>Koul campement</value>
+          </text>
+          <text id="sentinel_site_list-11">
+            <value>Niampira</value>
+          </text>
+          <text id="sentinel_site_list-12">
+            <value>Sidoumoukar</value>
+          </text>
+          <text id="sentinel_site_list-13">
+            <value>Djegbanao</value>
+          </text>
+          <text id="sentinel_site_list-14">
+            <value>Fofora</value>
+          </text>
+          <text id="sentinel_site_list-15">
+            <value>Ouatinao</value>
+          </text>
+          <text id="sentinel_site_list-16">
+            <value>Gbangbankora</value>
+          </text>
           <text id="fts_lot-0">
             <value>Lot:141647 Exp:11/01/2022</value>
           </text>
-          <text id="sentinel_site_list-0">
-            <value>Bilgmdoure</value>
-          </text>
-          <text id="sentinel_site_list-1">
-            <value>Djegbanao</value>
-          </text>
-          <text id="sentinel_site_list-2">
-            <value>Fofora</value>
-          </text>
-          <text id="sentinel_site_list-3">
-            <value>Gbangbankora</value>
-          </text>
-          <text id="sentinel_site_list-4">
-            <value>Kosso</value>
-          </text>
-          <text id="sentinel_site_list-5">
-            <value>Koul campement</value>
-          </text>
-          <text id="sentinel_site_list-6">
-            <value>Lerghin</value>
-          </text>
-          <text id="sentinel_site_list-7">
-            <value>Loaba Peulh</value>
-          </text>
-          <text id="sentinel_site_list-8">
-            <value>Lougan</value>
-          </text>
-          <text id="sentinel_site_list-9">
-            <value>Naboudin</value>
-          </text>
-          <text id="sentinel_site_list-10">
-            <value>Niampira</value>
-          </text>
-          <text id="sentinel_site_list-11">
-            <value>Niorgho</value>
-          </text>
-          <text id="sentinel_site_list-12">
-            <value>Ouatinao</value>
-          </text>
-          <text id="sentinel_site_list-13">
-            <value>Sidoumoukar</value>
-          </text>
-          <text id="sentinel_site_list-14">
-            <value>Soadin</value>
-          </text>
-          <text id="sentinel_site_list-15">
-            <value>Zindi</value>
-          </text>
-          <text id="sentinel_site_list-16">
-            <value>Zinkapoko</value>
-          </text>
-          <text id="code_site_list-0">
-            <value>BIL</value>
-          </text>
-          <text id="code_site_list-1">
-            <value>DJE</value>
-          </text>
-          <text id="code_site_list-2">
-            <value>FOF</value>
-          </text>
-          <text id="code_site_list-3">
-            <value>GBA</value>
-          </text>
-          <text id="code_site_list-4">
-            <value>KOS</value>
-          </text>
-          <text id="code_site_list-5">
-            <value>KOU</value>
-          </text>
-          <text id="code_site_list-6">
-            <value>LER</value>
-          </text>
-          <text id="code_site_list-7">
-            <value>LOA</value>
-          </text>
-          <text id="code_site_list-8">
-            <value>LOU</value>
-          </text>
-          <text id="code_site_list-9">
-            <value>NAB</value>
-          </text>
-          <text id="code_site_list-10">
-            <value>NIA</value>
-          </text>
-          <text id="code_site_list-11">
-            <value>NIO</value>
-          </text>
-          <text id="code_site_list-12">
-            <value>OUA</value>
-          </text>
-          <text id="code_site_list-13">
-            <value>SID</value>
-          </text>
-          <text id="code_site_list-14">
-            <value>SOA</value>
-          </text>
-          <text id="code_site_list-15">
-            <value>ZIN</value>
-          </text>
-          <text id="code_site_list-16">
-            <value>ZND</value>
-          </text>
         </translation>
       </itext>
-
+      <instance id="code_site_list">
+        <root>
+          <item>
+            <itextId>code_site_list-0</itextId>
+            <name>LOU</name>
+            <sentinel_site_list>Lougan</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-1</itextId>
+            <name>SOA</name>
+            <sentinel_site_list>Soadin</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-2</itextId>
+            <name>LOA</name>
+            <sentinel_site_list>Loaba Peulh</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-3</itextId>
+            <name>BIL</name>
+            <sentinel_site_list>Bilgmdoure</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-4</itextId>
+            <name>NIO</name>
+            <sentinel_site_list>Niorgho</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-5</itextId>
+            <name>LER</name>
+            <sentinel_site_list>Lerghin</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-6</itextId>
+            <name>NAB</name>
+            <sentinel_site_list>Naboudin</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-7</itextId>
+            <name>KOS</name>
+            <sentinel_site_list>Kosso</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-8</itextId>
+            <name>ZIN</name>
+            <sentinel_site_list>Zinkapoko</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-9</itextId>
+            <name>ZND</name>
+            <sentinel_site_list>Zindi</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-10</itextId>
+            <name>KOU</name>
+            <sentinel_site_list>Koul campement</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-11</itextId>
+            <name>NIA</name>
+            <sentinel_site_list>Niampira</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-12</itextId>
+            <name>SID</name>
+            <sentinel_site_list>Sidoumoukar</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-13</itextId>
+            <name>DJE</name>
+            <sentinel_site_list>Djegbanao</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-14</itextId>
+            <name>FOF</name>
+            <sentinel_site_list>Fofora</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-15</itextId>
+            <name>OUA</name>
+            <sentinel_site_list>Ouatinao</sentinel_site_list>
+          </item>
+          <item>
+            <itextId>code_site_list-16</itextId>
+            <name>GBA</name>
+            <sentinel_site_list>Gbangbankora</sentinel_site_list>
+          </item>
+        </root>
+      </instance>
       <instance id="d_id_type">
         <root>
           <item>
@@ -614,274 +701,83 @@
           </item>
         </root>
       </instance>
+      <instance id="sentinel_site_list">
+        <root>
+          <item>
+            <itextId>sentinel_site_list-0</itextId>
+            <name>Lougan</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-1</itextId>
+            <name>Soadin</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-2</itextId>
+            <name>Loaba Peulh</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-3</itextId>
+            <name>Bilgmdoure</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-4</itextId>
+            <name>Niorgho</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-5</itextId>
+            <name>Lerghin</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-6</itextId>
+            <name>Naboudin</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-7</itextId>
+            <name>Kosso</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-8</itextId>
+            <name>Zinkapoko</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-9</itextId>
+            <name>Zindi</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-10</itextId>
+            <name>Koul campement</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-11</itextId>
+            <name>Niampira</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-12</itextId>
+            <name>Sidoumoukar</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-13</itextId>
+            <name>Djegbanao</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-14</itextId>
+            <name>Fofora</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-15</itextId>
+            <name>Ouatinao</name>
+          </item>
+          <item>
+            <itextId>sentinel_site_list-16</itextId>
+            <name>Gbangbankora</name>
+          </item>
+        </root>
+      </instance>
       <instance id="fts_lot">
         <root>
           <item>
             <itextId>fts_lot-0</itextId>
             <name>Lot:141647 Exp:11/01/2022</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="sentinel_site_list">
-        <root>
-          <item>
-            <itextId>sentinel_site_list-0</itextId>
-            <csps_list>Bilgmdoure</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Ouargaye</ds_list>
-            <name>Bilgmdoure</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-1</itextId>
-            <csps_list>Perigban</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Kampti</ds_list>
-            <name>Djegbanao</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-2</itextId>
-            <csps_list>CM Kampti</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Kampti</ds_list>
-            <name>Fofora</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-3</itextId>
-            <csps_list>Gbalara</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Kampti</ds_list>
-            <name>Gbangbankora</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-4</itextId>
-            <csps_list>Kosso</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Batié</ds_list>
-            <name>Kosso</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-5</itextId>
-            <csps_list>Holly</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Gaoua</ds_list>
-            <name>Koul campement</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-6</itextId>
-            <csps_list>Lerghin</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Ouargaye</ds_list>
-            <name>Lerghin</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-7</itextId>
-            <csps_list>Loaba</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Bittou</ds_list>
-            <name>Loaba Peulh</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-8</itextId>
-            <csps_list>Sawenga</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Bittou</ds_list>
-            <name>Lougan</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-9</itextId>
-            <csps_list>Lerghin</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Ouargaye</ds_list>
-            <name>Naboudin</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-10</itextId>
-            <csps_list>Niampira</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Gaoua</ds_list>
-            <name>Niampira</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-11</itextId>
-            <csps_list>Salembaore</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Ouargaye</ds_list>
-            <name>Niorgho</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-12</itextId>
-            <csps_list>Latara</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Kampti</ds_list>
-            <name>Ouatinao</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-13</itextId>
-            <csps_list>CM Gaoua</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Gaoua</ds_list>
-            <name>Sidoumoukar</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-14</itextId>
-            <csps_list>Ouada</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Bittou</ds_list>
-            <name>Soadin</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-15</itextId>
-            <csps_list>Koriba</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Batié</ds_list>
-            <name>Zindi</name>
-          </item>
-          <item>
-            <itextId>sentinel_site_list-16</itextId>
-            <csps_list>Legmoin</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Batié</ds_list>
-            <name>Zinkapoko</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="code_site_list">
-        <root>
-          <item>
-            <itextId>code_site_list-0</itextId>
-            <csps_list>Bilgmdoure</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Ouargaye</ds_list>
-            <name>BIL</name>
-            <sentinel_site_list>Bilgmdoure</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-1</itextId>
-            <csps_list>Perigban</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Kampti</ds_list>
-            <name>DJE</name>
-            <sentinel_site_list>Djegbanao</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-2</itextId>
-            <csps_list>CM Kampti</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Kampti</ds_list>
-            <name>FOF</name>
-            <sentinel_site_list>Fofora</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-3</itextId>
-            <csps_list>Gbalara</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Kampti</ds_list>
-            <name>GBA</name>
-            <sentinel_site_list>Gbangbankora</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-4</itextId>
-            <csps_list>Kosso</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Batié</ds_list>
-            <name>KOS</name>
-            <sentinel_site_list>Kosso</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-5</itextId>
-            <csps_list>Holly</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Gaoua</ds_list>
-            <name>KOU</name>
-            <sentinel_site_list>Koul campement</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-6</itextId>
-            <csps_list>Lerghin</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Ouargaye</ds_list>
-            <name>LER</name>
-            <sentinel_site_list>Lerghin</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-7</itextId>
-            <csps_list>Loaba</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Bittou</ds_list>
-            <name>LOA</name>
-            <sentinel_site_list>Loaba Peulh</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-8</itextId>
-            <csps_list>Sawenga</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Bittou</ds_list>
-            <name>LOU</name>
-            <sentinel_site_list>Lougan</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-9</itextId>
-            <csps_list>Lerghin</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Ouargaye</ds_list>
-            <name>NAB</name>
-            <sentinel_site_list>Naboudin</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-10</itextId>
-            <csps_list>Niampira</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Gaoua</ds_list>
-            <name>NIA</name>
-            <sentinel_site_list>Niampira</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-11</itextId>
-            <csps_list>Salembaore</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Ouargaye</ds_list>
-            <name>NIO</name>
-            <sentinel_site_list>Niorgho</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-12</itextId>
-            <csps_list>Latara</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Kampti</ds_list>
-            <name>OUA</name>
-            <sentinel_site_list>Ouatinao</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-13</itextId>
-            <csps_list>CM Gaoua</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Gaoua</ds_list>
-            <name>SID</name>
-            <sentinel_site_list>Sidoumoukar</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-14</itextId>
-            <csps_list>Ouada</csps_list>
-            <drs_list>Centre-Est</drs_list>
-            <ds_list>Bittou</ds_list>
-            <name>SOA</name>
-            <sentinel_site_list>Soadin</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-15</itextId>
-            <csps_list>Legmoin</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Batié</ds_list>
-            <name>ZIN</name>
-            <sentinel_site_list>Zinkapoko</sentinel_site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-16</itextId>
-            <csps_list>Koriba</csps_list>
-            <drs_list>Sud-Ouest</drs_list>
-            <ds_list>Batié</ds_list>
-            <name>ZND</name>
-            <sentinel_site_list>Zindi</sentinel_site_list>
           </item>
         </root>
       </instance>
@@ -891,19 +787,19 @@
       <bind nodeset="/data/d_id_type" required="true()" type="string"/>
       <bind nodeset="/data/d_barcode_id" relevant=" /data/d_id_type ='scanner'" required="true()" type="barcode"/>
       <bind constraint="string-length(.)=10 and regex(.,'^[a-zA-Z]{6}[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/manual_code:jr:constraintMsg')" nodeset="/data/manual_code" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
-      <bind constraint="string-length(.)=10 and . =  /data/manual_code " jr:constraintMsg="jr:itext('/data/manual_code2:jr:constraintMsg')" nodeset="/data/manual_code2" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
+      <bind constraint="string-length(.)=10 and . =  /data/manual_code" jr:constraintMsg="jr:itext('/data/manual_code2:jr:constraintMsg')" nodeset="/data/manual_code2" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
       <bind constraint=".&gt;=1 and .&lt;=2" nodeset="/data/nb_bandelette" required="true()" type="int"/>
       <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
-      <bind nodeset="/data/fts1_invalid_description" relevant=" /data/d_result1  = '3_Invalide'" type="string"/>
-      <bind nodeset="/data/autre_expliquer_fts1" relevant=" /data/fts1_invalid_description ='G_Autre_expliquer'" type="string"/>
-      <bind jr:constraintMsg="jr:itext('/data/photo1:jr:constraintMsg')" nodeset="/data/photo1" relevant="true()" type="binary"/>
-      <bind nodeset="/data/d_lotnumber2" relevant=" /data/nb_bandelette  &gt; 1" type="string"/>
-      <bind nodeset="/data/d_result2" relevant=" /data/nb_bandelette  &gt; 1" type="string"/>
-      <bind nodeset="/data/fts2_invalid_description" relevant=" /data/d_result2  = '3_Invalide'" type="string"/>
-      <bind jr:constraintMsg="jr:itext('/data/photo2:jr:constraintMsg')" nodeset="/data/photo2" relevant="true()" type="binary"/>
-      <bind nodeset="/data/defis_operationnels" type="string"/>
-      <bind nodeset="/data/defis_operationnels_autre" relevant=" /data/defis_operationnels ='S_Autre (expliquer)'" type="string"/>
+      <bind nodeset="/data/fts1_invalid_description" relevant=" /data/d_result1  = '3_Invalide'" required="true()" type="string"/>
+      <bind nodeset="/data/autre_expliquer_fts1" relevant=" /data/fts1_invalid_description ='G_Autre_expliquer'" required="true()" type="string"/>
+      <bind jr:constraintMsg="jr:itext('/data/photo1:jr:constraintMsg')" nodeset="/data/photo1" relevant="true()" required="true()" type="binary"/>
+      <bind nodeset="/data/d_lotnumber2" relevant=" /data/nb_bandelette  &gt; 1" required="true()" type="string"/>
+      <bind nodeset="/data/d_result2" relevant=" /data/nb_bandelette  &gt; 1" required="true()" type="string"/>
+      <bind nodeset="/data/fts2_invalid_description" relevant=" /data/d_result2  = '3_Invalide'" required="true()" type="string"/>
+      <bind jr:constraintMsg="jr:itext('/data/photo2:jr:constraintMsg')" nodeset="/data/photo2" relevant="true()" required="true()" type="binary"/>
+      <bind nodeset="/data/defis_operationnels" required="true()" type="string"/>
+      <bind nodeset="/data/defis_operationnels_autre" relevant=" /data/defis_operationnels ='S_Autre (expliquer)'" required="true()" type="string"/>
       <bind nodeset="/data/observations" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
@@ -949,8 +845,56 @@
     <select1 ref="/data/village">
       <label ref="jr:itext('/data/village:label')"/>
       <item>
+        <label ref="jr:itext('/data/village/Lougan:label')"/>
+        <value>Lougan</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Soadin:label')"/>
+        <value>Soadin</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Loaba Peulh:label')"/>
+        <value>Loaba Peulh</value>
+      </item>
+      <item>
         <label ref="jr:itext('/data/village/Bilgmdoure:label')"/>
         <value>Bilgmdoure</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Niorgho:label')"/>
+        <value>Niorgho</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Lerghin:label')"/>
+        <value>Lerghin</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Naboudin:label')"/>
+        <value>Naboudin</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Kosso:label')"/>
+        <value>Kosso</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Zinkapoko:label')"/>
+        <value>Zinkapoko</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Zindi:label')"/>
+        <value>Zindi</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Koul campement:label')"/>
+        <value>Koul campement</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Niampira:label')"/>
+        <value>Niampira</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/village/Sidoumoukar:label')"/>
+        <value>Sidoumoukar</value>
       </item>
       <item>
         <label ref="jr:itext('/data/village/Djegbanao:label')"/>
@@ -961,60 +905,12 @@
         <value>Fofora</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/village/Gbangbankora:label')"/>
-        <value>Gbangbankora</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Kosso:label')"/>
-        <value>Kosso</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Koul campement:label')"/>
-        <value>Koul campement</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Lerghin:label')"/>
-        <value>Lerghin</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Loaba Peulh:label')"/>
-        <value>Loaba Peulh</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Lougan:label')"/>
-        <value>Lougan</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Naboudin:label')"/>
-        <value>Naboudin</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Niampira:label')"/>
-        <value>Niampira</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Niorgho:label')"/>
-        <value>Niorgho</value>
-      </item>
-      <item>
         <label ref="jr:itext('/data/village/Ouatinao:label')"/>
         <value>Ouatinao</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/village/Sidoumoukar:label')"/>
-        <value>Sidoumoukar</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Soadin:label')"/>
-        <value>Soadin</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Zindi:label')"/>
-        <value>Zindi</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/village/Zinkapoko:label')"/>
-        <value>Zinkapoko</value>
+        <label ref="jr:itext('/data/village/Gbangbankora:label')"/>
+        <value>Gbangbankora</value>
       </item>
     </select1>
     <select1 ref="/data/d_cluster_id">
