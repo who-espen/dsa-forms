@@ -302,7 +302,7 @@
       <bind nodeset="/data/q_BitesPerDay" relevant="selected( /data/q_Consent , 'Oui') and selected( /data/q_BitesProblems , 'Oui')" required="true()" type="string"/>
       <bind nodeset="/data/q_KnowBlackflySeason" relevant="selected( /data/q_Consent , 'Oui') and selected( /data/q_BitesProblems , 'Oui')" required="true()" type="string"/>
       <bind nodeset="/data/q_BlackflySeason" relevant="selected( /data/q_Consent , 'Oui') and selected( /data/q_BitesProblems , 'Oui') and selected( /data/q_KnowBlackflySeason , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/q_EndSurveyNote" readonly="true()" type="string"/>
+      <bind nodeset="/data/q_EndSurveyNote" readonly="true()"  relevant="selected( /data/q_Consent , 'Non')" type="string"/>
       <bind nodeset="/data/q_Notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/q_StartTime" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/q_EndTime" type="dateTime"/>
@@ -551,7 +551,7 @@
         <value>Non</value>
       </item>
     </select1>
-    <select1 ref="/data/q_BlackflySeason">
+    <select ref="/data/q_BlackflySeason">
       <label ref="jr:itext('/data/q_BlackflySeason:label')"/>
       <item>
         <label ref="jr:itext('/data/q_BlackflySeason/Janvier:label')"/>
@@ -601,7 +601,7 @@
         <label ref="jr:itext('/data/q_BlackflySeason/Décembre:label')"/>
         <value>Décembre</value>
       </item>
-    </select1>
+    </select>
     <input ref="/data/q_EndSurveyNote">
       <label ref="jr:itext('/data/q_EndSurveyNote:label')"/>
     </input>
