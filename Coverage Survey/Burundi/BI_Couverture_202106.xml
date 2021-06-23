@@ -1,3205 +1,995 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<h:html xmlns="http://www.w3.org/2002/xforms"
-  xmlns:ev="http://www.w3.org/2001/xml-events"
-  xmlns:h="http://www.w3.org/1999/xhtml"
-  xmlns:jr="http://openrosa.org/javarosa"
-  xmlns:odk="http://www.opendatakit.org/xforms"
-  xmlns:orx="http://openrosa.org/xforms"
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <h:head>
-    <h:title>BURUNDI - Enquête de couverture</h:title>
-    <model >
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<h:head>
+		<h:title>2. Formulaire Couverture ALB+IVM FL - BURUNDI Juin 2021 V1</h:title>
+		<model>
 
-      <instance>
-        <data id="bi_cs_coverage_v1" version="202106">
-          <code_enqueteur/>
-          <district/>
-          <commune/>
-          <centre_sante/>
-          <colline/>
-          <colline_id/>
-          <num_menage/>
-          <membre_present/>
-          <questions>
-            <ajouter_participant/>
-            <code_participant/>
-            <sexe/>
-            <age/>
-            <dec>
-              <recu_medicament1/>
-              <pourquoi_pas_recu1/>
-              <pourquoi_pas_recu_autre1/>
-              <avale1/>
-              <pourquoi_avale1/>
-              <pourquoi_avale_autre1/>
-              <pourquoi_pas_avale1/>
-              <pourquoi_pas_avale_autre1/>
-            </dec>
-            <ivm>
-              <recu_medicament2/>
-              <pourquoi_pas_recu2/>
-              <pourquoi_pas_recu_autre2/>
-              <avale2/>
-              <pourquoi_avale2/>
-              <pourquoi_avale_autre2/>
-              <pourquoi_pas_avale2/>
-              <pourquoi_pas_avale_autre2/>
-            </ivm>
-            <alb>
-              <recu_medicament3/>
-              <pourquoi_pas_recu3/>
-              <pourquoi_pas_recu_autre3/>
-              <avale3/>
-              <pourquoi_avale3/>
-              <pourquoi_avale_autre3/>
-              <pourquoi_pas_avale3/>
-              <pourquoi_pas_avale_autre3/>
-            </alb>
-            <meta_randomnum/>
-          </questions>
-          <note1/>
-          <note/>
-          <start_date/>
-          <end_date/>
-          <meta>
-            <instanceID/>
-          </meta>
-        </data>
-      </instance>
+			<instance>
+				<data id="bi_Coverage_juin_2021_1lf_coverage_v1" version="202106_V1">
+					<date/>
+					<code_enqueteur/>
+					<district/>
+					<commune/>
+					<centre_sante/>
+					<colline/>
+					<colline_id/>
+					<num_menage/>
+					<membre_present/>
+					<questions jr:template="">
+						<ajouter_participant/>
+						<code_participant/>
+						<sexe/>
+						<age/>
+						<present_campagne/>
+						<non_present_campagne/>
+						<non_present_campagne_autre/>
+						<menage_enregistre/>
+						<non_menage_enregistre/>
+						<non_menage_enregistre_autre/>
+						<ivm>
+							<recu_medicament1/>
+							<pourquoi_pas_recu1/>
+							<pourquoi_pas_recu_autre1/>
+							<avale1/>
+							<pourquoi_avale1/>
+							<pourquoi_avale_autre1/>
+							<pourquoi_pas_avale1/>
+							<pourquoi_pas_avale_autre1/>
+							<lieu_prise_mectizan1/>
+							<lieu_prise_mectizan_autre1/>
+						</ivm>
+						<alb>
+							<recu_medicament2/>
+							<pourquoi_pas_recu2/>
+							<pourquoi_pas_recu_autre2/>
+							<avale2/>
+							<pourquoi_avale2/>
+							<pourquoi_avale_autre2/>
+							<pourquoi_pas_avale2/>
+							<pourquoi_pas_avale_autre2/>
+						</alb>
+						<canaux_com/>
+						<canaux_com_autre/>
+					</questions>
+					<questions>
+						<ajouter_participant/>
+						<code_participant/>
+						<sexe/>
+						<age/>
+						<present_campagne/>
+						<non_present_campagne/>
+						<non_present_campagne_autre/>
+						<menage_enregistre/>
+						<non_menage_enregistre/>
+						<non_menage_enregistre_autre/>
+						<ivm>
+							<recu_medicament1/>
+							<pourquoi_pas_recu1/>
+							<pourquoi_pas_recu_autre1/>
+							<avale1/>
+							<pourquoi_avale1/>
+							<pourquoi_avale_autre1/>
+							<pourquoi_pas_avale1/>
+							<pourquoi_pas_avale_autre1/>
+							<lieu_prise_mectizan1/>
+							<lieu_prise_mectizan_autre1/>
+						</ivm>
+						<alb>
+							<recu_medicament2/>
+							<pourquoi_pas_recu2/>
+							<pourquoi_pas_recu_autre2/>
+							<avale2/>
+							<pourquoi_avale2/>
+							<pourquoi_avale_autre2/>
+							<pourquoi_pas_avale2/>
+							<pourquoi_pas_avale_autre2/>
+						</alb>
+						<canaux_com/>
+						<canaux_com_autre/>
+					</questions>
+					<note1/>
+					<note/>
+					<start_date/>
+					<end_date/>
+					<meta>
+						<instanceID/>
+					</meta>
+				</data>
+			</instance>
 
-      <itext>
-        <translation default="true()" lang="Français">
-          <text id="/data/code_enqueteur:jr:constraintMsg">
-            <value>Le code doit être compris entre 0 et 100</value>
-          </text>
-          <text id="/data/code_enqueteur:label">
-            <value>Code de l'enquêteur</value>
-          </text>
-          <text id="/data/district:label">
-            <value>District</value>
-          </text>
-          <text id="/data/district/GIHOFI:label">
-            <value>GIHOFI</value>
-          </text>
-          <text id="/data/district/MPANDA:label">
-            <value>MPANDA</value>
-          </text>
-          <text id="/data/commune:label">
-            <value>Commune</value>
-          </text>
-          <text id="/data/centre_sante:label">
-            <value>Centre de santé</value>
-          </text>
-          <text id="/data/colline:label">
-            <value>Colline</value>
-          </text>
-          <text id="/data/colline_id:label">
-            <value>Sélectionnez le code de la colline</value>
-          </text>
-          <text id="/data/num_menage:label">
-            <value>Numéro du ménage</value>
-          </text>
-          <text id="/data/membre_present:label">
-            <value>Les membres du ménage sont-ils présents? (O/N)</value>
-          </text>
-          <text id="/data/membre_present/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/membre_present/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/questions:label">
-            <value>Questions individuelles aux participants</value>
-          </text>
-          <text id="/data/questions/ajouter_participant:label">
-            <value>Voulez-vous ajouter un participant?</value>
-          </text>
-          <text id="/data/questions/ajouter_participant/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/questions/ajouter_participant/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/questions/code_participant:label">
-            <value>Code du participant</value>
-          </text>
-          <text id="/data/questions/sexe:label">
-            <value>Sexe</value>
-          </text>
-          <text id="/data/questions/sexe/M:label">
-            <value>M</value>
-          </text>
-          <text id="/data/questions/sexe/F:label">
-            <value>F</value>
-          </text>
-          <text id="/data/questions/age:jr:constraintMsg">
-            <value>L'age entré est incorrect</value>
-          </text>
-          <text id="/data/questions/age:label">
-            <value>Age</value>
-          </text>
-          <text id="/data/questions/dec:label">
-            <value>DIETHYLECARBAMAZINE (DEC)</value>
-          </text>
-          <text id="/data/questions/dec/recu_medicament1:label">
-            <value>(DEC) Avez-vous reçu le(s) médicament(s)?</value>
-          </text>
-          <text id="/data/questions/dec/recu_medicament1/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/questions/dec/recu_medicament1/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/questions/dec/recu_medicament1/Ne.sais.pas:label">
-            <value>Je ne sais pas</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1:label">
-            <value>(DEC) Pourquoi n'en avez-vous pas reçu?</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/1.en.dessous.du.groupe.cible:label">
-            <value>1. En dessous du groupe cible</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/2.enceinte:label">
-            <value>2. Enceinte</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/3.allaitante:label">
-            <value>3. Mère allaitante</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/4.malade:label">
-            <value>4. Malade</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/5.absent:label">
-            <value>5. Absent(e)</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/6.pas.informe.de.la.campagne.mda:label">
-            <value>6. Pas informé de la campagne TDM</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/7.rupture.de.medicaments:label">
-            <value>7. Rupture de médicaments</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/8.personne.n.est.passe:label">
-            <value>8. Personne n'est passé</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/9.refus:label">
-            <value>9. Refus</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/Autre:label">
-            <value>10. Autres</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu_autre1:label">
-            <value>(DEC) Veuillez spécifier les autres raisons</value>
-          </text>
-          <text id="/data/questions/dec/avale1:label">
-            <value>(DEC) Avez-vous avalé vos médicaments?</value>
-          </text>
-          <text id="/data/questions/dec/avale1/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/questions/dec/avale1/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/questions/dec/avale1/Ne.sais.pas:label">
-            <value>Je ne sais pas</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1:label">
-            <value>(DEC) Pourquoi les avez-vous avalé?</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1/1.peur.de.la.maladie:label">
-            <value>1. Peur de la maladie</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1/2.pour.traiter.la.maladie:label">
-            <value>2. Pour traiter la maladie</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1/3.parce.que.gratuit:label">
-            <value>3. Parce que c'était offert (gratuit)</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1/4.des.informations.utiles.ont.ete.donnees:label">
-            <value>4. Des informations utiles ont été données</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1/Autre:label">
-            <value>5. Autre</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale_autre1:label">
-            <value>(DEC) Veuillez spécifier les autres raisons</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1:label">
-            <value>(DEC) Pourquoi ne les avez-vous pas avalé?</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1/1.peur.des.effets.indesirables:label">
-            <value>1. Peur des effets indésirables</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1/2.mauvais.gout:label">
-            <value>2. Mauvais goût</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1/3.je.ne.suis.pas.malade:label">
-            <value>3. Je ne suis pas malade</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1/4.pas.recu.suffisamment.d'informations:label">
-            <value>4. Je n'ai pas eu suffisament d'informations sur le médicament</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1/Autre:label">
-            <value>5. Autre</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale_autre1:label">
-            <value>(DEC) Veuillez spécifier les autres raisons</value>
-          </text>
-          <text id="/data/questions/ivm:label">
-            <value>IVERMECTINE (IVM)</value>
-          </text>
-          <text id="/data/questions/ivm/recu_medicament2:label">
-            <value>(IVM) Avez-vous reçu le(s) médicament(s)?</value>
-          </text>
-          <text id="/data/questions/ivm/recu_medicament2/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/questions/ivm/recu_medicament2/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/questions/ivm/recu_medicament2/Ne.sais.pas:label">
-            <value>Je ne sais pas</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2:label">
-            <value>(IVM) Pourquoi n'en avez-vous pas reçu?</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/1.en.dessous.du.groupe.cible:label">
-            <value>1. En dessous du groupe cible</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/2.enceinte:label">
-            <value>2. Enceinte</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/3.allaitante:label">
-            <value>3. Mère allaitante</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/4.malade:label">
-            <value>4. Malade</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/5.absent:label">
-            <value>5. Absent(e)</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/6.pas.informe.de.la.campagne.mda:label">
-            <value>6. Pas informé de la campagne TDM</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/7.rupture.de.medicaments:label">
-            <value>7. Rupture de médicaments</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/8.personne.n.est.passe:label">
-            <value>8. Personne n'est passé</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/9.refus:label">
-            <value>9. Refus</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/Autre:label">
-            <value>10. Autres</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu_autre2:label">
-            <value>(IVM) Veuillez spécifier les autres raisons</value>
-          </text>
-          <text id="/data/questions/ivm/avale2:label">
-            <value>(IVM) Avez-vous avalé vos médicaments?</value>
-          </text>
-          <text id="/data/questions/ivm/avale2/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/questions/ivm/avale2/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/questions/ivm/avale2/Ne.sais.pas:label">
-            <value>Je ne sais pas</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2:label">
-            <value>(IVM) Pourquoi les avez-vous avalé?</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2/1.peur.de.la.maladie:label">
-            <value>1. Peur de la maladie</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2/2.pour.traiter.la.maladie:label">
-            <value>2. Pour traiter la maladie</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2/3.parce.que.gratuit:label">
-            <value>3. Parce que c'était offert (gratuit)</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2/4.des.informations.utiles.ont.ete.donnees:label">
-            <value>4. Des informations utiles ont été données</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2/Autre:label">
-            <value>5. Autre</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale_autre2:label">
-            <value>(IVM) Veuillez spécifier les autres raisons</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2:label">
-            <value>(IVM) Pourquoi ne les avez-vous pas avalé?</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2/1.peur.des.effets.indesirables:label">
-            <value>1. Peur des effets indésirables</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2/2.mauvais.gout:label">
-            <value>2. Mauvais goût</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2/3.je.ne.suis.pas.malade:label">
-            <value>3. Je ne suis pas malade</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2/4.pas.recu.suffisamment.d'informations:label">
-            <value>4. Je n'ai pas eu suffisament d'informations sur le médicament</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2/Autre:label">
-            <value>5. Autre</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale_autre2:label">
-            <value>(IVM) Veuillez spécifier les autres raisons</value>
-          </text>
-          <text id="/data/questions/alb:label">
-            <value>ALBENDAZOLE (ALB)</value>
-          </text>
-          <text id="/data/questions/alb/recu_medicament3:label">
-            <value>(ALB) Avez-vous reçu le(s) médicament(s)?</value>
-          </text>
-          <text id="/data/questions/alb/recu_medicament3/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/questions/alb/recu_medicament3/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/questions/alb/recu_medicament3/Ne.sais.pas:label">
-            <value>Je ne sais pas</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3:label">
-            <value>(ALB) Pourquoi n'en avez-vous pas reçu?</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/1.en.dessous.du.groupe.cible:label">
-            <value>1. En dessous du groupe cible</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/2.enceinte:label">
-            <value>2. Enceinte</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/3.allaitante:label">
-            <value>3. Mère allaitante</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/4.malade:label">
-            <value>4. Malade</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/5.absent:label">
-            <value>5. Absent(e)</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/6.pas.informe.de.la.campagne.mda:label">
-            <value>6. Pas informé de la campagne TDM</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/7.rupture.de.medicaments:label">
-            <value>7. Rupture de médicaments</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/8.personne.n.est.passe:label">
-            <value>8. Personne n'est passé</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/9.refus:label">
-            <value>9. Refus</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/Autre:label">
-            <value>10. Autres</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu_autre3:label">
-            <value>(ALB) Veuillez spécifier les autres raisons</value>
-          </text>
-          <text id="/data/questions/alb/avale3:label">
-            <value>(ALB) Avez-vous avalé vos médicaments?</value>
-          </text>
-          <text id="/data/questions/alb/avale3/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/questions/alb/avale3/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/questions/alb/avale3/Ne.sais.pas:label">
-            <value>Je ne sais pas</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3:label">
-            <value>(ALB) Pourquoi les avez-vous avalé?</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3/1.peur.de.la.maladie:label">
-            <value>1. Peur de la maladie</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3/2.pour.traiter.la.maladie:label">
-            <value>2. Pour traiter la maladie</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3/3.parce.que.gratuit:label">
-            <value>3. Parce que c'était offert (gratuit)</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3/4.des.informations.utiles.ont.ete.donnees:label">
-            <value>4. Des informations utiles ont été données</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3/Autre:label">
-            <value>5. Autre</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale_autre3:label">
-            <value>(ALB) Veuillez spécifier les autres raisons</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3:label">
-            <value>(ALB) Pourquoi ne les avez-vous pas avalé?</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3/1.peur.des.effets.indesirables:label">
-            <value>1. Peur des effets indésirables</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3/2.mauvais.gout:label">
-            <value>2. Mauvais goût</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3/3.je.ne.suis.pas.malade:label">
-            <value>3. Je ne suis pas malade</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3/4.pas.recu.suffisamment.d'informations:label">
-            <value>4. Je n'ai pas eu suffisament d'informations sur le médicament</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3/Autre:label">
-            <value>5. Autre</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale_autre3:label">
-            <value>(ALB) Veuillez spécifier les autres raisons</value>
-          </text>
-          <text id="/data/note1:label">
-            <value>L'interview ne peut continuer en l'absence des membres du ménage.</value>
-          </text>
-          <text id="/data/note:label">
-            <value>Notes additionnelles</value>
-          </text>
-          <text id="sexe-0">
-            <value>M</value>
-          </text>
-          <text id="sexe-1">
-            <value>F</value>
-          </text>
-          <text id="yes_no-0">
-            <value>Oui</value>
-          </text>
-          <text id="yes_no-1">
-            <value>Non</value>
-          </text>
-          <text id="yes_no_dontknow-0">
-            <value>Oui</value>
-          </text>
-          <text id="yes_no_dontknow-1">
-            <value>Non</value>
-          </text>
-          <text id="yes_no_dontknow-2">
-            <value>Je ne sais pas</value>
-          </text>
-          <text id="reason_not_treated-0">
-            <value>1. En dessous du groupe cible</value>
-          </text>
-          <text id="reason_not_treated-1">
-            <value>2. Enceinte</value>
-          </text>
-          <text id="reason_not_treated-2">
-            <value>3. Mère allaitante</value>
-          </text>
-          <text id="reason_not_treated-3">
-            <value>4. Malade</value>
-          </text>
-          <text id="reason_not_treated-4">
-            <value>5. Absent(e)</value>
-          </text>
-          <text id="reason_not_treated-5">
-            <value>6. Pas informé de la campagne TDM</value>
-          </text>
-          <text id="reason_not_treated-6">
-            <value>7. Rupture de médicaments</value>
-          </text>
-          <text id="reason_not_treated-7">
-            <value>8. Personne n'est passé</value>
-          </text>
-          <text id="reason_not_treated-8">
-            <value>9. Refus</value>
-          </text>
-          <text id="reason_not_treated-9">
-            <value>10. Autres</value>
-          </text>
-          <text id="reason_not_swalowed-0">
-            <value>1. Peur des effets indésirables</value>
-          </text>
-          <text id="reason_not_swalowed-1">
-            <value>2. Mauvais goût</value>
-          </text>
-          <text id="reason_not_swalowed-2">
-            <value>3. Je ne suis pas malade</value>
-          </text>
-          <text id="reason_not_swalowed-3">
-            <value>4. Je n'ai pas eu suffisament d'informations sur le médicament</value>
-          </text>
-          <text id="reason_not_swalowed-4">
-            <value>5. Autre</value>
-          </text>
-          <text id="reason_swalowed-0">
-            <value>1. Peur de la maladie</value>
-          </text>
-          <text id="reason_swalowed-1">
-            <value>2. Pour traiter la maladie</value>
-          </text>
-          <text id="reason_swalowed-2">
-            <value>3. Parce que c'était offert (gratuit)</value>
-          </text>
-          <text id="reason_swalowed-3">
-            <value>4. Des informations utiles ont été données</value>
-          </text>
-          <text id="reason_swalowed-4">
-            <value>5. Autre</value>
-          </text>
-          <text id="district_list-0">
-            <value>GIHOFI</value>
-          </text>
-          <text id="district_list-1">
-            <value>MPANDA</value>
-          </text>
-          <text id="commune_list-0">
-            <value>BUKEMBA</value>
-          </text>
-          <text id="commune_list-1">
-            <value>GIHANGA</value>
-          </text>
-          <text id="commune_list-2">
-            <value>GIHARO</value>
-          </text>
-          <text id="commune_list-3">
-            <value>GITANGA</value>
-          </text>
-          <text id="commune_list-4">
-            <value>MPANDA</value>
-          </text>
-          <text id="commune_list-5">
-            <value>Rugazi</value>
-          </text>
-          <text id="centre_sante_list-0">
-            <value>BUKEMBA</value>
-          </text>
-          <text id="centre_sante_list-1">
-            <value>BURAMATA</value>
-          </text>
-          <text id="centre_sante_list-2">
-            <value>Butanuka</value>
-          </text>
-          <text id="centre_sante_list-3">
-            <value>BUTARE</value>
-          </text>
-          <text id="centre_sante_list-4">
-            <value>BUTEZI</value>
-          </text>
-          <text id="centre_sante_list-5">
-            <value>GAKUNGU</value>
-          </text>
-          <text id="centre_sante_list-6">
-            <value>GAKWENDE</value>
-          </text>
-          <text id="centre_sante_list-7">
-            <value>GIHANGA</value>
-          </text>
-          <text id="centre_sante_list-8">
-            <value>GIHARO</value>
-          </text>
-          <text id="centre_sante_list-9">
-            <value>GIHOFI</value>
-          </text>
-          <text id="centre_sante_list-10">
-            <value>Gihungwe</value>
-          </text>
-          <text id="centre_sante_list-11">
-            <value>GITANGA</value>
-          </text>
-          <text id="centre_sante_list-12">
-            <value>KABANGA</value>
-          </text>
-          <text id="centre_sante_list-13">
-            <value>KINZANZA</value>
-          </text>
-          <text id="centre_sante_list-14">
-            <value>Kirengane</value>
-          </text>
-          <text id="centre_sante_list-15">
-            <value>MPANDA</value>
-          </text>
-          <text id="centre_sante_list-16">
-            <value>MUHAFU</value>
-          </text>
-          <text id="centre_sante_list-17">
-            <value>Murengeza</value>
-          </text>
-          <text id="centre_sante_list-18">
-            <value>MURIRA</value>
-          </text>
-          <text id="centre_sante_list-19">
-            <value>MUZYE</value>
-          </text>
-          <text id="centre_sante_list-20">
-            <value>NGOMANTE</value>
-          </text>
-          <text id="centre_sante_list-21">
-            <value>Ninga</value>
-          </text>
-          <text id="centre_sante_list-22">
-            <value>NYABIKENKE</value>
-          </text>
-          <text id="centre_sante_list-23">
-            <value>NYAGAHARA</value>
-          </text>
-          <text id="centre_sante_list-24">
-            <value>NYEMBUYE</value>
-          </text>
-          <text id="centre_sante_list-25">
-            <value>RURANGA</value>
-          </text>
-          <text id="colline_list-0">
-            <value>BIGINA</value>
-          </text>
-          <text id="colline_list-1">
-            <value>BUKEMBA</value>
-          </text>
-          <text id="colline_list-2">
-            <value>Buramata</value>
-          </text>
-          <text id="colline_list-3">
-            <value>Buringa</value>
-          </text>
-          <text id="colline_list-4">
-            <value>Butanuka</value>
-          </text>
-          <text id="colline_list-5">
-            <value>BUTARE</value>
-          </text>
-          <text id="colline_list-6">
-            <value>Butavuka</value>
-          </text>
-          <text id="colline_list-7">
-            <value>Butembe</value>
-          </text>
-          <text id="colline_list-8">
-            <value>BUTEZI</value>
-          </text>
-          <text id="colline_list-9">
-            <value>BUYAGA</value>
-          </text>
-          <text id="colline_list-10">
-            <value>CIKINGA</value>
-          </text>
-          <text id="colline_list-11">
-            <value>Gahwazi 1</value>
-          </text>
-          <text id="colline_list-12">
-            <value>GAKUNGU</value>
-          </text>
-          <text id="colline_list-13">
-            <value>Gatagura</value>
-          </text>
-          <text id="colline_list-14">
-            <value>Gifurwe</value>
-          </text>
-          <text id="colline_list-15">
-            <value>Gihanga</value>
-          </text>
-          <text id="colline_list-16">
-            <value>GIHARO</value>
-          </text>
-          <text id="colline_list-17">
-            <value>GIHOFI</value>
-          </text>
-          <text id="colline_list-18">
-            <value>Gihungwe</value>
-          </text>
-          <text id="colline_list-19">
-            <value>GITANGA</value>
-          </text>
-          <text id="colline_list-20">
-            <value>KABANGA</value>
-          </text>
-          <text id="colline_list-21">
-            <value>KABANGA (KINZANZA)</value>
-          </text>
-          <text id="colline_list-22">
-            <value>KABINGO</value>
-          </text>
-          <text id="colline_list-23">
-            <value>Kagwema</value>
-          </text>
-          <text id="colline_list-24">
-            <value>KAZEBA</value>
-          </text>
-          <text id="colline_list-25">
-            <value>KINZANZA</value>
-          </text>
-          <text id="colline_list-26">
-            <value>Masha</value>
-          </text>
-          <text id="colline_list-27">
-            <value>MURA</value>
-          </text>
-          <text id="colline_list-28">
-            <value>MURARA</value>
-          </text>
-          <text id="colline_list-29">
-            <value>Murengeza</value>
-          </text>
-          <text id="colline_list-30">
-            <value>Musenyi</value>
-          </text>
-          <text id="colline_list-31">
-            <value>MUTWANA</value>
-          </text>
-          <text id="colline_list-32">
-            <value>MWEBEYA</value>
-          </text>
-          <text id="colline_list-33">
-            <value>Ndava Busongo</value>
-          </text>
-          <text id="colline_list-34">
-            <value>NGOMA</value>
-          </text>
-          <text id="colline_list-35">
-            <value>NGOMANTE</value>
-          </text>
-          <text id="colline_list-36">
-            <value>Nyamabere</value>
-          </text>
-          <text id="colline_list-37">
-            <value>NYAMATEKE</value>
-          </text>
-          <text id="colline_list-38">
-            <value>NYEMBUYE</value>
-          </text>
-          <text id="colline_list-39">
-            <value>RUBANGA</value>
-          </text>
-          <text id="colline_list-40">
-            <value>RUBANGA (BUTEZI)</value>
-          </text>
-          <text id="colline_list-41">
-            <value>Rubira</value>
-          </text>
-          <text id="colline_list-42">
-            <value>Rugenge</value>
-          </text>
-          <text id="colline_list-43">
-            <value>Rugunga</value>
-          </text>
-          <text id="colline_list-44">
-            <value>Rumotomoto</value>
-          </text>
-          <text id="colline_list-45">
-            <value>RURANGA</value>
-          </text>
-          <text id="colline_list-46">
-            <value>SHEMBE</value>
-          </text>
-          <text id="colline_list-47">
-            <value>Village 2</value>
-          </text>
-          <text id="colline_list-48">
-            <value>Village 3</value>
-          </text>
-          <text id="colline_list-49">
-            <value>Village 4</value>
-          </text>
-          <text id="colline_list-50">
-            <value>Village 5</value>
-          </text>
-          <text id="colline_id_list-0">
-            <value>101</value>
-          </text>
-          <text id="colline_id_list-1">
-            <value>102</value>
-          </text>
-          <text id="colline_id_list-2">
-            <value>103</value>
-          </text>
-          <text id="colline_id_list-3">
-            <value>104</value>
-          </text>
-          <text id="colline_id_list-4">
-            <value>105</value>
-          </text>
-          <text id="colline_id_list-5">
-            <value>106</value>
-          </text>
-          <text id="colline_id_list-6">
-            <value>107</value>
-          </text>
-          <text id="colline_id_list-7">
-            <value>108</value>
-          </text>
-          <text id="colline_id_list-8">
-            <value>109</value>
-          </text>
-          <text id="colline_id_list-9">
-            <value>110</value>
-          </text>
-          <text id="colline_id_list-10">
-            <value>111</value>
-          </text>
-          <text id="colline_id_list-11">
-            <value>112</value>
-          </text>
-          <text id="colline_id_list-12">
-            <value>113</value>
-          </text>
-          <text id="colline_id_list-13">
-            <value>114</value>
-          </text>
-          <text id="colline_id_list-14">
-            <value>115</value>
-          </text>
-          <text id="colline_id_list-15">
-            <value>116</value>
-          </text>
-          <text id="colline_id_list-16">
-            <value>117</value>
-          </text>
-          <text id="colline_id_list-17">
-            <value>118</value>
-          </text>
-          <text id="colline_id_list-18">
-            <value>119</value>
-          </text>
-          <text id="colline_id_list-19">
-            <value>120</value>
-          </text>
-          <text id="colline_id_list-20">
-            <value>121</value>
-          </text>
-          <text id="colline_id_list-21">
-            <value>122</value>
-          </text>
-          <text id="colline_id_list-22">
-            <value>123</value>
-          </text>
-          <text id="colline_id_list-23">
-            <value>124</value>
-          </text>
-          <text id="colline_id_list-24">
-            <value>125</value>
-          </text>
-          <text id="colline_id_list-25">
-            <value>126</value>
-          </text>
-          <text id="colline_id_list-26">
-            <value>127</value>
-          </text>
-          <text id="colline_id_list-27">
-            <value>128</value>
-          </text>
-          <text id="colline_id_list-28">
-            <value>129</value>
-          </text>
-          <text id="colline_id_list-29">
-            <value>130</value>
-          </text>
-          <text id="colline_id_list-30">
-            <value>131</value>
-          </text>
-          <text id="colline_id_list-31">
-            <value>132</value>
-          </text>
-          <text id="colline_id_list-32">
-            <value>133</value>
-          </text>
-          <text id="colline_id_list-33">
-            <value>134</value>
-          </text>
-          <text id="colline_id_list-34">
-            <value>135</value>
-          </text>
-          <text id="colline_id_list-35">
-            <value>136</value>
-          </text>
-          <text id="colline_id_list-36">
-            <value>137</value>
-          </text>
-          <text id="colline_id_list-37">
-            <value>138</value>
-          </text>
-          <text id="colline_id_list-38">
-            <value>139</value>
-          </text>
-          <text id="colline_id_list-39">
-            <value>140</value>
-          </text>
-          <text id="colline_id_list-40">
-            <value>141</value>
-          </text>
-          <text id="colline_id_list-41">
-            <value>142</value>
-          </text>
-          <text id="colline_id_list-42">
-            <value>143</value>
-          </text>
-          <text id="colline_id_list-43">
-            <value>144</value>
-          </text>
-          <text id="colline_id_list-44">
-            <value>145</value>
-          </text>
-          <text id="colline_id_list-45">
-            <value>146</value>
-          </text>
-          <text id="colline_id_list-46">
-            <value>147</value>
-          </text>
-          <text id="colline_id_list-47">
-            <value>148</value>
-          </text>
-          <text id="colline_id_list-48">
-            <value>149</value>
-          </text>
-          <text id="colline_id_list-49">
-            <value>150</value>
-          </text>
-          <text id="colline_id_list-50">
-            <value>151</value>
-          </text>
-        </translation>
-        <translation lang="English">
-          <text id="/data/code_enqueteur:jr:constraintMsg">
-            <value>The code must be between 0 and 100</value>
-          </text>
-          <text id="/data/code_enqueteur:label">
-            <value>Interviewer Code</value>
-          </text>
-          <text id="/data/district:label">
-            <value>District</value>
-          </text>
-          <text id="/data/district/GIHOFI:label">
-            <value>GIHOFI</value>
-          </text>
-          <text id="/data/district/MPANDA:label">
-            <value>MPANDA</value>
-          </text>
-          <text id="/data/commune:label">
-            <value>Commune</value>
-          </text>
-          <text id="/data/centre_sante:label">
-            <value>Health facility</value>
-          </text>
-          <text id="/data/colline:label">
-            <value>Colline</value>
-          </text>
-          <text id="/data/colline_id:label">
-            <value>Colline code</value>
-          </text>
-          <text id="/data/num_menage:label">
-            <value>Household code</value>
-          </text>
-          <text id="/data/membre_present:label">
-            <value>HH member present (Y/N)</value>
-          </text>
-          <text id="/data/membre_present/Oui:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/membre_present/Non:label">
-            <value>No</value>
-          </text>
-          <text id="/data/questions:label">
-            <value>Individual questions for participants</value>
-          </text>
-          <text id="/data/questions/ajouter_participant:label">
-            <value>Do you want to add one participant?</value>
-          </text>
-          <text id="/data/questions/ajouter_participant/Oui:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/questions/ajouter_participant/Non:label">
-            <value>No</value>
-          </text>
-          <text id="/data/questions/code_participant:label">
-            <value>Participant Code</value>
-          </text>
-          <text id="/data/questions/sexe:label">
-            <value>Sex</value>
-          </text>
-          <text id="/data/questions/sexe/M:label">
-            <value>M</value>
-          </text>
-          <text id="/data/questions/sexe/F:label">
-            <value>F</value>
-          </text>
-          <text id="/data/questions/age:jr:constraintMsg">
-            <value>The age value is incorrect</value>
-          </text>
-          <text id="/data/questions/age:label">
-            <value>Age (Years)</value>
-          </text>
-          <text id="/data/questions/dec:label">
-            <value>DIETHYLECARBAMAZINE (DEC)</value>
-          </text>
-          <text id="/data/questions/dec/recu_medicament1:label">
-            <value>(DEC) Offered the drug(s)?</value>
-          </text>
-          <text id="/data/questions/dec/recu_medicament1/Oui:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/questions/dec/recu_medicament1/Non:label">
-            <value>No</value>
-          </text>
-          <text id="/data/questions/dec/recu_medicament1/Ne.sais.pas:label">
-            <value>Don't Know</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1:label">
-            <value>(DEC) Reason not offered</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/1.en.dessous.du.groupe.cible:label">
-            <value>1. Underage</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/2.enceinte:label">
-            <value>2. Pregnant</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/3.allaitante:label">
-            <value>3. Breast feeding</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/4.malade:label">
-            <value>4. Sick</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/5.absent:label">
-            <value>5. Absent</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/6.pas.informe.de.la.campagne.mda:label">
-            <value>6. Didn't hear about MDA</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/7.rupture.de.medicaments:label">
-            <value>7. Drug ran out</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/8.personne.n.est.passe:label">
-            <value>8. Nobody came</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/9.refus:label">
-            <value>9. Refusal</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu1/Autre:label">
-            <value>10. Other</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_recu_autre1:label">
-            <value>(DEC) Please, specify ohter reasons</value>
-          </text>
-          <text id="/data/questions/dec/avale1:label">
-            <value>(DEC) Swallow the drug(s)?</value>
-          </text>
-          <text id="/data/questions/dec/avale1/Oui:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/questions/dec/avale1/Non:label">
-            <value>No</value>
-          </text>
-          <text id="/data/questions/dec/avale1/Ne.sais.pas:label">
-            <value>Don't Know</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1:label">
-            <value>(DEC) Reason DID swallow</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1/1.peur.de.la.maladie:label">
-            <value>1. Fear of disease(s)</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1/2.pour.traiter.la.maladie:label">
-            <value>2. To treat disease(s)</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1/3.parce.que.gratuit:label">
-            <value>3. Because it was given/ free</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1/4.des.informations.utiles.ont.ete.donnees:label">
-            <value>4. Useful information from CDD</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale1/Autre:label">
-            <value>5. Other</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_avale_autre1:label">
-            <value>(DEC) Please specify other reasons</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1:label">
-            <value>(DEC) Reason DID NOT swallow</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1/1.peur.des.effets.indesirables:label">
-            <value>1. Fear of side effects</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1/2.mauvais.gout:label">
-            <value>2. Bad taste</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1/3.je.ne.suis.pas.malade:label">
-            <value>3. Not sick</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1/4.pas.recu.suffisamment.d'informations:label">
-            <value>4. Not enough information given</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale1/Autre:label">
-            <value>5. Other</value>
-          </text>
-          <text id="/data/questions/dec/pourquoi_pas_avale_autre1:label">
-            <value>(DEC) Please specify other reasons</value>
-          </text>
-          <text id="/data/questions/ivm:label">
-            <value>Ivermectin (IVM)</value>
-          </text>
-          <text id="/data/questions/ivm/recu_medicament2:label">
-            <value>(IVM) Offered the drug(s)?</value>
-          </text>
-          <text id="/data/questions/ivm/recu_medicament2/Oui:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/questions/ivm/recu_medicament2/Non:label">
-            <value>No</value>
-          </text>
-          <text id="/data/questions/ivm/recu_medicament2/Ne.sais.pas:label">
-            <value>Don't Know</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2:label">
-            <value>(IVM) Reason not offered</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/1.en.dessous.du.groupe.cible:label">
-            <value>1. Underage</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/2.enceinte:label">
-            <value>2. Pregnant</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/3.allaitante:label">
-            <value>3. Breast feeding</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/4.malade:label">
-            <value>4. Sick</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/5.absent:label">
-            <value>5. Absent</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/6.pas.informe.de.la.campagne.mda:label">
-            <value>6. Didn't hear about MDA</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/7.rupture.de.medicaments:label">
-            <value>7. Drug ran out</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/8.personne.n.est.passe:label">
-            <value>8. Nobody came</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/9.refus:label">
-            <value>9. Refusal</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu2/Autre:label">
-            <value>10. Other</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_recu_autre2:label">
-            <value>(IVM) Please, specify ohter reasons</value>
-          </text>
-          <text id="/data/questions/ivm/avale2:label">
-            <value>(IVM) Swallow the drug(s)?</value>
-          </text>
-          <text id="/data/questions/ivm/avale2/Oui:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/questions/ivm/avale2/Non:label">
-            <value>No</value>
-          </text>
-          <text id="/data/questions/ivm/avale2/Ne.sais.pas:label">
-            <value>Don't Know</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2:label">
-            <value>(IVM) Reason DID swallow</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2/1.peur.de.la.maladie:label">
-            <value>1. Fear of disease(s)</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2/2.pour.traiter.la.maladie:label">
-            <value>2. To treat disease(s)</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2/3.parce.que.gratuit:label">
-            <value>3. Because it was given/ free</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2/4.des.informations.utiles.ont.ete.donnees:label">
-            <value>4. Useful information from CDD</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale2/Autre:label">
-            <value>5. Other</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_avale_autre2:label">
-            <value>(IVM)Please specify other reasons</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2:label">
-            <value>(IVM) Reason DID NOT swallow</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2/1.peur.des.effets.indesirables:label">
-            <value>1. Fear of side effects</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2/2.mauvais.gout:label">
-            <value>2. Bad taste</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2/3.je.ne.suis.pas.malade:label">
-            <value>3. Not sick</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2/4.pas.recu.suffisamment.d'informations:label">
-            <value>4. Not enough information given</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale2/Autre:label">
-            <value>5. Other</value>
-          </text>
-          <text id="/data/questions/ivm/pourquoi_pas_avale_autre2:label">
-            <value>(IVM) Please specify other reasons</value>
-          </text>
-          <text id="/data/questions/alb:label">
-            <value>ALBENDAZOLE (ALB)</value>
-          </text>
-          <text id="/data/questions/alb/recu_medicament3:label">
-            <value>(ALB) Offered the drug(s)?</value>
-          </text>
-          <text id="/data/questions/alb/recu_medicament3/Oui:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/questions/alb/recu_medicament3/Non:label">
-            <value>No</value>
-          </text>
-          <text id="/data/questions/alb/recu_medicament3/Ne.sais.pas:label">
-            <value>Don't Know</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3:label">
-            <value>(ALB) Reason not offered</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/1.en.dessous.du.groupe.cible:label">
-            <value>1. Underage</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/2.enceinte:label">
-            <value>2. Pregnant</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/3.allaitante:label">
-            <value>3. Breast feeding</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/4.malade:label">
-            <value>4. Sick</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/5.absent:label">
-            <value>5. Absent</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/6.pas.informe.de.la.campagne.mda:label">
-            <value>6. Didn't hear about MDA</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/7.rupture.de.medicaments:label">
-            <value>7. Drug ran out</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/8.personne.n.est.passe:label">
-            <value>8. Nobody came</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/9.refus:label">
-            <value>9. Refusal</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu3/Autre:label">
-            <value>10. Other</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_recu_autre3:label">
-            <value>(ALB) Please, specify ohter reasons</value>
-          </text>
-          <text id="/data/questions/alb/avale3:label">
-            <value>(ALB) Swallow the drug(s)?</value>
-          </text>
-          <text id="/data/questions/alb/avale3/Oui:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/questions/alb/avale3/Non:label">
-            <value>No</value>
-          </text>
-          <text id="/data/questions/alb/avale3/Ne.sais.pas:label">
-            <value>Don't Know</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3:label">
-            <value>(ALB) Reason DID swallow</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3/1.peur.de.la.maladie:label">
-            <value>1. Fear of disease(s)</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3/2.pour.traiter.la.maladie:label">
-            <value>2. To treat disease(s)</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3/3.parce.que.gratuit:label">
-            <value>3. Because it was given/ free</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3/4.des.informations.utiles.ont.ete.donnees:label">
-            <value>4. Useful information from CDD</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale3/Autre:label">
-            <value>5. Other</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_avale_autre3:label">
-            <value>(ALB) Please specify other reasons</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3:label">
-            <value>(ALB) Reason DID NOT swallow</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3/1.peur.des.effets.indesirables:label">
-            <value>1. Fear of side effects</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3/2.mauvais.gout:label">
-            <value>2. Bad taste</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3/3.je.ne.suis.pas.malade:label">
-            <value>3. Not sick</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3/4.pas.recu.suffisamment.d'informations:label">
-            <value>4. Not enough information given</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale3/Autre:label">
-            <value>5. Other</value>
-          </text>
-          <text id="/data/questions/alb/pourquoi_pas_avale_autre3:label">
-            <value>(ALB) Please specify other reasons</value>
-          </text>
-          <text id="/data/note1:label">
-            <value>This interview cannot continue in the absence of household members.</value>
-          </text>
-          <text id="/data/note:label">
-            <value>Additional notes</value>
-          </text>
-          <text id="sexe-0">
-            <value>M</value>
-          </text>
-          <text id="sexe-1">
-            <value>F</value>
-          </text>
-          <text id="yes_no-0">
-            <value>Yes</value>
-          </text>
-          <text id="yes_no-1">
-            <value>No</value>
-          </text>
-          <text id="yes_no_dontknow-0">
-            <value>Yes</value>
-          </text>
-          <text id="yes_no_dontknow-1">
-            <value>No</value>
-          </text>
-          <text id="yes_no_dontknow-2">
-            <value>Don't Know</value>
-          </text>
-          <text id="reason_not_treated-0">
-            <value>1. Underage</value>
-          </text>
-          <text id="reason_not_treated-1">
-            <value>2. Pregnant</value>
-          </text>
-          <text id="reason_not_treated-2">
-            <value>3. Breast feeding</value>
-          </text>
-          <text id="reason_not_treated-3">
-            <value>4. Sick</value>
-          </text>
-          <text id="reason_not_treated-4">
-            <value>5. Absent</value>
-          </text>
-          <text id="reason_not_treated-5">
-            <value>6. Didn't hear about MDA</value>
-          </text>
-          <text id="reason_not_treated-6">
-            <value>7. Drug ran out</value>
-          </text>
-          <text id="reason_not_treated-7">
-            <value>8. Nobody came</value>
-          </text>
-          <text id="reason_not_treated-8">
-            <value>9. Refusal</value>
-          </text>
-          <text id="reason_not_treated-9">
-            <value>10. Other</value>
-          </text>
-          <text id="reason_not_swalowed-0">
-            <value>1. Fear of side effects</value>
-          </text>
-          <text id="reason_not_swalowed-1">
-            <value>2. Bad taste</value>
-          </text>
-          <text id="reason_not_swalowed-2">
-            <value>3. Not sick</value>
-          </text>
-          <text id="reason_not_swalowed-3">
-            <value>4. Not enough information given</value>
-          </text>
-          <text id="reason_not_swalowed-4">
-            <value>5. Other</value>
-          </text>
-          <text id="reason_swalowed-0">
-            <value>1. Fear of disease(s)</value>
-          </text>
-          <text id="reason_swalowed-1">
-            <value>2. To treat disease(s)</value>
-          </text>
-          <text id="reason_swalowed-2">
-            <value>3. Because it was given/ free</value>
-          </text>
-          <text id="reason_swalowed-3">
-            <value>4. Useful information from CDD</value>
-          </text>
-          <text id="reason_swalowed-4">
-            <value>5. Other</value>
-          </text>
-          <text id="district_list-0">
-            <value>GIHOFI</value>
-          </text>
-          <text id="district_list-1">
-            <value>MPANDA</value>
-          </text>
-          <text id="commune_list-0">
-            <value>BUKEMBA</value>
-          </text>
-          <text id="commune_list-1">
-            <value>GIHANGA</value>
-          </text>
-          <text id="commune_list-2">
-            <value>GIHARO</value>
-          </text>
-          <text id="commune_list-3">
-            <value>GITANGA</value>
-          </text>
-          <text id="commune_list-4">
-            <value>MPANDA</value>
-          </text>
-          <text id="commune_list-5">
-            <value>Rugazi</value>
-          </text>
-          <text id="centre_sante_list-0">
-            <value>BUKEMBA</value>
-          </text>
-          <text id="centre_sante_list-1">
-            <value>BURAMATA</value>
-          </text>
-          <text id="centre_sante_list-2">
-            <value>Butanuka</value>
-          </text>
-          <text id="centre_sante_list-3">
-            <value>BUTARE</value>
-          </text>
-          <text id="centre_sante_list-4">
-            <value>BUTEZI</value>
-          </text>
-          <text id="centre_sante_list-5">
-            <value>GAKUNGU</value>
-          </text>
-          <text id="centre_sante_list-6">
-            <value>GAKWENDE</value>
-          </text>
-          <text id="centre_sante_list-7">
-            <value>GIHANGA</value>
-          </text>
-          <text id="centre_sante_list-8">
-            <value>GIHARO</value>
-          </text>
-          <text id="centre_sante_list-9">
-            <value>GIHOFI</value>
-          </text>
-          <text id="centre_sante_list-10">
-            <value>Gihungwe</value>
-          </text>
-          <text id="centre_sante_list-11">
-            <value>GITANGA</value>
-          </text>
-          <text id="centre_sante_list-12">
-            <value>KABANGA</value>
-          </text>
-          <text id="centre_sante_list-13">
-            <value>KINZANZA</value>
-          </text>
-          <text id="centre_sante_list-14">
-            <value>Kirengane</value>
-          </text>
-          <text id="centre_sante_list-15">
-            <value>MPANDA</value>
-          </text>
-          <text id="centre_sante_list-16">
-            <value>MUHAFU</value>
-          </text>
-          <text id="centre_sante_list-17">
-            <value>Murengeza</value>
-          </text>
-          <text id="centre_sante_list-18">
-            <value>MURIRA</value>
-          </text>
-          <text id="centre_sante_list-19">
-            <value>MUZYE</value>
-          </text>
-          <text id="centre_sante_list-20">
-            <value>NGOMANTE</value>
-          </text>
-          <text id="centre_sante_list-21">
-            <value>Ninga</value>
-          </text>
-          <text id="centre_sante_list-22">
-            <value>NYABIKENKE</value>
-          </text>
-          <text id="centre_sante_list-23">
-            <value>NYAGAHARA</value>
-          </text>
-          <text id="centre_sante_list-24">
-            <value>NYEMBUYE</value>
-          </text>
-          <text id="centre_sante_list-25">
-            <value>RURANGA</value>
-          </text>
-          <text id="colline_list-0">
-            <value>BIGINA</value>
-          </text>
-          <text id="colline_list-1">
-            <value>BUKEMBA</value>
-          </text>
-          <text id="colline_list-2">
-            <value>Buramata</value>
-          </text>
-          <text id="colline_list-3">
-            <value>Buringa</value>
-          </text>
-          <text id="colline_list-4">
-            <value>Butanuka</value>
-          </text>
-          <text id="colline_list-5">
-            <value>BUTARE</value>
-          </text>
-          <text id="colline_list-6">
-            <value>Butavuka</value>
-          </text>
-          <text id="colline_list-7">
-            <value>Butembe</value>
-          </text>
-          <text id="colline_list-8">
-            <value>BUTEZI</value>
-          </text>
-          <text id="colline_list-9">
-            <value>BUYAGA</value>
-          </text>
-          <text id="colline_list-10">
-            <value>CIKINGA</value>
-          </text>
-          <text id="colline_list-11">
-            <value>Gahwazi 1</value>
-          </text>
-          <text id="colline_list-12">
-            <value>GAKUNGU</value>
-          </text>
-          <text id="colline_list-13">
-            <value>Gatagura</value>
-          </text>
-          <text id="colline_list-14">
-            <value>Gifurwe</value>
-          </text>
-          <text id="colline_list-15">
-            <value>Gihanga</value>
-          </text>
-          <text id="colline_list-16">
-            <value>GIHARO</value>
-          </text>
-          <text id="colline_list-17">
-            <value>GIHOFI</value>
-          </text>
-          <text id="colline_list-18">
-            <value>Gihungwe</value>
-          </text>
-          <text id="colline_list-19">
-            <value>GITANGA</value>
-          </text>
-          <text id="colline_list-20">
-            <value>KABANGA</value>
-          </text>
-          <text id="colline_list-21">
-            <value>KABANGA (KINZANZA)</value>
-          </text>
-          <text id="colline_list-22">
-            <value>KABINGO</value>
-          </text>
-          <text id="colline_list-23">
-            <value>Kagwema</value>
-          </text>
-          <text id="colline_list-24">
-            <value>KAZEBA</value>
-          </text>
-          <text id="colline_list-25">
-            <value>KINZANZA</value>
-          </text>
-          <text id="colline_list-26">
-            <value>Masha</value>
-          </text>
-          <text id="colline_list-27">
-            <value>MURA</value>
-          </text>
-          <text id="colline_list-28">
-            <value>MURARA</value>
-          </text>
-          <text id="colline_list-29">
-            <value>Murengeza</value>
-          </text>
-          <text id="colline_list-30">
-            <value>Musenyi</value>
-          </text>
-          <text id="colline_list-31">
-            <value>MUTWANA</value>
-          </text>
-          <text id="colline_list-32">
-            <value>MWEBEYA</value>
-          </text>
-          <text id="colline_list-33">
-            <value>Ndava Busongo</value>
-          </text>
-          <text id="colline_list-34">
-            <value>NGOMA</value>
-          </text>
-          <text id="colline_list-35">
-            <value>NGOMANTE</value>
-          </text>
-          <text id="colline_list-36">
-            <value>Nyamabere</value>
-          </text>
-          <text id="colline_list-37">
-            <value>NYAMATEKE</value>
-          </text>
-          <text id="colline_list-38">
-            <value>NYEMBUYE</value>
-          </text>
-          <text id="colline_list-39">
-            <value>RUBANGA</value>
-          </text>
-          <text id="colline_list-40">
-            <value>RUBANGA (BUTEZI)</value>
-          </text>
-          <text id="colline_list-41">
-            <value>Rubira</value>
-          </text>
-          <text id="colline_list-42">
-            <value>Rugenge</value>
-          </text>
-          <text id="colline_list-43">
-            <value>Rugunga</value>
-          </text>
-          <text id="colline_list-44">
-            <value>Rumotomoto</value>
-          </text>
-          <text id="colline_list-45">
-            <value>RURANGA</value>
-          </text>
-          <text id="colline_list-46">
-            <value>SHEMBE</value>
-          </text>
-          <text id="colline_list-47">
-            <value>Village 2</value>
-          </text>
-          <text id="colline_list-48">
-            <value>Village 3</value>
-          </text>
-          <text id="colline_list-49">
-            <value>Village 4</value>
-          </text>
-          <text id="colline_list-50">
-            <value>Village 5</value>
-          </text>
-          <text id="colline_id_list-0">
-            <value>101</value>
-          </text>
-          <text id="colline_id_list-1">
-            <value>102</value>
-          </text>
-          <text id="colline_id_list-2">
-            <value>103</value>
-          </text>
-          <text id="colline_id_list-3">
-            <value>104</value>
-          </text>
-          <text id="colline_id_list-4">
-            <value>105</value>
-          </text>
-          <text id="colline_id_list-5">
-            <value>106</value>
-          </text>
-          <text id="colline_id_list-6">
-            <value>107</value>
-          </text>
-          <text id="colline_id_list-7">
-            <value>108</value>
-          </text>
-          <text id="colline_id_list-8">
-            <value>109</value>
-          </text>
-          <text id="colline_id_list-9">
-            <value>110</value>
-          </text>
-          <text id="colline_id_list-10">
-            <value>111</value>
-          </text>
-          <text id="colline_id_list-11">
-            <value>112</value>
-          </text>
-          <text id="colline_id_list-12">
-            <value>113</value>
-          </text>
-          <text id="colline_id_list-13">
-            <value>114</value>
-          </text>
-          <text id="colline_id_list-14">
-            <value>115</value>
-          </text>
-          <text id="colline_id_list-15">
-            <value>116</value>
-          </text>
-          <text id="colline_id_list-16">
-            <value>117</value>
-          </text>
-          <text id="colline_id_list-17">
-            <value>118</value>
-          </text>
-          <text id="colline_id_list-18">
-            <value>119</value>
-          </text>
-          <text id="colline_id_list-19">
-            <value>120</value>
-          </text>
-          <text id="colline_id_list-20">
-            <value>121</value>
-          </text>
-          <text id="colline_id_list-21">
-            <value>122</value>
-          </text>
-          <text id="colline_id_list-22">
-            <value>123</value>
-          </text>
-          <text id="colline_id_list-23">
-            <value>124</value>
-          </text>
-          <text id="colline_id_list-24">
-            <value>125</value>
-          </text>
-          <text id="colline_id_list-25">
-            <value>126</value>
-          </text>
-          <text id="colline_id_list-26">
-            <value>127</value>
-          </text>
-          <text id="colline_id_list-27">
-            <value>128</value>
-          </text>
-          <text id="colline_id_list-28">
-            <value>129</value>
-          </text>
-          <text id="colline_id_list-29">
-            <value>130</value>
-          </text>
-          <text id="colline_id_list-30">
-            <value>131</value>
-          </text>
-          <text id="colline_id_list-31">
-            <value>132</value>
-          </text>
-          <text id="colline_id_list-32">
-            <value>133</value>
-          </text>
-          <text id="colline_id_list-33">
-            <value>134</value>
-          </text>
-          <text id="colline_id_list-34">
-            <value>135</value>
-          </text>
-          <text id="colline_id_list-35">
-            <value>136</value>
-          </text>
-          <text id="colline_id_list-36">
-            <value>137</value>
-          </text>
-          <text id="colline_id_list-37">
-            <value>138</value>
-          </text>
-          <text id="colline_id_list-38">
-            <value>139</value>
-          </text>
-          <text id="colline_id_list-39">
-            <value>140</value>
-          </text>
-          <text id="colline_id_list-40">
-            <value>141</value>
-          </text>
-          <text id="colline_id_list-41">
-            <value>142</value>
-          </text>
-          <text id="colline_id_list-42">
-            <value>143</value>
-          </text>
-          <text id="colline_id_list-43">
-            <value>144</value>
-          </text>
-          <text id="colline_id_list-44">
-            <value>145</value>
-          </text>
-          <text id="colline_id_list-45">
-            <value>146</value>
-          </text>
-          <text id="colline_id_list-46">
-            <value>147</value>
-          </text>
-          <text id="colline_id_list-47">
-            <value>148</value>
-          </text>
-          <text id="colline_id_list-48">
-            <value>149</value>
-          </text>
-          <text id="colline_id_list-49">
-            <value>150</value>
-          </text>
-          <text id="colline_id_list-50">
-            <value>151</value>
-          </text>
-        </translation>
-      </itext>
+			<itext>
+				<translation default="true()" lang="Français">
+					<text id="/data/date:label">
+						<value>Date de l'enquête</value>
+					</text>
+					<text id="/data/code_enqueteur:jr:constraintMsg">
+						<value>Le code doit être compris entre 0 et 100</value>
+					</text>
+					<text id="/data/code_enqueteur:label">
+						<value>Code de l'enquêteur</value>
+					</text>
+					<text id="/data/district:label">
+						<value>District</value>
+					</text>
+					<text id="/data/commune:label">
+						<value>Commune</value>
+					</text>
+					<text id="/data/centre_sante:label">
+						<value>Centre de santé</value>
+					</text>
+					<text id="/data/colline:label">
+						<value>Colline</value>
+					</text>
+					<text id="/data/colline_id:label">
+						<value>Sélectionnez le code de la colline</value>
+					</text>
+					<text id="/data/num_menage:label">
+						<value>Numéro du ménage</value>
+					</text>
+					<text id="/data/membre_present:label">
+						<value>Les membres du ménage sont-ils présents? (O/N)</value>
+					</text>
+					<text id="/data/membre_present/Oui:label">
+						<value>1. Oui</value>
+					</text>
+					<text id="/data/membre_present/Non:label">
+						<value>2. Non</value>
+					</text>
+					<text id="/data/questions:label">
+						<value>Questions individuelles aux participants</value>
+					</text>
+					<text id="/data/questions/ajouter_participant:label">
+						<value>Voulez-vous ajouter un participant?</value>
+					</text>
+					<text id="/data/questions/ajouter_participant/Oui:label">
+						<value>1. Oui</value>
+					</text>
+					<text id="/data/questions/ajouter_participant/Non:label">
+						<value>2. Non</value>
+					</text>
+					<text id="/data/questions/code_participant:label">
+						<value>Code du participant</value>
+					</text>
+					<text id="/data/questions/sexe:label">
+						<value>Sexe</value>
+					</text>
+					<text id="/data/questions/sexe/M:label">
+						<value>M</value>
+					</text>
+					<text id="/data/questions/sexe/F:label">
+						<value>F</value>
+					</text>
+					<text id="/data/questions/age:jr:constraintMsg">
+						<value>De 5 à 120 ans</value>
+					</text>
+					<text id="/data/questions/age:label">
+						<value>Age</value>
+					</text>
+					<text id="/data/questions/present_campagne:label">
+						<value>Etiez-vous présent au village/colline lors de la campagne ?</value>
+					</text>
+					<text id="/data/questions/present_campagne/Oui:label">
+						<value>1. Oui</value>
+					</text>
+					<text id="/data/questions/present_campagne/Non:label">
+						<value>2. Non</value>
+					</text>
+					<text id="/data/questions/non_present_campagne:label">
+						<value>Pourquoi n'étiez-vous pas présent?</value>
+					</text>
+					<text id="/data/questions/non_present_campagne/1.Voyage:label">
+						<value>1.Voyage</value>
+					</text>
+					<text id="/data/questions/non_present_campagne/2. A l'internat /Ecole:label">
+						<value>2. A l'internat /Ecole</value>
+					</text>
+					<text id="/data/questions/non_present_campagne/3. Pour la recherche du travail:label">
+						<value>3. Pour la recherche du travail</value>
+					</text>
+					<text id="/data/questions/non_present_campagne/4. hospitalisé:label">
+						<value>4. hospitalisé</value>
+					</text>
+					<text id="/data/questions/non_present_campagne/Autre:label">
+						<value>Autre</value>
+					</text>
+					<text id="/data/questions/non_present_campagne_autre:label">
+						<value>Si autre, veuillez préciser</value>
+					</text>
+					<text id="/data/questions/menage_enregistre:label">
+						<value>Votre ménage était-il enregistré pendant la campagne ?</value>
+					</text>
+					<text id="/data/questions/menage_enregistre/Oui:label">
+						<value>1. Oui</value>
+					</text>
+					<text id="/data/questions/menage_enregistre/Non:label">
+						<value>2. Non</value>
+					</text>
+					<text id="/data/questions/non_menage_enregistre:label">
+						<value>Pourquoi votre ménage n'était-il pas enregistré pendant la campagne?</value>
+					</text>
+					<text id="/data/questions/non_menage_enregistre/1. DC/ASC n'est pas venu:label">
+						<value>1. DC/ASC n'est pas venu</value>
+					</text>
+					<text id="/data/questions/non_menage_enregistre/2. Pas de campagne:label">
+						<value>2. Pas de campagne</value>
+					</text>
+					<text id="/data/questions/non_menage_enregistre/3. Absent pendant le jour de campagne:label">
+						<value>3. Absent pendant le jour de campagne</value>
+					</text>
+					<text id="/data/questions/non_menage_enregistre/4. Personne n'était à la maison:label">
+						<value>4. Personne n'était à la maison</value>
+					</text>
+					<text id="/data/questions/non_menage_enregistre/Autre:label">
+						<value>Autre</value>
+					</text>
+					<text id="/data/questions/non_menage_enregistre_autre:label">
+						<value>Si autre, veuillez préciser</value>
+					</text>
+					<text id="/data/questions/ivm:label">
+						<value>IVERMECTINE (IVM)</value>
+					</text>
+					<text id="/data/questions/ivm/recu_medicament1:label">
+						<value>(IVM) Avez-vous reçu le(s) médicament(s)?</value>
+					</text>
+					<text id="/data/questions/ivm/recu_medicament1/Oui:label">
+						<value>Oui</value>
+					</text>
+					<text id="/data/questions/ivm/recu_medicament1/Non:label">
+						<value>Non</value>
+					</text>
+					<text id="/data/questions/ivm/recu_medicament1/Ne.sais.pas:label">
+						<value>Je ne sais pas</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu1:label">
+						<value>(IVM) Pourquoi n'en avez-vous pas reçu?</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu1/1.Enceinte:label">
+						<value>1. Enceinte</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu1/2.Mere.allaitante:label">
+						<value>2. Mère allaitante</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu1/3.Malade:label">
+						<value>3. Malade</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu1/4.Absent:label">
+						<value>4. Absent(e)</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu1/5.Pas.informe.de.la.campagne.mda:label">
+						<value>5. Pas informé de la campagne TDM</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu1/6.Rupture.de.medicaments:label">
+						<value>6. Rupture de médicaments</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu1/7.Personne.n.est.passe:label">
+						<value>7. Personne n'est passé</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu1/8.Refus:label">
+						<value>8. Refus</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu1/Autre:label">
+						<value>Autre</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_recu_autre1:label">
+						<value>(IVM) Veuillez spécifier les autres raisons</value>
+					</text>
+					<text id="/data/questions/ivm/avale1:label">
+						<value>(IVM) Avez-vous avalé vos médicaments?</value>
+					</text>
+					<text id="/data/questions/ivm/avale1/Oui:label">
+						<value>Oui</value>
+					</text>
+					<text id="/data/questions/ivm/avale1/Non:label">
+						<value>Non</value>
+					</text>
+					<text id="/data/questions/ivm/avale1/Ne.sais.pas:label">
+						<value>Je ne sais pas</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_avale1:label">
+						<value>(IVM) Pourquoi les avez-vous avalé?</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_avale1/1.peur.de.la.maladie:label">
+						<value>1. Peur de la maladie</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_avale1/2.pour.traiter.la.maladie:label">
+						<value>2. Pour traiter la maladie</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_avale1/3.parce.que.gratuit:label">
+						<value>3. Parce que c'était offert (gratuit)</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_avale1/4.des.informations.utiles.ont.ete.donnees:label">
+						<value>4. Des informations utiles ont été données</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_avale1/Autre:label">
+						<value>Autre</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_avale_autre1:label">
+						<value>(IVM) Veuillez spécifier les autres raisons</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_avale1:label">
+						<value>(IVM) Pourquoi ne les avez-vous pas avalé?</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_avale1/1.peur.des.effets.indesirables:label">
+						<value>1. Peur des effets indésirables</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_avale1/2.mauvais.gout:label">
+						<value>2. Mauvais goût</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_avale1/3.je.ne.suis.pas.malade:label">
+						<value>3. Je ne suis pas malade</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_avale1/4.pas.recu.suffisamment.d'informations:label">
+						<value>4. Je n'ai pas eu suffisament d'informations sur le médicament</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_avale1/Autre:label">
+						<value>Autre</value>
+					</text>
+					<text id="/data/questions/ivm/pourquoi_pas_avale_autre1:label">
+						<value>(IVM) Veuillez spécifier les autres raisons</value>
+					</text>
+					<text id="/data/questions/ivm/lieu_prise_mectizan1:label">
+						<value>Où avez-vous pris le mectizan ?</value>
+					</text>
+					<text id="/data/questions/ivm/lieu_prise_mectizan1/1. Chez les DC/ASC:label">
+						<value>1. Chez les DC/ASC</value>
+					</text>
+					<text id="/data/questions/ivm/lieu_prise_mectizan1/2. Chez le chef de dix maisons:label">
+						<value>2. Chez le chef de dix maisons</value>
+					</text>
+					<text id="/data/questions/ivm/lieu_prise_mectizan1/3. Chez moi / Porte à Porte:label">
+						<value>3. Chez moi / Porte à Porte</value>
+					</text>
+					<text id="/data/questions/ivm/lieu_prise_mectizan1/Autre:label">
+						<value>4. Autres</value>
+					</text>
+					<text id="/data/questions/ivm/lieu_prise_mectizan_autre1:label">
+						<value>Si autre, veuillez préciser</value>
+					</text>
+					<text id="/data/questions/alb:label">
+						<value>ALBENDAZOLE (ALB)</value>
+					</text>
+					<text id="/data/questions/alb/recu_medicament2:label">
+						<value>(ALB) Avez-vous reçu le(s) médicament(s)?</value>
+					</text>
+					<text id="/data/questions/alb/recu_medicament2/Oui:label">
+						<value>Oui</value>
+					</text>
+					<text id="/data/questions/alb/recu_medicament2/Non:label">
+						<value>Non</value>
+					</text>
+					<text id="/data/questions/alb/recu_medicament2/Ne.sais.pas:label">
+						<value>Je ne sais pas</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu2:label">
+						<value>(ALB) Pourquoi n'en avez-vous pas reçu?</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu2/1.Enceinte:label">
+						<value>1. Enceinte</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu2/2.Mere.allaitante:label">
+						<value>2. Mère allaitante</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu2/3.Malade:label">
+						<value>3. Malade</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu2/4.Absent:label">
+						<value>4. Absent(e)</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu2/5.Pas.informe.de.la.campagne.mda:label">
+						<value>5. Pas informé de la campagne TDM</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu2/6.Rupture.de.medicaments:label">
+						<value>6. Rupture de médicaments</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu2/7.Personne.n.est.passe:label">
+						<value>7. Personne n'est passé</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu2/8.Refus:label">
+						<value>8. Refus</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu2/Autre:label">
+						<value>Autre</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_recu_autre2:label">
+						<value>(ALB) Veuillez spécifier les autres raisons</value>
+					</text>
+					<text id="/data/questions/alb/avale2:label">
+						<value>(ALB) Avez-vous avalé vos médicaments?</value>
+					</text>
+					<text id="/data/questions/alb/avale2/Oui:label">
+						<value>Oui</value>
+					</text>
+					<text id="/data/questions/alb/avale2/Non:label">
+						<value>Non</value>
+					</text>
+					<text id="/data/questions/alb/avale2/Ne.sais.pas:label">
+						<value>Je ne sais pas</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_avale2:label">
+						<value>(ALB) Pourquoi les avez-vous avalé?</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_avale2/1.peur.de.la.maladie:label">
+						<value>1. Peur de la maladie</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_avale2/2.pour.traiter.la.maladie:label">
+						<value>2. Pour traiter la maladie</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_avale2/3.parce.que.gratuit:label">
+						<value>3. Parce que c'était offert (gratuit)</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_avale2/4.des.informations.utiles.ont.ete.donnees:label">
+						<value>4. Des informations utiles ont été données</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_avale2/Autre:label">
+						<value>Autre</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_avale_autre2:label">
+						<value>(ALB) Veuillez spécifier les autres raisons</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_avale2:label">
+						<value>(ALB) Pourquoi ne les avez-vous pas avalé?</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_avale2/1.peur.des.effets.indesirables:label">
+						<value>1. Peur des effets indésirables</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_avale2/2.mauvais.gout:label">
+						<value>2. Mauvais goût</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_avale2/3.je.ne.suis.pas.malade:label">
+						<value>3. Je ne suis pas malade</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_avale2/4.pas.recu.suffisamment.d'informations:label">
+						<value>4. Je n'ai pas eu suffisament d'informations sur le médicament</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_avale2/Autre:label">
+						<value>Autre</value>
+					</text>
+					<text id="/data/questions/alb/pourquoi_pas_avale_autre2:label">
+						<value>(ALB) Veuillez spécifier les autres raisons</value>
+					</text>
+					<text id="/data/questions/canaux_com:label">
+						<value>Par quel canal aviez-vous été informé de la campagne ?</value>
+					</text>
+					<text id="/data/questions/canaux_com/1.DC./.ASC:label">
+						<value>1. DC/ASC</value>
+					</text>
+					<text id="/data/questions/canaux_com/2.Chef.de.colline./.village:label">
+						<value>2. Chef de colline/village</value>
+					</text>
+					<text id="/data/questions/canaux_com/3.Eglise:label">
+						<value>3. Eglise</value>
+					</text>
+					<text id="/data/questions/canaux_com/4.Radio:label">
+						<value>4. Radio</value>
+					</text>
+					<text id="/data/questions/canaux_com/5.Television:label">
+						<value>5. Télevision</value>
+					</text>
+					<text id="/data/questions/canaux_com/6.Crieurs.publics:label">
+						<value>6. Crieurs publics</value>
+					</text>
+					<text id="/data/questions/canaux_com/Autre:label">
+						<value>7. Autres précisez</value>
+					</text>
+					<text id="/data/questions/canaux_com_autre:label">
+						<value>Si autre, veuillez préciser</value>
+					</text>
+					<text id="/data/note1:label">
+						<value>L'interview ne peut continuer en l'absence des membres du ménage.</value>
+					</text>
+					<text id="/data/note:label">
+						<value>Notes additionnelles</value>
+					</text>
+				</translation>
+			</itext>
 
-      <instance id="sexe">
-        <root>
-          <item>
-            <itextId>sexe-0</itextId>
-            <name>M</name>
-          </item>
-          <item>
-            <itextId>sexe-1</itextId>
-            <name>F</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="yes_no">
-        <root>
-          <item>
-            <itextId>yes_no-0</itextId>
-            <name>Oui</name>
-          </item>
-          <item>
-            <itextId>yes_no-1</itextId>
-            <name>Non</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="yes_no_dontknow">
-        <root>
-          <item>
-            <itextId>yes_no_dontknow-0</itextId>
-            <name>Oui</name>
-          </item>
-          <item>
-            <itextId>yes_no_dontknow-1</itextId>
-            <name>Non</name>
-          </item>
-          <item>
-            <itextId>yes_no_dontknow-2</itextId>
-            <name>Ne.sais.pas</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="reason_not_treated">
-        <root>
-          <item>
-            <itextId>reason_not_treated-0</itextId>
-            <name>1.en.dessous.du.groupe.cible</name>
-          </item>
-          <item>
-            <itextId>reason_not_treated-1</itextId>
-            <name>2.enceinte</name>
-          </item>
-          <item>
-            <itextId>reason_not_treated-2</itextId>
-            <name>3.allaitante</name>
-          </item>
-          <item>
-            <itextId>reason_not_treated-3</itextId>
-            <name>4.malade</name>
-          </item>
-          <item>
-            <itextId>reason_not_treated-4</itextId>
-            <name>5.absent</name>
-          </item>
-          <item>
-            <itextId>reason_not_treated-5</itextId>
-            <name>6.pas.informe.de.la.campagne.mda</name>
-          </item>
-          <item>
-            <itextId>reason_not_treated-6</itextId>
-            <name>7.rupture.de.medicaments</name>
-          </item>
-          <item>
-            <itextId>reason_not_treated-7</itextId>
-            <name>8.personne.n.est.passe</name>
-          </item>
-          <item>
-            <itextId>reason_not_treated-8</itextId>
-            <name>9.refus</name>
-          </item>
-          <item>
-            <itextId>reason_not_treated-9</itextId>
-            <name>Autre</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="reason_not_swalowed">
-        <root>
-          <item>
-            <itextId>reason_not_swalowed-0</itextId>
-            <name>1.peur.des.effets.indesirables</name>
-          </item>
-          <item>
-            <itextId>reason_not_swalowed-1</itextId>
-            <name>2.mauvais.gout</name>
-          </item>
-          <item>
-            <itextId>reason_not_swalowed-2</itextId>
-            <name>3.je.ne.suis.pas.malade</name>
-          </item>
-          <item>
-            <itextId>reason_not_swalowed-3</itextId>
-            <name>4.pas.recu.suffisamment.d'informations</name>
-          </item>
-          <item>
-            <itextId>reason_not_swalowed-4</itextId>
-            <name>Autre</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="reason_swalowed">
-        <root>
-          <item>
-            <itextId>reason_swalowed-0</itextId>
-            <name>1.peur.de.la.maladie</name>
-          </item>
-          <item>
-            <itextId>reason_swalowed-1</itextId>
-            <name>2.pour.traiter.la.maladie</name>
-          </item>
-          <item>
-            <itextId>reason_swalowed-2</itextId>
-            <name>3.parce.que.gratuit</name>
-          </item>
-          <item>
-            <itextId>reason_swalowed-3</itextId>
-            <name>4.des.informations.utiles.ont.ete.donnees</name>
-          </item>
-          <item>
-            <itextId>reason_swalowed-4</itextId>
-            <name>Autre</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="district_list">
-        <root>
-          <item>
-            <itextId>district_list-0</itextId>
-            <name>GIHOFI</name>
-          </item>
-          <item>
-            <itextId>district_list-1</itextId>
-            <name>MPANDA</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="commune_list">
-        <root>
-          <item>
-            <itextId>commune_list-0</itextId>
-            <district_list>GIHOFI</district_list>
-            <name>BUKEMBA</name>
-          </item>
-          <item>
-            <itextId>commune_list-1</itextId>
-            <district_list>MPANDA</district_list>
-            <name>GIHANGA</name>
-          </item>
-          <item>
-            <itextId>commune_list-2</itextId>
-            <district_list>GIHOFI</district_list>
-            <name>GIHARO</name>
-          </item>
-          <item>
-            <itextId>commune_list-3</itextId>
-            <district_list>GIHOFI</district_list>
-            <name>GITANGA</name>
-          </item>
-          <item>
-            <itextId>commune_list-4</itextId>
-            <district_list>MPANDA</district_list>
-            <name>MPANDA</name>
-          </item>
-          <item>
-            <itextId>commune_list-5</itextId>
-            <district_list>MPANDA</district_list>
-            <name>Rugazi</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="centre_sante_list">
-        <root>
-          <item>
-            <itextId>centre_sante_list-0</itextId>
-            <commune_list>BUKEMBA</commune_list>
-            <name>BUKEMBA</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-1</itextId>
-            <commune_list>GIHANGA</commune_list>
-            <name>BURAMATA</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-2</itextId>
-            <commune_list>MPANDA</commune_list>
-            <name>Butanuka</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-3</itextId>
-            <commune_list>BUKEMBA</commune_list>
-            <name>BUTARE</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-4</itextId>
-            <commune_list>GIHARO</commune_list>
-            <name>BUTEZI</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-5</itextId>
-            <commune_list>GIHARO</commune_list>
-            <name>GAKUNGU</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-6</itextId>
-            <commune_list>GITANGA</commune_list>
-            <name>GAKWENDE</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-7</itextId>
-            <commune_list>GIHANGA</commune_list>
-            <name>GIHANGA</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-8</itextId>
-            <commune_list>GIHARO</commune_list>
-            <name>GIHARO</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-9</itextId>
-            <commune_list>BUKEMBA</commune_list>
-            <name>GIHOFI</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-10</itextId>
-            <commune_list>GIHANGA</commune_list>
-            <name>Gihungwe</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-11</itextId>
-            <commune_list>GITANGA</commune_list>
-            <name>GITANGA</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-12</itextId>
-            <commune_list>BUKEMBA</commune_list>
-            <name>KABANGA</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-13</itextId>
-            <commune_list>GITANGA</commune_list>
-            <name>KINZANZA</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-14</itextId>
-            <commune_list>Rugazi</commune_list>
-            <name>Kirengane</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-15</itextId>
-            <commune_list>MPANDA</commune_list>
-            <name>MPANDA</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-16</itextId>
-            <commune_list>GIHARO</commune_list>
-            <name>MUHAFU</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-17</itextId>
-            <commune_list>MPANDA</commune_list>
-            <name>Murengeza</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-18</itextId>
-            <commune_list>GIHANGA</commune_list>
-            <name>MURIRA</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-19</itextId>
-            <commune_list>GIHARO</commune_list>
-            <name>MUZYE</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-20</itextId>
-            <commune_list>GIHARO</commune_list>
-            <name>NGOMANTE</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-21</itextId>
-            <commune_list>GIHANGA</commune_list>
-            <name>Ninga</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-22</itextId>
-            <commune_list>GITANGA</commune_list>
-            <name>NYABIKENKE</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-23</itextId>
-            <commune_list>GIHARO</commune_list>
-            <name>NYAGAHARA</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-24</itextId>
-            <commune_list>GIHARO</commune_list>
-            <name>NYEMBUYE</name>
-          </item>
-          <item>
-            <itextId>centre_sante_list-25</itextId>
-            <commune_list>BUKEMBA</commune_list>
-            <name>RURANGA</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="colline_list">
-        <root>
-          <item>
-            <itextId>colline_list-0</itextId>
-            <centre_sante_list>GITANGA</centre_sante_list>
-            <name>BIGINA</name>
-          </item>
-          <item>
-            <itextId>colline_list-1</itextId>
-            <centre_sante_list>BUKEMBA</centre_sante_list>
-            <name>BUKEMBA</name>
-          </item>
-          <item>
-            <itextId>colline_list-2</itextId>
-            <centre_sante_list>BURAMATA</centre_sante_list>
-            <name>Buramata</name>
-          </item>
-          <item>
-            <itextId>colline_list-3</itextId>
-            <centre_sante_list>Ninga</centre_sante_list>
-            <name>Buringa</name>
-          </item>
-          <item>
-            <itextId>colline_list-4</itextId>
-            <centre_sante_list>Butanuka</centre_sante_list>
-            <name>Butanuka</name>
-          </item>
-          <item>
-            <itextId>colline_list-5</itextId>
-            <centre_sante_list>BUTARE</centre_sante_list>
-            <name>BUTARE</name>
-          </item>
-          <item>
-            <itextId>colline_list-6</itextId>
-            <centre_sante_list>Kirengane</centre_sante_list>
-            <name>Butavuka</name>
-          </item>
-          <item>
-            <itextId>colline_list-7</itextId>
-            <centre_sante_list>Butanuka</centre_sante_list>
-            <name>Butembe</name>
-          </item>
-          <item>
-            <itextId>colline_list-8</itextId>
-            <centre_sante_list>BUTEZI</centre_sante_list>
-            <name>BUTEZI</name>
-          </item>
-          <item>
-            <itextId>colline_list-9</itextId>
-            <centre_sante_list>MUZYE</centre_sante_list>
-            <name>BUYAGA</name>
-          </item>
-          <item>
-            <itextId>colline_list-10</itextId>
-            <centre_sante_list>NYABIKENKE</centre_sante_list>
-            <name>CIKINGA</name>
-          </item>
-          <item>
-            <itextId>colline_list-11</itextId>
-            <centre_sante_list>MPANDA</centre_sante_list>
-            <name>Gahwazi 1</name>
-          </item>
-          <item>
-            <itextId>colline_list-12</itextId>
-            <centre_sante_list>GAKUNGU</centre_sante_list>
-            <name>GAKUNGU</name>
-          </item>
-          <item>
-            <itextId>colline_list-13</itextId>
-            <centre_sante_list>MPANDA</centre_sante_list>
-            <name>Gatagura</name>
-          </item>
-          <item>
-            <itextId>colline_list-14</itextId>
-            <centre_sante_list>MPANDA</centre_sante_list>
-            <name>Gifurwe</name>
-          </item>
-          <item>
-            <itextId>colline_list-15</itextId>
-            <centre_sante_list>GIHANGA</centre_sante_list>
-            <name>Gihanga</name>
-          </item>
-          <item>
-            <itextId>colline_list-16</itextId>
-            <centre_sante_list>GIHARO</centre_sante_list>
-            <name>GIHARO</name>
-          </item>
-          <item>
-            <itextId>colline_list-17</itextId>
-            <centre_sante_list>GIHOFI</centre_sante_list>
-            <name>GIHOFI</name>
-          </item>
-          <item>
-            <itextId>colline_list-18</itextId>
-            <centre_sante_list>Gihungwe</centre_sante_list>
-            <name>Gihungwe</name>
-          </item>
-          <item>
-            <itextId>colline_list-19</itextId>
-            <centre_sante_list>NYAGAHARA</centre_sante_list>
-            <name>GITANGA</name>
-          </item>
-          <item>
-            <itextId>colline_list-20</itextId>
-            <centre_sante_list>KABANGA</centre_sante_list>
-            <name>KABANGA</name>
-          </item>
-          <item>
-            <itextId>colline_list-21</itextId>
-            <centre_sante_list>KINZANZA</centre_sante_list>
-            <name>KABANGA (KINZANZA)</name>
-          </item>
-          <item>
-            <itextId>colline_list-22</itextId>
-            <centre_sante_list>BUTEZI</centre_sante_list>
-            <name>KABINGO</name>
-          </item>
-          <item>
-            <itextId>colline_list-23</itextId>
-            <centre_sante_list>Gihungwe</centre_sante_list>
-            <name>Kagwema</name>
-          </item>
-          <item>
-            <itextId>colline_list-24</itextId>
-            <centre_sante_list>GITANGA</centre_sante_list>
-            <name>KAZEBA</name>
-          </item>
-          <item>
-            <itextId>colline_list-25</itextId>
-            <centre_sante_list>KINZANZA</centre_sante_list>
-            <name>KINZANZA</name>
-          </item>
-          <item>
-            <itextId>colline_list-26</itextId>
-            <centre_sante_list>Mpanda</centre_sante_list>
-            <name>Masha</name>
-          </item>
-          <item>
-            <itextId>colline_list-27</itextId>
-            <centre_sante_list>GIHARO</centre_sante_list>
-            <name>MURA</name>
-          </item>
-          <item>
-            <itextId>colline_list-28</itextId>
-            <centre_sante_list>GAKUNGU</centre_sante_list>
-            <name>MURARA</name>
-          </item>
-          <item>
-            <itextId>colline_list-29</itextId>
-            <centre_sante_list>Murengeza</centre_sante_list>
-            <name>Murengeza</name>
-          </item>
-          <item>
-            <itextId>colline_list-30</itextId>
-            <centre_sante_list>MPANDA</centre_sante_list>
-            <name>Musenyi</name>
-          </item>
-          <item>
-            <itextId>colline_list-31</itextId>
-            <centre_sante_list>BUTEZI</centre_sante_list>
-            <name>MUTWANA</name>
-          </item>
-          <item>
-            <itextId>colline_list-32</itextId>
-            <centre_sante_list>BUTEZI</centre_sante_list>
-            <name>MWEBEYA</name>
-          </item>
-          <item>
-            <itextId>colline_list-33</itextId>
-            <centre_sante_list>BURAMATA</centre_sante_list>
-            <name>Ndava Busongo</name>
-          </item>
-          <item>
-            <itextId>colline_list-34</itextId>
-            <centre_sante_list>GAKWENDE</centre_sante_list>
-            <name>NGOMA</name>
-          </item>
-          <item>
-            <itextId>colline_list-35</itextId>
-            <centre_sante_list>NGOMANTE</centre_sante_list>
-            <name>NGOMANTE</name>
-          </item>
-          <item>
-            <itextId>colline_list-36</itextId>
-            <centre_sante_list>Murengeza</centre_sante_list>
-            <name>Nyamabere</name>
-          </item>
-          <item>
-            <itextId>colline_list-37</itextId>
-            <centre_sante_list>GAKUNGU</centre_sante_list>
-            <name>NYAMATEKE</name>
-          </item>
-          <item>
-            <itextId>colline_list-38</itextId>
-            <centre_sante_list>NYEMBUYE</centre_sante_list>
-            <name>NYEMBUYE</name>
-          </item>
-          <item>
-            <itextId>colline_list-39</itextId>
-            <centre_sante_list>RURANGA</centre_sante_list>
-            <name>RUBANGA</name>
-          </item>
-          <item>
-            <itextId>colline_list-40</itextId>
-            <centre_sante_list>BUTEZI</centre_sante_list>
-            <name>RUBANGA (BUTEZI)</name>
-          </item>
-          <item>
-            <itextId>colline_list-41</itextId>
-            <centre_sante_list>Murengeza</centre_sante_list>
-            <name>Rubira</name>
-          </item>
-          <item>
-            <itextId>colline_list-42</itextId>
-            <centre_sante_list>MPANDA</centre_sante_list>
-            <name>Rugenge</name>
-          </item>
-          <item>
-            <itextId>colline_list-43</itextId>
-            <centre_sante_list>Gihungwe</centre_sante_list>
-            <name>Rugunga</name>
-          </item>
-          <item>
-            <itextId>colline_list-44</itextId>
-            <centre_sante_list>MURIRA</centre_sante_list>
-            <name>Rumotomoto</name>
-          </item>
-          <item>
-            <itextId>colline_list-45</itextId>
-            <centre_sante_list>RURANGA</centre_sante_list>
-            <name>RURANGA</name>
-          </item>
-          <item>
-            <itextId>colline_list-46</itextId>
-            <centre_sante_list>MUHAFU</centre_sante_list>
-            <name>SHEMBE</name>
-          </item>
-          <item>
-            <itextId>colline_list-47</itextId>
-            <centre_sante_list>MURIRA</centre_sante_list>
-            <name>Village 2</name>
-          </item>
-          <item>
-            <itextId>colline_list-48</itextId>
-            <centre_sante_list>Ninga</centre_sante_list>
-            <name>Village 3</name>
-          </item>
-          <item>
-            <itextId>colline_list-49</itextId>
-            <centre_sante_list>Ninga</centre_sante_list>
-            <name>Village 4</name>
-          </item>
-          <item>
-            <itextId>colline_list-50</itextId>
-            <centre_sante_list>Ninga</centre_sante_list>
-            <name>Village 5</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="colline_id_list">
-        <root>
-          <item>
-            <itextId>colline_id_list-0</itextId>
-            <colline_list>BUKEMBA</colline_list>
-            <name>101</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-1</itextId>
-            <colline_list>BUTARE</colline_list>
-            <name>102</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-2</itextId>
-            <colline_list>GIHOFI</colline_list>
-            <name>103</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-3</itextId>
-            <colline_list>KABANGA</colline_list>
-            <name>104</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-4</itextId>
-            <colline_list>RUBANGA</colline_list>
-            <name>105</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-5</itextId>
-            <colline_list>RURANGA</colline_list>
-            <name>106</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-6</itextId>
-            <colline_list>BUTEZI</colline_list>
-            <name>107</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-7</itextId>
-            <colline_list>KABINGO</colline_list>
-            <name>108</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-8</itextId>
-            <colline_list>MUTWANA</colline_list>
-            <name>109</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-9</itextId>
-            <colline_list>MWEBEYA</colline_list>
-            <name>110</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-10</itextId>
-            <colline_list>RUBANGA (BUTEZI)</colline_list>
-            <name>111</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-11</itextId>
-            <colline_list>GAKUNGU</colline_list>
-            <name>112</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-12</itextId>
-            <colline_list>MURARA</colline_list>
-            <name>113</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-13</itextId>
-            <colline_list>NYAMATEKE</colline_list>
-            <name>114</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-14</itextId>
-            <colline_list>GIHARO</colline_list>
-            <name>115</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-15</itextId>
-            <colline_list>MURA</colline_list>
-            <name>116</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-16</itextId>
-            <colline_list>SHEMBE</colline_list>
-            <name>117</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-17</itextId>
-            <colline_list>BUYAGA</colline_list>
-            <name>118</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-18</itextId>
-            <colline_list>NGOMANTE</colline_list>
-            <name>119</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-19</itextId>
-            <colline_list>GITANGA</colline_list>
-            <name>120</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-20</itextId>
-            <colline_list>NYEMBUYE</colline_list>
-            <name>121</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-21</itextId>
-            <colline_list>NGOMA</colline_list>
-            <name>122</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-22</itextId>
-            <colline_list>BIGINA</colline_list>
-            <name>123</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-23</itextId>
-            <colline_list>KAZEBA</colline_list>
-            <name>124</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-24</itextId>
-            <colline_list>KABANGA (KINZANZA)</colline_list>
-            <name>125</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-25</itextId>
-            <colline_list>KINZANZA</colline_list>
-            <name>126</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-26</itextId>
-            <colline_list>CIKINGA</colline_list>
-            <name>127</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-27</itextId>
-            <colline_list>Buramata</colline_list>
-            <name>128</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-28</itextId>
-            <colline_list>Ndava Busongo</colline_list>
-            <name>129</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-29</itextId>
-            <colline_list>Gihanga</colline_list>
-            <name>130</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-30</itextId>
-            <colline_list>Gihungwe</colline_list>
-            <name>131</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-31</itextId>
-            <colline_list>Kagwema</colline_list>
-            <name>132</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-32</itextId>
-            <colline_list>Rugunga</colline_list>
-            <name>133</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-33</itextId>
-            <colline_list>Rumotomoto</colline_list>
-            <name>134</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-34</itextId>
-            <colline_list>Village 2</colline_list>
-            <name>135</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-35</itextId>
-            <colline_list>Buringa</colline_list>
-            <name>136</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-36</itextId>
-            <colline_list>Village 3</colline_list>
-            <name>137</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-37</itextId>
-            <colline_list>Village 4</colline_list>
-            <name>138</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-38</itextId>
-            <colline_list>Village 5</colline_list>
-            <name>139</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-39</itextId>
-            <colline_list>Butanuka</colline_list>
-            <name>140</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-40</itextId>
-            <colline_list>Butembe</colline_list>
-            <name>141</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-41</itextId>
-            <colline_list>Gahwazi 1</colline_list>
-            <name>142</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-42</itextId>
-            <colline_list>Gatagura</colline_list>
-            <name>143</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-43</itextId>
-            <colline_list>Gifurwe</colline_list>
-            <name>144</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-44</itextId>
-            <colline_list>Masha</colline_list>
-            <name>145</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-45</itextId>
-            <colline_list>Musenyi</colline_list>
-            <name>146</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-46</itextId>
-            <colline_list>Rugenge</colline_list>
-            <name>147</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-47</itextId>
-            <colline_list>Murengeza</colline_list>
-            <name>148</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-48</itextId>
-            <colline_list>Nyamabere</colline_list>
-            <name>149</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-49</itextId>
-            <colline_list>Rubira</colline_list>
-            <name>150</name>
-          </item>
-          <item>
-            <itextId>colline_id_list-50</itextId>
-            <colline_list>Butavuka</colline_list>
-            <name>151</name>
-          </item>
-        </root>
-      </instance>
-
-      <bind nodeset="/data/questions/meta_randomnum" type="string" calculate="concat(substr(random(),3,7),'-',substr(random(),3,6))"/>
-      <bind constraint=". &gt; 0 and . &lt; 100" jr:constraintMsg="jr:itext('/data/code_enqueteur:jr:constraintMsg')" nodeset="/data/code_enqueteur" required="true()" type="int"/>
-      <bind nodeset="/data/district" required="true()" type="string"/>
-      <bind nodeset="/data/commune" required="true()" type="string"/>
-      <bind nodeset="/data/centre_sante" required="true()" type="string"/>
-      <bind nodeset="/data/colline" required="true()" type="string"/>
-      <bind nodeset="/data/colline_id" required="true()" type="string"/>
-      <bind nodeset="/data/num_menage" required="true()" type="string"/>
-      <bind nodeset="/data/membre_present" required="true()" type="string"/>
-      <bind nodeset="/data/questions" relevant="selected( /data/membre_present , 'Oui')"/>
-      <bind nodeset="/data/questions/ajouter_participant" relevant="selected( /data/membre_present , 'Oui')" required="true()" type="string"/>
-      <bind calculate="if(../ajouter_participant = 'Oui', substr(concat( ../ajouter_participant, '-', /data/colline_id ,'-', ../meta_randomnum),4),'')" nodeset="/data/questions/code_participant" readonly="true()" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/sexe" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')" required="true()" type="string"/>
-      <bind constraint=". &gt; 0 and . &lt; 120" jr:constraintMsg="jr:itext('/data/questions/age:jr:constraintMsg')" nodeset="/data/questions/age" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')" required="true()" type="int"/>
-      <bind nodeset="/data/questions/dec" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')"/>
-      <bind nodeset="/data/questions/dec/recu_medicament1" required="true()" type="string"/>
-      <bind nodeset="/data/questions/dec/pourquoi_pas_recu1" relevant="selected( ../recu_medicament1 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/dec/pourquoi_pas_recu_autre1" relevant="selected( ../pourquoi_pas_recu1 , 'Autre') and selected( ../recu_medicament1 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/dec/avale1" relevant="selected( ../recu_medicament1 , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/dec/pourquoi_avale1" relevant="selected( ../avale1 , 'Oui') and selected( ../recu_medicament1 , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/dec/pourquoi_avale_autre1" relevant="selected( ../pourquoi_avale1 , 'Autre') and selected( ../recu_medicament1 , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/dec/pourquoi_pas_avale1" relevant="selected( ../avale1 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/dec/pourquoi_pas_avale_autre1" relevant="selected( ../pourquoi_pas_avale1 , 'Autre') and selected( ../avale1 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/ivm" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')"/>
-      <bind nodeset="/data/questions/ivm/recu_medicament2" required="true()" type="string"/>
-      <bind nodeset="/data/questions/ivm/pourquoi_pas_recu2" relevant="selected( ../recu_medicament2 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/ivm/pourquoi_pas_recu_autre2" relevant="selected( ../pourquoi_pas_recu2 , 'Autre') and selected( ../recu_medicament2 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/ivm/avale2" relevant="selected( ../recu_medicament2 , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/ivm/pourquoi_avale2" relevant="selected( ../avale2 , 'Oui') and selected( ../recu_medicament2 , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/ivm/pourquoi_avale_autre2" relevant="selected( ../pourquoi_avale2 , 'Autre') and selected( ../recu_medicament2 , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/ivm/pourquoi_pas_avale2" relevant="selected( ../avale2 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/ivm/pourquoi_pas_avale_autre2" relevant="selected( ../pourquoi_pas_avale2 , 'Autre') and selected( ../avale2 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/alb" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')"/>
-      <bind nodeset="/data/questions/alb/recu_medicament3" required="true()" type="string"/>
-      <bind nodeset="/data/questions/alb/pourquoi_pas_recu3" relevant="selected( ../recu_medicament3 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/alb/pourquoi_pas_recu_autre3" relevant="selected( ../pourquoi_pas_recu3 , 'Autre') and selected( ../recu_medicament3 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/alb/avale3" relevant="selected( ../recu_medicament3 , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/alb/pourquoi_avale3" relevant="selected( ../avale3 , 'Oui') and selected( ../recu_medicament3 , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/alb/pourquoi_avale_autre3" relevant="selected( ../pourquoi_avale3 , 'Autre') and selected( ../recu_medicament3 , 'Oui')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/alb/pourquoi_pas_avale3" relevant="selected( ../avale3 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/questions/alb/pourquoi_pas_avale_autre3" relevant="selected( ../pourquoi_pas_avale3 , 'Autre') and selected( ../avale3 , 'Non')" required="true()" type="string"/>
-      <bind nodeset="/data/note1" readonly="true()" relevant="selected( /data/membre_present , 'Non')" type="string"/>
-      <bind nodeset="/data/note" type="string"/>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start_date" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end_date" type="dateTime"/>
-      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-
-    </model>
-  </h:head>
-  <h:body>
-    <input ref="/data/code_enqueteur">
-      <label ref="jr:itext('/data/code_enqueteur:label')"/>
-    </input>
-    <select1 ref="/data/district">
-      <label ref="jr:itext('/data/district:label')"/>
-      <item>
-        <label ref="jr:itext('/data/district/GIHOFI:label')"/>
-        <value>GIHOFI</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/district/MPANDA:label')"/>
-        <value>MPANDA</value>
-      </item>
-    </select1>
-    <select1 ref="/data/commune">
-      <label ref="jr:itext('/data/commune:label')"/>
-      <itemset nodeset="instance('commune_list')/root/item[district_list =  /data/district ]">
-        <value ref="name"/>
-        <label ref="jr:itext(itextId)"/>
-      </itemset>
-    </select1>
-    <select1 ref="/data/centre_sante">
-      <label ref="jr:itext('/data/centre_sante:label')"/>
-      <itemset nodeset="instance('centre_sante_list')/root/item[commune_list =  /data/commune ]">
-        <value ref="name"/>
-        <label ref="jr:itext(itextId)"/>
-      </itemset>
-    </select1>
-    <select1 ref="/data/colline">
-      <label ref="jr:itext('/data/colline:label')"/>
-      <itemset nodeset="instance('colline_list')/root/item[centre_sante_list =  /data/centre_sante ]">
-        <value ref="name"/>
-        <label ref="jr:itext(itextId)"/>
-      </itemset>
-    </select1>
-    <select1 ref="/data/colline_id">
-      <label ref="jr:itext('/data/colline_id:label')"/>
-      <itemset nodeset="instance('colline_id_list')/root/item[colline_list =  /data/colline ]">
-        <value ref="name"/>
-        <label ref="jr:itext(itextId)"/>
-      </itemset>
-    </select1>
-    <input ref="/data/num_menage">
-      <label ref="jr:itext('/data/num_menage:label')"/>
-    </input>
-    <select1 ref="/data/membre_present">
-      <label ref="jr:itext('/data/membre_present:label')"/>
-      <item>
-        <label ref="jr:itext('/data/membre_present/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/membre_present/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <group ref="/data/questions">
-      <label ref="jr:itext('/data/questions:label')"/>
-      <repeat nodeset="/data/questions">
-        <select1 ref="/data/questions/ajouter_participant">
-          <label ref="jr:itext('/data/questions/ajouter_participant:label')"/>
-          <item>
-            <label ref="jr:itext('/data/questions/ajouter_participant/Oui:label')"/>
-            <value>Oui</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/questions/ajouter_participant/Non:label')"/>
-            <value>Non</value>
-          </item>
-        </select1>
-        <input ref="/data/questions/code_participant">
-          <label ref="jr:itext('/data/questions/code_participant:label')"/>
-        </input>
-        <select1 ref="/data/questions/sexe">
-          <label ref="jr:itext('/data/questions/sexe:label')"/>
-          <item>
-            <label ref="jr:itext('/data/questions/sexe/M:label')"/>
-            <value>M</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/questions/sexe/F:label')"/>
-            <value>F</value>
-          </item>
-        </select1>
-        <input ref="/data/questions/age">
-          <label ref="jr:itext('/data/questions/age:label')"/>
-        </input>
-        <group ref="/data/questions/dec">
-          <label ref="jr:itext('/data/questions/dec:label')"/>
-          <select1 ref="/data/questions/dec/recu_medicament1">
-            <label ref="jr:itext('/data/questions/dec/recu_medicament1:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/recu_medicament1/Oui:label')"/>
-              <value>Oui</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/recu_medicament1/Non:label')"/>
-              <value>Non</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/recu_medicament1/Ne.sais.pas:label')"/>
-              <value>Ne.sais.pas</value>
-            </item>
-          </select1>
-          <select ref="/data/questions/dec/pourquoi_pas_recu1">
-            <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1/1.en.dessous.du.groupe.cible:label')"/>
-              <value>1.en.dessous.du.groupe.cible</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1/2.enceinte:label')"/>
-              <value>2.enceinte</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1/3.allaitante:label')"/>
-              <value>3.allaitante</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1/4.malade:label')"/>
-              <value>4.malade</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1/5.absent:label')"/>
-              <value>5.absent</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1/6.pas.informe.de.la.campagne.mda:label')"/>
-              <value>6.pas.informe.de.la.campagne.mda</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1/7.rupture.de.medicaments:label')"/>
-              <value>7.rupture.de.medicaments</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1/8.personne.n.est.passe:label')"/>
-              <value>8.personne.n.est.passe</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1/9.refus:label')"/>
-              <value>9.refus</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu1/Autre:label')"/>
-              <value>Autre</value>
-            </item>
-          </select>
-          <input ref="/data/questions/dec/pourquoi_pas_recu_autre1">
-            <label ref="jr:itext('/data/questions/dec/pourquoi_pas_recu_autre1:label')"/>
-          </input>
-          <select1 ref="/data/questions/dec/avale1">
-            <label ref="jr:itext('/data/questions/dec/avale1:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/avale1/Oui:label')"/>
-              <value>Oui</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/avale1/Non:label')"/>
-              <value>Non</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/avale1/Ne.sais.pas:label')"/>
-              <value>Ne.sais.pas</value>
-            </item>
-          </select1>
-          <select ref="/data/questions/dec/pourquoi_avale1">
-            <label ref="jr:itext('/data/questions/dec/pourquoi_avale1:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_avale1/1.peur.de.la.maladie:label')"/>
-              <value>1.peur.de.la.maladie</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_avale1/2.pour.traiter.la.maladie:label')"/>
-              <value>2.pour.traiter.la.maladie</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_avale1/3.parce.que.gratuit:label')"/>
-              <value>3.parce.que.gratuit</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_avale1/4.des.informations.utiles.ont.ete.donnees:label')"/>
-              <value>4.des.informations.utiles.ont.ete.donnees</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_avale1/Autre:label')"/>
-              <value>Autre</value>
-            </item>
-          </select>
-          <input ref="/data/questions/dec/pourquoi_avale_autre1">
-            <label ref="jr:itext('/data/questions/dec/pourquoi_avale_autre1:label')"/>
-          </input>
-          <select ref="/data/questions/dec/pourquoi_pas_avale1">
-            <label ref="jr:itext('/data/questions/dec/pourquoi_pas_avale1:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_avale1/1.peur.des.effets.indesirables:label')"/>
-              <value>1.peur.des.effets.indesirables</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_avale1/2.mauvais.gout:label')"/>
-              <value>2.mauvais.gout</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_avale1/3.je.ne.suis.pas.malade:label')"/>
-              <value>3.je.ne.suis.pas.malade</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_avale1/4.pas.recu.suffisamment.d'informations:label')"/>
-              <value>4.pas.recu.suffisamment.d'informations</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/dec/pourquoi_pas_avale1/Autre:label')"/>
-              <value>Autre</value>
-            </item>
-          </select>
-          <input ref="/data/questions/dec/pourquoi_pas_avale_autre1">
-            <label ref="jr:itext('/data/questions/dec/pourquoi_pas_avale_autre1:label')"/>
-          </input>
-        </group>
-        <group ref="/data/questions/ivm">
-          <label ref="jr:itext('/data/questions/ivm:label')"/>
-          <select1 ref="/data/questions/ivm/recu_medicament2">
-            <label ref="jr:itext('/data/questions/ivm/recu_medicament2:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/recu_medicament2/Oui:label')"/>
-              <value>Oui</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/recu_medicament2/Non:label')"/>
-              <value>Non</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/recu_medicament2/Ne.sais.pas:label')"/>
-              <value>Ne.sais.pas</value>
-            </item>
-          </select1>
-          <select ref="/data/questions/ivm/pourquoi_pas_recu2">
-            <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2/1.en.dessous.du.groupe.cible:label')"/>
-              <value>1.en.dessous.du.groupe.cible</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2/2.enceinte:label')"/>
-              <value>2.enceinte</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2/3.allaitante:label')"/>
-              <value>3.allaitante</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2/4.malade:label')"/>
-              <value>4.malade</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2/5.absent:label')"/>
-              <value>5.absent</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2/6.pas.informe.de.la.campagne.mda:label')"/>
-              <value>6.pas.informe.de.la.campagne.mda</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2/7.rupture.de.medicaments:label')"/>
-              <value>7.rupture.de.medicaments</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2/8.personne.n.est.passe:label')"/>
-              <value>8.personne.n.est.passe</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2/9.refus:label')"/>
-              <value>9.refus</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu2/Autre:label')"/>
-              <value>Autre</value>
-            </item>
-          </select>
-          <input ref="/data/questions/ivm/pourquoi_pas_recu_autre2">
-            <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu_autre2:label')"/>
-          </input>
-          <select1 ref="/data/questions/ivm/avale2">
-            <label ref="jr:itext('/data/questions/ivm/avale2:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/avale2/Oui:label')"/>
-              <value>Oui</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/avale2/Non:label')"/>
-              <value>Non</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/avale2/Ne.sais.pas:label')"/>
-              <value>Ne.sais.pas</value>
-            </item>
-          </select1>
-          <select ref="/data/questions/ivm/pourquoi_avale2">
-            <label ref="jr:itext('/data/questions/ivm/pourquoi_avale2:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_avale2/1.peur.de.la.maladie:label')"/>
-              <value>1.peur.de.la.maladie</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_avale2/2.pour.traiter.la.maladie:label')"/>
-              <value>2.pour.traiter.la.maladie</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_avale2/3.parce.que.gratuit:label')"/>
-              <value>3.parce.que.gratuit</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_avale2/4.des.informations.utiles.ont.ete.donnees:label')"/>
-              <value>4.des.informations.utiles.ont.ete.donnees</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_avale2/Autre:label')"/>
-              <value>Autre</value>
-            </item>
-          </select>
-          <input ref="/data/questions/ivm/pourquoi_avale_autre2">
-            <label ref="jr:itext('/data/questions/ivm/pourquoi_avale_autre2:label')"/>
-          </input>
-          <select ref="/data/questions/ivm/pourquoi_pas_avale2">
-            <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale2:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale2/1.peur.des.effets.indesirables:label')"/>
-              <value>1.peur.des.effets.indesirables</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale2/2.mauvais.gout:label')"/>
-              <value>2.mauvais.gout</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale2/3.je.ne.suis.pas.malade:label')"/>
-              <value>3.je.ne.suis.pas.malade</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale2/4.pas.recu.suffisamment.d'informations:label')"/>
-              <value>4.pas.recu.suffisamment.d'informations</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale2/Autre:label')"/>
-              <value>Autre</value>
-            </item>
-          </select>
-          <input ref="/data/questions/ivm/pourquoi_pas_avale_autre2">
-            <label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale_autre2:label')"/>
-          </input>
-        </group>
-        <group ref="/data/questions/alb">
-          <label ref="jr:itext('/data/questions/alb:label')"/>
-          <select1 ref="/data/questions/alb/recu_medicament3">
-            <label ref="jr:itext('/data/questions/alb/recu_medicament3:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/recu_medicament3/Oui:label')"/>
-              <value>Oui</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/recu_medicament3/Non:label')"/>
-              <value>Non</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/recu_medicament3/Ne.sais.pas:label')"/>
-              <value>Ne.sais.pas</value>
-            </item>
-          </select1>
-          <select ref="/data/questions/alb/pourquoi_pas_recu3">
-            <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3/1.en.dessous.du.groupe.cible:label')"/>
-              <value>1.en.dessous.du.groupe.cible</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3/2.enceinte:label')"/>
-              <value>2.enceinte</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3/3.allaitante:label')"/>
-              <value>3.allaitante</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3/4.malade:label')"/>
-              <value>4.malade</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3/5.absent:label')"/>
-              <value>5.absent</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3/6.pas.informe.de.la.campagne.mda:label')"/>
-              <value>6.pas.informe.de.la.campagne.mda</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3/7.rupture.de.medicaments:label')"/>
-              <value>7.rupture.de.medicaments</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3/8.personne.n.est.passe:label')"/>
-              <value>8.personne.n.est.passe</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3/9.refus:label')"/>
-              <value>9.refus</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu3/Autre:label')"/>
-              <value>Autre</value>
-            </item>
-          </select>
-          <input ref="/data/questions/alb/pourquoi_pas_recu_autre3">
-            <label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu_autre3:label')"/>
-          </input>
-          <select1 ref="/data/questions/alb/avale3">
-            <label ref="jr:itext('/data/questions/alb/avale3:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/avale3/Oui:label')"/>
-              <value>Oui</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/avale3/Non:label')"/>
-              <value>Non</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/avale3/Ne.sais.pas:label')"/>
-              <value>Ne.sais.pas</value>
-            </item>
-          </select1>
-          <select ref="/data/questions/alb/pourquoi_avale3">
-            <label ref="jr:itext('/data/questions/alb/pourquoi_avale3:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_avale3/1.peur.de.la.maladie:label')"/>
-              <value>1.peur.de.la.maladie</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_avale3/2.pour.traiter.la.maladie:label')"/>
-              <value>2.pour.traiter.la.maladie</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_avale3/3.parce.que.gratuit:label')"/>
-              <value>3.parce.que.gratuit</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_avale3/4.des.informations.utiles.ont.ete.donnees:label')"/>
-              <value>4.des.informations.utiles.ont.ete.donnees</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_avale3/Autre:label')"/>
-              <value>Autre</value>
-            </item>
-          </select>
-          <input ref="/data/questions/alb/pourquoi_avale_autre3">
-            <label ref="jr:itext('/data/questions/alb/pourquoi_avale_autre3:label')"/>
-          </input>
-          <select ref="/data/questions/alb/pourquoi_pas_avale3">
-            <label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale3:label')"/>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale3/1.peur.des.effets.indesirables:label')"/>
-              <value>1.peur.des.effets.indesirables</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale3/2.mauvais.gout:label')"/>
-              <value>2.mauvais.gout</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale3/3.je.ne.suis.pas.malade:label')"/>
-              <value>3.je.ne.suis.pas.malade</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale3/4.pas.recu.suffisamment.d'informations:label')"/>
-              <value>4.pas.recu.suffisamment.d'informations</value>
-            </item>
-            <item>
-              <label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale3/Autre:label')"/>
-              <value>Autre</value>
-            </item>
-          </select>
-          <input ref="/data/questions/alb/pourquoi_pas_avale_autre3">
-            <label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale_autre3:label')"/>
-          </input>
-        </group>
-      </repeat>
-    </group>
-    <input ref="/data/note1">
-      <label ref="jr:itext('/data/note1:label')"/>
-    </input>
-    <input ref="/data/note">
-      <label ref="jr:itext('/data/note:label')"/>
-    </input>
-  </h:body>
+			<bind nodeset="/data/date" required="true()" type="date"/>
+			<bind constraint=". &gt; 0 and . &lt; 100" jr:constraintMsg="jr:itext('/data/code_enqueteur:jr:constraintMsg')" nodeset="/data/code_enqueteur" required="true()" type="int"/>
+			<bind nodeset="/data/district" required="true()" type="string" db_get="col_1"/>
+			<bind nodeset="/data/commune" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/district"/>
+			<bind nodeset="/data/centre_sante" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/commune"/>
+			<bind nodeset="/data/colline" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/centre_sante"/>
+			<bind nodeset="/data/colline_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/colline"/>
+			<bind nodeset="/data/num_menage" required="true()" type="string"/>
+			<bind nodeset="/data/membre_present" required="true()" type="string"/>
+			<bind nodeset="/data/questions" relevant="selected( /data/membre_present , 'Oui')"/>
+			<bind nodeset="/data/questions/ajouter_participant" relevant="selected( /data/membre_present , 'Oui')" required="true()" type="string"/>
+			<bind calculate="concat( /data/colline_id ,'-',substr(random(),3,8),'-',substr(random(),3,6))" nodeset="/data/questions/code_participant" readonly="true()" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/sexe" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')" required="true()" type="string"/>
+			<bind constraint=". &gt; 4 and . &lt; 120" jr:constraintMsg="jr:itext('/data/questions/age:jr:constraintMsg')" nodeset="/data/questions/age" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')" required="true()" type="int"/>
+			<bind nodeset="/data/questions/present_campagne" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/non_present_campagne" relevant="selected( ../present_campagne , 'Non')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/non_present_campagne_autre" relevant="selected( ../non_present_campagne , 'Autre')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/menage_enregistre" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/non_menage_enregistre" relevant="selected( ../menage_enregistre , 'Non')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/non_menage_enregistre_autre" relevant="selected( ../non_menage_enregistre , 'Autre')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/ivm" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')"/>
+			<bind nodeset="/data/questions/ivm/recu_medicament1" required="true()" type="string"/>
+			<bind nodeset="/data/questions/ivm/pourquoi_pas_recu1" relevant="selected( ../recu_medicament1 , 'Non')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/ivm/pourquoi_pas_recu_autre1" relevant="selected( ../pourquoi_pas_recu1 , 'Autre') and selected( ../recu_medicament1 , 'Non')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/ivm/avale1" relevant="selected( ../recu_medicament1 , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/ivm/pourquoi_avale1" relevant="selected( ../avale1 , 'Oui') and selected( ../recu_medicament1 , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/ivm/pourquoi_avale_autre1" relevant="selected( ../pourquoi_avale1 , 'Autre') and selected( ../recu_medicament1 , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/ivm/pourquoi_pas_avale1" relevant="selected( ../avale1 , 'Non')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/ivm/pourquoi_pas_avale_autre1" relevant="selected( ../pourquoi_pas_avale1 , 'Autre') and selected( ../avale1 , 'Non')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/ivm/lieu_prise_mectizan1" relevant="selected( ../recu_medicament1 , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/ivm/lieu_prise_mectizan_autre1" relevant="selected( ../lieu_prise_mectizan1 , 'Autre')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/alb" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')"/>
+			<bind nodeset="/data/questions/alb/recu_medicament2" required="true()" type="string"/>
+			<bind nodeset="/data/questions/alb/pourquoi_pas_recu2" relevant="selected( ../recu_medicament2 , 'Non')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/alb/pourquoi_pas_recu_autre2" relevant="selected( ../pourquoi_pas_recu2 , 'Autre') and selected( ../recu_medicament2 , 'Non')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/alb/avale2" relevant="selected( ../recu_medicament2 , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/alb/pourquoi_avale2" relevant="selected( ../avale2 , 'Oui') and selected( ../recu_medicament2 , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/alb/pourquoi_avale_autre2" relevant="selected( ../pourquoi_avale2 , 'Autre') and selected( ../recu_medicament2 , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/alb/pourquoi_pas_avale2" relevant="selected( ../avale2 , 'Non')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/alb/pourquoi_pas_avale_autre2" relevant="selected( ../pourquoi_pas_avale2 , 'Autre') and selected( ../avale2 , 'Non')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/canaux_com" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui')" required="true()" type="string"/>
+			<bind nodeset="/data/questions/canaux_com_autre" relevant="selected( /data/membre_present , 'Oui') and selected( ../ajouter_participant , 'Oui') and selected( ../canaux_com , 'Autre')" required="true()" type="string"/>
+			<bind nodeset="/data/note1" readonly="true()" relevant="selected( /data/membre_present , 'Non')" type="string"/>
+			<bind nodeset="/data/note" type="string"/>
+			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start_date" type="dateTime"/>
+			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end_date" type="dateTime"/>
+			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+		</model>
+	</h:head>
+	<h:body>
+		<input ref="/data/date">
+			<label ref="jr:itext('/data/date:label')"/>
+		</input>
+		<input ref="/data/code_enqueteur">
+			<label ref="jr:itext('/data/code_enqueteur:label')"/>
+		</input>
+		<input ref="/data/district">
+			<label ref="jr:itext('/data/district:label')"/>
+		</input>
+		<input ref="/data/commune">
+			<label ref="jr:itext('/data/commune:label')"/>
+		</input>
+		<input ref="/data/centre_sante">
+			<label ref="jr:itext('/data/centre_sante:label')"/>
+		</input>
+		<input ref="/data/colline">
+			<label ref="jr:itext('/data/colline:label')"/>
+		</input>
+		<input ref="/data/colline_id">
+			<label ref="jr:itext('/data/colline_id:label')"/>
+		</input>
+		<input ref="/data/num_menage">
+			<label ref="jr:itext('/data/num_menage:label')"/>
+		</input>
+		<select1 ref="/data/membre_present">
+			<label ref="jr:itext('/data/membre_present:label')"/>
+			<item>
+				<label ref="jr:itext('/data/membre_present/Oui:label')"/>
+				<value>Oui</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/membre_present/Non:label')"/>
+				<value>Non</value>
+			</item>
+		</select1>
+		<group ref="/data/questions">
+			<label ref="jr:itext('/data/questions:label')"/>
+			<repeat nodeset="/data/questions">
+				<select1 ref="/data/questions/ajouter_participant">
+					<label ref="jr:itext('/data/questions/ajouter_participant:label')"/>
+					<item>
+						<label ref="jr:itext('/data/questions/ajouter_participant/Oui:label')"/>
+						<value>Oui</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/ajouter_participant/Non:label')"/>
+						<value>Non</value>
+					</item>
+				</select1>
+				<input ref="/data/questions/code_participant">
+					<label ref="jr:itext('/data/questions/code_participant:label')"/>
+				</input>
+				<select1 ref="/data/questions/sexe">
+					<label ref="jr:itext('/data/questions/sexe:label')"/>
+					<item>
+						<label ref="jr:itext('/data/questions/sexe/M:label')"/>
+						<value>M</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/sexe/F:label')"/>
+						<value>F</value>
+					</item>
+				</select1>
+				<input ref="/data/questions/age">
+					<label ref="jr:itext('/data/questions/age:label')"/>
+				</input>
+				<select1 ref="/data/questions/present_campagne">
+					<label ref="jr:itext('/data/questions/present_campagne:label')"/>
+					<item>
+						<label ref="jr:itext('/data/questions/present_campagne/Oui:label')"/>
+						<value>Oui</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/present_campagne/Non:label')"/>
+						<value>Non</value>
+					</item>
+				</select1>
+				<select1 ref="/data/questions/non_present_campagne">
+					<label ref="jr:itext('/data/questions/non_present_campagne:label')"/>
+					<item>
+						<label ref="jr:itext('/data/questions/non_present_campagne/1.Voyage:label')"/>
+						<value>1.Voyage</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/non_present_campagne/2. A l'internat /Ecole:label')"/>
+						<value>2. A l'internat /Ecole</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/non_present_campagne/3. Pour la recherche du travail:label')"/>
+						<value>3. Pour la recherche du travail</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/non_present_campagne/4. hospitalisé:label')"/>
+						<value>4. hospitalisé</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/non_present_campagne/Autre:label')"/>
+						<value>Autre</value>
+					</item>
+				</select1>
+				<input ref="/data/questions/non_present_campagne_autre">
+					<label ref="jr:itext('/data/questions/non_present_campagne_autre:label')"/>
+				</input>
+				<select1 ref="/data/questions/menage_enregistre">
+					<label ref="jr:itext('/data/questions/menage_enregistre:label')"/>
+					<item>
+						<label ref="jr:itext('/data/questions/menage_enregistre/Oui:label')"/>
+						<value>Oui</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/menage_enregistre/Non:label')"/>
+						<value>Non</value>
+					</item>
+				</select1>
+				<select1 ref="/data/questions/non_menage_enregistre">
+					<label ref="jr:itext('/data/questions/non_menage_enregistre:label')"/>
+					<item>
+						<label ref="jr:itext('/data/questions/non_menage_enregistre/1. DC/ASC n'est pas venu:label')"/>
+						<value>1. DC/ASC n'est pas venu</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/non_menage_enregistre/2. Pas de campagne:label')"/>
+						<value>2. Pas de campagne</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/non_menage_enregistre/3. Absent pendant le jour de campagne:label')"/>
+						<value>3. Absent pendant le jour de campagne</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/non_menage_enregistre/4. Personne n'était à la maison:label')"/>
+						<value>4. Personne n'était à la maison</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/non_menage_enregistre/Autre:label')"/>
+						<value>Autre</value>
+					</item>
+				</select1>
+				<input ref="/data/questions/non_menage_enregistre_autre">
+					<label ref="jr:itext('/data/questions/non_menage_enregistre_autre:label')"/>
+				</input>
+				<group ref="/data/questions/ivm">
+					<label ref="jr:itext('/data/questions/ivm:label')"/>
+					<select1 ref="/data/questions/ivm/recu_medicament1">
+						<label ref="jr:itext('/data/questions/ivm/recu_medicament1:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/recu_medicament1/Oui:label')"/>
+							<value>Oui</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/recu_medicament1/Non:label')"/>
+							<value>Non</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/recu_medicament1/Ne.sais.pas:label')"/>
+							<value>Ne.sais.pas</value>
+						</item>
+					</select1>
+					<select ref="/data/questions/ivm/pourquoi_pas_recu1">
+						<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu1:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu1/1.Enceinte:label')"/>
+							<value>1.Enceinte</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu1/2.Mere.allaitante:label')"/>
+							<value>2.Mere.allaitante</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu1/3.Malade:label')"/>
+							<value>3.Malade</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu1/4.Absent:label')"/>
+							<value>4.Absent</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu1/5.Pas.informe.de.la.campagne.mda:label')"/>
+							<value>5.Pas.informe.de.la.campagne.mda</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu1/6.Rupture.de.medicaments:label')"/>
+							<value>6.Rupture.de.medicaments</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu1/7.Personne.n.est.passe:label')"/>
+							<value>7.Personne.n.est.passe</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu1/8.Refus:label')"/>
+							<value>8.Refus</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu1/Autre:label')"/>
+							<value>Autre</value>
+						</item>
+					</select>
+					<input ref="/data/questions/ivm/pourquoi_pas_recu_autre1">
+						<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_recu_autre1:label')"/>
+					</input>
+					<select1 ref="/data/questions/ivm/avale1">
+						<label ref="jr:itext('/data/questions/ivm/avale1:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/avale1/Oui:label')"/>
+							<value>Oui</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/avale1/Non:label')"/>
+							<value>Non</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/avale1/Ne.sais.pas:label')"/>
+							<value>Ne.sais.pas</value>
+						</item>
+					</select1>
+					<select ref="/data/questions/ivm/pourquoi_avale1">
+						<label ref="jr:itext('/data/questions/ivm/pourquoi_avale1:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_avale1/1.peur.de.la.maladie:label')"/>
+							<value>1.peur.de.la.maladie</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_avale1/2.pour.traiter.la.maladie:label')"/>
+							<value>2.pour.traiter.la.maladie</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_avale1/3.parce.que.gratuit:label')"/>
+							<value>3.parce.que.gratuit</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_avale1/4.des.informations.utiles.ont.ete.donnees:label')"/>
+							<value>4.des.informations.utiles.ont.ete.donnees</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_avale1/Autre:label')"/>
+							<value>Autre</value>
+						</item>
+					</select>
+					<input ref="/data/questions/ivm/pourquoi_avale_autre1">
+						<label ref="jr:itext('/data/questions/ivm/pourquoi_avale_autre1:label')"/>
+					</input>
+					<select ref="/data/questions/ivm/pourquoi_pas_avale1">
+						<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale1:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale1/1.peur.des.effets.indesirables:label')"/>
+							<value>1.peur.des.effets.indesirables</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale1/2.mauvais.gout:label')"/>
+							<value>2.mauvais.gout</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale1/3.je.ne.suis.pas.malade:label')"/>
+							<value>3.je.ne.suis.pas.malade</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale1/4.pas.recu.suffisamment.d'informations:label')"/>
+							<value>4.pas.recu.suffisamment.d'informations</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale1/Autre:label')"/>
+							<value>Autre</value>
+						</item>
+					</select>
+					<input ref="/data/questions/ivm/pourquoi_pas_avale_autre1">
+						<label ref="jr:itext('/data/questions/ivm/pourquoi_pas_avale_autre1:label')"/>
+					</input>
+					<select1 ref="/data/questions/ivm/lieu_prise_mectizan1">
+						<label ref="jr:itext('/data/questions/ivm/lieu_prise_mectizan1:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/lieu_prise_mectizan1/1. Chez les DC/ASC:label')"/>
+							<value>1. Chez les DC/ASC</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/lieu_prise_mectizan1/2. Chez le chef de dix maisons:label')"/>
+							<value>2. Chez le chef de dix maisons</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/lieu_prise_mectizan1/3. Chez moi / Porte à Porte:label')"/>
+							<value>3. Chez moi / Porte à Porte</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/ivm/lieu_prise_mectizan1/Autre:label')"/>
+							<value>Autre</value>
+						</item>
+					</select1>
+					<input ref="/data/questions/ivm/lieu_prise_mectizan_autre1">
+						<label ref="jr:itext('/data/questions/ivm/lieu_prise_mectizan_autre1:label')"/>
+					</input>
+				</group>
+				<group ref="/data/questions/alb">
+					<label ref="jr:itext('/data/questions/alb:label')"/>
+					<select1 ref="/data/questions/alb/recu_medicament2">
+						<label ref="jr:itext('/data/questions/alb/recu_medicament2:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/recu_medicament2/Oui:label')"/>
+							<value>Oui</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/recu_medicament2/Non:label')"/>
+							<value>Non</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/recu_medicament2/Ne.sais.pas:label')"/>
+							<value>Ne.sais.pas</value>
+						</item>
+					</select1>
+					<select ref="/data/questions/alb/pourquoi_pas_recu2">
+						<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu2:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu2/1.Enceinte:label')"/>
+							<value>1.Enceinte</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu2/2.Mere.allaitante:label')"/>
+							<value>2.Mere.allaitante</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu2/3.Malade:label')"/>
+							<value>3.Malade</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu2/4.Absent:label')"/>
+							<value>4.Absent</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu2/5.Pas.informe.de.la.campagne.mda:label')"/>
+							<value>5.Pas.informe.de.la.campagne.mda</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu2/6.Rupture.de.medicaments:label')"/>
+							<value>6.Rupture.de.medicaments</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu2/7.Personne.n.est.passe:label')"/>
+							<value>7.Personne.n.est.passe</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu2/8.Refus:label')"/>
+							<value>8.Refus</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu2/Autre:label')"/>
+							<value>Autre</value>
+						</item>
+					</select>
+					<input ref="/data/questions/alb/pourquoi_pas_recu_autre2">
+						<label ref="jr:itext('/data/questions/alb/pourquoi_pas_recu_autre2:label')"/>
+					</input>
+					<select1 ref="/data/questions/alb/avale2">
+						<label ref="jr:itext('/data/questions/alb/avale2:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/avale2/Oui:label')"/>
+							<value>Oui</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/avale2/Non:label')"/>
+							<value>Non</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/avale2/Ne.sais.pas:label')"/>
+							<value>Ne.sais.pas</value>
+						</item>
+					</select1>
+					<select ref="/data/questions/alb/pourquoi_avale2">
+						<label ref="jr:itext('/data/questions/alb/pourquoi_avale2:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_avale2/1.peur.de.la.maladie:label')"/>
+							<value>1.peur.de.la.maladie</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_avale2/2.pour.traiter.la.maladie:label')"/>
+							<value>2.pour.traiter.la.maladie</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_avale2/3.parce.que.gratuit:label')"/>
+							<value>3.parce.que.gratuit</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_avale2/4.des.informations.utiles.ont.ete.donnees:label')"/>
+							<value>4.des.informations.utiles.ont.ete.donnees</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_avale2/Autre:label')"/>
+							<value>Autre</value>
+						</item>
+					</select>
+					<input ref="/data/questions/alb/pourquoi_avale_autre2">
+						<label ref="jr:itext('/data/questions/alb/pourquoi_avale_autre2:label')"/>
+					</input>
+					<select ref="/data/questions/alb/pourquoi_pas_avale2">
+						<label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale2:label')"/>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale2/1.peur.des.effets.indesirables:label')"/>
+							<value>1.peur.des.effets.indesirables</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale2/2.mauvais.gout:label')"/>
+							<value>2.mauvais.gout</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale2/3.je.ne.suis.pas.malade:label')"/>
+							<value>3.je.ne.suis.pas.malade</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale2/4.pas.recu.suffisamment.d'informations:label')"/>
+							<value>4.pas.recu.suffisamment.d'informations</value>
+						</item>
+						<item>
+							<label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale2/Autre:label')"/>
+							<value>Autre</value>
+						</item>
+					</select>
+					<input ref="/data/questions/alb/pourquoi_pas_avale_autre2">
+						<label ref="jr:itext('/data/questions/alb/pourquoi_pas_avale_autre2:label')"/>
+					</input>
+				</group>
+				<select ref="/data/questions/canaux_com">
+					<label ref="jr:itext('/data/questions/canaux_com:label')"/>
+					<item>
+						<label ref="jr:itext('/data/questions/canaux_com/1.DC./.ASC:label')"/>
+						<value>1.DC./.ASC</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/canaux_com/2.Chef.de.colline./.village:label')"/>
+						<value>2.Chef.de.colline./.village</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/canaux_com/3.Eglise:label')"/>
+						<value>3.Eglise</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/canaux_com/4.Radio:label')"/>
+						<value>4.Radio</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/canaux_com/5.Television:label')"/>
+						<value>5.Television</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/canaux_com/6.Crieurs.publics:label')"/>
+						<value>6.Crieurs.publics</value>
+					</item>
+					<item>
+						<label ref="jr:itext('/data/questions/canaux_com/Autre:label')"/>
+						<value>Autre</value>
+					</item>
+				</select>
+				<input ref="/data/questions/canaux_com_autre">
+					<label ref="jr:itext('/data/questions/canaux_com_autre:label')"/>
+				</input>
+			</repeat>
+		</group>
+		<input ref="/data/note1">
+			<label ref="jr:itext('/data/note1:label')"/>
+		</input>
+		<input ref="/data/note">
+			<label ref="jr:itext('/data/note:label')"/>
+		</input>
+	</h:body>
 </h:html>
