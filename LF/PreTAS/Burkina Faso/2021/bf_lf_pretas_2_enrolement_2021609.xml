@@ -7,7 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Juin 2021) Pré TAS FL - 2. Formulaire Enrôlement V2</h:title>
+    <h:title>(BF - Juin 2021) Pré TAS FL - 2. Formulaire Enrôlement V2.1</h:title>
     <model >
 
     <instance>
@@ -108,7 +108,7 @@
             <value>Code barre</value>
           </text>
           <text id="/data/manual_code:jr:constraintMsg">
-            <value>Paramétrer pour prendre 10 caractère. Doit avoir le format Pretas0001</value>
+            <value>Paramétrer pour prendre 10 caractère</value>
           </text>
           <text id="/data/manual_code:label">
             <value>Saisir le code barre</value>
@@ -132,7 +132,7 @@
             <value>Numéro famille</value>
           </text>
           <text id="/data/Numero_famille:hint">
-            <value>Trois lettres Majuscules suivies de 3 chiffres</value>
+            <value>Trois chiffres</value>
           </text>
           <text id="/data/Numero_Enquete:jr:constraintMsg">
             <value>Entrer uniquement les trois derniers chiffre du numéro enquété</value>
@@ -252,9 +252,9 @@
     <bind nodeset="/data/p_consent" type="string"/>
     <bind nodeset="/data/p_id_method" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind nodeset="/data/p_barcode_id" relevant=" /data/p_id_method ='scanner' and  /data/p_consent  = '1_oui'" required="true()" type="barcode"/>
-    <bind constraint="string-length(.)=10 and regex(.,'^[a-zA-Z]{6}[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/manual_code:jr:constraintMsg')" nodeset="/data/manual_code" relevant=" /data/p_id_method ='manuel' and  /data/p_consent  = '1_oui'" required="true()" type="string"/>
+    <bind constraint="string-length(.)=10" jr:constraintMsg="jr:itext('/data/manual_code:jr:constraintMsg')" nodeset="/data/manual_code" relevant=" /data/p_id_method ='manuel' and  /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind constraint="string-length(.)=10 and . =  /data/manual_code " jr:constraintMsg="jr:itext('/data/manual_code2:jr:constraintMsg')" nodeset="/data/manual_code2" relevant=" /data/p_id_method ='manuel' and  /data/p_consent  = '1_oui'" required="true()" type="string"/>
-    <bind constraint="regex(., '^[A-Z]{3}[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/Numero_famille:jr:constraintMsg')" nodeset="/data/Numero_famille" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
+    <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/Numero_famille:jr:constraintMsg')" nodeset="/data/Numero_famille" relevant=" /data/p_consent  = '1_oui'" required="true()" type="int"/>
     <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/Numero_Enquete:jr:constraintMsg')" nodeset="/data/Numero_Enquete" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind calculate="concat( /data/p_recorder_id ,'-',  /data/Numero_famille ,'-', /data/Numero_Enquete )" nodeset="/data/Numero_Enquete_complet" readonly="true()" relevant=" /data/p_consent  = '1_oui'" type="string"/>
     <bind constraint=".&gt;4 and .&lt;110" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = '1_oui'" required="true()" type="int"/>
