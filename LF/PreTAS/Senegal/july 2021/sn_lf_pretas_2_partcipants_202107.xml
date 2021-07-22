@@ -7,32 +7,31 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Septembre 2020) 2. Pre-TAS FL Formulaire Participants V2</h:title>
+    <h:title>(Juillet 2021) 2. Pre-TAS FL Formulaire Participants</h:title>
     <model >
 
-      <instance>
-        <data id="sn_lf_pretas_2_partcipants_202009_v2" version="20200007">
-          <p_recorderID/>
-          <p_district/>
-          <p_cluster_name/>
-          <p_cluster_id/>
-          <p_consent/>
-          <p_sex/>
-          <p_age_yrs/>
-          <p_how_long_lived/>
-          <p_IDMethod/>
-          <p_BarcodeID/>
-          <p_GenerateID/>
-          <p_ending_survey_note/>
-          <p_notes/>
-          <c_start/>
-          <c_end/>
-          <meta>
-            <instanceID/>
-            <randomnum/>
-          </meta>
-        </data>
-      </instance>
+    <instance>
+      <data id="sn_lf_pretas_2_partcipants_202107" version="20210722">
+        <p_recorderID/>
+        <p_district/>
+        <p_cluster_name/>
+        <p_cluster_id/>
+        <p_consent/>
+        <p_num/>
+        <p_sex/>
+        <p_age_yrs/>
+        <p_how_long_lived/>
+        <p_IDMethod/>
+        <p_code_id/>
+        <p_ending_survey_note/>
+        <p_notes/>
+        <c_start/>
+        <c_end/>
+        <meta>
+          <instanceID/>
+        </meta>
+      </data>
+    </instance>
 
       <itext>
         <translation default="true()" lang="French">
@@ -57,19 +56,28 @@
           <text id="/data/p_consent:label">
             <value>Le répondant a-t-il donné son consentement?</value>
           </text>
-          <text id="/data/p_consent/Yes:label">
+          <text id="/data/p_consent/Oui:label">
             <value>Oui</value>
           </text>
-          <text id="/data/p_consent/No:label">
+          <text id="/data/p_consent/Non:label">
             <value>Non</value>
+          </text>
+          <text id="/data/p_num:jr:constraintMsg">
+            <value>La valeur doit être compris entre 1 et 410</value>
+          </text>
+          <text id="/data/p_num:label">
+            <value>Numéro d'ordre</value>
+          </text>
+          <text id="/data/p_num:hint">
+            <value>Doit être compris entre 1 et 410</value>
           </text>
           <text id="/data/p_sex:label">
             <value>Sexe du participant</value>
           </text>
-          <text id="/data/p_sex/Male:label">
+          <text id="/data/p_sex/Masculin:label">
             <value>Masculin</value>
           </text>
-          <text id="/data/p_sex/Female:label">
+          <text id="/data/p_sex/Féminin:label">
             <value>Féminin</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
@@ -93,10 +101,7 @@
           <text id="/data/p_IDMethod/ID_generation:label">
             <value>Génération automatique</value>
           </text>
-          <text id="/data/p_BarcodeID:label">
-            <value>Scanner le code-barres maintenant</value>
-          </text>
-          <text id="/data/p_GenerateID:label">
+          <text id="/data/p_code_id:label">
             <value>Veuiller enregistrer le code d'identification unique du participant qui apparait sur une liste séparée et sur chaque test de diagnostic administré</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
@@ -128,19 +133,28 @@
           <text id="/data/p_consent:label">
             <value>Does respondent provide consent?</value>
           </text>
-          <text id="/data/p_consent/Yes:label">
+          <text id="/data/p_consent/Oui:label">
             <value>Yes</value>
           </text>
-          <text id="/data/p_consent/No:label">
+          <text id="/data/p_consent/Non:label">
             <value>No</value>
+          </text>
+          <text id="/data/p_num:jr:constraintMsg">
+            <value>The value must be between 1 and 410</value>
+          </text>
+          <text id="/data/p_num:label">
+            <value>Enter the order number</value>
+          </text>
+          <text id="/data/p_num:hint">
+            <value>Must be between 1 and 410</value>
           </text>
           <text id="/data/p_sex:label">
             <value>Sex of respondent</value>
           </text>
-          <text id="/data/p_sex/Male:label">
+          <text id="/data/p_sex/Masculin:label">
             <value>Male</value>
           </text>
-          <text id="/data/p_sex/Female:label">
+          <text id="/data/p_sex/Féminin:label">
             <value>Female</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
@@ -164,10 +178,7 @@
           <text id="/data/p_IDMethod/ID_generation:label">
             <value>Automatic ID generation</value>
           </text>
-          <text id="/data/p_BarcodeID:label">
-            <value>Scan barcode now</value>
-          </text>
-          <text id="/data/p_GenerateID:label">
+          <text id="/data/p_code_id:label">
             <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
@@ -183,18 +194,17 @@
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
       <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
-      <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
-      <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
-      <bind nodeset="/data/p_IDMethod" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/p_BarcodeID" relevant=" /data/p_IDMethod  = 'Scanner' and  /data/p_consent  = 'Yes'" required="true()" type="barcode"/>
-      <bind calculate="concat( /data/p_cluster_id ,'-', /data/meta/randomnum)" nodeset="/data/p_GenerateID" readonly="true()" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'No'" type="string"/>
+      <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/p_IDMethod" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_cluster_id , '-' , /data/p_num )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Non'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,9)"/>
     </model>
   </h:head>
   <h:body>
@@ -214,23 +224,27 @@
     <select1 ref="/data/p_consent">
       <label ref="jr:itext('/data/p_consent:label')"/>
       <item>
-        <label ref="jr:itext('/data/p_consent/Yes:label')"/>
-        <value>Yes</value>
+        <label ref="jr:itext('/data/p_consent/Oui:label')"/>
+        <value>Oui</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_consent/No:label')"/>
-        <value>No</value>
+        <label ref="jr:itext('/data/p_consent/Non:label')"/>
+        <value>Non</value>
       </item>
     </select1>
+    <input ref="/data/p_num">
+      <label ref="jr:itext('/data/p_num:label')"/>
+      <hint ref="jr:itext('/data/p_num:hint')"/>
+    </input>
     <select1 ref="/data/p_sex">
       <label ref="jr:itext('/data/p_sex:label')"/>
       <item>
-        <label ref="jr:itext('/data/p_sex/Male:label')"/>
-        <value>Male</value>
+        <label ref="jr:itext('/data/p_sex/Masculin:label')"/>
+        <value>Masculin</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_sex/Female:label')"/>
-        <value>Female</value>
+        <label ref="jr:itext('/data/p_sex/Féminin:label')"/>
+        <value>Féminin</value>
       </item>
     </select1>
     <input ref="/data/p_age_yrs">
@@ -250,11 +264,8 @@
         <value>ID_generation</value>
       </item>
     </select1>
-    <input ref="/data/p_BarcodeID">
-      <label ref="jr:itext('/data/p_BarcodeID:label')"/>
-    </input>
-    <input ref="/data/p_GenerateID">
-      <label ref="jr:itext('/data/p_GenerateID:label')"/>
+    <input ref="/data/p_code_id">
+      <label ref="jr:itext('/data/p_code_id:label')"/>
     </input>
     <input ref="/data/p_ending_survey_note">
       <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
