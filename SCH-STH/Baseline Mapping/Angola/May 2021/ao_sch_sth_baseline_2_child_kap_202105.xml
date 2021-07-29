@@ -7,11 +7,11 @@
     xmlns:orx="http://openrosa.org/xforms"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <h:head>
-        <h:title>2. Formulário Individual da Criança - Conhecimentos, Atitudes e Práticas dos Alunos na Escola Hookworm V6.1</h:title>
+        <h:title>2. Formulário Individual da Criança - Conhecimentos, Atitudes e Práticas dos Alunos na Escola Hookworm V6.2</h:title>
         <model>
 
             <instance>
-                <data id="ao_sch_sth_baseline_2_child_kap_202105_v6_1" version="20210715">
+                <data id="ao_sch_sth_baseline_2_child_kap_202105_v6_2" version="20210726">
                     <p_date/>
                     <p_RecorderID/>
                     <p_Recorder_code/>
@@ -27470,110 +27470,110 @@
                 </root>
             </instance>
             <bind nodeset="/data/p_date" required="true()" type="date"/>
-            <bind constraint="regex(., '^[A-Za-z]{1,5}$')" jr:constraintMsg="jr:itext('/data/p_RecorderID:jr:constraintMsg')" nodeset="/data/p_RecorderID" required="true()" type="string"/>
+            <bind constraint="regex(., '^[A-Za-z]{1,5}$')" jr:constraintMsg="jr:itext('/data/p_RecorderID:jr:constraintMsg')" nodeset="/data/p_RecorderID" required="true()" type="text"/>
             <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_Recorder_code:jr:constraintMsg')" nodeset="/data/p_Recorder_code" required="true()" type="int"/>
-            <bind nodeset="/data/p_province" required="true()" type="string"/>
-            <bind nodeset="/data/p_municipality" required="true()" type="string"/>
-            <bind nodeset="/data/p_commune" required="true()" type="string"/>
-            <bind nodeset="/data/p_commune_other" relevant=" /data/p_commune  = 'Outros'" required="true()" type="string"/>
-            <bind nodeset="/data/p_school" required="true()" type="string"/>
-            <bind nodeset="/data/p_school_id" required="true()" type="string"/>
-            <bind nodeset="/data/p_consent" required="true()" type="string"/>
-            <bind nodeset="/data/note1" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
-            <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind calculate="concat( /data/p_school_id , '-',  /data/p_num )" nodeset="/data/p_code_id" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_sex" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+            <bind nodeset="/data/p_province" required="true()" type="text"/>
+            <bind nodeset="/data/p_municipality" required="true()" type="text"/>
+            <bind nodeset="/data/p_commune" required="true()" type="text"/>
+            <bind nodeset="/data/p_commune_other" relevant=" /data/p_commune  = 'Outros'" required="true()" type="text"/>
+            <bind nodeset="/data/p_school" required="true()" type="text"/>
+            <bind nodeset="/data/p_school_id" required="true()" type="text"/>
+            <bind nodeset="/data/p_consent" required="true()" type="text"/>
+            <bind nodeset="/data/note1" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="text"/>
+            <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind calculate="concat( /data/p_school_id , '-',  /data/p_num )" nodeset="/data/p_code_id" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_sex" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
             <bind constraint=". &lt;= 2015 and . &gt;= 2012" jr:constraintMsg="jr:itext('/data/p_year_birth:jr:constraintMsg')" nodeset="/data/p_year_birth" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="int"/>
             <bind constraint=". &gt; 0 and . &lt;= 12" jr:constraintMsg="jr:itext('/data/p_month_birth:jr:constraintMsg')" nodeset="/data/p_month_birth" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="int"/>
             <bind constraint=".&gt; 0 and . &lt;=31" jr:constraintMsg="jr:itext('/data/p_day_birth:jr:constraintMsg')" nodeset="/data/p_day_birth" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="int"/>
-            <bind calculate="concat( /data/p_year_birth ,'-', /data/p_month_birth ,'-', /data/p_day_birth )" nodeset="/data/p_date_birth" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind constraint=".&gt;0 and .&lt;=9" jr:constraintMsg="jr:itext('/data/p_school_grade:jr:constraintMsg')" nodeset="/data/p_school_grade" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
+            <bind calculate="concat( /data/p_year_birth ,'-', /data/p_month_birth ,'-', /data/p_day_birth )" nodeset="/data/p_date_birth" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind constraint=".&gt;0 and .&lt;=9" jr:constraintMsg="jr:itext('/data/p_school_grade:jr:constraintMsg')" nodeset="/data/p_school_grade" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
             <bind constraint=".&gt; 0 and . &lt; 20" jr:constraintMsg="jr:itext('/data/p_people_home:jr:constraintMsg')" nodeset="/data/p_people_home" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="int"/>
-            <bind nodeset="/data/note2" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
-            <bind nodeset="/data/p_water_source" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_water_source_other" relevant="selected( /data/p_water_source , 'Outros')" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'6.No.capim') or selected(.,'8.Nao.sei') or selected(.,'9.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_defecation_place:jr:constraintMsg')" nodeset="/data/p_defecation_place" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_defecation_place_other" relevant="selected( /data/p_defecation_place , 'Outros')" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'6.No.capim') or selected(.,'8.Nao.sei') or selected(.,'9.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_defecation_school:jr:constraintMsg')" nodeset="/data/p_defecation_school" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_defecation_school_other" relevant="selected( /data/p_defecation_school , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_wash_hand_home" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_wash_hand_school" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_wash_hand_home != '4.Nunca'" required="true()" type="string"/>
-            <bind nodeset="/data/p_wash_hand_meals_home" relevant=" /data/p_wash_hand_home != '4.Nunca' and  /data/p_wash_hand_school != '4.Nunca' and selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_wash_hand_meals_school" relevant=" /data/p_wash_hand_home != '4.Nunca' and  /data/p_wash_hand_school != '4.Nunca' and  /data/p_wash_hand_meals_home != '4.Nunca' and selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_material_wash_hand_home" relevant=" /data/p_wash_hand_home != '4.Nunca' and  /data/p_wash_hand_school != '4.Nunca' and  /data/p_wash_hand_meals_home != '4.Nunca' and selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_material_wash_hand_home_other" relevant="selected( /data/p_material_wash_hand_home , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_material_wash_hand_school" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_wash_hand_school != '4.Nunca' and  /data/p_wash_hand_meals_school != '4.Nunca'" required="true()" type="string"/>
-            <bind nodeset="/data/p_material_wash_hand_school_other" relevant="selected( /data/p_material_wash_hand_school , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_changes_use_water" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_changes_use_water_why" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_changes_use_water , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_changes_use_water_what" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_changes_use_water , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_changes_wash_hands" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_changes_wash_hands_why" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_changes_wash_hands , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_changes_wash_hands_what" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_changes_wash_hands , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_shoes_outdoors" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_wear_shoes_defecating" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_wear_shoes_urinating" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/note3" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
-            <bind nodeset="/data/p_know_worms" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_had_worms" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_where_know_worms" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_know_worms  = '1.Sim' or  /data/p_had_worms != '2. Nao')" required="true()" type="string"/>
-            <bind nodeset="/data/p_where_know_worms_other" relevant="selected( /data/p_where_know_worms , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_treatment_worms" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_had_worms != '2. Nao'" required="true()" type="string"/>
-            <bind nodeset="/data/p_treatment_worms_other" relevant="selected( /data/p_treatment_worms , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_animal_guinea_worm" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/where_see_gw_animal" relevant="selected( /data/p_animal_guinea_worm , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_human_guinea_worm" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/where_see_gw_human" relevant="selected( /data/p_human_guinea_worm , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/note4" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
-            <bind nodeset="/data/p_know_sch" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_had_sch" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_know_sch != '2. Nao'" required="true()" type="string"/>
-            <bind nodeset="/data/p_where_know_sch" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_know_sch  = '1.Sim' or  /data/p_know_sch != '2. Nao')" required="true()" type="string"/>
-            <bind nodeset="/data/p_where_know_sch_other" relevant="selected( /data/p_where_know_sch , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_treatment_sch" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_know_sch != '2. Nao'" required="true()" type="string"/>
-            <bind nodeset="/data/p_treatment_sch_other" relevant="selected( /data/p_treatment_sch , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/note5" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
-            <bind constraint="if(selected(.,'4.Nao.sei./.nao.se.lembra') or selected(.,'5.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_school_visit_med:jr:constraintMsg')" nodeset="/data/p_school_visit_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_school_visit_med_other" relevant="selected( /data/p_school_visit_med , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_school_med_lastyear" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'14.Nao.sei./.nao.se.lembra') or selected(.,'15.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_take_medicine:jr:constraintMsg')" nodeset="/data/p_why_take_medicine" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" type="string"/>
-            <bind nodeset="/data/p_why_take_medicine_other" relevant="selected( /data/p_why_take_medicine , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_easy_take_med" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'3.Sim,.mas.nao.sei.qual.medicamento') or selected(.,'4.Nao') or selected(.,'5.Nao.sei./.nao.se.lembra') or selected(.,'6.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_med:jr:constraintMsg')" nodeset="/data/p_side_effects_med" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'7.Nao.me.lembro'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_spec:jr:constraintMsg')" nodeset="/data/p_side_effects_spec" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '1.Sim' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" required="true()" type="string"/>
-            <bind nodeset="/data/p_side_effects_spec_other" relevant="selected( /data/p_side_effects_spec , 'Outros')" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'Outros') or selected(.,'6.Nao.me.lembro'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_man:jr:constraintMsg')" nodeset="/data/p_side_effects_man" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '1.Sim' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" required="true()" type="string"/>
-            <bind nodeset="/data/p_side_effects_man_other" relevant="selected( /data/p_side_effects_man , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_didnot_med" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '2.No' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" type="string"/>
-            <bind nodeset="/data/p_didnot_med_other" relevant="selected( /data/p_didnot_med , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_didnot_med_concerns" relevant="selected( /data/p_didnot_med , '3.Fear of side effects (mention some)')" required="true()" type="string"/>
-            <bind nodeset="/data/p_happy_kill_worms" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_happy_kill_sch" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_take_med_school" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'Outros') or selected(.,'7.Nao.sei') or selected(.,'8.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_take_med:jr:constraintMsg')" nodeset="/data/p_why_take_med" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_take_med_school ,'1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_why_take_med_other" relevant="selected( /data/p_why_take_med , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_why_dontake_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_why_dontake_med_other" relevant="selected( /data/p_why_dontake_med , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_why_dontake_med_concerns" relevant="selected( /data/p_why_dontake_med , '2.Fear of side effects (mention some)')" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'5.Nao.sei') or selected(.,'6.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_where_prefer_med:jr:constraintMsg')" nodeset="/data/p_where_prefer_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_where_prefer_med_other" relevant="selected( /data/p_where_prefer_med , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_happy_med_school" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_happy_teachers_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_med_willing_take" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'7.Nao.sei') or selected(.,'8.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_take_schmed:jr:constraintMsg')" nodeset="/data/p_why_take_schmed" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_med_willing_take !='2.Nao'" required="true()" type="string"/>
-            <bind nodeset="/data/p_why_take_schmed_other" relevant="selected( /data/p_why_take_schmed , 'Outros')" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'11.Nao.sei') or selected(.,'12.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_dontake_schmed:jr:constraintMsg')" nodeset="/data/p_why_dontake_schmed" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_why_dontake_schmed_other" relevant="selected( /data/p_why_dontake_schmed , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_why_dontake_schmed_concerns" relevant="selected( /data/p_why_dontake_schmed , '2.Fear of side effects (mention some)')" required="true()" type="string"/>
-            <bind constraint="if(selected(.,'5.Nao.sei') or selected(.,'6.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_where_prefer_schmed:jr:constraintMsg')" nodeset="/data/p_where_prefer_schmed" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_where_prefer_schmed_other" relevant="selected( /data/p_where_prefer_schmed , 'Outros')" required="true()" type="string"/>
-            <bind nodeset="/data/p_outcome_interview" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="string"/>
-            <bind nodeset="/data/p_outcome_interview_inc" relevant="selected( /data/p_outcome_interview , '2 Incompleto')" required="true()" type="string"/>
-            <bind nodeset="/data/p_end_note" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="string"/>
-            <bind nodeset="/data/w_end_note" readonly="true()" relevant=" /data/p_consent  = '2.Nao'" type="string"/>
-            <bind nodeset="/data/w_additional_notes" type="string"/>
+            <bind nodeset="/data/note2" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="text"/>
+            <bind nodeset="/data/p_water_source" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_water_source_other" relevant="selected( /data/p_water_source , 'Outros')" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'6.No.capim') or selected(.,'8.Nao.sei') or selected(.,'9.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_defecation_place:jr:constraintMsg')" nodeset="/data/p_defecation_place" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_defecation_place_other" relevant="selected( /data/p_defecation_place , 'Outros')" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'6.No.capim') or selected(.,'8.Nao.sei') or selected(.,'9.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_defecation_school:jr:constraintMsg')" nodeset="/data/p_defecation_school" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_defecation_school_other" relevant="selected( /data/p_defecation_school , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_wash_hand_home" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_wash_hand_school" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_wash_hand_home != '4.Nunca'" required="true()" type="text"/>
+            <bind nodeset="/data/p_wash_hand_meals_home" relevant=" /data/p_wash_hand_home != '4.Nunca' and  /data/p_wash_hand_school != '4.Nunca' and selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_wash_hand_meals_school" relevant=" /data/p_wash_hand_home != '4.Nunca' and  /data/p_wash_hand_school != '4.Nunca' and  /data/p_wash_hand_meals_home != '4.Nunca' and selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_material_wash_hand_home" relevant=" /data/p_wash_hand_home != '4.Nunca' and  /data/p_wash_hand_school != '4.Nunca' and  /data/p_wash_hand_meals_home != '4.Nunca' and selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_material_wash_hand_home_other" relevant="selected( /data/p_material_wash_hand_home , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_material_wash_hand_school" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_wash_hand_school != '4.Nunca' and  /data/p_wash_hand_meals_school != '4.Nunca'" required="true()" type="text"/>
+            <bind nodeset="/data/p_material_wash_hand_school_other" relevant="selected( /data/p_material_wash_hand_school , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_changes_use_water" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_changes_use_water_why" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_changes_use_water , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_changes_use_water_what" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_changes_use_water , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_changes_wash_hands" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_changes_wash_hands_why" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_changes_wash_hands , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_changes_wash_hands_what" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_changes_wash_hands , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_shoes_outdoors" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_wear_shoes_defecating" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_wear_shoes_urinating" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/note3" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="text"/>
+            <bind nodeset="/data/p_know_worms" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_had_worms" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_where_know_worms" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_know_worms  = '1.Sim' or  /data/p_had_worms != '2. Nao')" required="true()" type="text"/>
+            <bind nodeset="/data/p_where_know_worms_other" relevant="selected( /data/p_where_know_worms , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_treatment_worms" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_had_worms != '2. Nao'" required="true()" type="text"/>
+            <bind nodeset="/data/p_treatment_worms_other" relevant="selected( /data/p_treatment_worms , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_animal_guinea_worm" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/where_see_gw_animal" relevant="selected( /data/p_animal_guinea_worm , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_human_guinea_worm" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/where_see_gw_human" relevant="selected( /data/p_human_guinea_worm , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/note4" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="text"/>
+            <bind nodeset="/data/p_know_sch" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_had_sch" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_know_sch != '2. Nao'" required="true()" type="text"/>
+            <bind nodeset="/data/p_where_know_sch" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_know_sch  = '1.Sim' or  /data/p_know_sch != '2. Nao')" required="true()" type="text"/>
+            <bind nodeset="/data/p_where_know_sch_other" relevant="selected( /data/p_where_know_sch , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_treatment_sch" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_know_sch != '2. Nao'" required="true()" type="text"/>
+            <bind nodeset="/data/p_treatment_sch_other" relevant="selected( /data/p_treatment_sch , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/note5" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="text"/>
+            <bind constraint="if(selected(.,'4.Nao.sei./.nao.se.lembra') or selected(.,'5.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_school_visit_med:jr:constraintMsg')" nodeset="/data/p_school_visit_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_school_visit_med_other" relevant="selected( /data/p_school_visit_med , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_school_med_lastyear" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'14.Nao.sei./.nao.se.lembra') or selected(.,'15.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_take_medicine:jr:constraintMsg')" nodeset="/data/p_why_take_medicine" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" type="text"/>
+            <bind nodeset="/data/p_why_take_medicine_other" relevant="selected( /data/p_why_take_medicine , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_easy_take_med" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'3.Sim,.mas.nao.sei.qual.medicamento') or selected(.,'4.Nao') or selected(.,'5.Nao.sei./.nao.se.lembra') or selected(.,'6.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_med:jr:constraintMsg')" nodeset="/data/p_side_effects_med" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'7.Nao.me.lembro'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_spec:jr:constraintMsg')" nodeset="/data/p_side_effects_spec" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '1.Sim' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" required="true()" type="text"/>
+            <bind nodeset="/data/p_side_effects_spec_other" relevant="selected( /data/p_side_effects_spec , 'Outros')" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'Outros') or selected(.,'6.Nao.me.lembro'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_man:jr:constraintMsg')" nodeset="/data/p_side_effects_man" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '1.Sim' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" required="true()" type="text"/>
+            <bind nodeset="/data/p_side_effects_man_other" relevant="selected( /data/p_side_effects_man , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_didnot_med" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '2.No' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" type="text"/>
+            <bind nodeset="/data/p_didnot_med_other" relevant="selected( /data/p_didnot_med , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_didnot_med_concerns" relevant="selected( /data/p_didnot_med , '3.Fear of side effects (mention some)')" required="true()" type="text"/>
+            <bind nodeset="/data/p_happy_kill_worms" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_happy_kill_sch" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_take_med_school" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'Outros') or selected(.,'7.Nao.sei') or selected(.,'8.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_take_med:jr:constraintMsg')" nodeset="/data/p_why_take_med" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_take_med_school ,'1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_why_take_med_other" relevant="selected( /data/p_why_take_med , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_why_dontake_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_why_dontake_med_other" relevant="selected( /data/p_why_dontake_med , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_why_dontake_med_concerns" relevant="selected( /data/p_why_dontake_med , '2.Fear of side effects (mention some)')" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'5.Nao.sei') or selected(.,'6.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_where_prefer_med:jr:constraintMsg')" nodeset="/data/p_where_prefer_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_where_prefer_med_other" relevant="selected( /data/p_where_prefer_med , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_happy_med_school" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_happy_teachers_med" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_med_willing_take" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'7.Nao.sei') or selected(.,'8.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_take_schmed:jr:constraintMsg')" nodeset="/data/p_why_take_schmed" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_med_willing_take !='2.Nao'" required="true()" type="text"/>
+            <bind nodeset="/data/p_why_take_schmed_other" relevant="selected( /data/p_why_take_schmed , 'Outros')" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'11.Nao.sei') or selected(.,'12.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_why_dontake_schmed:jr:constraintMsg')" nodeset="/data/p_why_dontake_schmed" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_why_dontake_schmed_other" relevant="selected( /data/p_why_dontake_schmed , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_why_dontake_schmed_concerns" relevant="selected( /data/p_why_dontake_schmed , '2.Fear of side effects (mention some)')" required="true()" type="text"/>
+            <bind constraint="if(selected(.,'5.Nao.sei') or selected(.,'6.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_where_prefer_schmed:jr:constraintMsg')" nodeset="/data/p_where_prefer_schmed" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_where_prefer_schmed_other" relevant="selected( /data/p_where_prefer_schmed , 'Outros')" required="true()" type="text"/>
+            <bind nodeset="/data/p_outcome_interview" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
+            <bind nodeset="/data/p_outcome_interview_inc" relevant="selected( /data/p_outcome_interview , '2 Incompleto')" required="true()" type="text"/>
+            <bind nodeset="/data/p_end_note" readonly="true()" relevant="selected( /data/p_consent , '1.Sim')" type="text"/>
+            <bind nodeset="/data/w_end_note" readonly="true()" relevant=" /data/p_consent  = '2.Nao'" type="text"/>
+            <bind nodeset="/data/w_additional_notes" type="text"/>
             <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start_time" type="dateTime"/>
             <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end_time" type="dateTime"/>
-            <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+            <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="text"/>
         </model>
     </h:head>
     <h:body>
