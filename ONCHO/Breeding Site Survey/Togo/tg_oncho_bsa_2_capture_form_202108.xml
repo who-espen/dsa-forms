@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Août 2021) 2. Fiche de collecte des Simulies par équipe v4</h:title>
+    <model >
+      <instance>
+        <data id="cg_oncho_bsc_2_capture_202108_v4" version="20210625">
+          <b_recorder_id/>
+          <q_District_id/>
+          <q_SiteName/>
+          <q_Site_id/>
+          <b_captor_initial/>
+          <b_hour/>
+          <b_nb_blackflies1/>
+          <b_weather/>
+          <b_notes/>
+          <b_start/>
+          <b_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="time_liste">
+        <root>
+          <item>
+            <label>7:00 - 8:00</label>
+            <name>7:00 - 8:00</name>
+          </item>
+          <item>
+            <label>8:00 - 9:00</label>
+            <name>8:00 - 9:00</name>
+          </item>
+          <item>
+            <label>9:00 - 10:00</label>
+            <name>9:00 - 10:00</name>
+          </item>
+          <item>
+            <label>10:00 - 11:00</label>
+            <name>10:00 - 11:00</name>
+          </item>
+          <item>
+            <label>11:00 - 12:00</label>
+            <name>11:00 - 12:00</name>
+          </item>
+          <item>
+            <label>12:00 - 13:00</label>
+            <name>12:00 - 13:00</name>
+          </item>
+          <item>
+            <label>13:00 - 14:00</label>
+            <name>13:00 - 14:00</name>
+          </item>
+          <item>
+            <label>14:00 - 15:00</label>
+            <name>14:00 - 15:00</name>
+          </item>
+          <item>
+            <label>15:00 - 16:00</label>
+            <name>15:00 - 16:00</name>
+          </item>
+          <item>
+            <label>16:00 - 17:00</label>
+            <name>16:00 - 17:00</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="weather_list">
+        <root>
+          <item>
+            <label>Nuageux</label>
+            <name>Nuageux</name>
+          </item>
+          <item>
+            <label>Pluvieux</label>
+            <name>Pluvieux</name>
+          </item>
+          <item>
+            <label>Ensoleillé</label>
+            <name>Ensoleillé</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <label>Bassar</label>
+            <name>Bassar</name>
+          </item>
+          <item>
+            <label>Blitta</label>
+            <name>Blitta</name>
+          </item>
+          <item>
+            <label>Mo</label>
+            <name>Mo</name>
+          </item>
+          <item>
+            <label>Tchaoudjo</label>
+            <name>Tchaoudjo</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_list">
+        <root>
+          <item>
+            <district_list>Bassar</district_list>
+            <label>Baghan ou Mo village (Sur Mo)</label>
+            <name>Baghan ou Mo village (Sur Mo)</name>
+          </item>
+          <item>
+            <district_list>Mo</district_list>
+            <label>Bato (Sur Mo)</label>
+            <name>Bato (Sur Mo)</name>
+          </item>
+          <item>
+            <district_list>Mo</district_list>
+            <label>Kouida (Sur Koui)</label>
+            <name>Kouida (Sur Koui)</name>
+          </item>
+          <item>
+            <district_list>Tchaoudjo</district_list>
+            <label>Mo à Mo ou Bouzalo (Sur Mo)</label>
+            <name>Mo à Mo ou Bouzalo (Sur Mo)</name>
+          </item>
+          <item>
+            <district_list>Blitta</district_list>
+            <label>Tintsro ( Sur Assoukawkaw)</label>
+            <name>Tintsro ( Sur Assoukawkaw)</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="code_site">
+        <root>
+          <item>
+            <label>101</label>
+            <name>101</name>
+            <site_list>Baghan ou Mo village (Sur Mo)</site_list>
+          </item>
+          <item>
+            <label>102</label>
+            <name>102</name>
+            <site_list>Bato (Sur Mo)</site_list>
+          </item>
+          <item>
+            <label>103</label>
+            <name>103</name>
+            <site_list>Kouida (Sur Koui)</site_list>
+          </item>
+          <item>
+            <label>104</label>
+            <name>104</name>
+            <site_list>Mo à Mo ou Bouzalo (Sur Mo)</site_list>
+          </item>
+          <item>
+            <label>105</label>
+            <name>105</name>
+            <site_list>Tintsro ( Sur Assoukawkaw)</site_list>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="Le code doit être un nombre à deux chiffres entre 9 et 100" nodeset="/data/b_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/q_District_id" required="true()" type="string"/>
+      <bind nodeset="/data/q_SiteName" required="true()" type="string"/>
+      <bind nodeset="/data/q_Site_id" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[a-zA-Z]{2,5}$')" jr:constraintMsg="La longueur des initiales doit être comprise entre 2 et 5" nodeset="/data/b_captor_initial" required="true()" type="string"/>
+      <bind nodeset="/data/b_hour" required="true()" type="string"/>
+      <bind nodeset="/data/b_nb_blackflies1" required="true()" type="int"/>
+      <bind nodeset="/data/b_weather" required="true()" type="string"/>
+      <bind nodeset="/data/b_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/b_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/b_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/b_recorder_id">
+      <label>Entrer l'identifiant de l'enregistreur</label>
+      <hint>Code à deux chiffres qui vous a été assigné</hint>
+    </input>
+    <select1 ref="/data/q_District_id">
+      <label>Sélectionner un district</label>
+      <item>
+        <label>Bassar</label>
+        <value>Bassar</value>
+      </item>
+      <item>
+        <label>Blitta</label>
+        <value>Blitta</value>
+      </item>
+      <item>
+        <label>Mo</label>
+        <value>Mo</value>
+      </item>
+      <item>
+        <label>Tchaoudjo</label>
+        <value>Tchaoudjo</value>
+      </item>
+    </select1>
+    <select1 ref="/data/q_SiteName">
+      <label>Nom du gîte larvaire enquêté</label>
+      <hint>Le nom de la communauté où vous êtes</hint>
+      <itemset nodeset="instance('site_list')/root/item[district_list= /data/q_District_id ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/q_Site_id">
+      <label>Code du site</label>
+      <itemset nodeset="instance('code_site')/root/item[site_list= /data/q_SiteName ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <input ref="/data/b_captor_initial">
+      <label>Initiales du captureur</label>
+    </input>
+    <select1 appearance="minimal" ref="/data/b_hour">
+      <label>Sélectionner l'heure</label>
+      <item>
+        <label>7:00 - 8:00</label>
+        <value>7:00 - 8:00</value>
+      </item>
+      <item>
+        <label>8:00 - 9:00</label>
+        <value>8:00 - 9:00</value>
+      </item>
+      <item>
+        <label>9:00 - 10:00</label>
+        <value>9:00 - 10:00</value>
+      </item>
+      <item>
+        <label>10:00 - 11:00</label>
+        <value>10:00 - 11:00</value>
+      </item>
+      <item>
+        <label>11:00 - 12:00</label>
+        <value>11:00 - 12:00</value>
+      </item>
+      <item>
+        <label>12:00 - 13:00</label>
+        <value>12:00 - 13:00</value>
+      </item>
+      <item>
+        <label>13:00 - 14:00</label>
+        <value>13:00 - 14:00</value>
+      </item>
+      <item>
+        <label>14:00 - 15:00</label>
+        <value>14:00 - 15:00</value>
+      </item>
+      <item>
+        <label>15:00 - 16:00</label>
+        <value>15:00 - 16:00</value>
+      </item>
+      <item>
+        <label>16:00 - 17:00</label>
+        <value>16:00 - 17:00</value>
+      </item>
+    </select1>
+    <input ref="/data/b_nb_blackflies1">
+      <label>Nombre de simulies capturées</label>
+    </input>
+    <select1 ref="/data/b_weather">
+      <label>Observation climatique</label>
+      <item>
+        <label>Nuageux</label>
+        <value>Nuageux</value>
+      </item>
+      <item>
+        <label>Pluvieux</label>
+        <value>Pluvieux</value>
+      </item>
+      <item>
+        <label>Ensoleillé</label>
+        <value>Ensoleillé</value>
+      </item>
+    </select1>
+    <input ref="/data/b_notes">
+      <label>Informations additionnelles</label>
+    </input>
+  </h:body>
+</h:html>
+
+0001800023014214120077
+
+0001800001110000000113108

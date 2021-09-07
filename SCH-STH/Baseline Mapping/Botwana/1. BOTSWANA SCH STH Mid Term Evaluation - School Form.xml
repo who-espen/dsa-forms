@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<h:head>
-		<h:title>1. BOTSWANA SCH/STH Mid Term Evaluation - School Form</h:title>
-		<model >
+		<h:title>1. BOTSWANA SCH/STH Mid Term Evaluation - School Form V2.1</h:title>
+		<model>
+
+			<instance>
+				<data id="bw_sch_sth_mid_term_evaluation_1_school_v2_1" version="202106">
+					<w_RecorderID/>
+					<date/>
+					<w_region/>
+					<w_district/>
+					<w_dist_abbr/>
+					<w_school_name/>
+					<w_school_id/>
+					<w_gps/>
+					<w_deworming_alb/>
+					<w_deworming_pzq/>
+					<w_source_exist/>
+					<w_source_drinkable/>
+					<w_source_type/>
+					<w_accessible_water/>
+					<w_toilet/>
+					<w_toilet_type/>
+					<w_toilet_type_other/>
+					<w_toilet_has_paper/>
+					<w_toilet_has_washing_water/>
+					<w_toilet_has_soap/>
+					<w_obs_toilet_condition/>
+					<w_obs_toilet_has_water/>
+					<w_obs_has_hand_provision/>
+					<w_obs_washing_hand_type/>
+					<w_remarks/>
+					<w_Start/>
+					<w_End/>
+					<meta>
+						<instanceID/>
+					</meta>
+				</data>
+			</instance>
+
 			<itext>
 				<translation default="true()" lang="English">
 					<text id="/data/w_RecorderID:jr:constraintMsg">
-						<value>The code must be a two-digit number between 9 and 91</value>
+						<value>The code must be a two-digit number between 10 and 99</value>
 					</text>
 					<text id="/data/w_RecorderID:label">
 						<value>Enter Recorder ID</value>
 					</text>
 					<text id="/data/w_RecorderID:hint">
-						<value>2 digit code assigned to you</value>
+						<value>2 digits code assigned to you</value>
+					</text>
+					<text id="/data/date:label">
+						<value>Date of survey</value>
 					</text>
 					<text id="/data/w_region:label">
 						<value>Select the region</value>
@@ -26,17 +65,20 @@
 					<text id="/data/w_district:label">
 						<value>Select the district</value>
 					</text>
+					<text id="/data/w_dist_abbr:label">
+						<value>District abbreviation</value>
+					</text>
 					<text id="/data/w_school_name:label">
 						<value>Select the school name</value>
 					</text>
 					<text id="/data/w_school_id:jr:constraintMsg">
-						<value>The code must be a three-digit number between 99 and 901</value>
+						<value>The code must be a two-digit number between 01 and 60</value>
 					</text>
 					<text id="/data/w_school_id:label">
 						<value>Select the school code</value>
 					</text>
 					<text id="/data/w_school_id:hint">
-						<value>3 digit code assigned to each school</value>
+						<value>2 digits code assigned to each school</value>
 					</text>
 					<text id="/data/w_gps:label">
 						<value>Collect GPS Coordinates</value>
@@ -44,16 +86,28 @@
 					<text id="/data/w_gps:hint">
 						<value>Works best outside of buildings</value>
 					</text>
-					<text id="/data/w_deworming:label">
+					<text id="/data/w_deworming_alb:label">
 						<value>Has this school received deworming treatment (Albendazole/Mebendazole) in the last six month?</value>
 					</text>
-					<text id="/data/w_deworming/Yes:label">
+					<text id="/data/w_deworming_alb/Yes:label">
 						<value>Yes</value>
 					</text>
-					<text id="/data/w_deworming/No:label">
+					<text id="/data/w_deworming_alb/No:label">
 						<value>No</value>
 					</text>
-					<text id="/data/w_deworming/Don't know:label">
+					<text id="/data/w_deworming_alb/Don't know:label">
+						<value>Don't know</value>
+					</text>
+					<text id="/data/w_deworming_pzq:label">
+						<value>Has this school received deworming treatment (Praziquantel) in the last six month?</value>
+					</text>
+					<text id="/data/w_deworming_pzq/Yes:label">
+						<value>Yes</value>
+					</text>
+					<text id="/data/w_deworming_pzq/No:label">
+						<value>No</value>
+					</text>
+					<text id="/data/w_deworming_pzq/Don't know:label">
 						<value>Don't know</value>
 					</text>
 					<text id="/data/w_source_exist:label">
@@ -80,40 +134,40 @@
 					<text id="/data/w_source_type:label">
 						<value>If yes, what type of water source</value>
 					</text>
-					<text id="/data/w_source_type/Unprotected spring:label">
+					<text id="/data/w_source_type/Unprotected.spring:label">
 						<value>Unprotected spring</value>
 					</text>
-					<text id="/data/w_source_type/Protected spring:label">
+					<text id="/data/w_source_type/Protected.spring:label">
 						<value>Protected spring</value>
 					</text>
-					<text id="/data/w_source_type/Unprotected dug well:label">
+					<text id="/data/w_source_type/Unprotected.dug.well:label">
 						<value>Unprotected dug well</value>
 					</text>
-					<text id="/data/w_source_type/Protected dug well:label">
+					<text id="/data/w_source_type/Protected.dug.well:label">
 						<value>Protected dug well</value>
 					</text>
-					<text id="/data/w_source_type/Hand pump/tube well/borehole:label">
+					<text id="/data/w_source_type/Hand.pump/tube.well/borehole:label">
 						<value>Hand pump/tube well/borehole</value>
 					</text>
-					<text id="/data/w_source_type/Surface water (river, creek, dam, lake, stream, canal):label">
+					<text id="/data/w_source_type/Surface.water.(river,.creek,.dam,.lake,.stream,.canal):label">
 						<value>Surface water (river, creek, dam, lake, stream, canal)</value>
 					</text>
-					<text id="/data/w_source_type/Public piped water/tap/standpipe:label">
+					<text id="/data/w_source_type/Public.piped.water/tap/standpipe:label">
 						<value>Public piped water/tap/standpipe</value>
 					</text>
-					<text id="/data/w_source_type/Rain water collection:label">
+					<text id="/data/w_source_type/Rain.water.collection:label">
 						<value>Rain water collection</value>
 					</text>
-					<text id="/data/w_source_type/Plastic bag water:label">
+					<text id="/data/w_source_type/Plastic.bag.water:label">
 						<value>Plastic bag water</value>
 					</text>
-					<text id="/data/w_source_type/Bottle water:label">
+					<text id="/data/w_source_type/Bottle.water:label">
 						<value>Bottle water</value>
 					</text>
-					<text id="/data/w_source_type/In school piped water/tap/standpipe:label">
+					<text id="/data/w_source_type/In.school.piped.water/tap/standpipe:label">
 						<value>In school piped water/tap/standpipe</value>
 					</text>
-					<text id="/data/w_source_type/Mobile water tanker:label">
+					<text id="/data/w_source_type/Mobile.water.tanker:label">
 						<value>Mobile water tanker</value>
 					</text>
 					<text id="/data/w_accessible_water:label">
@@ -150,7 +204,7 @@
 						<value>Flush or pour flush toilet</value>
 					</text>
 					<text id="/data/w_toilet_type/Other:label">
-						<value>Other(specify)</value>
+						<value>Other (specify)</value>
 					</text>
 					<text id="/data/w_toilet_type_other:label">
 						<value>Please, specify the type of toilet</value>
@@ -327,7 +381,7 @@
 						<value>Flush or pour flush toilet</value>
 					</text>
 					<text id="toilet_type-3">
-						<value>Other(specify)</value>
+						<value>Other (specify)</value>
 					</text>
 					<text id="accessible_water-0">
 						<value>No</value>
@@ -393,52 +447,97 @@
 						<value>Francistown</value>
 					</text>
 					<text id="district_list-3">
-						<value>Gantsi</value>
-					</text>
-					<text id="district_list-4">
 						<value>Ghanzi</value>
 					</text>
-					<text id="district_list-5">
+					<text id="district_list-4">
 						<value>Jwaneng</value>
 					</text>
-					<text id="district_list-6">
+					<text id="district_list-5">
 						<value>Kgalagadi North</value>
 					</text>
-					<text id="district_list-7">
+					<text id="district_list-6">
 						<value>Kgalagadi South</value>
 					</text>
-					<text id="district_list-8">
-						<value>Klagadi North</value>
-					</text>
-					<text id="district_list-9">
+					<text id="district_list-7">
 						<value>Kweneng West</value>
 					</text>
-					<text id="district_list-10">
+					<text id="district_list-8">
 						<value>Lobatse</value>
 					</text>
-					<text id="district_list-11">
+					<text id="district_list-9">
 						<value>Mabutsane</value>
 					</text>
-					<text id="district_list-12">
+					<text id="district_list-10">
 						<value>Mahalapye</value>
 					</text>
-					<text id="district_list-13">
+					<text id="district_list-11">
 						<value>Ngami</value>
 					</text>
-					<text id="district_list-14">
+					<text id="district_list-12">
 						<value>Okavango</value>
 					</text>
-					<text id="district_list-15">
+					<text id="district_list-13">
 						<value>Palapye</value>
 					</text>
-					<text id="district_list-16">
+					<text id="district_list-14">
 						<value>Selibe Phikwe</value>
 					</text>
-					<text id="district_list-17">
+					<text id="district_list-15">
 						<value>Serowe</value>
 					</text>
-					<text id="district_list-18">
+					<text id="district_list-16">
 						<value>Tutume</value>
+					</text>
+					<text id="dist_abbr_list-0">
+						<value>CH</value>
+					</text>
+					<text id="dist_abbr_list-1">
+						<value>CB</value>
+					</text>
+					<text id="dist_abbr_list-2">
+						<value>FT</value>
+					</text>
+					<text id="dist_abbr_list-3">
+						<value>GZ</value>
+					</text>
+					<text id="dist_abbr_list-4">
+						<value>JW</value>
+					</text>
+					<text id="dist_abbr_list-5">
+						<value>KN</value>
+					</text>
+					<text id="dist_abbr_list-6">
+						<value>KS</value>
+					</text>
+					<text id="dist_abbr_list-7">
+						<value>KW</value>
+					</text>
+					<text id="dist_abbr_list-8">
+						<value>LO</value>
+					</text>
+					<text id="dist_abbr_list-9">
+						<value>MB</value>
+					</text>
+					<text id="dist_abbr_list-10">
+						<value>ML</value>
+					</text>
+					<text id="dist_abbr_list-11">
+						<value>NM</value>
+					</text>
+					<text id="dist_abbr_list-12">
+						<value>OK</value>
+					</text>
+					<text id="dist_abbr_list-13">
+						<value>PL</value>
+					</text>
+					<text id="dist_abbr_list-14">
+						<value>SP</value>
+					</text>
+					<text id="dist_abbr_list-15">
+						<value>SE</value>
+					</text>
+					<text id="dist_abbr_list-16">
+						<value>TT</value>
 					</text>
 					<text id="school_list-0">
 						<value>Bere Primary</value>
@@ -621,218 +720,187 @@
 						<value>Zutshwa</value>
 					</text>
 					<text id="school_id_list-0">
-						<value>101</value>
+						<value>01</value>
 					</text>
 					<text id="school_id_list-1">
-						<value>102</value>
+						<value>02</value>
 					</text>
 					<text id="school_id_list-2">
-						<value>103</value>
+						<value>03</value>
 					</text>
 					<text id="school_id_list-3">
-						<value>104</value>
+						<value>04</value>
 					</text>
 					<text id="school_id_list-4">
-						<value>105</value>
+						<value>05</value>
 					</text>
 					<text id="school_id_list-5">
-						<value>106</value>
+						<value>06</value>
 					</text>
 					<text id="school_id_list-6">
-						<value>107</value>
+						<value>07</value>
 					</text>
 					<text id="school_id_list-7">
-						<value>108</value>
+						<value>08</value>
 					</text>
 					<text id="school_id_list-8">
-						<value>109</value>
+						<value>09</value>
 					</text>
 					<text id="school_id_list-9">
-						<value>110</value>
+						<value>10</value>
 					</text>
 					<text id="school_id_list-10">
-						<value>111</value>
+						<value>11</value>
 					</text>
 					<text id="school_id_list-11">
-						<value>112</value>
+						<value>12</value>
 					</text>
 					<text id="school_id_list-12">
-						<value>113</value>
+						<value>13</value>
 					</text>
 					<text id="school_id_list-13">
-						<value>114</value>
+						<value>14</value>
 					</text>
 					<text id="school_id_list-14">
-						<value>115</value>
+						<value>15</value>
 					</text>
 					<text id="school_id_list-15">
-						<value>116</value>
+						<value>16</value>
 					</text>
 					<text id="school_id_list-16">
-						<value>117</value>
+						<value>17</value>
 					</text>
 					<text id="school_id_list-17">
-						<value>118</value>
+						<value>18</value>
 					</text>
 					<text id="school_id_list-18">
-						<value>119</value>
+						<value>19</value>
 					</text>
 					<text id="school_id_list-19">
-						<value>120</value>
+						<value>20</value>
 					</text>
 					<text id="school_id_list-20">
-						<value>121</value>
+						<value>21</value>
 					</text>
 					<text id="school_id_list-21">
-						<value>122</value>
+						<value>22</value>
 					</text>
 					<text id="school_id_list-22">
-						<value>123</value>
+						<value>23</value>
 					</text>
 					<text id="school_id_list-23">
-						<value>124</value>
+						<value>24</value>
 					</text>
 					<text id="school_id_list-24">
-						<value>125</value>
+						<value>25</value>
 					</text>
 					<text id="school_id_list-25">
-						<value>126</value>
+						<value>26</value>
 					</text>
 					<text id="school_id_list-26">
-						<value>127</value>
+						<value>27</value>
 					</text>
 					<text id="school_id_list-27">
-						<value>128</value>
+						<value>28</value>
 					</text>
 					<text id="school_id_list-28">
-						<value>129</value>
+						<value>29</value>
 					</text>
 					<text id="school_id_list-29">
-						<value>130</value>
+						<value>30</value>
 					</text>
 					<text id="school_id_list-30">
-						<value>131</value>
+						<value>31</value>
 					</text>
 					<text id="school_id_list-31">
-						<value>132</value>
+						<value>32</value>
 					</text>
 					<text id="school_id_list-32">
-						<value>133</value>
+						<value>33</value>
 					</text>
 					<text id="school_id_list-33">
-						<value>134</value>
+						<value>34</value>
 					</text>
 					<text id="school_id_list-34">
-						<value>135</value>
+						<value>35</value>
 					</text>
 					<text id="school_id_list-35">
-						<value>136</value>
+						<value>36</value>
 					</text>
 					<text id="school_id_list-36">
-						<value>137</value>
+						<value>37</value>
 					</text>
 					<text id="school_id_list-37">
-						<value>138</value>
+						<value>38</value>
 					</text>
 					<text id="school_id_list-38">
-						<value>139</value>
+						<value>39</value>
 					</text>
 					<text id="school_id_list-39">
-						<value>140</value>
+						<value>40</value>
 					</text>
 					<text id="school_id_list-40">
-						<value>141</value>
+						<value>41</value>
 					</text>
 					<text id="school_id_list-41">
-						<value>142</value>
+						<value>42</value>
 					</text>
 					<text id="school_id_list-42">
-						<value>143</value>
+						<value>43</value>
 					</text>
 					<text id="school_id_list-43">
-						<value>144</value>
+						<value>44</value>
 					</text>
 					<text id="school_id_list-44">
-						<value>145</value>
+						<value>45</value>
 					</text>
 					<text id="school_id_list-45">
-						<value>146</value>
+						<value>46</value>
 					</text>
 					<text id="school_id_list-46">
-						<value>147</value>
+						<value>47</value>
 					</text>
 					<text id="school_id_list-47">
-						<value>148</value>
+						<value>48</value>
 					</text>
 					<text id="school_id_list-48">
-						<value>149</value>
+						<value>49</value>
 					</text>
 					<text id="school_id_list-49">
-						<value>150</value>
+						<value>50</value>
 					</text>
 					<text id="school_id_list-50">
-						<value>151</value>
+						<value>51</value>
 					</text>
 					<text id="school_id_list-51">
-						<value>152</value>
+						<value>52</value>
 					</text>
 					<text id="school_id_list-52">
-						<value>153</value>
+						<value>53</value>
 					</text>
 					<text id="school_id_list-53">
-						<value>154</value>
+						<value>54</value>
 					</text>
 					<text id="school_id_list-54">
-						<value>155</value>
+						<value>55</value>
 					</text>
 					<text id="school_id_list-55">
-						<value>156</value>
+						<value>56</value>
 					</text>
 					<text id="school_id_list-56">
-						<value>157</value>
+						<value>57</value>
 					</text>
 					<text id="school_id_list-57">
-						<value>158</value>
+						<value>58</value>
 					</text>
 					<text id="school_id_list-58">
-						<value>159</value>
+						<value>59</value>
 					</text>
 					<text id="school_id_list-59">
-						<value>160</value>
+						<value>60</value>
 					</text>
 				</translation>
 			</itext>
-			<instance>
-				<data id="bw_sch_sth_mid_term_evaluation_1_school" version="202106">
-					<w_RecorderID/>
-					<w_region/>
-					<w_district/>
-					<w_school_name/>
-					<w_school_id/>
-					<w_gps/>
-					<w_deworming/>
-					<w_source_exist/>
-					<w_source_drinkable/>
-					<w_source_type/>
-					<w_accessible_water/>
-					<w_toilet/>
-					<w_toilet_type/>
-					<w_toilet_type_other/>
-					<w_toilet_has_paper/>
-					<w_toilet_has_washing_water/>
-					<w_toilet_has_soap/>
-					<w_obs_toilet_condition/>
-					<w_obs_toilet_has_water/>
-					<w_obs_has_hand_provision/>
-					<w_obs_washing_hand_type/>
-					<w_remarks/>
-					<w_Start/>
-					<w_End/>
-					<meta>
-						<instanceID/>
-					</meta>
-				</data>
-			</instance>
 			<instance id="yesNo">
 				<root>
 					<item>
@@ -881,51 +949,51 @@
 				<root>
 					<item>
 						<itextId>source_type-0</itextId>
-						<name>Unprotected spring</name>
+						<name>Unprotected.spring</name>
 					</item>
 					<item>
 						<itextId>source_type-1</itextId>
-						<name>Protected spring</name>
+						<name>Protected.spring</name>
 					</item>
 					<item>
 						<itextId>source_type-2</itextId>
-						<name>Unprotected dug well</name>
+						<name>Unprotected.dug.well</name>
 					</item>
 					<item>
 						<itextId>source_type-3</itextId>
-						<name>Protected dug well</name>
+						<name>Protected.dug.well</name>
 					</item>
 					<item>
 						<itextId>source_type-4</itextId>
-						<name>Hand pump/tube well/borehole</name>
+						<name>Hand.pump/tube.well/borehole</name>
 					</item>
 					<item>
 						<itextId>source_type-5</itextId>
-						<name>Surface water (river, creek, dam, lake, stream, canal)</name>
+						<name>Surface.water.(river,.creek,.dam,.lake,.stream,.canal)</name>
 					</item>
 					<item>
 						<itextId>source_type-6</itextId>
-						<name>Public piped water/tap/standpipe</name>
+						<name>Public.piped.water/tap/standpipe</name>
 					</item>
 					<item>
 						<itextId>source_type-7</itextId>
-						<name>Rain water collection</name>
+						<name>Rain.water.collection</name>
 					</item>
 					<item>
 						<itextId>source_type-8</itextId>
-						<name>Plastic bag water</name>
+						<name>Plastic.bag.water</name>
 					</item>
 					<item>
 						<itextId>source_type-9</itextId>
-						<name>Bottle water</name>
+						<name>Bottle.water</name>
 					</item>
 					<item>
 						<itextId>source_type-10</itextId>
-						<name>In school piped water/tap/standpipe</name>
+						<name>In.school.piped.water/tap/standpipe</name>
 					</item>
 					<item>
 						<itextId>source_type-11</itextId>
-						<name>Mobile water tanker</name>
+						<name>Mobile.water.tanker</name>
 					</item>
 				</root>
 			</instance>
@@ -1060,83 +1128,162 @@
 					</item>
 					<item>
 						<itextId>district_list-3</itextId>
-						<name>Gantsi</name>
-						<provinces>Southern</provinces>
-					</item>
-					<item>
-						<itextId>district_list-4</itextId>
 						<name>Ghanzi</name>
 						<provinces>Southern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-5</itextId>
+						<itextId>district_list-4</itextId>
 						<name>Jwaneng</name>
 						<provinces>Southern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-6</itextId>
+						<itextId>district_list-5</itextId>
 						<name>Kgalagadi North</name>
 						<provinces>Southern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-7</itextId>
+						<itextId>district_list-6</itextId>
 						<name>Kgalagadi South</name>
 						<provinces>Southern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-8</itextId>
-						<name>Klagadi North</name>
-						<provinces>Southern</provinces>
-					</item>
-					<item>
-						<itextId>district_list-9</itextId>
+						<itextId>district_list-7</itextId>
 						<name>Kweneng West</name>
 						<provinces>Southern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-10</itextId>
+						<itextId>district_list-8</itextId>
 						<name>Lobatse</name>
 						<provinces>Southern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-11</itextId>
+						<itextId>district_list-9</itextId>
 						<name>Mabutsane</name>
 						<provinces>Southern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-12</itextId>
+						<itextId>district_list-10</itextId>
 						<name>Mahalapye</name>
 						<provinces>Northern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-13</itextId>
+						<itextId>district_list-11</itextId>
 						<name>Ngami</name>
 						<provinces>Northern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-14</itextId>
+						<itextId>district_list-12</itextId>
 						<name>Okavango</name>
 						<provinces>Northern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-15</itextId>
+						<itextId>district_list-13</itextId>
 						<name>Palapye</name>
 						<provinces>Northern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-16</itextId>
+						<itextId>district_list-14</itextId>
 						<name>Selibe Phikwe</name>
 						<provinces>Northern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-17</itextId>
+						<itextId>district_list-15</itextId>
 						<name>Serowe</name>
 						<provinces>Northern</provinces>
 					</item>
 					<item>
-						<itextId>district_list-18</itextId>
+						<itextId>district_list-16</itextId>
 						<name>Tutume</name>
 						<provinces>Northern</provinces>
+					</item>
+				</root>
+			</instance>
+			<instance id="dist_abbr_list">
+				<root>
+					<item>
+						<itextId>dist_abbr_list-0</itextId>
+						<district_list>Charles Hill</district_list>
+						<name>CH</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-1</itextId>
+						<district_list>Chobe</district_list>
+						<name>CB</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-2</itextId>
+						<district_list>Francistown</district_list>
+						<name>FT</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-3</itextId>
+						<district_list>Ghanzi</district_list>
+						<name>GZ</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-4</itextId>
+						<district_list>Jwaneng</district_list>
+						<name>JW</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-5</itextId>
+						<district_list>Kgalagadi North</district_list>
+						<name>KN</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-6</itextId>
+						<district_list>Kgalagadi South</district_list>
+						<name>KS</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-7</itextId>
+						<district_list>Kweneng West</district_list>
+						<name>KW</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-8</itextId>
+						<district_list>Lobatse</district_list>
+						<name>LO</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-9</itextId>
+						<district_list>Mabutsane</district_list>
+						<name>MB</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-10</itextId>
+						<district_list>Mahalapye</district_list>
+						<name>ML</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-11</itextId>
+						<district_list>Ngami</district_list>
+						<name>NM</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-12</itextId>
+						<district_list>Okavango</district_list>
+						<name>OK</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-13</itextId>
+						<district_list>Palapye</district_list>
+						<name>PL</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-14</itextId>
+						<district_list>Selibe Phikwe</district_list>
+						<name>SP</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-15</itextId>
+						<district_list>Serowe</district_list>
+						<name>SE</name>
+					</item>
+					<item>
+						<itextId>dist_abbr_list-16</itextId>
+						<district_list>Tutume</district_list>
+						<name>TT</name>
 					</item>
 				</root>
 			</instance>
@@ -1169,7 +1316,7 @@
 					</item>
 					<item>
 						<itextId>school_list-5</itextId>
-						<district_list>Gantsi</district_list>
+						<district_list>Ghanzi</district_list>
 						<name>Kacgae</name>
 					</item>
 					<item>
@@ -1224,7 +1371,7 @@
 					</item>
 					<item>
 						<itextId>school_list-16</itextId>
-						<district_list>Gantsi</district_list>
+						<district_list>Ghanzi</district_list>
 						<name>Kuke</name>
 					</item>
 					<item>
@@ -1299,7 +1446,7 @@
 					</item>
 					<item>
 						<itextId>school_list-31</itextId>
-						<district_list>Klagadi North</district_list>
+						<district_list>Kgalagadi North</district_list>
 						<name>Monong</name>
 					</item>
 					<item>
@@ -1309,7 +1456,7 @@
 					</item>
 					<item>
 						<itextId>school_list-33</itextId>
-						<district_list>Klagadi North</district_list>
+						<district_list>Kgalagadi North</district_list>
 						<name>Ngwatle</name>
 					</item>
 					<item>
@@ -1424,7 +1571,7 @@
 					</item>
 					<item>
 						<itextId>school_list-56</itextId>
-						<district_list>Klagadi North</district_list>
+						<district_list>Kgalagadi North</district_list>
 						<name>Ukhwi</name>
 					</item>
 					<item>
@@ -1434,12 +1581,12 @@
 					</item>
 					<item>
 						<itextId>school_list-58</itextId>
-						<district_list>Kgalagadi North</district_list>
+						<district_list>Ghanzi</district_list>
 						<name>West Hanahai</name>
 					</item>
 					<item>
 						<itextId>school_list-59</itextId>
-						<district_list>Klagadi North</district_list>
+						<district_list>Kgalagadi North</district_list>
 						<name>Zutshwa</name>
 					</item>
 				</root>
@@ -1448,313 +1595,316 @@
 				<root>
 					<item>
 						<itextId>school_id_list-0</itextId>
-						<name>101</name>
-						<school_list>Pandamatenga</school_list>
+						<name>01</name>
+						<school_list>Kalkfontein</school_list>
 					</item>
 					<item>
 						<itextId>school_id_list-1</itextId>
-						<name>102</name>
-						<school_list>Kasane</school_list>
+						<name>02</name>
+						<school_list>Kachikau</school_list>
 					</item>
 					<item>
 						<itextId>school_id_list-2</itextId>
-						<name>103</name>
-						<school_list>Mabele</school_list>
+						<name>03</name>
+						<school_list>Kasane</school_list>
 					</item>
 					<item>
 						<itextId>school_id_list-3</itextId>
-						<name>104</name>
+						<name>04</name>
 						<school_list>Kavimba</school_list>
 					</item>
 					<item>
 						<itextId>school_id_list-4</itextId>
-						<name>105</name>
-						<school_list>BoswelaKgomo P. School</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-5</itextId>
-						<name>106</name>
-						<school_list>Tebogo P. School</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-6</itextId>
-						<name>107</name>
-						<school_list>Segomotso P. School</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-7</itextId>
-						<name>108</name>
-						<school_list>Lapologang P. School</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-8</itextId>
-						<name>109</name>
-						<school_list>Toteng</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-9</itextId>
-						<name>110</name>
-						<school_list>Letsholathebe</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-10</itextId>
-						<name>111</name>
-						<school_list>Matlapana P.S.</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-11</itextId>
-						<name>112</name>
-						<school_list>Komana</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-12</itextId>
-						<name>113</name>
-						<school_list>Mogolokwane P. S</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-13</itextId>
-						<name>114</name>
-						<school_list>Sepopa</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-14</itextId>
-						<name>115</name>
-						<school_list>Qangwa</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-15</itextId>
-						<name>116</name>
-						<school_list>Kelekele</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-16</itextId>
-						<name>117</name>
-						<school_list>Shakawe primary</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-17</itextId>
-						<name>118</name>
-						<school_list>Kediretswe P. School</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-18</itextId>
-						<name>119</name>
-						<school_list>Tamasane P. School</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-19</itextId>
-						<name>120</name>
-						<school_list>Lecheng P. School</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-20</itextId>
-						<name>121</name>
-						<school_list>Palapye Central P. S</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-21</itextId>
-						<name>122</name>
-						<school_list>KHAMA MEMORIAL P. SCHOOL</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-22</itextId>
-						<name>123</name>
-						<school_list>PAJE P. SCHOOL</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-23</itextId>
-						<name>124</name>
-						<school_list>SEROWE CENTRAL P. SCHOOL</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-24</itextId>
-						<name>125</name>
-						<school_list>MALATSWAI P. SCHOOL</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-25</itextId>
-						<name>126</name>
-						<school_list>MOIYABANA P. SCHOOL</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-26</itextId>
-						<name>127</name>
-						<school_list>DKar Primary</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-27</itextId>
-						<name>128</name>
-						<school_list>Gantsi Primary</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-28</itextId>
-						<name>129</name>
-						<school_list>Bere Primary</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-29</itextId>
-						<name>130</name>
-						<school_list>Qabo Primary</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-30</itextId>
-						<name>131</name>
-						<school_list>Pitikwe Primary School</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-31</itextId>
-						<name>132</name>
-						<school_list>Mokhomma</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-32</itextId>
-						<name>133</name>
-						<school_list>Werda</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-33</itextId>
-						<name>134</name>
-						<school_list>Sekoma</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-34</itextId>
-						<name>135</name>
-						<school_list>Sefhare</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-35</itextId>
-						<name>136</name>
-						<school_list>Kalamare</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-36</itextId>
-						<name>137</name>
-						<school_list>Seleka</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-37</itextId>
-						<name>138</name>
-						<school_list>Mokobeng P.S</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-38</itextId>
-						<name>139</name>
-						<school_list>Ukhwi</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-39</itextId>
-						<name>140</name>
-						<school_list>Ngwatle</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-40</itextId>
-						<name>141</name>
-						<school_list>Zutshwa</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-41</itextId>
-						<name>142</name>
-						<school_list>Monong</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-42</itextId>
-						<name>143</name>
-						<school_list>Kalkfontein</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-43</itextId>
-						<name>144</name>
-						<school_list>Pelotshwaana</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-44</itextId>
-						<name>145</name>
-						<school_list>Tutume Central</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-45</itextId>
-						<name>146</name>
-						<school_list>Takatokwane</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-46</itextId>
-						<name>147</name>
-						<school_list>Parakarungu</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-47</itextId>
-						<name>148</name>
+						<name>05</name>
 						<school_list>Lesome</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-48</itextId>
-						<name>149</name>
-						<school_list>Kachikau</school_list>
+						<itextId>school_id_list-5</itextId>
+						<name>06</name>
+						<school_list>Mabele</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-49</itextId>
-						<name>150</name>
-						<school_list>Kuke</school_list>
+						<itextId>school_id_list-6</itextId>
+						<name>07</name>
+						<school_list>Pandamatenga</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-50</itextId>
-						<name>151</name>
+						<itextId>school_id_list-7</itextId>
+						<name>08</name>
+						<school_list>Parakarungu</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-8</itextId>
+						<name>09</name>
+						<school_list>Pelotshwaana</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-9</itextId>
+						<name>10</name>
+						<school_list>Bere Primary</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-10</itextId>
+						<name>11</name>
+						<school_list>DKar Primary</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-11</itextId>
+						<name>12</name>
+						<school_list>Gantsi Primary</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-12</itextId>
+						<name>13</name>
 						<school_list>Kacgae</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-51</itextId>
-						<name>152</name>
+						<itextId>school_id_list-13</itextId>
+						<name>14</name>
+						<school_list>Kuke</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-14</itextId>
+						<name>15</name>
+						<school_list>Qabo Primary</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-15</itextId>
+						<name>16</name>
 						<school_list>West Hanahai</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-52</itextId>
-						<name>153</name>
-						<school_list>Kang</school_list>
+						<itextId>school_id_list-16</itextId>
+						<name>17</name>
+						<school_list>Mokhomma</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-53</itextId>
-						<name>154</name>
-						<school_list>Lekgwabe</school_list>
-					</item>
-					<item>
-						<itextId>school_id_list-54</itextId>
-						<name>155</name>
+						<itextId>school_id_list-17</itextId>
+						<name>18</name>
 						<school_list>Hukuntsi</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-55</itextId>
-						<name>156</name>
+						<itextId>school_id_list-18</itextId>
+						<name>19</name>
+						<school_list>Kang</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-19</itextId>
+						<name>20</name>
+						<school_list>Lekgwabe</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-20</itextId>
+						<name>21</name>
+						<school_list>Monong</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-21</itextId>
+						<name>22</name>
+						<school_list>Ngwatle</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-22</itextId>
+						<name>23</name>
+						<school_list>Ukhwi</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-23</itextId>
+						<name>24</name>
+						<school_list>Zutshwa</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-24</itextId>
+						<name>25</name>
+						<school_list>Werda</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-25</itextId>
+						<name>26</name>
+						<school_list>Takatokwane</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-26</itextId>
+						<name>27</name>
+						<school_list>Pitikwe Primary School</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-27</itextId>
+						<name>28</name>
+						<school_list>Sekoma</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-28</itextId>
+						<name>29</name>
+						<school_list>Kalamare</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-29</itextId>
+						<name>30</name>
+						<school_list>Mokobeng P.S</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-30</itextId>
+						<name>31</name>
+						<school_list>Sefhare</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-31</itextId>
+						<name>32</name>
+						<school_list>Seleka</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-32</itextId>
+						<name>33</name>
 						<school_list>Shoshong</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-56</itextId>
-						<name>157</name>
-						<school_list>Nxauxau</school_list>
+						<itextId>school_id_list-33</itextId>
+						<name>34</name>
+						<school_list>Komana</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-57</itextId>
-						<name>158</name>
+						<itextId>school_id_list-34</itextId>
+						<name>35</name>
+						<school_list>Letsholathebe</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-35</itextId>
+						<name>36</name>
+						<school_list>Matlapana P.S.</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-36</itextId>
+						<name>37</name>
+						<school_list>Mogolokwane P. S</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-37</itextId>
+						<name>38</name>
+						<school_list>Toteng</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-38</itextId>
+						<name>39</name>
+						<school_list>Kelekele</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-39</itextId>
+						<name>40</name>
 						<school_list>Mogotho</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-58</itextId>
-						<name>159</name>
+						<itextId>school_id_list-40</itextId>
+						<name>41</name>
+						<school_list>Nxauxau</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-41</itextId>
+						<name>42</name>
+						<school_list>Qangwa</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-42</itextId>
+						<name>43</name>
+						<school_list>Sepopa</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-43</itextId>
+						<name>44</name>
+						<school_list>Shakawe primary</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-44</itextId>
+						<name>45</name>
+						<school_list>Kediretswe P. School</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-45</itextId>
+						<name>46</name>
+						<school_list>Lecheng P. School</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-46</itextId>
+						<name>47</name>
 						<school_list>Mapulane</school_list>
 					</item>
 					<item>
-						<itextId>school_id_list-59</itextId>
-						<name>160</name>
+						<itextId>school_id_list-47</itextId>
+						<name>48</name>
+						<school_list>Palapye Central P. S</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-48</itextId>
+						<name>49</name>
+						<school_list>Tamasane P. School</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-49</itextId>
+						<name>50</name>
+						<school_list>BoswelaKgomo P. School</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-50</itextId>
+						<name>51</name>
+						<school_list>Lapologang P. School</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-51</itextId>
+						<name>52</name>
 						<school_list>Mount Pleasant</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-52</itextId>
+						<name>53</name>
+						<school_list>Segomotso P. School</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-53</itextId>
+						<name>54</name>
+						<school_list>Tebogo P. School</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-54</itextId>
+						<name>55</name>
+						<school_list>KHAMA MEMORIAL P. SCHOOL</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-55</itextId>
+						<name>56</name>
+						<school_list>MALATSWAI P. SCHOOL</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-56</itextId>
+						<name>57</name>
+						<school_list>MOIYABANA P. SCHOOL</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-57</itextId>
+						<name>58</name>
+						<school_list>PAJE P. SCHOOL</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-58</itextId>
+						<name>59</name>
+						<school_list>SEROWE CENTRAL P. SCHOOL</school_list>
+					</item>
+					<item>
+						<itextId>school_id_list-59</itextId>
+						<name>60</name>
+						<school_list>Tutume Central</school_list>
 					</item>
 				</root>
 			</instance>
-			<bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/w_RecorderID:jr:constraintMsg')" nodeset="/data/w_RecorderID" required="true()" type="int"/>
+			<bind constraint=". &gt; 9 and . &lt; 100" jr:constraintMsg="jr:itext('/data/w_RecorderID:jr:constraintMsg')" nodeset="/data/w_RecorderID" required="true()" type="int"/>
+			<bind nodeset="/data/date" type="date"/>
 			<bind nodeset="/data/w_region" required="true()" type="string" db_add_col_1="."/>
 			<bind nodeset="/data/w_district" required="true()" type="string" db_add_col_2="." db_add_col_1="/data/w_region"/>
-			<bind nodeset="/data/w_school_name" required="true()" type="string" db_add_col_3="." db_add_col_2="/data/w_district"/>
-			<bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/w_school_id:jr:constraintMsg')" nodeset="/data/w_school_id" required="true()" type="string" db_add_col_4="." db_add_col_3="/data/w_school_name"/>
+			<bind nodeset="/data/w_dist_abbr" required="true()" type="string" db_add_col_3="." db_add_col_2="/data/w_district"/>
+			<bind nodeset="/data/w_school_name" required="true()" type="string" db_add_col_4="." db_add_col_2="/data/w_district"/>
+			<bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/w_school_id:jr:constraintMsg')" nodeset="/data/w_school_id" required="true()" type="string" db_add_col_5="." db_add_col_4="/data/w_school_name"/>
 			<bind nodeset="/data/w_gps" required="true()" type="geopoint"/>
-			<bind nodeset="/data/w_deworming" required="true()" type="string"/>
+			<bind nodeset="/data/w_deworming_alb" required="true()" type="string"/>
+			<bind nodeset="/data/w_deworming_pzq" type="string"/>
 			<bind nodeset="/data/w_source_exist" required="true()" type="string"/>
 			<bind nodeset="/data/w_source_drinkable" relevant=" /data/w_source_exist  = 'Yes'" required="true()" type="string"/>
 			<bind nodeset="/data/w_source_type" relevant=" /data/w_source_exist  = 'Yes'" required="true()" type="string"/>
@@ -1780,6 +1930,9 @@
 			<label ref="jr:itext('/data/w_RecorderID:label')"/>
 			<hint ref="jr:itext('/data/w_RecorderID:hint')"/>
 		</input>
+		<input ref="/data/date">
+			<label ref="jr:itext('/data/date:label')"/>
+		</input>
 		<select1 ref="/data/w_region">
 			<label ref="jr:itext('/data/w_region:label')"/>
 			<item>
@@ -1794,6 +1947,13 @@
 		<select1 ref="/data/w_district">
 			<label ref="jr:itext('/data/w_district:label')"/>
 			<itemset nodeset="instance('district_list')/root/item[provinces =  /data/w_region ]">
+				<value ref="name"/>
+				<label ref="jr:itext(itextId)"/>
+			</itemset>
+		</select1>
+		<select1 ref="/data/w_dist_abbr">
+			<label ref="jr:itext('/data/w_dist_abbr:label')"/>
+			<itemset nodeset="instance('dist_abbr_list')/root/item[district_list =  /data/w_district ]">
 				<value ref="name"/>
 				<label ref="jr:itext(itextId)"/>
 			</itemset>
@@ -1817,18 +1977,33 @@
 			<label ref="jr:itext('/data/w_gps:label')"/>
 			<hint ref="jr:itext('/data/w_gps:hint')"/>
 		</input>
-		<select1 ref="/data/w_deworming">
-			<label ref="jr:itext('/data/w_deworming:label')"/>
+		<select1 ref="/data/w_deworming_alb">
+			<label ref="jr:itext('/data/w_deworming_alb:label')"/>
 			<item>
-				<label ref="jr:itext('/data/w_deworming/Yes:label')"/>
+				<label ref="jr:itext('/data/w_deworming_alb/Yes:label')"/>
 				<value>Yes</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_deworming/No:label')"/>
+				<label ref="jr:itext('/data/w_deworming_alb/No:label')"/>
 				<value>No</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_deworming/Don't know:label')"/>
+				<label ref="jr:itext('/data/w_deworming_alb/Don't know:label')"/>
+				<value>Don't know</value>
+			</item>
+		</select1>
+		<select1 ref="/data/w_deworming_pzq">
+			<label ref="jr:itext('/data/w_deworming_pzq:label')"/>
+			<item>
+				<label ref="jr:itext('/data/w_deworming_pzq/Yes:label')"/>
+				<value>Yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/w_deworming_pzq/No:label')"/>
+				<value>No</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/w_deworming_pzq/Don't know:label')"/>
 				<value>Don't know</value>
 			</item>
 		</select1>
@@ -1858,57 +2033,57 @@
 				<value>Longer than15 minute round trip from the school</value>
 			</item>
 		</select1>
-		<select1 ref="/data/w_source_type">
+		<select ref="/data/w_source_type">
 			<label ref="jr:itext('/data/w_source_type:label')"/>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Unprotected spring:label')"/>
-				<value>Unprotected spring</value>
+				<label ref="jr:itext('/data/w_source_type/Unprotected.spring:label')"/>
+				<value>Unprotected.spring</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Protected spring:label')"/>
-				<value>Protected spring</value>
+				<label ref="jr:itext('/data/w_source_type/Protected.spring:label')"/>
+				<value>Protected.spring</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Unprotected dug well:label')"/>
-				<value>Unprotected dug well</value>
+				<label ref="jr:itext('/data/w_source_type/Unprotected.dug.well:label')"/>
+				<value>Unprotected.dug.well</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Protected dug well:label')"/>
-				<value>Protected dug well</value>
+				<label ref="jr:itext('/data/w_source_type/Protected.dug.well:label')"/>
+				<value>Protected.dug.well</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Hand pump/tube well/borehole:label')"/>
-				<value>Hand pump/tube well/borehole</value>
+				<label ref="jr:itext('/data/w_source_type/Hand.pump/tube.well/borehole:label')"/>
+				<value>Hand.pump/tube.well/borehole</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Surface water (river, creek, dam, lake, stream, canal):label')"/>
-				<value>Surface water (river, creek, dam, lake, stream, canal)</value>
+				<label ref="jr:itext('/data/w_source_type/Surface.water.(river,.creek,.dam,.lake,.stream,.canal):label')"/>
+				<value>Surface.water.(river,.creek,.dam,.lake,.stream,.canal)</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Public piped water/tap/standpipe:label')"/>
-				<value>Public piped water/tap/standpipe</value>
+				<label ref="jr:itext('/data/w_source_type/Public.piped.water/tap/standpipe:label')"/>
+				<value>Public.piped.water/tap/standpipe</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Rain water collection:label')"/>
-				<value>Rain water collection</value>
+				<label ref="jr:itext('/data/w_source_type/Rain.water.collection:label')"/>
+				<value>Rain.water.collection</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Plastic bag water:label')"/>
-				<value>Plastic bag water</value>
+				<label ref="jr:itext('/data/w_source_type/Plastic.bag.water:label')"/>
+				<value>Plastic.bag.water</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Bottle water:label')"/>
-				<value>Bottle water</value>
+				<label ref="jr:itext('/data/w_source_type/Bottle.water:label')"/>
+				<value>Bottle.water</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/In school piped water/tap/standpipe:label')"/>
-				<value>In school piped water/tap/standpipe</value>
+				<label ref="jr:itext('/data/w_source_type/In.school.piped.water/tap/standpipe:label')"/>
+				<value>In.school.piped.water/tap/standpipe</value>
 			</item>
 			<item>
-				<label ref="jr:itext('/data/w_source_type/Mobile water tanker:label')"/>
-				<value>Mobile water tanker</value>
+				<label ref="jr:itext('/data/w_source_type/Mobile.water.tanker:label')"/>
+				<value>Mobile.water.tanker</value>
 			</item>
-		</select1>
+		</select>
 		<select1 ref="/data/w_accessible_water">
 			<label ref="jr:itext('/data/w_accessible_water:label')"/>
 			<item>

@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Août 2021) 1. Enquête Entomologique d'ONCHO - Inspection de la rivière v4</h:title>
+    <model >
+      <instance>
+        <data id="tg_oncho_bsa_1_river_assessment_202108_v4">
+          <s_recorder_id/>
+          <s_province/>
+          <s_district/>
+          <s_health_facility/>
+          <s_site/>
+          <s_site_id/>
+          <s_river_basin_name/>
+          <s_river_name/>
+          <s_date/>
+          <s_GPS/>
+          <r_SiteSuitable/>
+          <r_EvidenceOfLarvae/>
+          <r_LarvaeRate/>
+          <s_notes/>
+          <s_start/>
+          <s_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="yesNoDontKnow">
+        <root>
+          <item>
+            <label>Oui</label>
+            <name>Yes</name>
+          </item>
+          <item>
+            <label>Non</label>
+            <name>No</name>
+          </item>
+          <item>
+            <label>Ne sais pas</label>
+            <name>Don't know</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="densite_List">
+        <root>
+          <item>
+            <label>(-) : Gîte négatif</label>
+            <name>-</name>
+          </item>
+          <item>
+            <label>(+) : 10 Individus au moins</label>
+            <name>+</name>
+          </item>
+          <item>
+            <label>(++) : 11 à 50 individus</label>
+            <name>++</name>
+          </item>
+          <item>
+            <label>(+++) : Plus de 50 individus</label>
+            <name>+++</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <label>Oui</label>
+            <name>Oui</name>
+          </item>
+          <item>
+            <label>Non</label>
+            <name>Non</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <label>Centrale</label>
+            <name>Centrale</name>
+          </item>
+          <item>
+            <label>Kara/Centrale</label>
+            <name>Kara/Centrale</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <label>Bassar</label>
+            <name>Bassar</name>
+            <region_list>Kara/Centrale</region_list>
+          </item>
+          <item>
+            <label>Blitta</label>
+            <name>Blitta</name>
+            <region_list>Centrale</region_list>
+          </item>
+          <item>
+            <label>Mo</label>
+            <name>Mo</name>
+            <region_list>Centrale</region_list>
+          </item>
+          <item>
+            <label>Tchaoudjo</label>
+            <name>Tchaoudjo</name>
+            <region_list>Centrale</region_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="fs_list">
+        <root>
+          <item>
+            <district_list>Mo</district_list>
+            <label>USP AGBAMASSOUMOU</label>
+            <name>USP AGBAMASSOUMOU</name>
+          </item>
+          <item>
+            <district_list>Bassar</district_list>
+            <label>USP BANGHAI</label>
+            <name>USP BANGHAI</name>
+          </item>
+          <item>
+            <district_list>Blitta</district_list>
+            <label>USP NKENGBE</label>
+            <name>USP NKENGBE</name>
+          </item>
+          <item>
+            <district_list>Tchaoudjo</district_list>
+            <label>USP SAGBADAI</label>
+            <name>USP SAGBADAI</name>
+          </item>
+          <item>
+            <district_list>Mo</district_list>
+            <label>USP TINDJASSE</label>
+            <name>USP TINDJASSE</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_list">
+        <root>
+          <item>
+            <fs_list>USP BANGHAI</fs_list>
+            <label>Baghan ou Mo village (Sur Mo)</label>
+            <name>Baghan ou Mo village (Sur Mo)</name>
+          </item>
+          <item>
+            <fs_list>USP TINDJASSE</fs_list>
+            <label>Bato (Sur Mo)</label>
+            <name>Bato (Sur Mo)</name>
+          </item>
+          <item>
+            <fs_list>USP AGBAMASSOUMOU</fs_list>
+            <label>Kouida (Sur Koui)</label>
+            <name>Kouida (Sur Koui)</name>
+          </item>
+          <item>
+            <fs_list>USP SAGBADAI</fs_list>
+            <label>Mo à Mo ou Bouzalo (Sur Mo)</label>
+            <name>Mo à Mo ou Bouzalo (Sur Mo)</name>
+          </item>
+          <item>
+            <fs_list>USP NKENGBE</fs_list>
+            <label>Tintsro ( Sur Assoukawkaw)</label>
+            <name>Tintsro ( Sur Assoukawkaw)</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="code_site">
+        <root>
+          <item>
+            <label>101</label>
+            <name>101</name>
+            <site_list>Baghan ou Mo village (Sur Mo)</site_list>
+          </item>
+          <item>
+            <label>102</label>
+            <name>102</name>
+            <site_list>Bato (Sur Mo)</site_list>
+          </item>
+          <item>
+            <label>103</label>
+            <name>103</name>
+            <site_list>Kouida (Sur Koui)</site_list>
+          </item>
+          <item>
+            <label>104</label>
+            <name>104</name>
+            <site_list>Mo à Mo ou Bouzalo (Sur Mo)</site_list>
+          </item>
+          <item>
+            <label>105</label>
+            <name>105</name>
+            <site_list>Tintsro ( Sur Assoukawkaw)</site_list>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="Le code doit être un nombre à deux chiffres entre 9 et 1000" nodeset="/data/s_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/s_province" required="true()" type="string"/>
+      <bind nodeset="/data/s_district" required="true()" type="string"/>
+      <bind nodeset="/data/s_health_facility" required="true()" type="string"/>
+      <bind nodeset="/data/s_site" required="true()" type="string"/>
+      <bind nodeset="/data/s_site_id" required="true()" type="string"/>
+      <bind nodeset="/data/s_river_basin_name" required="true()" type="string"/>
+      <bind nodeset="/data/s_river_name" required="true()" type="string"/>
+      <bind nodeset="/data/s_date" required="true()" type="date"/>
+      <bind nodeset="/data/s_GPS" required="true()" type="geopoint"/>
+      <bind nodeset="/data/r_SiteSuitable" required="true()" type="string"/>
+      <bind nodeset="/data/r_EvidenceOfLarvae" required="true()" type="string"/>
+      <bind nodeset="/data/r_LarvaeRate" relevant=" /data/r_EvidenceOfLarvae  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/s_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/s_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/s_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/s_recorder_id">
+      <label>Entrer l'identifiant de l'enregistreur</label>
+      <hint>Code à deux chiffres qui vous a été assigné</hint>
+    </input>
+    <select1 ref="/data/s_province">
+      <label>Sélectionner une province</label>
+      <item>
+        <label>Centrale</label>
+        <value>Centrale</value>
+      </item>
+      <item>
+        <label>Kara/Centrale</label>
+        <value>Kara/Centrale</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_district">
+      <label>Sélectionner un district</label>
+      <itemset nodeset="instance('district_list')/root/item[region_list =  /data/s_province ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/s_health_facility">
+      <label>Sélectionner une formation sanitaire</label>
+      <itemset nodeset="instance('fs_list')/root/item[district_list =  /data/s_district ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/s_site">
+      <label>Sélectionner un site</label>
+      <itemset nodeset="instance('site_list')/root/item[fs_list =  /data/s_health_facility ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/s_site_id">
+      <label>Sélectionner le code du site</label>
+      <itemset nodeset="instance('code_site')/root/item[site_list =  /data/s_site ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <input ref="/data/s_river_basin_name">
+      <label>Nom du bassin fluvial</label>
+    </input>
+    <input ref="/data/s_river_name">
+      <label>Nom du fleuve ou de la rivière</label>
+    </input>
+    <input ref="/data/s_date">
+      <label>Date</label>
+    </input>
+    <input ref="/data/s_GPS">
+      <label>Collectez les données GPS</label>
+      <hint>Fonctionne mieux à l'extérieur des bâtiments</hint>
+    </input>
+    <select1 ref="/data/r_SiteSuitable">
+      <label>Au moment de l'inspection, le site semblait-il convenir à la reproduction des simulies</label>
+      <item>
+        <label>Oui</label>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label>Non</label>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/r_EvidenceOfLarvae">
+      <label>Au moment de l'inspection, le site a-t-il fourni des preuves de larves</label>
+      <item>
+        <label>Oui</label>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label>Non</label>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/r_LarvaeRate">
+      <label>Si oui,évaluer l'abondance comme peu, certains ou plusieurs</label>
+      <item>
+        <label>(-) : Gîte négatif</label>
+        <value>-</value>
+      </item>
+      <item>
+        <label>(+) : 10 Individus au moins</label>
+        <value>+</value>
+      </item>
+      <item>
+        <label>(++) : 11 à 50 individus</label>
+        <value>++</value>
+      </item>
+      <item>
+        <label>(+++) : Plus de 50 individus</label>
+        <value>+++</value>
+      </item>
+    </select1>
+    <input ref="/data/s_notes">
+      <label>Informations additionnelles</label>
+    </input>
+  </h:body>
+</h:html>
