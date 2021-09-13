@@ -9,31 +9,33 @@
   <h:head>
     <h:title>(Septembre 2021) Burkina Faso TAS3 FL - 2. Formulaire Enrôlement</h:title>
     <model >
-    <instance>
-      <data id="bf_lf_tas3_2_enrolement_202109">
-        <code_operateur/>
-        <drs/>
-        <ue/>
-        <type_tas/>
-        <nb_grappe/>
-        <nb_menage/>
-        <nb_menage2/>
-        <id_methode/>
-        <barcode/>
-        <id_manuel/>
-        <id_manuel2/>
-        <age/>
-        <sexe/>
-        <scolarise/>
-        <ivm_alb/>
-        <commentaires/>
-        <debut_enregistrement/>
-        <fin_enregistrement/>
-        <meta>
-          <instanceID/>
-        </meta>
-      </data>
-    </instance>
+
+      <instance>
+        <data id="bf_lf_tas3_2_enrolement_202109">
+          <code_operateur/>
+          <drs/>
+          <ue/>
+          <type_tas/>
+          <nb_grappe/>
+          <nb_menage/>
+          <nb_menage2/>
+          <id_methode/>
+          <barcode/>
+          <id_manuel/>
+          <id_manuel2/>
+          <age/>
+          <sexe/>
+          <scolarise/>
+          <ivm_alb/>
+          <commentaires/>
+          <debut_enregistrement/>
+          <fin_enregistrement/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
       <itext>
         <translation default="true()" lang="French">
           <text id="/data/code_operateur:label">
@@ -93,6 +95,9 @@
           <text id="/data/barcode:label">
             <value>Veillez scanner le code à barre</value>
           </text>
+          <text id="/data/id_manuel:jr:constraintMsg">
+            <value>le format du code manuel manuel est de 2 lettres suivies de 4 chiffres</value>
+          </text>
           <text id="/data/id_manuel:label">
             <value>Entrer le code manuel</value>
           </text>
@@ -140,6 +145,7 @@
           </text>
         </translation>
       </itext>
+
       <bind nodeset="/data/code_operateur" required="true()" type="string"/>
       <bind nodeset="/data/drs" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/ue" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/drs"/>
@@ -149,7 +155,7 @@
       <bind constraint=". =  /data/nb_menage " jr:constraintMsg="jr:itext('/data/nb_menage2:jr:constraintMsg')" nodeset="/data/nb_menage2" required="true()" type="string"/>
       <bind nodeset="/data/id_methode" required="true()" type="string"/>
       <bind nodeset="/data/barcode" relevant=" /data/id_methode  = &quot;Scanner&quot;" required="true()" type="barcode"/>
-      <bind nodeset="/data/id_manuel" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[a-zA-Z]{2}[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/id_manuel:jr:constraintMsg')" nodeset="/data/id_manuel" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
       <bind constraint=". =  /data/id_manuel " nodeset="/data/id_manuel2" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
       <bind constraint=". &gt;=6 and . &lt;=7" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" required="true()" type="int"/>
       <bind nodeset="/data/sexe" required="true()" type="string"/>

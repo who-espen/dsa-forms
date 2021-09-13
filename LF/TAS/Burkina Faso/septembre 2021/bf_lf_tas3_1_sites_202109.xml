@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -9,27 +9,27 @@
   <h:head>
     <h:title>(Septembre 2021) Burkina Faso TAS3 FL - 1. Formulaire Village</h:title>
     <model >
-    <instance>
 
-      <data id="bf_lf_tas3_1_sites_202109">
-        <code_operateur/>
-        <type_tas/>
-        <drs/>
-        <ue/>
-        <site_type/>
-        <nb_grappe/>
-        <Nom_du_CSPS/>
-        <Nom_de_la_grappe/>
-        <Code_grappe/>
-        <gps/>
-        <commentaires/>
-        <debut_enregistrement/>
-        <fin_enregistrement/>
-        <meta>
-          <instanceID/>
-        </meta>
-      </data>
-    </instance>
+      <instance>
+        <data id="bf_lf_tas3_1_sites_202109">
+          <code_operateur/>
+          <type_tas/>
+          <drs/>
+          <ue/>
+          <site_type/>
+          <nb_grappe/>
+          <Nom_du_CSPS/>
+          <Nom_de_la_grappe/>
+          <Code_grappe/>
+          <gps/>
+          <commentaires/>
+          <debut_enregistrement/>
+          <fin_enregistrement/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
 
       <itext>
         <translation default="true()" lang="French">
@@ -95,6 +95,9 @@
           </text>
           <text id="/data/Nom_de_la_grappe:label">
             <value>Nom de la grappe</value>
+          </text>
+          <text id="/data/Code_grappe:jr:constraintMsg">
+            <value>Le code doit contenir une lettre majiscule suivi de trois chiffres</value>
           </text>
           <text id="/data/Code_grappe:label">
             <value>Code grappe</value>
@@ -296,7 +299,7 @@
       <bind constraint=". &gt; 0 and . &lt;= 35" jr:constraintMsg="jr:itext('/data/nb_grappe:jr:constraintMsg')" nodeset="/data/nb_grappe" required="true()" type="int" db_add_col_2="/data/ue" db_add_col_3="."/>
       <bind nodeset="/data/Nom_du_CSPS" required="true()" type="string"/>
       <bind nodeset="/data/Nom_de_la_grappe" required="true()" type="string"/>
-      <bind nodeset="/data/Code_grappe" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[A-Z]{1}[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/Code_grappe:jr:constraintMsg')" nodeset="/data/Code_grappe" required="true()" type="string"/>
       <bind nodeset="/data/gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/commentaires" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/debut_enregistrement" type="dateTime"/>
