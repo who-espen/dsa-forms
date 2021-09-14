@@ -101,7 +101,7 @@
                         <value>Veillez scanner le code à barre</value>
                     </text>
                     <text id="/data/id_manuel:jr:constraintMsg">
-                        <value>le format du code manuel manuel est de 2 lettres suivies de 4 chiffres</value>
+                        <value>le format du code manuel est de 2 lettres suivies de 5 chiffres</value>
                     </text>
                     <text id="/data/id_manuel:label">
                         <value>Entrer le code manuel</value>
@@ -548,7 +548,7 @@
             <bind constraint=". &gt; 0 and . &lt;= 35" nodeset="/data/nb_grappe" required="true()" type="int"/>
             <bind nodeset="/data/id_methode" required="true()" type="string"/>
             <bind nodeset="/data/barcode" relevant=" /data/id_methode  = &quot;Scanner&quot;" required="true()" type="barcode"/>
-            <bind constraint="regex(.,'^[a-zA-Z]{2}[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/id_manuel:jr:constraintMsg')" nodeset="/data/id_manuel" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
+            <bind constraint="regex(.,'^[a-zA-Z]{2}[0-9]{5}$')" jr:constraintMsg="jr:itext('/data/id_manuel:jr:constraintMsg')" nodeset="/data/id_manuel" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
             <bind constraint=". =  /data/id_manuel " nodeset="/data/id_manuel2" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
             <bind constraint=".&gt;=1 and .&lt;=2" nodeset="/data/nb_bandelette" required="true()" type="int"/>
             <bind nodeset="/data/lot_fts1" required="true()" type="string"/>
