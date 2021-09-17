@@ -8339,6 +8339,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="sex">
         <root>
           <item>
@@ -10701,11 +10702,11 @@
       <bind nodeset="/data/p_why_take_medicine_other" relevant="selected( /data/p_why_take_medicine , 'Outros')" required="true()" type="text"/>
       <bind nodeset="/data/p_easy_take_med" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="text"/>
       <bind constraint="if(selected(.,'3.Sim,.mas.nao.sei.qual.medicamento') or selected(.,'4.Nao') or selected(.,'5.Nao.sei./.nao.se.lembra') or selected(.,'6.Sem.resposta'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_med:jr:constraintMsg')" nodeset="/data/p_side_effects_med" relevant="selected( /data/p_consent , '1.Sim') and  /data/p_school_med_lastyear  = '1.Sim'" required="true()" type="text"/>
-      <bind constraint="if(selected(.,'7.Nao.me.lembro'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_spec:jr:constraintMsg')" nodeset="/data/p_side_effects_spec" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '1.Sim' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" required="true()" type="text"/>
+      <bind constraint="if(selected(.,'7.Nao.me.lembro'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_spec:jr:constraintMsg')" nodeset="/data/p_side_effects_spec" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '1.Sim') and (selected( /data/p_side_effects_med ,'1.Sim,.ao.medicamento.para.os.vermes.intestinais.lombrigas') or selected( /data/p_side_effects_med ,'2.Sim,.ao.medicamento.para.a.Schistosomíase') or selected( /data/p_side_effects_med ,'3.Sim,.mas.nao.sei.qual.medicamento'))" required="true()" type="text"/>
       <bind nodeset="/data/p_side_effects_spec_other" relevant="selected( /data/p_side_effects_spec , 'Outros')" required="true()" type="text"/>
-      <bind constraint="if(selected(.,'Outros') or selected(.,'6.Nao.me.lembro'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_man:jr:constraintMsg')" nodeset="/data/p_side_effects_man" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '1.Sim' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" required="true()" type="text"/>
+      <bind constraint="if(selected(.,'Outros') or selected(.,'6.Nao.me.lembro'), count-selected(.)=1, true())" jr:constraintMsg="jr:itext('/data/p_side_effects_man:jr:constraintMsg')" nodeset="/data/p_side_effects_man" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '1.Sim') and (selected( /data/p_side_effects_med ,'1.Sim,.ao.medicamento.para.os.vermes.intestinais.lombrigas') or selected( /data/p_side_effects_med ,'2.Sim,.ao.medicamento.para.a.Schistosomíase') or selected( /data/p_side_effects_med ,'3.Sim,.mas.nao.sei.qual.medicamento'))" required="true()" type="text"/>
       <bind nodeset="/data/p_side_effects_man_other" relevant="selected( /data/p_side_effects_man , 'Outros')" required="true()" type="text"/>
-      <bind nodeset="/data/p_didnot_med" relevant="selected( /data/p_consent , '1.Sim') and ( /data/p_school_med_lastyear  = '2.No' or  /data/p_side_effects_med != '4.Nao' or  /data/p_side_effects_med !='5.Nao.sei./.nao.se.lembra' or  /data/p_side_effects_med != '6.Sem.resposta')" type="text"/>
+      <bind nodeset="/data/p_didnot_med" relevant="selected( /data/p_consent , '1.Sim') and selected( /data/p_school_med_lastyear  , '2.Nao')" type="text"/>
       <bind nodeset="/data/p_didnot_med_other" relevant="selected( /data/p_didnot_med , 'Outros')" required="true()" type="text"/>
       <bind nodeset="/data/p_didnot_med_concerns" relevant="selected( /data/p_didnot_med , '3.Fear of side effects (mention some)')" required="true()" type="text"/>
       <bind nodeset="/data/p_happy_kill_worms" relevant="selected( /data/p_consent , '1.Sim')" required="true()" type="text"/>
