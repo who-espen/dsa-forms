@@ -1,3102 +1,419 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
-	xmlns:ev="http://www.w3.org/2001/xml-events"
-	xmlns:h="http://www.w3.org/1999/xhtml"
-	xmlns:jr="http://openrosa.org/javarosa"
-	xmlns:odk="http://www.opendatakit.org/xforms"
-	xmlns:orx="http://openrosa.org/xforms"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<h:head>
-		<h:title>3. Formulário de Resultados das Fezes – Kato Katz V7</h:title>
-		<model >
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>3. Formulário de Resultados das Fezes – Kato Katz V7.2</h:title>
+    <model >
 
-			<instance>
-				<data id="ao_sch_sth_baseline_kuanza_3_kato_katz_202109_v7" version="20210715">
-					<k_province/>
-					<k_municipality/>
-					<k_commune/>
-					<k_commune_other/>
-					<k_school/>
-					<k_school_id/>
-					<k_RecorderID/>
-					<k_date/>
-					<kato_katz jr:template="">
-						<k_add_more_child/>
-						<k>
-							<num/>
-							<num2/>
-							<code_id/>
-							<sch_man_sa/>
-							<ascaris_lumb_sa/>
-							<hookworm_sa/>
-							<trichuris_sa/>
-							<sch_man_sb/>
-							<hookworm_sb/>
-							<ascaris_lumb_sb/>
-							<trichuris_sb/>
-							<remarks/>
-						</k>
-					</kato_katz>
-					<kato_katz>
-						<k_add_more_child/>
-						<k>
-							<num/>
-							<num2/>
-							<code_id/>
-							<sch_man_sa/>
-							<ascaris_lumb_sa/>
-							<hookworm_sa/>
-							<trichuris_sa/>
-							<sch_man_sb/>
-							<hookworm_sb/>
-							<ascaris_lumb_sb/>
-							<trichuris_sb/>
-							<remarks/>
-						</k>
-					</kato_katz>
-					<k_start/>
-					<k_end/>
-					<meta>
-						<instanceID/>
-					</meta>
-				</data>
-			</instance>
-			<itext>
-				<translation default="true()" lang="Portugues">
-					<text id="/data/k_province:label">
-						<value>Província</value>
-					</text>
-					<text id="/data/k_province/kwanza Norte:label">
-						<value>kwanza Norte</value>
-					</text>
-					<text id="/data/k_municipality:label">
-						<value>Selecione o Município</value>
-					</text>
-					<text id="/data/k_commune:label">
-						<value>Comuna</value>
-					</text>
-					<text id="/data/k_commune_other:label">
-						<value>Digite o nome da comuna</value>
-					</text>
-					<text id="/data/k_school:label">
-						<value>Selecione a escola</value>
-					</text>
-					<text id="/data/k_school_id:label">
-						<value>Selecione o código da escola</value>
-					</text>
-					<text id="/data/k_RecorderID:jr:constraintMsg">
-						<value>The length cannot exceed 5 character and must not contain number</value>
-					</text>
-					<text id="/data/k_RecorderID:label">
-						<value>Iniciais do entrevistador</value>
-					</text>
-					<text id="/data/k_date:label">
-						<value>Data do questionário</value>
-					</text>
-					<text id="/data/kato_katz:label">
-						<value>kato_katz</value>
-					</text>
-					<text id="/data/kato_katz/k_add_more_child:label">
-						<value>Você quer adicionar uma criança ?</value>
-					</text>
-					<text id="/data/kato_katz/k_add_more_child/Sim:label">
-						<value>Sim</value>
-					</text>
-					<text id="/data/kato_katz/k_add_more_child/Nao:label">
-						<value>Nao</value>
-					</text>
-					<text id="/data/kato_katz/k:label">
-						<value>Resultados</value>
-					</text>
-					<text id="/data/kato_katz/k/num:jr:constraintMsg">
-						<value>The number must be 2 digit</value>
-					</text>
-					<text id="/data/kato_katz/k/num:label">
-						<value>Por favor, insira a carteira de estudante</value>
-					</text>
-					<text id="/data/kato_katz/k/num2:jr:constraintMsg">
-						<value>O código deve ser o mesmo</value>
-					</text>
-					<text id="/data/kato_katz/k/num2:label">
-						<value>Por favor, repita a carteira de estudante</value>
-					</text>
-					<text id="/data/kato_katz/k/code_id:label">
-						<value>ID exclusivo do participante</value>
-					</text>
-					<text id="/data/kato_katz/k/sch_man_sa:label">
-						<value>Schistosoma mansoni (eggs) – Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/ascaris_lumb_sa:label">
-						<value>Ascaris lumbricoides (eggs) – Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/hookworm_sa:label">
-						<value>Ancilóstomo – Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/trichuris_sa:label">
-						<value>Trichuris trichura – Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/sch_man_sb:label">
-						<value>Schistosoma mansoni (eggs) – Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/hookworm_sb:label">
-						<value>Ancilóstomo – Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/ascaris_lumb_sb:label">
-						<value>Ascaris lumbricoides (eggs) – Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/trichuris_sb:label">
-						<value>Trichuris trichura – Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/remarks:label">
-						<value>Comentários adicionais / Quer adicionar algum comentário sobre esta amostra?</value>
-					</text>
-					<text id="yesno-0">
-						<value>Sim</value>
-					</text>
-					<text id="yesno-1">
-						<value>Nao</value>
-					</text>
-					<text id="province_list-0">
-						<value>kwanza Norte</value>
-					</text>
-					<text id="municipality_list-0">
-						<value>Ambaca</value>
-					</text>
-					<text id="municipality_list-1">
-						<value>Banga</value>
-					</text>
-					<text id="municipality_list-2">
-						<value>Bulungongo</value>
-					</text>
-					<text id="municipality_list-3">
-						<value>Cambambe</value>
-					</text>
-					<text id="municipality_list-4">
-						<value>Cazengo</value>
-					</text>
-					<text id="municipality_list-5">
-						<value>Golungo Alto</value>
-					</text>
-					<text id="municipality_list-6">
-						<value>Lucala</value>
-					</text>
-					<text id="municipality_list-7">
-						<value>Ngongembo</value>
-					</text>
-					<text id="municipality_list-8">
-						<value>Samba Caju</value>
-					</text>
-					<text id="commune_list-0">
-						<value>Aldeia Nova</value>
-					</text>
-					<text id="commune_list-1">
-						<value>Banga</value>
-					</text>
-					<text id="commune_list-2">
-						<value>Bindo</value>
-					</text>
-					<text id="commune_list-3">
-						<value>Cambondo</value>
-					</text>
-					<text id="commune_list-4">
-						<value>Cassualaia .</value>
-					</text>
-					<text id="commune_list-5">
-						<value>Cassualala</value>
-					</text>
-					<text id="commune_list-6">
-						<value>Cerca</value>
-					</text>
-					<text id="commune_list-7">
-						<value>Dondo</value>
-					</text>
-					<text id="commune_list-8">
-						<value>Kilombo kiaPuto</value>
-					</text>
-					<text id="commune_list-9">
-						<value>Luinga</value>
-					</text>
-					<text id="commune_list-10">
-						<value>Massangano</value>
-					</text>
-					<text id="commune_list-11">
-						<value>Massangsno</value>
-					</text>
-					<text id="commune_list-12">
-						<value>Maua</value>
-					</text>
-					<text id="commune_list-13">
-						<value>Ndaiatan do</value>
-					</text>
-					<text id="commune_list-14">
-						<value>Ndalatando</value>
-					</text>
-					<text id="commune_list-15">
-						<value>Quiangombe</value>
-					</text>
-					<text id="commune_list-16">
-						<value>Samba Lucala</value>
-					</text>
-					<text id="commune_list-17">
-						<value>Sao Pedro da Quil</value>
-					</text>
-					<text id="commune_list-18">
-						<value>Sede (Ambaca)</value>
-					</text>
-					<text id="commune_list-19">
-						<value>Sede (Bulungongo)</value>
-					</text>
-					<text id="commune_list-20">
-						<value>Sede (Golungo Alto)</value>
-					</text>
-					<text id="commune_list-21">
-						<value>Sede (Lucala)</value>
-					</text>
-					<text id="commune_list-22">
-						<value>Sede (Ngongembo)</value>
-					</text>
-					<text id="commune_list-23">
-						<value>Sede (Samba Caju)</value>
-					</text>
-					<text id="commune_list-24">
-						<value>Tango</value>
-					</text>
-					<text id="commune_list-25">
-						<value>Zenza do Itombe</value>
-					</text>
-					<text id="school_list-0">
-						<value>Colegio N. 1S03 Samba Caju</value>
-					</text>
-					<text id="school_list-1">
-						<value>Colegio N. 808 - 4 de Janeiro</value>
-					</text>
-					<text id="school_list-2">
-						<value>Comiexto Escolar Manuel N, 814 Pedro Pacavira do Alto - C</value>
-					</text>
-					<text id="school_list-3">
-						<value>Compexo Escolar N. 403 Al. Nova</value>
-					</text>
-					<text id="school_list-4">
-						<value>Complexo Escolar: N.1004- Antonio Jacinto do Amaral Mar</value>
-					</text>
-					<text id="school_list-5">
-						<value>Complexo Escolar 28 de Agosto N. 205</value>
-					</text>
-					<text id="school_list-6">
-						<value>Complexo Escolar Cacolomboio N. 1006</value>
-					</text>
-					<text id="school_list-7">
-						<value>Complexo Escolar Dom Bosco N.38</value>
-					</text>
-					<text id="school_list-8">
-						<value>Complexo escolar Missionario St. A, Kahenda N. 1805</value>
-					</text>
-					<text id="school_list-9">
-						<value>Complexo Escolar N.1017 - Caleba</value>
-					</text>
-					<text id="school_list-10">
-						<value>Complexo Escolar N.14 Posse</value>
-					</text>
-					<text id="school_list-11">
-						<value>Complexo Escolar N.36 Paulo Teixeira Jorge</value>
-					</text>
-					<text id="school_list-12">
-						<value>Complexo Escolar N.7 Hoji - Ya - Henda</value>
-					</text>
-					<text id="school_list-13">
-						<value>Complexo Escolar N. 1015 Cambondo</value>
-					</text>
-					<text id="school_list-14">
-						<value>Complexo Escolar N. 1203 - Comandante Sekouture</value>
-					</text>
-					<text id="school_list-15">
-						<value>Complexo Escolar N. 216 - Tango - Sede</value>
-					</text>
-					<text id="school_list-16">
-						<value>Complexo Escolar N. 218 - Maua - Sede</value>
-					</text>
-					<text id="school_list-17">
-						<value>Complexo Escolar N. 34 Deolinda Rodrigues</value>
-					</text>
-					<text id="school_list-18">
-						<value>Complexo Escolar N. 3 Metodista Unida</value>
-					</text>
-					<text id="school_list-19">
-						<value>Complexo Escolar N. 603 - 11 de Novembro</value>
-					</text>
-					<text id="school_list-20">
-						<value>Complexo Escolar N. 811 Comandante Stona Alto - Dondo</value>
-					</text>
-					<text id="school_list-21">
-						<value>Complexo Escolar N. 812 Soba GInbongo Alto - Dondo</value>
-					</text>
-					<text id="school_list-22">
-						<value>Complexo Escolar N. 820 Comandante SarabI</value>
-					</text>
-					<text id="school_list-23">
-						<value>Complexo Escolar N. 821 Joao Cardoso Jordao</value>
-					</text>
-					<text id="school_list-24">
-						<value>Complexo Escolar N. 830 Mucozo</value>
-					</text>
-					<text id="school_list-25">
-						<value>Complexo Escolar N 16 Catome de Baixo</value>
-					</text>
-					<text id="school_list-26">
-						<value>Complexo Escolar N 23 - Km13 - Zanga</value>
-					</text>
-					<text id="school_list-27">
-						<value>Complexo Escolar N 24 Kirima Hola - Zanga</value>
-					</text>
-					<text id="school_list-28">
-						<value>Esc. Prlmer. Missionaria Santo Hilarlao N. 1009</value>
-					</text>
-					<text id="school_list-29">
-						<value>Escolar do Ensino Primario N, 1008 B - Beta</value>
-					</text>
-					<text id="school_list-30">
-						<value>Escola do Ensino Primario N. 818 Ngola Yetu</value>
-					</text>
-					<text id="school_list-31">
-						<value>Escola do Ensino Primario Quiaposse N. 1005</value>
-					</text>
-					<text id="school_list-32">
-						<value>Escola do ensino Primario Santa Maria N, 1014</value>
-					</text>
-					<text id="school_list-33">
-						<value>Escola Primaria 827 km 34 Nova Cassoalala</value>
-					</text>
-					<text id="school_list-34">
-						<value>Escola Primaria 837 Nova Cassoalala - Massangano</value>
-					</text>
-					<text id="school_list-35">
-						<value>Escola Primaria N, 12 Vista</value>
-					</text>
-					<text id="school_list-36">
-						<value>Escola Primaria N, 1603 - Dundo Ya Mutulo I</value>
-					</text>
-					<text id="school_list-37">
-						<value>Escola Primaria N, 1607 Pambas</value>
-					</text>
-					<text id="school_list-38">
-						<value>Escola Primaria N. 1201 - Banza Quilombo</value>
-					</text>
-					<text id="school_list-39">
-						<value>Escola Primaria N. 1601 - Ngola Nhl - Nlii</value>
-					</text>
-					<text id="school_list-40">
-						<value>Escola Primaria N. 1602 - Imbondeiros</value>
-					</text>
-					<text id="school_list-41">
-						<value>Escola Primaria N. 1605 - Maquela</value>
-					</text>
-					<text id="school_list-42">
-						<value>Escola Primaria N. 1608 - Kiangombe</value>
-					</text>
-					<text id="school_list-43">
-						<value>Escola Primaria N. 1801</value>
-					</text>
-					<text id="school_list-44">
-						<value>Escola Primaria N. 1807 - Ngolome</value>
-					</text>
-					<text id="school_list-45">
-						<value>Escola Primaria N. 1808 - Zamba</value>
-					</text>
-					<text id="school_list-46">
-						<value>Escola Primaria N. 1815 - K. Kasseno</value>
-					</text>
-					<text id="school_list-47">
-						<value>Escola Primaria N. 1817 - Calaiala</value>
-					</text>
-					<text id="school_list-48">
-						<value>Escola Primaria N. 213 - Bairro Povo Longe (KN05)</value>
-					</text>
-					<text id="school_list-49">
-						<value>Escola Primaria N. 213 - Bairro Povo Longe (KN07)</value>
-					</text>
-					<text id="school_list-50">
-						<value>Escola Primaria N. 214 - Bairro Bindo</value>
-					</text>
-					<text id="school_list-51">
-						<value>Escola Primaria N. 216 - Bairro Kanaltanjungo (KN01)</value>
-					</text>
-					<text id="school_list-52">
-						<value>Escola Primaria N. 216 - Bairro Kanaltanjungo (KN04)</value>
-					</text>
-					<text id="school_list-53">
-						<value>Escola Primaria N. 221 - Bairro Kangulungo (KN02)</value>
-					</text>
-					<text id="school_list-54">
-						<value>Escola Primaria N. 221 - Bairro Kangulungo (KNX51)</value>
-					</text>
-					<text id="school_list-55">
-						<value>Escola Primaria N. 228 - Bairro Zage</value>
-					</text>
-					<text id="school_list-56">
-						<value>Escola Primaria N. 238 - Bairro Kimaco</value>
-					</text>
-					<text id="school_list-57">
-						<value>Escola Primaria N. 608 - Cahombo</value>
-					</text>
-					<text id="school_list-58">
-						<value>Escola Primaria N. 609 - Pimbi</value>
-					</text>
-					<text id="school_list-59">
-						<value>Escola Primaria N. 835 - Zenza - do - Itombe</value>
-					</text>
-					<text id="school_list-60">
-						<value>Escola Primaria N 19 Kitata</value>
-					</text>
-					<text id="school_list-61">
-						<value>Escola Prinnaria N. 5 Jose María Ferraz dos Santos</value>
-					</text>
-					<text id="school_list-62">
-						<value>Escota de Magisterio N. 29 Comandante Benedito - Ndalata</value>
-					</text>
-					<text id="school_list-63">
-						<value>Escota Primaria N. 237 - Bairro Bejs</value>
-					</text>
-					<text id="school_list-64">
-						<value>Instituto Politecnico N. 1 - Dom Anastaclo Cahangode</value>
-					</text>
-					<text id="school_list-65">
-						<value>Instituto Politecnico N. 807 Chico Mendellev - Cambambe</value>
-					</text>
-					<text id="school_list-66">
-						<value>Liceu de Cambamba N. 809 Andre Pass Caçasse zona -1</value>
-					</text>
-					<text id="school_list-67">
-						<value>Liceu N. 35 Dr. Antonio Agostinho Neto - Sassa</value>
-					</text>
-					<text id="school_list-68">
-						<value>Liceu Serra da Banga</value>
-					</text>
-					<text id="school_list-69">
-						<value>Magisterio Capuchinlio S. Francisco De Assis N. 203 Cama</value>
-					</text>
-					<text id="school_list-70">
-						<value>Magisterio do Luinga N. 202</value>
-					</text>
-					<text id="school_list-71">
-						<value>Magisterio N. 802 Maurício Domingos - Dondo</value>
-					</text>
-					<text id="code_school-0">
-						<value>KN01</value>
-					</text>
-					<text id="code_school-1">
-						<value>KN02</value>
-					</text>
-					<text id="code_school-2">
-						<value>KN03</value>
-					</text>
-					<text id="code_school-3">
-						<value>KN04</value>
-					</text>
-					<text id="code_school-4">
-						<value>KN05</value>
-					</text>
-					<text id="code_school-5">
-						<value>KN06</value>
-					</text>
-					<text id="code_school-6">
-						<value>KN07</value>
-					</text>
-					<text id="code_school-7">
-						<value>KN08</value>
-					</text>
-					<text id="code_school-8">
-						<value>KN09</value>
-					</text>
-					<text id="code_school-9">
-						<value>KN10</value>
-					</text>
-					<text id="code_school-10">
-						<value>KN11</value>
-					</text>
-					<text id="code_school-11">
-						<value>KN12</value>
-					</text>
-					<text id="code_school-12">
-						<value>KN13</value>
-					</text>
-					<text id="code_school-13">
-						<value>KN14</value>
-					</text>
-					<text id="code_school-14">
-						<value>KN15</value>
-					</text>
-					<text id="code_school-15">
-						<value>KN16</value>
-					</text>
-					<text id="code_school-16">
-						<value>KN17</value>
-					</text>
-					<text id="code_school-17">
-						<value>KN18</value>
-					</text>
-					<text id="code_school-18">
-						<value>KN19</value>
-					</text>
-					<text id="code_school-19">
-						<value>KN20</value>
-					</text>
-					<text id="code_school-20">
-						<value>KN21</value>
-					</text>
-					<text id="code_school-21">
-						<value>KN22</value>
-					</text>
-					<text id="code_school-22">
-						<value>KN23</value>
-					</text>
-					<text id="code_school-23">
-						<value>KN24</value>
-					</text>
-					<text id="code_school-24">
-						<value>KN25</value>
-					</text>
-					<text id="code_school-25">
-						<value>KN26</value>
-					</text>
-					<text id="code_school-26">
-						<value>KN27</value>
-					</text>
-					<text id="code_school-27">
-						<value>KN28</value>
-					</text>
-					<text id="code_school-28">
-						<value>KN29</value>
-					</text>
-					<text id="code_school-29">
-						<value>KN30</value>
-					</text>
-					<text id="code_school-30">
-						<value>KN31</value>
-					</text>
-					<text id="code_school-31">
-						<value>KN32</value>
-					</text>
-					<text id="code_school-32">
-						<value>KN33</value>
-					</text>
-					<text id="code_school-33">
-						<value>KN34</value>
-					</text>
-					<text id="code_school-34">
-						<value>KN35</value>
-					</text>
-					<text id="code_school-35">
-						<value>KN36</value>
-					</text>
-					<text id="code_school-36">
-						<value>KN37</value>
-					</text>
-					<text id="code_school-37">
-						<value>KN38</value>
-					</text>
-					<text id="code_school-38">
-						<value>KN39</value>
-					</text>
-					<text id="code_school-39">
-						<value>KN40</value>
-					</text>
-					<text id="code_school-40">
-						<value>KN41</value>
-					</text>
-					<text id="code_school-41">
-						<value>KN42</value>
-					</text>
-					<text id="code_school-42">
-						<value>KN43</value>
-					</text>
-					<text id="code_school-43">
-						<value>KN44</value>
-					</text>
-					<text id="code_school-44">
-						<value>KN45</value>
-					</text>
-					<text id="code_school-45">
-						<value>KN46</value>
-					</text>
-					<text id="code_school-46">
-						<value>KN47</value>
-					</text>
-					<text id="code_school-47">
-						<value>KN48</value>
-					</text>
-					<text id="code_school-48">
-						<value>KNX49</value>
-					</text>
-					<text id="code_school-49">
-						<value>KNX50</value>
-					</text>
-					<text id="code_school-50">
-						<value>KNX51</value>
-					</text>
-					<text id="code_school-51">
-						<value>KNX52</value>
-					</text>
-					<text id="code_school-52">
-						<value>KNX53</value>
-					</text>
-					<text id="code_school-53">
-						<value>KNX54</value>
-					</text>
-					<text id="code_school-54">
-						<value>KNX55</value>
-					</text>
-					<text id="code_school-55">
-						<value>KNX56</value>
-					</text>
-					<text id="code_school-56">
-						<value>KNX57</value>
-					</text>
-					<text id="code_school-57">
-						<value>KNX58</value>
-					</text>
-					<text id="code_school-58">
-						<value>KNX59</value>
-					</text>
-					<text id="code_school-59">
-						<value>KNX60</value>
-					</text>
-					<text id="code_school-60">
-						<value>KNX61</value>
-					</text>
-					<text id="code_school-61">
-						<value>KNX62</value>
-					</text>
-					<text id="code_school-62">
-						<value>KNX63</value>
-					</text>
-					<text id="code_school-63">
-						<value>KNX64</value>
-					</text>
-					<text id="code_school-64">
-						<value>KNX65</value>
-					</text>
-					<text id="code_school-65">
-						<value>KNX66</value>
-					</text>
-					<text id="code_school-66">
-						<value>KNX67</value>
-					</text>
-					<text id="code_school-67">
-						<value>KNX68</value>
-					</text>
-					<text id="code_school-68">
-						<value>KNX69</value>
-					</text>
-					<text id="code_school-69">
-						<value>KNX70</value>
-					</text>
-					<text id="code_school-70">
-						<value>KNX71</value>
-					</text>
-					<text id="code_school-71">
-						<value>KNX72</value>
-					</text>
-				</translation>
-				<translation lang="English">
-					<text id="/data/k_province:label">
-						<value>Select the province</value>
-					</text>
-					<text id="/data/k_province/kwanza Norte:label">
-						<value>kwanza Norte</value>
-					</text>
-					<text id="/data/k_municipality:label">
-						<value>Select the district</value>
-					</text>
-					<text id="/data/k_commune:label">
-						<value>Select the sub-district</value>
-					</text>
-					<text id="/data/k_commune_other:label">
-						<value>Enter the commune</value>
-					</text>
-					<text id="/data/k_school:label">
-						<value>Select the school</value>
-					</text>
-					<text id="/data/k_school_id:label">
-						<value>Select the school code</value>
-					</text>
-					<text id="/data/k_RecorderID:jr:constraintMsg">
-						<value>O comprimento não pode exceder 5 caracteres e não deve conter número</value>
-					</text>
-					<text id="/data/k_RecorderID:label">
-						<value>Interviewer initials</value>
-					</text>
-					<text id="/data/k_date:label">
-						<value>Date of questionnaire</value>
-					</text>
-					<text id="/data/kato_katz:label">
-						<value>kato_katz</value>
-					</text>
-					<text id="/data/kato_katz/k_add_more_child:label">
-						<value>Do you want to add one child ?</value>
-					</text>
-					<text id="/data/kato_katz/k_add_more_child/Sim:label">
-						<value>Yes</value>
-					</text>
-					<text id="/data/kato_katz/k_add_more_child/Nao:label">
-						<value>No</value>
-					</text>
-					<text id="/data/kato_katz/k:label">
-						<value>Results</value>
-					</text>
-					<text id="/data/kato_katz/k/num:jr:constraintMsg">
-						<value>O número deve ter 2 dígitos</value>
-					</text>
-					<text id="/data/kato_katz/k/num:label">
-						<value>Please enter the student ID</value>
-					</text>
-					<text id="/data/kato_katz/k/num2:jr:constraintMsg">
-						<value>The code must be the same</value>
-					</text>
-					<text id="/data/kato_katz/k/num2:label">
-						<value>Please, repeat the unique ID</value>
-					</text>
-					<text id="/data/kato_katz/k/code_id:label">
-						<value>Participant Unique ID</value>
-					</text>
-					<text id="/data/kato_katz/k/sch_man_sa:label">
-						<value>Schistosoma mansoni (eggs) – Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/ascaris_lumb_sa:label">
-						<value>Ascaris lumbricoides (eggs) – Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/hookworm_sa:label">
-						<value>Hookworm – Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/trichuris_sa:label">
-						<value>Trichuris trichura – Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/sch_man_sb:label">
-						<value>Schistosoma mansoni (eggs) – Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/hookworm_sb:label">
-						<value>Hookworm – Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/ascaris_lumb_sb:label">
-						<value>Ascaris lumbricoides (eggs) – Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/trichuris_sb:label">
-						<value>Trichuris trichura – Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/remarks:label">
-						<value>Additional comment</value>
-					</text>
-					<text id="yesno-0">
-						<value>Yes</value>
-					</text>
-					<text id="yesno-1">
-						<value>No</value>
-					</text>
-					<text id="province_list-0">
-						<value>kwanza Norte</value>
-					</text>
-					<text id="municipality_list-0">
-						<value>Ambaca</value>
-					</text>
-					<text id="municipality_list-1">
-						<value>Banga</value>
-					</text>
-					<text id="municipality_list-2">
-						<value>Bulungongo</value>
-					</text>
-					<text id="municipality_list-3">
-						<value>Cambambe</value>
-					</text>
-					<text id="municipality_list-4">
-						<value>Cazengo</value>
-					</text>
-					<text id="municipality_list-5">
-						<value>Golungo Alto</value>
-					</text>
-					<text id="municipality_list-6">
-						<value>Lucala</value>
-					</text>
-					<text id="municipality_list-7">
-						<value>Ngongembo</value>
-					</text>
-					<text id="municipality_list-8">
-						<value>Samba Caju</value>
-					</text>
-					<text id="commune_list-0">
-						<value>Aldeia Nova</value>
-					</text>
-					<text id="commune_list-1">
-						<value>Banga</value>
-					</text>
-					<text id="commune_list-2">
-						<value>Bindo</value>
-					</text>
-					<text id="commune_list-3">
-						<value>Cambondo</value>
-					</text>
-					<text id="commune_list-4">
-						<value>Cassualaia .</value>
-					</text>
-					<text id="commune_list-5">
-						<value>Cassualala</value>
-					</text>
-					<text id="commune_list-6">
-						<value>Cerca</value>
-					</text>
-					<text id="commune_list-7">
-						<value>Dondo</value>
-					</text>
-					<text id="commune_list-8">
-						<value>Kilombo kiaPuto</value>
-					</text>
-					<text id="commune_list-9">
-						<value>Luinga</value>
-					</text>
-					<text id="commune_list-10">
-						<value>Massangano</value>
-					</text>
-					<text id="commune_list-11">
-						<value>Massangsno</value>
-					</text>
-					<text id="commune_list-12">
-						<value>Maua</value>
-					</text>
-					<text id="commune_list-13">
-						<value>Ndaiatan do</value>
-					</text>
-					<text id="commune_list-14">
-						<value>Ndalatando</value>
-					</text>
-					<text id="commune_list-15">
-						<value>Quiangombe</value>
-					</text>
-					<text id="commune_list-16">
-						<value>Samba Lucala</value>
-					</text>
-					<text id="commune_list-17">
-						<value>Sao Pedro da Quil</value>
-					</text>
-					<text id="commune_list-18">
-						<value>Sede (Ambaca)</value>
-					</text>
-					<text id="commune_list-19">
-						<value>Sede (Bulungongo)</value>
-					</text>
-					<text id="commune_list-20">
-						<value>Sede (Golungo Alto)</value>
-					</text>
-					<text id="commune_list-21">
-						<value>Sede (Lucala)</value>
-					</text>
-					<text id="commune_list-22">
-						<value>Sede (Ngongembo)</value>
-					</text>
-					<text id="commune_list-23">
-						<value>Sede (Samba Caju)</value>
-					</text>
-					<text id="commune_list-24">
-						<value>Tango</value>
-					</text>
-					<text id="commune_list-25">
-						<value>Zenza do Itombe</value>
-					</text>
-					<text id="school_list-0">
-						<value>Colegio N. 1S03 Samba Caju</value>
-					</text>
-					<text id="school_list-1">
-						<value>Colegio N. 808 - 4 de Janeiro</value>
-					</text>
-					<text id="school_list-2">
-						<value>Comiexto Escolar Manuel N, 814 Pedro Pacavira do Alto - C</value>
-					</text>
-					<text id="school_list-3">
-						<value>Compexo Escolar N. 403 Al. Nova</value>
-					</text>
-					<text id="school_list-4">
-						<value>Complexo Escolar: N.1004- Antonio Jacinto do Amaral Mar</value>
-					</text>
-					<text id="school_list-5">
-						<value>Complexo Escolar 28 de Agosto N. 205</value>
-					</text>
-					<text id="school_list-6">
-						<value>Complexo Escolar Cacolomboio N. 1006</value>
-					</text>
-					<text id="school_list-7">
-						<value>Complexo Escolar Dom Bosco N.38</value>
-					</text>
-					<text id="school_list-8">
-						<value>Complexo escolar Missionario St. A, Kahenda N. 1805</value>
-					</text>
-					<text id="school_list-9">
-						<value>Complexo Escolar N.1017 - Caleba</value>
-					</text>
-					<text id="school_list-10">
-						<value>Complexo Escolar N.14 Posse</value>
-					</text>
-					<text id="school_list-11">
-						<value>Complexo Escolar N.36 Paulo Teixeira Jorge</value>
-					</text>
-					<text id="school_list-12">
-						<value>Complexo Escolar N.7 Hoji - Ya - Henda</value>
-					</text>
-					<text id="school_list-13">
-						<value>Complexo Escolar N. 1015 Cambondo</value>
-					</text>
-					<text id="school_list-14">
-						<value>Complexo Escolar N. 1203 - Comandante Sekouture</value>
-					</text>
-					<text id="school_list-15">
-						<value>Complexo Escolar N. 216 - Tango - Sede</value>
-					</text>
-					<text id="school_list-16">
-						<value>Complexo Escolar N. 218 - Maua - Sede</value>
-					</text>
-					<text id="school_list-17">
-						<value>Complexo Escolar N. 34 Deolinda Rodrigues</value>
-					</text>
-					<text id="school_list-18">
-						<value>Complexo Escolar N. 3 Metodista Unida</value>
-					</text>
-					<text id="school_list-19">
-						<value>Complexo Escolar N. 603 - 11 de Novembro</value>
-					</text>
-					<text id="school_list-20">
-						<value>Complexo Escolar N. 811 Comandante Stona Alto - Dondo</value>
-					</text>
-					<text id="school_list-21">
-						<value>Complexo Escolar N. 812 Soba GInbongo Alto - Dondo</value>
-					</text>
-					<text id="school_list-22">
-						<value>Complexo Escolar N. 820 Comandante SarabI</value>
-					</text>
-					<text id="school_list-23">
-						<value>Complexo Escolar N. 821 Joao Cardoso Jordao</value>
-					</text>
-					<text id="school_list-24">
-						<value>Complexo Escolar N. 830 Mucozo</value>
-					</text>
-					<text id="school_list-25">
-						<value>Complexo Escolar N 16 Catome de Baixo</value>
-					</text>
-					<text id="school_list-26">
-						<value>Complexo Escolar N 23 - Km13 - Zanga</value>
-					</text>
-					<text id="school_list-27">
-						<value>Complexo Escolar N 24 Kirima Hola - Zanga</value>
-					</text>
-					<text id="school_list-28">
-						<value>Esc. Prlmer. Missionaria Santo Hilarlao N. 1009</value>
-					</text>
-					<text id="school_list-29">
-						<value>Escolar do Ensino Primario N, 1008 B - Beta</value>
-					</text>
-					<text id="school_list-30">
-						<value>Escola do Ensino Primario N. 818 Ngola Yetu</value>
-					</text>
-					<text id="school_list-31">
-						<value>Escola do Ensino Primario Quiaposse N. 1005</value>
-					</text>
-					<text id="school_list-32">
-						<value>Escola do ensino Primario Santa Maria N, 1014</value>
-					</text>
-					<text id="school_list-33">
-						<value>Escola Primaria 827 km 34 Nova Cassoalala</value>
-					</text>
-					<text id="school_list-34">
-						<value>Escola Primaria 837 Nova Cassoalala - Massangano</value>
-					</text>
-					<text id="school_list-35">
-						<value>Escola Primaria N, 12 Vista</value>
-					</text>
-					<text id="school_list-36">
-						<value>Escola Primaria N, 1603 - Dundo Ya Mutulo I</value>
-					</text>
-					<text id="school_list-37">
-						<value>Escola Primaria N, 1607 Pambas</value>
-					</text>
-					<text id="school_list-38">
-						<value>Escola Primaria N. 1201 - Banza Quilombo</value>
-					</text>
-					<text id="school_list-39">
-						<value>Escola Primaria N. 1601 - Ngola Nhl - Nlii</value>
-					</text>
-					<text id="school_list-40">
-						<value>Escola Primaria N. 1602 - Imbondeiros</value>
-					</text>
-					<text id="school_list-41">
-						<value>Escola Primaria N. 1605 - Maquela</value>
-					</text>
-					<text id="school_list-42">
-						<value>Escola Primaria N. 1608 - Kiangombe</value>
-					</text>
-					<text id="school_list-43">
-						<value>Escola Primaria N. 1801</value>
-					</text>
-					<text id="school_list-44">
-						<value>Escola Primaria N. 1807 - Ngolome</value>
-					</text>
-					<text id="school_list-45">
-						<value>Escola Primaria N. 1808 - Zamba</value>
-					</text>
-					<text id="school_list-46">
-						<value>Escola Primaria N. 1815 - K. Kasseno</value>
-					</text>
-					<text id="school_list-47">
-						<value>Escola Primaria N. 1817 - Calaiala</value>
-					</text>
-					<text id="school_list-48">
-						<value>Escola Primaria N. 213 - Bairro Povo Longe (KN05)</value>
-					</text>
-					<text id="school_list-49">
-						<value>Escola Primaria N. 213 - Bairro Povo Longe (KN07)</value>
-					</text>
-					<text id="school_list-50">
-						<value>Escola Primaria N. 214 - Bairro Bindo</value>
-					</text>
-					<text id="school_list-51">
-						<value>Escola Primaria N. 216 - Bairro Kanaltanjungo (KN01)</value>
-					</text>
-					<text id="school_list-52">
-						<value>Escola Primaria N. 216 - Bairro Kanaltanjungo (KN04)</value>
-					</text>
-					<text id="school_list-53">
-						<value>Escola Primaria N. 221 - Bairro Kangulungo (KN02)</value>
-					</text>
-					<text id="school_list-54">
-						<value>Escola Primaria N. 221 - Bairro Kangulungo (KNX51)</value>
-					</text>
-					<text id="school_list-55">
-						<value>Escola Primaria N. 228 - Bairro Zage</value>
-					</text>
-					<text id="school_list-56">
-						<value>Escola Primaria N. 238 - Bairro Kimaco</value>
-					</text>
-					<text id="school_list-57">
-						<value>Escola Primaria N. 608 - Cahombo</value>
-					</text>
-					<text id="school_list-58">
-						<value>Escola Primaria N. 609 - Pimbi</value>
-					</text>
-					<text id="school_list-59">
-						<value>Escola Primaria N. 835 - Zenza - do - Itombe</value>
-					</text>
-					<text id="school_list-60">
-						<value>Escola Primaria N 19 Kitata</value>
-					</text>
-					<text id="school_list-61">
-						<value>Escola Prinnaria N. 5 Jose María Ferraz dos Santos</value>
-					</text>
-					<text id="school_list-62">
-						<value>Escota de Magisterio N. 29 Comandante Benedito - Ndalata</value>
-					</text>
-					<text id="school_list-63">
-						<value>Escota Primaria N. 237 - Bairro Bejs</value>
-					</text>
-					<text id="school_list-64">
-						<value>Instituto Politecnico N. 1 - Dom Anastaclo Cahangode</value>
-					</text>
-					<text id="school_list-65">
-						<value>Instituto Politecnico N. 807 Chico Mendellev - Cambambe</value>
-					</text>
-					<text id="school_list-66">
-						<value>Liceu de Cambamba N. 809 Andre Pass Caçasse zona -1</value>
-					</text>
-					<text id="school_list-67">
-						<value>Liceu N. 35 Dr. Antonio Agostinho Neto - Sassa</value>
-					</text>
-					<text id="school_list-68">
-						<value>Liceu Serra da Banga</value>
-					</text>
-					<text id="school_list-69">
-						<value>Magisterio Capuchinlio S. Francisco De Assis N. 203 Cama</value>
-					</text>
-					<text id="school_list-70">
-						<value>Magisterio do Luinga N. 202</value>
-					</text>
-					<text id="school_list-71">
-						<value>Magisterio N. 802 Maurício Domingos - Dondo</value>
-					</text>
-					<text id="code_school-0">
-						<value>KN01</value>
-					</text>
-					<text id="code_school-1">
-						<value>KN02</value>
-					</text>
-					<text id="code_school-2">
-						<value>KN03</value>
-					</text>
-					<text id="code_school-3">
-						<value>KN04</value>
-					</text>
-					<text id="code_school-4">
-						<value>KN05</value>
-					</text>
-					<text id="code_school-5">
-						<value>KN06</value>
-					</text>
-					<text id="code_school-6">
-						<value>KN07</value>
-					</text>
-					<text id="code_school-7">
-						<value>KN08</value>
-					</text>
-					<text id="code_school-8">
-						<value>KN09</value>
-					</text>
-					<text id="code_school-9">
-						<value>KN10</value>
-					</text>
-					<text id="code_school-10">
-						<value>KN11</value>
-					</text>
-					<text id="code_school-11">
-						<value>KN12</value>
-					</text>
-					<text id="code_school-12">
-						<value>KN13</value>
-					</text>
-					<text id="code_school-13">
-						<value>KN14</value>
-					</text>
-					<text id="code_school-14">
-						<value>KN15</value>
-					</text>
-					<text id="code_school-15">
-						<value>KN16</value>
-					</text>
-					<text id="code_school-16">
-						<value>KN17</value>
-					</text>
-					<text id="code_school-17">
-						<value>KN18</value>
-					</text>
-					<text id="code_school-18">
-						<value>KN19</value>
-					</text>
-					<text id="code_school-19">
-						<value>KN20</value>
-					</text>
-					<text id="code_school-20">
-						<value>KN21</value>
-					</text>
-					<text id="code_school-21">
-						<value>KN22</value>
-					</text>
-					<text id="code_school-22">
-						<value>KN23</value>
-					</text>
-					<text id="code_school-23">
-						<value>KN24</value>
-					</text>
-					<text id="code_school-24">
-						<value>KN25</value>
-					</text>
-					<text id="code_school-25">
-						<value>KN26</value>
-					</text>
-					<text id="code_school-26">
-						<value>KN27</value>
-					</text>
-					<text id="code_school-27">
-						<value>KN28</value>
-					</text>
-					<text id="code_school-28">
-						<value>KN29</value>
-					</text>
-					<text id="code_school-29">
-						<value>KN30</value>
-					</text>
-					<text id="code_school-30">
-						<value>KN31</value>
-					</text>
-					<text id="code_school-31">
-						<value>KN32</value>
-					</text>
-					<text id="code_school-32">
-						<value>KN33</value>
-					</text>
-					<text id="code_school-33">
-						<value>KN34</value>
-					</text>
-					<text id="code_school-34">
-						<value>KN35</value>
-					</text>
-					<text id="code_school-35">
-						<value>KN36</value>
-					</text>
-					<text id="code_school-36">
-						<value>KN37</value>
-					</text>
-					<text id="code_school-37">
-						<value>KN38</value>
-					</text>
-					<text id="code_school-38">
-						<value>KN39</value>
-					</text>
-					<text id="code_school-39">
-						<value>KN40</value>
-					</text>
-					<text id="code_school-40">
-						<value>KN41</value>
-					</text>
-					<text id="code_school-41">
-						<value>KN42</value>
-					</text>
-					<text id="code_school-42">
-						<value>KN43</value>
-					</text>
-					<text id="code_school-43">
-						<value>KN44</value>
-					</text>
-					<text id="code_school-44">
-						<value>KN45</value>
-					</text>
-					<text id="code_school-45">
-						<value>KN46</value>
-					</text>
-					<text id="code_school-46">
-						<value>KN47</value>
-					</text>
-					<text id="code_school-47">
-						<value>KN48</value>
-					</text>
-					<text id="code_school-48">
-						<value>KNX49</value>
-					</text>
-					<text id="code_school-49">
-						<value>KNX50</value>
-					</text>
-					<text id="code_school-50">
-						<value>KNX51</value>
-					</text>
-					<text id="code_school-51">
-						<value>KNX52</value>
-					</text>
-					<text id="code_school-52">
-						<value>KNX53</value>
-					</text>
-					<text id="code_school-53">
-						<value>KNX54</value>
-					</text>
-					<text id="code_school-54">
-						<value>KNX55</value>
-					</text>
-					<text id="code_school-55">
-						<value>KNX56</value>
-					</text>
-					<text id="code_school-56">
-						<value>KNX57</value>
-					</text>
-					<text id="code_school-57">
-						<value>KNX58</value>
-					</text>
-					<text id="code_school-58">
-						<value>KNX59</value>
-					</text>
-					<text id="code_school-59">
-						<value>KNX60</value>
-					</text>
-					<text id="code_school-60">
-						<value>KNX61</value>
-					</text>
-					<text id="code_school-61">
-						<value>KNX62</value>
-					</text>
-					<text id="code_school-62">
-						<value>KNX63</value>
-					</text>
-					<text id="code_school-63">
-						<value>KNX64</value>
-					</text>
-					<text id="code_school-64">
-						<value>KNX65</value>
-					</text>
-					<text id="code_school-65">
-						<value>KNX66</value>
-					</text>
-					<text id="code_school-66">
-						<value>KNX67</value>
-					</text>
-					<text id="code_school-67">
-						<value>KNX68</value>
-					</text>
-					<text id="code_school-68">
-						<value>KNX69</value>
-					</text>
-					<text id="code_school-69">
-						<value>KNX70</value>
-					</text>
-					<text id="code_school-70">
-						<value>KNX71</value>
-					</text>
-					<text id="code_school-71">
-						<value>KNX72</value>
-					</text>
-				</translation>
-				<translation lang="French">
-					<text id="/data/k_province:label">
-						<value>Sélectionner la province</value>
-					</text>
-					<text id="/data/k_province/kwanza Norte:label">
-						<value>kwanza Norte</value>
-					</text>
-					<text id="/data/k_municipality:label">
-						<value>Sélectionner la municipalité</value>
-					</text>
-					<text id="/data/k_commune:label">
-						<value>Sélectionner la commune</value>
-					</text>
-					<text id="/data/k_commune_other:label">
-						<value>Entrer la commune</value>
-					</text>
-					<text id="/data/k_school:label">
-						<value>Sélectionner l'école</value>
-					</text>
-					<text id="/data/k_school_id:label">
-						<value>Sélectionner le code de l'école</value>
-					</text>
-					<text id="/data/k_RecorderID:label">
-						<value>Initiales de l'enuêteur</value>
-					</text>
-					<text id="/data/k_date:label">
-						<value>Date</value>
-					</text>
-					<text id="/data/kato_katz:label">
-						<value>kato_katz</value>
-					</text>
-					<text id="/data/kato_katz/k_add_more_child:label">
-						<value>Voulez-vous ajouter un enfant?</value>
-					</text>
-					<text id="/data/kato_katz/k_add_more_child/Sim:label">
-						<value>Oui</value>
-					</text>
-					<text id="/data/kato_katz/k_add_more_child/Nao:label">
-						<value>Non</value>
-					</text>
-					<text id="/data/kato_katz/k:label">
-						<value>Résultats</value>
-					</text>
-					<text id="/data/kato_katz/k/num:jr:constraintMsg">
-						<value>Le code doit être composé de deux chiffre</value>
-					</text>
-					<text id="/data/kato_katz/k/num:label">
-						<value>Veuillez entrer l'identifiant unique du participant</value>
-					</text>
-					<text id="/data/kato_katz/k/num2:jr:constraintMsg">
-						<value>Le code doit être le même</value>
-					</text>
-					<text id="/data/kato_katz/k/num2:label">
-						<value>Veuillez répéter l'identifiant unique du participant</value>
-					</text>
-					<text id="/data/kato_katz/k/code_id:label">
-						<value>ID unique du participant</value>
-					</text>
-					<text id="/data/kato_katz/k/sch_man_sa:label">
-						<value>Schistosoma mansoni (oeufs) - Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/ascaris_lumb_sa:label">
-						<value>Ascaris lumbricoides (œufs) - Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/hookworm_sa:label">
-						<value>Ankylostome - Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/trichuris_sa:label">
-						<value>Trichocéphale trichura - Slide A</value>
-					</text>
-					<text id="/data/kato_katz/k/sch_man_sb:label">
-						<value>Schistosoma mansoni (oeufs) - Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/hookworm_sb:label">
-						<value>Ankylostome - Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/ascaris_lumb_sb:label">
-						<value>Ascaris lumbricoides (œufs) - Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/trichuris_sb:label">
-						<value>Trichocéphale trichura - Slide B</value>
-					</text>
-					<text id="/data/kato_katz/k/remarks:label">
-						<value>Notes additionnelles</value>
-					</text>
-					<text id="yesno-0">
-						<value>Oui</value>
-					</text>
-					<text id="yesno-1">
-						<value>Non</value>
-					</text>
-					<text id="province_list-0">
-						<value>kwanza Norte</value>
-					</text>
-					<text id="municipality_list-0">
-						<value>Ambaca</value>
-					</text>
-					<text id="municipality_list-1">
-						<value>Banga</value>
-					</text>
-					<text id="municipality_list-2">
-						<value>Bulungongo</value>
-					</text>
-					<text id="municipality_list-3">
-						<value>Cambambe</value>
-					</text>
-					<text id="municipality_list-4">
-						<value>Cazengo</value>
-					</text>
-					<text id="municipality_list-5">
-						<value>Golungo Alto</value>
-					</text>
-					<text id="municipality_list-6">
-						<value>Lucala</value>
-					</text>
-					<text id="municipality_list-7">
-						<value>Ngongembo</value>
-					</text>
-					<text id="municipality_list-8">
-						<value>Samba Caju</value>
-					</text>
-					<text id="commune_list-0">
-						<value>Aldeia Nova</value>
-					</text>
-					<text id="commune_list-1">
-						<value>Banga</value>
-					</text>
-					<text id="commune_list-2">
-						<value>Bindo</value>
-					</text>
-					<text id="commune_list-3">
-						<value>Cambondo</value>
-					</text>
-					<text id="commune_list-4">
-						<value>Cassualaia .</value>
-					</text>
-					<text id="commune_list-5">
-						<value>Cassualala</value>
-					</text>
-					<text id="commune_list-6">
-						<value>Cerca</value>
-					</text>
-					<text id="commune_list-7">
-						<value>Dondo</value>
-					</text>
-					<text id="commune_list-8">
-						<value>Kilombo kiaPuto</value>
-					</text>
-					<text id="commune_list-9">
-						<value>Luinga</value>
-					</text>
-					<text id="commune_list-10">
-						<value>Massangano</value>
-					</text>
-					<text id="commune_list-11">
-						<value>Massangsno</value>
-					</text>
-					<text id="commune_list-12">
-						<value>Maua</value>
-					</text>
-					<text id="commune_list-13">
-						<value>Ndaiatan do</value>
-					</text>
-					<text id="commune_list-14">
-						<value>Ndalatando</value>
-					</text>
-					<text id="commune_list-15">
-						<value>Quiangombe</value>
-					</text>
-					<text id="commune_list-16">
-						<value>Samba Lucala</value>
-					</text>
-					<text id="commune_list-17">
-						<value>Sao Pedro da Quil</value>
-					</text>
-					<text id="commune_list-18">
-						<value>Sede (Ambaca)</value>
-					</text>
-					<text id="commune_list-19">
-						<value>Sede (Bulungongo)</value>
-					</text>
-					<text id="commune_list-20">
-						<value>Sede (Golungo Alto)</value>
-					</text>
-					<text id="commune_list-21">
-						<value>Sede (Lucala)</value>
-					</text>
-					<text id="commune_list-22">
-						<value>Sede (Ngongembo)</value>
-					</text>
-					<text id="commune_list-23">
-						<value>Sede (Samba Caju)</value>
-					</text>
-					<text id="commune_list-24">
-						<value>Tango</value>
-					</text>
-					<text id="commune_list-25">
-						<value>Zenza do Itombe</value>
-					</text>
-					<text id="school_list-0">
-						<value>Colegio N. 1S03 Samba Caju</value>
-					</text>
-					<text id="school_list-1">
-						<value>Colegio N. 808 - 4 de Janeiro</value>
-					</text>
-					<text id="school_list-2">
-						<value>Comiexto Escolar Manuel N, 814 Pedro Pacavira do Alto - C</value>
-					</text>
-					<text id="school_list-3">
-						<value>Compexo Escolar N. 403 Al. Nova</value>
-					</text>
-					<text id="school_list-4">
-						<value>Complexo Escolar: N.1004- Antonio Jacinto do Amaral Mar</value>
-					</text>
-					<text id="school_list-5">
-						<value>Complexo Escolar 28 de Agosto N. 205</value>
-					</text>
-					<text id="school_list-6">
-						<value>Complexo Escolar Cacolomboio N. 1006</value>
-					</text>
-					<text id="school_list-7">
-						<value>Complexo Escolar Dom Bosco N.38</value>
-					</text>
-					<text id="school_list-8">
-						<value>Complexo escolar Missionario St. A, Kahenda N. 1805</value>
-					</text>
-					<text id="school_list-9">
-						<value>Complexo Escolar N.1017 - Caleba</value>
-					</text>
-					<text id="school_list-10">
-						<value>Complexo Escolar N.14 Posse</value>
-					</text>
-					<text id="school_list-11">
-						<value>Complexo Escolar N.36 Paulo Teixeira Jorge</value>
-					</text>
-					<text id="school_list-12">
-						<value>Complexo Escolar N.7 Hoji - Ya - Henda</value>
-					</text>
-					<text id="school_list-13">
-						<value>Complexo Escolar N. 1015 Cambondo</value>
-					</text>
-					<text id="school_list-14">
-						<value>Complexo Escolar N. 1203 - Comandante Sekouture</value>
-					</text>
-					<text id="school_list-15">
-						<value>Complexo Escolar N. 216 - Tango - Sede</value>
-					</text>
-					<text id="school_list-16">
-						<value>Complexo Escolar N. 218 - Maua - Sede</value>
-					</text>
-					<text id="school_list-17">
-						<value>Complexo Escolar N. 34 Deolinda Rodrigues</value>
-					</text>
-					<text id="school_list-18">
-						<value>Complexo Escolar N. 3 Metodista Unida</value>
-					</text>
-					<text id="school_list-19">
-						<value>Complexo Escolar N. 603 - 11 de Novembro</value>
-					</text>
-					<text id="school_list-20">
-						<value>Complexo Escolar N. 811 Comandante Stona Alto - Dondo</value>
-					</text>
-					<text id="school_list-21">
-						<value>Complexo Escolar N. 812 Soba GInbongo Alto - Dondo</value>
-					</text>
-					<text id="school_list-22">
-						<value>Complexo Escolar N. 820 Comandante SarabI</value>
-					</text>
-					<text id="school_list-23">
-						<value>Complexo Escolar N. 821 Joao Cardoso Jordao</value>
-					</text>
-					<text id="school_list-24">
-						<value>Complexo Escolar N. 830 Mucozo</value>
-					</text>
-					<text id="school_list-25">
-						<value>Complexo Escolar N 16 Catome de Baixo</value>
-					</text>
-					<text id="school_list-26">
-						<value>Complexo Escolar N 23 - Km13 - Zanga</value>
-					</text>
-					<text id="school_list-27">
-						<value>Complexo Escolar N 24 Kirima Hola - Zanga</value>
-					</text>
-					<text id="school_list-28">
-						<value>Esc. Prlmer. Missionaria Santo Hilarlao N. 1009</value>
-					</text>
-					<text id="school_list-29">
-						<value>Escolar do Ensino Primario N, 1008 B - Beta</value>
-					</text>
-					<text id="school_list-30">
-						<value>Escola do Ensino Primario N. 818 Ngola Yetu</value>
-					</text>
-					<text id="school_list-31">
-						<value>Escola do Ensino Primario Quiaposse N. 1005</value>
-					</text>
-					<text id="school_list-32">
-						<value>Escola do ensino Primario Santa Maria N, 1014</value>
-					</text>
-					<text id="school_list-33">
-						<value>Escola Primaria 827 km 34 Nova Cassoalala</value>
-					</text>
-					<text id="school_list-34">
-						<value>Escola Primaria 837 Nova Cassoalala - Massangano</value>
-					</text>
-					<text id="school_list-35">
-						<value>Escola Primaria N, 12 Vista</value>
-					</text>
-					<text id="school_list-36">
-						<value>Escola Primaria N, 1603 - Dundo Ya Mutulo I</value>
-					</text>
-					<text id="school_list-37">
-						<value>Escola Primaria N, 1607 Pambas</value>
-					</text>
-					<text id="school_list-38">
-						<value>Escola Primaria N. 1201 - Banza Quilombo</value>
-					</text>
-					<text id="school_list-39">
-						<value>Escola Primaria N. 1601 - Ngola Nhl - Nlii</value>
-					</text>
-					<text id="school_list-40">
-						<value>Escola Primaria N. 1602 - Imbondeiros</value>
-					</text>
-					<text id="school_list-41">
-						<value>Escola Primaria N. 1605 - Maquela</value>
-					</text>
-					<text id="school_list-42">
-						<value>Escola Primaria N. 1608 - Kiangombe</value>
-					</text>
-					<text id="school_list-43">
-						<value>Escola Primaria N. 1801</value>
-					</text>
-					<text id="school_list-44">
-						<value>Escola Primaria N. 1807 - Ngolome</value>
-					</text>
-					<text id="school_list-45">
-						<value>Escola Primaria N. 1808 - Zamba</value>
-					</text>
-					<text id="school_list-46">
-						<value>Escola Primaria N. 1815 - K. Kasseno</value>
-					</text>
-					<text id="school_list-47">
-						<value>Escola Primaria N. 1817 - Calaiala</value>
-					</text>
-					<text id="school_list-48">
-						<value>Escola Primaria N. 213 - Bairro Povo Longe (KN05)</value>
-					</text>
-					<text id="school_list-49">
-						<value>Escola Primaria N. 213 - Bairro Povo Longe (KN07)</value>
-					</text>
-					<text id="school_list-50">
-						<value>Escola Primaria N. 214 - Bairro Bindo</value>
-					</text>
-					<text id="school_list-51">
-						<value>Escola Primaria N. 216 - Bairro Kanaltanjungo (KN01)</value>
-					</text>
-					<text id="school_list-52">
-						<value>Escola Primaria N. 216 - Bairro Kanaltanjungo (KN04)</value>
-					</text>
-					<text id="school_list-53">
-						<value>Escola Primaria N. 221 - Bairro Kangulungo (KN02)</value>
-					</text>
-					<text id="school_list-54">
-						<value>Escola Primaria N. 221 - Bairro Kangulungo (KNX51)</value>
-					</text>
-					<text id="school_list-55">
-						<value>Escola Primaria N. 228 - Bairro Zage</value>
-					</text>
-					<text id="school_list-56">
-						<value>Escola Primaria N. 238 - Bairro Kimaco</value>
-					</text>
-					<text id="school_list-57">
-						<value>Escola Primaria N. 608 - Cahombo</value>
-					</text>
-					<text id="school_list-58">
-						<value>Escola Primaria N. 609 - Pimbi</value>
-					</text>
-					<text id="school_list-59">
-						<value>Escola Primaria N. 835 - Zenza - do - Itombe</value>
-					</text>
-					<text id="school_list-60">
-						<value>Escola Primaria N 19 Kitata</value>
-					</text>
-					<text id="school_list-61">
-						<value>Escola Prinnaria N. 5 Jose María Ferraz dos Santos</value>
-					</text>
-					<text id="school_list-62">
-						<value>Escota de Magisterio N. 29 Comandante Benedito - Ndalata</value>
-					</text>
-					<text id="school_list-63">
-						<value>Escota Primaria N. 237 - Bairro Bejs</value>
-					</text>
-					<text id="school_list-64">
-						<value>Instituto Politecnico N. 1 - Dom Anastaclo Cahangode</value>
-					</text>
-					<text id="school_list-65">
-						<value>Instituto Politecnico N. 807 Chico Mendellev - Cambambe</value>
-					</text>
-					<text id="school_list-66">
-						<value>Liceu de Cambamba N. 809 Andre Pass Caçasse zona -1</value>
-					</text>
-					<text id="school_list-67">
-						<value>Liceu N. 35 Dr. Antonio Agostinho Neto - Sassa</value>
-					</text>
-					<text id="school_list-68">
-						<value>Liceu Serra da Banga</value>
-					</text>
-					<text id="school_list-69">
-						<value>Magisterio Capuchinlio S. Francisco De Assis N. 203 Cama</value>
-					</text>
-					<text id="school_list-70">
-						<value>Magisterio do Luinga N. 202</value>
-					</text>
-					<text id="school_list-71">
-						<value>Magisterio N. 802 Maurício Domingos - Dondo</value>
-					</text>
-					<text id="code_school-0">
-						<value>KN01</value>
-					</text>
-					<text id="code_school-1">
-						<value>KN02</value>
-					</text>
-					<text id="code_school-2">
-						<value>KN03</value>
-					</text>
-					<text id="code_school-3">
-						<value>KN04</value>
-					</text>
-					<text id="code_school-4">
-						<value>KN05</value>
-					</text>
-					<text id="code_school-5">
-						<value>KN06</value>
-					</text>
-					<text id="code_school-6">
-						<value>KN07</value>
-					</text>
-					<text id="code_school-7">
-						<value>KN08</value>
-					</text>
-					<text id="code_school-8">
-						<value>KN09</value>
-					</text>
-					<text id="code_school-9">
-						<value>KN10</value>
-					</text>
-					<text id="code_school-10">
-						<value>KN11</value>
-					</text>
-					<text id="code_school-11">
-						<value>KN12</value>
-					</text>
-					<text id="code_school-12">
-						<value>KN13</value>
-					</text>
-					<text id="code_school-13">
-						<value>KN14</value>
-					</text>
-					<text id="code_school-14">
-						<value>KN15</value>
-					</text>
-					<text id="code_school-15">
-						<value>KN16</value>
-					</text>
-					<text id="code_school-16">
-						<value>KN17</value>
-					</text>
-					<text id="code_school-17">
-						<value>KN18</value>
-					</text>
-					<text id="code_school-18">
-						<value>KN19</value>
-					</text>
-					<text id="code_school-19">
-						<value>KN20</value>
-					</text>
-					<text id="code_school-20">
-						<value>KN21</value>
-					</text>
-					<text id="code_school-21">
-						<value>KN22</value>
-					</text>
-					<text id="code_school-22">
-						<value>KN23</value>
-					</text>
-					<text id="code_school-23">
-						<value>KN24</value>
-					</text>
-					<text id="code_school-24">
-						<value>KN25</value>
-					</text>
-					<text id="code_school-25">
-						<value>KN26</value>
-					</text>
-					<text id="code_school-26">
-						<value>KN27</value>
-					</text>
-					<text id="code_school-27">
-						<value>KN28</value>
-					</text>
-					<text id="code_school-28">
-						<value>KN29</value>
-					</text>
-					<text id="code_school-29">
-						<value>KN30</value>
-					</text>
-					<text id="code_school-30">
-						<value>KN31</value>
-					</text>
-					<text id="code_school-31">
-						<value>KN32</value>
-					</text>
-					<text id="code_school-32">
-						<value>KN33</value>
-					</text>
-					<text id="code_school-33">
-						<value>KN34</value>
-					</text>
-					<text id="code_school-34">
-						<value>KN35</value>
-					</text>
-					<text id="code_school-35">
-						<value>KN36</value>
-					</text>
-					<text id="code_school-36">
-						<value>KN37</value>
-					</text>
-					<text id="code_school-37">
-						<value>KN38</value>
-					</text>
-					<text id="code_school-38">
-						<value>KN39</value>
-					</text>
-					<text id="code_school-39">
-						<value>KN40</value>
-					</text>
-					<text id="code_school-40">
-						<value>KN41</value>
-					</text>
-					<text id="code_school-41">
-						<value>KN42</value>
-					</text>
-					<text id="code_school-42">
-						<value>KN43</value>
-					</text>
-					<text id="code_school-43">
-						<value>KN44</value>
-					</text>
-					<text id="code_school-44">
-						<value>KN45</value>
-					</text>
-					<text id="code_school-45">
-						<value>KN46</value>
-					</text>
-					<text id="code_school-46">
-						<value>KN47</value>
-					</text>
-					<text id="code_school-47">
-						<value>KN48</value>
-					</text>
-					<text id="code_school-48">
-						<value>KNX49</value>
-					</text>
-					<text id="code_school-49">
-						<value>KNX50</value>
-					</text>
-					<text id="code_school-50">
-						<value>KNX51</value>
-					</text>
-					<text id="code_school-51">
-						<value>KNX52</value>
-					</text>
-					<text id="code_school-52">
-						<value>KNX53</value>
-					</text>
-					<text id="code_school-53">
-						<value>KNX54</value>
-					</text>
-					<text id="code_school-54">
-						<value>KNX55</value>
-					</text>
-					<text id="code_school-55">
-						<value>KNX56</value>
-					</text>
-					<text id="code_school-56">
-						<value>KNX57</value>
-					</text>
-					<text id="code_school-57">
-						<value>KNX58</value>
-					</text>
-					<text id="code_school-58">
-						<value>KNX59</value>
-					</text>
-					<text id="code_school-59">
-						<value>KNX60</value>
-					</text>
-					<text id="code_school-60">
-						<value>KNX61</value>
-					</text>
-					<text id="code_school-61">
-						<value>KNX62</value>
-					</text>
-					<text id="code_school-62">
-						<value>KNX63</value>
-					</text>
-					<text id="code_school-63">
-						<value>KNX64</value>
-					</text>
-					<text id="code_school-64">
-						<value>KNX65</value>
-					</text>
-					<text id="code_school-65">
-						<value>KNX66</value>
-					</text>
-					<text id="code_school-66">
-						<value>KNX67</value>
-					</text>
-					<text id="code_school-67">
-						<value>KNX68</value>
-					</text>
-					<text id="code_school-68">
-						<value>KNX69</value>
-					</text>
-					<text id="code_school-69">
-						<value>KNX70</value>
-					</text>
-					<text id="code_school-70">
-						<value>KNX71</value>
-					</text>
-					<text id="code_school-71">
-						<value>KNX72</value>
-					</text>
-					<text id="/data/k_RecorderID:jr:constraintMsg">
-						<value>-</value>
-					</text>
-				</translation>
-			</itext>
-			<instance id="yesno">
-				<root>
-					<item>
-						<itextId>yesno-0</itextId>
-						<name>Sim</name>
-					</item>
-					<item>
-						<itextId>yesno-1</itextId>
-						<name>Nao</name>
-					</item>
-				</root>
-			</instance>
-			<instance id="province_list">
-				<root>
-					<item>
-						<itextId>province_list-0</itextId>
-						<name>kwanza Norte</name>
-					</item>
-				</root>
-			</instance>
-			<instance id="municipality_list">
-				<root>
-					<item>
-						<itextId>municipality_list-0</itextId>
-						<name>Ambaca</name>
-						<province_list>kwanza Norte</province_list>
-					</item>
-					<item>
-						<itextId>municipality_list-1</itextId>
-						<name>Banga</name>
-						<province_list>kwanza Norte</province_list>
-					</item>
-					<item>
-						<itextId>municipality_list-2</itextId>
-						<name>Bulungongo</name>
-						<province_list>kwanza Norte</province_list>
-					</item>
-					<item>
-						<itextId>municipality_list-3</itextId>
-						<name>Cambambe</name>
-						<province_list>kwanza Norte</province_list>
-					</item>
-					<item>
-						<itextId>municipality_list-4</itextId>
-						<name>Cazengo</name>
-						<province_list>kwanza Norte</province_list>
-					</item>
-					<item>
-						<itextId>municipality_list-5</itextId>
-						<name>Golungo Alto</name>
-						<province_list>kwanza Norte</province_list>
-					</item>
-					<item>
-						<itextId>municipality_list-6</itextId>
-						<name>Lucala</name>
-						<province_list>kwanza Norte</province_list>
-					</item>
-					<item>
-						<itextId>municipality_list-7</itextId>
-						<name>Ngongembo</name>
-						<province_list>kwanza Norte</province_list>
-					</item>
-					<item>
-						<itextId>municipality_list-8</itextId>
-						<name>Samba Caju</name>
-						<province_list>kwanza Norte</province_list>
-					</item>
-				</root>
-			</instance>
-			<instance id="commune_list">
-				<root>
-					<item>
-						<itextId>commune_list-0</itextId>
-						<municipality_list>Banga</municipality_list>
-						<name>Aldeia Nova</name>
-					</item>
-					<item>
-						<itextId>commune_list-1</itextId>
-						<municipality_list>Banga</municipality_list>
-						<name>Banga</name>
-					</item>
-					<item>
-						<itextId>commune_list-2</itextId>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Bindo</name>
-					</item>
-					<item>
-						<itextId>commune_list-3</itextId>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Cambondo</name>
-					</item>
-					<item>
-						<itextId>commune_list-4</itextId>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Cassualaia .</name>
-					</item>
-					<item>
-						<itextId>commune_list-5</itextId>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Cassualala</name>
-					</item>
-					<item>
-						<itextId>commune_list-6</itextId>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Cerca</name>
-					</item>
-					<item>
-						<itextId>commune_list-7</itextId>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Dondo</name>
-					</item>
-					<item>
-						<itextId>commune_list-8</itextId>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Kilombo kiaPuto</name>
-					</item>
-					<item>
-						<itextId>commune_list-9</itextId>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Luinga</name>
-					</item>
-					<item>
-						<itextId>commune_list-10</itextId>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Massangano</name>
-					</item>
-					<item>
-						<itextId>commune_list-11</itextId>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Massangsno</name>
-					</item>
-					<item>
-						<itextId>commune_list-12</itextId>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Maua</name>
-					</item>
-					<item>
-						<itextId>commune_list-13</itextId>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Ndaiatan do</name>
-					</item>
-					<item>
-						<itextId>commune_list-14</itextId>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Ndalatando</name>
-					</item>
-					<item>
-						<itextId>commune_list-15</itextId>
-						<municipality_list>Lucala</municipality_list>
-						<name>Quiangombe</name>
-					</item>
-					<item>
-						<itextId>commune_list-16</itextId>
-						<municipality_list>Samba Caju</municipality_list>
-						<name>Samba Lucala</name>
-					</item>
-					<item>
-						<itextId>commune_list-17</itextId>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Sao Pedro da Quil</name>
-					</item>
-					<item>
-						<itextId>commune_list-18</itextId>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Sede (Ambaca)</name>
-					</item>
-					<item>
-						<itextId>commune_list-19</itextId>
-						<municipality_list>Bulungongo</municipality_list>
-						<name>Sede (Bulungongo)</name>
-					</item>
-					<item>
-						<itextId>commune_list-20</itextId>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Sede (Golungo Alto)</name>
-					</item>
-					<item>
-						<itextId>commune_list-21</itextId>
-						<municipality_list>Lucala</municipality_list>
-						<name>Sede (Lucala)</name>
-					</item>
-					<item>
-						<itextId>commune_list-22</itextId>
-						<municipality_list>Ngongembo</municipality_list>
-						<name>Sede (Ngongembo)</name>
-					</item>
-					<item>
-						<itextId>commune_list-23</itextId>
-						<municipality_list>Samba Caju</municipality_list>
-						<name>Sede (Samba Caju)</name>
-					</item>
-					<item>
-						<itextId>commune_list-24</itextId>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Tango</name>
-					</item>
-					<item>
-						<itextId>commune_list-25</itextId>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Zenza do Itombe</name>
-					</item>
-				</root>
-			</instance>
-			<instance id="school_list">
-				<root>
-					<item>
-						<itextId>school_list-0</itextId>
-						<commune_list>Sede (Samba Caju)</commune_list>
-						<municipality_list>Samba Caju</municipality_list>
-						<name>Colegio N. 1S03 Samba Caju</name>
-					</item>
-					<item>
-						<itextId>school_list-1</itextId>
-						<commune_list>Dondo</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Colegio N. 808 - 4 de Janeiro</name>
-					</item>
-					<item>
-						<itextId>school_list-2</itextId>
-						<commune_list>Dondo</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Comiexto Escolar Manuel N, 814 Pedro Pacavira do Alto - C</name>
-					</item>
-					<item>
-						<itextId>school_list-3</itextId>
-						<commune_list>Aldeia Nova</commune_list>
-						<municipality_list>Banga</municipality_list>
-						<name>Compexo Escolar N. 403 Al. Nova</name>
-					</item>
-					<item>
-						<itextId>school_list-4</itextId>
-						<commune_list>Sede (Golungo Alto)</commune_list>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Complexo Escolar: N.1004- Antonio Jacinto do Amaral Mar</name>
-					</item>
-					<item>
-						<itextId>school_list-5</itextId>
-						<commune_list>Sede (Ambaca)</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Complexo Escolar 28 de Agosto N. 205</name>
-					</item>
-					<item>
-						<itextId>school_list-6</itextId>
-						<commune_list>Sede (Golungo Alto)</commune_list>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Complexo Escolar Cacolomboio N. 1006</name>
-					</item>
-					<item>
-						<itextId>school_list-7</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Complexo Escolar Dom Bosco N.38</name>
-					</item>
-					<item>
-						<itextId>school_list-8</itextId>
-						<commune_list>Sede (Samba Caju)</commune_list>
-						<municipality_list>Samba Caju</municipality_list>
-						<name>Complexo escolar Missionario St. A, Kahenda N. 1805</name>
-					</item>
-					<item>
-						<itextId>school_list-9</itextId>
-						<commune_list>Cerca</commune_list>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Complexo Escolar N.1017 - Caleba</name>
-					</item>
-					<item>
-						<itextId>school_list-10</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Complexo Escolar N.14 Posse</name>
-					</item>
-					<item>
-						<itextId>school_list-11</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Complexo Escolar N.36 Paulo Teixeira Jorge</name>
-					</item>
-					<item>
-						<itextId>school_list-12</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Complexo Escolar N.7 Hoji - Ya - Henda</name>
-					</item>
-					<item>
-						<itextId>school_list-13</itextId>
-						<commune_list>Cambondo</commune_list>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Complexo Escolar N. 1015 Cambondo</name>
-					</item>
-					<item>
-						<itextId>school_list-14</itextId>
-						<commune_list>Sede (Ngongembo)</commune_list>
-						<municipality_list>Ngongembo</municipality_list>
-						<name>Complexo Escolar N. 1203 - Comandante Sekouture</name>
-					</item>
-					<item>
-						<itextId>school_list-15</itextId>
-						<commune_list>Tango</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Complexo Escolar N. 216 - Tango - Sede</name>
-					</item>
-					<item>
-						<itextId>school_list-16</itextId>
-						<commune_list>Maua</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Complexo Escolar N. 218 - Maua - Sede</name>
-					</item>
-					<item>
-						<itextId>school_list-17</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Complexo Escolar N. 34 Deolinda Rodrigues</name>
-					</item>
-					<item>
-						<itextId>school_list-18</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Complexo Escolar N. 3 Metodista Unida</name>
-					</item>
-					<item>
-						<itextId>school_list-19</itextId>
-						<commune_list>Sede (Bulungongo)</commune_list>
-						<municipality_list>Bulungongo</municipality_list>
-						<name>Complexo Escolar N. 603 - 11 de Novembro</name>
-					</item>
-					<item>
-						<itextId>school_list-20</itextId>
-						<commune_list>Dondo</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Complexo Escolar N. 811 Comandante Stona Alto - Dondo</name>
-					</item>
-					<item>
-						<itextId>school_list-21</itextId>
-						<commune_list>Dondo</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Complexo Escolar N. 812 Soba GInbongo Alto - Dondo</name>
-					</item>
-					<item>
-						<itextId>school_list-22</itextId>
-						<commune_list>Massangano</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Complexo Escolar N. 820 Comandante SarabI</name>
-					</item>
-					<item>
-						<itextId>school_list-23</itextId>
-						<commune_list>Zenza do Itombe</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Complexo Escolar N. 821 Joao Cardoso Jordao</name>
-					</item>
-					<item>
-						<itextId>school_list-24</itextId>
-						<commune_list>Massangano</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Complexo Escolar N. 830 Mucozo</name>
-					</item>
-					<item>
-						<itextId>school_list-25</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Complexo Escolar N 16 Catome de Baixo</name>
-					</item>
-					<item>
-						<itextId>school_list-26</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Complexo Escolar N 23 - Km13 - Zanga</name>
-					</item>
-					<item>
-						<itextId>school_list-27</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Complexo Escolar N 24 Kirima Hola - Zanga</name>
-					</item>
-					<item>
-						<itextId>school_list-28</itextId>
-						<commune_list>Sede (Golungo Alto)</commune_list>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Esc. Prlmer. Missionaria Santo Hilarlao N. 1009</name>
-					</item>
-					<item>
-						<itextId>school_list-29</itextId>
-						<commune_list>Sede (Golungo Alto)</commune_list>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Escolar do Ensino Primario N, 1008 B - Beta</name>
-					</item>
-					<item>
-						<itextId>school_list-30</itextId>
-						<commune_list>Sao Pedro da Quil</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Escola do Ensino Primario N. 818 Ngola Yetu</name>
-					</item>
-					<item>
-						<itextId>school_list-31</itextId>
-						<commune_list>Sede (Golungo Alto)</commune_list>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Escola do Ensino Primario Quiaposse N. 1005</name>
-					</item>
-					<item>
-						<itextId>school_list-32</itextId>
-						<commune_list>Kilombo kiaPuto</commune_list>
-						<municipality_list>Golungo Alto</municipality_list>
-						<name>Escola do ensino Primario Santa Maria N, 1014</name>
-					</item>
-					<item>
-						<itextId>school_list-33</itextId>
-						<commune_list>Cassualaia .</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Escola Primaria 827 km 34 Nova Cassoalala</name>
-					</item>
-					<item>
-						<itextId>school_list-34</itextId>
-						<commune_list>Massangsno</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Escola Primaria 837 Nova Cassoalala - Massangano</name>
-					</item>
-					<item>
-						<itextId>school_list-35</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Escola Primaria N, 12 Vista</name>
-					</item>
-					<item>
-						<itextId>school_list-36</itextId>
-						<commune_list>Sede (Lucala)</commune_list>
-						<municipality_list>Lucala</municipality_list>
-						<name>Escola Primaria N, 1603 - Dundo Ya Mutulo I</name>
-					</item>
-					<item>
-						<itextId>school_list-37</itextId>
-						<commune_list>Sede (Lucala)</commune_list>
-						<municipality_list>Lucala</municipality_list>
-						<name>Escola Primaria N, 1607 Pambas</name>
-					</item>
-					<item>
-						<itextId>school_list-38</itextId>
-						<commune_list>Sede (Ngongembo)</commune_list>
-						<municipality_list>Ngongembo</municipality_list>
-						<name>Escola Primaria N. 1201 - Banza Quilombo</name>
-					</item>
-					<item>
-						<itextId>school_list-39</itextId>
-						<commune_list>Sede (Lucala)</commune_list>
-						<municipality_list>Lucala</municipality_list>
-						<name>Escola Primaria N. 1601 - Ngola Nhl - Nlii</name>
-					</item>
-					<item>
-						<itextId>school_list-40</itextId>
-						<commune_list>Sede (Lucala)</commune_list>
-						<municipality_list>Lucala</municipality_list>
-						<name>Escola Primaria N. 1602 - Imbondeiros</name>
-					</item>
-					<item>
-						<itextId>school_list-41</itextId>
-						<commune_list>Sede (Lucala)</commune_list>
-						<municipality_list>Lucala</municipality_list>
-						<name>Escola Primaria N. 1605 - Maquela</name>
-					</item>
-					<item>
-						<itextId>school_list-42</itextId>
-						<commune_list>Quiangombe</commune_list>
-						<municipality_list>Lucala</municipality_list>
-						<name>Escola Primaria N. 1608 - Kiangombe</name>
-					</item>
-					<item>
-						<itextId>school_list-43</itextId>
-						<commune_list>Sede (Samba Caju)</commune_list>
-						<municipality_list>Samba Caju</municipality_list>
-						<name>Escola Primaria N. 1801</name>
-					</item>
-					<item>
-						<itextId>school_list-44</itextId>
-						<commune_list>Sede (Samba Caju)</commune_list>
-						<municipality_list>Samba Caju</municipality_list>
-						<name>Escola Primaria N. 1807 - Ngolome</name>
-					</item>
-					<item>
-						<itextId>school_list-45</itextId>
-						<commune_list>Sede (Samba Caju)</commune_list>
-						<municipality_list>Samba Caju</municipality_list>
-						<name>Escola Primaria N. 1808 - Zamba</name>
-					</item>
-					<item>
-						<itextId>school_list-46</itextId>
-						<commune_list>Samba Lucala</commune_list>
-						<municipality_list>Samba Caju</municipality_list>
-						<name>Escola Primaria N. 1815 - K. Kasseno</name>
-					</item>
-					<item>
-						<itextId>school_list-47</itextId>
-						<commune_list>Sede (Samba Caju)</commune_list>
-						<municipality_list>Samba Caju</municipality_list>
-						<name>Escola Primaria N. 1817 - Calaiala</name>
-					</item>
-					<item>
-						<itextId>school_list-48</itextId>
-						<commune_list>Tango</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Escola Primaria N. 213 - Bairro Povo Longe (KN05)</name>
-					</item>
-					<item>
-						<itextId>school_list-49</itextId>
-						<commune_list>Tango</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Escola Primaria N. 213 - Bairro Povo Longe (KN07)</name>
-					</item>
-					<item>
-						<itextId>school_list-50</itextId>
-						<commune_list>Bindo</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Escola Primaria N. 214 - Bairro Bindo</name>
-					</item>
-					<item>
-						<itextId>school_list-51</itextId>
-						<commune_list>Bindo</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Escola Primaria N. 216 - Bairro Kanaltanjungo (KN01)</name>
-					</item>
-					<item>
-						<itextId>school_list-52</itextId>
-						<commune_list>Sede (Ambaca)</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Escola Primaria N. 216 - Bairro Kanaltanjungo (KN04)</name>
-					</item>
-					<item>
-						<itextId>school_list-53</itextId>
-						<commune_list>Bindo</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Escola Primaria N. 221 - Bairro Kangulungo (KN02)</name>
-					</item>
-					<item>
-						<itextId>school_list-54</itextId>
-						<commune_list>Sede (Ambaca)</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Escola Primaria N. 221 - Bairro Kangulungo (KNX51)</name>
-					</item>
-					<item>
-						<itextId>school_list-55</itextId>
-						<commune_list>Maua</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Escola Primaria N. 228 - Bairro Zage</name>
-					</item>
-					<item>
-						<itextId>school_list-56</itextId>
-						<commune_list>Tango</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Escola Primaria N. 238 - Bairro Kimaco</name>
-					</item>
-					<item>
-						<itextId>school_list-57</itextId>
-						<commune_list>Sede (Bulungongo)</commune_list>
-						<municipality_list>Bulungongo</municipality_list>
-						<name>Escola Primaria N. 608 - Cahombo</name>
-					</item>
-					<item>
-						<itextId>school_list-58</itextId>
-						<commune_list>Sede (Bulungongo)</commune_list>
-						<municipality_list>Bulungongo</municipality_list>
-						<name>Escola Primaria N. 609 - Pimbi</name>
-					</item>
-					<item>
-						<itextId>school_list-59</itextId>
-						<commune_list>Cassualala</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Escola Primaria N. 835 - Zenza - do - Itombe</name>
-					</item>
-					<item>
-						<itextId>school_list-60</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Escola Primaria N 19 Kitata</name>
-					</item>
-					<item>
-						<itextId>school_list-61</itextId>
-						<commune_list>Ndaiatan do</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Escola Prinnaria N. 5 Jose María Ferraz dos Santos</name>
-					</item>
-					<item>
-						<itextId>school_list-62</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Escota de Magisterio N. 29 Comandante Benedito - Ndalata</name>
-					</item>
-					<item>
-						<itextId>school_list-63</itextId>
-						<commune_list>Maua</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Escota Primaria N. 237 - Bairro Bejs</name>
-					</item>
-					<item>
-						<itextId>school_list-64</itextId>
-						<commune_list>Sede (Ambaca)</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Instituto Politecnico N. 1 - Dom Anastaclo Cahangode</name>
-					</item>
-					<item>
-						<itextId>school_list-65</itextId>
-						<commune_list>Dondo</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Instituto Politecnico N. 807 Chico Mendellev - Cambambe</name>
-					</item>
-					<item>
-						<itextId>school_list-66</itextId>
-						<commune_list>Dondo</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Liceu de Cambamba N. 809 Andre Pass Caçasse zona -1</name>
-					</item>
-					<item>
-						<itextId>school_list-67</itextId>
-						<commune_list>Ndalatando</commune_list>
-						<municipality_list>Cazengo</municipality_list>
-						<name>Liceu N. 35 Dr. Antonio Agostinho Neto - Sassa</name>
-					</item>
-					<item>
-						<itextId>school_list-68</itextId>
-						<commune_list>Banga</commune_list>
-						<municipality_list>Banga</municipality_list>
-						<name>Liceu Serra da Banga</name>
-					</item>
-					<item>
-						<itextId>school_list-69</itextId>
-						<commune_list>Sede (Ambaca)</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Magisterio Capuchinlio S. Francisco De Assis N. 203 Cama</name>
-					</item>
-					<item>
-						<itextId>school_list-70</itextId>
-						<commune_list>Luinga</commune_list>
-						<municipality_list>Ambaca</municipality_list>
-						<name>Magisterio do Luinga N. 202</name>
-					</item>
-					<item>
-						<itextId>school_list-71</itextId>
-						<commune_list>Dondo</commune_list>
-						<municipality_list>Cambambe</municipality_list>
-						<name>Magisterio N. 802 Maurício Domingos - Dondo</name>
-					</item>
-				</root>
-			</instance>
-			<instance id="code_school">
-				<root>
-					<item>
-						<itextId>code_school-0</itextId>
-						<name>KN01</name>
-						<school_list>Escola Primaria N. 216 - Bairro Kanaltanjungo (KN01)</school_list>
-					</item>
-					<item>
-						<itextId>code_school-1</itextId>
-						<name>KN02</name>
-						<school_list>Escola Primaria N. 221 - Bairro Kangulungo (KN02)</school_list>
-					</item>
-					<item>
-						<itextId>code_school-2</itextId>
-						<name>KN03</name>
-						<school_list>Escota Primaria N. 237 - Bairro Bejs</school_list>
-					</item>
-					<item>
-						<itextId>code_school-3</itextId>
-						<name>KN04</name>
-						<school_list>Escola Primaria N. 216 - Bairro Kanaltanjungo (KN04)</school_list>
-					</item>
-					<item>
-						<itextId>code_school-4</itextId>
-						<name>KN05</name>
-						<school_list>Escola Primaria N. 213 - Bairro Povo Longe (KN05)</school_list>
-					</item>
-					<item>
-						<itextId>code_school-5</itextId>
-						<name>KN06</name>
-						<school_list>Escola Primaria N. 238 - Bairro Kimaco</school_list>
-					</item>
-					<item>
-						<itextId>code_school-6</itextId>
-						<name>KN07</name>
-						<school_list>Escola Primaria N. 213 - Bairro Povo Longe (KN07)</school_list>
-					</item>
-					<item>
-						<itextId>code_school-7</itextId>
-						<name>KN08</name>
-						<school_list>Magisterio do Luinga N. 202</school_list>
-					</item>
-					<item>
-						<itextId>code_school-8</itextId>
-						<name>KN09</name>
-						<school_list>Magisterio Capuchinlio S. Francisco De Assis N. 203 Cama</school_list>
-					</item>
-					<item>
-						<itextId>code_school-9</itextId>
-						<name>KN10</name>
-						<school_list>Complexo Escolar 28 de Agosto N. 205</school_list>
-					</item>
-					<item>
-						<itextId>code_school-10</itextId>
-						<name>KN11</name>
-						<school_list>Complexo Escolar N. 216 - Tango - Sede</school_list>
-					</item>
-					<item>
-						<itextId>code_school-11</itextId>
-						<name>KN12</name>
-						<school_list>Liceu Serra da Banga</school_list>
-					</item>
-					<item>
-						<itextId>code_school-12</itextId>
-						<name>KN13</name>
-						<school_list>Escola Primaria N. 609 - Pimbi</school_list>
-					</item>
-					<item>
-						<itextId>code_school-13</itextId>
-						<name>KN14</name>
-						<school_list>Escola Primaria N. 608 - Cahombo</school_list>
-					</item>
-					<item>
-						<itextId>code_school-14</itextId>
-						<name>KN15</name>
-						<school_list>Escola Primaria 827 km 34 Nova Cassoalala</school_list>
-					</item>
-					<item>
-						<itextId>code_school-15</itextId>
-						<name>KN16</name>
-						<school_list>Colegio N. 808 - 4 de Janeiro</school_list>
-					</item>
-					<item>
-						<itextId>code_school-16</itextId>
-						<name>KN17</name>
-						<school_list>Liceu de Cambamba N. 809 Andre Pass Caçasse zona -1</school_list>
-					</item>
-					<item>
-						<itextId>code_school-17</itextId>
-						<name>KN18</name>
-						<school_list>Complexo Escolar N. 830 Mucozo</school_list>
-					</item>
-					<item>
-						<itextId>code_school-18</itextId>
-						<name>KN19</name>
-						<school_list>Complexo Escolar N. 820 Comandante SarabI</school_list>
-					</item>
-					<item>
-						<itextId>code_school-19</itextId>
-						<name>KN20</name>
-						<school_list>Escola do Ensino Primario N. 818 Ngola Yetu</school_list>
-					</item>
-					<item>
-						<itextId>code_school-20</itextId>
-						<name>KN21</name>
-						<school_list>Magisterio N. 802 Maurício Domingos - Dondo</school_list>
-					</item>
-					<item>
-						<itextId>code_school-21</itextId>
-						<name>KN22</name>
-						<school_list>Complexo Escolar N. 811 Comandante Stona Alto - Dondo</school_list>
-					</item>
-					<item>
-						<itextId>code_school-22</itextId>
-						<name>KN23</name>
-						<school_list>Comiexto Escolar Manuel N, 814 Pedro Pacavira do Alto - C</school_list>
-					</item>
-					<item>
-						<itextId>code_school-23</itextId>
-						<name>KN24</name>
-						<school_list>Escola Prinnaria N. 5 Jose María Ferraz dos Santos</school_list>
-					</item>
-					<item>
-						<itextId>code_school-24</itextId>
-						<name>KN25</name>
-						<school_list>Escola Primaria N, 12 Vista</school_list>
-					</item>
-					<item>
-						<itextId>code_school-25</itextId>
-						<name>KN26</name>
-						<school_list>Liceu N. 35 Dr. Antonio Agostinho Neto - Sassa</school_list>
-					</item>
-					<item>
-						<itextId>code_school-26</itextId>
-						<name>KN27</name>
-						<school_list>Escota de Magisterio N. 29 Comandante Benedito - Ndalata</school_list>
-					</item>
-					<item>
-						<itextId>code_school-27</itextId>
-						<name>KN28</name>
-						<school_list>Complexo Escolar N 23 - Km13 - Zanga</school_list>
-					</item>
-					<item>
-						<itextId>code_school-28</itextId>
-						<name>KN29</name>
-						<school_list>Complexo Escolar N. 3 Metodista Unida</school_list>
-					</item>
-					<item>
-						<itextId>code_school-29</itextId>
-						<name>KN30</name>
-						<school_list>Complexo Escolar N.7 Hoji - Ya - Henda</school_list>
-					</item>
-					<item>
-						<itextId>code_school-30</itextId>
-						<name>KN31</name>
-						<school_list>Complexo Escolar N.14 Posse</school_list>
-					</item>
-					<item>
-						<itextId>code_school-31</itextId>
-						<name>KN32</name>
-						<school_list>Complexo Escolar N 16 Catome de Baixo</school_list>
-					</item>
-					<item>
-						<itextId>code_school-32</itextId>
-						<name>KN33</name>
-						<school_list>Complexo Escolar N.36 Paulo Teixeira Jorge</school_list>
-					</item>
-					<item>
-						<itextId>code_school-33</itextId>
-						<name>KN34</name>
-						<school_list>Complexo Escolar Cacolomboio N. 1006</school_list>
-					</item>
-					<item>
-						<itextId>code_school-34</itextId>
-						<name>KN35</name>
-						<school_list>Complexo Escolar: N.1004- Antonio Jacinto do Amaral Mar</school_list>
-					</item>
-					<item>
-						<itextId>code_school-35</itextId>
-						<name>KN36</name>
-						<school_list>Complexo Escolar N.1017 - Caleba</school_list>
-					</item>
-					<item>
-						<itextId>code_school-36</itextId>
-						<name>KN37</name>
-						<school_list>Escola do ensino Primario Santa Maria N, 1014</school_list>
-					</item>
-					<item>
-						<itextId>code_school-37</itextId>
-						<name>KN38</name>
-						<school_list>Escola do Ensino Primario Quiaposse N. 1005</school_list>
-					</item>
-					<item>
-						<itextId>code_school-38</itextId>
-						<name>KN39</name>
-						<school_list>Escola Primaria N. 1608 - Kiangombe</school_list>
-					</item>
-					<item>
-						<itextId>code_school-39</itextId>
-						<name>KN40</name>
-						<school_list>Escola Primaria N, 1607 Pambas</school_list>
-					</item>
-					<item>
-						<itextId>code_school-40</itextId>
-						<name>KN41</name>
-						<school_list>Escola Primaria N. 1602 - Imbondeiros</school_list>
-					</item>
-					<item>
-						<itextId>code_school-41</itextId>
-						<name>KN42</name>
-						<school_list>Escola Primaria N. 1605 - Maquela</school_list>
-					</item>
-					<item>
-						<itextId>code_school-42</itextId>
-						<name>KN43</name>
-						<school_list>Escola Primaria N. 1201 - Banza Quilombo</school_list>
-					</item>
-					<item>
-						<itextId>code_school-43</itextId>
-						<name>KN44</name>
-						<school_list>Escola Primaria N. 1817 - Calaiala</school_list>
-					</item>
-					<item>
-						<itextId>code_school-44</itextId>
-						<name>KN45</name>
-						<school_list>Escola Primaria N. 1801</school_list>
-					</item>
-					<item>
-						<itextId>code_school-45</itextId>
-						<name>KN46</name>
-						<school_list>Escola Primaria N. 1815 - K. Kasseno</school_list>
-					</item>
-					<item>
-						<itextId>code_school-46</itextId>
-						<name>KN47</name>
-						<school_list>Complexo escolar Missionario St. A, Kahenda N. 1805</school_list>
-					</item>
-					<item>
-						<itextId>code_school-47</itextId>
-						<name>KN48</name>
-						<school_list>Escola Primaria N. 1807 - Ngolome</school_list>
-					</item>
-					<item>
-						<itextId>code_school-48</itextId>
-						<name>KNX49</name>
-						<school_list>Escola Primaria N. 214 - Bairro Bindo</school_list>
-					</item>
-					<item>
-						<itextId>code_school-49</itextId>
-						<name>KNX50</name>
-						<school_list>Escola Primaria N. 228 - Bairro Zage</school_list>
-					</item>
-					<item>
-						<itextId>code_school-50</itextId>
-						<name>KNX51</name>
-						<school_list>Escola Primaria N. 221 - Bairro Kangulungo (KNX51)</school_list>
-					</item>
-					<item>
-						<itextId>code_school-51</itextId>
-						<name>KNX52</name>
-						<school_list>Complexo Escolar N. 218 - Maua - Sede</school_list>
-					</item>
-					<item>
-						<itextId>code_school-52</itextId>
-						<name>KNX53</name>
-						<school_list>Instituto Politecnico N. 1 - Dom Anastaclo Cahangode</school_list>
-					</item>
-					<item>
-						<itextId>code_school-53</itextId>
-						<name>KNX54</name>
-						<school_list>Compexo Escolar N. 403 Al. Nova</school_list>
-					</item>
-					<item>
-						<itextId>code_school-54</itextId>
-						<name>KNX55</name>
-						<school_list>Complexo Escolar N. 603 - 11 de Novembro</school_list>
-					</item>
-					<item>
-						<itextId>code_school-55</itextId>
-						<name>KNX56</name>
-						<school_list>Escola Primaria N. 835 - Zenza - do - Itombe</school_list>
-					</item>
-					<item>
-						<itextId>code_school-56</itextId>
-						<name>KNX57</name>
-						<school_list>Instituto Politecnico N. 807 Chico Mendellev - Cambambe</school_list>
-					</item>
-					<item>
-						<itextId>code_school-57</itextId>
-						<name>KNX58</name>
-						<school_list>Escola Primaria 837 Nova Cassoalala - Massangano</school_list>
-					</item>
-					<item>
-						<itextId>code_school-58</itextId>
-						<name>KNX59</name>
-						<school_list>Complexo Escolar N. 812 Soba GInbongo Alto - Dondo</school_list>
-					</item>
-					<item>
-						<itextId>code_school-59</itextId>
-						<name>KNX60</name>
-						<school_list>Complexo Escolar N. 821 Joao Cardoso Jordao</school_list>
-					</item>
-					<item>
-						<itextId>code_school-60</itextId>
-						<name>KNX61</name>
-						<school_list>Complexo Escolar Dom Bosco N.38</school_list>
-					</item>
-					<item>
-						<itextId>code_school-61</itextId>
-						<name>KNX62</name>
-						<school_list>Escola Primaria N 19 Kitata</school_list>
-					</item>
-					<item>
-						<itextId>code_school-62</itextId>
-						<name>KNX63</name>
-						<school_list>Complexo Escolar N. 34 Deolinda Rodrigues</school_list>
-					</item>
-					<item>
-						<itextId>code_school-63</itextId>
-						<name>KNX64</name>
-						<school_list>Complexo Escolar N 24 Kirima Hola - Zanga</school_list>
-					</item>
-					<item>
-						<itextId>code_school-64</itextId>
-						<name>KNX65</name>
-						<school_list>Escolar do Ensino Primario N, 1008 B - Beta</school_list>
-					</item>
-					<item>
-						<itextId>code_school-65</itextId>
-						<name>KNX66</name>
-						<school_list>Complexo Escolar N. 1015 Cambondo</school_list>
-					</item>
-					<item>
-						<itextId>code_school-66</itextId>
-						<name>KNX67</name>
-						<school_list>Esc. Prlmer. Missionaria Santo Hilarlao N. 1009</school_list>
-					</item>
-					<item>
-						<itextId>code_school-67</itextId>
-						<name>KNX68</name>
-						<school_list>Escola Primaria N, 1603 - Dundo Ya Mutulo I</school_list>
-					</item>
-					<item>
-						<itextId>code_school-68</itextId>
-						<name>KNX69</name>
-						<school_list>Escola Primaria N. 1601 - Ngola Nhl - Nlii</school_list>
-					</item>
-					<item>
-						<itextId>code_school-69</itextId>
-						<name>KNX70</name>
-						<school_list>Complexo Escolar N. 1203 - Comandante Sekouture</school_list>
-					</item>
-					<item>
-						<itextId>code_school-70</itextId>
-						<name>KNX71</name>
-						<school_list>Colegio N. 1S03 Samba Caju</school_list>
-					</item>
-					<item>
-						<itextId>code_school-71</itextId>
-						<name>KNX72</name>
-						<school_list>Escola Primaria N. 1808 - Zamba</school_list>
-					</item>
-				</root>
-			</instance>
-			<bind nodeset="/data/k_province" required="true()" type="text"/>
-			<bind nodeset="/data/k_municipality" required="true()" type="text"/>
-			<bind nodeset="/data/k_commune" required="true()" type="text"/>
-			<bind nodeset="/data/k_commune_other" relevant=" /data/k_commune  = 'Outros'" required="true()" type="text"/>
-			<bind nodeset="/data/k_school" required="true()" type="text"/>
-			<bind nodeset="/data/k_school_id" required="true()" type="text"/>
-			<bind constraint="regex(., '^[A-Za-z]{1,5}$')" jr:constraintMsg="jr:itext('/data/k_RecorderID:jr:constraintMsg')" nodeset="/data/k_RecorderID" required="true()" type="text"/>
-			<bind nodeset="/data/k_date" required="true()" type="date"/>
-			<bind nodeset="/data/kato_katz/k_add_more_child" required="true()" type="text"/>
-			<bind nodeset="/data/kato_katz/k" relevant=" ../k_add_more_child  = 'Sim'"/>
-			<bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/kato_katz/k/num:jr:constraintMsg')" nodeset="/data/kato_katz/k/num" required="true()" type="text"/>
-			<bind constraint=". =  ../num " jr:constraintMsg="jr:itext('/data/kato_katz/k/num2:jr:constraintMsg')" nodeset="/data/kato_katz/k/num2" required="true()" type="text"/>
-			<bind calculate="concat( /data/k_school_id , '-',  ../num )" nodeset="/data/kato_katz/k/code_id" readonly="true()" required="true()" type="text"/>
-			<bind nodeset="/data/kato_katz/k/sch_man_sa" required="true()" type="int"/>
-			<bind nodeset="/data/kato_katz/k/ascaris_lumb_sa" required="true()" type="int"/>
-			<bind nodeset="/data/kato_katz/k/hookworm_sa" required="true()" type="int"/>
-			<bind nodeset="/data/kato_katz/k/trichuris_sa" required="true()" type="int"/>
-			<bind nodeset="/data/kato_katz/k/sch_man_sb" required="true()" type="int"/>
-			<bind nodeset="/data/kato_katz/k/hookworm_sb" required="true()" type="int"/>
-			<bind nodeset="/data/kato_katz/k/ascaris_lumb_sb" required="true()" type="int"/>
-			<bind nodeset="/data/kato_katz/k/trichuris_sb" required="true()" type="int"/>
-			<bind nodeset="/data/kato_katz/k/remarks" type="text"/>
-			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/k_start" type="dateTime"/>
-			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/k_end" type="dateTime"/>
-			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="text"/>
-		</model>
-	</h:head>
-	<h:body>
-		<select1 ref="/data/k_province">
-			<label ref="jr:itext('/data/k_province:label')"/>
-			<item>
-				<label ref="jr:itext('/data/k_province/kwanza Norte:label')"/>
-				<value>kwanza Norte</value>
-			</item>
-		</select1>
-		<select1 ref="/data/k_municipality">
-			<label ref="jr:itext('/data/k_municipality:label')"/>
-			<itemset nodeset="instance('municipality_list')/root/item[province_list =  /data/k_province ]">
-				<value ref="name"/>
-				<label ref="jr:itext(itextId)"/>
-			</itemset>
-		</select1>
-		<select1 ref="/data/k_commune">
-			<label ref="jr:itext('/data/k_commune:label')"/>
-			<itemset nodeset="instance('commune_list')/root/item[municipality_list =  /data/k_municipality ]">
-				<value ref="name"/>
-				<label ref="jr:itext(itextId)"/>
-			</itemset>
-		</select1>
-		<input ref="/data/k_commune_other">
-			<label ref="jr:itext('/data/k_commune_other:label')"/>
-		</input>
-		<select1 ref="/data/k_school">
-			<label ref="jr:itext('/data/k_school:label')"/>
-			<itemset nodeset="instance('school_list')/root/item[municipality_list =  /data/k_municipality  and commune_list =  /data/k_commune ]">
-				<value ref="name"/>
-				<label ref="jr:itext(itextId)"/>
-			</itemset>
-		</select1>
-		<select1 ref="/data/k_school_id">
-			<label ref="jr:itext('/data/k_school_id:label')"/>
-			<itemset nodeset="instance('code_school')/root/item[school_list =  /data/k_school ]">
-				<value ref="name"/>
-				<label ref="jr:itext(itextId)"/>
-			</itemset>
-		</select1>
-		<input ref="/data/k_RecorderID">
-			<label ref="jr:itext('/data/k_RecorderID:label')"/>
-		</input>
-		<input ref="/data/k_date">
-			<label ref="jr:itext('/data/k_date:label')"/>
-		</input>
-		<group ref="/data/kato_katz">
-			<label ref="jr:itext('/data/kato_katz:label')"/>
-			<repeat nodeset="/data/kato_katz">
-				<select1 ref="/data/kato_katz/k_add_more_child">
-					<label ref="jr:itext('/data/kato_katz/k_add_more_child:label')"/>
-					<item>
-						<label ref="jr:itext('/data/kato_katz/k_add_more_child/Sim:label')"/>
-						<value>Sim</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/kato_katz/k_add_more_child/Nao:label')"/>
-						<value>Nao</value>
-					</item>
-				</select1>
-				<group ref="/data/kato_katz/k">
-					<label ref="jr:itext('/data/kato_katz/k:label')"/>
-					<input ref="/data/kato_katz/k/num">
-						<label ref="jr:itext('/data/kato_katz/k/num:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/num2">
-						<label ref="jr:itext('/data/kato_katz/k/num2:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/code_id">
-						<label ref="jr:itext('/data/kato_katz/k/code_id:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/sch_man_sa">
-						<label ref="jr:itext('/data/kato_katz/k/sch_man_sa:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/ascaris_lumb_sa">
-						<label ref="jr:itext('/data/kato_katz/k/ascaris_lumb_sa:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/hookworm_sa">
-						<label ref="jr:itext('/data/kato_katz/k/hookworm_sa:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/trichuris_sa">
-						<label ref="jr:itext('/data/kato_katz/k/trichuris_sa:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/sch_man_sb">
-						<label ref="jr:itext('/data/kato_katz/k/sch_man_sb:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/hookworm_sb">
-						<label ref="jr:itext('/data/kato_katz/k/hookworm_sb:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/ascaris_lumb_sb">
-						<label ref="jr:itext('/data/kato_katz/k/ascaris_lumb_sb:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/trichuris_sb">
-						<label ref="jr:itext('/data/kato_katz/k/trichuris_sb:label')"/>
-					</input>
-					<input ref="/data/kato_katz/k/remarks">
-						<label ref="jr:itext('/data/kato_katz/k/remarks:label')"/>
-					</input>
-				</group>
-			</repeat>
-		</group>
-	</h:body>
+      <instance>
+        <data id="ao_sch_sth_baseline_kuanza_3_kato_katz_202109_v7_2" version="20210715">
+          <k_province/>
+          <k_municipality/>
+          <k_commune/>
+          <k_school/>
+          <k_school_id/>
+          <k_RecorderID/>
+          <k_date/>
+          <kato_katz jr:template="">
+            <k_add_more_child/>
+            <k>
+              <num/>
+              <num2/>
+              <code_id/>
+              <sch_man_sa/>
+              <ascaris_lumb_sa/>
+              <hookworm_sa/>
+              <trichuris_sa/>
+              <sch_man_sb/>
+              <hookworm_sb/>
+              <ascaris_lumb_sb/>
+              <trichuris_sb/>
+              <remarks/>
+            </k>
+          </kato_katz>
+          <kato_katz>
+            <k_add_more_child/>
+            <k>
+              <num/>
+              <num2/>
+              <code_id/>
+              <sch_man_sa/>
+              <ascaris_lumb_sa/>
+              <hookworm_sa/>
+              <trichuris_sa/>
+              <sch_man_sb/>
+              <hookworm_sb/>
+              <ascaris_lumb_sb/>
+              <trichuris_sb/>
+              <remarks/>
+            </k>
+          </kato_katz>
+          <k_start/>
+          <k_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="Portugues">
+          <text id="/data/k_province:label">
+            <value>Província</value>
+          </text>
+          <text id="/data/k_municipality:label">
+            <value>Selecione o Município</value>
+          </text>
+          <text id="/data/k_commune:label">
+            <value>Comuna</value>
+          </text>
+          <text id="/data/k_school:label">
+            <value>Selecione a escola</value>
+          </text>
+          <text id="/data/k_school_id:label">
+            <value>Selecione o código da escola</value>
+          </text>
+          <text id="/data/k_RecorderID:jr:constraintMsg">
+            <value>The length cannot exceed 5 character and must not contain number</value>
+          </text>
+          <text id="/data/k_RecorderID:label">
+            <value>Iniciais do entrevistador</value>
+          </text>
+          <text id="/data/k_date:label">
+            <value>Data do questionário</value>
+          </text>
+          <text id="/data/kato_katz:label">
+            <value>kato_katz</value>
+          </text>
+          <text id="/data/kato_katz/k_add_more_child:label">
+            <value>Você quer adicionar uma criança ?</value>
+          </text>
+          <text id="/data/kato_katz/k_add_more_child/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/kato_katz/k_add_more_child/Nao:label">
+            <value>Nao</value>
+          </text>
+          <text id="/data/kato_katz/k:label">
+            <value>Resultados</value>
+          </text>
+          <text id="/data/kato_katz/k/num:jr:constraintMsg">
+            <value>The number must be 2 digit</value>
+          </text>
+          <text id="/data/kato_katz/k/num:label">
+            <value>Por favor, insira a carteira de estudante</value>
+          </text>
+          <text id="/data/kato_katz/k/num2:jr:constraintMsg">
+            <value>O código deve ser o mesmo</value>
+          </text>
+          <text id="/data/kato_katz/k/num2:label">
+            <value>Por favor, repita a carteira de estudante</value>
+          </text>
+          <text id="/data/kato_katz/k/code_id:label">
+            <value>ID exclusivo do participante</value>
+          </text>
+          <text id="/data/kato_katz/k/sch_man_sa:label">
+            <value>Schistosoma mansoni (eggs) – Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/ascaris_lumb_sa:label">
+            <value>Ascaris lumbricoides (eggs) – Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/hookworm_sa:label">
+            <value>Ancilóstomo – Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/trichuris_sa:label">
+            <value>Trichuris trichura – Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/sch_man_sb:label">
+            <value>Schistosoma mansoni (eggs) – Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/hookworm_sb:label">
+            <value>Ancilóstomo – Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/ascaris_lumb_sb:label">
+            <value>Ascaris lumbricoides (eggs) – Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/trichuris_sb:label">
+            <value>Trichuris trichura – Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/remarks:label">
+            <value>Comentários adicionais / Quer adicionar algum comentário sobre esta amostra?</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/k_province:label">
+            <value>Select the province</value>
+          </text>
+          <text id="/data/k_municipality:label">
+            <value>Select the district</value>
+          </text>
+          <text id="/data/k_commune:label">
+            <value>Select the sub-district</value>
+          </text>
+          <text id="/data/k_school:label">
+            <value>Select the school</value>
+          </text>
+          <text id="/data/k_school_id:label">
+            <value>Select the school code</value>
+          </text>
+          <text id="/data/k_RecorderID:jr:constraintMsg">
+            <value>O comprimento não pode exceder 5 caracteres e não deve conter número</value>
+          </text>
+          <text id="/data/k_RecorderID:label">
+            <value>Interviewer initials</value>
+          </text>
+          <text id="/data/k_date:label">
+            <value>Date of questionnaire</value>
+          </text>
+          <text id="/data/kato_katz:label">
+            <value>kato_katz</value>
+          </text>
+          <text id="/data/kato_katz/k_add_more_child:label">
+            <value>Do you want to add one child ?</value>
+          </text>
+          <text id="/data/kato_katz/k_add_more_child/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/kato_katz/k_add_more_child/Nao:label">
+            <value>No</value>
+          </text>
+          <text id="/data/kato_katz/k:label">
+            <value>Results</value>
+          </text>
+          <text id="/data/kato_katz/k/num:jr:constraintMsg">
+            <value>O número deve ter 2 dígitos</value>
+          </text>
+          <text id="/data/kato_katz/k/num:label">
+            <value>Please enter the student ID</value>
+          </text>
+          <text id="/data/kato_katz/k/num2:jr:constraintMsg">
+            <value>The code must be the same</value>
+          </text>
+          <text id="/data/kato_katz/k/num2:label">
+            <value>Please, repeat the unique ID</value>
+          </text>
+          <text id="/data/kato_katz/k/code_id:label">
+            <value>Participant Unique ID</value>
+          </text>
+          <text id="/data/kato_katz/k/sch_man_sa:label">
+            <value>Schistosoma mansoni (eggs) – Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/ascaris_lumb_sa:label">
+            <value>Ascaris lumbricoides (eggs) – Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/hookworm_sa:label">
+            <value>Hookworm – Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/trichuris_sa:label">
+            <value>Trichuris trichura – Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/sch_man_sb:label">
+            <value>Schistosoma mansoni (eggs) – Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/hookworm_sb:label">
+            <value>Hookworm – Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/ascaris_lumb_sb:label">
+            <value>Ascaris lumbricoides (eggs) – Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/trichuris_sb:label">
+            <value>Trichuris trichura – Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/remarks:label">
+            <value>Additional comment</value>
+          </text>
+        </translation>
+        <translation lang="French">
+          <text id="/data/k_province:label">
+            <value>Sélectionner la province</value>
+          </text>
+          <text id="/data/k_municipality:label">
+            <value>Sélectionner la municipalité</value>
+          </text>
+          <text id="/data/k_commune:label">
+            <value>Sélectionner la commune</value>
+          </text>
+          <text id="/data/k_school:label">
+            <value>Sélectionner l'école</value>
+          </text>
+          <text id="/data/k_school_id:label">
+            <value>Sélectionner le code de l'école</value>
+          </text>
+          <text id="/data/k_RecorderID:label">
+            <value>Initiales de l'enuêteur</value>
+          </text>
+          <text id="/data/k_date:label">
+            <value>Date</value>
+          </text>
+          <text id="/data/kato_katz:label">
+            <value>kato_katz</value>
+          </text>
+          <text id="/data/kato_katz/k_add_more_child:label">
+            <value>Voulez-vous ajouter un enfant?</value>
+          </text>
+          <text id="/data/kato_katz/k_add_more_child/Sim:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/kato_katz/k_add_more_child/Nao:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/kato_katz/k:label">
+            <value>Résultats</value>
+          </text>
+          <text id="/data/kato_katz/k/num:jr:constraintMsg">
+            <value>Le code doit être composé de deux chiffre</value>
+          </text>
+          <text id="/data/kato_katz/k/num:label">
+            <value>Veuillez entrer l'identifiant unique du participant</value>
+          </text>
+          <text id="/data/kato_katz/k/num2:jr:constraintMsg">
+            <value>Le code doit être le même</value>
+          </text>
+          <text id="/data/kato_katz/k/num2:label">
+            <value>Veuillez répéter l'identifiant unique du participant</value>
+          </text>
+          <text id="/data/kato_katz/k/code_id:label">
+            <value>ID unique du participant</value>
+          </text>
+          <text id="/data/kato_katz/k/sch_man_sa:label">
+            <value>Schistosoma mansoni (oeufs) - Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/ascaris_lumb_sa:label">
+            <value>Ascaris lumbricoides (œufs) - Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/hookworm_sa:label">
+            <value>Ankylostome - Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/trichuris_sa:label">
+            <value>Trichocéphale trichura - Slide A</value>
+          </text>
+          <text id="/data/kato_katz/k/sch_man_sb:label">
+            <value>Schistosoma mansoni (oeufs) - Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/hookworm_sb:label">
+            <value>Ankylostome - Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/ascaris_lumb_sb:label">
+            <value>Ascaris lumbricoides (œufs) - Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/trichuris_sb:label">
+            <value>Trichocéphale trichura - Slide B</value>
+          </text>
+          <text id="/data/kato_katz/k/remarks:label">
+            <value>Notes additionnelles</value>
+          </text>
+          <text id="/data/k_RecorderID:jr:constraintMsg">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/k_province" required="true()" type="text" db_get="col_1"/>
+      <bind nodeset="/data/k_municipality" required="true()" type="text" db_get="col_2" db_filter_by_col_1="/data/k_province"/>
+      <bind nodeset="/data/k_commune" required="true()" type="text" db_get="col_3" db_filter_by_col_2="/data/k_municipality"/>
+      <bind nodeset="/data/k_school" required="true()" type="text" db_get="col_4" db_filter_by_col_3="/data/k_commune"/>
+      <bind nodeset="/data/k_school_id" required="true()" type="text" db_get="col_5" db_filter_by_col_4="/data/k_school"/>
+      <bind constraint="regex(., '^[A-Za-z]{1,5}$')" jr:constraintMsg="jr:itext('/data/k_RecorderID:jr:constraintMsg')" nodeset="/data/k_RecorderID" required="true()" type="text"/>
+      <bind nodeset="/data/k_date" required="true()" type="date"/>
+      <bind nodeset="/data/kato_katz/k_add_more_child" required="true()" type="text"/>
+      <bind nodeset="/data/kato_katz/k" relevant=" ../k_add_more_child  = 'Sim'"/>
+      <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/kato_katz/k/num:jr:constraintMsg')" nodeset="/data/kato_katz/k/num" required="true()" type="text"/>
+      <bind constraint=". =  ../num " jr:constraintMsg="jr:itext('/data/kato_katz/k/num2:jr:constraintMsg')" nodeset="/data/kato_katz/k/num2" required="true()" type="text"/>
+      <bind calculate="concat( /data/k_school_id , '-',  ../num )" nodeset="/data/kato_katz/k/code_id" readonly="true()" required="true()" type="text"/>
+      <bind nodeset="/data/kato_katz/k/sch_man_sa" required="true()" type="int"/>
+      <bind nodeset="/data/kato_katz/k/ascaris_lumb_sa" required="true()" type="int"/>
+      <bind nodeset="/data/kato_katz/k/hookworm_sa" required="true()" type="int"/>
+      <bind nodeset="/data/kato_katz/k/trichuris_sa" required="true()" type="int"/>
+      <bind nodeset="/data/kato_katz/k/sch_man_sb" required="true()" type="int"/>
+      <bind nodeset="/data/kato_katz/k/hookworm_sb" required="true()" type="int"/>
+      <bind nodeset="/data/kato_katz/k/ascaris_lumb_sb" required="true()" type="int"/>
+      <bind nodeset="/data/kato_katz/k/trichuris_sb" required="true()" type="int"/>
+      <bind nodeset="/data/kato_katz/k/remarks" type="text"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/k_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/k_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="text"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/k_province">
+      <label ref="jr:itext('/data/k_province:label')"/>
+    </input>
+    <input ref="/data/k_municipality">
+      <label ref="jr:itext('/data/k_municipality:label')"/>
+    </input>
+    <input ref="/data/k_commune">
+      <label ref="jr:itext('/data/k_commune:label')"/>
+    </input>
+    <input ref="/data/k_school">
+      <label ref="jr:itext('/data/k_school:label')"/>
+    </input>
+    <input ref="/data/k_school_id">
+      <label ref="jr:itext('/data/k_school_id:label')"/>
+    </input>
+    <input ref="/data/k_RecorderID">
+      <label ref="jr:itext('/data/k_RecorderID:label')"/>
+    </input>
+    <input ref="/data/k_date">
+      <label ref="jr:itext('/data/k_date:label')"/>
+    </input>
+    <group ref="/data/kato_katz">
+      <label ref="jr:itext('/data/kato_katz:label')"/>
+      <repeat nodeset="/data/kato_katz">
+        <select1 ref="/data/kato_katz/k_add_more_child">
+          <label ref="jr:itext('/data/kato_katz/k_add_more_child:label')"/>
+          <item>
+            <label ref="jr:itext('/data/kato_katz/k_add_more_child/Sim:label')"/>
+            <value>Sim</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/kato_katz/k_add_more_child/Nao:label')"/>
+            <value>Nao</value>
+          </item>
+        </select1>
+        <group ref="/data/kato_katz/k">
+          <label ref="jr:itext('/data/kato_katz/k:label')"/>
+          <input ref="/data/kato_katz/k/num">
+            <label ref="jr:itext('/data/kato_katz/k/num:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/num2">
+            <label ref="jr:itext('/data/kato_katz/k/num2:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/code_id">
+            <label ref="jr:itext('/data/kato_katz/k/code_id:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/sch_man_sa">
+            <label ref="jr:itext('/data/kato_katz/k/sch_man_sa:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/ascaris_lumb_sa">
+            <label ref="jr:itext('/data/kato_katz/k/ascaris_lumb_sa:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/hookworm_sa">
+            <label ref="jr:itext('/data/kato_katz/k/hookworm_sa:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/trichuris_sa">
+            <label ref="jr:itext('/data/kato_katz/k/trichuris_sa:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/sch_man_sb">
+            <label ref="jr:itext('/data/kato_katz/k/sch_man_sb:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/hookworm_sb">
+            <label ref="jr:itext('/data/kato_katz/k/hookworm_sb:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/ascaris_lumb_sb">
+            <label ref="jr:itext('/data/kato_katz/k/ascaris_lumb_sb:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/trichuris_sb">
+            <label ref="jr:itext('/data/kato_katz/k/trichuris_sb:label')"/>
+          </input>
+          <input ref="/data/kato_katz/k/remarks">
+            <label ref="jr:itext('/data/kato_katz/k/remarks:label')"/>
+          </input>
+        </group>
+      </repeat>
+    </group>
+  </h:body>
 </h:html>
