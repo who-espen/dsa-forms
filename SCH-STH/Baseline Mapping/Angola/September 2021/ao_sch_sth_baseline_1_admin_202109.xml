@@ -11,7 +11,7 @@
     <model >
 
       <instance>
-        <data id="ao_sch_sth_baseline_kuanza_1_school_wash_202105_v7_2">
+        <data id="ao_sch_sth_kuanza_1_school_wash_202105_v7_2">
           <w_province/>
           <w_municipality/>
           <w_commune/>
@@ -4685,11 +4685,11 @@
           </item>
         </root>
       </instance>
-      <bind nodeset="/data/w_province" required="true()" type="text" db_add_col_1="."/>
-      <bind nodeset="/data/w_municipality" required="true()" type="text" db_add_col_1="/data/w_province" db_add_col_2="."/>
-      <bind nodeset="/data/w_commune" required="true()" type="text" db_add_col_2="/data/w_municipality" db_add_col_3="."/>
-      <bind nodeset="/data/w_school" required="true()" type="text" db_add_col_3="/data/w_commune" db_add_col_4="."/>
-      <bind nodeset="/data/w_school_id" required="true()" type="text" db_add_col_4="/data/w_school" db_add_col_5="."/>
+      <bind nodeset="/data/w_province" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/w_municipality" required="true()" type="string" db_add_col_1="/data/w_province" db_add_col_2="."/>
+      <bind nodeset="/data/w_commune" required="true()" type="string" db_add_col_2="/data/w_municipality" db_add_col_3="."/>
+      <bind nodeset="/data/w_school" required="true()" type="string" db_add_col_3="/data/w_commune" db_add_col_4="."/>
+      <bind nodeset="/data/w_school_id" required="true()" type="string" db_add_col_4="/data/w_school" db_add_col_5="."/>
       <bind nodeset="/data/w_gps" required="true()" type="geopoint"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/w_Start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/w_End" type="dateTime"/>
