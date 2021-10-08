@@ -10,39 +10,39 @@
     <h:title>(Octobre 2021) - 3. SCH/STH - Kato Katz</h:title>
     <model >
 
-  <instance>
-  <data id="tg_sch_sth_impact_3_kato_katz_202110_v1">
-    <k_RecorderID/>
-    <k_district/>
-    <k_subdistrict/>
-    <k_site_name/>
-    <k_site_id/>
-    <k_IDType/>
-    <k_Barcode_ID/>
-    <k_code_id/>
-    <k_code_id2/>
-    <k_sch_man_sa/>
-    <k_sch_man_sb/>
-    <k_ascaris_lumb_sa/>
-    <k_ascaris_lumb_sb/>
-    <k_hookworm_sa/>
-    <k_hookworm_sb/>
-    <k_trichuris_sa/>
-    <k_trichuris_sb/>
-    <k_other_name_1/>
-    <k_other_quantity_1sa/>
-    <k_other_quantity_1sb/>
-    <k_other_name_2/>
-    <k_other_quantity_2sa/>
-    <k_other_quantity_2sb/>
-    <k_remarks/>
-    <k_start/>
-    <k_end/>
-    <meta>
-      <instanceID/>
-    </meta>
-  </data>
-</instance>
+      <instance>
+        <data id="tg_sch_sth_impact_3_kato_katz_202110_v1_1">
+          <k_RecorderID/>
+          <k_district/>
+          <k_subdistrict/>
+          <k_site_name/>
+          <k_site_id/>
+          <k_IDType/>
+          <k_Barcode_ID/>
+          <k_code_id/>
+          <k_code_id2/>
+          <k_sch_man_sa/>
+          <k_sch_man_sb/>
+          <k_ascaris_lumb_sa/>
+          <k_ascaris_lumb_sb/>
+          <k_hookworm_sa/>
+          <k_hookworm_sb/>
+          <k_trichuris_sa/>
+          <k_trichuris_sb/>
+          <k_other_name_1/>
+          <k_other_quantity_1sa/>
+          <k_other_quantity_1sb/>
+          <k_other_name_2/>
+          <k_other_quantity_2sa/>
+          <k_other_quantity_2sb/>
+          <k_remarks/>
+          <k_start/>
+          <k_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
 
       <itext>
         <translation lang="English">
@@ -104,7 +104,7 @@
             <value>3 digit code assigned to each school</value>
           </text>
           <text id="/data/k_IDType:label">
-            <value>Participant identification type</value>
+            <value>Does a bar code need to be scanned on the diagnostic test?</value>
           </text>
           <text id="/data/k_IDType:hint">
             <value>Prefer barcode/QR code, use manual code only in case of scanner failure.</value>
@@ -116,16 +116,16 @@
             <value>Manual</value>
           </text>
           <text id="/data/k_Barcode_ID:label">
-            <value>Scan barcode now</value>
+            <value>Scan the QR code now</value>
           </text>
           <text id="/data/k_code_id:label">
-            <value>Enter unique ID from the diagnostic test</value>
+            <value>Enter the QR code manually</value>
           </text>
           <text id="/data/k_code_id2:jr:constraintMsg">
             <value>The repeated code must be the same</value>
           </text>
           <text id="/data/k_code_id2:label">
-            <value>Re-enter the unique ID</value>
+            <value>Re-enter the the QR code</value>
           </text>
           <text id="/data/k_sch_man_sa:label">
             <value>Schistosoma mansoni (eggs) – Slide A</value>
@@ -2353,7 +2353,7 @@
             <value>Sélectionner le code de l'école</value>
           </text>
           <text id="/data/k_IDType:label">
-            <value>Type d'identification du participant</value>
+            <value>Est-ce que le code barre du test de diagnostique a besoin d'être scanner?</value>
           </text>
           <text id="/data/k_IDType:hint">
             <value>Privilégier le code à barre/QR code, n'utiliser les code mannuel qu'en cas de défaillance du scanner.</value>
@@ -2365,16 +2365,16 @@
             <value>Mannuel</value>
           </text>
           <text id="/data/k_Barcode_ID:label">
-            <value>Scanner le code barre</value>
+            <value>Scanner le code QR</value>
           </text>
           <text id="/data/k_code_id:label">
-            <value>Entrer l'identifiant unique du test de diagnostique</value>
+            <value>Entrer Manuellement le code QR</value>
           </text>
           <text id="/data/k_code_id2:jr:constraintMsg">
             <value>Le code répété doit être le même</value>
           </text>
           <text id="/data/k_code_id2:label">
-            <value>Répéter l'identifiant unique</value>
+            <value>Répéter le code QR</value>
           </text>
           <text id="/data/k_sch_man_sa:label">
             <value>Schistosoma mansoni (oeufs) - Slide A</value>
@@ -4550,7 +4550,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="p_IDMethod">
         <root>
           <item>
@@ -8110,14 +8109,14 @@
         </root>
       </instance>
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/k_RecorderID:jr:constraintMsg')" nodeset="/data/k_RecorderID" required="true()" type="int"/>
-      <bind nodeset="/data/k_district" required="true()" type="text"/>
-      <bind nodeset="/data/k_subdistrict" required="true()" type="text"/>
-      <bind nodeset="/data/k_site_name" required="true()" type="text"/>
-      <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/k_site_id:jr:constraintMsg')" nodeset="/data/k_site_id" required="true()" type="text"/>
-      <bind nodeset="/data/k_IDType" required="true()" type="text"/>
+      <bind nodeset="/data/k_district" required="true()" type="string"/>
+      <bind nodeset="/data/k_subdistrict" required="true()" type="string"/>
+      <bind nodeset="/data/k_site_name" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/k_site_id:jr:constraintMsg')" nodeset="/data/k_site_id" required="true()" type="string"/>
+      <bind nodeset="/data/k_IDType" required="true()" type="string"/>
       <bind nodeset="/data/k_Barcode_ID" relevant=" /data/k_IDType  = 'Scanner'" required="true()" type="barcode"/>
-      <bind nodeset="/data/k_code_id" relevant=" /data/k_IDType != 'Scanner'" required="true()" type="text"/>
-      <bind constraint=". =  /data/k_code_id " jr:constraintMsg="jr:itext('/data/k_code_id2:jr:constraintMsg')" nodeset="/data/k_code_id2" relevant=" /data/k_IDType != 'Scanner'" required="true()" type="text"/>
+      <bind nodeset="/data/k_code_id" relevant=" /data/k_IDType != 'Scanner'" required="true()" type="string"/>
+      <bind constraint=". =  /data/k_code_id " jr:constraintMsg="jr:itext('/data/k_code_id2:jr:constraintMsg')" nodeset="/data/k_code_id2" relevant=" /data/k_IDType != 'Scanner'" required="true()" type="string"/>
       <bind nodeset="/data/k_sch_man_sa" required="true()" type="int"/>
       <bind nodeset="/data/k_sch_man_sb" required="true()" type="int"/>
       <bind nodeset="/data/k_ascaris_lumb_sa" required="true()" type="int"/>
@@ -8126,16 +8125,16 @@
       <bind nodeset="/data/k_hookworm_sb" required="true()" type="int"/>
       <bind nodeset="/data/k_trichuris_sa" required="true()" type="int"/>
       <bind nodeset="/data/k_trichuris_sb" required="true()" type="int"/>
-      <bind nodeset="/data/k_other_name_1" type="text"/>
+      <bind nodeset="/data/k_other_name_1" type="string"/>
       <bind nodeset="/data/k_other_quantity_1sa" type="int"/>
       <bind nodeset="/data/k_other_quantity_1sb" type="int"/>
-      <bind nodeset="/data/k_other_name_2" type="text"/>
+      <bind nodeset="/data/k_other_name_2" type="string"/>
       <bind nodeset="/data/k_other_quantity_2sa" type="int"/>
       <bind nodeset="/data/k_other_quantity_2sb" type="int"/>
-      <bind nodeset="/data/k_remarks" type="text"/>
+      <bind nodeset="/data/k_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/k_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/k_end" type="dateTime"/>
-      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="text"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body>
