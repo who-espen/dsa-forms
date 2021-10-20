@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Octobre 2021) - 2. SCH/STH – Enrôlement V4</h:title>
+    <h:title>(Octobre 2021) - 2. SCH/STH – Enrôlement V5</h:title>
     <model odk:xforms-version="1.0.0">
 
       <instance>
-        <data id="tg_sch_sth_impact_2_child_202110_v4">
+        <data id="tg_sch_sth_impact_2_child_202110_v5">
           <p_recorder/>
           <p_district/>
           <p_subdistrict/>
@@ -334,7 +334,7 @@
             <value>2. A refusé</value>
           </text>
           <text id="/data/p_barcodeid:jr:constraintMsg">
-            <value>Veuillez scanner le QR code du bon district. Les trois premières lettres du SR code doivent correspondre aux trois premières lettres du nom du district. For example, TCH0001 for TCHAOUDJO.</value>
+            <value>Veuillez scanner le QR code du bon district. Les trois premières lettres du SR code doivent correspondre aux trois premières lettres du nom du district. Par exemple: TCH0001 for TCHAOUDJO.</value>
           </text>
           <text id="/data/p_barcodeid:label">
             <value>Veuillez scanner le QR Code</value>
@@ -349,7 +349,7 @@
             <value>Non</value>
           </text>
           <text id="/data/p_manual_code_id:jr:constraintMsg">
-            <value>Veuillez saisir le code de l'autocollant du QR code. Le format est les trois premières lettres du district suivie de quatre chiffres. Par exemple, TCH0001 pour TCHAOUDJO</value>
+            <value>Veuillez saisir le code de l'autocollant du QR code. Le format est les trois premières lettres du district suivie de quatre chiffres. Par exemple: TCH0001 pour TCHAOUDJO</value>
           </text>
           <text id="/data/p_manual_code_id:label">
             <value>Saisez le code QR manuellement</value>
@@ -434,10 +434,11 @@
           </text>
         </translation>
       </itext>
+
       <bind nodeset="/data/p_recorder" required="true()" type="string"/>
-      <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/p_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
-      <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_subdistrict"/>
+      <bind nodeset="/data/p_district" required="true()" type="string"/>
+      <bind nodeset="/data/p_subdistrict" required="true()" type="string"/>
+      <bind nodeset="/data/p_site" required="true()" type="string"/>
       <bind nodeset="/data/p_consent_note" readonly="true()" type="string"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind constraint="regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/p_district , 0, 3) = substr(., 0, 3)" jr:constraintMsg="jr:itext('/data/p_barcodeid:jr:constraintMsg')" nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'A.donne'" type="barcode"/>
