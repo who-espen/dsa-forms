@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Octobre 2021) - 3. SCH/STH - Kato Katz v5</h:title>
-    <model >
+    <h:title>(Octobre 2021) - 3. SCH/STH - Kato Katz v5.1</h:title>
+    <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_3_kato_katz_202110_v5">
+        <data id="tg_sch_sth_impact_3_kato_katz_202110_v5_1">
           <k_Recorder/>
           <k_district/>
           <k_subdistrict/>
@@ -27,12 +27,15 @@
           <k_hookworm_sb/>
           <k_trichuris_sa/>
           <k_trichuris_sb/>
-          <k_other_name_1/>
-          <k_other_quantity_1_sa/>
-          <k_other_quantity_1_sb/>
-          <k_other_name_2/>
-          <k_other_quantity_2_sa/>
-          <k_other_quantity_2_sb/>
+          <k_other_exist/>
+          <k_other>
+            <name_1/>
+            <quantity_1_sa/>
+            <quantity_1_sb/>
+            <name_2/>
+            <quantity_2_sa/>
+            <quantity_2_sb/>
+          </k_other>
           <k_remarks/>
           <k_start/>
           <k_end/>
@@ -170,22 +173,34 @@
           <text id="/data/k_trichuris_sb:label">
             <value>Trichuris trichura – Slide B</value>
           </text>
-          <text id="/data/k_other_name_1:label">
+          <text id="/data/k_other_exist:label">
+            <value>Are there any other parasites you want to record?</value>
+          </text>
+          <text id="/data/k_other_exist/Oui:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/k_other_exist/Non:label">
+            <value>No</value>
+          </text>
+          <text id="/data/k_other:label">
+            <value>Other parasites</value>
+          </text>
+          <text id="/data/k_other/name_1:label">
             <value>Other (name 1)</value>
           </text>
-          <text id="/data/k_other_quantity_1_sa:label">
+          <text id="/data/k_other/quantity_1_sa:label">
             <value>Other (Quantity 1) - Slide A</value>
           </text>
-          <text id="/data/k_other_quantity_1_sb:label">
+          <text id="/data/k_other/quantity_1_sb:label">
             <value>Other (Quantity 1) - Slide B</value>
           </text>
-          <text id="/data/k_other_name_2:label">
+          <text id="/data/k_other/name_2:label">
             <value>Other (name 2)</value>
           </text>
-          <text id="/data/k_other_quantity_2_sa:label">
+          <text id="/data/k_other/quantity_2_sa:label">
             <value>Other (Quantity 2) - Slide A</value>
           </text>
-          <text id="/data/k_other_quantity_2_sb:label">
+          <text id="/data/k_other/quantity_2_sb:label">
             <value>Other (Quantity 2) - Slide B</value>
           </text>
           <text id="/data/k_remarks:label">
@@ -319,22 +334,34 @@
           <text id="/data/k_trichuris_sb:label">
             <value>Trichocéphale trichura - Slide B</value>
           </text>
-          <text id="/data/k_other_name_1:label">
+          <text id="/data/k_other_exist:label">
+            <value>Y a-t-il d'autres parasites que vous souhaitez enregistrer ?</value>
+          </text>
+          <text id="/data/k_other_exist/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/k_other_exist/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/k_other:label">
+            <value>Autres parasites</value>
+          </text>
+          <text id="/data/k_other/name_1:label">
             <value>Autres parasites (nom 1)</value>
           </text>
-          <text id="/data/k_other_quantity_1_sa:label">
+          <text id="/data/k_other/quantity_1_sa:label">
             <value>Autres parasites (Quantité 1) - Slide A</value>
           </text>
-          <text id="/data/k_other_quantity_1_sb:label">
+          <text id="/data/k_other/quantity_1_sb:label">
             <value>Autres parasites (Quantité 1) - Slide B</value>
           </text>
-          <text id="/data/k_other_name_2:label">
+          <text id="/data/k_other/name_2:label">
             <value>Autres parasites (nom 2)</value>
           </text>
-          <text id="/data/k_other_quantity_2_sa:label">
+          <text id="/data/k_other/quantity_2_sa:label">
             <value>Autres parasites (Quantité 2) - Slide A</value>
           </text>
-          <text id="/data/k_other_quantity_2_sb:label">
+          <text id="/data/k_other/quantity_2_sb:label">
             <value>Autres parasites (Quantité 2) - Slide B</value>
           </text>
           <text id="/data/k_remarks:label">
@@ -342,12 +369,12 @@
           </text>
         </translation>
       </itext>
-      <bind nodeset="/data/k_Recorder" required="true()" type="string"/>
+      <bind nodeset="/data/k_Recorder" required="true()" type="select1"/>
       <bind nodeset="/data/k_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/k_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/k_district"/>
       <bind nodeset="/data/k_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_subdistrict"/>
       <bind constraint="regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/k_district , 0, 3) = substr(., 0, 3)" jr:constraintMsg="jr:itext('/data/k_barcodeid:jr:constraintMsg')" nodeset="/data/k_barcodeid" type="barcode"/>
-      <bind nodeset="/data/k_barcode_ok" required="true()" type="string"/>
+      <bind nodeset="/data/k_barcode_ok" required="true()" type="select1"/>
       <bind constraint="regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/k_district , 0, 3) = substr(., 0, 3)" jr:constraintMsg="jr:itext('/data/k_manual_code_id:jr:constraintMsg')" nodeset="/data/k_manual_code_id" relevant=" /data/k_barcode_ok  = 'Non'" required="true()" type="string"/>
       <bind nodeset="/data/k_sch_man_sa" required="true()" type="int"/>
       <bind nodeset="/data/k_sch_man_sb" required="true()" type="int"/>
@@ -357,12 +384,14 @@
       <bind nodeset="/data/k_hookworm_sb" required="true()" type="int"/>
       <bind nodeset="/data/k_trichuris_sa" required="true()" type="int"/>
       <bind nodeset="/data/k_trichuris_sb" required="true()" type="int"/>
-      <bind nodeset="/data/k_other_name_1" type="string"/>
-      <bind nodeset="/data/k_other_quantity_1_sa" type="int"/>
-      <bind nodeset="/data/k_other_quantity_1_sb" type="int"/>
-      <bind nodeset="/data/k_other_name_2" type="string"/>
-      <bind nodeset="/data/k_other_quantity_2_sa" type="int"/>
-      <bind nodeset="/data/k_other_quantity_2_sb" type="int"/>
+      <bind nodeset="/data/k_other_exist" type="select1"/>
+      <bind nodeset="/data/k_other" relevant=" /data/k_other_exist  = 'Oui'"/>
+      <bind nodeset="/data/k_other/name_1" type="string"/>
+      <bind nodeset="/data/k_other/quantity_1_sa" type="int"/>
+      <bind nodeset="/data/k_other/quantity_1_sb" type="int"/>
+      <bind nodeset="/data/k_other/name_2" type="string"/>
+      <bind nodeset="/data/k_other/quantity_2_sa" type="int"/>
+      <bind nodeset="/data/k_other/quantity_2_sb" type="int"/>
       <bind nodeset="/data/k_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/k_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/k_end" type="dateTime"/>
@@ -515,24 +544,38 @@
     <input ref="/data/k_trichuris_sb">
       <label ref="jr:itext('/data/k_trichuris_sb:label')"/>
     </input>
-    <input ref="/data/k_other_name_1">
-      <label ref="jr:itext('/data/k_other_name_1:label')"/>
-    </input>
-    <input ref="/data/k_other_quantity_1_sa">
-      <label ref="jr:itext('/data/k_other_quantity_1_sa:label')"/>
-    </input>
-    <input ref="/data/k_other_quantity_1_sb">
-      <label ref="jr:itext('/data/k_other_quantity_1_sb:label')"/>
-    </input>
-    <input ref="/data/k_other_name_2">
-      <label ref="jr:itext('/data/k_other_name_2:label')"/>
-    </input>
-    <input ref="/data/k_other_quantity_2_sa">
-      <label ref="jr:itext('/data/k_other_quantity_2_sa:label')"/>
-    </input>
-    <input ref="/data/k_other_quantity_2_sb">
-      <label ref="jr:itext('/data/k_other_quantity_2_sb:label')"/>
-    </input>
+    <select1 ref="/data/k_other_exist">
+      <label ref="jr:itext('/data/k_other_exist:label')"/>
+      <item>
+        <label ref="jr:itext('/data/k_other_exist/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/k_other_exist/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/data/k_other">
+      <label ref="jr:itext('/data/k_other:label')"/>
+      <input ref="/data/k_other/name_1">
+        <label ref="jr:itext('/data/k_other/name_1:label')"/>
+      </input>
+      <input ref="/data/k_other/quantity_1_sa">
+        <label ref="jr:itext('/data/k_other/quantity_1_sa:label')"/>
+      </input>
+      <input ref="/data/k_other/quantity_1_sb">
+        <label ref="jr:itext('/data/k_other/quantity_1_sb:label')"/>
+      </input>
+      <input ref="/data/k_other/name_2">
+        <label ref="jr:itext('/data/k_other/name_2:label')"/>
+      </input>
+      <input ref="/data/k_other/quantity_2_sa">
+        <label ref="jr:itext('/data/k_other/quantity_2_sa:label')"/>
+      </input>
+      <input ref="/data/k_other/quantity_2_sb">
+        <label ref="jr:itext('/data/k_other/quantity_2_sb:label')"/>
+      </input>
+    </group>
     <input ref="/data/k_remarks">
       <label ref="jr:itext('/data/k_remarks:label')"/>
     </input>

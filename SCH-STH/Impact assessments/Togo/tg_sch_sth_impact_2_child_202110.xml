@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Octobre 2021) - 2. SCH/STH – Enrôlement V5</h:title>
-    <model >
+    <h:title>(Octobre 2021) - 2. SCH/STH – Enrôlement V5.1</h:title>
+    <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_2_child_202110_v5">
+        <data id="tg_sch_sth_impact_2_child_202110_v5_1">
           <p_recorder/>
           <p_district/>
           <p_subdistrict/>
@@ -161,10 +161,10 @@
             <value>The age must be between 4 and 15 years</value>
           </text>
           <text id="/data/p_age_yrs:label">
-            <value>Enter the age in years</value>
+            <value>Enter the child's age in years</value>
           </text>
           <text id="/data/p_sex:label">
-            <value>Select the gender</value>
+            <value>Select the gender of the child</value>
           </text>
           <text id="/data/p_sex/Feminin:label">
             <value>Female</value>
@@ -173,7 +173,7 @@
             <value>Male</value>
           </text>
           <text id="/data/p_collected_stool:label">
-            <value>Was a stool sample successfully collected from this person?</value>
+            <value>Was a stool sample successfully collected from this child?</value>
           </text>
           <text id="/data/p_collected_stool:hint">
             <value>*We do not want to come back to the house if they don't give a sample as we can't guarantee there won't be any swapping of samples.</value>
@@ -185,7 +185,7 @@
             <value>No</value>
           </text>
           <text id="/data/p_collected_urine:label">
-            <value>Was a urine sample successfully collected from this person?</value>
+            <value>Was a stool sample successfully collected from this child?</value>
           </text>
           <text id="/data/p_collected_urine/Oui:label">
             <value>Yes</value>
@@ -358,10 +358,10 @@
             <value>L'âge doit être compris entre 4 et 15 ans</value>
           </text>
           <text id="/data/p_age_yrs:label">
-            <value>Entrez l'âge en années</value>
+            <value>Entrez l'âge de l'enfant en années</value>
           </text>
           <text id="/data/p_sex:label">
-            <value>Sélectionnez le sexe</value>
+            <value>Sélectionnez le sexe de l'enfant</value>
           </text>
           <text id="/data/p_sex/Feminin:label">
             <value>Féminin</value>
@@ -370,7 +370,7 @@
             <value>Masculin</value>
           </text>
           <text id="/data/p_collected_stool:label">
-            <value>Un échantillon de selles a-t-il été prélevé de cette personne?</value>
+            <value>Un échantillon de selles de cet enfant a-t-il été prélevé ?</value>
           </text>
           <text id="/data/p_collected_stool:hint">
             <value>Nous ne voulons pas rentrer s'ils ne donnent pas d'échantillon car nous ne pouvons pas garantir qu'il n'y aura pas d'échange d'échantillons.</value>
@@ -382,7 +382,7 @@
             <value>Non</value>
           </text>
           <text id="/data/p_collected_urine:label">
-            <value>Un échantillon d'urine a-t-il été prélevé de cette personne?</value>
+            <value>Un échantillon d'urine de cet enfant a-t-il été prélevé ?</value>
           </text>
           <text id="/data/p_collected_urine/Oui:label">
             <value>Oui</value>
@@ -434,21 +434,22 @@
           </text>
         </translation>
       </itext>
-      <bind nodeset="/data/p_recorder" required="true()" type="string"/>
+
+      <bind nodeset="/data/p_recorder" required="true()" type="select1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
       <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_subdistrict"/>
       <bind nodeset="/data/p_consent_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/p_consent" required="true()" type="string"/>
+      <bind nodeset="/data/p_consent" required="true()" type="select1"/>
       <bind constraint="regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/p_district , 0, 3) = substr(., 0, 3)" jr:constraintMsg="jr:itext('/data/p_barcodeid:jr:constraintMsg')" nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'A.donne'" type="barcode"/>
-      <bind nodeset="/data/p_barcode_ok" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
+      <bind nodeset="/data/p_barcode_ok" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind constraint="regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/p_district , 0, 3) = substr(., 0, 3)" jr:constraintMsg="jr:itext('/data/p_manual_code_id:jr:constraintMsg')" nodeset="/data/p_manual_code_id" relevant=" /data/p_consent  = 'A.donne' and  /data/p_barcode_ok  = 'Non'" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="int"/>
-      <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
-      <bind nodeset="/data/p_collected_stool" relevant=" /data/p_consent  = 'A.donne' and ( /data/p_subdistrict  = 'AGBATITOE' or  /data/p_subdistrict  = 'AGOTIME ADAME' or  /data/p_subdistrict  = 'AKPAKPAKPE' or  /data/p_subdistrict  = 'ALEHERIDE' or  /data/p_subdistrict  = 'AOU MONO' or  /data/p_subdistrict  = 'ASSAHOUN FIAGBE' or  /data/p_subdistrict  = 'AVASSIKPE' or  /data/p_subdistrict  = 'AVEDZE' or  /data/p_subdistrict  = 'AVETONOU' or  /data/p_subdistrict  = 'BATOUME' or  /data/p_subdistrict  = 'BROUNFOU' or  /data/p_subdistrict  = 'CMS HANKELI' or  /data/p_subdistrict  = 'DALIA' or  /data/p_subdistrict  = 'DIMORI' or  /data/p_subdistrict  = 'HOPITAL SAINT GOTHARD DE DEDOME' or  /data/p_subdistrict  = 'HUILEHOE' or  /data/p_subdistrict  = 'KADAMBARA' or  /data/p_subdistrict  = 'KASSENA' or  /data/p_subdistrict  = 'KATI' or  /data/p_subdistrict  = 'KLABE APEGAME' or  /data/p_subdistrict  = 'KLOEGNAME' or  /data/p_subdistrict  = 'KLONOU' or  /data/p_subdistrict  = 'KOUNDOUM' or  /data/p_subdistrict  = 'KPAZA' or  /data/p_subdistrict  = 'LAMA TESSI' or  /data/p_subdistrict  = 'OGA' or  /data/p_subdistrict  = 'PATATOUKOU' or  /data/p_subdistrict  = 'SAGBADAI' or  /data/p_subdistrict  = 'SANDA AFOHOU' or  /data/p_subdistrict  = 'SANDA KAGBANDA' or  /data/p_subdistrict  = 'TAWOREDA' or  /data/p_subdistrict  = 'TCHALO' or  /data/p_subdistrict  = 'TCHATCHAMINADE' or  /data/p_subdistrict  = 'TETETOU')" required="true()" type="string"/>
-      <bind nodeset="/data/p_collected_urine" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
-      <bind nodeset="/data/p_grading" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui'" type="string"/>
-      <bind constraint="if(( /data/p_grading ='Trace.hemolysee' or  /data/p_grading ='+' or  /data/p_grading ='++' or  /data/p_grading ='+++' ) and . = 'Non', false(), true()) and if( /data/p_grading ='Trace.non.hemolysee' and . = 'Oui', false(), true())" jr:constraintMsg="jr:itext('/data/p_urine_conserve:jr:constraintMsg')" nodeset="/data/p_urine_conserve" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_grading != 'Negatif'" type="string"/>
+      <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
+      <bind nodeset="/data/p_collected_stool" relevant=" /data/p_consent  = 'A.donne' and ( /data/p_subdistrict  = 'AGBATITOE' or  /data/p_subdistrict  = 'AGOTIME ADAME' or  /data/p_subdistrict  = 'AKPAKPAKPE' or  /data/p_subdistrict  = 'ALEHERIDE' or  /data/p_subdistrict  = 'AOU MONO' or  /data/p_subdistrict  = 'ASSAHOUN FIAGBE' or  /data/p_subdistrict  = 'AVASSIKPE' or  /data/p_subdistrict  = 'AVEDZE' or  /data/p_subdistrict  = 'AVETONOU' or  /data/p_subdistrict  = 'BATOUME' or  /data/p_subdistrict  = 'BROUNFOU' or  /data/p_subdistrict  = 'CMS HANKELI' or  /data/p_subdistrict  = 'DALIA' or  /data/p_subdistrict  = 'DIMORI' or  /data/p_subdistrict  = 'HOPITAL SAINT GOTHARD DE DEDOME' or  /data/p_subdistrict  = 'HUILEHOE' or  /data/p_subdistrict  = 'KADAMBARA' or  /data/p_subdistrict  = 'KASSENA' or  /data/p_subdistrict  = 'KATI' or  /data/p_subdistrict  = 'KLABE APEGAME' or  /data/p_subdistrict  = 'KLOEGNAME' or  /data/p_subdistrict  = 'KLONOU' or  /data/p_subdistrict  = 'KOUNDOUM' or  /data/p_subdistrict  = 'KPAZA' or  /data/p_subdistrict  = 'LAMA TESSI' or  /data/p_subdistrict  = 'OGA' or  /data/p_subdistrict  = 'PATATOUKOU' or  /data/p_subdistrict  = 'SAGBADAI' or  /data/p_subdistrict  = 'SANDA AFOHOU' or  /data/p_subdistrict  = 'SANDA KAGBANDA' or  /data/p_subdistrict  = 'TAWOREDA' or  /data/p_subdistrict  = 'TCHALO' or  /data/p_subdistrict  = 'TCHATCHAMINADE' or  /data/p_subdistrict  = 'TETETOU')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_collected_urine" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
+      <bind nodeset="/data/p_grading" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui'" type="select1"/>
+      <bind constraint="if(( /data/p_grading ='Trace.hemolysee' or  /data/p_grading ='+' or  /data/p_grading ='++' or  /data/p_grading ='+++' ) and . = 'Non', false(), true()) and if( /data/p_grading ='Trace.non.hemolysee' and . = 'Oui', false(), true())" jr:constraintMsg="jr:itext('/data/p_urine_conserve:jr:constraintMsg')" nodeset="/data/p_urine_conserve" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_grading != 'Negatif'" type="select1"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'A.refuse'" type="string"/>
       <bind nodeset="/data/p_sample_note" readonly="true()" relevant=" /data/p_collected_stool  = 'Non' and  /data/p_collected_urine  = 'Non'" type="string"/>
       <bind nodeset="/data/p_remarks" type="string"/>
