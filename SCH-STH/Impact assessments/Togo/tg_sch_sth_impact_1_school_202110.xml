@@ -3349,7 +3349,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="recorders">
         <root>
           <item>
@@ -5708,9 +5707,9 @@
       </instance>
       <bind nodeset="/data/w_recorder" required="true()" type="string"/>
       <bind nodeset="/data/w_region" required="true()" type="string"/>
-      <bind nodeset="/data/w_district" required="true()" type="string"/>
-      <bind nodeset="/data/w_subdistrict" required="true()" type="string"/>
-      <bind nodeset="/data/w_site_name" required="true()" type="string"/>
+      <bind nodeset="/data/w_district" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/w_subdistrict" required="true()" type="string" db_add_col_1="/data/w_district" db_add_col_2="."/>
+      <bind nodeset="/data/w_site_name" required="true()" type="string" db_add_col_2="/data/w_subdistrict" db_add_col_3="."/>
       <bind nodeset="/data/w_school_name" required="true()" type="string"/>
       <bind nodeset="/data/w_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/w_source_exist" required="true()" type="string"/>
