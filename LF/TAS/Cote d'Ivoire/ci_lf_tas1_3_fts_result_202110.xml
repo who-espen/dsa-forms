@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -7,33 +7,34 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Octobre 2021) 6. TAS2 FL - Résultat FTS</h:title>
-    <model odk:xforms-version="1.0.0">
+    <h:title>(Octobre 2021) 3. TAS1 FL - Résultat FTS V2</h:title>
+    <model >
 
       <instance>
-        <data id="ci_lf_tas1_3_fts_result_202110">
+        <data id="ci_lf_tas1_3_fts_result_202110_v2">
           <d_recorderID/>
           <d_eu_name/>
           <d_district/>
           <d_cluster_name/>
           <d_cluster_id/>
-          <d_IDType/>
-          <d_BarcodeID/>
-          <d_GenerateID/>
-          <d_GenerateID2/>
+          <d_num/>
+          <d_num2/>
+          <d_code_id/>
           <d_lotnumber1/>
           <d_result1/>
           <d_why_invalid1/>
           <d_why_invalid_other1/>
           <d_display_result1/>
+          <d_image_1/>
           <d_need_second_test/>
           <d_lotnumber2/>
           <d_result2/>
-          <d_why_invalid2/>
+          <d_why_Invalid2/>
           <d_why_invalid_other2/>
           <d_display_result2/>
           <d_final_result/>
           <d_display_final_result/>
+          <d_image_2/>
           <d_positive_why_no_tx/>
           <notes_part/>
           <c_start/>
@@ -73,29 +74,26 @@
           <text id="/data/d_cluster_id:hint">
             <value>Le code a trois chiffre associé à chaque école</value>
           </text>
-          <text id="/data/d_IDType:label">
-            <value>Avez-vous besoin de scanner le code barre sur le test diagnostique</value>
+          <text id="/data/d_num:jr:constraintMsg">
+            <value>La valeur doit être compris entre 1 et 410</value>
           </text>
-          <text id="/data/d_IDType/Scanner:label">
-            <value>Scanner</value>
+          <text id="/data/d_num:label">
+            <value>Numéro d'ordre</value>
           </text>
-          <text id="/data/d_IDType/Generation automatique:label">
-            <value>Génération automatique</value>
+          <text id="/data/d_num:hint">
+            <value>Doit être compris entre 1 et 410</value>
           </text>
-          <text id="/data/d_BarcodeID:label">
-            <value>Scanner le code-barres maintenant</value>
+          <text id="/data/d_num2:jr:constraintMsg">
+            <value>Le numéro d'ordre doit être le même</value>
           </text>
-          <text id="/data/d_GenerateID:jr:constraintMsg">
-            <value>Doit être entré au format 123-123456 uniquement avec desnombre et tirets</value>
+          <text id="/data/d_num2:label">
+            <value>Répéter le numéro d'ordre</value>
           </text>
-          <text id="/data/d_GenerateID:label">
-            <value>Entrer le code d'identification unique du test de diagnostic (doit doit avoir le format 123-123456 uniquement avec des nombres et des tirets)</value>
+          <text id="/data/d_num2:hint">
+            <value>Doit être compris entre 1 et 410</value>
           </text>
-          <text id="/data/d_GenerateID2:jr:constraintMsg">
-            <value>Le code répété doit être le même</value>
-          </text>
-          <text id="/data/d_GenerateID2:label">
-            <value>Répéter l'identifiant unique</value>
+          <text id="/data/d_code_id:label">
+            <value>Entrer le code d'identification unique du test de diagnostic</value>
           </text>
           <text id="/data/d_lotnumber1:label">
             <value>Veuiller entrer le numéro de lot FTS 1</value>
@@ -106,14 +104,14 @@
           <text id="/data/d_result1:hint">
             <value>Invalide comprend des erreurs de test et un sang insuffisant</value>
           </text>
-          <text id="/data/d_result1/Positive:label">
+          <text id="/data/d_result1/Positif:label">
             <value>Positif</value>
           </text>
-          <text id="/data/d_result1/Negative:label">
+          <text id="/data/d_result1/Negatif:label">
             <value>Négatif</value>
           </text>
-          <text id="/data/d_result1/Invalid:label">
-            <value>Invalid</value>
+          <text id="/data/d_result1/Invalide:label">
+            <value>Invalide</value>
           </text>
           <text id="/data/d_why_invalid1:label">
             <value>Donner la raison du test invalide</value>
@@ -142,6 +140,9 @@
           <text id="/data/d_why_invalid_other1:label">
             <value>Donner la raison du test invalide</value>
           </text>
+          <text id="/data/d_image_1:label">
+            <value>Veuillez capturer l'image du test positif</value>
+          </text>
           <text id="/data/d_need_second_test:label">
             <value>Le premier résultat du test de ce participant est <output value=" /data/d_display_result1 "/>
 . Ce résultat nécessite un deuxième test. Continuez ce questionnaire pour entrer le deuxième résultat du test du participant.</value>
@@ -155,37 +156,37 @@
           <text id="/data/d_result2:hint">
             <value>Invalide comprend des erreurs de test et un sang insuffisant</value>
           </text>
-          <text id="/data/d_result2/Positive:label">
+          <text id="/data/d_result2/Positif:label">
             <value>Positif</value>
           </text>
-          <text id="/data/d_result2/Negative:label">
+          <text id="/data/d_result2/Negatif:label">
             <value>Négatif</value>
           </text>
-          <text id="/data/d_result2/Invalid:label">
-            <value>Invalid</value>
+          <text id="/data/d_result2/Invalide:label">
+            <value>Invalide</value>
           </text>
-          <text id="/data/d_why_invalid2:label">
+          <text id="/data/d_why_Invalid2:label">
             <value>Donnez la raison du test invalide</value>
           </text>
-          <text id="/data/d_why_invalid2/Absence.de.ligne.temoin/controle:label">
+          <text id="/data/d_why_Invalid2/Absence.de.ligne.temoin/controle:label">
             <value>Absence de ligne témoin/contrôle</value>
           </text>
-          <text id="/data/d_why_invalid2/Ligne.temoin.discontinue/partielle:label">
+          <text id="/data/d_why_Invalid2/Ligne.temoin.discontinue/partielle:label">
             <value>Ligne témoin discontinue/partielle</value>
           </text>
-          <text id="/data/d_why_invalid2/Difficulte.d.absorption.d.echantillon:label">
+          <text id="/data/d_why_Invalid2/Difficulte.d.absorption.d.echantillon:label">
             <value>Difficulté d'absorption d'échantillon</value>
           </text>
-          <text id="/data/d_why_invalid2/Difficulte.de.migration.d.echantillon:label">
+          <text id="/data/d_why_Invalid2/Difficulte.de.migration.d.echantillon:label">
             <value>Difficulté de migration d'échantillon</value>
           </text>
-          <text id="/data/d_why_invalid2/Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes):label">
+          <text id="/data/d_why_Invalid2/Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes):label">
             <value>Trace de sang persiste (sang resté sur la bandelette/a obscurci les lignes)</value>
           </text>
-          <text id="/data/d_why_invalid2/Insuffisance.du.volume.de.sang.du.a.la.pipette:label">
+          <text id="/data/d_why_Invalid2/Insuffisance.du.volume.de.sang.du.a.la.pipette:label">
             <value>Insuffisance du volume de sang dû à la pipette</value>
           </text>
-          <text id="/data/d_why_invalid2/Other:label">
+          <text id="/data/d_why_Invalid2/Other:label">
             <value>Autre (expliquer)</value>
           </text>
           <text id="/data/d_why_invalid_other2:label">
@@ -194,6 +195,9 @@
           <text id="/data/d_display_final_result:label">
             <value>Le résultat final de ce participant est : <output value=" /data/d_final_result "/>
             </value>
+          </text>
+          <text id="/data/d_image_2:label">
+            <value>Veuillez capturer l'image du test positif</value>
           </text>
           <text id="/data/d_positive_why_no_tx:label">
             <value>Veuillez préciser le plan de traitement de ce participant ou expliquer pourquoi le traitement n'est pas possible.</value>
@@ -230,29 +234,26 @@
           <text id="/data/d_cluster_id:hint">
             <value>The three-digit code associated with each school</value>
           </text>
-          <text id="/data/d_IDType:label">
-            <value>Does a bar code need to be scanned on the diagnostic test?</value>
+          <text id="/data/d_num:jr:constraintMsg">
+            <value>The value must be between 1 and 410</value>
           </text>
-          <text id="/data/d_IDType/Scanner:label">
-            <value>Scanner</value>
+          <text id="/data/d_num:label">
+            <value>Enter the order number</value>
           </text>
-          <text id="/data/d_IDType/Generation automatique:label">
-            <value>Automatic ID generation</value>
+          <text id="/data/d_num:hint">
+            <value>Must be between 1 and 410</value>
           </text>
-          <text id="/data/d_BarcodeID:label">
-            <value>Scan barcode now</value>
+          <text id="/data/d_num2:jr:constraintMsg">
+            <value>The order number must be the same</value>
           </text>
-          <text id="/data/d_GenerateID:jr:constraintMsg">
-            <value>Must be entered as 123-123456 only with number and dashes)</value>
+          <text id="/data/d_num2:label">
+            <value>Repeat order number</value>
           </text>
-          <text id="/data/d_GenerateID:label">
-            <value>Enter unique ID from the diagnostic test (must be entered as 123-123456 upper case only with dashes)</value>
+          <text id="/data/d_num2:hint">
+            <value>Must be between 1 and 410</value>
           </text>
-          <text id="/data/d_GenerateID2:jr:constraintMsg">
-            <value>Le code répété doit être le même</value>
-          </text>
-          <text id="/data/d_GenerateID2:label">
-            <value>Re-enter the unique ID</value>
+          <text id="/data/d_code_id:label">
+            <value>Enter unique ID from the diagnostic test</value>
           </text>
           <text id="/data/d_lotnumber1:label">
             <value>Please enter FTS lot number 1</value>
@@ -263,13 +264,13 @@
           <text id="/data/d_result1:hint">
             <value>"Invalid" includes testing errors and insufficient blood</value>
           </text>
-          <text id="/data/d_result1/Positive:label">
+          <text id="/data/d_result1/Positif:label">
             <value>Positive</value>
           </text>
-          <text id="/data/d_result1/Negative:label">
+          <text id="/data/d_result1/Negatif:label">
             <value>Negative</value>
           </text>
-          <text id="/data/d_result1/Invalid:label">
+          <text id="/data/d_result1/Invalide:label">
             <value>Invalid</value>
           </text>
           <text id="/data/d_why_invalid1:label">
@@ -299,6 +300,9 @@
           <text id="/data/d_why_invalid_other1:label">
             <value>Give reason for invalid test</value>
           </text>
+          <text id="/data/d_image_1:label">
+            <value>Please capture the image of the positive test</value>
+          </text>
           <text id="/data/d_need_second_test:label">
             <value>This participant's first test result was <output value=" /data/d_display_result1 "/>
 . This result requires a second test. Continue this questionnaire to enter the participant's second test result.</value>
@@ -312,37 +316,37 @@
           <text id="/data/d_result2:hint">
             <value>"Invalid" includes testing errors and insufficient blood</value>
           </text>
-          <text id="/data/d_result2/Positive:label">
+          <text id="/data/d_result2/Positif:label">
             <value>Positive</value>
           </text>
-          <text id="/data/d_result2/Negative:label">
+          <text id="/data/d_result2/Negatif:label">
             <value>Negative</value>
           </text>
-          <text id="/data/d_result2/Invalid:label">
+          <text id="/data/d_result2/Invalide:label">
             <value>Invalid</value>
           </text>
-          <text id="/data/d_why_invalid2:label">
+          <text id="/data/d_why_Invalid2:label">
             <value>Give reason for invalid test</value>
           </text>
-          <text id="/data/d_why_invalid2/Absence.de.ligne.temoin/controle:label">
+          <text id="/data/d_why_Invalid2/Absence.de.ligne.temoin/controle:label">
             <value>Absence of control line</value>
           </text>
-          <text id="/data/d_why_invalid2/Ligne.temoin.discontinue/partielle:label">
+          <text id="/data/d_why_Invalid2/Ligne.temoin.discontinue/partielle:label">
             <value>Broken/partial control line</value>
           </text>
-          <text id="/data/d_why_invalid2/Difficulte.d.absorption.d.echantillon:label">
+          <text id="/data/d_why_Invalid2/Difficulte.d.absorption.d.echantillon:label">
             <value>Difficulty of absorbing sample</value>
           </text>
-          <text id="/data/d_why_invalid2/Difficulte.de.migration.d.echantillon:label">
+          <text id="/data/d_why_Invalid2/Difficulte.de.migration.d.echantillon:label">
             <value>Difficulty of migrating sample</value>
           </text>
-          <text id="/data/d_why_invalid2/Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes):label">
+          <text id="/data/d_why_Invalid2/Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes):label">
             <value>Trace of blood persists</value>
           </text>
-          <text id="/data/d_why_invalid2/Insuffisance.du.volume.de.sang.du.a.la.pipette:label">
+          <text id="/data/d_why_Invalid2/Insuffisance.du.volume.de.sang.du.a.la.pipette:label">
             <value>Insufficient blood volume due to pipette</value>
           </text>
-          <text id="/data/d_why_invalid2/Other:label">
+          <text id="/data/d_why_Invalid2/Other:label">
             <value>Other (pleas explain)</value>
           </text>
           <text id="/data/d_why_invalid_other2:label">
@@ -351,6 +355,9 @@
           <text id="/data/d_display_final_result:label">
             <value>This participant's final result is: <output value=" /data/d_final_result "/>
             </value>
+          </text>
+          <text id="/data/d_image_2:label">
+            <value>Please capture the image of the positive test</value>
           </text>
           <text id="/data/d_positive_why_no_tx:label">
             <value>Please specify the plan to treat this participant or explain why treatment is not possible.</value>
@@ -365,35 +372,36 @@
       <bind nodeset="/data/d_eu_name" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_eu_name"/>
       <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_district"/>
-      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string"/>
-      <bind nodeset="/data/d_IDType" required="true()" type="string"/>
-      <bind nodeset="/data/d_BarcodeID" relevant=" /data/d_IDType  = &quot;Scanner&quot;" required="true()" type="barcode"/>
-      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_GenerateID:jr:constraintMsg')" nodeset="/data/d_GenerateID" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string"/>
-      <bind constraint=". =  /data/d_GenerateID " jr:constraintMsg="jr:itext('/data/d_GenerateID2:jr:constraintMsg')" nodeset="/data/d_GenerateID2" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string"/>
+      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/d_cluster_name"/>
+      <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
+      <bind constraint=". =  /data/d_num " jr:constraintMsg="jr:itext('/data/d_num2:jr:constraintMsg')" nodeset="/data/d_num2" required="true()" type="int"/>
+      <bind calculate="concat( /data/d_cluster_id , '-' , /data/d_num )" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
-      <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalid'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalide'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid_other1" relevant="selected( /data/d_why_invalid1 ,'Other')" required="true()" type="string"/>
       <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result1" required="true()" type="string"/>
-      <bind nodeset="/data/d_need_second_test" readonly="true()" relevant=" /data/d_result1 != 'Negative'" type="string"/>
-      <bind nodeset="/data/d_lotnumber2" relevant=" /data/d_result1 != 'Negative'" required="true()" type="string"/>
-      <bind nodeset="/data/d_result2" relevant=" /data/d_result1 != 'Negative'" required="true()" type="string"/>
-      <bind nodeset="/data/d_why_invalid2" relevant=" /data/d_result2  = 'Invalid'" required="true()" type="string"/>
-      <bind nodeset="/data/d_why_invalid_other2" relevant="selected( /data/d_why_invalid2 ,'Other')" required="true()" type="string"/>
-      <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result2" relevant=" /data/d_result1 != 'Negative'" type="string"/>
-      <bind calculate="if( /data/d_result1 =&quot;Positive&quot; and  /data/d_result2 =&quot;Positive&quot;, &quot;Positive&quot;,
- if( /data/d_result1 =&quot;Positive&quot; and  /data/d_result2 =&quot;Negative&quot;, &quot;Indeterminate&quot;,
- if( /data/d_result1 =&quot;Positive&quot; and  /data/d_result2 =&quot;Invalid&quot;, &quot;Positive&quot;,
- if( /data/d_result1 =&quot;Invalid&quot; and  /data/d_result2 =&quot;Positive&quot;, &quot;Positive&quot;,
- if( /data/d_result1 =&quot;Invalid&quot; and  /data/d_result2 =&quot;Invalid&quot;, &quot;Indeterminate&quot;,
- if( /data/d_result1 =&quot;Invalid&quot; and  /data/d_result2 =&quot;Negative&quot;, &quot;Negative&quot;, &quot;Negative&quot;)
+      <bind nodeset="/data/d_image_1" relevant=" /data/d_result1  = 'Positif'" required="true()" type="binary"/>
+      <bind nodeset="/data/d_need_second_test" readonly="true()" relevant=" /data/d_result1 != 'Negatif'" type="string"/>
+      <bind nodeset="/data/d_lotnumber2" relevant=" /data/d_result1 != 'Negatif'" required="true()" type="string"/>
+      <bind nodeset="/data/d_result2" relevant=" /data/d_result1 != 'Negatif'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_Invalid2" relevant=" /data/d_result2  = 'Invalide'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid_other2" relevant="selected( /data/d_why_Invalid2 ,'Other')" required="true()" type="string"/>
+      <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result2" relevant=" /data/d_result1 != 'Negatif'" type="string"/>
+      <bind calculate="if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Positif&quot;, &quot;Positif&quot;,
+ if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Negatif&quot;, &quot;Indeterminate&quot;,
+ if( /data/d_result1 =&quot;Positif&quot; and  /data/d_result2 =&quot;Invalide&quot;, &quot;Positif&quot;,
+ if( /data/d_result1 =&quot;Invalide&quot; and  /data/d_result2 =&quot;Positif&quot;, &quot;Positif&quot;,
+ if( /data/d_result1 =&quot;Invalide&quot; and  /data/d_result2 =&quot;Invalide&quot;, &quot;Indeterminate&quot;,
+ if( /data/d_result1 =&quot;Invalide&quot; and  /data/d_result2 =&quot;Negatif&quot;, &quot;Negatif&quot;, &quot;Negatif&quot;)
  )
  )
  )
  )
 )" nodeset="/data/d_final_result" type="string"/>
       <bind nodeset="/data/d_display_final_result" readonly="true()" type="string"/>
-      <bind nodeset="/data/d_positive_why_no_tx" relevant=" /data/d_final_result  = 'Positive'" type="string"/>
+      <bind nodeset="/data/d_image_2" relevant=" /data/d_result2  = 'Positif'" required="true()" type="binary"/>
+      <bind nodeset="/data/d_positive_why_no_tx" relevant=" /data/d_final_result  = 'Positif'" type="string"/>
       <bind nodeset="/data/notes_part" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
@@ -418,25 +426,16 @@
       <label ref="jr:itext('/data/d_cluster_id:label')"/>
       <hint ref="jr:itext('/data/d_cluster_id:hint')"/>
     </input>
-    <select1 ref="/data/d_IDType">
-      <label ref="jr:itext('/data/d_IDType:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_IDType/Scanner:label')"/>
-        <value>Scanner</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_IDType/Generation automatique:label')"/>
-        <value>Generation automatique</value>
-      </item>
-    </select1>
-    <input ref="/data/d_BarcodeID">
-      <label ref="jr:itext('/data/d_BarcodeID:label')"/>
+    <input ref="/data/d_num">
+      <label ref="jr:itext('/data/d_num:label')"/>
+      <hint ref="jr:itext('/data/d_num:hint')"/>
     </input>
-    <input ref="/data/d_GenerateID">
-      <label ref="jr:itext('/data/d_GenerateID:label')"/>
+    <input ref="/data/d_num2">
+      <label ref="jr:itext('/data/d_num2:label')"/>
+      <hint ref="jr:itext('/data/d_num2:hint')"/>
     </input>
-    <input ref="/data/d_GenerateID2">
-      <label ref="jr:itext('/data/d_GenerateID2:label')"/>
+    <input ref="/data/d_code_id">
+      <label ref="jr:itext('/data/d_code_id:label')"/>
     </input>
     <input ref="/data/d_lotnumber1">
       <label ref="jr:itext('/data/d_lotnumber1:label')"/>
@@ -445,16 +444,16 @@
       <label ref="jr:itext('/data/d_result1:label')"/>
       <hint ref="jr:itext('/data/d_result1:hint')"/>
       <item>
-        <label ref="jr:itext('/data/d_result1/Positive:label')"/>
-        <value>Positive</value>
+        <label ref="jr:itext('/data/d_result1/Positif:label')"/>
+        <value>Positif</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_result1/Negative:label')"/>
-        <value>Negative</value>
+        <label ref="jr:itext('/data/d_result1/Negatif:label')"/>
+        <value>Negatif</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_result1/Invalid:label')"/>
-        <value>Invalid</value>
+        <label ref="jr:itext('/data/d_result1/Invalide:label')"/>
+        <value>Invalide</value>
       </item>
     </select1>
     <select ref="/data/d_why_invalid1">
@@ -491,6 +490,9 @@
     <input ref="/data/d_why_invalid_other1">
       <label ref="jr:itext('/data/d_why_invalid_other1:label')"/>
     </input>
+    <upload mediatype="image/*" ref="/data/d_image_1">
+      <label ref="jr:itext('/data/d_image_1:label')"/>
+    </upload>
     <input ref="/data/d_need_second_test">
       <label ref="jr:itext('/data/d_need_second_test:label')"/>
     </input>
@@ -501,46 +503,46 @@
       <label ref="jr:itext('/data/d_result2:label')"/>
       <hint ref="jr:itext('/data/d_result2:hint')"/>
       <item>
-        <label ref="jr:itext('/data/d_result2/Positive:label')"/>
-        <value>Positive</value>
+        <label ref="jr:itext('/data/d_result2/Positif:label')"/>
+        <value>Positif</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_result2/Negative:label')"/>
-        <value>Negative</value>
+        <label ref="jr:itext('/data/d_result2/Negatif:label')"/>
+        <value>Negatif</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_result2/Invalid:label')"/>
-        <value>Invalid</value>
+        <label ref="jr:itext('/data/d_result2/Invalide:label')"/>
+        <value>Invalide</value>
       </item>
     </select1>
-    <select ref="/data/d_why_invalid2">
-      <label ref="jr:itext('/data/d_why_invalid2:label')"/>
+    <select ref="/data/d_why_Invalid2">
+      <label ref="jr:itext('/data/d_why_Invalid2:label')"/>
       <item>
-        <label ref="jr:itext('/data/d_why_invalid2/Absence.de.ligne.temoin/controle:label')"/>
+        <label ref="jr:itext('/data/d_why_Invalid2/Absence.de.ligne.temoin/controle:label')"/>
         <value>Absence.de.ligne.temoin/controle</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_why_invalid2/Ligne.temoin.discontinue/partielle:label')"/>
+        <label ref="jr:itext('/data/d_why_Invalid2/Ligne.temoin.discontinue/partielle:label')"/>
         <value>Ligne.temoin.discontinue/partielle</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_why_invalid2/Difficulte.d.absorption.d.echantillon:label')"/>
+        <label ref="jr:itext('/data/d_why_Invalid2/Difficulte.d.absorption.d.echantillon:label')"/>
         <value>Difficulte.d.absorption.d.echantillon</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_why_invalid2/Difficulte.de.migration.d.echantillon:label')"/>
+        <label ref="jr:itext('/data/d_why_Invalid2/Difficulte.de.migration.d.echantillon:label')"/>
         <value>Difficulte.de.migration.d.echantillon</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_why_invalid2/Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes):label')"/>
+        <label ref="jr:itext('/data/d_why_Invalid2/Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes):label')"/>
         <value>Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes)</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_why_invalid2/Insuffisance.du.volume.de.sang.du.a.la.pipette:label')"/>
+        <label ref="jr:itext('/data/d_why_Invalid2/Insuffisance.du.volume.de.sang.du.a.la.pipette:label')"/>
         <value>Insuffisance.du.volume.de.sang.du.a.la.pipette</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_why_invalid2/Other:label')"/>
+        <label ref="jr:itext('/data/d_why_Invalid2/Other:label')"/>
         <value>Other</value>
       </item>
     </select>
@@ -550,6 +552,9 @@
     <input ref="/data/d_display_final_result">
       <label ref="jr:itext('/data/d_display_final_result:label')"/>
     </input>
+    <upload mediatype="image/*" ref="/data/d_image_2">
+      <label ref="jr:itext('/data/d_image_2:label')"/>
+    </upload>
     <input ref="/data/d_positive_why_no_tx">
       <label ref="jr:itext('/data/d_positive_why_no_tx:label')"/>
     </input>
