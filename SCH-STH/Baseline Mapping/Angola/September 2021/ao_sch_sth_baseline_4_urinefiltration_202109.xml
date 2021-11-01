@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>4. Formulário de Filtração de Urina V7.2</h:title>
+    <model >
+
+      <instance>
+        <data id="ao_sch_sth_kuanza_4_urine_202105_v7_2" version="20210715">
+          <u_province/>
+          <u_municipality/>
+          <u_commune/>
+          <u_school/>
+          <u_school_id/>
+          <u_RecorderID/>
+          <u_date/>
+          <urinefiltration jr:template="">
+            <u_add_more_child/>
+            <u>
+              <num/>
+              <num2/>
+              <code_id/>
+              <nbr_eggs/>
+              <remarks/>
+            </u>
+          </urinefiltration>
+          <urinefiltration>
+            <u_add_more_child/>
+            <u>
+              <num/>
+              <num2/>
+              <code_id/>
+              <nbr_eggs/>
+              <remarks/>
+            </u>
+          </urinefiltration>
+          <u_start/>
+          <u_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="Portugues">
+          <text id="/data/u_province:label">
+            <value>Província</value>
+          </text>
+          <text id="/data/u_municipality:label">
+            <value>Selecione o Município</value>
+          </text>
+          <text id="/data/u_commune:label">
+            <value>Comuna</value>
+          </text>
+          <text id="/data/u_school:label">
+            <value>Selecione a escola</value>
+          </text>
+          <text id="/data/u_school_id:label">
+            <value>Selecione o código da escola</value>
+          </text>
+          <text id="/data/u_RecorderID:jr:constraintMsg">
+            <value>The length cannot exceed 5 character and must not contain number</value>
+          </text>
+          <text id="/data/u_RecorderID:label">
+            <value>Iniciais do entrevistador</value>
+          </text>
+          <text id="/data/u_date:label">
+            <value>Data do questionário</value>
+          </text>
+          <text id="/data/urinefiltration:label">
+            <value>Filtração de Urina</value>
+          </text>
+          <text id="/data/urinefiltration/u_add_more_child:label">
+            <value>Você quer adicionar uma criança ?</value>
+          </text>
+          <text id="/data/urinefiltration/u_add_more_child/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/urinefiltration/u_add_more_child/Nao:label">
+            <value>Nao</value>
+          </text>
+          <text id="/data/urinefiltration/u:label">
+            <value>Resultados</value>
+          </text>
+          <text id="/data/urinefiltration/u/num:jr:constraintMsg">
+            <value>The number must be 2 digit</value>
+          </text>
+          <text id="/data/urinefiltration/u/num:label">
+            <value>Por favor, insira a carteira de estudante</value>
+          </text>
+          <text id="/data/urinefiltration/u/num2:jr:constraintMsg">
+            <value>O código deve ser o mesmo</value>
+          </text>
+          <text id="/data/urinefiltration/u/num2:label">
+            <value>Por favor, repita a carteira de estudante</value>
+          </text>
+          <text id="/data/urinefiltration/u/code_id:label">
+            <value>ID exclusivo do participante</value>
+          </text>
+          <text id="/data/urinefiltration/u/nbr_eggs:label">
+            <value>Numero de ovos</value>
+          </text>
+          <text id="/data/urinefiltration/u/remarks:label">
+            <value>Comentários adicionais:</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/u_province:label">
+            <value>Select the province</value>
+          </text>
+          <text id="/data/u_municipality:label">
+            <value>Select the district</value>
+          </text>
+          <text id="/data/u_commune:label">
+            <value>Select the sub-district</value>
+          </text>
+          <text id="/data/u_school:label">
+            <value>Select the school</value>
+          </text>
+          <text id="/data/u_school_id:label">
+            <value>Select the school code</value>
+          </text>
+          <text id="/data/u_RecorderID:jr:constraintMsg">
+            <value>O comprimento não pode exceder 5 caracteres e não deve conter número</value>
+          </text>
+          <text id="/data/u_RecorderID:label">
+            <value>Interviewer initials</value>
+          </text>
+          <text id="/data/u_date:label">
+            <value>Date of questionnaire</value>
+          </text>
+          <text id="/data/urinefiltration:label">
+            <value>Urine filtration</value>
+          </text>
+          <text id="/data/urinefiltration/u_add_more_child:label">
+            <value>Do you want to add one child ?</value>
+          </text>
+          <text id="/data/urinefiltration/u_add_more_child/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/urinefiltration/u_add_more_child/Nao:label">
+            <value>No</value>
+          </text>
+          <text id="/data/urinefiltration/u:label">
+            <value>Results</value>
+          </text>
+          <text id="/data/urinefiltration/u/num:jr:constraintMsg">
+            <value>O número deve ter 2 dígitos</value>
+          </text>
+          <text id="/data/urinefiltration/u/num:label">
+            <value>Please enter the student ID</value>
+          </text>
+          <text id="/data/urinefiltration/u/num2:jr:constraintMsg">
+            <value>The code must be the same</value>
+          </text>
+          <text id="/data/urinefiltration/u/num2:label">
+            <value>Please, repeat the unique ID</value>
+          </text>
+          <text id="/data/urinefiltration/u/code_id:label">
+            <value>Participant Unique ID</value>
+          </text>
+          <text id="/data/urinefiltration/u/nbr_eggs:label">
+            <value>Number of eggs</value>
+          </text>
+          <text id="/data/urinefiltration/u/remarks:label">
+            <value>Additional comment</value>
+          </text>
+        </translation>
+        <translation lang="French">
+          <text id="/data/u_province:label">
+            <value>Sélectionner la province</value>
+          </text>
+          <text id="/data/u_municipality:label">
+            <value>Sélectionner la municipalité</value>
+          </text>
+          <text id="/data/u_commune:label">
+            <value>Sélectionner la commune</value>
+          </text>
+          <text id="/data/u_school:label">
+            <value>Sélectionner l'école</value>
+          </text>
+          <text id="/data/u_school_id:label">
+            <value>Sélectionner le code de l'école</value>
+          </text>
+          <text id="/data/u_RecorderID:label">
+            <value>Initiales de l'enquêteur</value>
+          </text>
+          <text id="/data/u_date:label">
+            <value>Date de l'enquête</value>
+          </text>
+          <text id="/data/urinefiltration:label">
+            <value>Filtration d'urine</value>
+          </text>
+          <text id="/data/urinefiltration/u_add_more_child:label">
+            <value>Voulez-vous ajouter un enfant?</value>
+          </text>
+          <text id="/data/urinefiltration/u_add_more_child/Sim:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/urinefiltration/u_add_more_child/Nao:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/urinefiltration/u:label">
+            <value>Résultats</value>
+          </text>
+          <text id="/data/urinefiltration/u/num:jr:constraintMsg">
+            <value>Le code doit être composé de deux chiffre</value>
+          </text>
+          <text id="/data/urinefiltration/u/num2:jr:constraintMsg">
+            <value>Le code doit être le même</value>
+          </text>
+          <text id="/data/urinefiltration/u/num2:label">
+            <value>Veuillez répéter l'identifiant unique du participant</value>
+          </text>
+          <text id="/data/urinefiltration/u/code_id:label">
+            <value>ID unique du participant</value>
+          </text>
+          <text id="/data/urinefiltration/u/nbr_eggs:label">
+            <value>Nombre d'oeufs</value>
+          </text>
+          <text id="/data/urinefiltration/u/remarks:label">
+            <value>Notes additionnelles</value>
+          </text>
+          <text id="/data/u_RecorderID:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/urinefiltration/u/num:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/u_province" required="true()" type="text" db_get="col_1"/>
+      <bind nodeset="/data/u_municipality" required="true()" type="text" db_get="col_2" db_filter_by_col_1="/data/u_province"/>
+      <bind nodeset="/data/u_commune" required="true()" type="text" db_get="col_3" db_filter_by_col_2="/data/u_municipality"/>
+      <bind nodeset="/data/u_school" required="true()" type="text" db_get="col_4" db_filter_by_col_3="/data/u_commune"/>
+      <bind nodeset="/data/u_school_id" required="true()" type="text" db_get="col_5" db_filter_by_col_4="/data/u_school"/>
+      <bind constraint="regex(., '^[A-Za-z]{1,5}$')" jr:constraintMsg="jr:itext('/data/u_RecorderID:jr:constraintMsg')" nodeset="/data/u_RecorderID" required="true()" type="text"/>
+      <bind nodeset="/data/u_date" required="true()" type="date"/>
+      <bind nodeset="/data/urinefiltration/u_add_more_child" required="true()" type="text"/>
+      <bind nodeset="/data/urinefiltration/u" relevant=" ../u_add_more_child  = 'Sim'"/>
+      <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/urinefiltration/u/num:jr:constraintMsg')" nodeset="/data/urinefiltration/u/num" required="true()" type="text"/>
+      <bind constraint=". =  ../num " jr:constraintMsg="jr:itext('/data/urinefiltration/u/num2:jr:constraintMsg')" nodeset="/data/urinefiltration/u/num2" required="true()" type="text"/>
+      <bind calculate="concat( /data/u_school_id , '-',  ../num )" nodeset="/data/urinefiltration/u/code_id" readonly="true()" required="true()" type="text"/>
+      <bind nodeset="/data/urinefiltration/u/nbr_eggs" required="true()" type="int"/>
+      <bind nodeset="/data/urinefiltration/u/remarks" type="text"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="text"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/u_province">
+      <label ref="jr:itext('/data/u_province:label')"/>
+    </input>
+    <input ref="/data/u_municipality">
+      <label ref="jr:itext('/data/u_municipality:label')"/>
+    </input>
+    <input ref="/data/u_commune">
+      <label ref="jr:itext('/data/u_commune:label')"/>
+    </input>
+    <input ref="/data/u_school">
+      <label ref="jr:itext('/data/u_school:label')"/>
+    </input>
+    <input ref="/data/u_school_id">
+      <label ref="jr:itext('/data/u_school_id:label')"/>
+    </input>
+    <input ref="/data/u_RecorderID">
+      <label ref="jr:itext('/data/u_RecorderID:label')"/>
+    </input>
+    <input ref="/data/u_date">
+      <label ref="jr:itext('/data/u_date:label')"/>
+    </input>
+    <group ref="/data/urinefiltration">
+      <label ref="jr:itext('/data/urinefiltration:label')"/>
+      <repeat nodeset="/data/urinefiltration">
+        <select1 ref="/data/urinefiltration/u_add_more_child">
+          <label ref="jr:itext('/data/urinefiltration/u_add_more_child:label')"/>
+          <item>
+            <label ref="jr:itext('/data/urinefiltration/u_add_more_child/Sim:label')"/>
+            <value>Sim</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/urinefiltration/u_add_more_child/Nao:label')"/>
+            <value>Nao</value>
+          </item>
+        </select1>
+        <group ref="/data/urinefiltration/u">
+          <label ref="jr:itext('/data/urinefiltration/u:label')"/>
+          <input ref="/data/urinefiltration/u/num">
+            <label ref="jr:itext('/data/urinefiltration/u/num:label')"/>
+          </input>
+          <input ref="/data/urinefiltration/u/num2">
+            <label ref="jr:itext('/data/urinefiltration/u/num2:label')"/>
+          </input>
+          <input ref="/data/urinefiltration/u/code_id">
+            <label ref="jr:itext('/data/urinefiltration/u/code_id:label')"/>
+          </input>
+          <input ref="/data/urinefiltration/u/nbr_eggs">
+            <label ref="jr:itext('/data/urinefiltration/u/nbr_eggs:label')"/>
+          </input>
+          <input ref="/data/urinefiltration/u/remarks">
+            <label ref="jr:itext('/data/urinefiltration/u/remarks:label')"/>
+          </input>
+        </group>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>

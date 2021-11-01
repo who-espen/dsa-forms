@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(octobre 2021) Burkina Faso Oncho_Entomo - 3. Formulaire Resultats dissection V1</h:title>
+    <model >
+
+      <instance>
+        <data id="bf_Oncho_Entomo_3_Resultat Dissection_202110_v1" version="20211001">
+          <Identifiant_Technicien/>
+          <District/>
+          <Nom_du_CSPS/>
+          <Nom_du_point_de_capture/>
+          <Date_collecte/>
+          <Date_dissection/>
+          <Heure_capture/>
+          <Similies_capturees/>
+          <Similies_dissequees/>
+          <Similies_infectieuses/>
+          <larves_infectantes/>
+          <Initial_technicien/>
+          <commentaires/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation lang="French">
+          <text id="/data/Identifiant_Technicien:label">
+            <value>Identifiant du Captureur</value>
+          </text>
+          <text id="/data/Identifiant_Technicien/01:label">
+            <value>01</value>
+          </text>
+          <text id="/data/Identifiant_Technicien/02:label">
+            <value>02</value>
+          </text>
+          <text id="/data/District:label">
+            <value>Sélectionner un DS</value>
+          </text>
+          <text id="/data/District/Banfora:label">
+            <value>Banfora</value>
+          </text>
+          <text id="/data/District/Mangodara:label">
+            <value>Mangodara</value>
+          </text>
+          <text id="/data/District/Sindou:label">
+            <value>Sindou</value>
+          </text>
+          <text id="/data/Nom_du_CSPS:label">
+            <value>Nom du CSPS</value>
+          </text>
+          <text id="/data/Nom_du_point_de_capture:label">
+            <value>Nom du point de capture</value>
+          </text>
+          <text id="/data/Date_collecte:label">
+            <value>Date de collecte</value>
+          </text>
+          <text id="/data/Date_dissection:label">
+            <value>Date de dissection</value>
+          </text>
+          <text id="/data/Heure_capture:label">
+            <value>Heure de capture</value>
+          </text>
+          <text id="/data/Heure_capture/7 h-8 h:label">
+            <value>7 h-8 h</value>
+          </text>
+          <text id="/data/Heure_capture/8 h-9 h:label">
+            <value>8 h-9 h</value>
+          </text>
+          <text id="/data/Heure_capture/9 h-10 h:label">
+            <value>9 h-10 h</value>
+          </text>
+          <text id="/data/Heure_capture/10 h-11 h:label">
+            <value>10 h-11 h</value>
+          </text>
+          <text id="/data/Heure_capture/11 h-12 h:label">
+            <value>11 h-12 h</value>
+          </text>
+          <text id="/data/Heure_capture/12 h-13 h:label">
+            <value>12 h-13 h</value>
+          </text>
+          <text id="/data/Heure_capture/13 h-14 h:label">
+            <value>13 h-14 h</value>
+          </text>
+          <text id="/data/Heure_capture/14 h-15 h:label">
+            <value>14 h-15 h</value>
+          </text>
+          <text id="/data/Heure_capture/15 h-16 h:label">
+            <value>15 h-16 h</value>
+          </text>
+          <text id="/data/Heure_capture/16 h-17 h:label">
+            <value>16 h-17 h</value>
+          </text>
+          <text id="/data/Heure_capture/17 h-18 h:label">
+            <value>17 h-18 h</value>
+          </text>
+          <text id="/data/Similies_capturees:label">
+            <value>Nombre de similies capturées</value>
+          </text>
+          <text id="/data/Similies_dissequees:jr:constraintMsg">
+            <value>Le nombre doit être inférieure ou égale aux simulies capturées</value>
+          </text>
+          <text id="/data/Similies_dissequees:label">
+            <value>Nombre de similies dissequées</value>
+          </text>
+          <text id="/data/Similies_infectieuses:jr:constraintMsg">
+            <value>Le nombre doit être inférieure ou égale aux simulies infectueses</value>
+          </text>
+          <text id="/data/Similies_infectieuses:label">
+            <value>Nombre de similies infectieuses</value>
+          </text>
+          <text id="/data/larves_infectantes:jr:constraintMsg">
+            <value>Le nombre doit être inférieure ou égale aux larves infectantes</value>
+          </text>
+          <text id="/data/larves_infectantes:label">
+            <value>Nombre de larves infectantes</value>
+          </text>
+          <text id="/data/Initial_technicien:label">
+            <value>Initial du technicien</value>
+          </text>
+          <text id="/data/commentaires:label">
+            <value>Commentaires</value>
+          </text>
+          <text id="technicien_list-0">
+            <value>01</value>
+          </text>
+          <text id="technicien_list-1">
+            <value>02</value>
+          </text>
+          <text id="ds_list-0">
+            <value>Banfora</value>
+          </text>
+          <text id="ds_list-1">
+            <value>Mangodara</value>
+          </text>
+          <text id="ds_list-2">
+            <value>Sindou</value>
+          </text>
+          <text id="CSPS_list-0">
+            <value>Boko</value>
+          </text>
+          <text id="CSPS_list-1">
+            <value>Gbagbar</value>
+          </text>
+          <text id="CSPS_list-2">
+            <value>Moussodougou</value>
+          </text>
+          <text id="CSPS_list-3">
+            <value>Toumousseni</value>
+          </text>
+          <text id="CSPS_list-4">
+            <value>Folonzo</value>
+          </text>
+          <text id="CSPS_list-5">
+            <value>Karfiguela</value>
+          </text>
+          <text id="CSPS_list-6">
+            <value>Kimini</value>
+          </text>
+          <text id="CSPS_list-7">
+            <value>Diarabakoko</value>
+          </text>
+          <text id="CSPS_list-8">
+            <value>Boulo</value>
+          </text>
+          <text id="CSPS_list-9">
+            <value>Yendéré</value>
+          </text>
+          <text id="CSPS_list-10">
+            <value>Ouangolodougou</value>
+          </text>
+          <text id="CSPS_list-11">
+            <value>Koflandé</value>
+          </text>
+          <text id="CSPS_list-12">
+            <value>Loumana</value>
+          </text>
+          <text id="point_list-0">
+            <value>Badara Dogossé</value>
+          </text>
+          <text id="point_list-1">
+            <value>Badara Karaboro</value>
+          </text>
+          <text id="point_list-2">
+            <value>Bolibana1</value>
+          </text>
+          <text id="point_list-3">
+            <value>Badara Karaboro</value>
+          </text>
+          <text id="point_list-4">
+            <value>Gnerpien</value>
+          </text>
+          <text id="point_list-5">
+            <value>Kayouna (Timblé)</value>
+          </text>
+          <text id="point_list-6">
+            <value>Bodadiougou petit barrage</value>
+          </text>
+          <text id="point_list-7">
+            <value>Bodadiougou village</value>
+          </text>
+          <text id="point_list-8">
+            <value>Bodadiougou camp Peulh</value>
+          </text>
+          <text id="point_list-9">
+            <value>Bodadiougou Barriere</value>
+          </text>
+          <text id="point_list-10">
+            <value>Badara Dogossé</value>
+          </text>
+          <text id="point_list-11">
+            <value>Bandougou</value>
+          </text>
+          <text id="point_list-12">
+            <value>Congala 1</value>
+          </text>
+          <text id="point_list-13">
+            <value>Diarabakoko</value>
+          </text>
+          <text id="point_list-14">
+            <value>Badara</value>
+          </text>
+          <text id="point_list-15">
+            <value>Pont Léraba/Lérababougou</value>
+          </text>
+          <text id="point_list-16">
+            <value>Dagouindougou</value>
+          </text>
+          <text id="point_list-17">
+            <value>Toussiambougou</value>
+          </text>
+          <text id="point_list-18">
+            <value>Kossoumani</value>
+          </text>
+          <text id="point_list-19">
+            <value>Loumana</value>
+          </text>
+          <text id="heure_list-0">
+            <value>7 h-8 h</value>
+          </text>
+          <text id="heure_list-1">
+            <value>8 h-9 h</value>
+          </text>
+          <text id="heure_list-2">
+            <value>9 h-10 h</value>
+          </text>
+          <text id="heure_list-3">
+            <value>10 h-11 h</value>
+          </text>
+          <text id="heure_list-4">
+            <value>11 h-12 h</value>
+          </text>
+          <text id="heure_list-5">
+            <value>12 h-13 h</value>
+          </text>
+          <text id="heure_list-6">
+            <value>13 h-14 h</value>
+          </text>
+          <text id="heure_list-7">
+            <value>14 h-15 h</value>
+          </text>
+          <text id="heure_list-8">
+            <value>15 h-16 h</value>
+          </text>
+          <text id="heure_list-9">
+            <value>16 h-17 h</value>
+          </text>
+          <text id="heure_list-10">
+            <value>17 h-18 h</value>
+          </text>
+          <text id="additionnel_list-0">
+            <value>Nuageux</value>
+          </text>
+          <text id="additionnel_list-1">
+            <value>Pluvieux</value>
+          </text>
+          <text id="additionnel_list-2">
+            <value>Vent</value>
+          </text>
+          <text id="additionnel_list-3">
+            <value>Ensoleillé</value>
+          </text>
+        </translation>
+      </itext>
+      
+      <instance id="technicien_list">
+        <root>
+          <item>
+            <itextId>technicien_list-0</itextId>
+            <name>01</name>
+          </item>
+          <item>
+            <itextId>technicien_list-1</itextId>
+            <name>02</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="ds_list">
+        <root>
+          <item>
+            <itextId>ds_list-0</itextId>
+            <name>Banfora</name>
+          </item>
+          <item>
+            <itextId>ds_list-1</itextId>
+            <name>Mangodara</name>
+          </item>
+          <item>
+            <itextId>ds_list-2</itextId>
+            <name>Sindou</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="CSPS_list">
+        <root>
+          <item>
+            <itextId>CSPS_list-0</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Boko</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-1</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Gbagbar</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-2</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Moussodougou</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-3</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Toumousseni</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-4</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Folonzo</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-5</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Karfiguela</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-6</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Kimini</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-7</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Diarabakoko</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-8</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Boulo</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-9</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Yendere</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-10</itextId>
+            <ds_list>Banfora</ds_list>
+            <name>Ouangolodougou</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-11</itextId>
+            <ds_list>Mangodara</ds_list>
+            <name>Koflande</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-12</itextId>
+            <ds_list>Sindou</ds_list>
+            <name>Loumana</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="point_list">
+        <root>
+          <item>
+            <itextId>point_list-0</itextId>
+            <csps_list>Boko</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>BadaraDogosse</name>
+          </item>
+          <item>
+            <itextId>point_list-1</itextId>
+            <csps_list>Boko</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>BadaraKaraboro</name>
+          </item>
+          <item>
+            <itextId>point_list-2</itextId>
+            <csps_list>Gbagbar</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>Bolibana1</name>
+          </item>
+          <item>
+            <itextId>point_list-3</itextId>
+            <csps_list>Gbagbar</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>BadaraKaraboro</name>
+          </item>
+          <item>
+            <itextId>point_list-4</itextId>
+            <csps_list>Moussodougou</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>Gnerpien</name>
+          </item>
+          <item>
+            <itextId>point_list-5</itextId>
+            <csps_list>Moussodougou</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>KayounaTimble</name>
+          </item>
+          <item>
+            <itextId>point_list-6</itextId>
+            <csps_list>Toumousseni</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>Bodadiougoupetitbarrage</name>
+          </item>
+          <item>
+            <itextId>point_list-7</itextId>
+            <csps_list>Toumousseni</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>Bodadiougouvillage</name>
+          </item>
+          <item>
+            <itextId>point_list-8</itextId>
+            <csps_list>Toumousseni</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>BodadiougoucampPeulh</name>
+          </item>
+          <item>
+            <itextId>point_list-9</itextId>
+            <csps_list>Toumousseni</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>BodadiougouBarriere</name>
+          </item>
+          <item>
+            <itextId>point_list-10</itextId>
+            <csps_list>Folonzo</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>BadaraDogossé</name>
+          </item>
+          <item>
+            <itextId>point_list-11</itextId>
+            <csps_list>Karfiguela</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>Bandougou</name>
+          </item>
+          <item>
+            <itextId>point_list-12</itextId>
+            <csps_list>Kimini</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>Congala1</name>
+          </item>
+          <item>
+            <itextId>point_list-13</itextId>
+            <csps_list>Diarabakoko</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>Diarabakoko</name>
+          </item>
+          <item>
+            <itextId>point_list-14</itextId>
+            <csps_list>Boulo</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>Badara</name>
+          </item>
+          <item>
+            <itextId>point_list-15</itextId>
+            <csps_list>Yendere</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>PontLérabaLerababougou</name>
+          </item>
+          <item>
+            <itextId>point_list-16</itextId>
+            <csps_list>Yendere</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>Dagouindougou</name>
+          </item>
+          <item>
+            <itextId>point_list-17</itextId>
+            <csps_list>Ouangolodougou</csps_list>
+            <ds_list>Banfora</ds_list>
+            <name>Toussiambougou</name>
+          </item>
+          <item>
+            <itextId>point_list-18</itextId>
+            <csps_list>Koflande</csps_list>
+            <ds_list>Mangodara</ds_list>
+            <name>Kossoumani</name>
+          </item>
+          <item>
+            <itextId>point_list-19</itextId>
+            <csps_list>Loumana</csps_list>
+            <ds_list>Sindou</ds_list>
+            <name>Loumana</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="heure_list">
+        <root>
+          <item>
+            <itextId>heure_list-0</itextId>
+            <name>7 h-8 h</name>
+          </item>
+          <item>
+            <itextId>heure_list-1</itextId>
+            <name>8 h-9 h</name>
+          </item>
+          <item>
+            <itextId>heure_list-2</itextId>
+            <name>9 h-10 h</name>
+          </item>
+          <item>
+            <itextId>heure_list-3</itextId>
+            <name>10 h-11 h</name>
+          </item>
+          <item>
+            <itextId>heure_list-4</itextId>
+            <name>11 h-12 h</name>
+          </item>
+          <item>
+            <itextId>heure_list-5</itextId>
+            <name>12 h-13 h</name>
+          </item>
+          <item>
+            <itextId>heure_list-6</itextId>
+            <name>13 h-14 h</name>
+          </item>
+          <item>
+            <itextId>heure_list-7</itextId>
+            <name>14 h-15 h</name>
+          </item>
+          <item>
+            <itextId>heure_list-8</itextId>
+            <name>15 h-16 h</name>
+          </item>
+          <item>
+            <itextId>heure_list-9</itextId>
+            <name>16 h-17 h</name>
+          </item>
+          <item>
+            <itextId>heure_list-10</itextId>
+            <name>17 h-18 h</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="additionnel_list">
+        <root>
+          <item>
+            <itextId>additionnel_list-0</itextId>
+            <name>Nuageux</name>
+          </item>
+          <item>
+            <itextId>additionnel_list-1</itextId>
+            <name>Pluvieux</name>
+          </item>
+          <item>
+            <itextId>additionnel_list-2</itextId>
+            <name>Vent</name>
+          </item>
+          <item>
+            <itextId>additionnel_list-3</itextId>
+            <name>Ensoleille</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/Identifiant_Technicien" required="true()" type="string"/>
+      <bind nodeset="/data/District" required="true()" type="string"/>
+      <bind nodeset="/data/Nom_du_CSPS" required="true()" type="string"/>
+      <bind nodeset="/data/Nom_du_point_de_capture" required="true()" type="string"/>
+      <bind nodeset="/data/Date_collecte" required="true()" type="date"/>
+      <bind nodeset="/data/Date_dissection" required="true()" type="date"/>
+      <bind nodeset="/data/Heure_capture" required="true()" type="string"/>
+      <bind nodeset="/data/Similies_capturees" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/Similies_capturees " jr:constraintMsg="jr:itext('/data/Similies_dissequees:jr:constraintMsg')" nodeset="/data/Similies_dissequees" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/Similies_dissequees " jr:constraintMsg="jr:itext('/data/Similies_infectieuses:jr:constraintMsg')" nodeset="/data/Similies_infectieuses" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/Similies_infectieuses " jr:constraintMsg="jr:itext('/data/larves_infectantes:jr:constraintMsg')" nodeset="/data/larves_infectantes" required="true()" type="int"/>
+      <bind nodeset="/data/Initial_technicien" required="true()" type="string"/>
+      <bind nodeset="/data/commentaires" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 ref="/data/Identifiant_Technicien">
+      <label ref="jr:itext('/data/Identifiant_Technicien:label')"/>
+      <item>
+        <label ref="jr:itext('/data/Identifiant_Technicien/01:label')"/>
+        <value>01</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Identifiant_Technicien/02:label')"/>
+        <value>02</value>
+      </item>
+    </select1>
+    <select1 ref="/data/District">
+      <label ref="jr:itext('/data/District:label')"/>
+      <item>
+        <label ref="jr:itext('/data/District/Banfora:label')"/>
+        <value>Banfora</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/District/Mangodara:label')"/>
+        <value>Mangodara</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/District/Sindou:label')"/>
+        <value>Sindou</value>
+      </item>
+    </select1>
+    <select1 ref="/data/Nom_du_CSPS">
+      <label ref="jr:itext('/data/Nom_du_CSPS:label')"/>
+      <itemset nodeset="instance('CSPS_list')/root/item[ds_list =  /data/District ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/Nom_du_point_de_capture">
+      <label ref="jr:itext('/data/Nom_du_point_de_capture:label')"/>
+      <itemset nodeset="instance('point_list')/root/item[csps_list =  /data/Nom_du_CSPS ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/Date_collecte">
+      <label ref="jr:itext('/data/Date_collecte:label')"/>
+    </input>
+    <input ref="/data/Date_dissection">
+      <label ref="jr:itext('/data/Date_dissection:label')"/>
+    </input>
+    <select1 ref="/data/Heure_capture">
+      <label ref="jr:itext('/data/Heure_capture:label')"/>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/7 h-8 h:label')"/>
+        <value>7 h-8 h</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/8 h-9 h:label')"/>
+        <value>8 h-9 h</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/9 h-10 h:label')"/>
+        <value>9 h-10 h</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/10 h-11 h:label')"/>
+        <value>10 h-11 h</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/11 h-12 h:label')"/>
+        <value>11 h-12 h</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/12 h-13 h:label')"/>
+        <value>12 h-13 h</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/13 h-14 h:label')"/>
+        <value>13 h-14 h</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/14 h-15 h:label')"/>
+        <value>14 h-15 h</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/15 h-16 h:label')"/>
+        <value>15 h-16 h</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/16 h-17 h:label')"/>
+        <value>16 h-17 h</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Heure_capture/17 h-18 h:label')"/>
+        <value>17 h-18 h</value>
+      </item>
+    </select1>
+    <input ref="/data/Similies_capturees">
+      <label ref="jr:itext('/data/Similies_capturees:label')"/>
+    </input>
+    <input ref="/data/Similies_dissequees">
+      <label ref="jr:itext('/data/Similies_dissequees:label')"/>
+    </input>
+    <input ref="/data/Similies_infectieuses">
+      <label ref="jr:itext('/data/Similies_infectieuses:label')"/>
+    </input>
+    <input ref="/data/larves_infectantes">
+      <label ref="jr:itext('/data/larves_infectantes:label')"/>
+    </input>
+    <input ref="/data/Initial_technicien">
+      <label ref="jr:itext('/data/Initial_technicien:label')"/>
+    </input>
+    <input ref="/data/commentaires">
+      <label ref="jr:itext('/data/commentaires:label')"/>
+    </input>
+  </h:body>
+</h:html>

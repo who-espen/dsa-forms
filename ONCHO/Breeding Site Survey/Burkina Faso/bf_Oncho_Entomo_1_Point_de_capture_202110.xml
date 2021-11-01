@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(octobre 2021) Burkina Faso Oncho_Entomo - 1. Formulaire point de capture V1</h:title>
+    <model >
+
+      <instance>
+        <data id="bf_Oncho_Entomo_1_Point_de_capture_202110_v1">
+          <Identifiant_Captureur/>
+          <District/>
+          <Nom_du_CSPS/>
+          <Nom_du_point_de_capture/>
+          <Bassin/>
+          <Date/>
+          <Hauteur_crue/>
+          <gps/>
+          <Initial_captureur/>
+          <commentaires/>
+          <debut_enregistrement/>
+          <fin_enregistrement/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/Identifiant_Captureur:label">
+            <value>Identifiant du Captureur</value>
+          </text>
+          <text id="/data/Identifiant_Captureur/01:label">
+            <value>01</value>
+          </text>
+          <text id="/data/Identifiant_Captureur/02:label">
+            <value>02</value>
+          </text>
+          <text id="/data/District:label">
+            <value>Sélectionner un DS</value>
+          </text>
+          <text id="/data/District/Banfora:label">
+            <value>Banfora</value>
+          </text>
+          <text id="/data/District/Mangodara:label">
+            <value>Mangodara</value>
+          </text>
+          <text id="/data/District/Sindou:label">
+            <value>Sindou</value>
+          </text>
+          <text id="/data/Nom_du_CSPS:label">
+            <value>Nom du CSPS</value>
+          </text>
+          <text id="/data/Nom_du_point_de_capture:label">
+            <value>Nom du point de capture</value>
+          </text>
+          <text id="/data/Bassin:label">
+            <value>Nom du bassin</value>
+          </text>
+          <text id="/data/Date:label">
+            <value>Date de collecte</value>
+          </text>
+          <text id="/data/Hauteur_crue:label">
+            <value>Hauteur d'echelle de crue</value>
+          </text>
+          <text id="/data/Hauteur_crue:hint">
+            <value>exemple : 199.05</value>
+          </text>
+          <text id="/data/gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/data/gps:hint">
+            <value>Fonctionne mieux à l'extérieure des batiments</value>
+          </text>
+          <text id="/data/Initial_captureur:label">
+            <value>Initial du captureur</value>
+          </text>
+          <text id="/data/commentaires:label">
+            <value>Commentaires</value>
+          </text>
+          <text id="captureur_list-0">
+            <value>01</value>
+          </text>
+          <text id="captureur_list-1">
+            <value>02</value>
+          </text>
+          <text id="DS_list-0">
+            <value>Banfora</value>
+          </text>
+          <text id="DS_list-1">
+            <value>Mangodara</value>
+          </text>
+          <text id="DS_list-2">
+            <value>Sindou</value>
+          </text>
+          <text id="CSPS_list-0">
+            <value>Boko</value>
+          </text>
+          <text id="CSPS_list-1">
+            <value>Gbagbar</value>
+          </text>
+          <text id="CSPS_list-2">
+            <value>Moussodougou</value>
+          </text>
+          <text id="CSPS_list-3">
+            <value>Toumousseni</value>
+          </text>
+          <text id="CSPS_list-4">
+            <value>Folonzo</value>
+          </text>
+          <text id="CSPS_list-5">
+            <value>Karfiguela</value>
+          </text>
+          <text id="CSPS_list-6">
+            <value>Kimini</value>
+          </text>
+          <text id="CSPS_list-7">
+            <value>Diarabakoko</value>
+          </text>
+          <text id="CSPS_list-8">
+            <value>Boulo</value>
+          </text>
+          <text id="CSPS_list-9">
+            <value>Yendéré</value>
+          </text>
+          <text id="CSPS_list-10">
+            <value>Ouangolodougou</value>
+          </text>
+          <text id="CSPS_list-11">
+            <value>Koflandé</value>
+          </text>
+          <text id="CSPS_list-12">
+            <value>Loumana</value>
+          </text>
+          <text id="point_list-0">
+            <value>Badara Dogossé</value>
+          </text>
+          <text id="point_list-1">
+            <value>Badara Karaboro</value>
+          </text>
+          <text id="point_list-2">
+            <value>Bolibana1</value>
+          </text>
+          <text id="point_list-3">
+            <value>Badara Karaboro</value>
+          </text>
+          <text id="point_list-4">
+            <value>Gnerpien</value>
+          </text>
+          <text id="point_list-5">
+            <value>Kayouna (Timblé)</value>
+          </text>
+          <text id="point_list-6">
+            <value>Bodadiougou petit barrage</value>
+          </text>
+          <text id="point_list-7">
+            <value>Bodadiougou village</value>
+          </text>
+          <text id="point_list-8">
+            <value>Bodadiougou camp Peulh</value>
+          </text>
+          <text id="point_list-9">
+            <value>Bodadiougou Barriere</value>
+          </text>
+          <text id="point_list-10">
+            <value>Badara Dogossé</value>
+          </text>
+          <text id="point_list-11">
+            <value>Bandougou</value>
+          </text>
+          <text id="point_list-12">
+            <value>Congala 1</value>
+          </text>
+          <text id="point_list-13">
+            <value>Diarabakoko</value>
+          </text>
+          <text id="point_list-14">
+            <value>Badara</value>
+          </text>
+          <text id="point_list-15">
+            <value>Pont Léraba/Lérababougou</value>
+          </text>
+          <text id="point_list-16">
+            <value>Dagouindougou</value>
+          </text>
+          <text id="point_list-17">
+            <value>Toussiambougou</value>
+          </text>
+          <text id="point_list-18">
+            <value>Kossoumani</value>
+          </text>
+          <text id="point_list-19">
+            <value>Loumana</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="captureur_list">
+        <root>
+          <item>
+            <itextId>captureur_list-0</itextId>
+            <name>01</name>
+          </item>
+          <item>
+            <itextId>captureur_list-1</itextId>
+            <name>02</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="DS_list">
+        <root>
+          <item>
+            <itextId>DS_list-0</itextId>
+            <name>Banfora</name>
+          </item>
+          <item>
+            <itextId>DS_list-1</itextId>
+            <name>Mangodara</name>
+          </item>
+          <item>
+            <itextId>DS_list-2</itextId>
+            <name>Sindou</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="CSPS_list">
+        <root>
+          <item>
+            <itextId>CSPS_list-0</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Boko</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-1</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Gbagbar</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-2</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Moussodougou</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-3</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Toumousseni</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-4</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Folonzo</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-5</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Karfiguela</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-6</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Kimini</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-7</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Diarabakoko</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-8</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Boulo</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-9</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Yendere</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-10</itextId>
+            <DS_list>Banfora</DS_list>
+            <name>Ouangolodougou</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-11</itextId>
+            <DS_list>Mangodara</DS_list>
+            <name>Koflande</name>
+          </item>
+          <item>
+            <itextId>CSPS_list-12</itextId>
+            <DS_list>Sindou</DS_list>
+            <name>Loumana</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="point_list">
+        <root>
+          <item>
+            <itextId>point_list-0</itextId>
+            <CSPS_list>Boko</CSPS_list>
+            <name>BadaraDogosse</name>
+          </item>
+          <item>
+            <itextId>point_list-1</itextId>
+            <CSPS_list>Boko</CSPS_list>
+            <name>BadaraKaraboro</name>
+          </item>
+          <item>
+            <itextId>point_list-2</itextId>
+            <CSPS_list>Gbagbar</CSPS_list>
+            <name>Bolibana1</name>
+          </item>
+          <item>
+            <itextId>point_list-3</itextId>
+            <CSPS_list>Gbagbar</CSPS_list>
+            <name>BadaraKaraboro</name>
+          </item>
+          <item>
+            <itextId>point_list-4</itextId>
+            <CSPS_list>Moussodougou</CSPS_list>
+            <name>Gnerpien</name>
+          </item>
+          <item>
+            <itextId>point_list-5</itextId>
+            <CSPS_list>Moussodougou</CSPS_list>
+            <name>KayounaTimble</name>
+          </item>
+          <item>
+            <itextId>point_list-6</itextId>
+            <CSPS_list>Toumousseni</CSPS_list>
+            <name>Bodadiougoupetitbarrage</name>
+          </item>
+          <item>
+            <itextId>point_list-7</itextId>
+            <CSPS_list>Toumousseni</CSPS_list>
+            <name>Bodadiougouvillage</name>
+          </item>
+          <item>
+            <itextId>point_list-8</itextId>
+            <CSPS_list>Toumousseni</CSPS_list>
+            <name>BodadiougoucampPeulh</name>
+          </item>
+          <item>
+            <itextId>point_list-9</itextId>
+            <CSPS_list>Toumousseni</CSPS_list>
+            <name>BodadiougouBarriere</name>
+          </item>
+          <item>
+            <itextId>point_list-10</itextId>
+            <CSPS_list>Folonzo</CSPS_list>
+            <name>BadaraDogossé</name>
+          </item>
+          <item>
+            <itextId>point_list-11</itextId>
+            <CSPS_list>Karfiguela</CSPS_list>
+            <name>Bandougou</name>
+          </item>
+          <item>
+            <itextId>point_list-12</itextId>
+            <CSPS_list>Kimini</CSPS_list>
+            <name>Congala1</name>
+          </item>
+          <item>
+            <itextId>point_list-13</itextId>
+            <CSPS_list>Diarabakoko</CSPS_list>
+            <name>Diarabakoko</name>
+          </item>
+          <item>
+            <itextId>point_list-14</itextId>
+            <CSPS_list>Boulo</CSPS_list>
+            <name>Badara</name>
+          </item>
+          <item>
+            <itextId>point_list-15</itextId>
+            <CSPS_list>Yendere</CSPS_list>
+            <name>PontLérabaLerababougou</name>
+          </item>
+          <item>
+            <itextId>point_list-16</itextId>
+            <CSPS_list>Yendere</CSPS_list>
+            <name>Dagouindougou</name>
+          </item>
+          <item>
+            <itextId>point_list-17</itextId>
+            <CSPS_list>Ouangolodougou</CSPS_list>
+            <name>Toussiambougou</name>
+          </item>
+          <item>
+            <itextId>point_list-18</itextId>
+            <CSPS_list>Koflande</CSPS_list>
+            <name>Kossoumani</name>
+          </item>
+          <item>
+            <itextId>point_list-19</itextId>
+            <CSPS_list>Loumana</CSPS_list>
+            <name>Loumana</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/Identifiant_Captureur" required="true()" type="string"/>
+      <bind nodeset="/data/District" required="true()" type="string"/>
+      <bind nodeset="/data/Nom_du_CSPS" required="true()" type="string"/>
+      <bind nodeset="/data/Nom_du_point_de_capture" required="true()" type="string"/>
+      <bind nodeset="/data/Bassin" required="true()" type="string"/>
+      <bind nodeset="/data/Date" required="true()" type="date"/>
+      <bind nodeset="/data/Hauteur_crue" required="true()" type="decimal"/>
+      <bind nodeset="/data/gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/Initial_captureur" required="true()" type="string"/>
+      <bind nodeset="/data/commentaires" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/debut_enregistrement" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/fin_enregistrement" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 ref="/data/Identifiant_Captureur">
+      <label ref="jr:itext('/data/Identifiant_Captureur:label')"/>
+      <item>
+        <label ref="jr:itext('/data/Identifiant_Captureur/01:label')"/>
+        <value>01</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Identifiant_Captureur/02:label')"/>
+        <value>02</value>
+      </item>
+    </select1>
+    <select1 ref="/data/District">
+      <label ref="jr:itext('/data/District:label')"/>
+      <item>
+        <label ref="jr:itext('/data/District/Banfora:label')"/>
+        <value>Banfora</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/District/Mangodara:label')"/>
+        <value>Mangodara</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/District/Sindou:label')"/>
+        <value>Sindou</value>
+      </item>
+    </select1>
+    <select1 ref="/data/Nom_du_CSPS">
+      <label ref="jr:itext('/data/Nom_du_CSPS:label')"/>
+      <itemset nodeset="instance('CSPS_list')/root/item[DS_list =  /data/District ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/Nom_du_point_de_capture">
+      <label ref="jr:itext('/data/Nom_du_point_de_capture:label')"/>
+      <itemset nodeset="instance('point_list')/root/item[CSPS_list =  /data/Nom_du_CSPS ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/Bassin">
+      <label ref="jr:itext('/data/Bassin:label')"/>
+    </input>
+    <input ref="/data/Date">
+      <label ref="jr:itext('/data/Date:label')"/>
+    </input>
+    <input ref="/data/Hauteur_crue">
+      <label ref="jr:itext('/data/Hauteur_crue:label')"/>
+      <hint ref="jr:itext('/data/Hauteur_crue:hint')"/>
+    </input>
+    <input ref="/data/gps">
+      <label ref="jr:itext('/data/gps:label')"/>
+      <hint ref="jr:itext('/data/gps:hint')"/>
+    </input>
+    <input ref="/data/Initial_captureur">
+      <label ref="jr:itext('/data/Initial_captureur:label')"/>
+    </input>
+    <input ref="/data/commentaires">
+      <label ref="jr:itext('/data/commentaires:label')"/>
+    </input>
+  </h:body>
+</h:html>
