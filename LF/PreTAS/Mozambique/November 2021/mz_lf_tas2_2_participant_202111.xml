@@ -7,21 +7,17 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Nov 2021) TAS2 FL - 2. Inscrição V2</h:title>
+    <h:title>(Nov 2021) TAS2 FL - 2. Inscrição</h:title>
     <model >
 
       <instance>
-        <data id="mz_lf_tas2_2_participant_202111_v2">
+        <data id="mz_lf_tas2_2_participant_202111">
           <p_recorder_id/>
           <p_eu/>
           <p_district/>
           <p_cluster_name/>
           <p_cluster_id/>
           <p_consent/>
-          <p_mosquito_prevent/>
-          <p_possess_net/>
-          <p_use_net/>
-          <p_building_type/>
           <p_sex/>
           <p_age_yrs/>
           <p_how_long_lived/>
@@ -68,45 +64,6 @@
           </text>
           <text id="/data/p_consent/Nao:label">
             <value>No</value>
-          </text>
-          <text id="/data/p_mosquito_prevent:label">
-            <value>Medidas preventivas contra mosquitos</value>
-          </text>
-          <text id="/data/p_possess_net:label">
-            <value>Mosquito net possession: Yes / No</value>
-          </text>
-          <text id="/data/p_possess_net/Sim:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/p_possess_net/Nao:label">
-            <value>No</value>
-          </text>
-          <text id="/data/p_use_net:label">
-            <value>Use of mosquito net: Yes / No</value>
-          </text>
-          <text id="/data/p_use_net/Sim:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/p_use_net/Nao:label">
-            <value>No</value>
-          </text>
-          <text id="/data/p_building_type:label">
-            <value>Type of house/building</value>
-          </text>
-          <text id="/data/p_building_type/Construção convencional:label">
-            <value>conventional construction</value>
-          </text>
-          <text id="/data/p_building_type/Vara e pique:label">
-            <value>stick and chop</value>
-          </text>
-          <text id="/data/p_building_type/Madeira e zinco:label">
-            <value>Wood and zinc</value>
-          </text>
-          <text id="/data/p_building_type/Material local:label">
-            <value>local material</value>
-          </text>
-          <text id="/data/p_building_type/Adobe:label">
-            <value>Adobe</value>
           </text>
           <text id="/data/p_sex:label">
             <value>Sex of respondent</value>
@@ -176,45 +133,6 @@
           <text id="/data/p_consent/Nao:label">
             <value>Não</value>
           </text>
-          <text id="/data/p_mosquito_prevent:label">
-            <value>Preventive measures against mosquitoes</value>
-          </text>
-          <text id="/data/p_possess_net:label">
-            <value>Posse de mosquiteiro: Sim / Não</value>
-          </text>
-          <text id="/data/p_possess_net/Sim:label">
-            <value>Sim</value>
-          </text>
-          <text id="/data/p_possess_net/Nao:label">
-            <value>Não</value>
-          </text>
-          <text id="/data/p_use_net:label">
-            <value>Uso mosquiteiro: Sim / Não</value>
-          </text>
-          <text id="/data/p_use_net/Sim:label">
-            <value>Sim</value>
-          </text>
-          <text id="/data/p_use_net/Nao:label">
-            <value>Não</value>
-          </text>
-          <text id="/data/p_building_type:label">
-            <value>Tipo de casa/construcao</value>
-          </text>
-          <text id="/data/p_building_type/Construção convencional:label">
-            <value>Construção convencional</value>
-          </text>
-          <text id="/data/p_building_type/Vara e pique:label">
-            <value>Vara e pique</value>
-          </text>
-          <text id="/data/p_building_type/Madeira e zinco:label">
-            <value>Madeira e zinco</value>
-          </text>
-          <text id="/data/p_building_type/Material local:label">
-            <value>Material local</value>
-          </text>
-          <text id="/data/p_building_type/Adobe:label">
-            <value>Adobe</value>
-          </text>
           <text id="/data/p_sex:label">
             <value>Sexo do entrevistado</value>
           </text>
@@ -259,10 +177,6 @@
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
       <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
-      <bind nodeset="/data/p_mosquito_prevent" readonly="true()" type="string"/>
-      <bind nodeset="/data/p_possess_net" type="string"/>
-      <bind nodeset="/data/p_use_net" type="string"/>
-      <bind nodeset="/data/p_building_type" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
       <bind constraint=". &gt;= 6 and . &lt;= 7" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
@@ -301,54 +215,6 @@
       <item>
         <label ref="jr:itext('/data/p_consent/Nao:label')"/>
         <value>Nao</value>
-      </item>
-    </select1>
-    <input ref="/data/p_mosquito_prevent">
-      <label ref="jr:itext('/data/p_mosquito_prevent:label')"/>
-    </input>
-    <select1 ref="/data/p_possess_net">
-      <label ref="jr:itext('/data/p_possess_net:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_possess_net/Sim:label')"/>
-        <value>Sim</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_possess_net/Nao:label')"/>
-        <value>Nao</value>
-      </item>
-    </select1>
-    <select1 ref="/data/p_use_net">
-      <label ref="jr:itext('/data/p_use_net:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_use_net/Sim:label')"/>
-        <value>Sim</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_use_net/Nao:label')"/>
-        <value>Nao</value>
-      </item>
-    </select1>
-    <select1 ref="/data/p_building_type">
-      <label ref="jr:itext('/data/p_building_type:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_building_type/Construção convencional:label')"/>
-        <value>Construção convencional</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_building_type/Vara e pique:label')"/>
-        <value>Vara e pique</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_building_type/Madeira e zinco:label')"/>
-        <value>Madeira e zinco</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_building_type/Material local:label')"/>
-        <value>Material local</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_building_type/Adobe:label')"/>
-        <value>Adobe</value>
       </item>
     </select1>
     <select1 ref="/data/p_sex">
