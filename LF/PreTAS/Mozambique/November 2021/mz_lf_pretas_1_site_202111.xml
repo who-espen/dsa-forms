@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Nov 2021) Pre-TAS FL - 1. Conglomerado</h:title>
+    <h:title>(Nov 2021) Pre-TAS FL - 1. Conglomerado V2</h:title>
     <model >
 
       <instance>
-        <data id="mz_lf_pretas_1_site_202111">
+        <data id="mz_lf_pretas_1_site_202111_v2">
           <c_recorder/>
           <c_province/>
           <c_district/>
@@ -19,7 +19,6 @@
           <c_cluster_id/>
           <c_cluster_leader/>
           <c_consent/>
-          <c_population/>
           <c_present/>
           <c_gps/>
           <c_ending_survey_note/>
@@ -91,14 +90,8 @@
           <text id="/data/c_consent/Nao:label">
             <value>No</value>
           </text>
-          <text id="/data/c_population:label">
-            <value>Depending on the age groups targeted, approximately how many eligible participants are enrolled in this school or live in this village?</value>
-          </text>
-          <text id="/data/c_present:jr:constraintMsg">
-            <value>The population can't exceed the presents</value>
-          </text>
           <text id="/data/c_present:label">
-            <value>Depending on the age groups targeted, how many eligible participants are present in this school or community?</value>
+            <value>Approximately how many people aged 5 years and over live in this community</value>
           </text>
           <text id="/data/c_gps:label">
             <value>Record your location:</value>
@@ -1351,7 +1344,7 @@
             <value>Nome do lider comunitário ou do director da escola</value>
           </text>
           <text id="/data/c_consent:label">
-            <value>A escola ou comunidade consentiu participar neste inquerito?</value>
+            <value>A comunidade consentiu participar neste inquérito?</value>
           </text>
           <text id="/data/c_consent/Sim:label">
             <value>Sim</value>
@@ -1359,14 +1352,8 @@
           <text id="/data/c_consent/Nao:label">
             <value>Nao</value>
           </text>
-          <text id="/data/c_population:label">
-            <value>De acordo com o grupo alvo, aproximadamente quantos participantes elegiveis estão matriculados ou vivem nesta comunidade?</value>
-          </text>
-          <text id="/data/c_present:jr:constraintMsg">
-            <value>A população não pode ultrapassar os presentes</value>
-          </text>
           <text id="/data/c_present:label">
-            <value>De acordo com o grupo alvo, quantos participantes elegiveis estão presentes nesta escola ou comunidade?</value>
+            <value>Aproximadamente quantas pessoas com idade igual ou superior a 5 anos vivem nesta comunidade</value>
           </text>
           <text id="/data/c_gps:label">
             <value>Gravar sua localização</value>
@@ -4558,8 +4545,7 @@
       <bind nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
       <bind nodeset="/data/c_cluster_leader" required="true()" type="string"/>
       <bind nodeset="/data/c_consent" required="true()" type="string"/>
-      <bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Sim'" required="true()" type="int"/>
-      <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_present:jr:constraintMsg')" nodeset="/data/c_present" relevant=" /data/c_consent  = 'Sim'" required="true()" type="int"/>
+      <bind nodeset="/data/c_present" relevant=" /data/c_consent  = 'Sim'" required="true()" type="int"/>
       <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Sim'" required="true()" type="geopoint"/>
       <bind nodeset="/data/c_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'Nao'" type="string"/>
       <bind nodeset="/data/c_ClusterNotes" type="string"/>
@@ -4640,9 +4626,6 @@
         <value>Nao</value>
       </item>
     </select1>
-    <input ref="/data/c_population">
-      <label ref="jr:itext('/data/c_population:label')"/>
-    </input>
     <input ref="/data/c_present">
       <label ref="jr:itext('/data/c_present:label')"/>
     </input>
