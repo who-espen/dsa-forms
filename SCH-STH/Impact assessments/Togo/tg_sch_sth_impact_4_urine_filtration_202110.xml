@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Octobre 2021) - 4. SCH/STH - Urine Filtration V5</h:title>
+    <h:title>(Octobre 2021) - 4. SCH/STH - Urine Filtration V6</h:title>
     <model >
 
       <instance>
-        <data id="tg_sch_sth_impact_4_urine_filtration_202110_v5_1">
+        <data id="tg_sch_sth_impact_4_urine_filtration_202110_v6">
           <u_recorder/>
           <u_district/>
           <u_subdistrict/>
@@ -21,6 +21,7 @@
           <u_manual_code_id/>
           <u_urine_vol/>
           <u_sh_egp_10ml/>
+          <k_sch_man/>
           <u_remarks/>
           <u_start/>
           <u_end/>
@@ -113,9 +114,6 @@
           <text id="/data/u_site_name:label">
             <value>Sélectionner le nom du village</value>
           </text>
-          <text id="/data/u_site_name:hint">
-            <value>Code trois chiffre affecté chaque école</value>
-          </text>
           <text id="/data/u_barcodeid:jr:constraintMsg">
             <value>Veuillez scanner le QR code du bon district. Les trois premières lettres du SR code doivent correspondre aux trois premières lettres du nom du district. Par exemple: TCH0001 for TCHAOUDJO.</value>
           </text>
@@ -145,6 +143,9 @@
           </text>
           <text id="/data/u_sh_egp_10ml:label">
             <value>Nombre d'œufs par 10 ml</value>
+          </text>
+          <text id="/data/k_sch_man:label">
+            <value>Schistosoma mansoni (oeufs)</value>
           </text>
           <text id="/data/u_remarks:label">
             <value>Notes additionnelles</value>
@@ -262,15 +263,14 @@
           <text id="/data/u_sh_egp_10ml:label">
             <value>SH egp 10 ml</value>
           </text>
+          <text id="/data/k_sch_man:label">
+            <value>Schistosoma mansoni (eggs)</value>
+          </text>
           <text id="/data/u_remarks:label">
             <value>Additional comment</value>
           </text>
-          <text id="/data/u_site_name:hint">
-            <value>-</value>
-          </text>
         </translation>
       </itext>
-
       <bind nodeset="/data/u_recorder" required="true()" type="string"/>
       <bind nodeset="/data/u_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/u_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_district"/>
@@ -280,6 +280,7 @@
       <bind constraint="regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/u_district , 0, 3) = substr(., 0, 3)" jr:constraintMsg="jr:itext('/data/u_manual_code_id:jr:constraintMsg')" nodeset="/data/u_manual_code_id" relevant=" /data/u_barcode_ok  = 'Non'" required="true()" type="string"/>
       <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" type="int"/>
       <bind nodeset="/data/u_sh_egp_10ml" required="true()" type="int"/>
+      <bind nodeset="/data/k_sch_man" type="int"/>
       <bind nodeset="/data/u_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
@@ -390,7 +391,6 @@
     </input>
     <input ref="/data/u_site_name">
       <label ref="jr:itext('/data/u_site_name:label')"/>
-      <hint ref="jr:itext('/data/u_site_name:hint')"/>
     </input>
     <input ref="/data/u_barcodeid">
       <label ref="jr:itext('/data/u_barcodeid:label')"/>
@@ -414,6 +414,9 @@
     </input>
     <input ref="/data/u_sh_egp_10ml">
       <label ref="jr:itext('/data/u_sh_egp_10ml:label')"/>
+    </input>
+    <input ref="/data/k_sch_man">
+      <label ref="jr:itext('/data/k_sch_man:label')"/>
     </input>
     <input ref="/data/u_remarks">
       <label ref="jr:itext('/data/u_remarks:label')"/>
