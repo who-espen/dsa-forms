@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Octobre 2021) - 6. SCH/STH - contrôle de qualité pour Filtration Urinaire V6</h:title>
+    <h:title>(Octobre 2021) - 6. SCH/STH - contrôle de qualité pour Filtration Urinaire V6.2</h:title>
     <model >
 
       <instance>
-        <data id="tg_sch_sth_impact_6_controle_urine_202110">
+        <data id="tg_sch_sth_impact_6_controle_urine_202110_v6_2">
           <u_recorder/>
           <u_district/>
           <u_subdistrict/>
@@ -271,14 +271,13 @@
           </text>
         </translation>
       </itext>
-
       <bind nodeset="/data/u_recorder" required="true()" type="string"/>
       <bind nodeset="/data/u_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/u_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_district"/>
       <bind nodeset="/data/u_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_subdistrict"/>
-      <bind constraint="regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/u_district , 0, 3) = substr(., 0, 3)" jr:constraintMsg="jr:itext('/data/u_barcodeid:jr:constraintMsg')" nodeset="/data/u_barcodeid" type="barcode"/>
+      <bind constraint="(regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/u_district , 0, 3) = substr(., 0, 3) and  /data/u_district != 'KPENDJAL OUEST') or (if( /data/u_district  = 'KPENDJAL OUEST', if(substr(., 0, 3) = 'OUE', true(), false()), false()) and regex(., '^[A-Z]{3}[0-9]{4}$'))" jr:constraintMsg="jr:itext('/data/u_barcodeid:jr:constraintMsg')" nodeset="/data/u_barcodeid" type="barcode"/>
       <bind nodeset="/data/u_barcode_ok" required="true()" type="string"/>
-      <bind constraint="regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/u_district , 0, 3) = substr(., 0, 3)" jr:constraintMsg="jr:itext('/data/u_manual_code_id:jr:constraintMsg')" nodeset="/data/u_manual_code_id" relevant=" /data/u_barcode_ok  = 'Non'" required="true()" type="string"/>
+      <bind constraint="(regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/u_district , 0, 3) = substr(., 0, 3) and  /data/u_district != 'KPENDJAL OUEST') or (if( /data/u_district  = 'KPENDJAL OUEST', if(substr(., 0, 3) = 'OUE', true(), false()), false()) and regex(., '^[A-Z]{3}[0-9]{4}$'))" jr:constraintMsg="jr:itext('/data/u_manual_code_id:jr:constraintMsg')" nodeset="/data/u_manual_code_id" relevant=" /data/u_barcode_ok  = 'Non'" required="true()" type="string"/>
       <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" type="int"/>
       <bind nodeset="/data/u_sh_egp_10ml" required="true()" type="int"/>
       <bind nodeset="/data/k_sch_man" type="int"/>
