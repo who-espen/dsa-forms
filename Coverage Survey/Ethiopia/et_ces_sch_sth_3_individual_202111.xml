@@ -1,0 +1,1774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Nov 2021) Coverage Survey - 4. Individual Questionnaire V2</h:title>
+    <model >
+
+      <instance>
+        <data id="et_ces_sch_sth_3_individual_202111_v2">
+          <i_name/>
+          <i_age/>
+          <i_tutor_name/>
+          <i_sex/>
+          <i_able_to_interview/>
+          <i_reason_not_interview/>
+          <i_reason_not_interview_other/>
+          <e_interviewed_confidentially/>
+          <i_consent/>
+          <i_occupation/>
+          <i_occupation_other/>
+          <i_pregnant_breastfeeding/>
+          <i_attend_school/>
+          <i_education_level/>
+          <i_education_type/>
+          <i_hear_mda/>
+          <i_how_hear_mda/>
+          <i_how_hear_mda_other/>
+          <i_mda_knowledge/>
+          <i_pzq_swallow/>
+          <i_pzq_reason_not_swallow/>
+          <i_pzq_reason_not_swallow_other/>
+          <i_pzq_location/>
+          <i_alb_mbd_swallow/>
+          <i_alb_mbd_reason_not_swallow/>
+          <i_alb_mbd_reason_not_swallow_other/>
+          <i_alb_mbd_location/>
+          <i_how_took_med/>
+          <i_dist_wear_mask/>
+          <i_dist_social_dist/>
+          <i_dist_present/>
+          <i_eat_before/>
+          <i_who_decide_med/>
+          <i_who_decide_med_other/>
+          <i_know_mda_schedule/>
+          <i_distribution_distance/>
+          <i_receive_ivm/>
+          <i_reason_not_received_ivm/>
+          <i_reason_not_received_ivm_other/>
+          <i_ivm_swallow/>
+          <i_ivm_reason_not_swallow/>
+          <i_ivm_reason_not_swallow_other/>
+          <i_receive_ivm_and_alb/>
+          <i_reason_not_received_ivm_and_alb/>
+          <i_reason_not_received_ivm_and_alb_other/>
+          <i_ivm_and_alb_swallow/>
+          <i_ivm_and_alb_reason_not_swallow/>
+          <i_ivm_and_alb_reason_not_swallow_other/>
+          <i_notes/>
+          <i_start/>
+          <i_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/i_name:label">
+            <value>18a. Interviewee Name</value>
+          </text>
+          <text id="/data/i_age:jr:constraintMsg">
+            <value>Please enter a valid age</value>
+          </text>
+          <text id="/data/i_age:label">
+            <value>20. Participant age?</value>
+          </text>
+          <text id="/data/i_tutor_name:label">
+            <value>18b. If child aged 2 – 4 years old: Who is answering questions on behalf of the child aged 2-4? (ENTER NAME of Supervising Adult)</value>
+          </text>
+          <text id="/data/i_sex:label">
+            <value>21. Sex (M/F)?</value>
+          </text>
+          <text id="/data/i_sex/Male:label">
+            <value>Male</value>
+          </text>
+          <text id="/data/i_sex/Female:label">
+            <value>Female</value>
+          </text>
+          <text id="/data/i_able_to_interview:label">
+            <value>22a. Are you able to interview this person?</value>
+          </text>
+          <text id="/data/i_able_to_interview/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_able_to_interview/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_reason_not_interview:label">
+            <value>22b. Reason for no interview?</value>
+          </text>
+          <text id="/data/i_reason_not_interview/Absent during survey:label">
+            <value>Absent during survey</value>
+          </text>
+          <text id="/data/i_reason_not_interview/Refused to participate:label">
+            <value>Refused to participate</value>
+          </text>
+          <text id="/data/i_reason_not_interview/Other:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/i_reason_not_interview_other:label">
+            <value>22c. Other reason no interviewed?</value>
+          </text>
+          <text id="/data/e_interviewed_confidentially:label">
+            <value>23. Is this person being interviewed confidentially?</value>
+          </text>
+          <text id="/data/e_interviewed_confidentially/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/e_interviewed_confidentially/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_consent:label">
+            <value>24. Has consent been given by the individual?</value>
+          </text>
+          <text id="/data/i_consent/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_consent/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_occupation:label">
+            <value>25a. What is your main occupation?</value>
+          </text>
+          <text id="/data/i_occupation/1. Farmer:label">
+            <value>1. Farmer</value>
+          </text>
+          <text id="/data/i_occupation/2. Merchant:label">
+            <value>2. Merchant</value>
+          </text>
+          <text id="/data/i_occupation/3. Health worker:label">
+            <value>3. Health worker</value>
+          </text>
+          <text id="/data/i_occupation/4. Housewife:label">
+            <value>4. Housewife</value>
+          </text>
+          <text id="/data/i_occupation/5. Student:label">
+            <value>5. Student</value>
+          </text>
+          <text id="/data/i_occupation/6. Fisherman:label">
+            <value>6. Fisherman</value>
+          </text>
+          <text id="/data/i_occupation/7. Medicines distributor:label">
+            <value>7. Medicines distributor</value>
+          </text>
+          <text id="/data/i_occupation/8. Teacher:label">
+            <value>8. Teacher</value>
+          </text>
+          <text id="/data/i_occupation/9. Village Head:label">
+            <value>9. Village Head</value>
+          </text>
+          <text id="/data/i_occupation/10. Does not work:label">
+            <value>10. Does not work</value>
+          </text>
+          <text id="/data/i_occupation/Other:label">
+            <value>11. Other (please specify)</value>
+          </text>
+          <text id="/data/i_occupation_other:label">
+            <value>25b. If occupation is other:What is your occupation - other?</value>
+          </text>
+          <text id="/data/i_pregnant_breastfeeding:label">
+            <value>25c. Were you pregnant or breastfeeding during the MDA in December 2019 - February 2020 (females only)</value>
+          </text>
+          <text id="/data/i_pregnant_breastfeeding/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_pregnant_breastfeeding/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_attend_school:label">
+            <value>26a. Have you attended school in the last school year?</value>
+          </text>
+          <text id="/data/i_attend_school/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_attend_school/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_education_level:label">
+            <value>26b. If attended school in last school year:What level of education do you attend?</value>
+          </text>
+          <text id="/data/i_education_level/1. Primary:label">
+            <value>1. Primary</value>
+          </text>
+          <text id="/data/i_education_level/2. Secondary:label">
+            <value>2. Secondary</value>
+          </text>
+          <text id="/data/i_education_type:label">
+            <value>26c. If attended school in the last school year: What type of school do you attend</value>
+          </text>
+          <text id="/data/i_education_type/1. Public:label">
+            <value>1. Public</value>
+          </text>
+          <text id="/data/i_education_type/2. Private:label">
+            <value>2. Private</value>
+          </text>
+          <text id="/data/i_education_type/3. Religious:label">
+            <value>3. Religious</value>
+          </text>
+          <text id="/data/i_hear_mda:label">
+            <value>27a. Did you hear about the mass treatment?</value>
+          </text>
+          <text id="/data/i_hear_mda/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_hear_mda/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_how_hear_mda:label">
+            <value>27b. If you did, how did you hear about the mass treatment? (ENTER CODE)</value>
+          </text>
+          <text id="/data/i_how_hear_mda/1. Teacher:label">
+            <value>1. Teacher</value>
+          </text>
+          <text id="/data/i_how_hear_mda/2. Village Meeting:label">
+            <value>2. Village Meeting</value>
+          </text>
+          <text id="/data/i_how_hear_mda/3. Posters / flyers:label">
+            <value>3. Posters / flyers</value>
+          </text>
+          <text id="/data/i_how_hear_mda/4. Health professional:label">
+            <value>4. Health professional</value>
+          </text>
+          <text id="/data/i_how_hear_mda/5. Newspaper:label">
+            <value>5. Newspaper</value>
+          </text>
+          <text id="/data/i_how_hear_mda/6. Radio:label">
+            <value>6. Radio</value>
+          </text>
+          <text id="/data/i_how_hear_mda/7. TV:label">
+            <value>7. TV</value>
+          </text>
+          <text id="/data/i_how_hear_mda/8. Town crier (loud speaker):label">
+            <value>8. Town crier (loud speaker)</value>
+          </text>
+          <text id="/data/i_how_hear_mda/9. Place of worship:label">
+            <value>9. Place of worship</value>
+          </text>
+          <text id="/data/i_how_hear_mda/10. Banner:label">
+            <value>10. Banner</value>
+          </text>
+          <text id="/data/i_how_hear_mda/Other:label">
+            <value>11. Other (please specify)</value>
+          </text>
+          <text id="/data/i_how_hear_mda_other:label">
+            <value>27c. If heard about mass treatment is other: How did you hear about the mass treatment - other?</value>
+          </text>
+          <text id="/data/i_mda_knowledge:label">
+            <value>28. Individual knowledge of the schistosomiasis mass treatment show particpants props and (tick all objects recognised, or 'none' if don't recognise any)</value>
+          </text>
+          <text id="/data/i_mda_knowledge/Schisto:label">
+            <value>Schisto</value>
+          </text>
+          <text id="/data/i_mda_knowledge/PZQ:label">
+            <value>PZQ</value>
+          </text>
+          <text id="/data/i_mda_knowledge/ALB:label">
+            <value>ALB</value>
+          </text>
+          <text id="/data/i_mda_knowledge/Dose pole:label">
+            <value>Dose pole</value>
+          </text>
+          <text id="/data/i_mda_knowledge/None of above:label">
+            <value>None of above</value>
+          </text>
+          <text id="/data/i_pzq_swallow:label">
+            <value>29a. Did you swallow PZQ at the mass treatment? (show dose pole/tablets)</value>
+          </text>
+          <text id="/data/i_pzq_swallow/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_pzq_swallow/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow:label">
+            <value>29b. If did not swallow PZQ:Reasons for not swallowing PZQ</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/1. Too young:label">
+            <value>1. Too young</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/2. Too old:label">
+            <value>2. Too old</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/3. Pregnant:label">
+            <value>3. Pregnant</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/4. Breast feeding:label">
+            <value>4. Breast feeding</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/5. Too sick:label">
+            <value>5. Too sick</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/6. Feels healthy:label">
+            <value>6. Feels healthy</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/7. Fear of side effects:label">
+            <value>7. Fear of side effects</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/8. Bad smell or taste:label">
+            <value>8. Bad smell or taste</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/9. Tablets are too large:label">
+            <value>9. Tablets are too large</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/10. Rumours:label">
+            <value>10. Rumours</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/11. Does not know:label">
+            <value>11. Does not know</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/12. Drugs ran out:label">
+            <value>12. Drugs ran out</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/13. Was at work:label">
+            <value>13. Was at work</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/14. Not living in the village at time of MDA:label">
+            <value>14. Not living in the village at time of MDA</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/15. Absent from school on day of MDA:label">
+            <value>15. Absent from school on day of MDA</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/16. Does not attend school:label">
+            <value>16. Does not attend school</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/17. There was no MDA:label">
+            <value>17. There was no MDA</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/18. Had not heard about MDA:label">
+            <value>18. Had not heard about MDA</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/19. Too far from distribution point:label">
+            <value>19. Too far from distribution point</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/20. Refused to answer:label">
+            <value>20. Refused to answer</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/21. Was not invited to MDA:label">
+            <value>21. Was not invited to MDA</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/22. Had not eaten before MDA:label">
+            <value>22. Had not eaten before MDA</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/23. Too many tablets:label">
+            <value>23. Too many tablets</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/24. Medicine does not work:label">
+            <value>24. Medicine does not work</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow/Other:label">
+            <value>25. Other (please specify)</value>
+          </text>
+          <text id="/data/i_pzq_reason_not_swallow_other:label">
+            <value>29c. If did not swallow PZQ, and other reason for not swallowing PZQ: Other reasons for not swallowing PZQ</value>
+          </text>
+          <text id="/data/i_pzq_location:label">
+            <value>29d. If swallowed PZQ: Where did you take the PZQ?</value>
+          </text>
+          <text id="/data/i_pzq_location/1. School:label">
+            <value>1. School</value>
+          </text>
+          <text id="/data/i_pzq_location/2. Home (door-to-door):label">
+            <value>2. Home (door-to-door)</value>
+          </text>
+          <text id="/data/i_pzq_location/3. House of the village head:label">
+            <value>3. House of the village head</value>
+          </text>
+          <text id="/data/i_pzq_location/4. Central point in the village:label">
+            <value>4. Central point in the village</value>
+          </text>
+          <text id="/data/i_pzq_location/5. Local Health Centre:label">
+            <value>5. Local Health Centre</value>
+          </text>
+          <text id="/data/i_pzq_location/6. Woreda Clinic:label">
+            <value>6. Woreda Clinic</value>
+          </text>
+          <text id="/data/i_pzq_location/7. Other:label">
+            <value>7. Other</value>
+          </text>
+          <text id="/data/i_pzq_location/8. Does not know:label">
+            <value>8. Does not know</value>
+          </text>
+          <text id="/data/i_alb_mbd_swallow:label">
+            <value>30a. Did you swallow ALB/MBD at the mass treatment (show tablet)?</value>
+          </text>
+          <text id="/data/i_alb_mbd_swallow/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_alb_mbd_swallow/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow:label">
+            <value>30b. If did not swallow ALB/MBD: Reasons for not swallowing ALB/MBD</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/1. Too young:label">
+            <value>1. Too young</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/2. Too old:label">
+            <value>2. Too old</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/3. Pregnant:label">
+            <value>3. Pregnant</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/4. Breast feeding:label">
+            <value>4. Breast feeding</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/5. Too sick:label">
+            <value>5. Too sick</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/6. Feels healthy:label">
+            <value>6. Feels healthy</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/7. Fear of side effects:label">
+            <value>7. Fear of side effects</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/8. Bad smell or taste:label">
+            <value>8. Bad smell or taste</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/9. Tablets are too large:label">
+            <value>9. Tablets are too large</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/10. Rumours:label">
+            <value>10. Rumours</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/11. Does not know:label">
+            <value>11. Does not know</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/12. Drugs ran out:label">
+            <value>12. Drugs ran out</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/13. Was at work:label">
+            <value>13. Was at work</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/14. Not living in the village at time of MDA:label">
+            <value>14. Not living in the village at time of MDA</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/15. Absent from school on day of MDA:label">
+            <value>15. Absent from school on day of MDA</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/16. Does not attend school:label">
+            <value>16. Does not attend school</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/17. There was no MDA:label">
+            <value>17. There was no MDA</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/18. Had not heard about MDA:label">
+            <value>18. Had not heard about MDA</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/19. Too far from distribution point:label">
+            <value>19. Too far from distribution point</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/20. Refused to answer:label">
+            <value>20. Refused to answer</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/21. Was not invited to MDA:label">
+            <value>21. Was not invited to MDA</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/22. Had not eaten before MDA:label">
+            <value>22. Had not eaten before MDA</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/23. Too many tablets:label">
+            <value>23. Too many tablets</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/24. Medicine does not work:label">
+            <value>24. Medicine does not work</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow/Other:label">
+            <value>25. Other (please specify)</value>
+          </text>
+          <text id="/data/i_alb_mbd_reason_not_swallow_other:label">
+            <value>30c. If did not swallow ALB/MBD, and other reason for not swallowing ALB/MBD: Other reasons for not swallowing ALB/MBD</value>
+          </text>
+          <text id="/data/i_alb_mbd_location:label">
+            <value>30d. If swallowed ALB/MBD: Where did you take the ALB/MBD?</value>
+          </text>
+          <text id="/data/i_alb_mbd_location/1. School:label">
+            <value>1. School</value>
+          </text>
+          <text id="/data/i_alb_mbd_location/2. Home (door-to-door):label">
+            <value>2. Home (door-to-door)</value>
+          </text>
+          <text id="/data/i_alb_mbd_location/3. House of the village head:label">
+            <value>3. House of the village head</value>
+          </text>
+          <text id="/data/i_alb_mbd_location/4. Central point in the village:label">
+            <value>4. Central point in the village</value>
+          </text>
+          <text id="/data/i_alb_mbd_location/5. Local Health Centre:label">
+            <value>5. Local Health Centre</value>
+          </text>
+          <text id="/data/i_alb_mbd_location/6. Woreda Clinic:label">
+            <value>6. Woreda Clinic</value>
+          </text>
+          <text id="/data/i_alb_mbd_location/7. Other:label">
+            <value>7. Other</value>
+          </text>
+          <text id="/data/i_alb_mbd_location/8. Does not know:label">
+            <value>8. Does not know</value>
+          </text>
+          <text id="/data/i_how_took_med:label">
+            <value>31. If swallowed PZQ or ALB/MBD: How did you take the PZQ and ALB/MBD tablets?</value>
+          </text>
+          <text id="/data/i_how_took_med/1. All at the same time:label">
+            <value>1. All at the same time</value>
+          </text>
+          <text id="/data/i_how_took_med/2. I took them all throughout the day but not all at the same time:label">
+            <value>2. I took them all throughout the day but not all at the same time</value>
+          </text>
+          <text id="/data/i_how_took_med/3. I took them all but not on the same day:label">
+            <value>3. I took them all but not on the same day</value>
+          </text>
+          <text id="/data/i_how_took_med/4. One tablet a day until they were all finished:label">
+            <value>4. One tablet a day until they were all finished</value>
+          </text>
+          <text id="/data/i_how_took_med/5. I took some but not all of them:label">
+            <value>5. I took some but not all of them</value>
+          </text>
+          <text id="/data/i_how_took_med/6. I was given the tablets but did not swallow them:label">
+            <value>6. I was given the tablets but did not swallow them</value>
+          </text>
+          <text id="/data/i_how_took_med/7. Do not remember:label">
+            <value>7. Do not remember</value>
+          </text>
+          <text id="/data/i_dist_wear_mask:label">
+            <value>32a. If swallowed PZQ or ALB/MBD Was the distributor wearing a face mask when they gave you the drugs?</value>
+          </text>
+          <text id="/data/i_dist_wear_mask/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_dist_wear_mask/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_dist_wear_mask/Do not know:label">
+            <value>Do not know</value>
+          </text>
+          <text id="/data/i_dist_social_dist:label">
+            <value>32b. If swallowed PZQ or ALB/MBD Did the distributor practice social distancing (remained 1 meter apart from others) when they gave you the drugs?</value>
+          </text>
+          <text id="/data/i_dist_social_dist/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_dist_social_dist/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_dist_social_dist/Do not know:label">
+            <value>Do not know</value>
+          </text>
+          <text id="/data/i_dist_present:label">
+            <value>33. If swallowed PZQ or ALB/MBD: Was the distributor present when you swallowed the tablets?</value>
+          </text>
+          <text id="/data/i_dist_present/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_dist_present/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_eat_before:label">
+            <value>34. If swallowed PZQ or ALB/MEB: Had you eaten in the two hours before you took the tablets?</value>
+          </text>
+          <text id="/data/i_eat_before/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_eat_before/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_who_decide_med:label">
+            <value>35a. Who decided whether you took the treatment or not?</value>
+          </text>
+          <text id="/data/i_who_decide_med/1. Me:label">
+            <value>1. Me</value>
+          </text>
+          <text id="/data/i_who_decide_med/2. Father:label">
+            <value>2. Father</value>
+          </text>
+          <text id="/data/i_who_decide_med/3. Mother:label">
+            <value>3. Mother</value>
+          </text>
+          <text id="/data/i_who_decide_med/4. Other family member:label">
+            <value>4. Other family member</value>
+          </text>
+          <text id="/data/i_who_decide_med/5. School teacher:label">
+            <value>5. School teacher</value>
+          </text>
+          <text id="/data/i_who_decide_med/6. Village Head:label">
+            <value>6. Village Head</value>
+          </text>
+          <text id="/data/i_who_decide_med/7. Traditional Healer:label">
+            <value>7. Traditional Healer</value>
+          </text>
+          <text id="/data/i_who_decide_med/8. Health worker or drug distributor:label">
+            <value>8. Health worker or drug distributor</value>
+          </text>
+          <text id="/data/i_who_decide_med/Other:label">
+            <value>9. Other (please specify)</value>
+          </text>
+          <text id="/data/i_who_decide_med/10. Did not know about the distribution:label">
+            <value>10. Did not know about the distribution</value>
+          </text>
+          <text id="/data/i_who_decide_med_other:label">
+            <value>35b. If who decided is other: Who decided whether you took the treatment or not - other?</value>
+          </text>
+          <text id="/data/i_know_mda_schedule:label">
+            <value>36. Did you know beforehand when and where the MDA would take place?</value>
+          </text>
+          <text id="/data/i_know_mda_schedule/1. Did not know when or where:label">
+            <value>1. Did not know when or where</value>
+          </text>
+          <text id="/data/i_know_mda_schedule/2. Knew when only:label">
+            <value>2. Knew when only</value>
+          </text>
+          <text id="/data/i_know_mda_schedule/3. Knew where only:label">
+            <value>3. Knew where only</value>
+          </text>
+          <text id="/data/i_know_mda_schedule/4. Knew when and where:label">
+            <value>4. Knew when and where</value>
+          </text>
+          <text id="/data/i_distribution_distance:label">
+            <value>37. How far was the distribution point from your home/school if walking? (ENTER CODE)</value>
+          </text>
+          <text id="/data/i_distribution_distance/1. 0 – if at home or in school:label">
+            <value>1. 0 – if at home or in school</value>
+          </text>
+          <text id="/data/i_distribution_distance/2. Less than 30 minutes:label">
+            <value>2. Less than 30 minutes</value>
+          </text>
+          <text id="/data/i_distribution_distance/3. 30 to 60 minutes:label">
+            <value>3. 30 to 60 minutes</value>
+          </text>
+          <text id="/data/i_distribution_distance/4. 1 to 2 hours:label">
+            <value>4. 1 to 2 hours</value>
+          </text>
+          <text id="/data/i_distribution_distance/5. More than 2 hours:label">
+            <value>5. More than 2 hours</value>
+          </text>
+          <text id="/data/i_distribution_distance/6. Do not know:label">
+            <value>6. Do not know</value>
+          </text>
+          <text id="/data/i_receive_ivm:label">
+            <value>38a. Were you offered ivermectin (IVM) at the MDA (show tablets)</value>
+          </text>
+          <text id="/data/i_receive_ivm/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_receive_ivm/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm:label">
+            <value>38b. Reasons for not being offered IVM (ENTER CODE)</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm/1.Underage:label">
+            <value>1.Underage</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm/2.Pregnant:label">
+            <value>2.Pregnant</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm/3.Breast feeding:label">
+            <value>3.Breast feeding</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm/4.Sick:label">
+            <value>4.Sick</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm/5.Absent:label">
+            <value>5.Absent</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm/6.Didn.t know:label">
+            <value>6.Didn't know</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm/7.Drugs ran out:label">
+            <value>7.Drugs ran out</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm/8.Nobody came:label">
+            <value>8.Nobody came</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm/Other:label">
+            <value>9.Other</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_other:label">
+            <value>38c. Other reasons for not being offered IVM</value>
+          </text>
+          <text id="/data/i_ivm_swallow:label">
+            <value>38d. Did you swallow IVM?</value>
+          </text>
+          <text id="/data/i_ivm_swallow/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_ivm_swallow/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_ivm_reason_not_swallow:label">
+            <value>38e. Reasons you did not swallow IVM? (ENTER CODE)</value>
+          </text>
+          <text id="/data/i_ivm_reason_not_swallow/1.Fear of side effects:label">
+            <value>1.Fear of side effects</value>
+          </text>
+          <text id="/data/i_ivm_reason_not_swallow/2.Bad taste:label">
+            <value>2.Bad taste</value>
+          </text>
+          <text id="/data/i_ivm_reason_not_swallow/3.Not sick:label">
+            <value>3.Not sick</value>
+          </text>
+          <text id="/data/i_ivm_reason_not_swallow/4.Not enough information given:label">
+            <value>4.Not enough information given</value>
+          </text>
+          <text id="/data/i_ivm_reason_not_swallow/Other:label">
+            <value>5.Other</value>
+          </text>
+          <text id="/data/i_ivm_reason_not_swallow_other:label">
+            <value>38f. Other reasons for not swallowing IVM</value>
+          </text>
+          <text id="/data/i_receive_ivm_and_alb:label">
+            <value>39a. Were you offered IVM and ALB at the MDA (show tablets)</value>
+          </text>
+          <text id="/data/i_receive_ivm_and_alb/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_receive_ivm_and_alb/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb:label">
+            <value>39b. Reasons for not being offered IVM and ALB (ENTER CODE)</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb/1.Underage:label">
+            <value>1.Underage</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb/2.Pregnant:label">
+            <value>2.Pregnant</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb/3.Breast feeding:label">
+            <value>3.Breast feeding</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb/4.Sick:label">
+            <value>4.Sick</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb/5.Absent:label">
+            <value>5.Absent</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb/6.Didn.t know:label">
+            <value>6.Didn't know</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb/7.Drugs ran out:label">
+            <value>7.Drugs ran out</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb/8.Nobody came:label">
+            <value>8.Nobody came</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb/Other:label">
+            <value>9.Other</value>
+          </text>
+          <text id="/data/i_reason_not_received_ivm_and_alb_other:label">
+            <value>39c. Other reasons for not being offered IVM and ALB</value>
+          </text>
+          <text id="/data/i_ivm_and_alb_swallow:label">
+            <value>39d. Did you swallow IVM and ALB?</value>
+          </text>
+          <text id="/data/i_ivm_and_alb_swallow/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/i_ivm_and_alb_swallow/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/i_ivm_and_alb_reason_not_swallow:label">
+            <value>39e. Reasons you did not swallow IVM and ALB? (ENTER CODE)</value>
+          </text>
+          <text id="/data/i_ivm_and_alb_reason_not_swallow/1.Fear of side effects:label">
+            <value>1.Fear of side effects</value>
+          </text>
+          <text id="/data/i_ivm_and_alb_reason_not_swallow/2.Bad taste:label">
+            <value>2.Bad taste</value>
+          </text>
+          <text id="/data/i_ivm_and_alb_reason_not_swallow/3.Not sick:label">
+            <value>3.Not sick</value>
+          </text>
+          <text id="/data/i_ivm_and_alb_reason_not_swallow/4.Not enough information given:label">
+            <value>4.Not enough information given</value>
+          </text>
+          <text id="/data/i_ivm_and_alb_reason_not_swallow/Other:label">
+            <value>5.Other</value>
+          </text>
+          <text id="/data/i_ivm_and_alb_reason_not_swallow_other:label">
+            <value>39f. Other reasons for not swallowing IVM and ALB</value>
+          </text>
+          <text id="/data/i_notes:label">
+            <value>Additional notes</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/i_name" required="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/i_age:jr:constraintMsg')" nodeset="/data/i_age" required="true()" type="int"/>
+      <bind nodeset="/data/i_tutor_name" relevant=" /data/i_age &gt;=2 and  /data/i_age &lt;= 4" required="true()" type="string"/>
+      <bind nodeset="/data/i_sex" required="true()" type="string"/>
+      <bind nodeset="/data/i_able_to_interview" required="true()" type="string"/>
+      <bind nodeset="/data/i_reason_not_interview" relevant=" /data/i_able_to_interview  = 'No'" required="true()" type="string"/>
+      <bind nodeset="/data/i_reason_not_interview_other" relevant=" /data/i_reason_not_interview  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/e_interviewed_confidentially" required="true()" type="string"/>
+      <bind nodeset="/data/i_consent" required="true()" type="string"/>
+      <bind nodeset="/data/i_occupation" relevant=" /data/i_age &gt;= 18" required="true()" type="string"/>
+      <bind nodeset="/data/i_occupation_other" relevant=" /data/i_occupation  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/i_pregnant_breastfeeding" relevant=" /data/i_age &gt;= 18" required="true()" type="string"/>
+      <bind nodeset="/data/i_attend_school" relevant=" /data/i_age &gt;= 4 and  /data/i_age &lt;= 16" required="true()" type="string"/>
+      <bind nodeset="/data/i_education_level" relevant=" /data/i_attend_school  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_education_type" relevant=" /data/i_attend_school  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_hear_mda" required="true()" type="string"/>
+      <bind nodeset="/data/i_how_hear_mda" relevant=" /data/i_hear_mda  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_how_hear_mda_other" relevant=" /data/i_how_hear_mda  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/i_mda_knowledge" required="true()" type="string"/>
+      <bind nodeset="/data/i_pzq_swallow" required="true()" type="string"/>
+      <bind nodeset="/data/i_pzq_reason_not_swallow" relevant=" /data/i_pzq_swallow  = 'No'" required="true()" type="string"/>
+      <bind nodeset="/data/i_pzq_reason_not_swallow_other" relevant=" /data/i_pzq_reason_not_swallow  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/i_pzq_location" relevant=" /data/i_pzq_swallow  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_alb_mbd_swallow" required="true()" type="string"/>
+      <bind nodeset="/data/i_alb_mbd_reason_not_swallow" relevant=" /data/i_alb_mbd_swallow  = 'No'" required="true()" type="string"/>
+      <bind nodeset="/data/i_alb_mbd_reason_not_swallow_other" relevant=" /data/i_alb_mbd_reason_not_swallow  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/i_alb_mbd_location" relevant=" /data/i_alb_mbd_swallow  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_how_took_med" relevant=" /data/i_pzq_swallow  = 'Yes' or  /data/i_alb_mbd_swallow  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_dist_wear_mask" relevant=" /data/i_pzq_swallow  = 'Yes' or  /data/i_alb_mbd_swallow  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_dist_social_dist" relevant=" /data/i_pzq_swallow  = 'Yes' or  /data/i_alb_mbd_swallow  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_dist_present" relevant=" /data/i_pzq_swallow  = 'Yes' or  /data/i_alb_mbd_swallow  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_eat_before" relevant=" /data/i_pzq_swallow  = 'Yes' or  /data/i_alb_mbd_swallow  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_who_decide_med" required="true()" type="string"/>
+      <bind nodeset="/data/i_who_decide_med_other" relevant=" /data/i_who_decide_med  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/i_know_mda_schedule" required="true()" type="string"/>
+      <bind nodeset="/data/i_distribution_distance" required="true()" type="string"/>
+      <bind nodeset="/data/i_receive_ivm" required="true()" type="string"/>
+      <bind nodeset="/data/i_reason_not_received_ivm" relevant=" /data/i_receive_ivm  = 'No'" required="true()" type="string"/>
+      <bind nodeset="/data/i_reason_not_received_ivm_other" relevant=" /data/i_reason_not_received_ivm  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/i_ivm_swallow" relevant=" /data/i_receive_ivm  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_ivm_reason_not_swallow" relevant=" /data/i_ivm_swallow  = 'No'" required="true()" type="string"/>
+      <bind nodeset="/data/i_ivm_reason_not_swallow_other" relevant=" /data/i_ivm_reason_not_swallow  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/i_receive_ivm_and_alb" required="true()" type="string"/>
+      <bind nodeset="/data/i_reason_not_received_ivm_and_alb" relevant=" /data/i_receive_ivm_and_alb  = 'No'" required="true()" type="string"/>
+      <bind nodeset="/data/i_reason_not_received_ivm_and_alb_other" relevant=" /data/i_reason_not_received_ivm_and_alb  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/i_ivm_and_alb_swallow" relevant=" /data/i_receive_ivm_and_alb  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/i_ivm_and_alb_reason_not_swallow" relevant=" /data/i_ivm_and_alb_swallow  = 'No'" required="true()" type="string"/>
+      <bind nodeset="/data/i_ivm_and_alb_reason_not_swallow_other" relevant=" /data/i_ivm_and_alb_reason_not_swallow  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/i_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/i_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/i_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/i_name">
+      <label ref="jr:itext('/data/i_name:label')"/>
+    </input>
+    <input ref="/data/i_age">
+      <label ref="jr:itext('/data/i_age:label')"/>
+    </input>
+    <input ref="/data/i_tutor_name">
+      <label ref="jr:itext('/data/i_tutor_name:label')"/>
+    </input>
+    <select1 ref="/data/i_sex">
+      <label ref="jr:itext('/data/i_sex:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_sex/Male:label')"/>
+        <value>Male</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_sex/Female:label')"/>
+        <value>Female</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_able_to_interview">
+      <label ref="jr:itext('/data/i_able_to_interview:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_able_to_interview/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_able_to_interview/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_reason_not_interview">
+      <label ref="jr:itext('/data/i_reason_not_interview:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_interview/Absent during survey:label')"/>
+        <value>Absent during survey</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_interview/Refused to participate:label')"/>
+        <value>Refused to participate</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_interview/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/i_reason_not_interview_other">
+      <label ref="jr:itext('/data/i_reason_not_interview_other:label')"/>
+    </input>
+    <select1 ref="/data/e_interviewed_confidentially">
+      <label ref="jr:itext('/data/e_interviewed_confidentially:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_interviewed_confidentially/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_interviewed_confidentially/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_consent">
+      <label ref="jr:itext('/data/i_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_consent/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_consent/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_occupation">
+      <label ref="jr:itext('/data/i_occupation:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/1. Farmer:label')"/>
+        <value>1. Farmer</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/2. Merchant:label')"/>
+        <value>2. Merchant</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/3. Health worker:label')"/>
+        <value>3. Health worker</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/4. Housewife:label')"/>
+        <value>4. Housewife</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/5. Student:label')"/>
+        <value>5. Student</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/6. Fisherman:label')"/>
+        <value>6. Fisherman</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/7. Medicines distributor:label')"/>
+        <value>7. Medicines distributor</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/8. Teacher:label')"/>
+        <value>8. Teacher</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/9. Village Head:label')"/>
+        <value>9. Village Head</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/10. Does not work:label')"/>
+        <value>10. Does not work</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_occupation/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/i_occupation_other">
+      <label ref="jr:itext('/data/i_occupation_other:label')"/>
+    </input>
+    <select1 ref="/data/i_pregnant_breastfeeding">
+      <label ref="jr:itext('/data/i_pregnant_breastfeeding:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_pregnant_breastfeeding/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pregnant_breastfeeding/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_attend_school">
+      <label ref="jr:itext('/data/i_attend_school:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_attend_school/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_attend_school/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_education_level">
+      <label ref="jr:itext('/data/i_education_level:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_education_level/1. Primary:label')"/>
+        <value>1. Primary</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_education_level/2. Secondary:label')"/>
+        <value>2. Secondary</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_education_type">
+      <label ref="jr:itext('/data/i_education_type:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_education_type/1. Public:label')"/>
+        <value>1. Public</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_education_type/2. Private:label')"/>
+        <value>2. Private</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_education_type/3. Religious:label')"/>
+        <value>3. Religious</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_hear_mda">
+      <label ref="jr:itext('/data/i_hear_mda:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_hear_mda/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_hear_mda/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_how_hear_mda">
+      <label ref="jr:itext('/data/i_how_hear_mda:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/1. Teacher:label')"/>
+        <value>1. Teacher</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/2. Village Meeting:label')"/>
+        <value>2. Village Meeting</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/3. Posters / flyers:label')"/>
+        <value>3. Posters / flyers</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/4. Health professional:label')"/>
+        <value>4. Health professional</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/5. Newspaper:label')"/>
+        <value>5. Newspaper</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/6. Radio:label')"/>
+        <value>6. Radio</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/7. TV:label')"/>
+        <value>7. TV</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/8. Town crier (loud speaker):label')"/>
+        <value>8. Town crier (loud speaker)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/9. Place of worship:label')"/>
+        <value>9. Place of worship</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/10. Banner:label')"/>
+        <value>10. Banner</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_hear_mda/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/i_how_hear_mda_other">
+      <label ref="jr:itext('/data/i_how_hear_mda_other:label')"/>
+    </input>
+    <select1 ref="/data/i_mda_knowledge">
+      <label ref="jr:itext('/data/i_mda_knowledge:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_mda_knowledge/Schisto:label')"/>
+        <value>Schisto</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_mda_knowledge/PZQ:label')"/>
+        <value>PZQ</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_mda_knowledge/ALB:label')"/>
+        <value>ALB</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_mda_knowledge/Dose pole:label')"/>
+        <value>Dose pole</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_mda_knowledge/None of above:label')"/>
+        <value>None of above</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_pzq_swallow">
+      <label ref="jr:itext('/data/i_pzq_swallow:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_swallow/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_swallow/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_pzq_reason_not_swallow">
+      <label ref="jr:itext('/data/i_pzq_reason_not_swallow:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/1. Too young:label')"/>
+        <value>1. Too young</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/2. Too old:label')"/>
+        <value>2. Too old</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/3. Pregnant:label')"/>
+        <value>3. Pregnant</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/4. Breast feeding:label')"/>
+        <value>4. Breast feeding</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/5. Too sick:label')"/>
+        <value>5. Too sick</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/6. Feels healthy:label')"/>
+        <value>6. Feels healthy</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/7. Fear of side effects:label')"/>
+        <value>7. Fear of side effects</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/8. Bad smell or taste:label')"/>
+        <value>8. Bad smell or taste</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/9. Tablets are too large:label')"/>
+        <value>9. Tablets are too large</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/10. Rumours:label')"/>
+        <value>10. Rumours</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/11. Does not know:label')"/>
+        <value>11. Does not know</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/12. Drugs ran out:label')"/>
+        <value>12. Drugs ran out</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/13. Was at work:label')"/>
+        <value>13. Was at work</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/14. Not living in the village at time of MDA:label')"/>
+        <value>14. Not living in the village at time of MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/15. Absent from school on day of MDA:label')"/>
+        <value>15. Absent from school on day of MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/16. Does not attend school:label')"/>
+        <value>16. Does not attend school</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/17. There was no MDA:label')"/>
+        <value>17. There was no MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/18. Had not heard about MDA:label')"/>
+        <value>18. Had not heard about MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/19. Too far from distribution point:label')"/>
+        <value>19. Too far from distribution point</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/20. Refused to answer:label')"/>
+        <value>20. Refused to answer</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/21. Was not invited to MDA:label')"/>
+        <value>21. Was not invited to MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/22. Had not eaten before MDA:label')"/>
+        <value>22. Had not eaten before MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/23. Too many tablets:label')"/>
+        <value>23. Too many tablets</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/24. Medicine does not work:label')"/>
+        <value>24. Medicine does not work</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_reason_not_swallow/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/i_pzq_reason_not_swallow_other">
+      <label ref="jr:itext('/data/i_pzq_reason_not_swallow_other:label')"/>
+    </input>
+    <select1 ref="/data/i_pzq_location">
+      <label ref="jr:itext('/data/i_pzq_location:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_location/1. School:label')"/>
+        <value>1. School</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_location/2. Home (door-to-door):label')"/>
+        <value>2. Home (door-to-door)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_location/3. House of the village head:label')"/>
+        <value>3. House of the village head</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_location/4. Central point in the village:label')"/>
+        <value>4. Central point in the village</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_location/5. Local Health Centre:label')"/>
+        <value>5. Local Health Centre</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_location/6. Woreda Clinic:label')"/>
+        <value>6. Woreda Clinic</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_location/7. Other:label')"/>
+        <value>7. Other</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_pzq_location/8. Does not know:label')"/>
+        <value>8. Does not know</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_alb_mbd_swallow">
+      <label ref="jr:itext('/data/i_alb_mbd_swallow:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_swallow/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_swallow/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_alb_mbd_reason_not_swallow">
+      <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/1. Too young:label')"/>
+        <value>1. Too young</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/2. Too old:label')"/>
+        <value>2. Too old</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/3. Pregnant:label')"/>
+        <value>3. Pregnant</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/4. Breast feeding:label')"/>
+        <value>4. Breast feeding</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/5. Too sick:label')"/>
+        <value>5. Too sick</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/6. Feels healthy:label')"/>
+        <value>6. Feels healthy</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/7. Fear of side effects:label')"/>
+        <value>7. Fear of side effects</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/8. Bad smell or taste:label')"/>
+        <value>8. Bad smell or taste</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/9. Tablets are too large:label')"/>
+        <value>9. Tablets are too large</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/10. Rumours:label')"/>
+        <value>10. Rumours</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/11. Does not know:label')"/>
+        <value>11. Does not know</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/12. Drugs ran out:label')"/>
+        <value>12. Drugs ran out</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/13. Was at work:label')"/>
+        <value>13. Was at work</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/14. Not living in the village at time of MDA:label')"/>
+        <value>14. Not living in the village at time of MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/15. Absent from school on day of MDA:label')"/>
+        <value>15. Absent from school on day of MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/16. Does not attend school:label')"/>
+        <value>16. Does not attend school</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/17. There was no MDA:label')"/>
+        <value>17. There was no MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/18. Had not heard about MDA:label')"/>
+        <value>18. Had not heard about MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/19. Too far from distribution point:label')"/>
+        <value>19. Too far from distribution point</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/20. Refused to answer:label')"/>
+        <value>20. Refused to answer</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/21. Was not invited to MDA:label')"/>
+        <value>21. Was not invited to MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/22. Had not eaten before MDA:label')"/>
+        <value>22. Had not eaten before MDA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/23. Too many tablets:label')"/>
+        <value>23. Too many tablets</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/24. Medicine does not work:label')"/>
+        <value>24. Medicine does not work</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/i_alb_mbd_reason_not_swallow_other">
+      <label ref="jr:itext('/data/i_alb_mbd_reason_not_swallow_other:label')"/>
+    </input>
+    <select1 ref="/data/i_alb_mbd_location">
+      <label ref="jr:itext('/data/i_alb_mbd_location:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_location/1. School:label')"/>
+        <value>1. School</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_location/2. Home (door-to-door):label')"/>
+        <value>2. Home (door-to-door)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_location/3. House of the village head:label')"/>
+        <value>3. House of the village head</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_location/4. Central point in the village:label')"/>
+        <value>4. Central point in the village</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_location/5. Local Health Centre:label')"/>
+        <value>5. Local Health Centre</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_location/6. Woreda Clinic:label')"/>
+        <value>6. Woreda Clinic</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_location/7. Other:label')"/>
+        <value>7. Other</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_alb_mbd_location/8. Does not know:label')"/>
+        <value>8. Does not know</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_how_took_med">
+      <label ref="jr:itext('/data/i_how_took_med:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_how_took_med/1. All at the same time:label')"/>
+        <value>1. All at the same time</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_took_med/2. I took them all throughout the day but not all at the same time:label')"/>
+        <value>2. I took them all throughout the day but not all at the same time</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_took_med/3. I took them all but not on the same day:label')"/>
+        <value>3. I took them all but not on the same day</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_took_med/4. One tablet a day until they were all finished:label')"/>
+        <value>4. One tablet a day until they were all finished</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_took_med/5. I took some but not all of them:label')"/>
+        <value>5. I took some but not all of them</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_took_med/6. I was given the tablets but did not swallow them:label')"/>
+        <value>6. I was given the tablets but did not swallow them</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_how_took_med/7. Do not remember:label')"/>
+        <value>7. Do not remember</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_dist_wear_mask">
+      <label ref="jr:itext('/data/i_dist_wear_mask:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_dist_wear_mask/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_dist_wear_mask/No:label')"/>
+        <value>No</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_dist_wear_mask/Do not know:label')"/>
+        <value>Do not know</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_dist_social_dist">
+      <label ref="jr:itext('/data/i_dist_social_dist:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_dist_social_dist/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_dist_social_dist/No:label')"/>
+        <value>No</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_dist_social_dist/Do not know:label')"/>
+        <value>Do not know</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_dist_present">
+      <label ref="jr:itext('/data/i_dist_present:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_dist_present/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_dist_present/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_eat_before">
+      <label ref="jr:itext('/data/i_eat_before:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_eat_before/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_eat_before/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_who_decide_med">
+      <label ref="jr:itext('/data/i_who_decide_med:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_who_decide_med/1. Me:label')"/>
+        <value>1. Me</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_who_decide_med/2. Father:label')"/>
+        <value>2. Father</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_who_decide_med/3. Mother:label')"/>
+        <value>3. Mother</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_who_decide_med/4. Other family member:label')"/>
+        <value>4. Other family member</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_who_decide_med/5. School teacher:label')"/>
+        <value>5. School teacher</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_who_decide_med/6. Village Head:label')"/>
+        <value>6. Village Head</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_who_decide_med/7. Traditional Healer:label')"/>
+        <value>7. Traditional Healer</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_who_decide_med/8. Health worker or drug distributor:label')"/>
+        <value>8. Health worker or drug distributor</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_who_decide_med/Other:label')"/>
+        <value>Other</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_who_decide_med/10. Did not know about the distribution:label')"/>
+        <value>10. Did not know about the distribution</value>
+      </item>
+    </select1>
+    <input ref="/data/i_who_decide_med_other">
+      <label ref="jr:itext('/data/i_who_decide_med_other:label')"/>
+    </input>
+    <select1 ref="/data/i_know_mda_schedule">
+      <label ref="jr:itext('/data/i_know_mda_schedule:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_know_mda_schedule/1. Did not know when or where:label')"/>
+        <value>1. Did not know when or where</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_know_mda_schedule/2. Knew when only:label')"/>
+        <value>2. Knew when only</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_know_mda_schedule/3. Knew where only:label')"/>
+        <value>3. Knew where only</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_know_mda_schedule/4. Knew when and where:label')"/>
+        <value>4. Knew when and where</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_distribution_distance">
+      <label ref="jr:itext('/data/i_distribution_distance:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_distribution_distance/1. 0 – if at home or in school:label')"/>
+        <value>1. 0 – if at home or in school</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_distribution_distance/2. Less than 30 minutes:label')"/>
+        <value>2. Less than 30 minutes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_distribution_distance/3. 30 to 60 minutes:label')"/>
+        <value>3. 30 to 60 minutes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_distribution_distance/4. 1 to 2 hours:label')"/>
+        <value>4. 1 to 2 hours</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_distribution_distance/5. More than 2 hours:label')"/>
+        <value>5. More than 2 hours</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_distribution_distance/6. Do not know:label')"/>
+        <value>6. Do not know</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_receive_ivm">
+      <label ref="jr:itext('/data/i_receive_ivm:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_receive_ivm/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_receive_ivm/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_reason_not_received_ivm">
+      <label ref="jr:itext('/data/i_reason_not_received_ivm:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm/1.Underage:label')"/>
+        <value>1.Underage</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm/2.Pregnant:label')"/>
+        <value>2.Pregnant</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm/3.Breast feeding:label')"/>
+        <value>3.Breast feeding</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm/4.Sick:label')"/>
+        <value>4.Sick</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm/5.Absent:label')"/>
+        <value>5.Absent</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm/6.Didn.t know:label')"/>
+        <value>6.Didn.t know</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm/7.Drugs ran out:label')"/>
+        <value>7.Drugs ran out</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm/8.Nobody came:label')"/>
+        <value>8.Nobody came</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/i_reason_not_received_ivm_other">
+      <label ref="jr:itext('/data/i_reason_not_received_ivm_other:label')"/>
+    </input>
+    <select1 ref="/data/i_ivm_swallow">
+      <label ref="jr:itext('/data/i_ivm_swallow:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_swallow/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_swallow/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_ivm_reason_not_swallow">
+      <label ref="jr:itext('/data/i_ivm_reason_not_swallow:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_reason_not_swallow/1.Fear of side effects:label')"/>
+        <value>1.Fear of side effects</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_reason_not_swallow/2.Bad taste:label')"/>
+        <value>2.Bad taste</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_reason_not_swallow/3.Not sick:label')"/>
+        <value>3.Not sick</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_reason_not_swallow/4.Not enough information given:label')"/>
+        <value>4.Not enough information given</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_reason_not_swallow/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/i_ivm_reason_not_swallow_other">
+      <label ref="jr:itext('/data/i_ivm_reason_not_swallow_other:label')"/>
+    </input>
+    <select1 ref="/data/i_receive_ivm_and_alb">
+      <label ref="jr:itext('/data/i_receive_ivm_and_alb:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_receive_ivm_and_alb/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_receive_ivm_and_alb/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_reason_not_received_ivm_and_alb">
+      <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb/1.Underage:label')"/>
+        <value>1.Underage</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb/2.Pregnant:label')"/>
+        <value>2.Pregnant</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb/3.Breast feeding:label')"/>
+        <value>3.Breast feeding</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb/4.Sick:label')"/>
+        <value>4.Sick</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb/5.Absent:label')"/>
+        <value>5.Absent</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb/6.Didn.t know:label')"/>
+        <value>6.Didn.t know</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb/7.Drugs ran out:label')"/>
+        <value>7.Drugs ran out</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb/8.Nobody came:label')"/>
+        <value>8.Nobody came</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/i_reason_not_received_ivm_and_alb_other">
+      <label ref="jr:itext('/data/i_reason_not_received_ivm_and_alb_other:label')"/>
+    </input>
+    <select1 ref="/data/i_ivm_and_alb_swallow">
+      <label ref="jr:itext('/data/i_ivm_and_alb_swallow:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_and_alb_swallow/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_and_alb_swallow/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/i_ivm_and_alb_reason_not_swallow">
+      <label ref="jr:itext('/data/i_ivm_and_alb_reason_not_swallow:label')"/>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_and_alb_reason_not_swallow/1.Fear of side effects:label')"/>
+        <value>1.Fear of side effects</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_and_alb_reason_not_swallow/2.Bad taste:label')"/>
+        <value>2.Bad taste</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_and_alb_reason_not_swallow/3.Not sick:label')"/>
+        <value>3.Not sick</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_and_alb_reason_not_swallow/4.Not enough information given:label')"/>
+        <value>4.Not enough information given</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/i_ivm_and_alb_reason_not_swallow/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/i_ivm_and_alb_reason_not_swallow_other">
+      <label ref="jr:itext('/data/i_ivm_and_alb_reason_not_swallow_other:label')"/>
+    </input>
+    <input ref="/data/i_notes">
+      <label ref="jr:itext('/data/i_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
