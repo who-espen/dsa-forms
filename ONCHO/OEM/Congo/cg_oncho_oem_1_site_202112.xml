@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Dec 2021) CEO - 1. Fromulaire site</h:title>
+    <model >
+
+      <instance>
+        <data id="cg_oncho_oem_1_site_202112">
+          <c_recorder_id/>
+          <c_region/>
+          <c_district/>
+          <c_cluster_name/>
+          <c_cluster_id/>
+          <c_GPS/>
+          <c_cluster_notes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/c_recorder_id:jr:constraintMsg">
+            <value>Doit être entre 10 et 99 compris</value>
+          </text>
+          <text id="/data/c_recorder_id:label">
+            <value>Entrer le numéro de l'enregistreur</value>
+          </text>
+          <text id="/data/c_recorder_id:hint">
+            <value>Code à 2 chiffres qui vous est attribué</value>
+          </text>
+          <text id="/data/c_region:label">
+            <value>Sélectionner le département</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Entrer le nom du site/village</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>Doit être entre 100 et 999 compris</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Entrer le code du site</value>
+          </text>
+          <text id="/data/c_GPS:label">
+            <value>Veuillez capturer le GPS</value>
+          </text>
+          <text id="/data/c_GPS:hint">
+            <value>Fonctionne mieux à l'extérieur de tout batiment</value>
+          </text>
+          <text id="/data/c_cluster_notes:label">
+            <value>Notes additionnelles</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="region_list">
+        <root>
+          <item>
+            <label>Bouenza</label>
+            <name>Bouenza</name>
+          </item>
+          <item>
+            <label>Brazzaville</label>
+            <name>Brazzaville</name>
+          </item>
+          <item>
+            <label>Cuvette</label>
+            <name>Cuvette</name>
+          </item>
+          <item>
+            <label>Kouilou</label>
+            <name>Kouilou</name>
+          </item>
+          <item>
+            <label>Niari</label>
+            <name>Niari</name>
+          </item>
+          <item>
+            <label>Plateaux</label>
+            <name>Plateaux</name>
+          </item>
+          <item>
+            <label>Pool</label>
+            <name>Pool</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <label>Abala</label>
+            <name>Abala</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Bacongo</label>
+            <name>Bacongo</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Boko</label>
+            <name>Boko</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Djambala</label>
+            <name>Djambala</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Djiri</label>
+            <name>Djiri</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Dolisie</label>
+            <name>Dolisie</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Gamboma</label>
+            <name>Gamboma</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Goma Tsé-Tsé</label>
+            <name>Goma Tsé-Tsé</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Hinda</label>
+            <name>Hinda</name>
+            <region_list>Kouilou</region_list>
+          </item>
+          <item>
+            <label>Igné-Ngabe-Mayama</label>
+            <name>Igné-Ngabe-Mayama</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Ile Mbamou</label>
+            <name>Ile Mbamou</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Kibangou</label>
+            <name>Kibangou</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Kimongo</label>
+            <name>Kimongo</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Kindamba</label>
+            <name>Kindamba</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Kinkala</label>
+            <name>Kinkala</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Kintele</label>
+            <name>Kintele</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Loudima</label>
+            <name>Loudima</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Loutété</label>
+            <name>Loutété</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Madibou</label>
+            <name>Madibou</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Madingo-Kayes-Nzambi</label>
+            <name>Madingo-Kayes-Nzambi</name>
+            <region_list>Kouilou</region_list>
+          </item>
+          <item>
+            <label>Madingou</label>
+            <name>Madingou</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Makélékélé</label>
+            <name>Makélékélé</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Mayoko</label>
+            <name>Mayoko</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Mfilou</label>
+            <name>Mfilou</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Mindouli</label>
+            <name>Mindouli</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Mossaka</label>
+            <name>Mossaka</name>
+            <region_list>Cuvette</region_list>
+          </item>
+          <item>
+            <label>Mossendjo</label>
+            <name>Mossendjo</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Moungali</label>
+            <name>Moungali</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Mouyondzi</label>
+            <name>Mouyondzi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Mvouti-Kakamoeka</label>
+            <name>Mvouti-Kakamoeka</name>
+            <region_list>Kouilou</region_list>
+          </item>
+          <item>
+            <label>Ngo-Mpouya</label>
+            <name>Ngo-Mpouya</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Nkayi</label>
+            <name>Nkayi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Ouenzé</label>
+            <name>Ouenzé</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Owando</label>
+            <name>Owando</name>
+            <region_list>Cuvette</region_list>
+          </item>
+          <item>
+            <label>Oyo-Alima</label>
+            <name>Oyo-Alima</name>
+            <region_list>Cuvette</region_list>
+          </item>
+          <item>
+            <label>Poto-Poto</label>
+            <name>Poto-Poto</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Talangai</label>
+            <name>Talangai</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/c_region" required="true()" type="string"/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="int" db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
+      <bind nodeset="/data/c_GPS" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_cluster_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder_id">
+      <label ref="jr:itext('/data/c_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/c_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/c_region">
+      <label ref="jr:itext('/data/c_region:label')"/>
+      <item>
+        <label>Bouenza</label>
+        <value>Bouenza</value>
+      </item>
+      <item>
+        <label>Brazzaville</label>
+        <value>Brazzaville</value>
+      </item>
+      <item>
+        <label>Cuvette</label>
+        <value>Cuvette</value>
+      </item>
+      <item>
+        <label>Kouilou</label>
+        <value>Kouilou</value>
+      </item>
+      <item>
+        <label>Niari</label>
+        <value>Niari</value>
+      </item>
+      <item>
+        <label>Plateaux</label>
+        <value>Plateaux</value>
+      </item>
+      <item>
+        <label>Pool</label>
+        <value>Pool</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[region_list =  /data/c_region ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+    </input>
+    <input ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+    </input>
+    <input ref="/data/c_GPS">
+      <label ref="jr:itext('/data/c_GPS:label')"/>
+      <hint ref="jr:itext('/data/c_GPS:hint')"/>
+    </input>
+    <input ref="/data/c_cluster_notes">
+      <label ref="jr:itext('/data/c_cluster_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
