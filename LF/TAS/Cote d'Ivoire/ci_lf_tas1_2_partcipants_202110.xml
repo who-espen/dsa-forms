@@ -7,14 +7,15 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Octobre 2021) 2. TAS1 FL - Formulaire Participants V2</h:title>
+    <h:title>(Octobre 2021) 2. TAS1 FL - Formulaire Participants V3</h:title>
     <model >
 
       <instance>
-        <data id="ci_lf_tas1_2_partcipants_202110_v2">
+        <data id="ci_lf_tas1_2_partcipants_202110_v3">
           <p_recorderID/>
           <p_eu_name/>
           <p_district/>
+          <p_district_id/>
           <p_cluster_name/>
           <p_cluster_id/>
           <p_consent/>
@@ -49,6 +50,9 @@
           </text>
           <text id="/data/p_district:label">
             <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/p_district_id:label">
+            <value>Sélectionner le code du district</value>
           </text>
           <text id="/data/p_cluster_name:label">
             <value>Sélectionner votre école</value>
@@ -121,6 +125,9 @@
           <text id="/data/p_district:label">
             <value>Select your district</value>
           </text>
+          <text id="/data/p_district_id:label">
+            <value>Select your district ID</value>
+          </text>
           <text id="/data/p_cluster_name:label">
             <value>Select your school name</value>
           </text>
@@ -181,14 +188,15 @@
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorderID:jr:constraintMsg')" nodeset="/data/p_recorderID" required="true()" type="int"/>
       <bind nodeset="/data/p_eu_name" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_eu_name"/>
-      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
-      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_district_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/p_cluster_name"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
-      <bind calculate="concat( /data/p_cluster_id , '-' , /data/p_num )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_district_id , '-',  /data/p_cluster_id , '-' , /data/p_num )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Non'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
@@ -206,6 +214,9 @@
     </input>
     <input ref="/data/p_district">
       <label ref="jr:itext('/data/p_district:label')"/>
+    </input>
+    <input ref="/data/p_district_id">
+      <label ref="jr:itext('/data/p_district_id:label')"/>
     </input>
     <input ref="/data/p_cluster_name">
       <label ref="jr:itext('/data/p_cluster_name:label')"/>
