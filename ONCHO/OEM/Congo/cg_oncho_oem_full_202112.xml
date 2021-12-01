@@ -10,13 +10,13 @@
     <h:title>(Dec 2021) Cartographie d'Elimination de Onchocercose</h:title>
     <model >
 
-
       <instance>
         <data id="cg_oncho_oem_full_202112">
           <recorder_id/>
           <region/>
           <district/>
           <cluster_name/>
+          <zone/>
           <GPS/>
           <participant jr:template="">
             <add_more/>
@@ -28,8 +28,11 @@
             <age_yrs/>
             <is_natif/>
             <yrs_arriving/>
+            <num_biopsie/>
             <mfs_1/>
             <mfs_2/>
+            <nodule_localisation/>
+            <nodule_nbe/>
             <collectedbs/>
             <ending_survey_note/>
             <AdditionalNotes/>
@@ -44,8 +47,11 @@
             <age_yrs/>
             <is_natif/>
             <yrs_arriving/>
+            <num_biopsie/>
             <mfs_1/>
             <mfs_2/>
+            <nodule_localisation/>
+            <nodule_nbe/>
             <collectedbs/>
             <ending_survey_note/>
             <AdditionalNotes/>
@@ -78,6 +84,9 @@
           <text id="/data/cluster_name:label">
             <value>Entrer le nom du site/village</value>
           </text>
+          <text id="/data/zone:label">
+            <value>Entrer la zone</value>
+          </text>
           <text id="/data/GPS:label">
             <value>Veuillez capturer le GPS</value>
           </text>
@@ -91,10 +100,7 @@
             <value>Le participant a-t-il donné son consentement ?</value>
           </text>
           <text id="/data/participant/sex:label">
-            <value>Veuillez capturer le GPS</value>
-          </text>
-          <text id="/data/participant/sex:hint">
-            <value>Fonctionne mieux à l'extérieur de tout batiment</value>
+            <value>Sélectionner le sexe</value>
           </text>
           <text id="/data/participant/Imethod:label">
             <value>How will the individual's unique ID be generated?</value>
@@ -112,7 +118,7 @@
             <value>Veuillez enregistrer le code d'identification unique suivant pour le répondant sur une liste distincte et sur chaque test de diagnostic administré</value>
           </text>
           <text id="/data/participant/age_yrs:jr:constraintMsg">
-            <value>L'âge doit être compris entre 20 et 120 ans</value>
+            <value>L'âge doit être compris entre 18 et 120 ans</value>
           </text>
           <text id="/data/participant/age_yrs:label">
             <value>Veuillez entrer l'âge du participant</value>
@@ -132,14 +138,23 @@
           <text id="/data/participant/yrs_arriving:hint">
             <value>L'année doit être supérieur ou égale à année de naissance</value>
           </text>
+          <text id="/data/participant/num_biopsie:label">
+            <value>Numéro Biopsi</value>
+          </text>
           <text id="/data/participant/mfs_1:label">
             <value>Moyenne Mfs 1er prélèvement</value>
           </text>
           <text id="/data/participant/mfs_2:label">
             <value>Moyenne Mfs 2ème prélèvement</value>
           </text>
+          <text id="/data/participant/nodule_localisation:label">
+            <value>Sélectionner la localisation du nodule</value>
+          </text>
+          <text id="/data/participant/nodule_nbe:label">
+            <value>Entrer le nombre de Nodules</value>
+          </text>
           <text id="/data/participant/collectedbs:label">
-            <value>Les DBS ont été prélevés</value>
+            <value>Les DBS ont-ils été prélevés</value>
           </text>
           <text id="/data/participant/ending_survey_note:label">
             <value>Vous venez d'entrer une valeur qui mettra fin à l'enquête.</value>
@@ -149,6 +164,7 @@
           </text>
         </translation>
       </itext>
+      
       <instance id="yes_no">
         <root>
           <item>
@@ -182,6 +198,34 @@
           <item>
             <label>Manuel</label>
             <name>Manuel</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="locatlisation">
+        <root>
+          <item>
+            <label>Grill costal</label>
+            <name>Grill costal</name>
+          </item>
+          <item>
+            <label>Crête illiaque gauche</label>
+            <name>Crête illiaque gauche</name>
+          </item>
+          <item>
+            <label>Crête illiaque droite</label>
+            <name>Crête illiaque droite</name>
+          </item>
+          <item>
+            <label>Génou</label>
+            <name>Génou</name>
+          </item>
+          <item>
+            <label>Coude</label>
+            <name>Coude</name>
+          </item>
+          <item>
+            <label>Autre</label>
+            <name>Autre</name>
           </item>
         </root>
       </instance>
@@ -410,6 +454,7 @@
       <bind nodeset="/data/region" required="true()" type="string"/>
       <bind nodeset="/data/district" required="true()" type="string"/>
       <bind nodeset="/data/cluster_name" required="true()" type="string"/>
+      <bind nodeset="/data/zone" required="true()" type="string"/>
       <bind nodeset="/data/GPS" required="true()" type="geopoint"/>
       <bind nodeset="/data/participant/add_more" type="string"/>
       <bind nodeset="/data/participant/consent" relevant=" ../add_more  = 'Oui'" required="true()" type="string"/>
@@ -417,11 +462,14 @@
       <bind nodeset="/data/participant/Imethod" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="string"/>
       <bind constraint="regex(., '^OEM-[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/participant/BarcodeID:jr:constraintMsg')" nodeset="/data/participant/BarcodeID" relevant=" ../consent  = 'Oui' and  ../Imethod  = 'Scanner' and  ../add_more  = 'Oui'" required="true()" type="barcode"/>
       <bind constraint="regex(., '^OEM-[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/participant/GenerateID:jr:constraintMsg')" nodeset="/data/participant/GenerateID" relevant=" ../consent  = 'Oui' and  ../Imethod  = 'Manuel' and  ../add_more  = 'Oui'" required="true()" type="string"/>
-      <bind constraint=". &gt; 19 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/participant/age_yrs:jr:constraintMsg')" nodeset="/data/participant/age_yrs" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="int"/>
-      <bind nodeset="/data/participant/is_natif" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" type="string"/>
-      <bind constraint=". &lt;= (2021 -  ../age_yrs )" jr:constraintMsg="jr:itext('/data/participant/yrs_arriving:jr:constraintMsg')" nodeset="/data/participant/yrs_arriving" relevant=" ../consent  = 'Oui' and  ../is_natif  = 'Non' and  ../add_more  = 'Oui'" type="int"/>
+      <bind constraint=". &gt; 17 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/participant/age_yrs:jr:constraintMsg')" nodeset="/data/participant/age_yrs" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/participant/is_natif" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="string"/>
+      <bind constraint=". &lt;= (2021 -  ../age_yrs )" jr:constraintMsg="jr:itext('/data/participant/yrs_arriving:jr:constraintMsg')" nodeset="/data/participant/yrs_arriving" relevant=" ../consent  = 'Oui' and  ../is_natif  = 'Non' and  ../add_more  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/participant/num_biopsie" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/participant/mfs_1" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="decimal"/>
       <bind nodeset="/data/participant/mfs_2" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="decimal"/>
+      <bind nodeset="/data/participant/nodule_localisation" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/participant/nodule_nbe" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/participant/collectedbs" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/participant/ending_survey_note" readonly="true()" relevant=" ../consent  = 'Non' and  ../add_more  = 'Oui'" type="string"/>
       <bind nodeset="/data/participant/AdditionalNotes" relevant=" ../add_more  = 'Oui'" type="string"/>
@@ -476,6 +524,9 @@
     <input ref="/data/cluster_name">
       <label ref="jr:itext('/data/cluster_name:label')"/>
     </input>
+    <input ref="/data/zone">
+      <label ref="jr:itext('/data/zone:label')"/>
+    </input>
     <input ref="/data/GPS">
       <label ref="jr:itext('/data/GPS:label')"/>
       <hint ref="jr:itext('/data/GPS:hint')"/>
@@ -507,7 +558,6 @@
         </select1>
         <select1 ref="/data/participant/sex">
           <label ref="jr:itext('/data/participant/sex:label')"/>
-          <hint ref="jr:itext('/data/participant/sex:hint')"/>
           <item>
             <label>Masculin</label>
             <value>Masculin</value>
@@ -553,11 +603,44 @@
           <label ref="jr:itext('/data/participant/yrs_arriving:label')"/>
           <hint ref="jr:itext('/data/participant/yrs_arriving:hint')"/>
         </input>
+        <input ref="/data/participant/num_biopsie">
+          <label ref="jr:itext('/data/participant/num_biopsie:label')"/>
+        </input>
         <input ref="/data/participant/mfs_1">
           <label ref="jr:itext('/data/participant/mfs_1:label')"/>
         </input>
         <input ref="/data/participant/mfs_2">
           <label ref="jr:itext('/data/participant/mfs_2:label')"/>
+        </input>
+        <select1 ref="/data/participant/nodule_localisation">
+          <label ref="jr:itext('/data/participant/nodule_localisation:label')"/>
+          <item>
+            <label>Grill costal</label>
+            <value>Grill costal</value>
+          </item>
+          <item>
+            <label>Crête illiaque gauche</label>
+            <value>Crête illiaque gauche</value>
+          </item>
+          <item>
+            <label>Crête illiaque droite</label>
+            <value>Crête illiaque droite</value>
+          </item>
+          <item>
+            <label>Génou</label>
+            <value>Génou</value>
+          </item>
+          <item>
+            <label>Coude</label>
+            <value>Coude</value>
+          </item>
+          <item>
+            <label>Autre</label>
+            <value>Autre</value>
+          </item>
+        </select1>
+        <input ref="/data/participant/nodule_nbe">
+          <label ref="jr:itext('/data/participant/nodule_nbe:label')"/>
         </input>
         <select1 ref="/data/participant/collectedbs">
           <label ref="jr:itext('/data/participant/collectedbs:label')"/>
