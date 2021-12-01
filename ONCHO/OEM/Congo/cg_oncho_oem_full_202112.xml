@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Dec 2021) Cartographie d'Elimination de Onchocercose</h:title>
+    <model >
+
+
+      <instance>
+        <data id="cg_oncho_oem_full_202112">
+          <recorder_id/>
+          <region/>
+          <district/>
+          <cluster_name/>
+          <GPS/>
+          <participant jr:template="">
+            <add_more/>
+            <consent/>
+            <sex/>
+            <Imethod/>
+            <BarcodeID/>
+            <GenerateID/>
+            <age_yrs/>
+            <is_natif/>
+            <yrs_arriving/>
+            <mfs_1/>
+            <mfs_2/>
+            <collectedbs/>
+            <ending_survey_note/>
+            <AdditionalNotes/>
+          </participant>
+          <participant>
+            <add_more/>
+            <consent/>
+            <sex/>
+            <Imethod/>
+            <BarcodeID/>
+            <GenerateID/>
+            <age_yrs/>
+            <is_natif/>
+            <yrs_arriving/>
+            <mfs_1/>
+            <mfs_2/>
+            <collectedbs/>
+            <ending_survey_note/>
+            <AdditionalNotes/>
+          </participant>
+          <start/>
+          <end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/recorder_id:jr:constraintMsg">
+            <value>Doit être entre 10 et 99 compris</value>
+          </text>
+          <text id="/data/recorder_id:label">
+            <value>Entrer le numéro de l'enregistreur</value>
+          </text>
+          <text id="/data/recorder_id:hint">
+            <value>Code à 2 chiffres qui vous est attribué</value>
+          </text>
+          <text id="/data/region:label">
+            <value>Sélectionner le département</value>
+          </text>
+          <text id="/data/district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/cluster_name:label">
+            <value>Entrer le nom du site/village</value>
+          </text>
+          <text id="/data/GPS:label">
+            <value>Veuillez capturer le GPS</value>
+          </text>
+          <text id="/data/GPS:hint">
+            <value>Fonctionne mieux à l'extérieur de tout batiment</value>
+          </text>
+          <text id="/data/participant/add_more:label">
+            <value>Voulez-vous vraiment ajouter un participant pour ce village ?</value>
+          </text>
+          <text id="/data/participant/consent:label">
+            <value>Le participant a-t-il donné son consentement ?</value>
+          </text>
+          <text id="/data/participant/sex:label">
+            <value>Veuillez capturer le GPS</value>
+          </text>
+          <text id="/data/participant/sex:hint">
+            <value>Fonctionne mieux à l'extérieur de tout batiment</value>
+          </text>
+          <text id="/data/participant/Imethod:label">
+            <value>How will the individual's unique ID be generated?</value>
+          </text>
+          <text id="/data/participant/BarcodeID:jr:constraintMsg">
+            <value>Format du code incorrect. Ex d'un bon code "OEM-12345678"</value>
+          </text>
+          <text id="/data/participant/BarcodeID:label">
+            <value>Veuillez scanner le QR code</value>
+          </text>
+          <text id="/data/participant/GenerateID:jr:constraintMsg">
+            <value>Format du code incorrect. Ex d'un bon code "OEM-12345678"</value>
+          </text>
+          <text id="/data/participant/GenerateID:label">
+            <value>Veuillez enregistrer le code d'identification unique suivant pour le répondant sur une liste distincte et sur chaque test de diagnostic administré</value>
+          </text>
+          <text id="/data/participant/age_yrs:jr:constraintMsg">
+            <value>L'âge doit être compris entre 20 et 120 ans</value>
+          </text>
+          <text id="/data/participant/age_yrs:label">
+            <value>Veuillez entrer l'âge du participant</value>
+          </text>
+          <text id="/data/participant/age_yrs:hint">
+            <value>Doit être de 20 ans ou plus</value>
+          </text>
+          <text id="/data/participant/is_natif:label">
+            <value>La participation est-il originaire du village (né au village) ou migrant (n'est pas née au village et est venu s'installer)</value>
+          </text>
+          <text id="/data/participant/yrs_arriving:jr:constraintMsg">
+            <value>L'année doit être supérieur ou égale à année de naissance</value>
+          </text>
+          <text id="/data/participant/yrs_arriving:label">
+            <value>Année d'arrivée dans le village</value>
+          </text>
+          <text id="/data/participant/yrs_arriving:hint">
+            <value>L'année doit être supérieur ou égale à année de naissance</value>
+          </text>
+          <text id="/data/participant/mfs_1:label">
+            <value>Moyenne Mfs 1er prélèvement</value>
+          </text>
+          <text id="/data/participant/mfs_2:label">
+            <value>Moyenne Mfs 2ème prélèvement</value>
+          </text>
+          <text id="/data/participant/collectedbs:label">
+            <value>Les DBS ont été prélevés</value>
+          </text>
+          <text id="/data/participant/ending_survey_note:label">
+            <value>Vous venez d'entrer une valeur qui mettra fin à l'enquête.</value>
+          </text>
+          <text id="/data/participant/AdditionalNotes:label">
+            <value>Notes additionnelles</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <label>Oui</label>
+            <name>Oui</name>
+          </item>
+          <item>
+            <label>Non</label>
+            <name>Non</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sex">
+        <root>
+          <item>
+            <label>Masculin</label>
+            <name>Masculin</name>
+          </item>
+          <item>
+            <label>Féminin</label>
+            <name>Féminin</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="ID_method">
+        <root>
+          <item>
+            <label>Scanner</label>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <label>Manuel</label>
+            <name>Manuel</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <label>Bouenza</label>
+            <name>Bouenza</name>
+          </item>
+          <item>
+            <label>Brazzaville</label>
+            <name>Brazzaville</name>
+          </item>
+          <item>
+            <label>Cuvette</label>
+            <name>Cuvette</name>
+          </item>
+          <item>
+            <label>Kouilou</label>
+            <name>Kouilou</name>
+          </item>
+          <item>
+            <label>Niari</label>
+            <name>Niari</name>
+          </item>
+          <item>
+            <label>Plateaux</label>
+            <name>Plateaux</name>
+          </item>
+          <item>
+            <label>Pool</label>
+            <name>Pool</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <label>Abala</label>
+            <name>Abala</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Bacongo</label>
+            <name>Bacongo</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Boko</label>
+            <name>Boko</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Djambala</label>
+            <name>Djambala</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Djiri</label>
+            <name>Djiri</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Dolisie</label>
+            <name>Dolisie</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Gamboma</label>
+            <name>Gamboma</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Goma Tsé-Tsé</label>
+            <name>Goma Tsé-Tsé</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Hinda</label>
+            <name>Hinda</name>
+            <region_list>Kouilou</region_list>
+          </item>
+          <item>
+            <label>Igné-Ngabe-Mayama</label>
+            <name>Igné-Ngabe-Mayama</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Ile Mbamou</label>
+            <name>Ile Mbamou</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Kibangou</label>
+            <name>Kibangou</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Kimongo</label>
+            <name>Kimongo</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Kindamba</label>
+            <name>Kindamba</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Kinkala</label>
+            <name>Kinkala</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Kintele</label>
+            <name>Kintele</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Loudima</label>
+            <name>Loudima</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Loutété</label>
+            <name>Loutété</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Madibou</label>
+            <name>Madibou</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Madingo-Kayes-Nzambi</label>
+            <name>Madingo-Kayes-Nzambi</name>
+            <region_list>Kouilou</region_list>
+          </item>
+          <item>
+            <label>Madingou</label>
+            <name>Madingou</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Makélékélé</label>
+            <name>Makélékélé</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Mayoko</label>
+            <name>Mayoko</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Mfilou</label>
+            <name>Mfilou</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Mindouli</label>
+            <name>Mindouli</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Mossaka</label>
+            <name>Mossaka</name>
+            <region_list>Cuvette</region_list>
+          </item>
+          <item>
+            <label>Mossendjo</label>
+            <name>Mossendjo</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Moungali</label>
+            <name>Moungali</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Mouyondzi</label>
+            <name>Mouyondzi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Mvouti-Kakamoeka</label>
+            <name>Mvouti-Kakamoeka</name>
+            <region_list>Kouilou</region_list>
+          </item>
+          <item>
+            <label>Ngo-Mpouya</label>
+            <name>Ngo-Mpouya</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Nkayi</label>
+            <name>Nkayi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Ouenzé</label>
+            <name>Ouenzé</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Owando</label>
+            <name>Owando</name>
+            <region_list>Cuvette</region_list>
+          </item>
+          <item>
+            <label>Oyo-Alima</label>
+            <name>Oyo-Alima</name>
+            <region_list>Cuvette</region_list>
+          </item>
+          <item>
+            <label>Poto-Poto</label>
+            <name>Poto-Poto</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Talangai</label>
+            <name>Talangai</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/recorder_id:jr:constraintMsg')" nodeset="/data/recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/region" required="true()" type="string"/>
+      <bind nodeset="/data/district" required="true()" type="string"/>
+      <bind nodeset="/data/cluster_name" required="true()" type="string"/>
+      <bind nodeset="/data/GPS" required="true()" type="geopoint"/>
+      <bind nodeset="/data/participant/add_more" type="string"/>
+      <bind nodeset="/data/participant/consent" relevant=" ../add_more  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/participant/sex" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/participant/Imethod" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="string"/>
+      <bind constraint="regex(., '^OEM-[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/participant/BarcodeID:jr:constraintMsg')" nodeset="/data/participant/BarcodeID" relevant=" ../consent  = 'Oui' and  ../Imethod  = 'Scanner' and  ../add_more  = 'Oui'" required="true()" type="barcode"/>
+      <bind constraint="regex(., '^OEM-[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/participant/GenerateID:jr:constraintMsg')" nodeset="/data/participant/GenerateID" relevant=" ../consent  = 'Oui' and  ../Imethod  = 'Manuel' and  ../add_more  = 'Oui'" required="true()" type="string"/>
+      <bind constraint=". &gt; 19 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/participant/age_yrs:jr:constraintMsg')" nodeset="/data/participant/age_yrs" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/participant/is_natif" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" type="string"/>
+      <bind constraint=". &lt;= (2021 -  ../age_yrs )" jr:constraintMsg="jr:itext('/data/participant/yrs_arriving:jr:constraintMsg')" nodeset="/data/participant/yrs_arriving" relevant=" ../consent  = 'Oui' and  ../is_natif  = 'Non' and  ../add_more  = 'Oui'" type="int"/>
+      <bind nodeset="/data/participant/mfs_1" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="decimal"/>
+      <bind nodeset="/data/participant/mfs_2" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="decimal"/>
+      <bind nodeset="/data/participant/collectedbs" relevant=" ../consent  = 'Oui' and  ../add_more  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/participant/ending_survey_note" readonly="true()" relevant=" ../consent  = 'Non' and  ../add_more  = 'Oui'" type="string"/>
+      <bind nodeset="/data/participant/AdditionalNotes" relevant=" ../add_more  = 'Oui'" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/recorder_id">
+      <label ref="jr:itext('/data/recorder_id:label')"/>
+      <hint ref="jr:itext('/data/recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/region">
+      <label ref="jr:itext('/data/region:label')"/>
+      <item>
+        <label>Bouenza</label>
+        <value>Bouenza</value>
+      </item>
+      <item>
+        <label>Brazzaville</label>
+        <value>Brazzaville</value>
+      </item>
+      <item>
+        <label>Cuvette</label>
+        <value>Cuvette</value>
+      </item>
+      <item>
+        <label>Kouilou</label>
+        <value>Kouilou</value>
+      </item>
+      <item>
+        <label>Niari</label>
+        <value>Niari</value>
+      </item>
+      <item>
+        <label>Plateaux</label>
+        <value>Plateaux</value>
+      </item>
+      <item>
+        <label>Pool</label>
+        <value>Pool</value>
+      </item>
+    </select1>
+    <select1 ref="/data/district">
+      <label ref="jr:itext('/data/district:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[region_list =  /data/region ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <input ref="/data/cluster_name">
+      <label ref="jr:itext('/data/cluster_name:label')"/>
+    </input>
+    <input ref="/data/GPS">
+      <label ref="jr:itext('/data/GPS:label')"/>
+      <hint ref="jr:itext('/data/GPS:hint')"/>
+    </input>
+    <group ref="/data/participant">
+      <label></label>
+      <repeat nodeset="/data/participant">
+        <select1 ref="/data/participant/add_more">
+          <label ref="jr:itext('/data/participant/add_more:label')"/>
+          <item>
+            <label>Oui</label>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label>Non</label>
+            <value>Non</value>
+          </item>
+        </select1>
+        <select1 ref="/data/participant/consent">
+          <label ref="jr:itext('/data/participant/consent:label')"/>
+          <item>
+            <label>Oui</label>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label>Non</label>
+            <value>Non</value>
+          </item>
+        </select1>
+        <select1 ref="/data/participant/sex">
+          <label ref="jr:itext('/data/participant/sex:label')"/>
+          <hint ref="jr:itext('/data/participant/sex:hint')"/>
+          <item>
+            <label>Masculin</label>
+            <value>Masculin</value>
+          </item>
+          <item>
+            <label>Féminin</label>
+            <value>Féminin</value>
+          </item>
+        </select1>
+        <select1 ref="/data/participant/Imethod">
+          <label ref="jr:itext('/data/participant/Imethod:label')"/>
+          <item>
+            <label>Scanner</label>
+            <value>Scanner</value>
+          </item>
+          <item>
+            <label>Manuel</label>
+            <value>Manuel</value>
+          </item>
+        </select1>
+        <input ref="/data/participant/BarcodeID">
+          <label ref="jr:itext('/data/participant/BarcodeID:label')"/>
+        </input>
+        <input ref="/data/participant/GenerateID">
+          <label ref="jr:itext('/data/participant/GenerateID:label')"/>
+        </input>
+        <input ref="/data/participant/age_yrs">
+          <label ref="jr:itext('/data/participant/age_yrs:label')"/>
+          <hint ref="jr:itext('/data/participant/age_yrs:hint')"/>
+        </input>
+        <select1 ref="/data/participant/is_natif">
+          <label ref="jr:itext('/data/participant/is_natif:label')"/>
+          <item>
+            <label>Oui</label>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label>Non</label>
+            <value>Non</value>
+          </item>
+        </select1>
+        <input ref="/data/participant/yrs_arriving">
+          <label ref="jr:itext('/data/participant/yrs_arriving:label')"/>
+          <hint ref="jr:itext('/data/participant/yrs_arriving:hint')"/>
+        </input>
+        <input ref="/data/participant/mfs_1">
+          <label ref="jr:itext('/data/participant/mfs_1:label')"/>
+        </input>
+        <input ref="/data/participant/mfs_2">
+          <label ref="jr:itext('/data/participant/mfs_2:label')"/>
+        </input>
+        <select1 ref="/data/participant/collectedbs">
+          <label ref="jr:itext('/data/participant/collectedbs:label')"/>
+          <item>
+            <label>Oui</label>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label>Non</label>
+            <value>Non</value>
+          </item>
+        </select1>
+        <input ref="/data/participant/ending_survey_note">
+          <label ref="jr:itext('/data/participant/ending_survey_note:label')"/>
+        </input>
+        <input ref="/data/participant/AdditionalNotes">
+          <label ref="jr:itext('/data/participant/AdditionalNotes:label')"/>
+        </input>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>
