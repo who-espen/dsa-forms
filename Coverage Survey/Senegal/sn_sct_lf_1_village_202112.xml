@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Dec 2021) - 1. SCT Formulaire Village</h:title>
+    <h:title>(Dec 2021) - 1. SCT Formulaire Village V1</h:title>
     <model >
 
       <instance>
-        <data id="sn_sct_lf_couverture_202112">
+        <data id="sn_sct_lf_couverture_202112_v1">
           <v_recorder_id/>
           <v_region/>
           <v_district/>
@@ -105,6 +105,15 @@
           <text id="/data/v_maladie:label">
             <value>Maladie en cours d'évaluation</value>
           </text>
+          <text id="/data/v_maladie/Filariose.lymphatique:label">
+            <value>Filariose lymphatique</value>
+          </text>
+          <text id="/data/v_maladie/Onchocercose:label">
+            <value>Onchocercose</value>
+          </text>
+          <text id="/data/v_maladie/Schistosomiase:label">
+            <value>Schistosomiase</value>
+          </text>
           <text id="/data/v_date:label">
             <value>Date de l'évaluation</value>
           </text>
@@ -113,6 +122,15 @@
           </text>
           <text id="/data/v_commentaires:label">
             <value>Commentaires</value>
+          </text>
+          <text id="maladies-0">
+            <value>Filariose lymphatique</value>
+          </text>
+          <text id="maladies-1">
+            <value>Onchocercose</value>
+          </text>
+          <text id="maladies-2">
+            <value>Schistosomiase</value>
           </text>
           <text id="region-0">
             <value>DAKAR</value>
@@ -392,6 +410,22 @@
           </text>
         </translation>
       </itext>
+      <instance id="maladies">
+        <root>
+          <item>
+            <itextId>maladies-0</itextId>
+            <name>Filariose.lymphatique</name>
+          </item>
+          <item>
+            <itextId>maladies-1</itextId>
+            <name>Onchocercose</name>
+          </item>
+          <item>
+            <itextId>maladies-2</itextId>
+            <name>Schistosomiase</name>
+          </item>
+        </root>
+      </instance>
       <instance id="region">
         <root>
           <item>
@@ -853,7 +887,7 @@
       <bind nodeset="/data/v_village" required="true()" type="string" db_add_col_1="/data/v_district" db_add_col_2="."/>
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/v_village_id:jr:constraintMsg')" nodeset="/data/v_village_id" required="true()" type="int" db_add_col_2="/data/v_village" db_add_col_3="."/>
       <bind nodeset="/data/v_population" required="true()" type="int"/>
-      <bind calculate="concat('Filariose Lymphatique')" nodeset="/data/v_maladie" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/data/v_maladie" required="true()" type="string"/>
       <bind nodeset="/data/v_date" required="true()" type="date"/>
       <bind nodeset="/data/v_gps" type="geopoint"/>
       <bind nodeset="/data/v_commentaires" type="string"/>
@@ -944,9 +978,21 @@
     <input ref="/data/v_population">
       <label ref="jr:itext('/data/v_population:label')"/>
     </input>
-    <input ref="/data/v_maladie">
+    <select ref="/data/v_maladie">
       <label ref="jr:itext('/data/v_maladie:label')"/>
-    </input>
+      <item>
+        <label ref="jr:itext('/data/v_maladie/Filariose.lymphatique:label')"/>
+        <value>Filariose.lymphatique</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_maladie/Onchocercose:label')"/>
+        <value>Onchocercose</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_maladie/Schistosomiase:label')"/>
+        <value>Schistosomiase</value>
+      </item>
+    </select>
     <input ref="/data/v_date">
       <label ref="jr:itext('/data/v_date:label')"/>
     </input>
