@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Dec 2021) IAS - 1. Site Form</h:title>
+    <model >
+
+      <instance>
+        <data id="lr_oncho_ias_1_site_202112">
+          <c_recorder_id/>
+          <c_county/>
+          <c_district/>
+          <c_district_other/>
+          <c_town/>
+          <c_town_other/>
+          <c_cluster_name/>
+          <c_cluster_id/>
+          <c_GPS/>
+          <c_notes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/c_recorder_id:jr:constraintMsg">
+            <value>Must be between 10 and 99 included</value>
+          </text>
+          <text id="/data/c_recorder_id:label">
+            <value>Recorder ID</value>
+          </text>
+          <text id="/data/c_recorder_id:hint">
+            <value>2-digit code provided to each recorder (person doing the data entry)</value>
+          </text>
+          <text id="/data/c_county:label">
+            <value>Select county</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Select district</value>
+          </text>
+          <text id="/data/c_district_other:label">
+            <value>Please, enter the district name</value>
+          </text>
+          <text id="/data/c_town:label">
+            <value>Select town or site</value>
+          </text>
+          <text id="/data/c_town_other:label">
+            <value>Please, enter the town or site</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Community name</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>Must be between 100 and 999 included</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Community ID</value>
+          </text>
+          <text id="/data/c_GPS:label">
+            <value>GPS</value>
+          </text>
+          <text id="/data/c_GPS:hint">
+            <value>Works best outside of any building</value>
+          </text>
+          <text id="/data/c_notes:label">
+            <value>Notes</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <label>Yes</label>
+            <name>Yes</name>
+          </item>
+          <item>
+            <label>No</label>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="county">
+        <root>
+          <item>
+            <label>Bong</label>
+            <name>Bong</name>
+          </item>
+          <item>
+            <label>Gbarpolu</label>
+            <name>Gbarpolu</name>
+          </item>
+          <item>
+            <label>Grand Gedeh</label>
+            <name>Grand Gedeh</name>
+          </item>
+          <item>
+            <label>Grand Kru</label>
+            <name>Grand Kru</name>
+          </item>
+          <item>
+            <label>Lofa</label>
+            <name>Lofa</name>
+          </item>
+          <item>
+            <label>Maryland</label>
+            <name>Maryland</name>
+          </item>
+          <item>
+            <label>Montserrado</label>
+            <name>Montserrado</name>
+          </item>
+          <item>
+            <label>Nimba</label>
+            <name>Nimba</name>
+          </item>
+          <item>
+            <label>River Gee</label>
+            <name>River Gee</name>
+          </item>
+          <item>
+            <label>Sinoe</label>
+            <name>Sinoe</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district">
+        <root>
+          <item>
+            <county>Bong</county>
+            <label>Jorquelleh</label>
+            <name>Jorquelleh</name>
+          </item>
+          <item>
+            <county>Bong</county>
+            <label>Kokoyah</label>
+            <name>Kokoyah</name>
+          </item>
+          <item>
+            <county>Bong</county>
+            <label>Kpaai</label>
+            <name>Kpaai</name>
+          </item>
+          <item>
+            <county>Bong</county>
+            <label>Panta</label>
+            <name>Panta</name>
+          </item>
+          <item>
+            <county>Bong</county>
+            <label>Sanoyea</label>
+            <name>Sanoyea</name>
+          </item>
+          <item>
+            <county>Bong</county>
+            <label>Suakoko</label>
+            <name>Suakoko</name>
+          </item>
+          <item>
+            <county>Bong</county>
+            <label>Zota District</label>
+            <name>Zota District</name>
+          </item>
+          <item>
+            <county>Gbarpolu</county>
+            <label>Bokomu</label>
+            <name>Bokomu</name>
+          </item>
+          <item>
+            <county>Gbarpolu</county>
+            <label>Gbarma</label>
+            <name>Gbarma</name>
+          </item>
+          <item>
+            <county>Grand Gedeh</county>
+            <label>B Hai</label>
+            <name>B Hai</name>
+          </item>
+          <item>
+            <county>Grand Gedeh</county>
+            <label>Putu District</label>
+            <name>Putu District</name>
+          </item>
+          <item>
+            <county>Grand Kru</county>
+            <label>Barclayville District</label>
+            <name>Barclayville District</name>
+          </item>
+          <item>
+            <county>Grand Kru</county>
+            <label>Buah</label>
+            <name>Buah</name>
+          </item>
+          <item>
+            <county>Lofa</county>
+            <label>Kolahun</label>
+            <name>Kolahun</name>
+          </item>
+          <item>
+            <county>Lofa</county>
+            <label>Salayea</label>
+            <name>Salayea</name>
+          </item>
+          <item>
+            <county>Lofa</county>
+            <label>Voinjama</label>
+            <name>Voinjama</name>
+          </item>
+          <item>
+            <county>Lofa</county>
+            <label>Zorzor</label>
+            <name>Zorzor</name>
+          </item>
+          <item>
+            <county>Maryland</county>
+            <label>Barrobo Wojah</label>
+            <name>Barrobo Wojah</name>
+          </item>
+          <item>
+            <county>Maryland</county>
+            <label>Karluway 1</label>
+            <name>Karluway 1</name>
+          </item>
+          <item>
+            <county>Maryland</county>
+            <label>Karluway 2</label>
+            <name>Karluway 2</name>
+          </item>
+          <item>
+            <county>Maryland</county>
+            <label>Pleebo</label>
+            <name>Pleebo</name>
+          </item>
+          <item>
+            <county>Montserrado</county>
+            <label>Careysburg</label>
+            <name>Careysburg</name>
+          </item>
+          <item>
+            <county>Montserrado</county>
+            <label>Commonwealth</label>
+            <name>Commonwealth</name>
+          </item>
+          <item>
+            <county>Montserrado</county>
+            <label>St. Paul</label>
+            <name>St. Paul</name>
+          </item>
+          <item>
+            <county>Montserrado</county>
+            <label>Todee</label>
+            <name>Todee</name>
+          </item>
+          <item>
+            <county>Nimba</county>
+            <label>Gbehlay _ Geh</label>
+            <name>Gbehlay _ Geh</name>
+          </item>
+          <item>
+            <county>Nimba</county>
+            <label>Saclepea Mahn</label>
+            <name>Saclepea Mahn</name>
+          </item>
+          <item>
+            <county>Nimba</county>
+            <label>Yarwin Mehnsonnah</label>
+            <name>Yarwin Mehnsonnah</name>
+          </item>
+          <item>
+            <county>River Gee</county>
+            <label>Gbeapo</label>
+            <name>Gbeapo</name>
+          </item>
+          <item>
+            <county>River Gee</county>
+            <label>Tienpo District</label>
+            <name>Tienpo District</name>
+          </item>
+          <item>
+            <county>Sinoe</county>
+            <label>Bokon Jeade</label>
+            <name>Bokon Jeade</name>
+          </item>
+          <item>
+            <county>Sinoe</county>
+            <label>Greenville</label>
+            <name>Greenville</name>
+          </item>
+          <item>
+            <county>Sinoe</county>
+            <label>Pyne District</label>
+            <name>Pyne District</name>
+          </item>
+          <item>
+            <county>Sinoe</county>
+            <label>Tarsue District</label>
+            <name>Tarsue District</name>
+          </item>
+          <item>
+            <county>Bong</county>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <county>Gbarpolu</county>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <county>Grand Gedeh</county>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <county>Grand Kru</county>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <county>Lofa</county>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <county>Maryland</county>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <county>Montserrado</county>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <county>Nimba</county>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <county>River Gee</county>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <county>Sinoe</county>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="community">
+        <root>
+          <item>
+            <district>Jorquelleh</district>
+            <label>Bamata</label>
+            <name>Bamata</name>
+          </item>
+          <item>
+            <district>Jorquelleh</district>
+            <label>David-Ta</label>
+            <name>David-Ta</name>
+          </item>
+          <item>
+            <district>Jorquelleh</district>
+            <label>Gbanju</label>
+            <name>Gbanju</name>
+          </item>
+          <item>
+            <district>Kokoyah</district>
+            <label>Camp #2</label>
+            <name>Camp #2</name>
+          </item>
+          <item>
+            <district>Kokoyah</district>
+            <label>Gbarta</label>
+            <name>Gbarta</name>
+          </item>
+          <item>
+            <district>Kokoyah</district>
+            <label>New Town</label>
+            <name>New Town</name>
+          </item>
+          <item>
+            <district>Kpaai</district>
+            <label>Baila</label>
+            <name>Baila</name>
+          </item>
+          <item>
+            <district>Kpaai</district>
+            <label>Karpa-Ta</label>
+            <name>Karpa-Ta</name>
+          </item>
+          <item>
+            <district>Kpaai</district>
+            <label>Lamco Camp</label>
+            <name>Lamco Camp</name>
+          </item>
+          <item>
+            <district>Panta</district>
+            <label>Baota</label>
+            <name>Baota</name>
+          </item>
+          <item>
+            <district>Panta</district>
+            <label>Desseh</label>
+            <name>Desseh</name>
+          </item>
+          <item>
+            <district>Panta</district>
+            <label>Yartanla</label>
+            <name>Yartanla</name>
+          </item>
+          <item>
+            <district>Sanoyea</district>
+            <label>Matalata</label>
+            <name>Matalata</name>
+          </item>
+          <item>
+            <district>Sanoyea</district>
+            <label>Piata/Funutoli</label>
+            <name>Piata/Funutoli</name>
+          </item>
+          <item>
+            <district>Sanoyea</district>
+            <label>Worlorsue</label>
+            <name>Worlorsue</name>
+          </item>
+          <item>
+            <district>Suakoko</district>
+            <label>Bolorsa</label>
+            <name>Bolorsa</name>
+          </item>
+          <item>
+            <district>Suakoko</district>
+            <label>Dumai</label>
+            <name>Dumai</name>
+          </item>
+          <item>
+            <district>Suakoko</district>
+            <label>Kpatawee</label>
+            <name>Kpatawee</name>
+          </item>
+          <item>
+            <district>Zota District</district>
+            <label>Gbalatuah</label>
+            <name>Gbalatuah</name>
+          </item>
+          <item>
+            <district>Zota District</district>
+            <label>One Day Village</label>
+            <name>One Day Village</name>
+          </item>
+          <item>
+            <district>Zota District</district>
+            <label>Waterside</label>
+            <name>Waterside</name>
+          </item>
+          <item>
+            <district>Bokomu</district>
+            <label>Garpota</label>
+            <name>Garpota</name>
+          </item>
+          <item>
+            <district>Bokomu</district>
+            <label>Jungle James</label>
+            <name>Jungle James</name>
+          </item>
+          <item>
+            <district>Bokomu</district>
+            <label>Maya/ Weayeama</label>
+            <name>Maya/ Weayeama</name>
+          </item>
+          <item>
+            <district>Gbarma</district>
+            <label>Gbarma</label>
+            <name>Gbarma</name>
+          </item>
+          <item>
+            <district>Gbarma</district>
+            <label>Gbarquoita</label>
+            <name>Gbarquoita</name>
+          </item>
+          <item>
+            <district>Gbarma</district>
+            <label>Gengbai</label>
+            <name>Gengbai</name>
+          </item>
+          <item>
+            <district>Gbarma</district>
+            <label>Small Sawmill</label>
+            <name>Small Sawmill</name>
+          </item>
+          <item>
+            <district>Gbarma</district>
+            <label>Small Yeamah</label>
+            <name>Small Yeamah</name>
+          </item>
+          <item>
+            <district>Gbarma</district>
+            <label>Weasua</label>
+            <name>Weasua</name>
+          </item>
+          <item>
+            <district>B Hai</district>
+            <label>B Hai Jozon</label>
+            <name>B Hai Jozon</name>
+          </item>
+          <item>
+            <district>B Hai</district>
+            <label>Goayazon</label>
+            <name>Goayazon</name>
+          </item>
+          <item>
+            <district>B Hai</district>
+            <label>Neko</label>
+            <name>Neko</name>
+          </item>
+          <item>
+            <district>B Hai</district>
+            <label>Tarloken</label>
+            <name>Tarloken</name>
+          </item>
+          <item>
+            <district>B Hai</district>
+            <label>Tiembo</label>
+            <name>Tiembo</name>
+          </item>
+          <item>
+            <district>B Hai</district>
+            <label>Yeoh</label>
+            <name>Yeoh</name>
+          </item>
+          <item>
+            <district>Putu District</district>
+            <label>Pennokon</label>
+            <name>Pennokon</name>
+          </item>
+          <item>
+            <district>Putu District</district>
+            <label>Petroken</label>
+            <name>Petroken</name>
+          </item>
+          <item>
+            <district>Putu District</district>
+            <label>Tiama Town</label>
+            <name>Tiama Town</name>
+          </item>
+          <item>
+            <district>Barclayville District</district>
+            <label>Dbuken</label>
+            <name>Dbuken</name>
+          </item>
+          <item>
+            <district>Barclayville District</district>
+            <label>Deneken</label>
+            <name>Deneken</name>
+          </item>
+          <item>
+            <district>Barclayville District</district>
+            <label>Filorken</label>
+            <name>Filorken</name>
+          </item>
+          <item>
+            <district>Barclayville District</district>
+            <label>Gblanbroken</label>
+            <name>Gblanbroken</name>
+          </item>
+          <item>
+            <district>Barclayville District</district>
+            <label>Jlakroken</label>
+            <name>Jlakroken</name>
+          </item>
+          <item>
+            <district>Barclayville District</district>
+            <label>Joploken</label>
+            <name>Joploken</name>
+          </item>
+          <item>
+            <district>Barclayville District</district>
+            <label>Kwejehen</label>
+            <name>Kwejehen</name>
+          </item>
+          <item>
+            <district>Barclayville District</district>
+            <label>Tarplatown</label>
+            <name>Tarplatown</name>
+          </item>
+          <item>
+            <district>Buah</district>
+            <label>Iron Bridge</label>
+            <name>Iron Bridge</name>
+          </item>
+          <item>
+            <district>Buah</district>
+            <label>Sargba Town</label>
+            <name>Sargba Town</name>
+          </item>
+          <item>
+            <district>Buah</district>
+            <label>Workiken</label>
+            <name>Workiken</name>
+          </item>
+          <item>
+            <district>Kolahun</district>
+            <label>Bombia</label>
+            <name>Bombia</name>
+          </item>
+          <item>
+            <district>Kolahun</district>
+            <label>Hembelaholahun</label>
+            <name>Hembelaholahun</name>
+          </item>
+          <item>
+            <district>Kolahun</district>
+            <label>Kolahun</label>
+            <name>Kolahun</name>
+          </item>
+          <item>
+            <district>Salayea</district>
+            <label>Beyan S Town</label>
+            <name>Beyan S Town</name>
+          </item>
+          <item>
+            <district>Salayea</district>
+            <label>Gonlota</label>
+            <name>Gonlota</name>
+          </item>
+          <item>
+            <district>Salayea</district>
+            <label>Pipaywou</label>
+            <name>Pipaywou</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Barkedu</label>
+            <name>Barkedu</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Batebah</label>
+            <name>Batebah</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Budlor</label>
+            <name>Budlor</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Jallahmai Waterside</label>
+            <name>Jallahmai Waterside</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Kpademai</label>
+            <name>Kpademai</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Lisco</label>
+            <name>Lisco</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Lpmc</label>
+            <name>Lpmc</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Nyedemoilahun</label>
+            <name>Nyedemoilahun</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Tuborgizzizu</label>
+            <name>Tuborgizzizu</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Tusu Community</label>
+            <name>Tusu Community</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Vezala</label>
+            <name>Vezala</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Voinjama</label>
+            <name>Voinjama</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Barziwen</label>
+            <name>Barziwen</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Borkeza Town</label>
+            <name>Borkeza Town</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Highway</label>
+            <name>Highway</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Konia</label>
+            <name>Konia</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Lawala</label>
+            <name>Lawala</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Luyeama</label>
+            <name>Luyeama</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Nikebozie</label>
+            <name>Nikebozie</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Vetusu</label>
+            <name>Vetusu</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Wakezu</label>
+            <name>Wakezu</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Womai</label>
+            <name>Womai</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Zelemai</label>
+            <name>Zelemai</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Zuworlor</label>
+            <name>Zuworlor</name>
+          </item>
+          <item>
+            <district>Barrobo Wojah</district>
+            <label>Gblbotowayken</label>
+            <name>Gblbotowayken</name>
+          </item>
+          <item>
+            <district>Barrobo Wojah</district>
+            <label>Glofaken</label>
+            <name>Glofaken</name>
+          </item>
+          <item>
+            <district>Barrobo Wojah</district>
+            <label>Taiken</label>
+            <name>Taiken</name>
+          </item>
+          <item>
+            <district>Karluway 1</district>
+            <label>Digbliken</label>
+            <name>Digbliken</name>
+          </item>
+          <item>
+            <district>Karluway 1</district>
+            <label>Worteken</label>
+            <name>Worteken</name>
+          </item>
+          <item>
+            <district>Karluway 1</district>
+            <label>Wutuken</label>
+            <name>Wutuken</name>
+          </item>
+          <item>
+            <district>Karluway 2</district>
+            <label>Nyenewroken</label>
+            <name>Nyenewroken</name>
+          </item>
+          <item>
+            <district>Karluway 2</district>
+            <label>Tarwoken</label>
+            <name>Tarwoken</name>
+          </item>
+          <item>
+            <district>Karluway 2</district>
+            <label>Wuluken</label>
+            <name>Wuluken</name>
+          </item>
+          <item>
+            <district>Pleebo</district>
+            <label>Gbawein</label>
+            <name>Gbawein</name>
+          </item>
+          <item>
+            <district>Pleebo</district>
+            <label>Gbolobo</label>
+            <name>Gbolobo</name>
+          </item>
+          <item>
+            <district>Pleebo</district>
+            <label>Gbololu</label>
+            <name>Gbololu</name>
+          </item>
+          <item>
+            <district>Pleebo</district>
+            <label>Kunokudi</label>
+            <name>Kunokudi</name>
+          </item>
+          <item>
+            <district>Pleebo</district>
+            <label>Rock Town</label>
+            <name>Rock Town</name>
+          </item>
+          <item>
+            <district>Pleebo</district>
+            <label>Tendeken</label>
+            <name>Tendeken</name>
+          </item>
+          <item>
+            <district>Careysburg</district>
+            <label>James Daniels</label>
+            <name>James Daniels</name>
+          </item>
+          <item>
+            <district>Careysburg</district>
+            <label>Saul Town</label>
+            <name>Saul Town</name>
+          </item>
+          <item>
+            <district>Careysburg</district>
+            <label>Wayduo Town</label>
+            <name>Wayduo Town</name>
+          </item>
+          <item>
+            <district>Commonwealth</district>
+            <label>Cassava Hill</label>
+            <name>Cassava Hill</name>
+          </item>
+          <item>
+            <district>Commonwealth</district>
+            <label>Fofee Town</label>
+            <name>Fofee Town</name>
+          </item>
+          <item>
+            <district>Commonwealth</district>
+            <label>Teah Town (Commonwealth)</label>
+            <name>Teah Town (Commonwealth)</name>
+          </item>
+          <item>
+            <district>St. Paul</district>
+            <label>Jawaya Town</label>
+            <name>Jawaya Town</name>
+          </item>
+          <item>
+            <district>St. Paul</district>
+            <label>Jones Town</label>
+            <name>Jones Town</name>
+          </item>
+          <item>
+            <district>St. Paul</district>
+            <label>Kamara Town</label>
+            <name>Kamara Town</name>
+          </item>
+          <item>
+            <district>St. Paul</district>
+            <label>Lunnah Town</label>
+            <name>Lunnah Town</name>
+          </item>
+          <item>
+            <district>St. Paul</district>
+            <label>Mcgill Town</label>
+            <name>Mcgill Town</name>
+          </item>
+          <item>
+            <district>St. Paul</district>
+            <label>Zunnah Town</label>
+            <name>Zunnah Town</name>
+          </item>
+          <item>
+            <district>Todee</district>
+            <label>Boyouwa Town</label>
+            <name>Boyouwa Town</name>
+          </item>
+          <item>
+            <district>Todee</district>
+            <label>Killing Ward Mission</label>
+            <name>Killing Ward Mission</name>
+          </item>
+          <item>
+            <district>Todee</district>
+            <label>Koon Town</label>
+            <name>Koon Town</name>
+          </item>
+          <item>
+            <district>Todee</district>
+            <label>Majo Town</label>
+            <name>Majo Town</name>
+          </item>
+          <item>
+            <district>Todee</district>
+            <label>Mary Farm</label>
+            <name>Mary Farm</name>
+          </item>
+          <item>
+            <district>Todee</district>
+            <label>Meniky Town</label>
+            <name>Meniky Town</name>
+          </item>
+          <item>
+            <district>Gbehlay _ Geh</district>
+            <label>Beoyoolar</label>
+            <name>Beoyoolar</name>
+          </item>
+          <item>
+            <district>Gbehlay _ Geh</district>
+            <label>Boaplay</label>
+            <name>Boaplay</name>
+          </item>
+          <item>
+            <district>Gbehlay _ Geh</district>
+            <label>Kentorgborglay</label>
+            <name>Kentorgborglay</name>
+          </item>
+          <item>
+            <district>Gbehlay _ Geh</district>
+            <label>Luogartuo</label>
+            <name>Luogartuo</name>
+          </item>
+          <item>
+            <district>Gbehlay _ Geh</district>
+            <label>Peela</label>
+            <name>Peela</name>
+          </item>
+          <item>
+            <district>Gbehlay _ Geh</district>
+            <label>Zorgowee</label>
+            <name>Zorgowee</name>
+          </item>
+          <item>
+            <district>Saclepea Mahn</district>
+            <label>Guah</label>
+            <name>Guah</name>
+          </item>
+          <item>
+            <district>Saclepea Mahn</district>
+            <label>Kpallah</label>
+            <name>Kpallah</name>
+          </item>
+          <item>
+            <district>Saclepea Mahn</district>
+            <label>Yarsonnah</label>
+            <name>Yarsonnah</name>
+          </item>
+          <item>
+            <district>Yarwin Mehnsonnah</district>
+            <label>Boyee</label>
+            <name>Boyee</name>
+          </item>
+          <item>
+            <district>Yarwin Mehnsonnah</district>
+            <label>Dennima</label>
+            <name>Dennima</name>
+          </item>
+          <item>
+            <district>Yarwin Mehnsonnah</district>
+            <label>Kpendepea</label>
+            <name>Kpendepea</name>
+          </item>
+          <item>
+            <district>Gbeapo</district>
+            <label>Pronoken</label>
+            <name>Pronoken</name>
+          </item>
+          <item>
+            <district>Gbeapo</district>
+            <label>Sweaken</label>
+            <name>Sweaken</name>
+          </item>
+          <item>
+            <district>Gbeapo</district>
+            <label>Tartuken</label>
+            <name>Tartuken</name>
+          </item>
+          <item>
+            <district>Tienpo District</district>
+            <label>Gbeh Town</label>
+            <name>Gbeh Town</name>
+          </item>
+          <item>
+            <district>Tienpo District</district>
+            <label>Matuaken</label>
+            <name>Matuaken</name>
+          </item>
+          <item>
+            <district>Tienpo District</district>
+            <label>Nyonken</label>
+            <name>Nyonken</name>
+          </item>
+          <item>
+            <district>Tienpo District</district>
+            <label>Sherriken</label>
+            <name>Sherriken</name>
+          </item>
+          <item>
+            <district>Tienpo District</district>
+            <label>Wrewroken</label>
+            <name>Wrewroken</name>
+          </item>
+          <item>
+            <district>Tienpo District</district>
+            <label>Yalatoken</label>
+            <name>Yalatoken</name>
+          </item>
+          <item>
+            <district>Bokon Jeade</district>
+            <label>Diyankpo</label>
+            <name>Diyankpo</name>
+          </item>
+          <item>
+            <district>Bokon Jeade</district>
+            <label>Konwonkpo</label>
+            <name>Konwonkpo</name>
+          </item>
+          <item>
+            <district>Bokon Jeade</district>
+            <label>Wrelewein</label>
+            <name>Wrelewein</name>
+          </item>
+          <item>
+            <district>Greenville</district>
+            <label>Congo Town</label>
+            <name>Congo Town</name>
+          </item>
+          <item>
+            <district>Greenville</district>
+            <label>Seebeh</label>
+            <name>Seebeh</name>
+          </item>
+          <item>
+            <district>Greenville</district>
+            <label>Teah Town (Greenville)</label>
+            <name>Teah Town (Greenville)</name>
+          </item>
+          <item>
+            <district>Pyne District</district>
+            <label>Blyee</label>
+            <name>Blyee</name>
+          </item>
+          <item>
+            <district>Pyne District</district>
+            <label>Sanquine</label>
+            <name>Sanquine</name>
+          </item>
+          <item>
+            <district>Pyne District</district>
+            <label>Tataville</label>
+            <name>Tataville</name>
+          </item>
+          <item>
+            <district>Tarsue District</district>
+            <label>Bafor Camp</label>
+            <name>Bafor Camp</name>
+          </item>
+          <item>
+            <district>Tarsue District</district>
+            <label>Bellyful</label>
+            <name>Bellyful</name>
+          </item>
+          <item>
+            <district>Tarsue District</district>
+            <label>Konmane Town</label>
+            <name>Konmane Town</name>
+          </item>
+          <item>
+            <district>Jorquelleh</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Kokoyah</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Kpaai</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Panta</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Sanoyea</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Suakoko</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Zota District</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Bokomu</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Gbarma</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>B Hai</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Putu District</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Barclayville District</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Buah</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Kolahun</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Salayea</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Voinjama</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Zorzor</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Barrobo Wojah</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Karluway 1</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Karluway 2</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Pleebo</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Careysburg</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Commonwealth</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>St. Paul</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Todee</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Gbehlay _ Geh</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Saclepea Mahn</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Yarwin Mehnsonnah</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Gbeapo</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Tienpo District</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Bokon Jeade</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Greenville</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Pyne District</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district>Tarsue District</district>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/c_county" required="true()" type="string"/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_district_other" relevant=" /data/c_district  = 'Other'" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
+      <bind nodeset="/data/c_town" relevant=" /data/c_district != 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/c_town_other" relevant=" /data/c_town  = 'Other' or  /data/c_district  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_3="."/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="int" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
+      <bind nodeset="/data/c_GPS" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder_id">
+      <label ref="jr:itext('/data/c_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/c_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/c_county">
+      <label ref="jr:itext('/data/c_county:label')"/>
+      <item>
+        <label>Bong</label>
+        <value>Bong</value>
+      </item>
+      <item>
+        <label>Gbarpolu</label>
+        <value>Gbarpolu</value>
+      </item>
+      <item>
+        <label>Grand Gedeh</label>
+        <value>Grand Gedeh</value>
+      </item>
+      <item>
+        <label>Grand Kru</label>
+        <value>Grand Kru</value>
+      </item>
+      <item>
+        <label>Lofa</label>
+        <value>Lofa</value>
+      </item>
+      <item>
+        <label>Maryland</label>
+        <value>Maryland</value>
+      </item>
+      <item>
+        <label>Montserrado</label>
+        <value>Montserrado</value>
+      </item>
+      <item>
+        <label>Nimba</label>
+        <value>Nimba</value>
+      </item>
+      <item>
+        <label>River Gee</label>
+        <value>River Gee</value>
+      </item>
+      <item>
+        <label>Sinoe</label>
+        <value>Sinoe</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+      <itemset nodeset="instance('district')/root/item[county =  /data/c_county ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_district_other">
+      <label ref="jr:itext('/data/c_district_other:label')"/>
+    </input>
+    <select1 ref="/data/c_town">
+      <label ref="jr:itext('/data/c_town:label')"/>
+      <itemset nodeset="instance('community')/root/item[district =  /data/c_district ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_town_other">
+      <label ref="jr:itext('/data/c_town_other:label')"/>
+    </input>
+    <input ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+    </input>
+    <input ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+    </input>
+    <input ref="/data/c_GPS">
+      <label ref="jr:itext('/data/c_GPS:label')"/>
+      <hint ref="jr:itext('/data/c_GPS:hint')"/>
+    </input>
+    <input ref="/data/c_notes">
+      <label ref="jr:itext('/data/c_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
