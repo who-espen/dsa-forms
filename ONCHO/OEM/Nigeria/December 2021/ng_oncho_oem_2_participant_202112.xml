@@ -91,9 +91,9 @@
       </itext>
 
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
-      <bind nodeset="/data/p_district" required="true()" type="string"/>
-      <bind nodeset="/data/p_cluster_name" required="true()" type="string"/>
-      <bind nodeset="/data/p_cluster_id" required="true()" type="string"/>
+      <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
       <bind nodeset="/data/p_date" type="date"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind nodeset="/data/p_ID_method" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
