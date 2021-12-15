@@ -7,20 +7,20 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Dec 2021) OEM - 2. Participant Form V2</h:title>
+    <h:title>(Dec 2021) OEM - 2. Participant Form V2.2</h:title>
     <model >
 
       <instance>
-        <data id="ng_oncho_oem_2_participant_202112_v2">
+        <data id="ng_oncho_oem_2_participant_202112_v2_2">
           <p_recorder_id/>
           <p_district/>
           <p_cluster_name/>
           <p_cluster_id/>
           <p_date/>
           <p_consent/>
-          <p_ID_method/>
-          <p_Barcode_ID/>
-          <p_Generate_ID/>
+          <p_serial_number1/>
+          <p_serial_number2/>
+          <p_code_id/>
           <p_sex/>
           <p_age_yrs/>
           <p_sample_collected/>
@@ -40,10 +40,10 @@
             <value>Must be between 10 and 99 included</value>
           </text>
           <text id="/data/p_recorder_id:label">
-            <value>Entrer le numéro de l'enregistreur</value>
+            <value>Enter the recorder number</value>
           </text>
           <text id="/data/p_recorder_id:hint">
-            <value>Code à 2 chiffres qui vous est attribué</value>
+            <value>2-digit code assigned to you</value>
           </text>
           <text id="/data/p_district:label">
             <value>Select the LGA</value>
@@ -60,14 +60,20 @@
           <text id="/data/p_consent:label">
             <value>Has the participant given consent?</value>
           </text>
-          <text id="/data/p_ID_method:label">
-            <value>How will the individual's unique ID be generated?</value>
+          <text id="/data/p_serial_number1:jr:constraintMsg">
+            <value>Must be a three-digit number. example: 001</value>
           </text>
-          <text id="/data/p_Barcode_ID:label">
-            <value>Please scan the QR code / barcode</value>
+          <text id="/data/p_serial_number1:label">
+            <value>Please, enter the participant serial number</value>
           </text>
-          <text id="/data/p_Generate_ID:label">
-            <value>Please enter the code manually</value>
+          <text id="/data/p_serial_number2:jr:constraintMsg">
+            <value>Le code répété doit être le même</value>
+          </text>
+          <text id="/data/p_serial_number2:label">
+            <value>Please, repeat the participant serial number</value>
+          </text>
+          <text id="/data/p_code_id:label">
+            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) adminstered</value>
           </text>
           <text id="/data/p_sex:label">
             <value>Please select the gender</value>
@@ -96,9 +102,9 @@
       <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
       <bind nodeset="/data/p_date" type="date"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
-      <bind nodeset="/data/p_ID_method" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/p_Barcode_ID" relevant=" /data/p_consent  = 'Yes' and  /data/p_ID_method  = 'Scanner'" required="true()" type="barcode"/>
-      <bind nodeset="/data/p_Generate_ID" relevant=" /data/p_consent  = 'Yes' and  /data/p_ID_method  = 'Manual'" required="true()" type="string"/>
+      <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_serial_number1:jr:constraintMsg')" nodeset="/data/p_serial_number1" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind constraint=". =  /data/p_serial_number1 " jr:constraintMsg="jr:itext('/data/p_serial_number2:jr:constraintMsg')" nodeset="/data/p_serial_number2" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_recorder_id , '-',  /data/p_cluster_id , '-',  /data/p_serial_number1 )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/p_sample_collected" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
@@ -137,22 +143,14 @@
         <value>No</value>
       </item>
     </select1>
-    <select1 ref="/data/p_ID_method">
-      <label ref="jr:itext('/data/p_ID_method:label')"/>
-      <item>
-        <label>Scanner</label>
-        <value>Scanner</value>
-      </item>
-      <item>
-        <label>Manual</label>
-        <value>Manual</value>
-      </item>
-    </select1>
-    <input ref="/data/p_Barcode_ID">
-      <label ref="jr:itext('/data/p_Barcode_ID:label')"/>
+    <input ref="/data/p_serial_number1">
+      <label ref="jr:itext('/data/p_serial_number1:label')"/>
     </input>
-    <input ref="/data/p_Generate_ID">
-      <label ref="jr:itext('/data/p_Generate_ID:label')"/>
+    <input ref="/data/p_serial_number2">
+      <label ref="jr:itext('/data/p_serial_number2:label')"/>
+    </input>
+    <input ref="/data/p_code_id">
+      <label ref="jr:itext('/data/p_code_id:label')"/>
     </input>
     <select1 ref="/data/p_sex">
       <label ref="jr:itext('/data/p_sex:label')"/>
