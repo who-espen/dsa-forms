@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Dec 2021) IAS - 3. Diagnostic Form</h:title>
+    <h:title>(Dec 2021) IAS - 3. Diagnostic Form V2</h:title>
     <model >
 
       <instance>
-        <data id="lr_oncho_ias_3_diag_202112">
+        <data id="lr_oncho_ias_3_diag_202112_v2">
           <d_recorder_id/>
           <d_cluster_id1/>
           <d_cluster_id2/>
@@ -44,16 +44,16 @@
             <value>2-digit code provided to each recorder (person doing the data entry)</value>
           </text>
           <text id="/data/d_cluster_id1:jr:constraintMsg">
-            <value>Must be between 100 and 999 included</value>
+            <value>The code must be three digits</value>
           </text>
           <text id="/data/d_cluster_id1:label">
-            <value>Enter the Community ID</value>
+            <value>Enter the site ID</value>
           </text>
           <text id="/data/d_cluster_id2:jr:constraintMsg">
             <value>The repeated code must be the same</value>
           </text>
           <text id="/data/d_cluster_id2:label">
-            <value>Reapeat the Community ID</value>
+            <value>Reapeat the site ID</value>
           </text>
           <text id="/data/d_is_second_test:label">
             <value>Is this a second test?</value>
@@ -90,8 +90,9 @@
           </text>
         </translation>
       </itext>
+
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/d_recorder_id:jr:constraintMsg')" nodeset="/data/d_recorder_id" required="true()" type="int"/>
-      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id1:jr:constraintMsg')" nodeset="/data/d_cluster_id1" required="true()" type="int"/>
+      <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_cluster_id1:jr:constraintMsg')" nodeset="/data/d_cluster_id1" required="true()" type="int"/>
       <bind constraint=". =  /data/d_cluster_id1 " jr:constraintMsg="jr:itext('/data/d_cluster_id2:jr:constraintMsg')" nodeset="/data/d_cluster_id2" required="true()" type="int"/>
       <bind nodeset="/data/d_is_second_test" required="true()" type="string"/>
       <bind nodeset="/data/d_lot_number" required="true()" type="string"/>

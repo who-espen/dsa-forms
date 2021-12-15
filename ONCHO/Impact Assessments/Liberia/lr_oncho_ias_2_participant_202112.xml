@@ -7,14 +7,13 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Dec 2021) IAS - 2. Participant Form</h:title>
+    <h:title>(Dec 2021) IAS - 2. Participant Form V2</h:title>
     <model >
 
       <instance>
-        <data id="lr_oncho_ias_2_participant_202112">
+        <data id="lr_oncho_ias_2_participant_202112_v2">
           <p_recorder_id/>
           <p_district/>
-          <p_district_other/>
           <p_cluster_name/>
           <p_cluster_id/>
           <p_accent/>
@@ -51,19 +50,16 @@
             <value>Recorder ID</value>
           </text>
           <text id="/data/p_recorder_id:hint">
-            <value>Code à 2 chiffres qui vous est attribué</value>
+            <value>2-digit code assigned to you</value>
           </text>
           <text id="/data/p_district:label">
             <value>Select district</value>
           </text>
-          <text id="/data/p_district_other:label">
-            <value>Select the specific district</value>
-          </text>
           <text id="/data/p_cluster_name:label">
-            <value>Select the community</value>
+            <value>Select town or site</value>
           </text>
           <text id="/data/p_cluster_id:label">
-            <value>Select the community ID</value>
+            <value>Select site ID</value>
           </text>
           <text id="/data/p_accent:label">
             <value>Accent</value>
@@ -118,11 +114,11 @@
           </text>
         </translation>
       </itext>
+
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/p_district_other" relevant=" /data/p_district  = 'Other'" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
-      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_1="/data/p_district"/>
-      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
       <bind nodeset="/data/p_accent" required="true()" type="string"/>
       <bind nodeset="/data/p_consent" relevant=" /data/p_accent  = 'Given'" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_accent  = 'Given' and  /data/p_consent  = 'Given'" required="true()" type="string"/>
@@ -151,9 +147,6 @@
     </input>
     <input ref="/data/p_district">
       <label ref="jr:itext('/data/p_district:label')"/>
-    </input>
-    <input ref="/data/p_district_other">
-      <label ref="jr:itext('/data/p_district_other:label')"/>
     </input>
     <input ref="/data/p_cluster_name">
       <label ref="jr:itext('/data/p_cluster_name:label')"/>
