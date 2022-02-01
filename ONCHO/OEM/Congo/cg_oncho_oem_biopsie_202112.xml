@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Dec 2021) CEO - 2 Formulaire Biopsie</h:title>
+    <model >
+
+      <instance>
+        <data id="cg_oncho_oem_biopsie_202112">
+          <recorder_id/>
+          <region/>
+          <district/>
+          <cluster_name/>
+          <zone/>
+          <Imethod/>
+          <BarcodeID/>
+          <GenerateID/>
+          <num_biopsie/>
+          <mfs_1/>
+          <mfs_2/>
+          <AdditionalNotes/>
+          <start/>
+          <end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/recorder_id:jr:constraintMsg">
+            <value>Doit être entre 10 et 99 compris</value>
+          </text>
+          <text id="/data/recorder_id:label">
+            <value>Entrer le numéro de l'enregistreur</value>
+          </text>
+          <text id="/data/recorder_id:hint">
+            <value>Code à 2 chiffres qui vous est attribué</value>
+          </text>
+          <text id="/data/region:label">
+            <value>Sélectionner le département</value>
+          </text>
+          <text id="/data/district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/cluster_name:label">
+            <value>Entrer le nom du site/village</value>
+          </text>
+          <text id="/data/zone:label">
+            <value>Entrer la zone</value>
+          </text>
+          <text id="/data/Imethod:label">
+            <value>How will the individual's unique ID be generated?</value>
+          </text>
+          <text id="/data/BarcodeID:jr:constraintMsg">
+            <value>Format du code incorrect. Ex d'un bon code "OEM-12345678"</value>
+          </text>
+          <text id="/data/BarcodeID:label">
+            <value>Veuillez scanner le QR code</value>
+          </text>
+          <text id="/data/GenerateID:jr:constraintMsg">
+            <value>Format du code incorrect. Ex d'un bon code "OEM-12345678"</value>
+          </text>
+          <text id="/data/GenerateID:label">
+            <value>Veuillez enregistrer le code d'identification unique suivant pour le répondant sur une liste distincte et sur chaque test de diagnostic administré</value>
+          </text>
+          <text id="/data/num_biopsie:label">
+            <value>Numéro Biopsi</value>
+          </text>
+          <text id="/data/mfs_1:label">
+            <value>Moyenne Mfs 1er prélèvement</value>
+          </text>
+          <text id="/data/mfs_2:label">
+            <value>Moyenne Mfs 2ème prélèvement</value>
+          </text>
+          <text id="/data/AdditionalNotes:label">
+            <value>Notes additionnelles</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <label>Oui</label>
+            <name>Oui</name>
+          </item>
+          <item>
+            <label>Non</label>
+            <name>Non</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sex">
+        <root>
+          <item>
+            <label>Masculin</label>
+            <name>Masculin</name>
+          </item>
+          <item>
+            <label>Féminin</label>
+            <name>Féminin</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="ID_method">
+        <root>
+          <item>
+            <label>Scanner</label>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <label>Manuel</label>
+            <name>Manuel</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="locatlisation">
+        <root>
+          <item>
+            <label>Grill costal</label>
+            <name>Grill costal</name>
+          </item>
+          <item>
+            <label>Crête illiaque gauche</label>
+            <name>Crête illiaque gauche</name>
+          </item>
+          <item>
+            <label>Crête illiaque droite</label>
+            <name>Crête illiaque droite</name>
+          </item>
+          <item>
+            <label>Génou</label>
+            <name>Génou</name>
+          </item>
+          <item>
+            <label>Coude</label>
+            <name>Coude</name>
+          </item>
+          <item>
+            <label>Autre</label>
+            <name>Autre</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <label>Bouenza</label>
+            <name>Bouenza</name>
+          </item>
+          <item>
+            <label>Brazzaville</label>
+            <name>Brazzaville</name>
+          </item>
+          <item>
+            <label>Cuvette</label>
+            <name>Cuvette</name>
+          </item>
+          <item>
+            <label>Kouilou</label>
+            <name>Kouilou</name>
+          </item>
+          <item>
+            <label>Niari</label>
+            <name>Niari</name>
+          </item>
+          <item>
+            <label>Plateaux</label>
+            <name>Plateaux</name>
+          </item>
+          <item>
+            <label>Pool</label>
+            <name>Pool</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <label>Abala</label>
+            <name>Abala</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Bacongo</label>
+            <name>Bacongo</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Boko</label>
+            <name>Boko</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Djambala</label>
+            <name>Djambala</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Djiri</label>
+            <name>Djiri</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Dolisie</label>
+            <name>Dolisie</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Gamboma</label>
+            <name>Gamboma</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Goma Tsé-Tsé</label>
+            <name>Goma Tsé-Tsé</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Hinda</label>
+            <name>Hinda</name>
+            <region_list>Kouilou</region_list>
+          </item>
+          <item>
+            <label>Igné-Ngabe-Mayama</label>
+            <name>Igné-Ngabe-Mayama</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Ile Mbamou</label>
+            <name>Ile Mbamou</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Kibangou</label>
+            <name>Kibangou</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Kimongo</label>
+            <name>Kimongo</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Kindamba</label>
+            <name>Kindamba</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Kinkala</label>
+            <name>Kinkala</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Kintele</label>
+            <name>Kintele</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Loudima</label>
+            <name>Loudima</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Loutété</label>
+            <name>Loutété</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Madibou</label>
+            <name>Madibou</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Madingo-Kayes-Nzambi</label>
+            <name>Madingo-Kayes-Nzambi</name>
+            <region_list>Kouilou</region_list>
+          </item>
+          <item>
+            <label>Madingou</label>
+            <name>Madingou</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Makélékélé</label>
+            <name>Makélékélé</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Mayoko</label>
+            <name>Mayoko</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Mfilou</label>
+            <name>Mfilou</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Mindouli</label>
+            <name>Mindouli</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <label>Mossaka</label>
+            <name>Mossaka</name>
+            <region_list>Cuvette</region_list>
+          </item>
+          <item>
+            <label>Mossendjo</label>
+            <name>Mossendjo</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <label>Moungali</label>
+            <name>Moungali</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Mouyondzi</label>
+            <name>Mouyondzi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Mvouti-Kakamoeka</label>
+            <name>Mvouti-Kakamoeka</name>
+            <region_list>Kouilou</region_list>
+          </item>
+          <item>
+            <label>Ngo-Mpouya</label>
+            <name>Ngo-Mpouya</name>
+            <region_list>Plateaux</region_list>
+          </item>
+          <item>
+            <label>Nkayi</label>
+            <name>Nkayi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <label>Ouenzé</label>
+            <name>Ouenzé</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Owando</label>
+            <name>Owando</name>
+            <region_list>Cuvette</region_list>
+          </item>
+          <item>
+            <label>Oyo-Alima</label>
+            <name>Oyo-Alima</name>
+            <region_list>Cuvette</region_list>
+          </item>
+          <item>
+            <label>Poto-Poto</label>
+            <name>Poto-Poto</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+          <item>
+            <label>Talangai</label>
+            <name>Talangai</name>
+            <region_list>Brazzaville</region_list>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/recorder_id:jr:constraintMsg')" nodeset="/data/recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/region" required="true()" type="string"/>
+      <bind nodeset="/data/district" required="true()" type="string"/>
+      <bind nodeset="/data/cluster_name" required="true()" type="string"/>
+      <bind nodeset="/data/zone" required="true()" type="string"/>
+      <bind nodeset="/data/Imethod" required="true()" type="string"/>
+      <bind constraint="regex(., '^OEM-[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/BarcodeID:jr:constraintMsg')" nodeset="/data/BarcodeID" relevant=" /data/Imethod  = 'Scanner'" required="true()" type="barcode"/>
+      <bind constraint="regex(., '^OEM-[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/GenerateID:jr:constraintMsg')" nodeset="/data/GenerateID" relevant=" /data/Imethod  = 'Manuel'" required="true()" type="string"/>
+      <bind nodeset="/data/num_biopsie" required="true()" type="int"/>
+      <bind nodeset="/data/mfs_1" required="true()" type="decimal"/>
+      <bind nodeset="/data/mfs_2" required="true()" type="decimal"/>
+      <bind nodeset="/data/AdditionalNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/recorder_id">
+      <label ref="jr:itext('/data/recorder_id:label')"/>
+      <hint ref="jr:itext('/data/recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/region">
+      <label ref="jr:itext('/data/region:label')"/>
+      <item>
+        <label>Bouenza</label>
+        <value>Bouenza</value>
+      </item>
+      <item>
+        <label>Brazzaville</label>
+        <value>Brazzaville</value>
+      </item>
+      <item>
+        <label>Cuvette</label>
+        <value>Cuvette</value>
+      </item>
+      <item>
+        <label>Kouilou</label>
+        <value>Kouilou</value>
+      </item>
+      <item>
+        <label>Niari</label>
+        <value>Niari</value>
+      </item>
+      <item>
+        <label>Plateaux</label>
+        <value>Plateaux</value>
+      </item>
+      <item>
+        <label>Pool</label>
+        <value>Pool</value>
+      </item>
+    </select1>
+    <select1 ref="/data/district">
+      <label ref="jr:itext('/data/district:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[region_list =  /data/region ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <input ref="/data/cluster_name">
+      <label ref="jr:itext('/data/cluster_name:label')"/>
+    </input>
+    <input ref="/data/zone">
+      <label ref="jr:itext('/data/zone:label')"/>
+    </input>
+    <select1 ref="/data/Imethod">
+      <label ref="jr:itext('/data/Imethod:label')"/>
+      <item>
+        <label>Scanner</label>
+        <value>Scanner</value>
+      </item>
+      <item>
+        <label>Manuel</label>
+        <value>Manuel</value>
+      </item>
+    </select1>
+    <input ref="/data/BarcodeID">
+      <label ref="jr:itext('/data/BarcodeID:label')"/>
+    </input>
+    <input ref="/data/GenerateID">
+      <label ref="jr:itext('/data/GenerateID:label')"/>
+    </input>
+    <input ref="/data/num_biopsie">
+      <label ref="jr:itext('/data/num_biopsie:label')"/>
+    </input>
+    <input ref="/data/mfs_1">
+      <label ref="jr:itext('/data/mfs_1:label')"/>
+    </input>
+    <input ref="/data/mfs_2">
+      <label ref="jr:itext('/data/mfs_2:label')"/>
+    </input>
+    <input ref="/data/AdditionalNotes">
+      <label ref="jr:itext('/data/AdditionalNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>

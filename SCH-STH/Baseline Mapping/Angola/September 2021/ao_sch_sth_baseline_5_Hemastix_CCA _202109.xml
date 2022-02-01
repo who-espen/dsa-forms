@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>5. Formulário de Resultados da haematuria e  CCA V7.2</h:title>
+    <model >
+
+      <instance>
+        <data id="ao_sch_sth_kuanza_5_Hemastix_CCA _202105_v7_2" version="20210715">
+          <h_province/>
+          <h_municipality/>
+          <h_commune/>
+          <h_school/>
+          <h_school_id/>
+          <h_RecorderID/>
+          <h_date/>
+          <hemastix jr:template="">
+            <h_add_more_child/>
+            <h>
+              <num/>
+              <num2/>
+              <code_id/>
+              <cca/>
+              <grading/>
+              <haematuria/>
+              <haematuria_other/>
+              <hematix/>
+              <remarks/>
+            </h>
+          </hemastix>
+          <hemastix>
+            <h_add_more_child/>
+            <h>
+              <num/>
+              <num2/>
+              <code_id/>
+              <cca/>
+              <grading/>
+              <haematuria/>
+              <haematuria_other/>
+              <hematix/>
+              <remarks/>
+            </h>
+          </hemastix>
+          <h_start/>
+          <h_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="Portugues">
+          <text id="/data/h_province:label">
+            <value>Província</value>
+          </text>
+          <text id="/data/h_municipality:label">
+            <value>Selecione o Município</value>
+          </text>
+          <text id="/data/h_commune:label">
+            <value>Comuna</value>
+          </text>
+          <text id="/data/h_school:label">
+            <value>Selecione a escola</value>
+          </text>
+          <text id="/data/h_school_id:label">
+            <value>Selecione o código da escola</value>
+          </text>
+          <text id="/data/h_RecorderID:jr:constraintMsg">
+            <value>The length cannot exceed 5 character and must not contain number</value>
+          </text>
+          <text id="/data/h_RecorderID:label">
+            <value>Iniciais do entrevistador</value>
+          </text>
+          <text id="/data/h_date:label">
+            <value>Data do questionário</value>
+          </text>
+          <text id="/data/hemastix:jr:constraintMsg">
+            <value>hemastix</value>
+          </text>
+          <text id="/data/hemastix:label">
+            <value>Resultados</value>
+          </text>
+          <text id="/data/hemastix/h_add_more_child:label">
+            <value>Você quer adicionar uma criança ?</value>
+          </text>
+          <text id="/data/hemastix/h_add_more_child/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/hemastix/h_add_more_child/Nao:label">
+            <value>Nao</value>
+          </text>
+          <text id="/data/hemastix/h:label">
+            <value>Hemastix</value>
+          </text>
+          <text id="/data/hemastix/h/num:jr:constraintMsg">
+            <value>The number must be 2 digit</value>
+          </text>
+          <text id="/data/hemastix/h/num:label">
+            <value>Por favor, insira a carteira de estudante</value>
+          </text>
+          <text id="/data/hemastix/h/num2:jr:constraintMsg">
+            <value>O código deve ser o mesmo</value>
+          </text>
+          <text id="/data/hemastix/h/num2:label">
+            <value>Por favor, repita a carteira de estudante</value>
+          </text>
+          <text id="/data/hemastix/h/code_id:label">
+            <value>ID exclusivo do participante</value>
+          </text>
+          <text id="/data/hemastix/h/cca:label">
+            <value>Resultados da CCA</value>
+          </text>
+          <text id="/data/hemastix/h/cca/1.Positivo:label">
+            <value>1.Positivo</value>
+          </text>
+          <text id="/data/hemastix/h/cca/2.Negativo:label">
+            <value>2.Negativo</value>
+          </text>
+          <text id="/data/hemastix/h/cca/3.Não válido:label">
+            <value>3.Não válido</value>
+          </text>
+          <text id="/data/hemastix/h/cca/4.Não testado:label">
+            <value>4.Não testado</value>
+          </text>
+          <text id="/data/hemastix/h/grading:label">
+            <value>Classificação (detalhes positivos)</value>
+          </text>
+          <text id="/data/hemastix/h/grading/Vestigio:label">
+            <value>Vestigio</value>
+          </text>
+          <text id="/data/hemastix/h/grading/+:label">
+            <value>+</value>
+          </text>
+          <text id="/data/hemastix/h/grading/++:label">
+            <value>++</value>
+          </text>
+          <text id="/data/hemastix/h/grading/+++:label">
+            <value>+++</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria:label">
+            <value>Haematuria (cor da urina)</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Amarelo transparente:label">
+            <value>Amarelo transparente</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Amarelo turvo:label">
+            <value>Amarelo turvo</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Âmbar transparente:label">
+            <value>Âmbar transparente</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Âmbar turvo:label">
+            <value>Âmbar turvo</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Sangrenta:label">
+            <value>Sangrenta</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Outra:label">
+            <value>Outra</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria_other:label">
+            <value>Por favor, especifique a cor</value>
+          </text>
+          <text id="/data/hemastix/h/hematix:label">
+            <value>Hematix</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/N, negativo:label">
+            <value>N, negativo</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/VNH, vestigio não hemolizado:label">
+            <value>VNH, vestigio não hemolizado</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/MNH, moderado não hemolizado:label">
+            <value>MNH, moderado não hemolizado</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/VH, vestigio hemolizado:label">
+            <value>VH, vestigio hemolizado</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/+:label">
+            <value>+</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/++:label">
+            <value>++</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/+++:label">
+            <value>+++</value>
+          </text>
+          <text id="/data/hemastix/h/remarks:label">
+            <value>Comentários adicionais:</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/h_province:label">
+            <value>Select the province</value>
+          </text>
+          <text id="/data/h_municipality:label">
+            <value>Select the district</value>
+          </text>
+          <text id="/data/h_commune:label">
+            <value>Select the sub-district</value>
+          </text>
+          <text id="/data/h_school:label">
+            <value>Select the school</value>
+          </text>
+          <text id="/data/h_school_id:label">
+            <value>Select the school code</value>
+          </text>
+          <text id="/data/h_RecorderID:jr:constraintMsg">
+            <value>O comprimento não pode exceder 5 caracteres e não deve conter número</value>
+          </text>
+          <text id="/data/h_RecorderID:label">
+            <value>Interviewer initials</value>
+          </text>
+          <text id="/data/h_date:label">
+            <value>Date of questionnaire</value>
+          </text>
+          <text id="/data/hemastix:label">
+            <value>Results</value>
+          </text>
+          <text id="/data/hemastix/h_add_more_child:label">
+            <value>Do you want to add one child ?</value>
+          </text>
+          <text id="/data/hemastix/h_add_more_child/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/hemastix/h_add_more_child/Nao:label">
+            <value>No</value>
+          </text>
+          <text id="/data/hemastix/h:label">
+            <value>Hemastix</value>
+          </text>
+          <text id="/data/hemastix/h/num:jr:constraintMsg">
+            <value>O número deve ter 2 dígitos</value>
+          </text>
+          <text id="/data/hemastix/h/num:label">
+            <value>Please enter the student ID</value>
+          </text>
+          <text id="/data/hemastix/h/num2:jr:constraintMsg">
+            <value>The code must be the same</value>
+          </text>
+          <text id="/data/hemastix/h/num2:label">
+            <value>Please, repeat the unique ID</value>
+          </text>
+          <text id="/data/hemastix/h/code_id:label">
+            <value>Participant Unique ID</value>
+          </text>
+          <text id="/data/hemastix/h/cca:label">
+            <value>CCA Results</value>
+          </text>
+          <text id="/data/hemastix/h/cca/1.Positivo:label">
+            <value>Positive</value>
+          </text>
+          <text id="/data/hemastix/h/cca/2.Negativo:label">
+            <value>Negative</value>
+          </text>
+          <text id="/data/hemastix/h/cca/3.Não válido:label">
+            <value>Invalid</value>
+          </text>
+          <text id="/data/hemastix/h/cca/4.Não testado:label">
+            <value>Not tested</value>
+          </text>
+          <text id="/data/hemastix/h/grading:label">
+            <value>Grading (Positive details)</value>
+          </text>
+          <text id="/data/hemastix/h/grading/Vestigio:label">
+            <value>Trace</value>
+          </text>
+          <text id="/data/hemastix/h/grading/+:label">
+            <value>+</value>
+          </text>
+          <text id="/data/hemastix/h/grading/++:label">
+            <value>++</value>
+          </text>
+          <text id="/data/hemastix/h/grading/+++:label">
+            <value>+++</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria:label">
+            <value>Haematuria (urine colour)</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Amarelo transparente:label">
+            <value>Transparent yellow</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Amarelo turvo:label">
+            <value>Cloudy yellow</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Âmbar transparente:label">
+            <value>Transparent amber</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Âmbar turvo:label">
+            <value>Cloudy amber</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Sangrenta:label">
+            <value>Bloody</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Outra:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria_other:label">
+            <value>Please, specify the color</value>
+          </text>
+          <text id="/data/hemastix/h/hematix:label">
+            <value>Hematix</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/N, negativo:label">
+            <value>N, negative</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/VNH, vestigio não hemolizado:label">
+            <value>VNH, non-hemolyzed trace</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/MNH, moderado não hemolizado:label">
+            <value>MNH, moderate non-hemolyzed</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/VH, vestigio hemolizado:label">
+            <value>VH, hemolyzed trace</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/+:label">
+            <value>+</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/++:label">
+            <value>++</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/+++:label">
+            <value>+++</value>
+          </text>
+          <text id="/data/hemastix/h/remarks:label">
+            <value>Additional comment</value>
+          </text>
+          <text id="/data/hemastix:jr:constraintMsg">
+            <value>-</value>
+          </text>
+        </translation>
+        <translation lang="French">
+          <text id="/data/h_province:label">
+            <value>Sélectionner la province</value>
+          </text>
+          <text id="/data/h_municipality:label">
+            <value>Sélectionner la municipalité</value>
+          </text>
+          <text id="/data/h_commune:label">
+            <value>Sélectionner la commune</value>
+          </text>
+          <text id="/data/h_school:label">
+            <value>Sélectionner l'école</value>
+          </text>
+          <text id="/data/h_school_id:label">
+            <value>Sélectionner le code de l'école</value>
+          </text>
+          <text id="/data/h_RecorderID:label">
+            <value>Initiales de l'enuêteur</value>
+          </text>
+          <text id="/data/h_date:label">
+            <value>Date</value>
+          </text>
+          <text id="/data/hemastix:label">
+            <value>Resultats</value>
+          </text>
+          <text id="/data/hemastix/h_add_more_child:label">
+            <value>Voulez-vous ajouter un enfant?</value>
+          </text>
+          <text id="/data/hemastix/h_add_more_child/Sim:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/hemastix/h_add_more_child/Nao:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/hemastix/h:label">
+            <value>Hemastix</value>
+          </text>
+          <text id="/data/hemastix/h/num:jr:constraintMsg">
+            <value>Le code doit être composé de deux chiffre</value>
+          </text>
+          <text id="/data/hemastix/h/num2:jr:constraintMsg">
+            <value>Le code doit être le même</value>
+          </text>
+          <text id="/data/hemastix/h/num2:label">
+            <value>Veuillez répéter l'identifiant unique du participant</value>
+          </text>
+          <text id="/data/hemastix/h/code_id:label">
+            <value>ID unique du participant</value>
+          </text>
+          <text id="/data/hemastix/h/cca:label">
+            <value>Résultat POC-CCA</value>
+          </text>
+          <text id="/data/hemastix/h/cca/1.Positivo:label">
+            <value>Positif</value>
+          </text>
+          <text id="/data/hemastix/h/cca/2.Negativo:label">
+            <value>Négatif</value>
+          </text>
+          <text id="/data/hemastix/h/cca/3.Não válido:label">
+            <value>Invalide</value>
+          </text>
+          <text id="/data/hemastix/h/cca/4.Não testado:label">
+            <value>Pas testé</value>
+          </text>
+          <text id="/data/hemastix/h/grading:label">
+            <value>Graduation de la microhématurie</value>
+          </text>
+          <text id="/data/hemastix/h/grading/Vestigio:label">
+            <value>Trace</value>
+          </text>
+          <text id="/data/hemastix/h/grading/+:label">
+            <value>+</value>
+          </text>
+          <text id="/data/hemastix/h/grading/++:label">
+            <value>++</value>
+          </text>
+          <text id="/data/hemastix/h/grading/+++:label">
+            <value>+++</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria:label">
+            <value>Hématurie (couleur de l'urine)</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Amarelo transparente:label">
+            <value>Jaune transparent</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Amarelo turvo:label">
+            <value>Jaune nuageux</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Âmbar transparente:label">
+            <value>Ambre transparent</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Âmbar turvo:label">
+            <value>Ambre nuageux</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Sangrenta:label">
+            <value>Sanglant</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria/Outra:label">
+            <value>Autre</value>
+          </text>
+          <text id="/data/hemastix/h/haematuria_other:label">
+            <value>S'il vous plaît, préciser la couleur</value>
+          </text>
+          <text id="/data/hemastix/h/hematix:label">
+            <value>Hematix</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/N, negativo:label">
+            <value>N, négatif</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/VNH, vestigio não hemolizado:label">
+            <value>VNH, trace non hémolysée</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/MNH, moderado não hemolizado:label">
+            <value>MNH, modéré non hémolysé</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/VH, vestigio hemolizado:label">
+            <value>VH, trace hémolysée</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/+:label">
+            <value>+</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/++:label">
+            <value>++</value>
+          </text>
+          <text id="/data/hemastix/h/hematix/+++:label">
+            <value>+++</value>
+          </text>
+          <text id="/data/hemastix/h/remarks:label">
+            <value>Notes additionnelles</value>
+          </text>
+          <text id="/data/h_RecorderID:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/hemastix:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/hemastix/h/num:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/h_province" required="true()" type="text" db_get="col_1"/>
+      <bind nodeset="/data/h_municipality" required="true()" type="text" db_get="col_2" db_filter_by_col_1="/data/h_province"/>
+      <bind nodeset="/data/h_commune" required="true()" type="text" db_get="col_3" db_filter_by_col_2="/data/h_municipality"/>
+      <bind nodeset="/data/h_school" required="true()" type="text" db_get="col_4" db_filter_by_col_3="/data/h_commune"/>
+      <bind nodeset="/data/h_school_id" required="true()" type="text" db_get="col_5" db_filter_by_col_4="/data/h_school"/>
+      <bind constraint="regex(., '^[A-Za-z]{1,5}$')" jr:constraintMsg="jr:itext('/data/h_RecorderID:jr:constraintMsg')" nodeset="/data/h_RecorderID" required="true()" type="text"/>
+      <bind nodeset="/data/h_date" required="true()" type="date"/>
+      <bind jr:constraintMsg="jr:itext('/data/hemastix:jr:constraintMsg')" nodeset="/data/hemastix"/>
+      <bind nodeset="/data/hemastix/h_add_more_child" required="true()" type="text"/>
+      <bind nodeset="/data/hemastix/h" relevant=" ../h_add_more_child  = 'Sim'"/>
+      <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/hemastix/h/num:jr:constraintMsg')" nodeset="/data/hemastix/h/num" required="true()" type="text"/>
+      <bind constraint=". =  ../num " jr:constraintMsg="jr:itext('/data/hemastix/h/num2:jr:constraintMsg')" nodeset="/data/hemastix/h/num2" required="true()" type="text"/>
+      <bind calculate="concat( /data/h_school_id , '-',  ../num )" nodeset="/data/hemastix/h/code_id" readonly="true()" required="true()" type="text"/>
+      <bind nodeset="/data/hemastix/h/cca" required="true()" type="text"/>
+      <bind nodeset="/data/hemastix/h/grading" relevant=" ../cca  = '1.Positivo'" required="true()" type="text"/>
+      <bind nodeset="/data/hemastix/h/haematuria" required="true()" type="text"/>
+      <bind nodeset="/data/hemastix/h/haematuria_other" relevant=" ../haematuria  = 'Outra'" required="true()" type="text"/>
+      <bind nodeset="/data/hemastix/h/hematix" required="true()" type="text"/>
+      <bind nodeset="/data/hemastix/h/remarks" type="text"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/h_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/h_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="text"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/h_province">
+      <label ref="jr:itext('/data/h_province:label')"/>
+    </input>
+    <input ref="/data/h_municipality">
+      <label ref="jr:itext('/data/h_municipality:label')"/>
+    </input>
+    <input ref="/data/h_commune">
+      <label ref="jr:itext('/data/h_commune:label')"/>
+    </input>
+    <input ref="/data/h_school">
+      <label ref="jr:itext('/data/h_school:label')"/>
+    </input>
+    <input ref="/data/h_school_id">
+      <label ref="jr:itext('/data/h_school_id:label')"/>
+    </input>
+    <input ref="/data/h_RecorderID">
+      <label ref="jr:itext('/data/h_RecorderID:label')"/>
+    </input>
+    <input ref="/data/h_date">
+      <label ref="jr:itext('/data/h_date:label')"/>
+    </input>
+    <group ref="/data/hemastix">
+      <label ref="jr:itext('/data/hemastix:label')"/>
+      <repeat nodeset="/data/hemastix">
+        <select1 ref="/data/hemastix/h_add_more_child">
+          <label ref="jr:itext('/data/hemastix/h_add_more_child:label')"/>
+          <item>
+            <label ref="jr:itext('/data/hemastix/h_add_more_child/Sim:label')"/>
+            <value>Sim</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/hemastix/h_add_more_child/Nao:label')"/>
+            <value>Nao</value>
+          </item>
+        </select1>
+        <group ref="/data/hemastix/h">
+          <label ref="jr:itext('/data/hemastix/h:label')"/>
+          <input ref="/data/hemastix/h/num">
+            <label ref="jr:itext('/data/hemastix/h/num:label')"/>
+          </input>
+          <input ref="/data/hemastix/h/num2">
+            <label ref="jr:itext('/data/hemastix/h/num2:label')"/>
+          </input>
+          <input ref="/data/hemastix/h/code_id">
+            <label ref="jr:itext('/data/hemastix/h/code_id:label')"/>
+          </input>
+          <select1 ref="/data/hemastix/h/cca">
+            <label ref="jr:itext('/data/hemastix/h/cca:label')"/>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/cca/1.Positivo:label')"/>
+              <value>1.Positivo</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/cca/2.Negativo:label')"/>
+              <value>2.Negativo</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/cca/3.Não válido:label')"/>
+              <value>3.Não válido</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/cca/4.Não testado:label')"/>
+              <value>4.Não testado</value>
+            </item>
+          </select1>
+          <select1 ref="/data/hemastix/h/grading">
+            <label ref="jr:itext('/data/hemastix/h/grading:label')"/>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/grading/Vestigio:label')"/>
+              <value>Vestigio</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/grading/+:label')"/>
+              <value>+</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/grading/++:label')"/>
+              <value>++</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/grading/+++:label')"/>
+              <value>+++</value>
+            </item>
+          </select1>
+          <select1 ref="/data/hemastix/h/haematuria">
+            <label ref="jr:itext('/data/hemastix/h/haematuria:label')"/>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/haematuria/Amarelo transparente:label')"/>
+              <value>Amarelo transparente</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/haematuria/Amarelo turvo:label')"/>
+              <value>Amarelo turvo</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/haematuria/Âmbar transparente:label')"/>
+              <value>Âmbar transparente</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/haematuria/Âmbar turvo:label')"/>
+              <value>Âmbar turvo</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/haematuria/Sangrenta:label')"/>
+              <value>Sangrenta</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/haematuria/Outra:label')"/>
+              <value>Outra</value>
+            </item>
+          </select1>
+          <input ref="/data/hemastix/h/haematuria_other">
+            <label ref="jr:itext('/data/hemastix/h/haematuria_other:label')"/>
+          </input>
+          <select1 ref="/data/hemastix/h/hematix">
+            <label ref="jr:itext('/data/hemastix/h/hematix:label')"/>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/hematix/N, negativo:label')"/>
+              <value>N, negativo</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/hematix/VNH, vestigio não hemolizado:label')"/>
+              <value>VNH, vestigio não hemolizado</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/hematix/MNH, moderado não hemolizado:label')"/>
+              <value>MNH, moderado não hemolizado</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/hematix/VH, vestigio hemolizado:label')"/>
+              <value>VH, vestigio hemolizado</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/hematix/+:label')"/>
+              <value>+</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/hematix/++:label')"/>
+              <value>++</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/hemastix/h/hematix/+++:label')"/>
+              <value>+++</value>
+            </item>
+          </select1>
+          <input ref="/data/hemastix/h/remarks">
+            <label ref="jr:itext('/data/hemastix/h/remarks:label')"/>
+          </input>
+        </group>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>

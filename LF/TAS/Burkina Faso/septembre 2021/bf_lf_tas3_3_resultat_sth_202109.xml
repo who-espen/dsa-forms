@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:jr="http://openrosa.org/javarosa"
+    xmlns:odk="http://www.opendatakit.org/xforms"
+    xmlns:orx="http://openrosa.org/xforms"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <h:head>
+        <h:title>(Septembre 2021) Burkina Faso TAS3 FL - 3. Formulaire Résultat FTS</h:title>
+        <model >
+
+            <instance>
+                <data id="bf_lf_tas3_3_resultat_sth_202109">
+                    <code_operateur/>
+                    <drs/>
+                    <ue/>
+                    <nb_grappe/>
+                    <id_methode/>
+                    <barcode/>
+                    <id_manuel/>
+                    <id_manuel2/>
+                    <nb_bandelette/>
+                    <lot_fts1/>
+                    <resultat_fts1/>
+                    <fts1_invalid_description/>
+                    <autre_expliquer_fts1/>
+                    <photo1/>
+                    <lot_fts2/>
+                    <resultat_fts2/>
+                    <fts2_invalid_description/>
+                    <autre_expliquer_fts2/>
+                    <photo2/>
+                    <duree_sejour/>
+                    <duree_sejour_en_mois/>
+                    <defis_operationnels/>
+                    <defis_operationnels_autre/>
+                    <observations/>
+                    <debut_enregistrement/>
+                    <fin_enregistrement/>
+                    <meta>
+                        <instanceID/>
+                    </meta>
+                </data>
+            </instance>
+
+            <itext>
+                <translation default="true()" lang="French">
+                    <text id="/data/code_operateur:label">
+                        <value>Code opérateurs</value>
+                    </text>
+                    <text id="/data/code_operateur/01:label">
+                        <value>01</value>
+                    </text>
+                    <text id="/data/code_operateur/02:label">
+                        <value>02</value>
+                    </text>
+                    <text id="/data/code_operateur/03:label">
+                        <value>03</value>
+                    </text>
+                    <text id="/data/code_operateur/04:label">
+                        <value>04</value>
+                    </text>
+                    <text id="/data/drs:label">
+                        <value>Sélectionner un DRS</value>
+                    </text>
+                    <text id="/data/drs/Boucle du Mouhoun:label">
+                        <value>Boucle du Mouhoun</value>
+                    </text>
+                    <text id="/data/drs/Centre-Ouest:label">
+                        <value>Centre-Ouest</value>
+                    </text>
+                    <text id="/data/drs/Centre-Nord:label">
+                        <value>Centre-Nord</value>
+                    </text>
+                    <text id="/data/drs/Centre-Est:label">
+                        <value>Centre-Est</value>
+                    </text>
+                    <text id="/data/drs/Sud-Ouest:label">
+                        <value>Sud-Ouest</value>
+                    </text>
+                    <text id="/data/ue:label">
+                        <value>Sélectionner une UE/DS</value>
+                    </text>
+                    <text id="/data/nb_grappe:label">
+                        <value>N° Grappe</value>
+                    </text>
+                    <text id="/data/nb_grappe:hint">
+                        <value>Le numéro doit être entre 1 et 35</value>
+                    </text>
+                    <text id="/data/id_methode:label">
+                        <value>Type d'identification</value>
+                    </text>
+                    <text id="/data/id_methode/Scanner:label">
+                        <value>Scanner</value>
+                    </text>
+                    <text id="/data/id_methode/Manuel:label">
+                        <value>Manuel</value>
+                    </text>
+                    <text id="/data/barcode:label">
+                        <value>Veillez scanner le code à barre</value>
+                    </text>
+                    <text id="/data/id_manuel:jr:constraintMsg">
+                        <value>le format du code manuel est de 2 lettres suivies de 5 chiffres</value>
+                    </text>
+                    <text id="/data/id_manuel:label">
+                        <value>Entrer le code manuel</value>
+                    </text>
+                    <text id="/data/id_manuel2:label">
+                        <value>Veullez répéter le code manuel</value>
+                    </text>
+                    <text id="/data/nb_bandelette:label">
+                        <value>2. Nombre de Bandelette FTS utilisée pour tester l'individu</value>
+                    </text>
+                    <text id="/data/lot_fts1:label">
+                        <value>3. Lots FTS1</value>
+                    </text>
+                    <text id="/data/lot_fts1/Lot:141647:label">
+                        <value>Lot:141647 Exp:11/01/2022</value>
+                    </text>
+                    <text id="/data/resultat_fts1:label">
+                        <value>4. Résultats FTS1</value>
+                    </text>
+                    <text id="/data/resultat_fts1/1_Positif:label">
+                        <value>1 Positif</value>
+                    </text>
+                    <text id="/data/resultat_fts1/2_Negatif:label">
+                        <value>2 Négatif</value>
+                    </text>
+                    <text id="/data/resultat_fts1/3_Invalide:label">
+                        <value>3 Invalide</value>
+                    </text>
+                    <text id="/data/fts1_invalid_description:label">
+                        <value>Description d'invalidation de test 1</value>
+                    </text>
+                    <text id="/data/fts1_invalid_description/A_Absence_de_ligne_temoin:label">
+                        <value>A. Absence de ligne témoin</value>
+                    </text>
+                    <text id="/data/fts1_invalid_description/B_Ligne_temoin_brisees/partielle:label">
+                        <value>B. Ligne témoin brisées/partielle</value>
+                    </text>
+                    <text id="/data/fts1_invalid_description/C_Difficulte_d_absorption_d_echantillon:label">
+                        <value>C. Difficulté d'absorption d'échantillon</value>
+                    </text>
+                    <text id="/data/fts1_invalid_description/D_Difficulte_de_migration_de_l_echantillon:label">
+                        <value>D. Difficulté de migration de l'échantillon</value>
+                    </text>
+                    <text id="/data/fts1_invalid_description/E_Trace_de_sang_persiste:label">
+                        <value>E. Trace de sang persiste</value>
+                    </text>
+                    <text id="/data/fts1_invalid_description/F_Insuffisance_du_volume_de_sang_due_à_la_pipette:label">
+                        <value>F. Insuffisance du volume de sang due à la pipette</value>
+                    </text>
+                    <text id="/data/fts1_invalid_description/G_Autre_expliquer:label">
+                        <value>G. Autre (expliquer)</value>
+                    </text>
+                    <text id="/data/autre_expliquer_fts1:label">
+                        <value>Si Autre (expliquer)</value>
+                    </text>
+                    <text id="/data/autre_expliquer_fts1:hint">
+                        <value>Si Autre (expliquer)</value>
+                    </text>
+                    <text id="/data/photo1:label">
+                        <value>5. Photo FTS1</value>
+                    </text>
+                    <text id="/data/photo1:hint">
+                        <value>Prendre les photos pour les tests positifs ou invalides</value>
+                    </text>
+                    <text id="/data/lot_fts2:label">
+                        <value>6. Lots FTS2</value>
+                    </text>
+                    <text id="/data/lot_fts2/Lot:141647:label">
+                        <value>Lot:141647 Exp:11/01/2022</value>
+                    </text>
+                    <text id="/data/resultat_fts2:label">
+                        <value>7. Résultats FTS2</value>
+                    </text>
+                    <text id="/data/resultat_fts2/1_Positif:label">
+                        <value>1 Positif</value>
+                    </text>
+                    <text id="/data/resultat_fts2/2_Negatif:label">
+                        <value>2 Négatif</value>
+                    </text>
+                    <text id="/data/resultat_fts2/3_Invalide:label">
+                        <value>3 Invalide</value>
+                    </text>
+                    <text id="/data/fts2_invalid_description:label">
+                        <value>Description d'invalidation de test 2</value>
+                    </text>
+                    <text id="/data/fts2_invalid_description/A_Absence_de_ligne_temoin:label">
+                        <value>A. Absence de ligne témoin</value>
+                    </text>
+                    <text id="/data/fts2_invalid_description/B_Ligne_temoin_brisees/partielle:label">
+                        <value>B. Ligne témoin brisées/partielle</value>
+                    </text>
+                    <text id="/data/fts2_invalid_description/C_Difficulte_d_absorption_d_echantillon:label">
+                        <value>C. Difficulté d'absorption d'échantillon</value>
+                    </text>
+                    <text id="/data/fts2_invalid_description/D_Difficulte_de_migration_de_l_echantillon:label">
+                        <value>D. Difficulté de migration de l'échantillon</value>
+                    </text>
+                    <text id="/data/fts2_invalid_description/E_Trace_de_sang_persiste:label">
+                        <value>E. Trace de sang persiste</value>
+                    </text>
+                    <text id="/data/fts2_invalid_description/F_Insuffisance_du_volume_de_sang_due_à_la_pipette:label">
+                        <value>F. Insuffisance du volume de sang due à la pipette</value>
+                    </text>
+                    <text id="/data/fts2_invalid_description/G_Autre_expliquer:label">
+                        <value>G. Autre (expliquer)</value>
+                    </text>
+                    <text id="/data/autre_expliquer_fts2:label">
+                        <value>Si Autre (expliquer)</value>
+                    </text>
+                    <text id="/data/autre_expliquer_fts2:hint">
+                        <value>Si Autre (expliquer)</value>
+                    </text>
+                    <text id="/data/photo2:label">
+                        <value>8. Photos FTS2</value>
+                    </text>
+                    <text id="/data/photo2:hint">
+                        <value>Prendre les photos pour les tests positifs ou invalides</value>
+                    </text>
+                    <text id="/data/duree_sejour:label">
+                        <value>Durée de séjour dans la région (année)</value>
+                    </text>
+                    <text id="/data/duree_sejour_en_mois:jr:constraintMsg">
+                        <value>Doit être entre 6 et 11</value>
+                    </text>
+                    <text id="/data/duree_sejour_en_mois:label">
+                        <value>Durée de séjour dans la région (mois)</value>
+                    </text>
+                    <text id="/data/defis_operationnels:label">
+                        <value>10. Défis opérationnels observés</value>
+                    </text>
+                    <text id="/data/defis_operationnels/A_Aucun:label">
+                        <value>A.Aucun</value>
+                    </text>
+                    <text id="/data/defis_operationnels/N_Plusieurs kits dans un seul sachet:label">
+                        <value>N.Plusieurs kits dans un seul sachet</value>
+                    </text>
+                    <text id="/data/defis_operationnels/O_Deshydratant absent:label">
+                        <value>O.Déshydratant absent</value>
+                    </text>
+                    <text id="/data/defis_operationnels/Q_Micropipette absente:label">
+                        <value>Q.Micropipette absente</value>
+                    </text>
+                    <text id="/data/defis_operationnels/R_Teste casse et non-utilise:label">
+                        <value>R.Teste casse et non-utilise</value>
+                    </text>
+                    <text id="/data/defis_operationnels/S_Autre (expliquer):label">
+                        <value>S.Autre (expliquer)</value>
+                    </text>
+                    <text id="/data/defis_operationnels_autre:label">
+                        <value>Si autre précisez</value>
+                    </text>
+                    <text id="/data/observations:label">
+                        <value>11. Observations</value>
+                    </text>
+                    <text id="operateur_list-0">
+                        <value>01</value>
+                    </text>
+                    <text id="operateur_list-1">
+                        <value>02</value>
+                    </text>
+                    <text id="operateur_list-2">
+                        <value>03</value>
+                    </text>
+                    <text id="operateur_list-3">
+                        <value>04</value>
+                    </text>
+                    <text id="drs_list-0">
+                        <value>Boucle du Mouhoun</value>
+                    </text>
+                    <text id="drs_list-1">
+                        <value>Centre-Ouest</value>
+                    </text>
+                    <text id="drs_list-2">
+                        <value>Centre-Nord</value>
+                    </text>
+                    <text id="drs_list-3">
+                        <value>Centre-Est</value>
+                    </text>
+                    <text id="drs_list-4">
+                        <value>Sud-Ouest</value>
+                    </text>
+                    <text id="ue_list-0">
+                        <value>Dédougou</value>
+                    </text>
+                    <text id="ue_list-1">
+                        <value>Boromo</value>
+                    </text>
+                    <text id="ue_list-2">
+                        <value>Léo</value>
+                    </text>
+                    <text id="ue_list-3">
+                        <value>Sapouy</value>
+                    </text>
+                    <text id="ue_list-4">
+                        <value>Boussouma</value>
+                    </text>
+                    <text id="ue_list-5">
+                        <value>Zabré</value>
+                    </text>
+                    <text id="ue_list-6">
+                        <value>Dano</value>
+                    </text>
+                    <text id="id_methodes-0">
+                        <value>Scanner</value>
+                    </text>
+                    <text id="id_methodes-1">
+                        <value>Manuel</value>
+                    </text>
+                    <text id="resultat_list-0">
+                        <value>1 Positif</value>
+                    </text>
+                    <text id="resultat_list-1">
+                        <value>2 Négatif</value>
+                    </text>
+                    <text id="resultat_list-2">
+                        <value>3 Invalide</value>
+                    </text>
+                    <text id="lot_fts_list-0">
+                        <value>Lot:141647 Exp:11/01/2022</value>
+                    </text>
+                    <text id="invalid_desc_list-0">
+                        <value>A. Absence de ligne témoin</value>
+                    </text>
+                    <text id="invalid_desc_list-1">
+                        <value>B. Ligne témoin brisées/partielle</value>
+                    </text>
+                    <text id="invalid_desc_list-2">
+                        <value>C. Difficulté d'absorption d'échantillon</value>
+                    </text>
+                    <text id="invalid_desc_list-3">
+                        <value>D. Difficulté de migration de l'échantillon</value>
+                    </text>
+                    <text id="invalid_desc_list-4">
+                        <value>E. Trace de sang persiste</value>
+                    </text>
+                    <text id="invalid_desc_list-5">
+                        <value>F. Insuffisance du volume de sang due à la pipette</value>
+                    </text>
+                    <text id="invalid_desc_list-6">
+                        <value>G. Autre (expliquer)</value>
+                    </text>
+                    <text id="defis_operationnels-0">
+                        <value>A.Aucun</value>
+                    </text>
+                    <text id="defis_operationnels-1">
+                        <value>N.Plusieurs kits dans un seul sachet</value>
+                    </text>
+                    <text id="defis_operationnels-2">
+                        <value>O.Déshydratant absent</value>
+                    </text>
+                    <text id="defis_operationnels-3">
+                        <value>Q.Micropipette absente</value>
+                    </text>
+                    <text id="defis_operationnels-4">
+                        <value>R.Teste casse et non-utilise</value>
+                    </text>
+                    <text id="defis_operationnels-5">
+                        <value>S.Autre (expliquer)</value>
+                    </text>
+                </translation>
+            </itext>
+            <instance id="operateur_list">
+                <root>
+                    <item>
+                        <itextId>operateur_list-0</itextId>
+                        <name>01</name>
+                    </item>
+                    <item>
+                        <itextId>operateur_list-1</itextId>
+                        <name>02</name>
+                    </item>
+                    <item>
+                        <itextId>operateur_list-2</itextId>
+                        <name>03</name>
+                    </item>
+                    <item>
+                        <itextId>operateur_list-3</itextId>
+                        <name>04</name>
+                    </item>
+                </root>
+            </instance>
+            <instance id="drs_list">
+                <root>
+                    <item>
+                        <itextId>drs_list-0</itextId>
+                        <name>Boucle du Mouhoun</name>
+                    </item>
+                    <item>
+                        <itextId>drs_list-1</itextId>
+                        <name>Centre-Ouest</name>
+                    </item>
+                    <item>
+                        <itextId>drs_list-2</itextId>
+                        <name>Centre-Nord</name>
+                    </item>
+                    <item>
+                        <itextId>drs_list-3</itextId>
+                        <name>Centre-Est</name>
+                    </item>
+                    <item>
+                        <itextId>drs_list-4</itextId>
+                        <name>Sud-Ouest</name>
+                    </item>
+                </root>
+            </instance>
+            <instance id="ue_list">
+                <root>
+                    <item>
+                        <itextId>ue_list-0</itextId>
+                        <name>Dedougou</name>
+                        <ue_list>Boucle du Mouhoun</ue_list>
+                    </item>
+                    <item>
+                        <itextId>ue_list-1</itextId>
+                        <name>Boromo</name>
+                        <ue_list>Boucle du Mouhoun</ue_list>
+                    </item>
+                    <item>
+                        <itextId>ue_list-2</itextId>
+                        <name>Leo</name>
+                        <ue_list>Centre-Ouest</ue_list>
+                    </item>
+                    <item>
+                        <itextId>ue_list-3</itextId>
+                        <name>Sapouy</name>
+                        <ue_list>Centre-Ouest</ue_list>
+                    </item>
+                    <item>
+                        <itextId>ue_list-4</itextId>
+                        <name>Boussouma</name>
+                        <ue_list>Centre-Nord</ue_list>
+                    </item>
+                    <item>
+                        <itextId>ue_list-5</itextId>
+                        <name>Zabre</name>
+                        <ue_list>Centre-Est</ue_list>
+                    </item>
+                    <item>
+                        <itextId>ue_list-6</itextId>
+                        <name>Dano</name>
+                        <ue_list>Sud-Ouest</ue_list>
+                    </item>
+                </root>
+            </instance>
+            <instance id="id_methodes">
+                <root>
+                    <item>
+                        <itextId>id_methodes-0</itextId>
+                        <name>Scanner</name>
+                    </item>
+                    <item>
+                        <itextId>id_methodes-1</itextId>
+                        <name>Manuel</name>
+                    </item>
+                </root>
+            </instance>
+            <instance id="resultat_list">
+                <root>
+                    <item>
+                        <itextId>resultat_list-0</itextId>
+                        <name>1_Positif</name>
+                    </item>
+                    <item>
+                        <itextId>resultat_list-1</itextId>
+                        <name>2_Negatif</name>
+                    </item>
+                    <item>
+                        <itextId>resultat_list-2</itextId>
+                        <name>3_Invalide</name>
+                    </item>
+                </root>
+            </instance>
+            <instance id="lot_fts_list">
+                <root>
+                    <item>
+                        <itextId>lot_fts_list-0</itextId>
+                        <name>Lot:141647</name>
+                    </item>
+                </root>
+            </instance>
+            <instance id="invalid_desc_list">
+                <root>
+                    <item>
+                        <itextId>invalid_desc_list-0</itextId>
+                        <name>A_Absence_de_ligne_temoin</name>
+                    </item>
+                    <item>
+                        <itextId>invalid_desc_list-1</itextId>
+                        <name>B_Ligne_temoin_brisees/partielle</name>
+                    </item>
+                    <item>
+                        <itextId>invalid_desc_list-2</itextId>
+                        <name>C_Difficulte_d_absorption_d_echantillon</name>
+                    </item>
+                    <item>
+                        <itextId>invalid_desc_list-3</itextId>
+                        <name>D_Difficulte_de_migration_de_l_echantillon</name>
+                    </item>
+                    <item>
+                        <itextId>invalid_desc_list-4</itextId>
+                        <name>E_Trace_de_sang_persiste</name>
+                    </item>
+                    <item>
+                        <itextId>invalid_desc_list-5</itextId>
+                        <name>F_Insuffisance_du_volume_de_sang_due_à_la_pipette</name>
+                    </item>
+                    <item>
+                        <itextId>invalid_desc_list-6</itextId>
+                        <name>G_Autre_expliquer</name>
+                    </item>
+                </root>
+            </instance>
+            <instance id="defis_operationnels">
+                <root>
+                    <item>
+                        <itextId>defis_operationnels-0</itextId>
+                        <name>A_Aucun</name>
+                    </item>
+                    <item>
+                        <itextId>defis_operationnels-1</itextId>
+                        <name>N_Plusieurs kits dans un seul sachet</name>
+                    </item>
+                    <item>
+                        <itextId>defis_operationnels-2</itextId>
+                        <name>O_Deshydratant absent</name>
+                    </item>
+                    <item>
+                        <itextId>defis_operationnels-3</itextId>
+                        <name>Q_Micropipette absente</name>
+                    </item>
+                    <item>
+                        <itextId>defis_operationnels-4</itextId>
+                        <name>R_Teste casse et non-utilise</name>
+                    </item>
+                    <item>
+                        <itextId>defis_operationnels-5</itextId>
+                        <name>S_Autre (expliquer)</name>
+                    </item>
+                </root>
+            </instance>
+            <bind nodeset="/data/code_operateur" required="true()" type="string"/>
+            <bind nodeset="/data/drs" required="true()" type="string"/>
+            <bind nodeset="/data/ue" required="true()" type="string"/>
+            <bind constraint=". &gt; 0 and . &lt;= 35" nodeset="/data/nb_grappe" required="true()" type="int"/>
+            <bind nodeset="/data/id_methode" required="true()" type="string"/>
+            <bind nodeset="/data/barcode" relevant=" /data/id_methode  = &quot;Scanner&quot;" required="true()" type="barcode"/>
+            <bind constraint="regex(.,'^[a-zA-Z]{2}[0-9]{5}$')" jr:constraintMsg="jr:itext('/data/id_manuel:jr:constraintMsg')" nodeset="/data/id_manuel" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
+            <bind constraint=". =  /data/id_manuel " nodeset="/data/id_manuel2" relevant=" /data/id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
+            <bind constraint=".&gt;=1 and .&lt;=2" nodeset="/data/nb_bandelette" required="true()" type="int"/>
+            <bind nodeset="/data/lot_fts1" required="true()" type="string"/>
+            <bind nodeset="/data/resultat_fts1" required="true()" type="string"/>
+            <bind constraint="true()" nodeset="/data/fts1_invalid_description" relevant=" /data/resultat_fts1  = '3_Invalide'" required="true()" type="string"/>
+            <bind constraint="true()" nodeset="/data/autre_expliquer_fts1" relevant=" /data/fts1_invalid_description ='G_Autre_expliquer'" required="true()" type="string"/>
+            <bind nodeset="/data/photo1" relevant=" /data/resultat_fts1  = '1_Positif' or  /data/resultat_fts1  = '3_Invalide'" required="true()" type="binary"/>
+            <bind nodeset="/data/lot_fts2" relevant=" /data/nb_bandelette  &gt; 1" required="true()" type="string"/>
+            <bind nodeset="/data/resultat_fts2" relevant=" /data/nb_bandelette  &gt; 1" required="true()" type="string"/>
+            <bind constraint="true()" nodeset="/data/fts2_invalid_description" relevant=" /data/resultat_fts2  = '3_Invalide'" required="true()" type="string"/>
+            <bind constraint="true()" nodeset="/data/autre_expliquer_fts2" relevant=" /data/fts2_invalid_description ='G_Autre_expliquer'" required="true()" type="string"/>
+            <bind nodeset="/data/photo2" relevant=" /data/resultat_fts2  = '1_Positif' or  /data/resultat_fts2  = '3_Invalide'" required="true()" type="binary"/>
+            <bind nodeset="/data/duree_sejour" relevant="( /data/resultat_fts1  = '1_Positif' or  /data/resultat_fts2  = '1_Positif')" type="int"/>
+            <bind constraint=". &gt;= 6 and .&lt; 12" jr:constraintMsg="jr:itext('/data/duree_sejour_en_mois:jr:constraintMsg')" nodeset="/data/duree_sejour_en_mois" relevant="( /data/duree_sejour  = 0) and ( /data/resultat_fts1  = '1_Positif' or  /data/resultat_fts2  = '1_Positif')" type="int"/>
+            <bind nodeset="/data/defis_operationnels" required="true()" type="string"/>
+            <bind nodeset="/data/defis_operationnels_autre" relevant=" /data/defis_operationnels ='S'" required="true()" type="string"/>
+            <bind nodeset="/data/observations" type="string"/>
+            <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/debut_enregistrement" type="dateTime"/>
+            <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/fin_enregistrement" type="dateTime"/>
+            <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+        </model>
+    </h:head>
+    <h:body>
+        <select1 ref="/data/code_operateur">
+            <label ref="jr:itext('/data/code_operateur:label')"/>
+            <item>
+                <label ref="jr:itext('/data/code_operateur/01:label')"/>
+                <value>01</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/code_operateur/02:label')"/>
+                <value>02</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/code_operateur/03:label')"/>
+                <value>03</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/code_operateur/04:label')"/>
+                <value>04</value>
+            </item>
+        </select1>
+        <select1 ref="/data/drs">
+            <label ref="jr:itext('/data/drs:label')"/>
+            <item>
+                <label ref="jr:itext('/data/drs/Boucle du Mouhoun:label')"/>
+                <value>Boucle du Mouhoun</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/drs/Centre-Ouest:label')"/>
+                <value>Centre-Ouest</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/drs/Centre-Nord:label')"/>
+                <value>Centre-Nord</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/drs/Centre-Est:label')"/>
+                <value>Centre-Est</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/drs/Sud-Ouest:label')"/>
+                <value>Sud-Ouest</value>
+            </item>
+        </select1>
+        <select1 ref="/data/ue">
+            <label ref="jr:itext('/data/ue:label')"/>
+            <itemset nodeset="instance('ue_list')/root/item[ue_list =  /data/drs ]">
+                <value ref="name"/>
+                <label ref="jr:itext(itextId)"/>
+            </itemset>
+        </select1>
+        <input ref="/data/nb_grappe">
+            <label ref="jr:itext('/data/nb_grappe:label')"/>
+            <hint ref="jr:itext('/data/nb_grappe:hint')"/>
+        </input>
+        <select1 ref="/data/id_methode">
+            <label ref="jr:itext('/data/id_methode:label')"/>
+            <item>
+                <label ref="jr:itext('/data/id_methode/Scanner:label')"/>
+                <value>Scanner</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/id_methode/Manuel:label')"/>
+                <value>Manuel</value>
+            </item>
+        </select1>
+        <input ref="/data/barcode">
+            <label ref="jr:itext('/data/barcode:label')"/>
+        </input>
+        <input ref="/data/id_manuel">
+            <label ref="jr:itext('/data/id_manuel:label')"/>
+        </input>
+        <input ref="/data/id_manuel2">
+            <label ref="jr:itext('/data/id_manuel2:label')"/>
+        </input>
+        <input ref="/data/nb_bandelette">
+            <label ref="jr:itext('/data/nb_bandelette:label')"/>
+        </input>
+        <select1 ref="/data/lot_fts1">
+            <label ref="jr:itext('/data/lot_fts1:label')"/>
+            <item>
+                <label ref="jr:itext('/data/lot_fts1/Lot:141647:label')"/>
+                <value>Lot:141647</value>
+            </item>
+        </select1>
+        <select1 ref="/data/resultat_fts1">
+            <label ref="jr:itext('/data/resultat_fts1:label')"/>
+            <item>
+                <label ref="jr:itext('/data/resultat_fts1/1_Positif:label')"/>
+                <value>1_Positif</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/resultat_fts1/2_Negatif:label')"/>
+                <value>2_Negatif</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/resultat_fts1/3_Invalide:label')"/>
+                <value>3_Invalide</value>
+            </item>
+        </select1>
+        <select1 ref="/data/fts1_invalid_description">
+            <label ref="jr:itext('/data/fts1_invalid_description:label')"/>
+            <item>
+                <label ref="jr:itext('/data/fts1_invalid_description/A_Absence_de_ligne_temoin:label')"/>
+                <value>A_Absence_de_ligne_temoin</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts1_invalid_description/B_Ligne_temoin_brisees/partielle:label')"/>
+                <value>B_Ligne_temoin_brisees/partielle</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts1_invalid_description/C_Difficulte_d_absorption_d_echantillon:label')"/>
+                <value>C_Difficulte_d_absorption_d_echantillon</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts1_invalid_description/D_Difficulte_de_migration_de_l_echantillon:label')"/>
+                <value>D_Difficulte_de_migration_de_l_echantillon</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts1_invalid_description/E_Trace_de_sang_persiste:label')"/>
+                <value>E_Trace_de_sang_persiste</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts1_invalid_description/F_Insuffisance_du_volume_de_sang_due_à_la_pipette:label')"/>
+                <value>F_Insuffisance_du_volume_de_sang_due_à_la_pipette</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts1_invalid_description/G_Autre_expliquer:label')"/>
+                <value>G_Autre_expliquer</value>
+            </item>
+        </select1>
+        <input ref="/data/autre_expliquer_fts1">
+            <label ref="jr:itext('/data/autre_expliquer_fts1:label')"/>
+            <hint ref="jr:itext('/data/autre_expliquer_fts1:hint')"/>
+        </input>
+        <upload mediatype="image/*" ref="/data/photo1">
+            <label ref="jr:itext('/data/photo1:label')"/>
+            <hint ref="jr:itext('/data/photo1:hint')"/>
+        </upload>
+        <select1 ref="/data/lot_fts2">
+            <label ref="jr:itext('/data/lot_fts2:label')"/>
+            <item>
+                <label ref="jr:itext('/data/lot_fts2/Lot:141647:label')"/>
+                <value>Lot:141647</value>
+            </item>
+        </select1>
+        <select1 ref="/data/resultat_fts2">
+            <label ref="jr:itext('/data/resultat_fts2:label')"/>
+            <item>
+                <label ref="jr:itext('/data/resultat_fts2/1_Positif:label')"/>
+                <value>1_Positif</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/resultat_fts2/2_Negatif:label')"/>
+                <value>2_Negatif</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/resultat_fts2/3_Invalide:label')"/>
+                <value>3_Invalide</value>
+            </item>
+        </select1>
+        <select1 ref="/data/fts2_invalid_description">
+            <label ref="jr:itext('/data/fts2_invalid_description:label')"/>
+            <item>
+                <label ref="jr:itext('/data/fts2_invalid_description/A_Absence_de_ligne_temoin:label')"/>
+                <value>A_Absence_de_ligne_temoin</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts2_invalid_description/B_Ligne_temoin_brisees/partielle:label')"/>
+                <value>B_Ligne_temoin_brisees/partielle</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts2_invalid_description/C_Difficulte_d_absorption_d_echantillon:label')"/>
+                <value>C_Difficulte_d_absorption_d_echantillon</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts2_invalid_description/D_Difficulte_de_migration_de_l_echantillon:label')"/>
+                <value>D_Difficulte_de_migration_de_l_echantillon</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts2_invalid_description/E_Trace_de_sang_persiste:label')"/>
+                <value>E_Trace_de_sang_persiste</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts2_invalid_description/F_Insuffisance_du_volume_de_sang_due_à_la_pipette:label')"/>
+                <value>F_Insuffisance_du_volume_de_sang_due_à_la_pipette</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/fts2_invalid_description/G_Autre_expliquer:label')"/>
+                <value>G_Autre_expliquer</value>
+            </item>
+        </select1>
+        <input ref="/data/autre_expliquer_fts2">
+            <label ref="jr:itext('/data/autre_expliquer_fts2:label')"/>
+            <hint ref="jr:itext('/data/autre_expliquer_fts2:hint')"/>
+        </input>
+        <upload mediatype="image/*" ref="/data/photo2">
+            <label ref="jr:itext('/data/photo2:label')"/>
+            <hint ref="jr:itext('/data/photo2:hint')"/>
+        </upload>
+        <input ref="/data/duree_sejour">
+            <label ref="jr:itext('/data/duree_sejour:label')"/>
+        </input>
+        <input ref="/data/duree_sejour_en_mois">
+            <label ref="jr:itext('/data/duree_sejour_en_mois:label')"/>
+        </input>
+        <select1 ref="/data/defis_operationnels">
+            <label ref="jr:itext('/data/defis_operationnels:label')"/>
+            <item>
+                <label ref="jr:itext('/data/defis_operationnels/A_Aucun:label')"/>
+                <value>A_Aucun</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/defis_operationnels/N_Plusieurs kits dans un seul sachet:label')"/>
+                <value>N_Plusieurs kits dans un seul sachet</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/defis_operationnels/O_Deshydratant absent:label')"/>
+                <value>O_Deshydratant absent</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/defis_operationnels/Q_Micropipette absente:label')"/>
+                <value>Q_Micropipette absente</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/defis_operationnels/R_Teste casse et non-utilise:label')"/>
+                <value>R_Teste casse et non-utilise</value>
+            </item>
+            <item>
+                <label ref="jr:itext('/data/defis_operationnels/S_Autre (expliquer):label')"/>
+                <value>S_Autre (expliquer)</value>
+            </item>
+        </select1>
+        <input ref="/data/defis_operationnels_autre">
+            <label ref="jr:itext('/data/defis_operationnels_autre:label')"/>
+        </input>
+        <input ref="/data/observations">
+            <label ref="jr:itext('/data/observations:label')"/>
+        </input>
+    </h:body>
+</h:html>

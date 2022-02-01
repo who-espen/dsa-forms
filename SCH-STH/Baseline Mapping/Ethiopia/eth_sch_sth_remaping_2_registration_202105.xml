@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<h:head>
+		<h:title>2. Ethiopia – Reassessment Registration Form V3</h:title>
+		<model >
+
+			<instance>
+				<data id="eth_sch_sth_remaping_2_registration_202105_v3" version="2021053">
+					<p_technicianInit/>
+					<p_start_survey/>
+					<p_visitDate/>
+					<p_region/>
+					<p_woreda/>
+					<p_kebele/>
+					<p_kebele_other/>
+					<p_school/>
+					<p_school_code/>
+					<p_school_other/>
+					<p_school_code_other/>
+					<p_note2/>
+					<p_name/>
+					<p_code_pupil/>
+					<p_age/>
+					<p_sex/>
+					<p_grade/>
+					<p_liveHere/>
+					<p_stoolsample1/>
+					<p_stoolsample1_ID/>
+					<p_stoolsample1_ID2/>
+					<p_urinesample1/>
+					<p_urinesample1_ID/>
+					<p_urinesample1_ID2/>
+					<p_start/>
+					<p_end/>
+					<meta>
+						<instanceID/>
+						<randomnum/>
+					</meta>
+				</data>
+			</instance>
+
+			<itext>
+				<translation default="true()" lang="English">
+					<text id="/data/p_sex/1.female:label">
+						<value>1.female</value>
+					</text>
+					<text id="/data/p_sex/2.male:label">
+						<value>2.male</value>
+					</text>
+					<text id="/data/p_stoolsample1/1.yes:label">
+						<value>1.yes</value>
+					</text>
+					<text id="/data/p_stoolsample1/2.no:label">
+						<value>2.no</value>
+					</text>
+					<text id="/data/p_urinesample1/1.yes:label">
+						<value>1.yes</value>
+					</text>
+					<text id="/data/p_urinesample1/2.no:label">
+						<value>2.no</value>
+					</text>
+				</translation>
+			</itext>
+
+			<bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="The code must be a two-digit number between 9 and 91" nodeset="/data/p_technicianInit" required="true()" type="int"/>
+			<bind nodeset="/data/p_start_survey" readonly="true()" type="string"/>
+			<bind nodeset="/data/p_visitDate" required="true()" type="date"/>
+			<bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
+			<bind nodeset="/data/p_woreda" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
+			<bind nodeset="/data/p_kebele" relevant="not(selected( /data/p_region , 'Somali'))" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_woreda"/>
+			<bind nodeset="/data/p_kebele_other" relevant="selected( /data/p_region , 'Somali')" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/p_woreda"/>
+			<bind nodeset="/data/p_school" relevant="not(selected( /data/p_region , 'Somali'))" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/p_kebele"/>
+			<bind nodeset="/data/p_school_code" relevant="not(selected( /data/p_region , 'Somali'))" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_school"/>
+			<bind nodeset="/data/p_school_other" relevant="selected( /data/p_region , 'Somali')" required="true()" type="string" db_get="col_7" db_filter_by_col_4="/data/p_kebele_other"/>
+			<bind nodeset="/data/p_school_code_other" relevant="selected( /data/p_region , 'Somali')" type="string" db_get="col_8" db_add_col_7="/data/p_school_other"/>
+			<bind nodeset="/data/p_note2" readonly="true()" type="string"/>
+			<bind nodeset="/data/p_name" required="true()" type="string"/>
+			<bind nodeset="/data/p_code_pupil" required="true()" type="string" calculate="if(/data/p_region = 'Somali' ,concat(/data/p_school_code_other, '-', /data/meta/randomnum) , concat(/data/p_school_code, '-', /data/meta/randomnum))" readonly="true()"/>
+			<bind constraint=".&gt;=9 and .&lt;=14" nodeset="/data/p_age" required="true()" type="int"/>
+			<bind nodeset="/data/p_sex" required="true()" type="string"/>
+			<bind constraint=".&gt;=1 and .&lt;=8" nodeset="/data/p_grade" required="true()" type="int"/>
+			<bind constraint=".&lt;= /data/p_age " jr:constraintMsg="Not greater than the age of the participant" nodeset="/data/p_liveHere" required="true()" type="int"/>
+			<bind nodeset="/data/p_stoolsample1" required="true()" type="string"/>
+			<bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}-[0-9]{3}$')" jr:constraintMsg="The format must be 123-123456-123" nodeset="/data/p_stoolsample1_ID" relevant="selected( /data/p_stoolsample1 , '1.yes')" required="true()" type="string"/>
+			<bind constraint=". = /data/p_stoolsample1_ID " jr:constraintMsg="The repeated code must be the same" nodeset="/data/p_stoolsample1_ID2" relevant="selected( /data/p_stoolsample1 , '1.yes')" required="true()" type="string"/>
+			<bind nodeset="/data/p_urinesample1" required="true()" type="string"/>
+			<bind constraint="regex(.,'^[0-9]{3}-[0-9]{6}-[0-9]{3}$')" jr:constraintMsg="The format must be 123-123456-123" nodeset="/data/p_urinesample1_ID" relevant="selected( /data/p_urinesample1 , '1.yes')" required="true()" type="string"/>
+			<bind constraint=". = /data/p_urinesample1_ID " jr:constraintMsg="The repeated code must be the same" nodeset="/data/p_urinesample1_ID2" relevant="selected( /data/p_urinesample1 , '1.yes')" required="true()" type="string"/>
+			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
+			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
+			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+			<bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,9),'-',substr(random(),3,6))"/>
+		</model>
+	</h:head>
+	<h:body>
+		<input ref="/data/p_technicianInit">
+			<label>2. Technician's code</label>
+			<hint>2 digit code assigned to you</hint>
+		</input>
+		<input ref="/data/p_start_survey">
+			<label>Start of Site Questions</label>
+		</input>
+		<input ref="/data/p_visitDate">
+			<label>1. Date of survey</label>
+		</input>
+		<input ref="/data/p_region">
+			<label>2. Region</label>
+		</input>
+		<input ref="/data/p_woreda">
+			<label>3. Woreda name</label>
+		</input>
+		<input ref="/data/p_kebele">
+			<label>4. Kebele name</label>
+		</input>
+		<input ref="/data/p_kebele_other">
+			<label>4a. Please write the kebele name</label>
+		</input>
+		<input ref="/data/p_school">
+			<label>6. School name</label>
+		</input>
+		<input ref="/data/p_school_code">
+			<label>6.a School code</label>
+		</input>
+		<input ref="/data/p_school_other">
+			<label>6. School name</label>
+		</input>
+		<input ref="/data/p_school_code_other">
+			<label>6.a School code</label>
+		</input>
+		<input ref="/data/p_note2">
+			<label>Start of individual registration</label>
+		</input>
+		<input ref="/data/p_name">
+			<label>8. Please enter the name of pupil</label>
+		</input>
+		<input ref="/data/p_code_pupil">
+			<label>8. Code of pupil</label>
+		</input>
+		<input ref="/data/p_age">
+			<label>9. Age</label>
+			<hint>Between 9 and 14</hint>
+		</input>
+		<select1 ref="/data/p_sex">
+			<label>10. Sex</label>
+			<item>
+				<label ref="jr:itext('/data/p_sex/1.female:label')"/>
+				<value>1.female</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_sex/2.male:label')"/>
+				<value>2.male</value>
+			</item>
+		</select1>
+		<input ref="/data/p_grade">
+			<label>11. Grade</label>
+			<hint>Between 1 and 8</hint>
+		</input>
+		<input ref="/data/p_liveHere">
+			<label>12. How long have you lived here? (years)</label>
+		</input>
+		<select1 ref="/data/p_stoolsample1">
+			<label>13. Day 1 - Stool</label>
+			<item>
+				<label ref="jr:itext('/data/p_stoolsample1/1.yes:label')"/>
+				<value>1.yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_stoolsample1/2.no:label')"/>
+				<value>2.no</value>
+			</item>
+		</select1>
+		<input ref="/data/p_stoolsample1_ID">
+			<label>Please enter the unique code of this sample (must be entered as 123-123456-123 number only with dashes)</label>
+		</input>
+		<input ref="/data/p_stoolsample1_ID2">
+			<label>Re-enter the unique code</label>
+		</input>
+		<select1 ref="/data/p_urinesample1">
+			<label>14. Day 1 - Urine</label>
+			<item>
+				<label ref="jr:itext('/data/p_urinesample1/1.yes:label')"/>
+				<value>1.yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_urinesample1/2.no:label')"/>
+				<value>2.no</value>
+			</item>
+		</select1>
+		<input ref="/data/p_urinesample1_ID">
+			<label>Please enter the unique code of this sample (must be entered as 123-123456-123 number only with dashes)</label>
+		</input>
+		<input ref="/data/p_urinesample1_ID2">
+			<label>Re-enter the unique ID</label>
+		</input>
+	</h:body>
+</h:html>

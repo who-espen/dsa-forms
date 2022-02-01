@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Nov 2021) Coverage Survey - 2. Household Form V2</h:title>
+    <model >
+
+      <instance>
+        <data id="et_ces_sch_sth_2_hh_202111_v2">
+          <h_date/>
+          <h_interviewer_id/>
+          <h_region/>
+          <h_woreda/>
+          <h_kebele/>
+          <h_village/>
+          <h_head_hh/>
+          <h_hh_number/>
+          <h_interviewed_house/>
+          <h_reason_not_interviewed/>
+          <h_reason_not_interviewed_other/>
+          <h_consent/>
+          <h_gps/>
+          <h_ads1/>
+          <h_male_member/>
+          <h_female_member/>
+          <h_total_member/>
+          <h_boys_5_14_member/>
+          <h_girls_5_14_member/>
+          <h_boys_2_4_member/>
+          <h_girls_2_4_member/>
+          <h_ads2/>
+          <e_electricity/>
+          <e_radio/>
+          <e_tv/>
+          <e_freeser/>
+          <e_mitad/>
+          <e_table/>
+          <e_chair/>
+          <e_bed/>
+          <e_bank_account/>
+          <e_water_src/>
+          <e_toilet/>
+          <e_fuel_cooking/>
+          <e_floor_material/>
+          <e_wall_material/>
+          <e_roof_material/>
+          <h_notes/>
+          <h_start/>
+          <h_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/h_date:label">
+            <value>H1. Date</value>
+          </text>
+          <text id="/data/h_interviewer_id:label">
+            <value>H2. Interviewer Code</value>
+          </text>
+          <text id="/data/h_region:label">
+            <value>H3. Region Name</value>
+          </text>
+          <text id="/data/h_woreda:label">
+            <value>H4. Woreda name</value>
+          </text>
+          <text id="/data/h_kebele:label">
+            <value>H5.a. Kebele name</value>
+          </text>
+          <text id="/data/h_village:label">
+            <value>H5.b. VIllage name</value>
+          </text>
+          <text id="/data/h_head_hh:label">
+            <value>H6. Head of the household name</value>
+          </text>
+          <text id="/data/h_hh_number:label">
+            <value>7 What number house is this for you in the kebele segment?</value>
+          </text>
+          <text id="/data/h_interviewed_house:label">
+            <value>8a Are you able to interview this house? (Tick one box)</value>
+          </text>
+          <text id="/data/h_interviewed_house/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/h_interviewed_house/Yes on first visit:label">
+            <value>Yes on first visit</value>
+          </text>
+          <text id="/data/h_interviewed_house/Yes on second visit:label">
+            <value>Yes on second visit</value>
+          </text>
+          <text id="/data/h_reason_not_interviewed:label">
+            <value>8b If you are not able to interview this house: Reason why household not interviewed</value>
+          </text>
+          <text id="/data/h_reason_not_interviewed/Nobody home:label">
+            <value>Nobody home</value>
+          </text>
+          <text id="/data/h_reason_not_interviewed/Refused to participate:label">
+            <value>Refused to participate</value>
+          </text>
+          <text id="/data/h_reason_not_interviewed/Household not found or destroyed:label">
+            <value>Household not found or destroyed</value>
+          </text>
+          <text id="/data/h_reason_not_interviewed/Other:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/h_reason_not_interviewed_other:label">
+            <value>8c If you're not able to interview this house and the reason is 'other'</value>
+          </text>
+          <text id="/data/h_consent:label">
+            <value>9 If you are able to interview this house: Consent form signed by Head of House?</value>
+          </text>
+          <text id="/data/h_consent/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/h_consent/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/h_gps:label">
+            <value>Enter GPS location</value>
+          </text>
+          <text id="/data/h_ads1:label">
+            <value>To be answered by the interviewee Household head or other adult</value>
+          </text>
+          <text id="/data/h_male_member:label">
+            <value>11 How many adult males live in this house (15 or older)?</value>
+          </text>
+          <text id="/data/h_female_member:label">
+            <value>12 How many adult females live in this house (15 or older)?</value>
+          </text>
+          <text id="/data/h_total_member:label">
+            <value>10 How many people live in this household?</value>
+          </text>
+          <text id="/data/h_boys_5_14_member:label">
+            <value>13 How many boys live in this house (5-14 years old)?</value>
+          </text>
+          <text id="/data/h_girls_5_14_member:label">
+            <value>14 How many girls live in this house (5-14 years old)?</value>
+          </text>
+          <text id="/data/h_boys_2_4_member:label">
+            <value>15 How many boys live in this house (2-4 years old)?</value>
+          </text>
+          <text id="/data/h_girls_2_4_member:label">
+            <value>16 How many girls live in this house (2-4 years old)?</value>
+          </text>
+          <text id="/data/h_ads2:label">
+            <value>Equity questions</value>
+          </text>
+          <text id="/data/e_electricity:label">
+            <value>E1. Does your household have Electricity?</value>
+          </text>
+          <text id="/data/e_electricity/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/e_electricity/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/e_radio:label">
+            <value>E2. Does your household have a radio?</value>
+          </text>
+          <text id="/data/e_radio/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/e_radio/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/e_tv:label">
+            <value>E3. Does your household have a television?</value>
+          </text>
+          <text id="/data/e_tv/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/e_tv/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/e_freeser:label">
+            <value>E4. Does your household have a refrigerator ?</value>
+          </text>
+          <text id="/data/e_freeser/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/e_freeser/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/e_mitad:label">
+            <value>E5. Does your household have Electric Mitad?</value>
+          </text>
+          <text id="/data/e_mitad/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/e_mitad/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/e_table:label">
+            <value>E6. Does your household have a table?</value>
+          </text>
+          <text id="/data/e_table/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/e_table/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/e_chair:label">
+            <value>E7. Does your household have a chair?</value>
+          </text>
+          <text id="/data/e_chair/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/e_chair/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/e_bed:label">
+            <value>E8. Does your household have a bed with cotton/sponge/spring mattress?</value>
+          </text>
+          <text id="/data/e_bed/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/e_bed/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/e_bank_account:label">
+            <value>E9. Does a member of the household have a bank account?</value>
+          </text>
+          <text id="/data/e_bank_account/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/e_bank_account/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/e_water_src:label">
+            <value>E10. What is the main source of drinking water for the members of the household?</value>
+          </text>
+          <text id="/data/e_water_src/Piped to Yard/plot:label">
+            <value>Piped to Yard/plot</value>
+          </text>
+          <text id="/data/e_water_src/Other:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/e_toilet:label">
+            <value>E11. What kind of toilet facility do members of your household usually use?</value>
+          </text>
+          <text id="/data/e_toilet/Pit latrine without slab/open pit:label">
+            <value>Pit latrine without slab/open pit</value>
+          </text>
+          <text id="/data/e_toilet/No facility/bush/field:label">
+            <value>No facility/bush/field</value>
+          </text>
+          <text id="/data/e_toilet/Other:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/e_fuel_cooking:label">
+            <value>E12. What type of fuel does your household mainly use for cooking?</value>
+          </text>
+          <text id="/data/e_fuel_cooking/Electricity:label">
+            <value>Electricity</value>
+          </text>
+          <text id="/data/e_fuel_cooking/Wood:label">
+            <value>Wood</value>
+          </text>
+          <text id="/data/e_fuel_cooking/Other:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/e_floor_material:label">
+            <value>E13. What is the main material of the floor in your household?</value>
+          </text>
+          <text id="/data/e_floor_material/Earth/Sand:label">
+            <value>Earth/Sand</value>
+          </text>
+          <text id="/data/e_floor_material/Other:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/e_wall_material:label">
+            <value>E14. What is the main material of the exterior walls in your household?</value>
+          </text>
+          <text id="/data/e_wall_material/Bamboo with mud:label">
+            <value>Bamboo with mud</value>
+          </text>
+          <text id="/data/e_wall_material/Other:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/e_roof_material:label">
+            <value>E15. What is the main material of the roof in your household?</value>
+          </text>
+          <text id="/data/e_roof_material/Metal/corrugated iron:label">
+            <value>Metal/corrugated iron</value>
+          </text>
+          <text id="/data/e_roof_material/Other:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/h_notes:label">
+            <value>17 Notes about household interview Answered by interviewer</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/h_date" required="true()" type="date"/>
+      <bind constraint=". &gt; 9 and . &lt; 100" nodeset="/data/h_interviewer_id" required="true()" type="int"/>
+      <bind nodeset="/data/h_region" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/h_woreda" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/h_region"/>
+      <bind nodeset="/data/h_kebele" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/h_woreda"/>
+      <bind nodeset="/data/h_village" type="string" db_get="col_4" db_filter_by_col_3="/data/h_kebele"/>
+      <bind nodeset="/data/h_head_hh" type="string"/>
+      <bind nodeset="/data/h_hh_number" required="true()" type="int"/>
+      <bind nodeset="/data/h_interviewed_house" required="true()" type="string"/>
+      <bind nodeset="/data/h_reason_not_interviewed" relevant=" /data/h_interviewed_house  = 'No'" required="true()" type="string"/>
+      <bind nodeset="/data/h_reason_not_interviewed_other" relevant=" /data/h_reason_not_interviewed  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/h_consent" relevant=" /data/h_interviewed_house != 'No'" required="true()" type="string"/>
+      <bind nodeset="/data/h_gps" relevant=" /data/h_consent  = 'Yes'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/h_ads1" readonly="true()" relevant=" /data/h_consent  = 'Yes'" type="string"/>
+      <bind nodeset="/data/h_male_member" relevant=" /data/h_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/h_female_member" relevant=" /data/h_consent  = 'Yes'" required="true()" type="int"/>
+      <bind calculate=" /data/h_male_member  +  /data/h_female_member " nodeset="/data/h_total_member" readonly="true()" relevant=" /data/h_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/h_boys_5_14_member" relevant=" /data/h_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/h_girls_5_14_member" relevant=" /data/h_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/h_boys_2_4_member" relevant=" /data/h_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/h_girls_2_4_member" relevant=" /data/h_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/h_ads2" readonly="true()" type="string"/>
+      <bind nodeset="/data/e_electricity" required="true()" type="string"/>
+      <bind nodeset="/data/e_radio" required="true()" type="string"/>
+      <bind nodeset="/data/e_tv" required="true()" type="string"/>
+      <bind nodeset="/data/e_freeser" required="true()" type="string"/>
+      <bind nodeset="/data/e_mitad" required="true()" type="string"/>
+      <bind nodeset="/data/e_table" required="true()" type="string"/>
+      <bind nodeset="/data/e_chair" required="true()" type="string"/>
+      <bind nodeset="/data/e_bed" required="true()" type="string"/>
+      <bind nodeset="/data/e_bank_account" required="true()" type="string"/>
+      <bind nodeset="/data/e_water_src" required="true()" type="string"/>
+      <bind nodeset="/data/e_toilet" required="true()" type="string"/>
+      <bind nodeset="/data/e_fuel_cooking" required="true()" type="string"/>
+      <bind nodeset="/data/e_floor_material" required="true()" type="string"/>
+      <bind nodeset="/data/e_wall_material" required="true()" type="string"/>
+      <bind nodeset="/data/e_roof_material" required="true()" type="string"/>
+      <bind nodeset="/data/h_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/h_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/h_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/h_date">
+      <label ref="jr:itext('/data/h_date:label')"/>
+    </input>
+    <input ref="/data/h_interviewer_id">
+      <label ref="jr:itext('/data/h_interviewer_id:label')"/>
+    </input>
+    <input ref="/data/h_region">
+      <label ref="jr:itext('/data/h_region:label')"/>
+    </input>
+    <input ref="/data/h_woreda">
+      <label ref="jr:itext('/data/h_woreda:label')"/>
+    </input>
+    <input ref="/data/h_kebele">
+      <label ref="jr:itext('/data/h_kebele:label')"/>
+    </input>
+    <input ref="/data/h_village">
+      <label ref="jr:itext('/data/h_village:label')"/>
+    </input>
+    <input ref="/data/h_head_hh">
+      <label ref="jr:itext('/data/h_head_hh:label')"/>
+    </input>
+    <input ref="/data/h_hh_number">
+      <label ref="jr:itext('/data/h_hh_number:label')"/>
+    </input>
+    <select1 ref="/data/h_interviewed_house">
+      <label ref="jr:itext('/data/h_interviewed_house:label')"/>
+      <item>
+        <label ref="jr:itext('/data/h_interviewed_house/No:label')"/>
+        <value>No</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/h_interviewed_house/Yes on first visit:label')"/>
+        <value>Yes on first visit</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/h_interviewed_house/Yes on second visit:label')"/>
+        <value>Yes on second visit</value>
+      </item>
+    </select1>
+    <select1 ref="/data/h_reason_not_interviewed">
+      <label ref="jr:itext('/data/h_reason_not_interviewed:label')"/>
+      <item>
+        <label ref="jr:itext('/data/h_reason_not_interviewed/Nobody home:label')"/>
+        <value>Nobody home</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/h_reason_not_interviewed/Refused to participate:label')"/>
+        <value>Refused to participate</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/h_reason_not_interviewed/Household not found or destroyed:label')"/>
+        <value>Household not found or destroyed</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/h_reason_not_interviewed/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/h_reason_not_interviewed_other">
+      <label ref="jr:itext('/data/h_reason_not_interviewed_other:label')"/>
+    </input>
+    <select1 ref="/data/h_consent">
+      <label ref="jr:itext('/data/h_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/h_consent/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/h_consent/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/h_gps">
+      <label ref="jr:itext('/data/h_gps:label')"/>
+    </input>
+    <input ref="/data/h_ads1">
+      <label ref="jr:itext('/data/h_ads1:label')"/>
+    </input>
+    <input ref="/data/h_male_member">
+      <label ref="jr:itext('/data/h_male_member:label')"/>
+    </input>
+    <input ref="/data/h_female_member">
+      <label ref="jr:itext('/data/h_female_member:label')"/>
+    </input>
+    <input ref="/data/h_total_member">
+      <label ref="jr:itext('/data/h_total_member:label')"/>
+    </input>
+    <input ref="/data/h_boys_5_14_member">
+      <label ref="jr:itext('/data/h_boys_5_14_member:label')"/>
+    </input>
+    <input ref="/data/h_girls_5_14_member">
+      <label ref="jr:itext('/data/h_girls_5_14_member:label')"/>
+    </input>
+    <input ref="/data/h_boys_2_4_member">
+      <label ref="jr:itext('/data/h_boys_2_4_member:label')"/>
+    </input>
+    <input ref="/data/h_girls_2_4_member">
+      <label ref="jr:itext('/data/h_girls_2_4_member:label')"/>
+    </input>
+    <input ref="/data/h_ads2">
+      <label ref="jr:itext('/data/h_ads2:label')"/>
+    </input>
+    <select1 ref="/data/e_electricity">
+      <label ref="jr:itext('/data/e_electricity:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_electricity/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_electricity/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_radio">
+      <label ref="jr:itext('/data/e_radio:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_radio/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_radio/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_tv">
+      <label ref="jr:itext('/data/e_tv:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_tv/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_tv/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_freeser">
+      <label ref="jr:itext('/data/e_freeser:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_freeser/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_freeser/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_mitad">
+      <label ref="jr:itext('/data/e_mitad:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_mitad/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_mitad/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_table">
+      <label ref="jr:itext('/data/e_table:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_table/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_table/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_chair">
+      <label ref="jr:itext('/data/e_chair:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_chair/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_chair/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_bed">
+      <label ref="jr:itext('/data/e_bed:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_bed/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_bed/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_bank_account">
+      <label ref="jr:itext('/data/e_bank_account:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_bank_account/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_bank_account/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_water_src">
+      <label ref="jr:itext('/data/e_water_src:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_water_src/Piped to Yard/plot:label')"/>
+        <value>Piped to Yard/plot</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_water_src/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_toilet">
+      <label ref="jr:itext('/data/e_toilet:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_toilet/Pit latrine without slab/open pit:label')"/>
+        <value>Pit latrine without slab/open pit</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_toilet/No facility/bush/field:label')"/>
+        <value>No facility/bush/field</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_toilet/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_fuel_cooking">
+      <label ref="jr:itext('/data/e_fuel_cooking:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_fuel_cooking/Electricity:label')"/>
+        <value>Electricity</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_fuel_cooking/Wood:label')"/>
+        <value>Wood</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_fuel_cooking/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_floor_material">
+      <label ref="jr:itext('/data/e_floor_material:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_floor_material/Earth/Sand:label')"/>
+        <value>Earth/Sand</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_floor_material/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_wall_material">
+      <label ref="jr:itext('/data/e_wall_material:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_wall_material/Bamboo with mud:label')"/>
+        <value>Bamboo with mud</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_wall_material/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <select1 ref="/data/e_roof_material">
+      <label ref="jr:itext('/data/e_roof_material:label')"/>
+      <item>
+        <label ref="jr:itext('/data/e_roof_material/Metal/corrugated iron:label')"/>
+        <value>Metal/corrugated iron</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/e_roof_material/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/h_notes">
+      <label ref="jr:itext('/data/h_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>

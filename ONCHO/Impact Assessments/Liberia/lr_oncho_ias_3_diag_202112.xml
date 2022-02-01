@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Dec 2021) IAS - 3. Diagnostic Form V2</h:title>
+    <model >
+
+      <instance>
+        <data id="lr_oncho_ias_3_diag_202112_v2">
+          <d_recorder_id/>
+          <d_cluster_id1/>
+          <d_cluster_id2/>
+          <d_is_second_test/>
+          <d_lot_number/>
+          <p_ID_method/>
+          <p_Barcode_ID/>
+          <p_Generate_ID1/>
+          <p_Generate_ID2/>
+          <d_ov16_result/>
+          <d_dbs_collected/>
+          <d_notes/>
+          <d_start/>
+          <d_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/d_recorder_id:jr:constraintMsg">
+            <value>Must be between 10 and 99 included</value>
+          </text>
+          <text id="/data/d_recorder_id:label">
+            <value>Recorder ID</value>
+          </text>
+          <text id="/data/d_recorder_id:hint">
+            <value>2-digit code provided to each recorder (person doing the data entry)</value>
+          </text>
+          <text id="/data/d_cluster_id1:jr:constraintMsg">
+            <value>The code must be three digits</value>
+          </text>
+          <text id="/data/d_cluster_id1:label">
+            <value>Enter the site ID</value>
+          </text>
+          <text id="/data/d_cluster_id2:jr:constraintMsg">
+            <value>The repeated code must be the same</value>
+          </text>
+          <text id="/data/d_cluster_id2:label">
+            <value>Reapeat the site ID</value>
+          </text>
+          <text id="/data/d_is_second_test:label">
+            <value>Is this a second test?</value>
+          </text>
+          <text id="/data/d_lot_number:label">
+            <value>Lot number</value>
+          </text>
+          <text id="/data/p_ID_method:label">
+            <value>Participant ID format</value>
+          </text>
+          <text id="/data/p_Barcode_ID:label">
+            <value>Please scan the QR code / barcode</value>
+          </text>
+          <text id="/data/p_Generate_ID1:jr:constraintMsg">
+            <value>The format is incorrect. Example of a good format: 12-123-123456</value>
+          </text>
+          <text id="/data/p_Generate_ID1:label">
+            <value>Please enter the diagnostic ID code</value>
+          </text>
+          <text id="/data/p_Generate_ID2:jr:constraintMsg">
+            <value>The repeated code must be the same</value>
+          </text>
+          <text id="/data/p_Generate_ID2:label">
+            <value>Repeat the diagnostic ID code</value>
+          </text>
+          <text id="/data/d_ov16_result:label">
+            <value>Ov16 RDT result</value>
+          </text>
+          <text id="/data/d_dbs_collected:label">
+            <value>Has DBS been collected?</value>
+          </text>
+          <text id="/data/d_notes:label">
+            <value>Notes</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/d_recorder_id:jr:constraintMsg')" nodeset="/data/d_recorder_id" required="true()" type="int"/>
+      <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_cluster_id1:jr:constraintMsg')" nodeset="/data/d_cluster_id1" required="true()" type="string"/>
+      <bind constraint=". =  /data/d_cluster_id1 " jr:constraintMsg="jr:itext('/data/d_cluster_id2:jr:constraintMsg')" nodeset="/data/d_cluster_id2" required="true()" type="int"/>
+      <bind nodeset="/data/d_is_second_test" required="true()" type="string"/>
+      <bind nodeset="/data/d_lot_number" required="true()" type="string"/>
+      <bind nodeset="/data/p_ID_method" required="true()" type="string"/>
+      <bind nodeset="/data/p_Barcode_ID" relevant=" /data/p_ID_method  = 'Scanner'" required="true()" type="barcode"/>
+      <bind constraint="regex(.,'^[0-9]{2}-[0-9]{3}-[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/p_Generate_ID1:jr:constraintMsg')" nodeset="/data/p_Generate_ID1" relevant=" /data/p_ID_method  = 'Auto generate'" required="true()" type="string"/>
+      <bind constraint=". =  /data/p_Generate_ID1 " jr:constraintMsg="jr:itext('/data/p_Generate_ID2:jr:constraintMsg')" nodeset="/data/p_Generate_ID2" required="true()" type="string"/>
+      <bind nodeset="/data/d_ov16_result" required="true()" type="string"/>
+      <bind nodeset="/data/d_dbs_collected" required="true()" type="string"/>
+      <bind nodeset="/data/d_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/d_recorder_id">
+      <label ref="jr:itext('/data/d_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/d_recorder_id:hint')"/>
+    </input>
+    <input ref="/data/d_cluster_id1">
+      <label ref="jr:itext('/data/d_cluster_id1:label')"/>
+    </input>
+    <input ref="/data/d_cluster_id2">
+      <label ref="jr:itext('/data/d_cluster_id2:label')"/>
+    </input>
+    <select1 ref="/data/d_is_second_test">
+      <label ref="jr:itext('/data/d_is_second_test:label')"/>
+      <item>
+        <label>Yes</label>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label>No</label>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/d_lot_number">
+      <label ref="jr:itext('/data/d_lot_number:label')"/>
+    </input>
+    <select1 ref="/data/p_ID_method">
+      <label ref="jr:itext('/data/p_ID_method:label')"/>
+      <item>
+        <label>Scanner</label>
+        <value>Scanner</value>
+      </item>
+      <item>
+        <label>Auto generate</label>
+        <value>Auto generate</value>
+      </item>
+    </select1>
+    <input ref="/data/p_Barcode_ID">
+      <label ref="jr:itext('/data/p_Barcode_ID:label')"/>
+    </input>
+    <input ref="/data/p_Generate_ID1">
+      <label ref="jr:itext('/data/p_Generate_ID1:label')"/>
+    </input>
+    <input ref="/data/p_Generate_ID2">
+      <label ref="jr:itext('/data/p_Generate_ID2:label')"/>
+    </input>
+    <select1 ref="/data/d_ov16_result">
+      <label ref="jr:itext('/data/d_ov16_result:label')"/>
+      <item>
+        <label>Positive</label>
+        <value>Positive</value>
+      </item>
+      <item>
+        <label>Negative</label>
+        <value>Negative</value>
+      </item>
+      <item>
+        <label>Invalid</label>
+        <value>Invalid</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_dbs_collected">
+      <label ref="jr:itext('/data/d_dbs_collected:label')"/>
+      <item>
+        <label>Yes</label>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label>No</label>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/d_notes">
+      <label ref="jr:itext('/data/d_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
