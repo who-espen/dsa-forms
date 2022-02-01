@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>4. SCH/STH - Filtration d'urine</h:title>
+    <model >
+      <instance>
+        <data id="cd_sch_sth_baseline_4_urinefiltration_202202">
+          <u_recorder_id/>
+          <u_zone_sante/>
+          <u_village/>
+          <u_code_ecole/>
+          <u_IDType/>
+          <u_BarcodeID/>
+          <u_generateID/>
+          <u_generateID2/>
+          <u_grading/>
+          <u_hematurie/>
+          <u_urine_vol/>
+          <u_microscope/>
+          <u_sh_egp_10ml/>
+          <u_remarks/>
+          <u_start/>
+          <u_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="French">
+          <text id="/data/u_recorder_id:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 91</value>
+          </text>
+          <text id="/data/u_recorder_id:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/u_recorder_id:hint">
+            <value>Code à deux chiffres qui vous a été assigné</value>
+          </text>
+          <text id="/data/u_zone_sante:label">
+            <value>Zone de Santé (niveau admin 3)</value>
+          </text>
+          <text id="/data/u_village:label">
+            <value>Village (niveau admin 5)</value>
+          </text>
+          <text id="/data/u_code_ecole:label">
+            <value>Code de l'école</value>
+          </text>
+          <text id="/data/u_code_ecole:hint">
+            <value>Code à trois chiffre. Ex : 001</value>
+          </text>
+          <text id="/data/u_IDType:label">
+            <value>Est-ce que le code barre du test de diagnostique a besoin d'être scanner?</value>
+          </text>
+          <text id="/data/u_IDType/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/u_IDType/Génération Automatique:label">
+            <value>Génération Automatique</value>
+          </text>
+          <text id="/data/u_BarcodeID:label">
+            <value>Scanner le code barre</value>
+          </text>
+          <text id="/data/u_generateID:jr:constraintMsg">
+            <value>Le format doit être 123-1234-567</value>
+          </text>
+          <text id="/data/u_generateID:label">
+            <value>Entrer l'identifiant unique du test de diagnostique (Doit avoir le format 123-1234-456 Majuscule avec des tiret de soulignement seulement)</value>
+          </text>
+          <text id="/data/u_generateID2:jr:constraintMsg">
+            <value>Le code répété doit être le même</value>
+          </text>
+          <text id="/data/u_generateID2:label">
+            <value>Répéter l'identifiant unique</value>
+          </text>
+          <text id="/data/u_grading:label">
+            <value>Graduation de la microhématurie</value>
+          </text>
+          <text id="/data/u_grading/Négatif:label">
+            <value>Négatif</value>
+          </text>
+          <text id="/data/u_grading/Trace hémolysée:label">
+            <value>Trace hémolysée</value>
+          </text>
+          <text id="/data/u_grading/Trace non hémolysée:label">
+            <value>Trace non hémolysée</value>
+          </text>
+          <text id="/data/u_grading/+:label">
+            <value>+</value>
+          </text>
+          <text id="/data/u_grading/++:label">
+            <value>++</value>
+          </text>
+          <text id="/data/u_grading/+++:label">
+            <value>+++</value>
+          </text>
+          <text id="/data/u_hematurie:label">
+            <value>Hématurie visible</value>
+          </text>
+          <text id="/data/u_hematurie/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/u_hematurie/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/u_urine_vol:label">
+            <value>Urine volume</value>
+          </text>
+          <text id="/data/u_microscope:label">
+            <value>Initial du microscopiste</value>
+          </text>
+          <text id="/data/u_sh_egp_10ml:label">
+            <value>S. haematobium - Nombre d'œufs</value>
+          </text>
+          <text id="/data/u_sh_egp_10ml:hint">
+            <value>Noter zéro si absence d'œufs - si réponse manquante, ne rien noter</value>
+          </text>
+          <text id="/data/u_remarks:label">
+            <value>Notes additionnelles</value>
+          </text>
+        </translation>
+      </itext>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/u_recorder_id:jr:constraintMsg')" nodeset="/data/u_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/u_zone_sante" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/u_village" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_zone_sante"/>
+      <bind nodeset="/data/u_code_ecole" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_village"/>
+      <bind nodeset="/data/u_IDType" required="true()" type="string"/>
+      <bind nodeset="/data/u_BarcodeID" relevant=" /data/u_IDType  = 'Scanner'" required="true()" type="barcode"/>
+      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/u_generateID:jr:constraintMsg')" nodeset="/data/u_generateID" relevant=" /data/u_IDType != 'Scanner'" required="true()" type="string"/>
+      <bind constraint=". =  /data/u_generateID " jr:constraintMsg="jr:itext('/data/u_generateID2:jr:constraintMsg')" nodeset="/data/u_generateID2" relevant=" /data/u_IDType != 'Scanner'" required="true()" type="string"/>
+      <bind nodeset="/data/u_grading" required="true()" type="string"/>
+      <bind nodeset="/data/u_hematurie" required="true()" type="string"/>
+      <bind nodeset="/data/u_urine_vol" required="true()" type="int"/>
+      <bind nodeset="/data/u_microscope" required="true()" type="string"/>
+      <bind nodeset="/data/u_sh_egp_10ml" required="true()" type="int"/>
+      <bind nodeset="/data/u_remarks" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/u_recorder_id">
+      <label ref="jr:itext('/data/u_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/u_recorder_id:hint')"/>
+    </input>
+    <input ref="/data/u_zone_sante">
+      <label ref="jr:itext('/data/u_zone_sante:label')"/>
+    </input>
+    <input ref="/data/u_village">
+      <label ref="jr:itext('/data/u_village:label')"/>
+    </input>
+    <input ref="/data/u_code_ecole">
+      <label ref="jr:itext('/data/u_code_ecole:label')"/>
+      <hint ref="jr:itext('/data/u_code_ecole:hint')"/>
+    </input>
+    <select1 ref="/data/u_IDType">
+      <label ref="jr:itext('/data/u_IDType:label')"/>
+      <item>
+        <label ref="jr:itext('/data/u_IDType/Scanner:label')"/>
+        <value>Scanner</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/u_IDType/Génération Automatique:label')"/>
+        <value>Génération Automatique</value>
+      </item>
+    </select1>
+    <input ref="/data/u_BarcodeID">
+      <label ref="jr:itext('/data/u_BarcodeID:label')"/>
+    </input>
+    <input ref="/data/u_generateID">
+      <label ref="jr:itext('/data/u_generateID:label')"/>
+    </input>
+    <input ref="/data/u_generateID2">
+      <label ref="jr:itext('/data/u_generateID2:label')"/>
+    </input>
+    <select1 ref="/data/u_grading">
+      <label ref="jr:itext('/data/u_grading:label')"/>
+      <item>
+        <label ref="jr:itext('/data/u_grading/Négatif:label')"/>
+        <value>Négatif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/u_grading/Trace hémolysée:label')"/>
+        <value>Trace hémolysée</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/u_grading/Trace non hémolysée:label')"/>
+        <value>Trace non hémolysée</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/u_grading/+:label')"/>
+        <value>+</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/u_grading/++:label')"/>
+        <value>++</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/u_grading/+++:label')"/>
+        <value>+++</value>
+      </item>
+    </select1>
+    <select1 ref="/data/u_hematurie">
+      <label ref="jr:itext('/data/u_hematurie:label')"/>
+      <item>
+        <label ref="jr:itext('/data/u_hematurie/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/u_hematurie/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/u_urine_vol">
+      <label ref="jr:itext('/data/u_urine_vol:label')"/>
+    </input>
+    <input ref="/data/u_microscope">
+      <label ref="jr:itext('/data/u_microscope:label')"/>
+    </input>
+    <input ref="/data/u_sh_egp_10ml">
+      <label ref="jr:itext('/data/u_sh_egp_10ml:label')"/>
+      <hint ref="jr:itext('/data/u_sh_egp_10ml:hint')"/>
+    </input>
+    <input ref="/data/u_remarks">
+      <label ref="jr:itext('/data/u_remarks:label')"/>
+    </input>
+  </h:body>
+</h:html>

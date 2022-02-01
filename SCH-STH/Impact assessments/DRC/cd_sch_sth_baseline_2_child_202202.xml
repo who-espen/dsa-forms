@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>2. SCH/STH - Fiche  individuelle  d'inscription</h:title>
+    <model >
+
+      <instance>
+        <data id="cd_sch_sth_baseline_2_child_202202">
+          <p_consent_note/>
+          <p_Recorder_id/>
+          <p_zone_sante/>
+          <p_village/>
+          <p_code_ecole/>
+          <p_consent/>
+          <p_idmethod/>
+          <p_barcode_id/>
+          <p_generate_id/>
+          <p_age/>
+          <p_sexa/>
+          <p_classe/>
+          <p_tps_vecu/>
+          <p_acces_src_eau/>
+          <p_defeq_ecole/>
+          <p_apprend_hygiene/>
+          <p_selles_collect/>
+          <p_urine_urine/>
+          <p_note_fin_enquete/>
+          <p_remarks/>
+          <p_start/>
+          <p_end/>
+          <meta>
+            <instanceID/>
+            <randomnum/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/p_consent_note:label">
+            <value>Bonjour ! Je suis ici au nom du ministère de la Santé. Nous menons une enquête pour déterminer la présence de schistosomiase (SCH) et des géo-helminthiases (STH) dans votre école. Je vais vous poser quelques questions sur le mode et le mécanisme de transmission et apprécierais également de prélever des échantillons de selles et d'urine auprès de vous. Si vous souhaitez participer à l'enquête, dites-le-moi et je noterai vos réponses et vous fournirai des récipients de selles et d'urine. Si vous êtes d'accord, l'enquête ne prendra que quelques minutes. Participer à l'enquête scolaire vous sera directement bénéfique car en cas de diagnostic de vers, vous recevrez immédiatement des médicaments vermifuges. Votre communauté et votre école en bénéficieront également directement, car les résultats de cette enquête aideront le ministère de la Santé à mettre en œuvre des activités de déparasitage pour les enfants âgés de 5 à 14 ans, si les résultats de laboratoire révèlent la nécessité d'interventions. Vous pouvez refuser sans pénalité. Souhaitez-vous participer à notre enquête ?</value>
+          </text>
+          <text id="/data/p_Recorder_id:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 91</value>
+          </text>
+          <text id="/data/p_Recorder_id:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/p_Recorder_id:hint">
+            <value>Code à deux chiffres qui vous a été assigné</value>
+          </text>
+          <text id="/data/p_zone_sante:label">
+            <value>Zone de Santé (niveau admin 3)</value>
+          </text>
+          <text id="/data/p_village:label">
+            <value>Village (niveau admin 5)</value>
+          </text>
+          <text id="/data/p_code_ecole:label">
+            <value>Code de l'école</value>
+          </text>
+          <text id="/data/p_consent:label">
+            <value>L'enfant a-t-il donné son consentement et le consentement de ses parents ou tuteurs?</value>
+          </text>
+          <text id="/data/p_consent:hint">
+            <value>La réponse "Non" mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/p_consent/1. A donné:label">
+            <value>1. A donné</value>
+          </text>
+          <text id="/data/p_consent/2. A refusé:label">
+            <value>2. A refusé</value>
+          </text>
+          <text id="/data/p_idmethod:label">
+            <value>Comment est-ce que l'identifiant individuel sera-t-il généré?</value>
+          </text>
+          <text id="/data/p_idmethod/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/p_idmethod/Génération Automatique:label">
+            <value>Génération Automatique</value>
+          </text>
+          <text id="/data/p_barcode_id:label">
+            <value>Scanner le barcode</value>
+          </text>
+          <text id="/data/p_generate_id:label">
+            <value>Veuillez enregistrer le code d'identification unique suivant pour le répondant sur une liste séparée et sur chaque test de diagnostic administré, y compris les tests Kato Katz et de Filtration Urinaire</value>
+          </text>
+          <text id="/data/p_age:jr:constraintMsg">
+            <value>L'âge doit être compris entre 10 et 14 ans</value>
+          </text>
+          <text id="/data/p_age:label">
+            <value>Entrez l'âge en années</value>
+          </text>
+          <text id="/data/p_sexa:label">
+            <value>Sélectionnez le sexe</value>
+          </text>
+          <text id="/data/p_sexa/Féminin:label">
+            <value>Féminin</value>
+          </text>
+          <text id="/data/p_sexa/Masculin:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/p_classe:label">
+            <value>Classe</value>
+          </text>
+          <text id="/data/p_tps_vecu:jr:constraintMsg">
+            <value>La valeur ne peut pas être supérieure à l'âge</value>
+          </text>
+          <text id="/data/p_tps_vecu:label">
+            <value>Combien de temps as-tu vécu ici (années)</value>
+          </text>
+          <text id="/data/p_acces_src_eau:label">
+            <value>As-tu accès à une source d'eau améliorée à l'école ? (O/N)</value>
+          </text>
+          <text id="/data/p_acces_src_eau/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_acces_src_eau/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_defeq_ecole:label">
+            <value>As-tu utilisé les sanitaires de base la dernière fois que tu as déféqué à l'école ? (O/N)</value>
+          </text>
+          <text id="/data/p_defeq_ecole/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_defeq_ecole/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_apprend_hygiene:label">
+            <value>T'enseigne-t-on l'hygiène à l'école ? (O/N)</value>
+          </text>
+          <text id="/data/p_apprend_hygiene/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_apprend_hygiene/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_selles_collect:label">
+            <value>Selles collecté?</value>
+          </text>
+          <text id="/data/p_selles_collect/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_selles_collect/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_urine_urine:label">
+            <value>Urine collecté?</value>
+          </text>
+          <text id="/data/p_urine_urine/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_urine_urine/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_note_fin_enquete:label">
+            <value>Vous venez d'entrer une information qui mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/p_remarks:label">
+            <value>Notes complémentaires</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/p_consent_note" readonly="true()" type="string"/>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_Recorder_id:jr:constraintMsg')" nodeset="/data/p_Recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/p_zone_sante" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/p_village" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_zone_sante"/>
+      <bind nodeset="/data/p_code_ecole" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_village"/>
+      <bind nodeset="/data/p_consent" required="true()" type="string"/>
+      <bind nodeset="/data/p_idmethod" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
+      <bind nodeset="/data/p_barcode_id" relevant=" /data/p_idmethod  = 'Scanner' and  /data/p_consent  = '1. A donné'" required="true()" type="barcode"/>
+      <bind nodeset="/data/p_generate_id" calculate="concat(/data/p_code_ecole,'-', /data/meta/randomnum)" readonly="true()" relevant=" /data/p_idmethod != 'Scanner' and  /data/p_consent  = '1. A donné'" required="true()" type="string"/>
+      <bind constraint=". &gt;= 10 and . &lt; 15" jr:constraintMsg="jr:itext('/data/p_age:jr:constraintMsg')" nodeset="/data/p_age" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="int"/>
+      <bind nodeset="/data/p_sexa" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
+      <bind nodeset="/data/p_classe" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
+      <bind constraint=". &lt;=  /data/p_age " jr:constraintMsg="jr:itext('/data/p_tps_vecu:jr:constraintMsg')" nodeset="/data/p_tps_vecu" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="int"/>
+      <bind nodeset="/data/p_acces_src_eau" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
+      <bind nodeset="/data/p_defeq_ecole" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
+      <bind nodeset="/data/p_apprend_hygiene" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
+      <bind nodeset="/data/p_selles_collect" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
+      <bind nodeset="/data/p_urine_urine" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
+      <bind nodeset="/data/p_note_fin_enquete" readonly="true()" relevant=" /data/p_consent  = '2. A refusé'" type="string"/>
+      <bind nodeset="/data/p_remarks" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,7), '-', substr(random(),10,13))"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/p_consent_note">
+      <label ref="jr:itext('/data/p_consent_note:label')"/>
+    </input>
+    <input ref="/data/p_Recorder_id">
+      <label ref="jr:itext('/data/p_Recorder_id:label')"/>
+      <hint ref="jr:itext('/data/p_Recorder_id:hint')"/>
+    </input>
+    <input ref="/data/p_zone_sante">
+      <label ref="jr:itext('/data/p_zone_sante:label')"/>
+    </input>
+    <input ref="/data/p_village">
+      <label ref="jr:itext('/data/p_village:label')"/>
+    </input>
+    <input ref="/data/p_code_ecole">
+      <label ref="jr:itext('/data/p_code_ecole:label')"/>
+    </input>
+    <select1 ref="/data/p_consent">
+      <label ref="jr:itext('/data/p_consent:label')"/>
+      <hint ref="jr:itext('/data/p_consent:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/p_consent/1. A donné:label')"/>
+        <value>1. A donné</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_consent/2. A refusé:label')"/>
+        <value>2. A refusé</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_idmethod">
+      <label ref="jr:itext('/data/p_idmethod:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_idmethod/Scanner:label')"/>
+        <value>Scanner</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_idmethod/Génération Automatique:label')"/>
+        <value>Génération Automatique</value>
+      </item>
+    </select1>
+    <input ref="/data/p_barcode_id">
+      <label ref="jr:itext('/data/p_barcode_id:label')"/>
+    </input>
+    <input ref="/data/p_generate_id">
+      <label ref="jr:itext('/data/p_generate_id:label')"/>
+    </input>
+    <input ref="/data/p_age">
+      <label ref="jr:itext('/data/p_age:label')"/>
+    </input>
+    <select1 ref="/data/p_sexa">
+      <label ref="jr:itext('/data/p_sexa:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_sexa/Féminin:label')"/>
+        <value>Féminin</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_sexa/Masculin:label')"/>
+        <value>Masculin</value>
+      </item>
+    </select1>
+    <input ref="/data/p_classe">
+      <label ref="jr:itext('/data/p_classe:label')"/>
+    </input>
+    <input ref="/data/p_tps_vecu">
+      <label ref="jr:itext('/data/p_tps_vecu:label')"/>
+    </input>
+    <select1 ref="/data/p_acces_src_eau">
+      <label ref="jr:itext('/data/p_acces_src_eau:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_acces_src_eau/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_acces_src_eau/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_defeq_ecole">
+      <label ref="jr:itext('/data/p_defeq_ecole:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_defeq_ecole/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_defeq_ecole/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_apprend_hygiene">
+      <label ref="jr:itext('/data/p_apprend_hygiene:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_apprend_hygiene/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_apprend_hygiene/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_selles_collect">
+      <label ref="jr:itext('/data/p_selles_collect:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_selles_collect/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_selles_collect/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_urine_urine">
+      <label ref="jr:itext('/data/p_urine_urine:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_urine_urine/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_urine_urine/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/p_note_fin_enquete">
+      <label ref="jr:itext('/data/p_note_fin_enquete:label')"/>
+    </input>
+    <input ref="/data/p_remarks">
+      <label ref="jr:itext('/data/p_remarks:label')"/>
+    </input>
+  </h:body>
+</h:html>
