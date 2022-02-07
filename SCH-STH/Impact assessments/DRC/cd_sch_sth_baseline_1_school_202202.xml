@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -8,20 +7,20 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>1. SCH/STH - Site</h:title>
+    <h:title>1. SCH/STH - Site V2</h:title>
     <model >
 
       <instance>
-        <data id="cd_sch_sth_baseline_1_school_202202">
+        <data id="cd_sch_sth_baseline_1_school_202202_v2">
           <w_record_id/>
           <w_region/>
           <w_coordination/>
           <w_zone_sante/>
           <w_aire_sante/>
           <w_village/>
-          <w_gps/>
           <w_ecole/>
           <w_code_ecole/>
+          <w_gps/>
           <w_chef_etbl/>
           <w_tel_chef_etbl/>
           <w_ecole_recu_med/>
@@ -126,12 +125,6 @@
           <text id="/data/w_village:label">
             <value>5. Village (niveau admin 5)</value>
           </text>
-          <text id="/data/w_gps:label">
-            <value>GPS</value>
-          </text>
-          <text id="/data/w_gps:hint">
-            <value>Capturer les coordonnées GPS</value>
-          </text>
           <text id="/data/w_ecole:label">
             <value>8. Nom de l'école</value>
           </text>
@@ -143,6 +136,12 @@
           </text>
           <text id="/data/w_code_ecole:hint">
             <value>Code à trois chiffre. Ex : 001</value>
+          </text>
+          <text id="/data/w_gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/data/w_gps:hint">
+            <value>Capturer les coordonnées GPS</value>
           </text>
           <text id="/data/w_chef_etbl:label">
             <value>10. Nom du chef d'établissement</value>
@@ -1048,9 +1047,9 @@
       <bind nodeset="/data/w_zone_sante" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/w_aire_sante" required="true()" type="string"/>
       <bind nodeset="/data/w_village" required="true()" type="string" db_add_col_1="/data/w_zone_sante" db_add_col_2="."/>
+      <bind nodeset="/data/w_ecole" required="true()" type="string" db_add_col_2="/data/w_village" db_add_col_3="."/>
+      <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/w_code_ecole:jr:constraintMsg')" nodeset="/data/w_code_ecole" required="true()" type="string" db_add_col_3="/data/w_ecole" db_add_col_4="."/>
       <bind nodeset="/data/w_gps" required="true()" type="geopoint"/>
-      <bind nodeset="/data/w_ecole" required="true()" type="string"/>
-      <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/w_code_ecole:jr:constraintMsg')" nodeset="/data/w_code_ecole" required="true()" type="string" db_add_col_2="/data/w_village" db_add_col_3="."/>
       <bind nodeset="/data/w_chef_etbl" required="true()" type="string"/>
       <bind nodeset="/data/w_tel_chef_etbl" required="true()" type="string"/>
       <bind nodeset="/data/w_ecole_recu_med" required="true()" type="string"/>
@@ -1162,16 +1161,16 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <input ref="/data/w_gps">
-      <label ref="jr:itext('/data/w_gps:label')"/>
-      <hint ref="jr:itext('/data/w_gps:hint')"/>
-    </input>
     <input ref="/data/w_ecole">
       <label ref="jr:itext('/data/w_ecole:label')"/>
     </input>
     <input ref="/data/w_code_ecole">
       <label ref="jr:itext('/data/w_code_ecole:label')"/>
       <hint ref="jr:itext('/data/w_code_ecole:hint')"/>
+    </input>
+    <input ref="/data/w_gps">
+      <label ref="jr:itext('/data/w_gps:label')"/>
+      <hint ref="jr:itext('/data/w_gps:hint')"/>
     </input>
     <input ref="/data/w_chef_etbl">
       <label ref="jr:itext('/data/w_chef_etbl:label')"/>

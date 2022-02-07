@@ -7,33 +7,32 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>3. SCH/STH - Kato Katz</h:title>
+    <h:title>3. SCH/STH - Kato Katz V2</h:title>
     <model >
+
       <instance>
-        <data id="cd_sch_sth_baseline_3_kato_katz_202202">
+        <data id="cd_sch_sth_baseline_3_kato_katz_202202_v2">
           <k_RecorderID/>
           <k_zone_sante/>
           <k_village/>
+          <k_ecole/>
           <k_code_ecole/>
-          <!-- <k_school_id/> -->
-          <k_IDType/>
-          <k_BarcodeID/>
           <k_GenerateID/>
           <k_GenerateID2/>
           <k_sch_man_sa/>
-          <k_sch_man_sb/>
+          <k_sch_man_intensity/>
           <k_ascaris_lumb_sa/>
-          <k_ascaris_lumb_sb/>
+          <k_ascaris_lumb_intensity/>
           <k_hookworm_sa/>
-          <k_hookworm_sb/>
+          <k_hookworm_intensity/>
           <k_trichuris_sa/>
-          <k_trichuris_sb/>
+          <k_trichuris_intensity/>
           <k_other_name_1/>
-          <k_other_quantity_1sa/>
-          <k_other_quantity_1sb/>
+          <k_other_quantity_1/>
+          <k_other_quantity1_intensity/>
           <k_other_name_2/>
-          <k_other_quantity_2sa/>
-          <k_other_quantity_2sb/>
+          <k_other_quantity_2/>
+          <k_other_quantity2_intensity/>
           <k_remarks/>
           <k_start/>
           <k_end/>
@@ -42,6 +41,7 @@
           </meta>
         </data>
       </instance>
+
       <itext>
         <translation default="true()" lang="French">
           <text id="/data/k_RecorderID:jr:constraintMsg">
@@ -59,29 +59,14 @@
           <text id="/data/k_village:label">
             <value>Village (niveau admin 5)</value>
           </text>
+          <text id="/data/k_ecole:label">
+            <value>Nom de l'école</value>
+          </text>
           <text id="/data/k_code_ecole:label">
             <value>Code de l'école</value>
           </text>
           <text id="/data/k_code_ecole:hint">
             <value>Code à trois chiffre. Ex : 001</value>
-          </text>
-          <!-- <text id="/data/k_school_id:jr:constraintMsg">
-            <value>Le code doit être un nombre à deux chiffres entre 99 et 901</value>
-          </text>
-          <text id="/data/k_school_id:label">
-            <value>Entrer le code de l'école</value>
-          </text> -->
-          <text id="/data/k_IDType:label">
-            <value>Est-ce que le code barre du test de diagnostique a besoin d'être scanner?</value>
-          </text>
-          <text id="/data/k_IDType/Scanner:label">
-            <value>Scanner</value>
-          </text>
-          <text id="/data/k_IDType/ID_generation:label">
-            <value>Génération Automatique</value>
-          </text>
-          <text id="/data/k_BarcodeID:label">
-            <value>Scanner le code barre</value>
           </text>
           <text id="/data/k_GenerateID:jr:constraintMsg">
             <value>Le format doit être 123-1234-567</value>
@@ -96,46 +81,46 @@
             <value>Répéter l'identifiant unique</value>
           </text>
           <text id="/data/k_sch_man_sa:label">
-            <value>Schistosoma mansoni (oeufs) - Slide A</value>
+            <value>Schistosoma mansoni (oeufs)</value>
           </text>
-          <text id="/data/k_sch_man_sb:label">
-            <value>Schistosoma mansoni (oeufs) - Slide B</value>
+          <text id="/data/k_sch_man_intensity:label">
+            <value>Intensité - Schistosoma mansoni (oeufs)</value>
           </text>
           <text id="/data/k_ascaris_lumb_sa:label">
-            <value>Ascaris lumbricoides (œufs) - Slide A</value>
+            <value>Ascaris lumbricoides (œufs)</value>
           </text>
-          <text id="/data/k_ascaris_lumb_sb:label">
-            <value>Ascaris lumbricoides (œufs) - Slide B</value>
+          <text id="/data/k_ascaris_lumb_intensity:label">
+            <value>Intensité - Ascaris lumbricoides (œufs)</value>
           </text>
           <text id="/data/k_hookworm_sa:label">
-            <value>Ankylostome - Slide A</value>
+            <value>Ankylostome</value>
           </text>
-          <text id="/data/k_hookworm_sb:label">
-            <value>Ankylostome - Slide B</value>
+          <text id="/data/k_hookworm_intensity:label">
+            <value>Intensité - Ankylostome</value>
           </text>
           <text id="/data/k_trichuris_sa:label">
-            <value>Trichocéphale trichura - Slide A</value>
+            <value>Trichocéphale trichura</value>
           </text>
-          <text id="/data/k_trichuris_sb:label">
-            <value>Trichocéphale trichura - Slide B</value>
+          <text id="/data/k_trichuris_intensity:label">
+            <value>Intensité - Trichocéphale trichura</value>
           </text>
           <text id="/data/k_other_name_1:label">
             <value>Autre (nom)</value>
           </text>
-          <text id="/data/k_other_quantity_1sa:label">
-            <value>Autre quantité - Slide A</value>
+          <text id="/data/k_other_quantity_1:label">
+            <value>Autre quantité</value>
           </text>
-          <text id="/data/k_other_quantity_1sb:label">
-            <value>Autre quantité - Slide B</value>
+          <text id="/data/k_other_quantity1_intensity:label">
+            <value>Intensité - Autre</value>
           </text>
           <text id="/data/k_other_name_2:label">
             <value>Autre 2 (nom)</value>
           </text>
-          <text id="/data/k_other_quantity_2sa:label">
-            <value>Autre 2 quantité - Slide A</value>
+          <text id="/data/k_other_quantity_2:label">
+            <value>Autre 2 quantité</value>
           </text>
-          <text id="/data/k_other_quantity_2sb:label">
-            <value>Autre 2 quantité - Slide B</value>
+          <text id="/data/k_other_quantity2_intensity:label">
+            <value>Intensité - Autre 2</value>
           </text>
           <text id="/data/k_remarks:label">
             <value>Notes additionnelles</value>
@@ -145,26 +130,24 @@
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/k_RecorderID:jr:constraintMsg')" nodeset="/data/k_RecorderID" required="true()" type="int"/>
       <bind nodeset="/data/k_zone_sante" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/k_village" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/k_zone_sante"/>
-      <bind nodeset="/data/k_code_ecole" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_village"/>
-      <!-- <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/k_school_id:jr:constraintMsg')" nodeset="/data/k_school_id" required="true()" type="string"/> -->
-      <bind nodeset="/data/k_IDType" required="true()" type="string"/>
-      <bind nodeset="/data/k_BarcodeID" relevant=" /data/k_IDType  = 'Scanner'" required="true()" type="barcode"/>
-      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/k_GenerateID:jr:constraintMsg')" nodeset="/data/k_GenerateID" relevant=" /data/k_IDType != 'Scanner'" required="true()" type="string"/>
-      <bind constraint=". =  /data/k_GenerateID " jr:constraintMsg="jr:itext('/data/k_GenerateID2:jr:constraintMsg')" nodeset="/data/k_GenerateID2" relevant=" /data/k_IDType != 'Scanner'" required="true()" type="string"/>
+      <bind nodeset="/data/k_ecole" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_village"/>
+      <bind nodeset="/data/k_code_ecole" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/k_ecole"/>
+      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/k_GenerateID:jr:constraintMsg')" nodeset="/data/k_GenerateID" required="true()" type="string"/>
+      <bind constraint=". =  /data/k_GenerateID " jr:constraintMsg="jr:itext('/data/k_GenerateID2:jr:constraintMsg')" nodeset="/data/k_GenerateID2" required="true()" type="string"/>
       <bind nodeset="/data/k_sch_man_sa" required="true()" type="int"/>
-      <bind nodeset="/data/k_sch_man_sb" required="true()" type="int"/>
+      <bind calculate=" /data/k_sch_man_sa  * 24" nodeset="/data/k_sch_man_intensity" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/data/k_ascaris_lumb_sa" required="true()" type="int"/>
-      <bind nodeset="/data/k_ascaris_lumb_sb" required="true()" type="int"/>
+      <bind calculate=" /data/k_ascaris_lumb_sa  * 24" nodeset="/data/k_ascaris_lumb_intensity" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/data/k_hookworm_sa" required="true()" type="int"/>
-      <bind nodeset="/data/k_hookworm_sb" required="true()" type="int"/>
+      <bind calculate=" /data/k_hookworm_sa  * 24" nodeset="/data/k_hookworm_intensity" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/data/k_trichuris_sa" required="true()" type="int"/>
-      <bind nodeset="/data/k_trichuris_sb" required="true()" type="int"/>
+      <bind calculate=" /data/k_trichuris_sa  * 24" nodeset="/data/k_trichuris_intensity" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/data/k_other_name_1" type="string"/>
-      <bind nodeset="/data/k_other_quantity_1sa" type="int"/>
-      <bind nodeset="/data/k_other_quantity_1sb" type="int"/>
+      <bind nodeset="/data/k_other_quantity_1" type="int"/>
+      <bind calculate=" /data/k_other_quantity_1  * 24" nodeset="/data/k_other_quantity1_intensity" readonly="true()" type="int"/>
       <bind nodeset="/data/k_other_name_2" type="string"/>
-      <bind nodeset="/data/k_other_quantity_2sa" type="int"/>
-      <bind nodeset="/data/k_other_quantity_2sb" type="int"/>
+      <bind nodeset="/data/k_other_quantity_2" type="int"/>
+      <bind calculate=" /data/k_other_quantity_2  * 24" nodeset="/data/k_other_quantity2_intensity" readonly="true()" type="int"/>
       <bind nodeset="/data/k_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/k_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/k_end" type="dateTime"/>
@@ -182,26 +165,12 @@
     <input ref="/data/k_village">
       <label ref="jr:itext('/data/k_village:label')"/>
     </input>
+    <input ref="/data/k_ecole">
+      <label ref="jr:itext('/data/k_ecole:label')"/>
+    </input>
     <input ref="/data/k_code_ecole">
       <label ref="jr:itext('/data/k_code_ecole:label')"/>
       <hint ref="jr:itext('/data/k_code_ecole:hint')"/>
-    </input>
-    <!-- <input ref="/data/k_school_id">
-      <label ref="jr:itext('/data/k_school_id:label')"/>
-    </input> -->
-    <select1 ref="/data/k_IDType">
-      <label ref="jr:itext('/data/k_IDType:label')"/>
-      <item>
-        <label ref="jr:itext('/data/k_IDType/Scanner:label')"/>
-        <value>Scanner</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/k_IDType/ID_generation:label')"/>
-        <value>ID_generation</value>
-      </item>
-    </select1>
-    <input ref="/data/k_BarcodeID">
-      <label ref="jr:itext('/data/k_BarcodeID:label')"/>
     </input>
     <input ref="/data/k_GenerateID">
       <label ref="jr:itext('/data/k_GenerateID:label')"/>
@@ -212,44 +181,44 @@
     <input ref="/data/k_sch_man_sa">
       <label ref="jr:itext('/data/k_sch_man_sa:label')"/>
     </input>
-    <input ref="/data/k_sch_man_sb">
-      <label ref="jr:itext('/data/k_sch_man_sb:label')"/>
+    <input ref="/data/k_sch_man_intensity">
+      <label ref="jr:itext('/data/k_sch_man_intensity:label')"/>
     </input>
     <input ref="/data/k_ascaris_lumb_sa">
       <label ref="jr:itext('/data/k_ascaris_lumb_sa:label')"/>
     </input>
-    <input ref="/data/k_ascaris_lumb_sb">
-      <label ref="jr:itext('/data/k_ascaris_lumb_sb:label')"/>
+    <input ref="/data/k_ascaris_lumb_intensity">
+      <label ref="jr:itext('/data/k_ascaris_lumb_intensity:label')"/>
     </input>
     <input ref="/data/k_hookworm_sa">
       <label ref="jr:itext('/data/k_hookworm_sa:label')"/>
     </input>
-    <input ref="/data/k_hookworm_sb">
-      <label ref="jr:itext('/data/k_hookworm_sb:label')"/>
+    <input ref="/data/k_hookworm_intensity">
+      <label ref="jr:itext('/data/k_hookworm_intensity:label')"/>
     </input>
     <input ref="/data/k_trichuris_sa">
       <label ref="jr:itext('/data/k_trichuris_sa:label')"/>
     </input>
-    <input ref="/data/k_trichuris_sb">
-      <label ref="jr:itext('/data/k_trichuris_sb:label')"/>
+    <input ref="/data/k_trichuris_intensity">
+      <label ref="jr:itext('/data/k_trichuris_intensity:label')"/>
     </input>
     <input ref="/data/k_other_name_1">
       <label ref="jr:itext('/data/k_other_name_1:label')"/>
     </input>
-    <input ref="/data/k_other_quantity_1sa">
-      <label ref="jr:itext('/data/k_other_quantity_1sa:label')"/>
+    <input ref="/data/k_other_quantity_1">
+      <label ref="jr:itext('/data/k_other_quantity_1:label')"/>
     </input>
-    <input ref="/data/k_other_quantity_1sb">
-      <label ref="jr:itext('/data/k_other_quantity_1sb:label')"/>
+    <input ref="/data/k_other_quantity1_intensity">
+      <label ref="jr:itext('/data/k_other_quantity1_intensity:label')"/>
     </input>
     <input ref="/data/k_other_name_2">
       <label ref="jr:itext('/data/k_other_name_2:label')"/>
     </input>
-    <input ref="/data/k_other_quantity_2sa">
-      <label ref="jr:itext('/data/k_other_quantity_2sa:label')"/>
+    <input ref="/data/k_other_quantity_2">
+      <label ref="jr:itext('/data/k_other_quantity_2:label')"/>
     </input>
-    <input ref="/data/k_other_quantity_2sb">
-      <label ref="jr:itext('/data/k_other_quantity_2sb:label')"/>
+    <input ref="/data/k_other_quantity2_intensity">
+      <label ref="jr:itext('/data/k_other_quantity2_intensity:label')"/>
     </input>
     <input ref="/data/k_remarks">
       <label ref="jr:itext('/data/k_remarks:label')"/>
