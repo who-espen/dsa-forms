@@ -143,10 +143,10 @@
             <value>Scanner le code-barres maintenant</value>
           </text>
           <text id="/data/d_GenerateID:jr:constraintMsg">
-            <value>Doit être entré au format 123-1234567 uniquement avec desnombre et tirets</value>
+            <value>Doit être entré au format 123-1234-567 uniquement avec desnombre et tirets</value>
           </text>
           <text id="/data/d_GenerateID:label">
-            <value>Entrer le code d'identification unique du test de diagnostic (doit doit avoir le format 123-123456 uniquement avec des nombres et des tirets)</value>
+            <value>Entrer le code d'identification unique du test de diagnostic (doit doit avoir le format 123-1234-567 uniquement avec des nombres et des tirets)</value>
           </text>
           <text id="/data/d_GenerateID2:jr:constraintMsg">
             <value>Le code répété doit être le même</value>
@@ -5490,10 +5490,10 @@
             <value>Scan barcode now</value>
           </text>
           <text id="/data/d_GenerateID:jr:constraintMsg">
-            <value>Must be entered as 123-1234567 only with number and dashes)</value>
+            <value>Must be entered as 123-1234-567 only with number and dashes)</value>
           </text>
           <text id="/data/d_GenerateID:label">
-            <value>Enter unique ID from the diagnostic test (must be entered as 123-123456 upper case only with dashes)</value>
+            <value>Enter unique ID from the diagnostic test (must be entered as 123-1234-567 upper case only with dashes)</value>
           </text>
           <text id="/data/d_GenerateID2:jr:constraintMsg">
             <value>Le code répété doit être le même</value>
@@ -19301,7 +19301,7 @@
       <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string"/>
       <bind nodeset="/data/d_IDType" required="true()" type="string"/>
       <bind nodeset="/data/d_BarcodeID" relevant=" /data/d_IDType  = &quot;Scanner&quot;" required="true()" type="barcode"/>
-      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{7}$')" jr:constraintMsg="jr:itext('/data/d_GenerateID:jr:constraintMsg')" nodeset="/data/d_GenerateID" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_GenerateID:jr:constraintMsg')" nodeset="/data/d_GenerateID" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string"/>
       <bind constraint=". =  /data/d_GenerateID " jr:constraintMsg="jr:itext('/data/d_GenerateID2:jr:constraintMsg')" nodeset="/data/d_GenerateID2" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string"/>
       <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>

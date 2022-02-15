@@ -202,7 +202,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,10)"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,7), '-', substr(random(),10,13))"/>
     </model>
   </h:head>
   <h:body>
