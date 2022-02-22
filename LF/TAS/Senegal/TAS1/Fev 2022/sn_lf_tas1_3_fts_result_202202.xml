@@ -19,8 +19,6 @@
           <d_cluster_id/>
           <d_IDType/>
           <d_BarcodeID/>
-          <d_generatedid_part/>
-          <d_generatedid_part2/>
           <d_generatedid/>
           <d_lotnumber1/>
           <d_result1/>
@@ -86,23 +84,14 @@
           <text id="/data/d_BarcodeID:label">
             <value>Scan barcode now</value>
           </text>
-          <text id="/data/d_generatedid_part:jr:constraintMsg">
+          <text id="/data/d_generatedid:jr:constraintMsg">
             <value>The format should be 1234-567. Just the second and third part of the code</value>
           </text>
-          <text id="/data/d_generatedid_part:label">
+          <text id="/data/d_generatedid:label">
             <value>Enter the second part and the third part of the generated code (must must have the format 1234-567 only with numbers and dashes)</value>
           </text>
-          <text id="/data/d_generatedid_part:hint">
+          <text id="/data/d_generatedid:hint">
             <value>For example if the generated code was 123-1234-567, the second and third part of the code is 1234-567</value>
-          </text>
-          <text id="/data/d_generatedid_part2:jr:constraintMsg">
-            <value>Le code répété doit être le même</value>
-          </text>
-          <text id="/data/d_generatedid_part2:label">
-            <value>Re-enter the unique ID</value>
-          </text>
-          <text id="/data/d_generatedid:label">
-            <value>The complete identification code is</value>
           </text>
           <text id="/data/d_lotnumber1:jr:constraintMsg">
             <value>Lot must be a six-digit number</value>
@@ -134,7 +123,7 @@
           <text id="/data/d_why_invalid1/Ligne.temoin.discontinue/partielle:label">
             <value>Broken/partial control line</value>
           </text>
-          <text id="/data/d_why_invalid1/Difficulte.d'absorption.d.echantillon:label">
+          <text id="/data/d_why_invalid1/Difficulte.d.absorption.d.echantillon:label">
             <value>Difficulty of absorbing sample</value>
           </text>
           <text id="/data/d_why_invalid1/Difficulte.de.migration.d.echantillon:label">
@@ -186,7 +175,7 @@
           <text id="/data/d_why_invalid2/Ligne.temoin.discontinue/partielle:label">
             <value>Broken/partial control line</value>
           </text>
-          <text id="/data/d_why_invalid2/Difficulte.d'absorption.d.echantillon:label">
+          <text id="/data/d_why_invalid2/Difficulte.d.absorption.d.echantillon:label">
             <value>Difficulty of absorbing sample</value>
           </text>
           <text id="/data/d_why_invalid2/Difficulte.de.migration.d.echantillon:label">
@@ -255,23 +244,14 @@
           <text id="/data/d_BarcodeID:label">
             <value>Scanner le code-barres maintenant</value>
           </text>
-          <text id="/data/d_generatedid_part:jr:constraintMsg">
+          <text id="/data/d_generatedid:jr:constraintMsg">
             <value>Le format doit être 1234-567. Juste la deuxième et la troisième partie du code</value>
           </text>
-          <text id="/data/d_generatedid_part:label">
+          <text id="/data/d_generatedid:label">
             <value>Entrer la deuxième partie et la troisième partie du code généré (doit doit avoir le format 1234-567 uniquement avec des nombres et des tirets)</value>
           </text>
-          <text id="/data/d_generatedid_part:hint">
+          <text id="/data/d_generatedid:hint">
             <value>Par exemple si le code généré était 123-1234-567, le deuxième et troisième partie du code est de 1234-567</value>
-          </text>
-          <text id="/data/d_generatedid_part2:jr:constraintMsg">
-            <value>Le code répété doit être le même</value>
-          </text>
-          <text id="/data/d_generatedid_part2:label">
-            <value>Répéter l'identifiant unique</value>
-          </text>
-          <text id="/data/d_generatedid:label">
-            <value>The complete identification code is</value>
           </text>
           <text id="/data/d_lotnumber1:jr:constraintMsg">
             <value>Le lot doit être un nombre à six chiffre</value>
@@ -303,7 +283,7 @@
           <text id="/data/d_why_invalid1/Ligne.temoin.discontinue/partielle:label">
             <value>Ligne témoin discontinue/partielle</value>
           </text>
-          <text id="/data/d_why_invalid1/Difficulte.d'absorption.d.echantillon:label">
+          <text id="/data/d_why_invalid1/Difficulte.d.absorption.d.echantillon:label">
             <value>Difficulté d'absorption d'échantillon</value>
           </text>
           <text id="/data/d_why_invalid1/Difficulte.de.migration.d.echantillon:label">
@@ -355,7 +335,7 @@
           <text id="/data/d_why_invalid2/Ligne.temoin.discontinue/partielle:label">
             <value>Ligne témoin discontinue/partielle</value>
           </text>
-          <text id="/data/d_why_invalid2/Difficulte.d'absorption.d.echantillon:label">
+          <text id="/data/d_why_invalid2/Difficulte.d.absorption.d.echantillon:label">
             <value>Difficulté d'absorption d'échantillon</value>
           </text>
           <text id="/data/d_why_invalid2/Difficulte.de.migration.d.echantillon:label">
@@ -393,9 +373,7 @@
       <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/d_cluster_name"/>
       <bind nodeset="/data/d_IDType" required="true()" type="string"/>
       <bind nodeset="/data/d_BarcodeID" relevant=" /data/d_IDType  = &quot;Scanner&quot;" required="true()" type="barcode"/>
-      <bind constraint="regex(.,'^[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_generatedid_part:jr:constraintMsg')" nodeset="/data/d_generatedid_part" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string"/>
-      <bind constraint=". =  /data/d_generatedid_part " jr:constraintMsg="jr:itext('/data/d_generatedid_part2:jr:constraintMsg')" nodeset="/data/d_generatedid_part2" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string"/>
-      <bind calculate="concat( /data/d_cluster_id ,'-', /data/d_generatedid_part )" nodeset="/data/d_generatedid" readonly="true()" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_cluster_id"/>
+      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_generatedid:jr:constraintMsg')" nodeset="/data/d_generatedid" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_cluster_id"/>
       <bind constraint="regex(.,'^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_lotnumber1:jr:constraintMsg')" nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalid'" required="true()" type="string"/>
@@ -458,15 +436,9 @@
     <input ref="/data/d_BarcodeID">
       <label ref="jr:itext('/data/d_BarcodeID:label')"/>
     </input>
-    <input ref="/data/d_generatedid_part">
-      <label ref="jr:itext('/data/d_generatedid_part:label')"/>
-      <hint ref="jr:itext('/data/d_generatedid_part:hint')"/>
-    </input>
-    <input ref="/data/d_generatedid_part2">
-      <label ref="jr:itext('/data/d_generatedid_part2:label')"/>
-    </input>
     <input ref="/data/d_generatedid">
       <label ref="jr:itext('/data/d_generatedid:label')"/>
+      <hint ref="jr:itext('/data/d_generatedid:hint')"/>
     </input>
     <input ref="/data/d_lotnumber1">
       <label ref="jr:itext('/data/d_lotnumber1:label')"/>
@@ -498,8 +470,8 @@
         <value>Ligne.temoin.discontinue/partielle</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_why_invalid1/Difficulte.d'absorption.d.echantillon:label')"/>
-        <value>Difficulte.d'absorption.d.echantillon</value>
+        <label ref="jr:itext('/data/d_why_invalid1/Difficulte.d.absorption.d.echantillon:label')"/>
+        <value>Difficulte.d.absorption.d.echantillon</value>
       </item>
       <item>
         <label ref="jr:itext('/data/d_why_invalid1/Difficulte.de.migration.d.echantillon:label')"/>
@@ -554,8 +526,8 @@
         <value>Ligne.temoin.discontinue/partielle</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_why_invalid2/Difficulte.d'absorption.d.echantillon:label')"/>
-        <value>Difficulte.d'absorption.d.echantillon</value>
+        <label ref="jr:itext('/data/d_why_invalid2/Difficulte.d.absorption.d.echantillon:label')"/>
+        <value>Difficulte.d.absorption.d.echantillon</value>
       </item>
       <item>
         <label ref="jr:itext('/data/d_why_invalid2/Difficulte.de.migration.d.echantillon:label')"/>
