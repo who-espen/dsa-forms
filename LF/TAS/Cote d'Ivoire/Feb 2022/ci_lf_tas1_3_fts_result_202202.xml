@@ -21,7 +21,6 @@
           <d_cluster_name2/>
           <d_cluster_id2/>
           <d_num/>
-          <d_num2/>
           <d_code_id/>
           <d_sex/>
           <d_age_yrs/>
@@ -95,15 +94,6 @@
             <value>Numéro d'ordre</value>
           </text>
           <text id="/data/d_num:hint">
-            <value>Doit être compris entre 1 et 410</value>
-          </text>
-          <text id="/data/d_num2:jr:constraintMsg">
-            <value>Le numéro d'ordre doit être le même</value>
-          </text>
-          <text id="/data/d_num2:label">
-            <value>Répéter le numéro d'ordre</value>
-          </text>
-          <text id="/data/d_num2:hint">
             <value>Doit être compris entre 1 et 410</value>
           </text>
           <text id="/data/d_code_id:label">
@@ -281,15 +271,6 @@
           <text id="/data/d_num:hint">
             <value>Must be between 1 and 410</value>
           </text>
-          <text id="/data/d_num2:jr:constraintMsg">
-            <value>The order number must be the same</value>
-          </text>
-          <text id="/data/d_num2:label">
-            <value>Repeat order number</value>
-          </text>
-          <text id="/data/d_num2:hint">
-            <value>Must be between 1 and 410</value>
-          </text>
           <text id="/data/d_code_id:label">
             <value>Enter unique ID from the diagnostic test</value>
           </text>
@@ -430,8 +411,7 @@
       <bind nodeset="/data/d_cluster_name2" relevant=" /data/d_cluster_name  = 'Autre'" required="true()" type="string" db_get="col_6" db_filter_by_col_2="/data/d_district"/>
       <bind nodeset="/data/d_cluster_id2" relevant=" /data/d_cluster_name  = 'Autre'" required="true()" type="string" db_get="col_7" db_filter_by_col_3="/data/d_cluster_name"/>
       <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
-      <bind constraint=". =  /data/d_num " jr:constraintMsg="jr:itext('/data/d_num2:jr:constraintMsg')" nodeset="/data/d_num2" required="true()" type="int"/>
-      <bind calculate="concat( /data/d_district_id , '-',  /data/d_cluster_id , '-' , /data/d_num )" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
+      <bind calculate="if( /data/d_cluster_name  = 'Autre', concat( /data/d_district_id , '-',  /data/d_cluster_id2 , '-' , /data/d_num ), concat( /data/d_district_id , '-',  /data/d_cluster_id , '-' , /data/d_num ))" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/d_sex" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/d_age_yrs:jr:constraintMsg')" nodeset="/data/d_age_yrs" required="true()" type="int"/>
       <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
@@ -496,10 +476,6 @@
     <input ref="/data/d_num">
       <label ref="jr:itext('/data/d_num:label')"/>
       <hint ref="jr:itext('/data/d_num:hint')"/>
-    </input>
-    <input ref="/data/d_num2">
-      <label ref="jr:itext('/data/d_num2:label')"/>
-      <hint ref="jr:itext('/data/d_num2:hint')"/>
     </input>
     <input ref="/data/d_code_id">
       <label ref="jr:itext('/data/d_code_id:label')"/>

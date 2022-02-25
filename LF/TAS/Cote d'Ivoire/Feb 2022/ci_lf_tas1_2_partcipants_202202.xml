@@ -212,7 +212,7 @@
       <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
-      <bind calculate="concat( /data/p_district_id , '-',  /data/p_cluster_id , '-' , /data/p_num )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind calculate="if( /data/p_cluster_name  = 'Autre', concat( /data/p_district_id , '-',  /data/p_cluster_id2 , '-' , /data/p_num ), concat( /data/p_district_id , '-',  /data/p_cluster_id , '-' , /data/p_num ))" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Non'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
