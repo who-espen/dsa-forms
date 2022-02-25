@@ -7,22 +7,24 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(February 2022) 3. TAS1 FL - Résultat FTS</h:title>
+    <h:title>(February 2022) 3. TAS1 FL - Résultat FTS V2</h:title>
     <model >
 
       <instance>
-        <data id="ci_lf_tas1_3_fts_result_202202">
+        <data id="ci_lf_tas1_3_fts_result_202202_2">
           <d_recorderID/>
           <d_eu_name/>
           <d_district/>
           <d_district_id/>
           <d_cluster_name/>
           <d_cluster_id/>
+          <d_cluster_name2/>
+          <d_cluster_id2/>
           <d_num/>
           <d_num2/>
+          <d_code_id/>
           <d_sex/>
           <d_age_yrs/>
-          <d_code_id/>
           <d_lotnumber1/>
           <d_result1/>
           <d_why_invalid1/>
@@ -80,6 +82,12 @@
           <text id="/data/d_cluster_id:hint">
             <value>Le code a trois chiffre associé à chaque école</value>
           </text>
+          <text id="/data/d_cluster_name2:label">
+            <value>Sélectionner votre école</value>
+          </text>
+          <text id="/data/d_cluster_id2:label">
+            <value>Sélectionner le code de votre école</value>
+          </text>
           <text id="/data/d_num:jr:constraintMsg">
             <value>La valeur doit être compris entre 1 et 410</value>
           </text>
@@ -98,6 +106,9 @@
           <text id="/data/d_num2:hint">
             <value>Doit être compris entre 1 et 410</value>
           </text>
+          <text id="/data/d_code_id:label">
+            <value>Entrer le code d'identification unique du test de diagnostic</value>
+          </text>
           <text id="/data/d_sex:label">
             <value>Sexe du participant</value>
           </text>
@@ -112,9 +123,6 @@
           </text>
           <text id="/data/d_age_yrs:label">
             <value>Entrer l'âge du participant (en années)</value>
-          </text>
-          <text id="/data/d_code_id:label">
-            <value>Entrer le code d'identification unique du test de diagnostic</value>
           </text>
           <text id="/data/d_lotnumber1:label">
             <value>Veuiller entrer le numéro de lot FTS 1</value>
@@ -258,6 +266,12 @@
           <text id="/data/d_cluster_id:hint">
             <value>The three-digit code associated with each school</value>
           </text>
+          <text id="/data/d_cluster_name2:label">
+            <value>Select your school name</value>
+          </text>
+          <text id="/data/d_cluster_id2:label">
+            <value>Select your school id</value>
+          </text>
           <text id="/data/d_num:jr:constraintMsg">
             <value>The value must be between 1 and 410</value>
           </text>
@@ -276,6 +290,9 @@
           <text id="/data/d_num2:hint">
             <value>Must be between 1 and 410</value>
           </text>
+          <text id="/data/d_code_id:label">
+            <value>Enter unique ID from the diagnostic test</value>
+          </text>
           <text id="/data/d_sex:label">
             <value>Sex of respondent</value>
           </text>
@@ -290,9 +307,6 @@
           </text>
           <text id="/data/d_age_yrs:label">
             <value>Enter age in years</value>
-          </text>
-          <text id="/data/d_code_id:label">
-            <value>Enter unique ID from the diagnostic test</value>
           </text>
           <text id="/data/d_lotnumber1:label">
             <value>Please enter FTS lot number 1</value>
@@ -412,12 +426,14 @@
       <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_eu_name"/>
       <bind nodeset="/data/d_district_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_district"/>
       <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/d_district"/>
-      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/d_cluster_name"/>
+      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" relevant=" /data/d_cluster_name != 'Autre'" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/d_cluster_name"/>
+      <bind nodeset="/data/d_cluster_name2" relevant=" /data/d_cluster_name  = 'Autre'" required="true()" type="string" db_get="col_6" db_filter_by_col_2="/data/d_district"/>
+      <bind nodeset="/data/d_cluster_id2" relevant=" /data/d_cluster_name  = 'Autre'" required="true()" type="string" db_get="col_7" db_filter_by_col_3="/data/d_cluster_name"/>
       <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
       <bind constraint=". =  /data/d_num " jr:constraintMsg="jr:itext('/data/d_num2:jr:constraintMsg')" nodeset="/data/d_num2" required="true()" type="int"/>
+      <bind calculate="concat( /data/d_district_id , '-',  /data/d_cluster_id , '-' , /data/d_num )" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/d_sex" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/d_age_yrs:jr:constraintMsg')" nodeset="/data/d_age_yrs" required="true()" type="int"/>
-      <bind calculate="concat( /data/d_district_id , '-',  /data/d_cluster_id , '-' , /data/d_num )" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalide'" required="true()" type="string"/>
@@ -471,6 +487,12 @@
       <label ref="jr:itext('/data/d_cluster_id:label')"/>
       <hint ref="jr:itext('/data/d_cluster_id:hint')"/>
     </input>
+    <input ref="/data/d_cluster_name2">
+      <label ref="jr:itext('/data/d_cluster_name2:label')"/>
+    </input>
+    <input ref="/data/d_cluster_id2">
+      <label ref="jr:itext('/data/d_cluster_id2:label')"/>
+    </input>
     <input ref="/data/d_num">
       <label ref="jr:itext('/data/d_num:label')"/>
       <hint ref="jr:itext('/data/d_num:hint')"/>
@@ -479,11 +501,9 @@
       <label ref="jr:itext('/data/d_num2:label')"/>
       <hint ref="jr:itext('/data/d_num2:hint')"/>
     </input>
-
     <input ref="/data/d_code_id">
       <label ref="jr:itext('/data/d_code_id:label')"/>
     </input>
-
     <select1 ref="/data/d_sex">
       <label ref="jr:itext('/data/d_sex:label')"/>
       <item>
@@ -498,7 +518,6 @@
     <input ref="/data/d_age_yrs">
       <label ref="jr:itext('/data/d_age_yrs:label')"/>
     </input>
-
     <input ref="/data/d_lotnumber1">
       <label ref="jr:itext('/data/d_lotnumber1:label')"/>
     </input>

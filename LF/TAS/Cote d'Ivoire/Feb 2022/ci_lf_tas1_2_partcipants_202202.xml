@@ -7,17 +7,19 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(February 2022) 2. TAS1 FL - Formulaire Participants</h:title>
+    <h:title>(February 2022) 2. TAS1 FL - Formulaire Participants V2</h:title>
     <model >
 
       <instance>
-        <data id="ci_lf_tas1_2_partcipants_202202">
+        <data id="ci_lf_tas1_2_partcipants_202202_2">
           <p_recorderID/>
           <p_eu_name/>
           <p_district/>
           <p_district_id/>
           <p_cluster_name/>
           <p_cluster_id/>
+          <p_cluster_name2/>
+          <p_cluster_id2/>
           <p_consent/>
           <p_sex/>
           <p_age_yrs/>
@@ -58,6 +60,12 @@
             <value>Sélectionner votre école</value>
           </text>
           <text id="/data/p_cluster_id:label">
+            <value>Sélectionner le code de votre école</value>
+          </text>
+          <text id="/data/p_cluster_name2:label">
+            <value>Sélectionner votre école</value>
+          </text>
+          <text id="/data/p_cluster_id2:label">
             <value>Sélectionner le code de votre école</value>
           </text>
           <text id="/data/p_consent:label">
@@ -134,6 +142,12 @@
           <text id="/data/p_cluster_id:label">
             <value>Select your school id</value>
           </text>
+          <text id="/data/p_cluster_name2:label">
+            <value>Select your school name</value>
+          </text>
+          <text id="/data/p_cluster_id2:label">
+            <value>Select your school id</value>
+          </text>
           <text id="/data/p_consent:label">
             <value>Does respondent provide consent?</value>
           </text>
@@ -190,7 +204,9 @@
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_eu_name"/>
       <bind nodeset="/data/p_district_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/p_district"/>
-      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_cluster_id" relevant=" /data/p_cluster_name != 'Autre'" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_cluster_name2" relevant=" /data/p_cluster_name  = 'Autre'" required="true()" type="string" db_get="col_6" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_id2" relevant=" /data/p_cluster_name  = 'Autre'" required="true()" type="string" db_get="col_7" db_filter_by_col_3="/data/p_cluster_name"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
@@ -223,6 +239,12 @@
     </input>
     <input ref="/data/p_cluster_id">
       <label ref="jr:itext('/data/p_cluster_id:label')"/>
+    </input>
+    <input ref="/data/p_cluster_name2">
+      <label ref="jr:itext('/data/p_cluster_name2:label')"/>
+    </input>
+    <input ref="/data/p_cluster_id2">
+      <label ref="jr:itext('/data/p_cluster_id2:label')"/>
     </input>
     <select1 ref="/data/p_consent">
       <label ref="jr:itext('/data/p_consent:label')"/>
