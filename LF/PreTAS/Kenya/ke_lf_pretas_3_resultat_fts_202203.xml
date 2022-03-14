@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -7,16 +7,23 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>3. Nigeria - Pre TAS LF FTS Results Form V2</h:title>
-    <model >
+    <h:title>3. Kenya - Pre TAS LF FTS Results Form</h:title>
+    <model odk:xforms-version="1.0.0">
+
       <instance>
-        <data id="ng_lf_pretas_3_resultat_fts_202102_v2" version="20210219">
-          <d_recorderID/>
-          <d_region/>
-          <d_district/>
+        <data id="ke_lf_pretas_3_resultat_fts_202203">
+          <d_enumerator/>
+          <d_county/>
+          <d_subcounty/>
           <d_cluster_name/>
           <d_cluster_id/>
+          <d_IDMethod/>
+          <p_BarcodeID/>
+          <d_id_sequence/>
           <d_code_id/>
+          <d_blood_sample/>
+          <d_dbs_prepared/>
+          <d_filter_paper_stored/>
           <d_lotnumber1/>
           <d_result1/>
           <d_why_invalid1/>
@@ -32,184 +39,120 @@
           <d_display_final_result/>
           <d_positive_why_no_tx/>
           <notes_part/>
-          <c_start/>
-          <c_end/>
+          <d_start/>
+          <d_end/>
           <meta>
             <instanceID/>
           </meta>
         </data>
       </instance>
-
+      
       <itext>
-        <translation lang="French">
-          <text id="/data/d_recorderID:jr:constraintMsg">
-            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
-          </text>
-          <text id="/data/d_recorderID:label">
-            <value>Entrer l'identifiant de l'enregistreur</value>
-          </text>
-          <text id="/data/d_recorderID:hint">
-            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui vous a été attribué, à vous ou à votre équipe.</value>
-          </text>
-          <text id="/data/d_region:label">
-            <value>Sélectionner la région</value>
-          </text>
-          <text id="/data/d_district:label">
-            <value>Sélectionner le district</value>
-          </text>
-          <text id="/data/d_cluster_name:label">
-            <value>Sélectionner le site</value>
-          </text>
-          <text id="/data/d_cluster_id:jr:constraintMsg">
-            <value>Le code doit être un nombre à tois chiffres</value>
-          </text>
-          <text id="/data/d_cluster_id:label">
-            <value>Entrer le code du site</value>
-          </text>
-          <text id="/data/d_code_id:label">
-            <value>Entrer le code d'identification unique du test de diagnostic (doit doit avoir le format 15-123-1 uniquement avec des nombres et des tirets)</value>
-          </text>
-          <text id="/data/d_lotnumber1:label">
-            <value>Veuiller entrer le numéro de lot du kit FTS utilisé pour le premier test</value>
-          </text>
-          <text id="/data/d_result1:label">
-            <value>FTS - Test 1</value>
-          </text>
-          <text id="/data/d_result1:hint">
-            <value>Invalid includes testing errors and insufficient blood</value>
-          </text>
-          <text id="/data/d_result1/Positive:label">
-            <value>Positif</value>
-          </text>
-          <text id="/data/d_result1/Negative:label">
-            <value>Négatif</value>
-          </text>
-          <text id="/data/d_result1/Invalid:label">
-            <value>Invalide</value>
-          </text>
-          <text id="/data/d_why_invalid1:label">
-            <value>Donner la raison du test invalide</value>
-          </text>
-          <text id="/data/d_why_invalid1/Absence.de.ligne.temoin/controle:label">
-            <value>Absence de ligne témoin/contrôle</value>
-          </text>
-          <text id="/data/d_why_invalid1/Ligne.temoin.discontinue/partielle:label">
-            <value>Ligne témoin discontinue/partielle</value>
-          </text>
-          <text id="/data/d_why_invalid1/Difficulte.d'absorption.d'echantillon:label">
-            <value>Difficulté d'absorption d'échantillon</value>
-          </text>
-          <text id="/data/d_why_invalid1/Difficulte.de.migration.d'echantillon:label">
-            <value>Difficulté de migration d'échantillon</value>
-          </text>
-          <text id="/data/d_why_invalid1/Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes):label">
-            <value>Trace de sang persiste (sang resté sur la bandelette/a obscurci les lignes)</value>
-          </text>
-          <text id="/data/d_why_invalid1/Insuffisance.du.volume.de.sang.du.a.la.pipette:label">
-            <value>Insuffisance du volume de sang dû à la pipette</value>
-          </text>
-          <text id="/data/d_why_invalid1/Other:label">
-            <value>Autre (expliquer)</value>
-          </text>
-          <text id="/data/d_why_invalid_other1:label">
-            <value>Expliquer la raison 'Autre' d'invalidité du test</value>
-          </text>
-          <text id="/data/d_why_invalid_other1:hint">
-            <value>Les resultats Invalides incluent les erreurs de test et les cas d'insuffisance de sang</value>
-          </text>
-          <text id="/data/d_need_second_test:label">
-            <value>Le premier résultat du test de ce participant est <output value=" /data/d_display_result1 "/>
-. Ce résultat nécessite un deuxième test. Continuez ce questionnaire pour entrer le résultat du deuxième test du participant.</value>
-          </text>
-          <text id="/data/d_lotnumber2:label">
-            <value>Veuillez entrer le numéro de lot du kit FTS utilisé pour le deuxième test</value>
-          </text>
-          <text id="/data/d_result2:label">
-            <value>FTS - Test 2</value>
-          </text>
-          <text id="/data/d_result2:hint">
-            <value>Invalide comprend les erreurs de test et le sang insuffisant</value>
-          </text>
-          <text id="/data/d_result2/Positive:label">
-            <value>Positif</value>
-          </text>
-          <text id="/data/d_result2/Negative:label">
-            <value>Négatif</value>
-          </text>
-          <text id="/data/d_result2/Invalid:label">
-            <value>Invalide</value>
-          </text>
-          <text id="/data/d_why_invalid2:label">
-            <value>Donner la raison d'invalidité du test 2</value>
-          </text>
-          <text id="/data/d_why_invalid2/Absence.de.ligne.temoin/controle:label">
-            <value>Absence de ligne témoin/contrôle</value>
-          </text>
-          <text id="/data/d_why_invalid2/Ligne.temoin.discontinue/partielle:label">
-            <value>Ligne témoin discontinue/partielle</value>
-          </text>
-          <text id="/data/d_why_invalid2/Difficulte.d'absorption.d'echantillon:label">
-            <value>Difficulté d'absorption d'échantillon</value>
-          </text>
-          <text id="/data/d_why_invalid2/Difficulte.de.migration.d'echantillon:label">
-            <value>Difficulté de migration d'échantillon</value>
-          </text>
-          <text id="/data/d_why_invalid2/Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes):label">
-            <value>Trace de sang persiste (sang resté sur la bandelette/a obscurci les lignes)</value>
-          </text>
-          <text id="/data/d_why_invalid2/Insuffisance.du.volume.de.sang.du.a.la.pipette:label">
-            <value>Insuffisance du volume de sang dû à la pipette</value>
-          </text>
-          <text id="/data/d_why_invalid2/Other:label">
-            <value>Autre (expliquer)</value>
-          </text>
-          <text id="/data/d_why_invalid_other2:label">
-            <value>Expliquer la raison 'Autre' d'invalidité du test 2</value>
-          </text>
-          <text id="/data/d_display_final_result:label">
-            <value>Le résultat final de ce participant est: <output value=" /data/d_final_result "/>
-            </value>
-          </text>
-          <text id="/data/d_positive_why_no_tx:label">
-            <value>Veuillez préciser le plan de traitement de ce participant ou expliquer pourquoi le traitement n'est pas possible.</value>
-          </text>
-          <text id="/data/notes_part:label">
-            <value>Notes additionnelles</value>
-          </text>
-          <text id="/data/d_why_invalid2:hint">
-            <value>-</value>
-          </text>
-          <text id="/data/d_why_invalid_other2:hint">
-            <value>-</value>
-          </text>
-        </translation>
         <translation default="true()" lang="English">
-          <text id="/data/d_recorderID:jr:constraintMsg">
-            <value>The code must be a two-digit number between 9 and 100</value>
+          <text id="/data/d_enumerator:label">
+            <value>Enumerator</value>
           </text>
-          <text id="/data/d_recorderID:label">
-            <value>Enter Recorder ID</value>
+          <text id="/data/d_enumerator:hint">
+            <value>Select your name/number</value>
           </text>
-          <text id="/data/d_recorderID:hint">
-            <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
+          <text id="/data/d_enumerator/01:label">
+            <value>01</value>
           </text>
-          <text id="/data/d_region:label">
-            <value>Select your state</value>
+          <text id="/data/d_enumerator/02:label">
+            <value>02</value>
           </text>
-          <text id="/data/d_district:label">
-            <value>Select your IU</value>
+          <text id="/data/d_enumerator/03:label">
+            <value>03</value>
+          </text>
+          <text id="/data/d_enumerator/04:label">
+            <value>04</value>
+          </text>
+          <text id="/data/d_enumerator/05:label">
+            <value>05</value>
+          </text>
+          <text id="/data/d_county:label">
+            <value>County</value>
+          </text>
+          <text id="/data/d_county:hint">
+            <value>Select the appropriate county</value>
+          </text>
+          <text id="/data/d_county/Kilifi:label">
+            <value>Kilifi</value>
+          </text>
+          <text id="/data/d_county/Kwale:label">
+            <value>Kwale</value>
+          </text>
+          <text id="/data/d_county/Mombasa:label">
+            <value>Mombasa</value>
+          </text>
+          <text id="/data/d_subcounty:label">
+            <value>Subcounty</value>
+          </text>
+          <text id="/data/d_subcounty:hint">
+            <value>Select the appropriate subcounty within each respective county</value>
           </text>
           <text id="/data/d_cluster_name:label">
-            <value>Select the site</value>
+            <value>Village</value>
+          </text>
+          <text id="/data/d_cluster_name:hint">
+            <value>Select the appropriate village</value>
           </text>
           <text id="/data/d_cluster_id:jr:constraintMsg">
             <value>The code must be a three-digit number</value>
           </text>
           <text id="/data/d_cluster_id:label">
-            <value>Select the Site ID</value>
+            <value>Village ID</value>
+          </text>
+          <text id="/data/d_cluster_id:hint">
+            <value>Select village ID</value>
+          </text>
+          <text id="/data/d_IDMethod:label">
+            <value>How will the individual's unique ID be generated?</value>
+          </text>
+          <text id="/data/d_IDMethod/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/d_IDMethod/ID_generation:label">
+            <value>Automatic ID generation</value>
+          </text>
+          <text id="/data/p_BarcodeID:label">
+            <value>Scan barcode now</value>
+          </text>
+          <text id="/data/d_id_sequence:jr:constraintMsg">
+            <value>The number must be greater than 0</value>
+          </text>
+          <text id="/data/d_id_sequence:label">
+            <value>Enter the sequence ID</value>
           </text>
           <text id="/data/d_code_id:label">
             <value>Enter unique ID from the diagnostic test (must be entered as 15-123-1 upper case only with dashes)</value>
+          </text>
+          <text id="/data/d_blood_sample:label">
+            <value>Blood sample taken</value>
+          </text>
+          <text id="/data/d_blood_sample/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/d_blood_sample/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/d_dbs_prepared:label">
+            <value>DBS prepared</value>
+          </text>
+          <text id="/data/d_dbs_prepared/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/d_dbs_prepared/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/d_filter_paper_stored:label">
+            <value>Filter paper stored</value>
+          </text>
+          <text id="/data/d_filter_paper_stored/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/d_filter_paper_stored/No:label">
+            <value>No</value>
           </text>
           <text id="/data/d_lotnumber1:label">
             <value>Please enter FTS lot number 1</value>
@@ -321,19 +264,598 @@
           <text id="/data/notes_part:label">
             <value>Additional Notes on form</value>
           </text>
-          <text id="/data/d_why_invalid_other1:hint">
-            <value>-</value>
+          <text id="yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="yes_no-1">
+            <value>No</value>
+          </text>
+          <text id="results_list-0">
+            <value>Positive</value>
+          </text>
+          <text id="results_list-1">
+            <value>Negative</value>
+          </text>
+          <text id="results_list-2">
+            <value>Invalid</value>
+          </text>
+          <text id="why_invalid-0">
+            <value>Absence of control line</value>
+          </text>
+          <text id="why_invalid-1">
+            <value>Broken/partial control line</value>
+          </text>
+          <text id="why_invalid-2">
+            <value>Difficulty of absorbing sample</value>
+          </text>
+          <text id="why_invalid-3">
+            <value>Difficulty of migrating sample</value>
+          </text>
+          <text id="why_invalid-4">
+            <value>Trace of blood persists</value>
+          </text>
+          <text id="why_invalid-5">
+            <value>Insufficient blood volume due to pipette</value>
+          </text>
+          <text id="why_invalid-6">
+            <value>Other (pleas explain)</value>
+          </text>
+          <text id="enumarator-0">
+            <value>01</value>
+          </text>
+          <text id="enumarator-1">
+            <value>02</value>
+          </text>
+          <text id="enumarator-2">
+            <value>03</value>
+          </text>
+          <text id="enumarator-3">
+            <value>04</value>
+          </text>
+          <text id="enumarator-4">
+            <value>05</value>
+          </text>
+          <text id="id_list-0">
+            <value>Scanner</value>
+          </text>
+          <text id="id_list-1">
+            <value>Automatic ID generation</value>
+          </text>
+          <text id="county-0">
+            <value>Kilifi</value>
+          </text>
+          <text id="county-1">
+            <value>Kwale</value>
+          </text>
+          <text id="county-2">
+            <value>Mombasa</value>
+          </text>
+          <text id="subcounty-0">
+            <value>Ganze</value>
+          </text>
+          <text id="subcounty-1">
+            <value>Kaloleni</value>
+          </text>
+          <text id="subcounty-2">
+            <value>Kilifi North</value>
+          </text>
+          <text id="subcounty-3">
+            <value>Kilifi South</value>
+          </text>
+          <text id="subcounty-4">
+            <value>Magarini</value>
+          </text>
+          <text id="subcounty-5">
+            <value>Malindi</value>
+          </text>
+          <text id="subcounty-6">
+            <value>Rabai</value>
+          </text>
+          <text id="subcounty-7">
+            <value>Kinango</value>
+          </text>
+          <text id="subcounty-8">
+            <value>Lunga Lunga</value>
+          </text>
+          <text id="subcounty-9">
+            <value>Matuga</value>
+          </text>
+          <text id="subcounty-10">
+            <value>Msambweni</value>
+          </text>
+          <text id="subcounty-11">
+            <value>Changamwe</value>
+          </text>
+          <text id="subcounty-12">
+            <value>Kisauni</value>
+          </text>
+          <text id="subcounty-13">
+            <value>Likoni</value>
+          </text>
+          <text id="subcounty-14">
+            <value>Mvita</value>
+          </text>
+          <text id="subcounty-15">
+            <value>Nyali</value>
+          </text>
+          <text id="cluster-0">
+            <value>Village 1</value>
+          </text>
+          <text id="cluster-1">
+            <value>Village 2</value>
+          </text>
+          <text id="cluster-2">
+            <value>Village 3</value>
+          </text>
+          <text id="cluster-3">
+            <value>Village 4</value>
+          </text>
+          <text id="cluster-4">
+            <value>Village 5</value>
+          </text>
+          <text id="cluster-5">
+            <value>Village 6</value>
+          </text>
+          <text id="cluster-6">
+            <value>Village 7</value>
+          </text>
+          <text id="cluster-7">
+            <value>Village 8</value>
+          </text>
+          <text id="cluster-8">
+            <value>Village 9</value>
+          </text>
+          <text id="cluster-9">
+            <value>Village 10</value>
+          </text>
+          <text id="cluster-10">
+            <value>Village 11</value>
+          </text>
+          <text id="cluster-11">
+            <value>Village 12</value>
+          </text>
+          <text id="cluster-12">
+            <value>Village 13</value>
+          </text>
+          <text id="cluster-13">
+            <value>Village 14</value>
+          </text>
+          <text id="cluster-14">
+            <value>Village 15</value>
+          </text>
+          <text id="cluster-15">
+            <value>Village 16</value>
+          </text>
+          <text id="cluster_id-0">
+            <value>101</value>
+          </text>
+          <text id="cluster_id-1">
+            <value>102</value>
+          </text>
+          <text id="cluster_id-2">
+            <value>103</value>
+          </text>
+          <text id="cluster_id-3">
+            <value>104</value>
+          </text>
+          <text id="cluster_id-4">
+            <value>105</value>
+          </text>
+          <text id="cluster_id-5">
+            <value>106</value>
+          </text>
+          <text id="cluster_id-6">
+            <value>107</value>
+          </text>
+          <text id="cluster_id-7">
+            <value>108</value>
+          </text>
+          <text id="cluster_id-8">
+            <value>109</value>
+          </text>
+          <text id="cluster_id-9">
+            <value>110</value>
+          </text>
+          <text id="cluster_id-10">
+            <value>111</value>
+          </text>
+          <text id="cluster_id-11">
+            <value>112</value>
+          </text>
+          <text id="cluster_id-12">
+            <value>113</value>
+          </text>
+          <text id="cluster_id-13">
+            <value>114</value>
+          </text>
+          <text id="cluster_id-14">
+            <value>115</value>
+          </text>
+          <text id="cluster_id-15">
+            <value>116</value>
           </text>
         </translation>
       </itext>
 
-      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/d_recorderID:jr:constraintMsg')" nodeset="/data/d_recorderID" required="true()" type="int"/>
-      <bind nodeset="/data/d_region" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_region"/>
-      <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_district"/>
-      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/d_cluster_name"/>
-      <bind nodeset="/data/d_code_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_cluster_id"/>
-      <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="results_list">
+        <root>
+          <item>
+            <itextId>results_list-0</itextId>
+            <name>Positive</name>
+          </item>
+          <item>
+            <itextId>results_list-1</itextId>
+            <name>Negative</name>
+          </item>
+          <item>
+            <itextId>results_list-2</itextId>
+            <name>Invalid</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="why_invalid">
+        <root>
+          <item>
+            <itextId>why_invalid-0</itextId>
+            <name>Absence.de.ligne.temoin/controle</name>
+          </item>
+          <item>
+            <itextId>why_invalid-1</itextId>
+            <name>Ligne.temoin.discontinue/partielle</name>
+          </item>
+          <item>
+            <itextId>why_invalid-2</itextId>
+            <name>Difficulte.d'absorption.d'echantillon</name>
+          </item>
+          <item>
+            <itextId>why_invalid-3</itextId>
+            <name>Difficulte.de.migration.d'echantillon</name>
+          </item>
+          <item>
+            <itextId>why_invalid-4</itextId>
+            <name>Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes)</name>
+          </item>
+          <item>
+            <itextId>why_invalid-5</itextId>
+            <name>Insuffisance.du.volume.de.sang.du.a.la.pipette</name>
+          </item>
+          <item>
+            <itextId>why_invalid-6</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="enumarator">
+        <root>
+          <item>
+            <itextId>enumarator-0</itextId>
+            <name>01</name>
+          </item>
+          <item>
+            <itextId>enumarator-1</itextId>
+            <name>02</name>
+          </item>
+          <item>
+            <itextId>enumarator-2</itextId>
+            <name>03</name>
+          </item>
+          <item>
+            <itextId>enumarator-3</itextId>
+            <name>04</name>
+          </item>
+          <item>
+            <itextId>enumarator-4</itextId>
+            <name>05</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="id_list">
+        <root>
+          <item>
+            <itextId>id_list-0</itextId>
+            <county>Scanner</county>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <itextId>id_list-1</itextId>
+            <county>Génération automatique</county>
+            <name>ID_generation</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="county">
+        <root>
+          <item>
+            <itextId>county-0</itextId>
+            <name>Kilifi</name>
+          </item>
+          <item>
+            <itextId>county-1</itextId>
+            <name>Kwale</name>
+          </item>
+          <item>
+            <itextId>county-2</itextId>
+            <name>Mombasa</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="subcounty">
+        <root>
+          <item>
+            <itextId>subcounty-0</itextId>
+            <county>Kilifi</county>
+            <name>Ganze</name>
+          </item>
+          <item>
+            <itextId>subcounty-1</itextId>
+            <county>Kilifi</county>
+            <name>Kaloleni</name>
+          </item>
+          <item>
+            <itextId>subcounty-2</itextId>
+            <county>Kilifi</county>
+            <name>Kilifi North</name>
+          </item>
+          <item>
+            <itextId>subcounty-3</itextId>
+            <county>Kilifi</county>
+            <name>Kilifi South</name>
+          </item>
+          <item>
+            <itextId>subcounty-4</itextId>
+            <county>Kilifi</county>
+            <name>Magarini</name>
+          </item>
+          <item>
+            <itextId>subcounty-5</itextId>
+            <county>Kilifi</county>
+            <name>Malindi</name>
+          </item>
+          <item>
+            <itextId>subcounty-6</itextId>
+            <county>Kilifi</county>
+            <name>Rabai</name>
+          </item>
+          <item>
+            <itextId>subcounty-7</itextId>
+            <county>Kwale</county>
+            <name>Kinango</name>
+          </item>
+          <item>
+            <itextId>subcounty-8</itextId>
+            <county>Kwale</county>
+            <name>Lunga Lunga</name>
+          </item>
+          <item>
+            <itextId>subcounty-9</itextId>
+            <county>Kwale</county>
+            <name>Matuga</name>
+          </item>
+          <item>
+            <itextId>subcounty-10</itextId>
+            <county>Kwale</county>
+            <name>Msambweni</name>
+          </item>
+          <item>
+            <itextId>subcounty-11</itextId>
+            <county>Mombasa</county>
+            <name>Changamwe</name>
+          </item>
+          <item>
+            <itextId>subcounty-12</itextId>
+            <county>Mombasa</county>
+            <name>Kisauni</name>
+          </item>
+          <item>
+            <itextId>subcounty-13</itextId>
+            <county>Mombasa</county>
+            <name>Likoni</name>
+          </item>
+          <item>
+            <itextId>subcounty-14</itextId>
+            <county>Mombasa</county>
+            <name>Mvita</name>
+          </item>
+          <item>
+            <itextId>subcounty-15</itextId>
+            <county>Mombasa</county>
+            <name>Nyali</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="cluster">
+        <root>
+          <item>
+            <itextId>cluster-0</itextId>
+            <name>Village 1</name>
+            <subcounty>Ganze</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-1</itextId>
+            <name>Village 2</name>
+            <subcounty>Kaloleni</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-2</itextId>
+            <name>Village 3</name>
+            <subcounty>Kilifi North</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-3</itextId>
+            <name>Village 4</name>
+            <subcounty>Kilifi South</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-4</itextId>
+            <name>Village 5</name>
+            <subcounty>Magarini</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-5</itextId>
+            <name>Village 6</name>
+            <subcounty>Malindi</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-6</itextId>
+            <name>Village 7</name>
+            <subcounty>Rabai</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-7</itextId>
+            <name>Village 8</name>
+            <subcounty>Kinango</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-8</itextId>
+            <name>Village 9</name>
+            <subcounty>Lunga Lunga</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-9</itextId>
+            <name>Village 10</name>
+            <subcounty>Matuga</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-10</itextId>
+            <name>Village 11</name>
+            <subcounty>Msambweni</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-11</itextId>
+            <name>Village 12</name>
+            <subcounty>Changamwe</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-12</itextId>
+            <name>Village 13</name>
+            <subcounty>Kisauni</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-13</itextId>
+            <name>Village 14</name>
+            <subcounty>Likoni</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-14</itextId>
+            <name>Village 15</name>
+            <subcounty>Mvita</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-15</itextId>
+            <name>Village 16</name>
+            <subcounty>Nyali</subcounty>
+          </item>
+        </root>
+      </instance>
+      <instance id="cluster_id">
+        <root>
+          <item>
+            <itextId>cluster_id-0</itextId>
+            <cluster>Village 1</cluster>
+            <name>101</name>
+          </item>
+          <item>
+            <itextId>cluster_id-1</itextId>
+            <cluster>Village 2</cluster>
+            <name>102</name>
+          </item>
+          <item>
+            <itextId>cluster_id-2</itextId>
+            <cluster>Village 3</cluster>
+            <name>103</name>
+          </item>
+          <item>
+            <itextId>cluster_id-3</itextId>
+            <cluster>Village 4</cluster>
+            <name>104</name>
+          </item>
+          <item>
+            <itextId>cluster_id-4</itextId>
+            <cluster>Village 5</cluster>
+            <name>105</name>
+          </item>
+          <item>
+            <itextId>cluster_id-5</itextId>
+            <cluster>Village 6</cluster>
+            <name>106</name>
+          </item>
+          <item>
+            <itextId>cluster_id-6</itextId>
+            <cluster>Village 7</cluster>
+            <name>107</name>
+          </item>
+          <item>
+            <itextId>cluster_id-7</itextId>
+            <cluster>Village 8</cluster>
+            <name>108</name>
+          </item>
+          <item>
+            <itextId>cluster_id-8</itextId>
+            <cluster>Village 9</cluster>
+            <name>109</name>
+          </item>
+          <item>
+            <itextId>cluster_id-9</itextId>
+            <cluster>Village 10</cluster>
+            <name>110</name>
+          </item>
+          <item>
+            <itextId>cluster_id-10</itextId>
+            <cluster>Village 11</cluster>
+            <name>111</name>
+          </item>
+          <item>
+            <itextId>cluster_id-11</itextId>
+            <cluster>Village 12</cluster>
+            <name>112</name>
+          </item>
+          <item>
+            <itextId>cluster_id-12</itextId>
+            <cluster>Village 13</cluster>
+            <name>113</name>
+          </item>
+          <item>
+            <itextId>cluster_id-13</itextId>
+            <cluster>Village 14</cluster>
+            <name>114</name>
+          </item>
+          <item>
+            <itextId>cluster_id-14</itextId>
+            <cluster>Village 15</cluster>
+            <name>115</name>
+          </item>
+          <item>
+            <itextId>cluster_id-15</itextId>
+            <cluster>Village 16</cluster>
+            <name>116</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/d_enumerator" required="true()" type="string"/>
+      <bind nodeset="/data/d_county" required="true()" type="string"/>
+      <bind nodeset="/data/d_subcounty" required="true()" type="string"/>
+      <bind nodeset="/data/d_cluster_name" required="true()" type="string"/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string"/>
+      <bind nodeset="/data/d_IDMethod" required="true()" type="string"/>
+      <bind nodeset="/data/p_BarcodeID" relevant=" /data/d_IDMethod  = 'Scanner'" required="true()" type="barcode"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/d_id_sequence:jr:constraintMsg')" nodeset="/data/d_id_sequence" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="int"/>
+      <bind calculate="concat( /data/d_enumerator , '-',  /data/d_cluster_id , '-',  /data/d_id_sequence )" nodeset="/data/d_code_id" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
+      <bind nodeset="/data/d_blood_sample" required="true()" type="string"/>
+      <bind nodeset="/data/d_dbs_prepared" required="true()" type="string"/>
+      <bind nodeset="/data/d_filter_paper_stored" required="true()" type="string"/>
+      <bind nodeset="/data/d_lotnumber1" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalid'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid_other1" relevant="selected( /data/d_why_invalid1 ,'Other')" required="true()" type="string"/>
@@ -358,31 +880,129 @@
       <bind nodeset="/data/d_display_final_result" readonly="true()" type="string"/>
       <bind nodeset="/data/d_positive_why_no_tx" relevant=" /data/d_final_result  = 'Positive'" type="string"/>
       <bind nodeset="/data/notes_part" type="string"/>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body>
-    <input ref="/data/d_recorderID">
-      <label ref="jr:itext('/data/d_recorderID:label')"/>
-      <hint ref="jr:itext('/data/d_recorderID:hint')"/>
-    </input>
-    <input ref="/data/d_region">
-      <label ref="jr:itext('/data/d_region:label')"/>
-    </input>
-    <input ref="/data/d_district">
-      <label ref="jr:itext('/data/d_district:label')"/>
-    </input>
-    <input ref="/data/d_cluster_name">
+    <select1 ref="/data/d_enumerator">
+      <label ref="jr:itext('/data/d_enumerator:label')"/>
+      <hint ref="jr:itext('/data/d_enumerator:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/d_enumerator/01:label')"/>
+        <value>01</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_enumerator/02:label')"/>
+        <value>02</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_enumerator/03:label')"/>
+        <value>03</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_enumerator/04:label')"/>
+        <value>04</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_enumerator/05:label')"/>
+        <value>05</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_county">
+      <label ref="jr:itext('/data/d_county:label')"/>
+      <hint ref="jr:itext('/data/d_county:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/d_county/Kilifi:label')"/>
+        <value>Kilifi</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_county/Kwale:label')"/>
+        <value>Kwale</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_county/Mombasa:label')"/>
+        <value>Mombasa</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_subcounty">
+      <label ref="jr:itext('/data/d_subcounty:label')"/>
+      <hint ref="jr:itext('/data/d_subcounty:hint')"/>
+      <itemset nodeset="instance('subcounty')/root/item[county =  /data/d_county ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_cluster_name">
       <label ref="jr:itext('/data/d_cluster_name:label')"/>
-    </input>
-    <input ref="/data/d_cluster_id">
+      <hint ref="jr:itext('/data/d_cluster_name:hint')"/>
+      <itemset nodeset="instance('cluster')/root/item[subcounty =  /data/d_subcounty ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_cluster_id">
       <label ref="jr:itext('/data/d_cluster_id:label')"/>
+      <hint ref="jr:itext('/data/d_cluster_id:hint')"/>
+      <itemset nodeset="instance('cluster_id')/root/item[cluster =  /data/d_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_IDMethod">
+      <label ref="jr:itext('/data/d_IDMethod:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_IDMethod/Scanner:label')"/>
+        <value>Scanner</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_IDMethod/ID_generation:label')"/>
+        <value>ID_generation</value>
+      </item>
+    </select1>
+    <input ref="/data/p_BarcodeID">
+      <label ref="jr:itext('/data/p_BarcodeID:label')"/>
+    </input>
+    <input ref="/data/d_id_sequence">
+      <label ref="jr:itext('/data/d_id_sequence:label')"/>
     </input>
     <input ref="/data/d_code_id">
       <label ref="jr:itext('/data/d_code_id:label')"/>
     </input>
+    <select1 ref="/data/d_blood_sample">
+      <label ref="jr:itext('/data/d_blood_sample:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_blood_sample/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_blood_sample/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_dbs_prepared">
+      <label ref="jr:itext('/data/d_dbs_prepared:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_dbs_prepared/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_dbs_prepared/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_filter_paper_stored">
+      <label ref="jr:itext('/data/d_filter_paper_stored:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_filter_paper_stored/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_filter_paper_stored/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
     <input ref="/data/d_lotnumber1">
       <label ref="jr:itext('/data/d_lotnumber1:label')"/>
     </input>
@@ -435,7 +1055,6 @@
     </select>
     <input ref="/data/d_why_invalid_other1">
       <label ref="jr:itext('/data/d_why_invalid_other1:label')"/>
-      <hint ref="jr:itext('/data/d_why_invalid_other1:hint')"/>
     </input>
     <input ref="/data/d_need_second_test">
       <label ref="jr:itext('/data/d_need_second_test:label')"/>
