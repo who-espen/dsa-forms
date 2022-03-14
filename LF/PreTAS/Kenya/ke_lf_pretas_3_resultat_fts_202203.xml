@@ -38,7 +38,6 @@
           <d_display_result2/>
           <d_final_result/>
           <d_display_final_result/>
-          <d_positive_why_no_tx/>
           <notes_part/>
           <d_start/>
           <d_end/>
@@ -47,6 +46,7 @@
           </meta>
         </data>
       </instance>
+
       <itext>
         <translation default="true()" lang="English">
           <text id="/data/d_enumerator:label">
@@ -126,6 +126,21 @@
           </text>
           <text id="/data/d_participant_enumerator:label">
             <value>Enter the enumerator that registered the participant</value>
+          </text>
+          <text id="/data/d_participant_enumerator/01:label">
+            <value>01</value>
+          </text>
+          <text id="/data/d_participant_enumerator/02:label">
+            <value>02</value>
+          </text>
+          <text id="/data/d_participant_enumerator/03:label">
+            <value>03</value>
+          </text>
+          <text id="/data/d_participant_enumerator/04:label">
+            <value>04</value>
+          </text>
+          <text id="/data/d_participant_enumerator/05:label">
+            <value>05</value>
           </text>
           <text id="/data/d_code_id:label">
             <value>Enter unique ID from the diagnostic test (must be entered as 15-123-1 upper case only with dashes)</value>
@@ -260,9 +275,6 @@
           <text id="/data/d_display_final_result:label">
             <value>This participant's final result is: <output value=" /data/d_final_result "/>
             </value>
-          </text>
-          <text id="/data/d_positive_why_no_tx:label">
-            <value>Please specify the plan to treat this participant or explain why treatment is not possible.</value>
           </text>
           <text id="/data/notes_part:label">
             <value>Additional Notes on form</value>
@@ -853,7 +865,7 @@
       <bind nodeset="/data/d_IDMethod" required="true()" type="string"/>
       <bind nodeset="/data/p_BarcodeID" relevant=" /data/d_IDMethod  = 'Scanner'" required="true()" type="barcode"/>
       <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/d_id_index:jr:constraintMsg')" nodeset="/data/d_id_index" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="int"/>
-      <bind nodeset="/data/d_participant_enumerator" relevant=" /data/d_IDMethod != 'Scanner'" type="int"/>
+      <bind nodeset="/data/d_participant_enumerator" relevant=" /data/d_IDMethod != 'Scanner'" type="string"/>
       <bind calculate="concat( /data/d_participant_enumerator , '-',  /data/d_cluster_id , '-',  /data/d_id_index )" nodeset="/data/d_code_id" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
       <bind nodeset="/data/d_blood_sample" required="true()" type="string"/>
       <bind nodeset="/data/d_dbs_prepared" required="true()" type="string"/>
@@ -881,7 +893,6 @@
  )
 )" nodeset="/data/d_final_result" type="string"/>
       <bind nodeset="/data/d_display_final_result" readonly="true()" type="string"/>
-      <bind nodeset="/data/d_positive_why_no_tx" relevant=" /data/d_final_result  = 'Positive'" type="string"/>
       <bind nodeset="/data/notes_part" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
@@ -970,9 +981,29 @@
     <input ref="/data/d_id_index">
       <label ref="jr:itext('/data/d_id_index:label')"/>
     </input>
-    <input ref="/data/d_participant_enumerator">
+    <select1 ref="/data/d_participant_enumerator">
       <label ref="jr:itext('/data/d_participant_enumerator:label')"/>
-    </input>
+      <item>
+        <label ref="jr:itext('/data/d_participant_enumerator/01:label')"/>
+        <value>01</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_participant_enumerator/02:label')"/>
+        <value>02</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_participant_enumerator/03:label')"/>
+        <value>03</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_participant_enumerator/04:label')"/>
+        <value>04</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_participant_enumerator/05:label')"/>
+        <value>05</value>
+      </item>
+    </select1>
     <input ref="/data/d_code_id">
       <label ref="jr:itext('/data/d_code_id:label')"/>
     </input>
@@ -1122,9 +1153,6 @@
     </input>
     <input ref="/data/d_display_final_result">
       <label ref="jr:itext('/data/d_display_final_result:label')"/>
-    </input>
-    <input ref="/data/d_positive_why_no_tx">
-      <label ref="jr:itext('/data/d_positive_why_no_tx:label')"/>
     </input>
     <input ref="/data/notes_part">
       <label ref="jr:itext('/data/notes_part:label')"/>
