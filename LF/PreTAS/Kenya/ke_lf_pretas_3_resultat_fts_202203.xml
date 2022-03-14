@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -8,7 +8,7 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>3. Kenya - Pre TAS LF FTS Results Form</h:title>
-    <model odk:xforms-version="1.0.0">
+    <model >
 
       <instance>
         <data id="ke_lf_pretas_3_resultat_fts_202203">
@@ -19,7 +19,8 @@
           <d_cluster_id/>
           <d_IDMethod/>
           <p_BarcodeID/>
-          <d_id_sequence/>
+          <d_id_index/>
+          <d_participant_enumerator/>
           <d_code_id/>
           <d_blood_sample/>
           <d_dbs_prepared/>
@@ -46,7 +47,6 @@
           </meta>
         </data>
       </instance>
-      
       <itext>
         <translation default="true()" lang="English">
           <text id="/data/d_enumerator:label">
@@ -118,11 +118,14 @@
           <text id="/data/p_BarcodeID:label">
             <value>Scan barcode now</value>
           </text>
-          <text id="/data/d_id_sequence:jr:constraintMsg">
+          <text id="/data/d_id_index:jr:constraintMsg">
             <value>The number must be greater than 0</value>
           </text>
-          <text id="/data/d_id_sequence:label">
-            <value>Enter the sequence ID</value>
+          <text id="/data/d_id_index:label">
+            <value>Enter the index ID</value>
+          </text>
+          <text id="/data/d_participant_enumerator:label">
+            <value>Enter the enumerator that registered the participant</value>
           </text>
           <text id="/data/d_code_id:label">
             <value>Enter unique ID from the diagnostic test (must be entered as 15-123-1 upper case only with dashes)</value>
@@ -476,7 +479,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="yes_no">
         <root>
           <item>
@@ -850,8 +852,9 @@
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string"/>
       <bind nodeset="/data/d_IDMethod" required="true()" type="string"/>
       <bind nodeset="/data/p_BarcodeID" relevant=" /data/d_IDMethod  = 'Scanner'" required="true()" type="barcode"/>
-      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/d_id_sequence:jr:constraintMsg')" nodeset="/data/d_id_sequence" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="int"/>
-      <bind calculate="concat( /data/d_enumerator , '-',  /data/d_cluster_id , '-',  /data/d_id_sequence )" nodeset="/data/d_code_id" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/d_id_index:jr:constraintMsg')" nodeset="/data/d_id_index" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="int"/>
+      <bind nodeset="/data/d_participant_enumerator" relevant=" /data/d_IDMethod != 'Scanner'" type="int"/>
+      <bind calculate="concat( /data/d_participant_enumerator , '-',  /data/d_cluster_id , '-',  /data/d_id_index )" nodeset="/data/d_code_id" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
       <bind nodeset="/data/d_blood_sample" required="true()" type="string"/>
       <bind nodeset="/data/d_dbs_prepared" required="true()" type="string"/>
       <bind nodeset="/data/d_filter_paper_stored" required="true()" type="string"/>
@@ -964,8 +967,11 @@
     <input ref="/data/p_BarcodeID">
       <label ref="jr:itext('/data/p_BarcodeID:label')"/>
     </input>
-    <input ref="/data/d_id_sequence">
-      <label ref="jr:itext('/data/d_id_sequence:label')"/>
+    <input ref="/data/d_id_index">
+      <label ref="jr:itext('/data/d_id_index:label')"/>
+    </input>
+    <input ref="/data/d_participant_enumerator">
+      <label ref="jr:itext('/data/d_participant_enumerator:label')"/>
     </input>
     <input ref="/data/d_code_id">
       <label ref="jr:itext('/data/d_code_id:label')"/>

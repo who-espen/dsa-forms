@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -8,7 +8,7 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>2. Kenya - Pre TAS LF Participants Form</h:title>
-    <model odk:xforms-version="1.0.0">
+    <model >
 
       <instance>
         <data id="ke_lf_pretas_2_participant_202203">
@@ -43,6 +43,7 @@
           </meta>
         </data>
       </instance>
+
       <itext>
         <translation default="true()" lang="English">
           <text id="/data/p_enumerator:jr:constraintMsg">
@@ -76,10 +77,10 @@
             <value>Select your subcounty</value>
           </text>
           <text id="/data/p_cluster_name:label">
-            <value>Select the village</value>
+            <value>Select the site</value>
           </text>
           <text id="/data/p_cluster_id:label">
-            <value>Select the village ID</value>
+            <value>Select the site ID</value>
           </text>
           <text id="/data/p_consent:label">
             <value>Does respondent provide consent?</value>
@@ -135,11 +136,44 @@
           <text id="/data/p_dob_/year:label">
             <value>Year of birth</value>
           </text>
-          <text id="/data/p_dob_/month:jr:constraintMsg">
-            <value>The month must be between 1 and 12</value>
-          </text>
           <text id="/data/p_dob_/month:label">
             <value>Month of birth</value>
+          </text>
+          <text id="/data/p_dob_/month/January:label">
+            <value>January</value>
+          </text>
+          <text id="/data/p_dob_/month/February:label">
+            <value>February</value>
+          </text>
+          <text id="/data/p_dob_/month/March:label">
+            <value>March</value>
+          </text>
+          <text id="/data/p_dob_/month/April:label">
+            <value>April</value>
+          </text>
+          <text id="/data/p_dob_/month/May:label">
+            <value>May</value>
+          </text>
+          <text id="/data/p_dob_/month/June:label">
+            <value>June</value>
+          </text>
+          <text id="/data/p_dob_/month/July:label">
+            <value>July</value>
+          </text>
+          <text id="/data/p_dob_/month/August:label">
+            <value>August</value>
+          </text>
+          <text id="/data/p_dob_/month/September:label">
+            <value>September</value>
+          </text>
+          <text id="/data/p_dob_/month/October:label">
+            <value>October</value>
+          </text>
+          <text id="/data/p_dob_/month/November:label">
+            <value>November</value>
+          </text>
+          <text id="/data/p_dob_/month/December:label">
+            <value>December</value>
           </text>
           <text id="/data/p_dob_/date:jr:constraintMsg">
             <value>Please enter a valide day</value>
@@ -299,10 +333,43 @@
           <text id="/data/p_dob_/year:label">
             <value>-</value>
           </text>
-          <text id="/data/p_dob_/month:jr:constraintMsg">
+          <text id="/data/p_dob_/month:label">
             <value>-</value>
           </text>
-          <text id="/data/p_dob_/month:label">
+          <text id="/data/p_dob_/month/January:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/February:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/March:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/April:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/May:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/June:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/July:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/August:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/September:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/October:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/November:label">
+            <value>-</value>
+          </text>
+          <text id="/data/p_dob_/month/December:label">
             <value>-</value>
           </text>
           <text id="/data/p_dob_/date:jr:constraintMsg">
@@ -352,7 +419,7 @@
       <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/p_dob_" relevant=" /data/p_consent  = 'Yes'"/>
       <bind constraint=". &gt;= 1902 and . &lt;= 2017" jr:constraintMsg="jr:itext('/data/p_dob_/year:jr:constraintMsg')" nodeset="/data/p_dob_/year" required="true()" type="int"/>
-      <bind constraint=". &gt; 0 and . &lt; 13" jr:constraintMsg="jr:itext('/data/p_dob_/month:jr:constraintMsg')" nodeset="/data/p_dob_/month" required="true()" type="int"/>
+      <bind nodeset="/data/p_dob_/month" required="true()" type="string"/>
       <bind constraint=". &gt; 0 and . &lt; 32" jr:constraintMsg="jr:itext('/data/p_dob_/date:jr:constraintMsg')" nodeset="/data/p_dob_/date" required="true()" type="int"/>
       <bind nodeset="/data/p_lived_last_1yr" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_length_reside:jr:constraintMsg')" nodeset="/data/p_length_reside" relevant=" /data/p_consent  = 'Yes' and  /data/p_lived_last_1yr  = 'Yes'" required="true()" type="int"/>
@@ -453,9 +520,57 @@
       <input ref="/data/p_dob_/year">
         <label ref="jr:itext('/data/p_dob_/year:label')"/>
       </input>
-      <input ref="/data/p_dob_/month">
+      <select1 ref="/data/p_dob_/month">
         <label ref="jr:itext('/data/p_dob_/month:label')"/>
-      </input>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/January:label')"/>
+          <value>January</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/February:label')"/>
+          <value>February</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/March:label')"/>
+          <value>March</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/April:label')"/>
+          <value>April</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/May:label')"/>
+          <value>May</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/June:label')"/>
+          <value>June</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/July:label')"/>
+          <value>July</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/August:label')"/>
+          <value>August</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/September:label')"/>
+          <value>September</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/October:label')"/>
+          <value>October</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/November:label')"/>
+          <value>November</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/p_dob_/month/December:label')"/>
+          <value>December</value>
+        </item>
+      </select1>
       <input ref="/data/p_dob_/date">
         <label ref="jr:itext('/data/p_dob_/date:label')"/>
       </input>
