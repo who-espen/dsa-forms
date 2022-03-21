@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>3. Kenya - Pre TAS LF FTS Results Form</h:title>
+    <h:title>3. Kenya - Pre TAS LF FTS Results Form V2</h:title>
     <model >
 
       <instance>
-        <data id="ke_lf_pretas_3_resultat_fts_202203">
+        <data id="ke_lf_pretas_3_resultat_fts_202203_v2">
           <d_enumerator/>
           <d_county/>
           <d_subcounty/>
@@ -19,9 +19,8 @@
           <d_cluster_id/>
           <d_IDMethod/>
           <p_BarcodeID/>
-          <d_id_index/>
-          <d_participant_enumerator/>
           <d_code_id/>
+          <d_code_id2/>
           <d_blood_sample/>
           <d_dbs_prepared/>
           <d_filter_paper_stored/>
@@ -77,12 +76,6 @@
           <text id="/data/d_county:hint">
             <value>Select the appropriate county</value>
           </text>
-          <text id="/data/d_county/Kilifi:label">
-            <value>Kilifi</value>
-          </text>
-          <text id="/data/d_county/Kwale:label">
-            <value>Kwale</value>
-          </text>
           <text id="/data/d_county/Mombasa:label">
             <value>Mombasa</value>
           </text>
@@ -114,37 +107,19 @@
             <value>Scanner</value>
           </text>
           <text id="/data/d_IDMethod/ID_generation:label">
-            <value>Automatic ID generation</value>
+            <value>Manual</value>
           </text>
           <text id="/data/p_BarcodeID:label">
             <value>Scan barcode now</value>
           </text>
-          <text id="/data/d_id_index:jr:constraintMsg">
-            <value>The number must be greater than 0</value>
-          </text>
-          <text id="/data/d_id_index:label">
-            <value>Enter the index ID</value>
-          </text>
-          <text id="/data/d_participant_enumerator:label">
-            <value>Enter the enumerator that registered the participant</value>
-          </text>
-          <text id="/data/d_participant_enumerator/01:label">
-            <value>01</value>
-          </text>
-          <text id="/data/d_participant_enumerator/02:label">
-            <value>02</value>
-          </text>
-          <text id="/data/d_participant_enumerator/03:label">
-            <value>03</value>
-          </text>
-          <text id="/data/d_participant_enumerator/04:label">
-            <value>04</value>
-          </text>
-          <text id="/data/d_participant_enumerator/05:label">
-            <value>05</value>
-          </text>
           <text id="/data/d_code_id:label">
-            <value>Enter unique ID from the diagnostic test (must be entered as 15-123-1 upper case only with dashes)</value>
+            <value>Enter unique ID from the diagnostic test</value>
+          </text>
+          <text id="/data/d_code_id2:jr:constraintMsg">
+            <value>The repeated code must be hte same</value>
+          </text>
+          <text id="/data/d_code_id2:label">
+            <value>Please repeat the unique ID</value>
           </text>
           <text id="/data/d_blood_sample:label">
             <value>Blood sample taken</value>
@@ -338,112 +313,55 @@
             <value>Scanner</value>
           </text>
           <text id="id_list-1">
-            <value>Automatic ID generation</value>
+            <value>Manual</value>
           </text>
           <text id="county-0">
-            <value>Kilifi</value>
-          </text>
-          <text id="county-1">
-            <value>Kwale</value>
-          </text>
-          <text id="county-2">
             <value>Mombasa</value>
           </text>
           <text id="subcounty-0">
-            <value>Ganze</value>
-          </text>
-          <text id="subcounty-1">
-            <value>Kaloleni</value>
-          </text>
-          <text id="subcounty-2">
-            <value>Kilifi North</value>
-          </text>
-          <text id="subcounty-3">
-            <value>Kilifi South</value>
-          </text>
-          <text id="subcounty-4">
-            <value>Magarini</value>
-          </text>
-          <text id="subcounty-5">
-            <value>Malindi</value>
-          </text>
-          <text id="subcounty-6">
-            <value>Rabai</value>
-          </text>
-          <text id="subcounty-7">
-            <value>Kinango</value>
-          </text>
-          <text id="subcounty-8">
-            <value>Lunga Lunga</value>
-          </text>
-          <text id="subcounty-9">
-            <value>Matuga</value>
-          </text>
-          <text id="subcounty-10">
-            <value>Msambweni</value>
-          </text>
-          <text id="subcounty-11">
             <value>Changamwe</value>
           </text>
-          <text id="subcounty-12">
+          <text id="subcounty-1">
             <value>Kisauni</value>
           </text>
-          <text id="subcounty-13">
+          <text id="subcounty-2">
             <value>Likoni</value>
           </text>
-          <text id="subcounty-14">
+          <text id="subcounty-3">
             <value>Mvita</value>
           </text>
-          <text id="subcounty-15">
+          <text id="subcounty-4">
             <value>Nyali</value>
           </text>
           <text id="cluster-0">
-            <value>Village 1</value>
+            <value>Chaani</value>
           </text>
           <text id="cluster-1">
-            <value>Village 2</value>
+            <value>Chuda</value>
           </text>
           <text id="cluster-2">
-            <value>Village 3</value>
+            <value>Kidongo Basi</value>
           </text>
           <text id="cluster-3">
-            <value>Village 4</value>
+            <value>Majengo</value>
           </text>
           <text id="cluster-4">
-            <value>Village 5</value>
+            <value>Maweni</value>
           </text>
           <text id="cluster-5">
-            <value>Village 6</value>
+            <value>Maweni ya Timbuani ward</value>
           </text>
           <text id="cluster-6">
-            <value>Village 7</value>
+            <value>Msikiti Nuru</value>
           </text>
           <text id="cluster-7">
-            <value>Village 8</value>
+            <value>Mtopanga</value>
           </text>
           <text id="cluster-8">
-            <value>Village 9</value>
+            <value>Ng.ombeni</value>
           </text>
           <text id="cluster-9">
-            <value>Village 10</value>
-          </text>
-          <text id="cluster-10">
-            <value>Village 11</value>
-          </text>
-          <text id="cluster-11">
-            <value>Village 12</value>
-          </text>
-          <text id="cluster-12">
-            <value>Village 13</value>
-          </text>
-          <text id="cluster-13">
-            <value>Village 14</value>
-          </text>
-          <text id="cluster-14">
-            <value>Village 15</value>
-          </text>
-          <text id="cluster-15">
-            <value>Village 16</value>
+            <value>Vijiweni ya Mtongwe ward</value>
           </text>
           <text id="cluster_id-0">
             <value>101</value>
@@ -475,26 +393,9 @@
           <text id="cluster_id-9">
             <value>110</value>
           </text>
-          <text id="cluster_id-10">
-            <value>111</value>
-          </text>
-          <text id="cluster_id-11">
-            <value>112</value>
-          </text>
-          <text id="cluster_id-12">
-            <value>113</value>
-          </text>
-          <text id="cluster_id-13">
-            <value>114</value>
-          </text>
-          <text id="cluster_id-14">
-            <value>115</value>
-          </text>
-          <text id="cluster_id-15">
-            <value>116</value>
-          </text>
         </translation>
       </itext>
+
       <instance id="yes_no">
         <root>
           <item>
@@ -583,12 +484,10 @@
         <root>
           <item>
             <itextId>id_list-0</itextId>
-            <county>Scanner</county>
             <name>Scanner</name>
           </item>
           <item>
             <itextId>id_list-1</itextId>
-            <county>Génération automatique</county>
             <name>ID_generation</name>
           </item>
         </root>
@@ -597,14 +496,6 @@
         <root>
           <item>
             <itextId>county-0</itextId>
-            <name>Kilifi</name>
-          </item>
-          <item>
-            <itextId>county-1</itextId>
-            <name>Kwale</name>
-          </item>
-          <item>
-            <itextId>county-2</itextId>
             <name>Mombasa</name>
           </item>
         </root>
@@ -613,81 +504,26 @@
         <root>
           <item>
             <itextId>subcounty-0</itextId>
-            <county>Kilifi</county>
-            <name>Ganze</name>
-          </item>
-          <item>
-            <itextId>subcounty-1</itextId>
-            <county>Kilifi</county>
-            <name>Kaloleni</name>
-          </item>
-          <item>
-            <itextId>subcounty-2</itextId>
-            <county>Kilifi</county>
-            <name>Kilifi North</name>
-          </item>
-          <item>
-            <itextId>subcounty-3</itextId>
-            <county>Kilifi</county>
-            <name>Kilifi South</name>
-          </item>
-          <item>
-            <itextId>subcounty-4</itextId>
-            <county>Kilifi</county>
-            <name>Magarini</name>
-          </item>
-          <item>
-            <itextId>subcounty-5</itextId>
-            <county>Kilifi</county>
-            <name>Malindi</name>
-          </item>
-          <item>
-            <itextId>subcounty-6</itextId>
-            <county>Kilifi</county>
-            <name>Rabai</name>
-          </item>
-          <item>
-            <itextId>subcounty-7</itextId>
-            <county>Kwale</county>
-            <name>Kinango</name>
-          </item>
-          <item>
-            <itextId>subcounty-8</itextId>
-            <county>Kwale</county>
-            <name>Lunga Lunga</name>
-          </item>
-          <item>
-            <itextId>subcounty-9</itextId>
-            <county>Kwale</county>
-            <name>Matuga</name>
-          </item>
-          <item>
-            <itextId>subcounty-10</itextId>
-            <county>Kwale</county>
-            <name>Msambweni</name>
-          </item>
-          <item>
-            <itextId>subcounty-11</itextId>
             <county>Mombasa</county>
             <name>Changamwe</name>
           </item>
           <item>
-            <itextId>subcounty-12</itextId>
+            <itextId>subcounty-1</itextId>
             <county>Mombasa</county>
             <name>Kisauni</name>
           </item>
           <item>
-            <itextId>subcounty-13</itextId>
+            <itextId>subcounty-2</itextId>
             <county>Mombasa</county>
             <name>Likoni</name>
           </item>
           <item>
-            <itextId>subcounty-14</itextId>
+            <itextId>subcounty-3</itextId>
             <county>Mombasa</county>
             <name>Mvita</name>
           </item>
           <item>
-            <itextId>subcounty-15</itextId>
+            <itextId>subcounty-4</itextId>
             <county>Mombasa</county>
             <name>Nyali</name>
           </item>
@@ -697,83 +533,53 @@
         <root>
           <item>
             <itextId>cluster-0</itextId>
-            <name>Village 1</name>
-            <subcounty>Ganze</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-1</itextId>
-            <name>Village 2</name>
-            <subcounty>Kaloleni</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-2</itextId>
-            <name>Village 3</name>
-            <subcounty>Kilifi North</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-3</itextId>
-            <name>Village 4</name>
-            <subcounty>Kilifi South</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-4</itextId>
-            <name>Village 5</name>
-            <subcounty>Magarini</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-5</itextId>
-            <name>Village 6</name>
-            <subcounty>Malindi</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-6</itextId>
-            <name>Village 7</name>
-            <subcounty>Rabai</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-7</itextId>
-            <name>Village 8</name>
-            <subcounty>Kinango</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-8</itextId>
-            <name>Village 9</name>
-            <subcounty>Lunga Lunga</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-9</itextId>
-            <name>Village 10</name>
-            <subcounty>Matuga</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-10</itextId>
-            <name>Village 11</name>
-            <subcounty>Msambweni</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-11</itextId>
-            <name>Village 12</name>
+            <name>Chaani</name>
             <subcounty>Changamwe</subcounty>
           </item>
           <item>
-            <itextId>cluster-12</itextId>
-            <name>Village 13</name>
-            <subcounty>Kisauni</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-13</itextId>
-            <name>Village 14</name>
-            <subcounty>Likoni</subcounty>
-          </item>
-          <item>
-            <itextId>cluster-14</itextId>
-            <name>Village 15</name>
+            <itextId>cluster-1</itextId>
+            <name>Chuda</name>
             <subcounty>Mvita</subcounty>
           </item>
           <item>
-            <itextId>cluster-15</itextId>
-            <name>Village 16</name>
+            <itextId>cluster-2</itextId>
+            <name>Kidongo Basi</name>
             <subcounty>Nyali</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-3</itextId>
+            <name>Majengo</name>
+            <subcounty>Mvita</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-4</itextId>
+            <name>Maweni</name>
+            <subcounty>Nyali</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-5</itextId>
+            <name>Maweni ya Timbuani ward</name>
+            <subcounty>Likoni</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-6</itextId>
+            <name>Msikiti Nuru</name>
+            <subcounty>Changamwe</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-7</itextId>
+            <name>Mtopanga</name>
+            <subcounty>Kisauni</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-8</itextId>
+            <name>Ng.ombeni</name>
+            <subcounty>Kisauni</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-9</itextId>
+            <name>Vijiweni ya Mtongwe ward</name>
+            <subcounty>Likoni</subcounty>
           </item>
         </root>
       </instance>
@@ -781,83 +587,53 @@
         <root>
           <item>
             <itextId>cluster_id-0</itextId>
-            <cluster>Village 1</cluster>
+            <cluster>Chaani</cluster>
             <name>101</name>
           </item>
           <item>
             <itextId>cluster_id-1</itextId>
-            <cluster>Village 2</cluster>
+            <cluster>Chuda</cluster>
             <name>102</name>
           </item>
           <item>
             <itextId>cluster_id-2</itextId>
-            <cluster>Village 3</cluster>
+            <cluster>Kidongo Basi</cluster>
             <name>103</name>
           </item>
           <item>
             <itextId>cluster_id-3</itextId>
-            <cluster>Village 4</cluster>
+            <cluster>Majengo</cluster>
             <name>104</name>
           </item>
           <item>
             <itextId>cluster_id-4</itextId>
-            <cluster>Village 5</cluster>
+            <cluster>Maweni</cluster>
             <name>105</name>
           </item>
           <item>
             <itextId>cluster_id-5</itextId>
-            <cluster>Village 6</cluster>
+            <cluster>Maweni ya Timbuani ward</cluster>
             <name>106</name>
           </item>
           <item>
             <itextId>cluster_id-6</itextId>
-            <cluster>Village 7</cluster>
+            <cluster>Msikiti Nuru</cluster>
             <name>107</name>
           </item>
           <item>
             <itextId>cluster_id-7</itextId>
-            <cluster>Village 8</cluster>
+            <cluster>Mtopanga</cluster>
             <name>108</name>
           </item>
           <item>
             <itextId>cluster_id-8</itextId>
-            <cluster>Village 9</cluster>
+            <cluster>Ng.ombeni</cluster>
             <name>109</name>
           </item>
           <item>
             <itextId>cluster_id-9</itextId>
-            <cluster>Village 10</cluster>
+            <cluster>Vijiweni ya Mtongwe ward</cluster>
             <name>110</name>
-          </item>
-          <item>
-            <itextId>cluster_id-10</itextId>
-            <cluster>Village 11</cluster>
-            <name>111</name>
-          </item>
-          <item>
-            <itextId>cluster_id-11</itextId>
-            <cluster>Village 12</cluster>
-            <name>112</name>
-          </item>
-          <item>
-            <itextId>cluster_id-12</itextId>
-            <cluster>Village 13</cluster>
-            <name>113</name>
-          </item>
-          <item>
-            <itextId>cluster_id-13</itextId>
-            <cluster>Village 14</cluster>
-            <name>114</name>
-          </item>
-          <item>
-            <itextId>cluster_id-14</itextId>
-            <cluster>Village 15</cluster>
-            <name>115</name>
-          </item>
-          <item>
-            <itextId>cluster_id-15</itextId>
-            <cluster>Village 16</cluster>
-            <name>116</name>
           </item>
         </root>
       </instance>
@@ -868,9 +644,8 @@
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string"/>
       <bind nodeset="/data/d_IDMethod" required="true()" type="string"/>
       <bind nodeset="/data/p_BarcodeID" relevant=" /data/d_IDMethod  = 'Scanner'" required="true()" type="barcode"/>
-      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/d_id_index:jr:constraintMsg')" nodeset="/data/d_id_index" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="int"/>
-      <bind nodeset="/data/d_participant_enumerator" relevant=" /data/d_IDMethod != 'Scanner'" type="string"/>
-      <bind calculate="concat( /data/d_participant_enumerator , '-',  /data/d_cluster_id , '-',  /data/d_id_index )" nodeset="/data/d_code_id" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
+      <bind nodeset="/data/d_code_id" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
+      <bind constraint=". =  /data/d_code_id " jr:constraintMsg="jr:itext('/data/d_code_id2:jr:constraintMsg')" nodeset="/data/d_code_id2" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
       <bind nodeset="/data/d_blood_sample" required="true()" type="string"/>
       <bind nodeset="/data/d_dbs_prepared" required="true()" type="string"/>
       <bind nodeset="/data/d_filter_paper_stored" required="true()" type="string"/>
@@ -933,14 +708,6 @@
       <label ref="jr:itext('/data/d_county:label')"/>
       <hint ref="jr:itext('/data/d_county:hint')"/>
       <item>
-        <label ref="jr:itext('/data/d_county/Kilifi:label')"/>
-        <value>Kilifi</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_county/Kwale:label')"/>
-        <value>Kwale</value>
-      </item>
-      <item>
         <label ref="jr:itext('/data/d_county/Mombasa:label')"/>
         <value>Mombasa</value>
       </item>
@@ -983,34 +750,11 @@
     <input ref="/data/p_BarcodeID">
       <label ref="jr:itext('/data/p_BarcodeID:label')"/>
     </input>
-    <input ref="/data/d_id_index">
-      <label ref="jr:itext('/data/d_id_index:label')"/>
-    </input>
-    <select1 ref="/data/d_participant_enumerator">
-      <label ref="jr:itext('/data/d_participant_enumerator:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_participant_enumerator/01:label')"/>
-        <value>01</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_participant_enumerator/02:label')"/>
-        <value>02</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_participant_enumerator/03:label')"/>
-        <value>03</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_participant_enumerator/04:label')"/>
-        <value>04</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_participant_enumerator/05:label')"/>
-        <value>05</value>
-      </item>
-    </select1>
     <input ref="/data/d_code_id">
       <label ref="jr:itext('/data/d_code_id:label')"/>
+    </input>
+    <input ref="/data/d_code_id2">
+      <label ref="jr:itext('/data/d_code_id2:label')"/>
     </input>
     <select1 ref="/data/d_blood_sample">
       <label ref="jr:itext('/data/d_blood_sample:label')"/>
