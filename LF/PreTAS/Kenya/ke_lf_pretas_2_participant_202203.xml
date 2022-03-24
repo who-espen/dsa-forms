@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. Kenya - Pre TAS LF Participants Form V2</h:title>
+    <h:title>2. Kenya - Pre TAS LF Participants Form V3</h:title>
     <model >
 
       <instance>
-        <data id="ke_lf_pretas_2_participant_202203_v2">
+        <data id="ke_lf_pretas_2_participant_202203_v3">
           <p_enumerator/>
           <p_county/>
           <p_subcounty/>
@@ -30,6 +30,7 @@
             <date/>
           </p_dob_>
           <p_lived_last_1yr/>
+          <p_oth_recent_subcounties/>
           <p_length_reside/>
           <p_bednet/>
           <p_bednet_lastnight/>
@@ -46,29 +47,11 @@
 
       <itext>
         <translation default="true()" lang="English">
-          <text id="/data/p_enumerator:jr:constraintMsg">
-            <value>The code must be a two-digit number between 9 and 100</value>
-          </text>
           <text id="/data/p_enumerator:label">
             <value>Enumerator</value>
           </text>
           <text id="/data/p_enumerator:hint">
-            <value>Select your name/number</value>
-          </text>
-          <text id="/data/p_enumerator/01:label">
-            <value>01</value>
-          </text>
-          <text id="/data/p_enumerator/02:label">
-            <value>02</value>
-          </text>
-          <text id="/data/p_enumerator/03:label">
-            <value>03</value>
-          </text>
-          <text id="/data/p_enumerator/04:label">
-            <value>04</value>
-          </text>
-          <text id="/data/p_enumerator/05:label">
-            <value>05</value>
+            <value>Write first and last name</value>
           </text>
           <text id="/data/p_county:label">
             <value>Select your county</value>
@@ -190,6 +173,9 @@
           <text id="/data/p_lived_last_1yr/No:label">
             <value>No</value>
           </text>
+          <text id="/data/p_oth_recent_subcounties:label">
+            <value>A2. If no, which is the last recent other Sub-County you lived in?</value>
+          </text>
           <text id="/data/p_length_reside:jr:constraintMsg">
             <value>The value must not be greater than the age</value>
           </text>
@@ -226,7 +212,7 @@
         </translation>
       </itext>
 
-      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_enumerator:jr:constraintMsg')" nodeset="/data/p_enumerator" required="true()" type="string"/>
+      <bind nodeset="/data/p_enumerator" required="true()" type="string"/>
       <bind nodeset="/data/p_county" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_subcounty" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_county"/>
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_subcounty"/>
@@ -243,7 +229,8 @@
       <bind nodeset="/data/p_dob_/month" required="true()" type="string"/>
       <bind constraint=". &gt; 0 and . &lt; 32" jr:constraintMsg="jr:itext('/data/p_dob_/date:jr:constraintMsg')" nodeset="/data/p_dob_/date" required="true()" type="int"/>
       <bind nodeset="/data/p_lived_last_1yr" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_length_reside:jr:constraintMsg')" nodeset="/data/p_length_reside" relevant=" /data/p_consent  = 'Yes' and  /data/p_lived_last_1yr  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/p_oth_recent_subcounties" relevant=" /data/p_consent  = 'Yes' and  /data/p_lived_last_1yr  = 'No'" required="true()" type="string"/>
+      <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_length_reside:jr:constraintMsg')" nodeset="/data/p_length_reside" relevant=" /data/p_consent  = 'Yes' and  /data/p_lived_last_1yr  = 'No'" required="true()" type="int"/>
       <bind nodeset="/data/p_bednet" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_bednet_lastnight" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_previous_trt" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
@@ -255,30 +242,10 @@
     </model>
   </h:head>
   <h:body>
-    <select1 ref="/data/p_enumerator">
+    <input ref="/data/p_enumerator">
       <label ref="jr:itext('/data/p_enumerator:label')"/>
       <hint ref="jr:itext('/data/p_enumerator:hint')"/>
-      <item>
-        <label ref="jr:itext('/data/p_enumerator/01:label')"/>
-        <value>01</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_enumerator/02:label')"/>
-        <value>02</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_enumerator/03:label')"/>
-        <value>03</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_enumerator/04:label')"/>
-        <value>04</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_enumerator/05:label')"/>
-        <value>05</value>
-      </item>
-    </select1>
+    </input>
     <input ref="/data/p_county">
       <label ref="jr:itext('/data/p_county:label')"/>
     </input>
@@ -407,6 +374,9 @@
         <value>No</value>
       </item>
     </select1>
+    <input ref="/data/p_oth_recent_subcounties">
+      <label ref="jr:itext('/data/p_oth_recent_subcounties:label')"/>
+    </input>
     <input ref="/data/p_length_reside">
       <label ref="jr:itext('/data/p_length_reside:label')"/>
     </input>

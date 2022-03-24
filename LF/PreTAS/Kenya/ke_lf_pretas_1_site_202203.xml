@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>1. Kenya - Pre TAS LF Site Form V2</h:title>
-    <model odk:xforms-version="1.0.0">
+    <h:title>1. Kenya - Pre TAS LF Site Form V3</h:title>
+    <model >
 
       <instance>
-        <data id="ke_lf_pretas_1_site_202203_v2">
+        <data id="ke_lf_pretas_1_site_202203_v3">
           <c_date_visit/>
           <c_enumerator/>
           <c_county/>
@@ -38,22 +38,7 @@
             <value>Enumerator</value>
           </text>
           <text id="/data/c_enumerator:hint">
-            <value>Select your name/number</value>
-          </text>
-          <text id="/data/c_enumerator/01:label">
-            <value>01</value>
-          </text>
-          <text id="/data/c_enumerator/02:label">
-            <value>02</value>
-          </text>
-          <text id="/data/c_enumerator/03:label">
-            <value>03</value>
-          </text>
-          <text id="/data/c_enumerator/04:label">
-            <value>04</value>
-          </text>
-          <text id="/data/c_enumerator/05:label">
-            <value>05</value>
+            <value>Write first and last name</value>
           </text>
           <text id="/data/c_county:label">
             <value>County</value>
@@ -267,7 +252,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="yes_no">
         <root>
           <item>
@@ -576,30 +560,10 @@
     <input ref="/data/c_date_visit">
       <label ref="jr:itext('/data/c_date_visit:label')"/>
     </input>
-    <select1 ref="/data/c_enumerator">
+    <input ref="/data/c_enumerator">
       <label ref="jr:itext('/data/c_enumerator:label')"/>
       <hint ref="jr:itext('/data/c_enumerator:hint')"/>
-      <item>
-        <label ref="jr:itext('/data/c_enumerator/01:label')"/>
-        <value>01</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/c_enumerator/02:label')"/>
-        <value>02</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/c_enumerator/03:label')"/>
-        <value>03</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/c_enumerator/04:label')"/>
-        <value>04</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/c_enumerator/05:label')"/>
-        <value>05</value>
-      </item>
-    </select1>
+    </input>
     <select1 ref="/data/c_county">
       <label ref="jr:itext('/data/c_county:label')"/>
       <hint ref="jr:itext('/data/c_county:hint')"/>

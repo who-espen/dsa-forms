@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>3. Kenya - Pre TAS LF FTS Results Form V2</h:title>
+    <h:title>3. Kenya - Pre TAS LF FTS Results Form V3</h:title>
     <model >
 
       <instance>
-        <data id="ke_lf_pretas_3_resultat_fts_202203_v2">
+        <data id="ke_lf_pretas_3_resultat_fts_202203_v3">
           <d_enumerator/>
           <d_county/>
           <d_subcounty/>
@@ -53,22 +53,7 @@
             <value>Enumerator</value>
           </text>
           <text id="/data/d_enumerator:hint">
-            <value>Select your name/number</value>
-          </text>
-          <text id="/data/d_enumerator/01:label">
-            <value>01</value>
-          </text>
-          <text id="/data/d_enumerator/02:label">
-            <value>02</value>
-          </text>
-          <text id="/data/d_enumerator/03:label">
-            <value>03</value>
-          </text>
-          <text id="/data/d_enumerator/04:label">
-            <value>04</value>
-          </text>
-          <text id="/data/d_enumerator/05:label">
-            <value>05</value>
+            <value>Write first and last name</value>
           </text>
           <text id="/data/d_county:label">
             <value>County</value>
@@ -680,30 +665,10 @@
     </model>
   </h:head>
   <h:body>
-    <select1 ref="/data/d_enumerator">
+    <input ref="/data/d_enumerator">
       <label ref="jr:itext('/data/d_enumerator:label')"/>
       <hint ref="jr:itext('/data/d_enumerator:hint')"/>
-      <item>
-        <label ref="jr:itext('/data/d_enumerator/01:label')"/>
-        <value>01</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_enumerator/02:label')"/>
-        <value>02</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_enumerator/03:label')"/>
-        <value>03</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_enumerator/04:label')"/>
-        <value>04</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_enumerator/05:label')"/>
-        <value>05</value>
-      </item>
-    </select1>
+    </input>
     <select1 ref="/data/d_county">
       <label ref="jr:itext('/data/d_county:label')"/>
       <hint ref="jr:itext('/data/d_county:hint')"/>
