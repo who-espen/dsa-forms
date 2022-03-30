@@ -7,22 +7,24 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Mar 2022) ONCHO Pre stop TDM - 2. Formulaire Participants V2</h:title>
+    <h:title>(Avr 2022) ONCHO stop TDM - 2. Formulaire Participants V2</h:title>
     <model >
 
       <instance>
-        <data id="bj_oncho_prestop_2_participants_v2">
+        <data id="tg_oncho_stop_2_participants_202204">
           <p_RecorderID/>
           <p_district/>
           <p_formation_sanitaire/>
           <p_Cluster_name/>
           <p_Cluster_id/>
           <p_Consent/>
+          <p_live_to_village/>
           <p_code_id/>
           <p_Sex/>
           <p_AgeYrs/>
-          <p_live_to_village/>
           <p_contact_tuteur/>
+          <p_prelevement/>
+          <p_text_end_note/>
           <p_AdditionalNotes/>
           <p_StartTime/>
           <p_EndTime/>
@@ -67,8 +69,20 @@
           <text id="/data/p_Consent/Non:label">
             <value>Non</value>
           </text>
+          <text id="/data/p_live_to_village:label">
+            <value>l'enfant vit-il dans ce village ?</value>
+          </text>
+          <text id="/data/p_live_to_village/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_live_to_village/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_code_id:jr:constraintMsg">
+            <value>Le format du QR code est incorrect. Ex s'un format correct : SA 00001 22</value>
+          </text>
           <text id="/data/p_code_id:label">
-            <value>N° d'identification (Identifiant) du Participant</value>
+            <value>Scanner l'identification (Identifiant) du Participant</value>
           </text>
           <text id="/data/p_Sex:label">
             <value>Sexe du répondant</value>
@@ -88,17 +102,23 @@
           <text id="/data/p_AgeYrs:hint">
             <value>L'âge doit être entre 5 et 9 ans</value>
           </text>
-          <text id="/data/p_live_to_village:label">
-            <value>l'enfant vit-il dans ce village ?</value>
-          </text>
-          <text id="/data/p_live_to_village/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/p_live_to_village/Non:label">
-            <value>Non</value>
+          <text id="/data/p_contact_tuteur:jr:constraintMsg">
+            <value>Le format du numéro est incrorrect</value>
           </text>
           <text id="/data/p_contact_tuteur:label">
             <value>Contact du parent ou tuteur du participant?</value>
+          </text>
+          <text id="/data/p_prelevement:label">
+            <value>L'enfant a-t-il bénéficier d'un prélèvement?</value>
+          </text>
+          <text id="/data/p_prelevement/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_prelevement/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_text_end_note:label">
+            <value>Vous venez de sélectionner un choix qui mettra fin à l'enquête.</value>
           </text>
           <text id="/data/p_AdditionalNotes:label">
             <value>Notes Additionnelles</value>
@@ -112,11 +132,13 @@
       <bind nodeset="/data/p_Cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_formation_sanitaire"/>
       <bind nodeset="/data/p_Cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_Cluster_name"/>
       <bind nodeset="/data/p_Consent" required="true()" type="string"/>
-      <bind nodeset="/data/p_code_id" relevant=" /data/p_Consent  = 'Oui'" required="true()" type="string"/>
-      <bind nodeset="/data/p_Sex" relevant=" /data/p_Consent  = 'Oui'" required="true()" type="string"/>
-      <bind constraint=". &gt;=5 and .&lt;=9" jr:constraintMsg="jr:itext('/data/p_AgeYrs:jr:constraintMsg')" nodeset="/data/p_AgeYrs" relevant=" /data/p_Consent  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/p_live_to_village" relevant=" /data/p_Consent  = 'Oui'" type="string"/>
-      <bind nodeset="/data/p_contact_tuteur" relevant=" /data/p_Consent  = 'Oui'" required="true()" type="string"/>
+      <bind constraint="regex(., '^SA [0-9]{5} [0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_code_id:jr:constraintMsg')" nodeset="/data/p_code_id" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="barcode"/>
+      <bind nodeset="/data/p_Sex" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="string"/>
+      <bind constraint=". &gt;=5 and .&lt;=9" jr:constraintMsg="jr:itext('/data/p_AgeYrs:jr:constraintMsg')" nodeset="/data/p_AgeYrs" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="int"/>
+      <bind constraint="regex(., '^[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/p_contact_tuteur:jr:constraintMsg')" nodeset="/data/p_contact_tuteur" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" type="string"/>
+      <bind nodeset="/data/p_prelevement" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_text_end_note" readonly="true()" relevant=" /data/p_Consent  = 'Non' or  /data/p_live_to_village  = 'Non '" type="string"/>
       <bind nodeset="/data/p_AdditionalNotes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_StartTime" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_EndTime" type="dateTime"/>
@@ -152,6 +174,17 @@
         <value>Non</value>
       </item>
     </select1>
+    <select1 ref="/data/p_live_to_village">
+      <label ref="jr:itext('/data/p_live_to_village:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_live_to_village/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_live_to_village/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
     <input ref="/data/p_code_id">
       <label ref="jr:itext('/data/p_code_id:label')"/>
     </input>
@@ -170,19 +203,22 @@
       <label ref="jr:itext('/data/p_AgeYrs:label')"/>
       <hint ref="jr:itext('/data/p_AgeYrs:hint')"/>
     </input>
-    <select1 ref="/data/p_live_to_village">
-      <label ref="jr:itext('/data/p_live_to_village:label')"/>
+    <input ref="/data/p_contact_tuteur">
+      <label ref="jr:itext('/data/p_contact_tuteur:label')"/>
+    </input>
+    <select1 ref="/data/p_prelevement">
+      <label ref="jr:itext('/data/p_prelevement:label')"/>
       <item>
-        <label ref="jr:itext('/data/p_live_to_village/Oui:label')"/>
+        <label ref="jr:itext('/data/p_prelevement/Oui:label')"/>
         <value>Oui</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_live_to_village/Non:label')"/>
+        <label ref="jr:itext('/data/p_prelevement/Non:label')"/>
         <value>Non</value>
       </item>
     </select1>
-    <input ref="/data/p_contact_tuteur">
-      <label ref="jr:itext('/data/p_contact_tuteur:label')"/>
+    <input ref="/data/p_text_end_note">
+      <label ref="jr:itext('/data/p_text_end_note:label')"/>
     </input>
     <input ref="/data/p_AdditionalNotes">
       <label ref="jr:itext('/data/p_AdditionalNotes:label')"/>
