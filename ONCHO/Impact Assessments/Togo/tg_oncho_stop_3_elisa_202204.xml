@@ -73,7 +73,7 @@
             <value>Sélectionner l'identifiant du village</value>
           </text>
           <text id="/data/d_code_id:jr:constraintMsg">
-            <value>Le format du QR code est incorrect. Ex s'un format correct : SA-00001</value>
+            <value>Le format du QR code est incorrect. Ex s'un format correct : SA 00001 22</value>
           </text>
           <text id="/data/d_code_id:label">
             <value>Scanner l'identification (Identifiant) du Participant</value>
@@ -3091,7 +3091,7 @@
       <bind nodeset="/data/d_formation_sanitaire" required="true()" type="string"/>
       <bind nodeset="/data/d_Cluster_Name" required="true()" type="string"/>
       <bind nodeset="/data/d_Cluster_ID" required="true()" type="string"/>
-      <bind constraint="regex(., '^[a-zA-Z]{2}-[0-9]{4,5}$')" jr:constraintMsg="jr:itext('/data/d_code_id:jr:constraintMsg')" nodeset="/data/d_code_id" required="true()" type="barcode"/>
+      <bind constraint="regex(., '^SA [0-9]{5} [0-9]{2}$')" jr:constraintMsg="jr:itext('/data/d_code_id:jr:constraintMsg')" nodeset="/data/d_code_id" required="true()" type="barcode"/>
       <bind nodeset="/data/d_LabELISA" required="true()" type="string"/>
       <bind nodeset="/data/d_Notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_StartTime" type="dateTime"/>
