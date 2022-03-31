@@ -20,6 +20,7 @@
           <d_IDType/>
           <d_BarcodeID/>
           <d_generatedid/>
+          <d_generatedid2/>
           <d_lotnumber1/>
           <d_result1/>
           <d_why_Invalido1/>
@@ -98,6 +99,12 @@
           </text>
           <text id="/data/d_generatedid:hint">
             <value>Par exemple si le code généré était 123-1234-567, le deuxième et troisième partie du code est de 123-1234-567</value>
+          </text>
+          <text id="/data/d_generatedid2:jr:constraintMsg">
+            <value>Le code répété doit être le même</value>
+          </text>
+          <text id="/data/d_generatedid2:label">
+            <value>Répéter le code</value>
           </text>
           <text id="/data/d_lotnumber1:jr:constraintMsg">
             <value>Le lot doit être un nombre à six chiffre</value>
@@ -1233,6 +1240,12 @@
           </text>
           <text id="/data/d_generatedid:hint">
             <value>Por exemplo, se o código gerado foi 123-1234-567, a segunda e terceira partes do código é 123-1234-567</value>
+          </text>
+          <text id="/data/d_generatedid2:jr:constraintMsg">
+            <value>O código repetido deve ser o mesmo</value>
+          </text>
+          <text id="/data/d_generatedid2:label">
+            <value>Repita o código</value>
           </text>
           <text id="/data/d_lotnumber1:jr:constraintMsg">
             <value>Lot must be a six-digit number</value>
@@ -3955,6 +3968,7 @@
       <bind nodeset="/data/d_IDType" required="true()" type="string"/>
       <bind nodeset="/data/d_BarcodeID" relevant=" /data/d_IDType  = &quot;Scanner&quot;" required="true()" type="barcode"/>
       <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_generatedid:jr:constraintMsg')" nodeset="/data/d_generatedid" relevant=" /data/d_IDType  = &quot;ID_generation&quot;" required="true()" type="string"/>
+      <bind constraint=". =  /data/d_generatedid " jr:constraintMsg="jr:itext('/data/d_generatedid2:jr:constraintMsg')" nodeset="/data/d_generatedid2" relevant=" /data/d_IDType  = &quot;ID_generation&quot;" required="true()" type="string"/>
       <bind constraint="regex(.,'^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_lotnumber1:jr:constraintMsg')" nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_Invalido1" relevant=" /data/d_result1  = 'Invalido'" required="true()" type="string"/>
@@ -4040,6 +4054,9 @@
     <input ref="/data/d_generatedid">
       <label ref="jr:itext('/data/d_generatedid:label')"/>
       <hint ref="jr:itext('/data/d_generatedid:hint')"/>
+    </input>
+    <input ref="/data/d_generatedid2">
+      <label ref="jr:itext('/data/d_generatedid2:label')"/>
     </input>
     <input ref="/data/d_lotnumber1">
       <label ref="jr:itext('/data/d_lotnumber1:label')"/>
