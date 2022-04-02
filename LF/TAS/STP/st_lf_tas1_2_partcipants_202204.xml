@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Abr 2022) 2. TAS1 FL - Formulário de participantes</h:title>
+    <h:title>(Abr 2022) 2. TAS1 FL - Formulário de participantes V2</h:title>
     <model >
 
       <instance>
-        <data id="st_lf_tas1_2_partcipants_202204" version="20210419">
+        <data id="st_lf_tas1_2_partcipants_202204_2" version="20210419">
           <p_recorderID/>
           <p_eu_name/>
           <p_district/>
@@ -21,9 +21,10 @@
           <p_sex/>
           <p_age_yrs/>
           <p_how_long_lived/>
-          <p_IDMethod/>
-          <p_BarcodeID/>
           <p_GenerateID/>
+          <p_lymphod/>
+          <p_lymph_location/>
+          <p_hydrocele/>
           <p_ending_survey_note/>
           <p_notes/>
           <p_start/>
@@ -80,7 +81,7 @@
             <value>Féminin</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>L'age doit être compris entre 5 et 21 ans</value>
+            <value>L'âge doit être supérieur à 20 ans</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Entrer l'âge du participant (en années)</value>
@@ -91,20 +92,38 @@
           <text id="/data/p_how_long_lived:label">
             <value>Depuis combien d'années le participant habite-t-il dans la communauté?</value>
           </text>
-          <text id="/data/p_IDMethod:label">
-            <value>Comment l'ID unique de l'individu sera-t-il généré?</value>
-          </text>
-          <text id="/data/p_IDMethod/Scanner:label">
-            <value>Scanner</value>
-          </text>
-          <text id="/data/p_IDMethod/ID_generation:label">
-            <value>Génération automatique</value>
-          </text>
-          <text id="/data/p_BarcodeID:label">
-            <value>Scanner le code-barres maintenant</value>
-          </text>
           <text id="/data/p_GenerateID:label">
             <value>Veuiller enregistrer le code d'identification unique du participant qui apparait sur une liste séparée et sur chaque test de diagnostic administré</value>
+          </text>
+          <text id="/data/p_lymphod:label">
+            <value>Lymphoedème (gonflement)</value>
+          </text>
+          <text id="/data/p_lymphod/Sim:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_lymphod/Nao:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_lymph_location:label">
+            <value>Localisation du lymphoedème</value>
+          </text>
+          <text id="/data/p_lymph_location/Perna:label">
+            <value>Jambe</value>
+          </text>
+          <text id="/data/p_lymph_location/Mama:label">
+            <value>Poitrine</value>
+          </text>
+          <text id="/data/p_lymph_location/Braço:label">
+            <value>Bras</value>
+          </text>
+          <text id="/data/p_hydrocele:label">
+            <value>Hidrocele</value>
+          </text>
+          <text id="/data/p_hydrocele/Sim:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_hydrocele/Nao:label">
+            <value>Non</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
             <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
@@ -157,7 +176,7 @@
             <value>Feminino</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>A idade deve ser entre os 5 e 21 anos</value>
+            <value>A idade deve ser superior a 20 anos</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Introduzir a idade em anos</value>
@@ -168,20 +187,38 @@
           <text id="/data/p_how_long_lived:label">
             <value>Quantos anos viveu o inquirido na zona?</value>
           </text>
-          <text id="/data/p_IDMethod:label">
-            <value>Como será gerada a identificação única do indivíduo?</value>
-          </text>
-          <text id="/data/p_IDMethod/Scanner:label">
-            <value>Scanner</value>
-          </text>
-          <text id="/data/p_IDMethod/ID_generation:label">
-            <value>Geração automática</value>
-          </text>
-          <text id="/data/p_BarcodeID:label">
-            <value>Digitalize agora o código de barras</value>
-          </text>
           <text id="/data/p_GenerateID:label">
             <value>Registar o seguinte código de identificação único para o respondente numa lista separada e em cada teste(s) de diagnóstico administrado(s)</value>
+          </text>
+          <text id="/data/p_lymphod:label">
+            <value>Linfedema (Inchaço)</value>
+          </text>
+          <text id="/data/p_lymphod/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/p_lymphod/Nao:label">
+            <value>Nao</value>
+          </text>
+          <text id="/data/p_lymph_location:label">
+            <value>Localização de linfedema</value>
+          </text>
+          <text id="/data/p_lymph_location/Perna:label">
+            <value>Perna</value>
+          </text>
+          <text id="/data/p_lymph_location/Mama:label">
+            <value>Mama</value>
+          </text>
+          <text id="/data/p_lymph_location/Braço:label">
+            <value>Braço</value>
+          </text>
+          <text id="/data/p_hydrocele:label">
+            <value>Hidrocele</value>
+          </text>
+          <text id="/data/p_hydrocele/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/p_hydrocele/Nao:label">
+            <value>Nao</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
             <value>Acaba de introduzir um valor que terminará o inquérito</value>
@@ -199,11 +236,12 @@
       <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 21" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 20" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
-      <bind nodeset="/data/p_IDMethod" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
-      <bind nodeset="/data/p_BarcodeID" relevant=" /data/p_IDMethod  = 'Scanner' and  /data/p_consent  = 'Sim'" required="true()" type="barcode"/>
-      <bind calculate="concat( /data/p_cluster_id ,'-',/data/meta/randomnum)" nodeset="/data/p_GenerateID" readonly="true()" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Sim'" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_cluster_id ,'-',/data/meta/randomnum)" nodeset="/data/p_GenerateID" readonly="true()" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string" db_add_col_4="/data/p_cluster_id" db_add_col_5="."/>
+      <bind nodeset="/data/p_lymphod" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/p_lymph_location" relevant=" /data/p_consent  = 'Sim' and  /data/p_lymphod  = 'Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/p_hydrocele" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Nao'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
@@ -258,23 +296,46 @@
     <input ref="/data/p_how_long_lived">
       <label ref="jr:itext('/data/p_how_long_lived:label')"/>
     </input>
-    <select1 ref="/data/p_IDMethod">
-      <label ref="jr:itext('/data/p_IDMethod:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_IDMethod/Scanner:label')"/>
-        <value>Scanner</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_IDMethod/ID_generation:label')"/>
-        <value>ID_generation</value>
-      </item>
-    </select1>
-    <input ref="/data/p_BarcodeID">
-      <label ref="jr:itext('/data/p_BarcodeID:label')"/>
-    </input>
     <input ref="/data/p_GenerateID">
       <label ref="jr:itext('/data/p_GenerateID:label')"/>
     </input>
+    <select1 ref="/data/p_lymphod">
+      <label ref="jr:itext('/data/p_lymphod:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_lymphod/Sim:label')"/>
+        <value>Sim</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_lymphod/Nao:label')"/>
+        <value>Nao</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_lymph_location">
+      <label ref="jr:itext('/data/p_lymph_location:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_lymph_location/Perna:label')"/>
+        <value>Perna</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_lymph_location/Mama:label')"/>
+        <value>Mama</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_lymph_location/Braço:label')"/>
+        <value>Braço</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_hydrocele">
+      <label ref="jr:itext('/data/p_hydrocele:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_hydrocele/Sim:label')"/>
+        <value>Sim</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_hydrocele/Nao:label')"/>
+        <value>Nao</value>
+      </item>
+    </select1>
     <input ref="/data/p_ending_survey_note">
       <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
     </input>

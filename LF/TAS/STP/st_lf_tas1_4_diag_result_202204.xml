@@ -7,20 +7,21 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Abr 2022) 1. TAS1 FL - Site formulário V2</h:title>
+    <h:title>(Abr 2022) 4. TAS1 FL - Filaremia noturna V2</h:title>
     <model >
 
       <instance>
-        <data id="st_lf_tas1_1_sites_202204_2">
-          <c_recorder/>
-          <c_eu_name/>
-          <c_district/>
-          <c_cluster_name/>
-          <c_cluster_id/>
-          <c_gps/>
-          <c_ClusterNotes/>
-          <c_start/>
-          <c_end/>
+        <data id="st_lf_tas1_4_diag_result_202204_2">
+          <m_recorderID/>
+          <m_eu_name/>
+          <m_district/>
+          <m_cluster_name/>
+          <m_cluster_id/>
+          <m_generatedid/>
+          <m_result1/>
+          <m_notes/>
+          <m_start/>
+          <m_end/>
           <meta>
             <instanceID/>
           </meta>
@@ -29,53 +30,101 @@
 
       <itext>
         <translation lang="French">
-          <text id="/data/c_recorder:jr:constraintMsg">
+          <text id="/data/m_recorderID:jr:constraintMsg">
             <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
           </text>
-          <text id="/data/c_recorder:label">
+          <text id="/data/m_recorderID:label">
             <value>Entrer l'identifiant de l'enregistreur</value>
           </text>
-          <text id="/data/c_recorder:hint">
-            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui a été attribué à vous ou à votre équipe.</value>
+          <text id="/data/m_recorderID:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui vous a été attribué, à vous ou à votre équipe.</value>
           </text>
-          <text id="/data/c_eu_name:label">
+          <text id="/data/m_eu_name:label">
             <value>Sélectionner la province</value>
           </text>
-          <text id="/data/c_eu_name/Principe:label">
+          <text id="/data/m_eu_name/Principe:label">
             <value>Principe</value>
           </text>
-          <text id="/data/c_eu_name/Sao-Tomé:label">
+          <text id="/data/m_eu_name/Sao-Tomé:label">
             <value>Sao-Tomé</value>
           </text>
-          <text id="/data/c_district:label">
+          <text id="/data/m_district:label">
             <value>Sélectionner l'unité d'évaluation (UE)</value>
           </text>
-          <text id="/data/c_cluster_name:label">
+          <text id="/data/m_cluster_name:label">
             <value>Entrer le nom de la localité</value>
           </text>
-          <text id="/data/c_cluster_id:jr:constraintMsg">
+          <text id="/data/m_cluster_id:jr:constraintMsg">
             <value>Le code doit être un nombre à deux chiffres entre 99 et 1000</value>
           </text>
-          <text id="/data/c_cluster_id:label">
+          <text id="/data/m_cluster_id:label">
             <value>Entrer le code de la localité</value>
           </text>
-          <text id="/data/c_cluster_id:hint">
+          <text id="/data/m_cluster_id:hint">
             <value>Le code a trois chiffres associés à chaque localité</value>
           </text>
-          <text id="/data/c_gps:label">
-            <value>Prener vos coordonnées GPS :</value>
+          <text id="/data/m_generatedid:jr:constraintMsg">
+            <value>Le format doit être 123-1234-567. Juste la deuxième et la troisième partie du code</value>
           </text>
-          <text id="/data/c_gps:hint">
-            <value>Les coordonnées GPS sont plus faciles à collecter à l'extérieur. Délai d'attente de 2 min</value>
+          <text id="/data/m_generatedid:label">
+            <value>Entrer la deuxième partie et la troisième partie du code généré (doit doit avoir le format 123-1234-567 uniquement avec des nombres et des tirets)</value>
           </text>
-          <text id="/data/c_ClusterNotes:label">
-            <value>Informations supplémentaires</value>
+          <text id="/data/m_generatedid:hint">
+            <value>Par exemple si le code généré était 123-1234-567, le deuxième et troisième partie du code est de 123-1234-567</value>
+          </text>
+          <text id="/data/m_result1:label">
+            <value>Résultat de la goutte épaisse nocturne</value>
+          </text>
+          <text id="/data/m_result1:hint">
+            <value>Presença de microfilárias</value>
+          </text>
+          <text id="/data/m_result1/Positivo:label">
+            <value>Positif</value>
+          </text>
+          <text id="/data/m_result1/Negativo:label">
+            <value>Négatif</value>
+          </text>
+          <text id="/data/m_notes:label">
+            <value>Notes supplémentaires</value>
           </text>
           <text id="yes_no-0">
             <value>Oui</value>
           </text>
           <text id="yes_no-1">
             <value>Non</value>
+          </text>
+          <text id="id_list-0">
+            <value>Scanner</value>
+          </text>
+          <text id="id_list-1">
+            <value>Génération automatique</value>
+          </text>
+          <text id="results_list-0">
+            <value>Positif</value>
+          </text>
+          <text id="results_list-1">
+            <value>Négatif</value>
+          </text>
+          <text id="why_invalid-0">
+            <value>Absence de ligne témoin/contrôle</value>
+          </text>
+          <text id="why_invalid-1">
+            <value>Ligne témoin discontinue/partielle</value>
+          </text>
+          <text id="why_invalid-2">
+            <value>Difficulté d'absorption d'échantillon</value>
+          </text>
+          <text id="why_invalid-3">
+            <value>Difficulté de migration d'échantillon</value>
+          </text>
+          <text id="why_invalid-4">
+            <value>Trace de sang persiste (sang resté sur la bandelette/a obscurci les lignes)</value>
+          </text>
+          <text id="why_invalid-5">
+            <value>Insuffisance du volume de sang dû à la pipette</value>
+          </text>
+          <text id="why_invalid-6">
+            <value>Autre (expliquer)</value>
           </text>
           <text id="province_list-0">
             <value>Principe</value>
@@ -1006,53 +1055,101 @@
           </text>
         </translation>
         <translation default="true()" lang="Portugese">
-          <text id="/data/c_recorder:jr:constraintMsg">
+          <text id="/data/m_recorderID:jr:constraintMsg">
             <value>O código deve ser um número de dois algarismos entre 9 e 100</value>
           </text>
-          <text id="/data/c_recorder:label">
-            <value>Introduzir o ID do gravador</value>
+          <text id="/data/m_recorderID:label">
+            <value>Enter Recorder ID</value>
           </text>
-          <text id="/data/c_recorder:hint">
-            <value>Se for o único gravador da sua equipa, este pode ser chamado de "identificação da equipa". O ID do gravador é um código de 2 dígitos que lhe foi atribuído a si ou à sua equipa.</value>
+          <text id="/data/m_recorderID:hint">
+            <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
           </text>
-          <text id="/data/c_eu_name:label">
+          <text id="/data/m_eu_name:label">
             <value>Seleccionar província</value>
           </text>
-          <text id="/data/c_eu_name/Principe:label">
+          <text id="/data/m_eu_name/Principe:label">
             <value>Principe</value>
           </text>
-          <text id="/data/c_eu_name/Sao-Tomé:label">
+          <text id="/data/m_eu_name/Sao-Tomé:label">
             <value>Sao-Tomé</value>
           </text>
-          <text id="/data/c_district:label">
+          <text id="/data/m_district:label">
             <value>Seleccionar a unidade de avaliação</value>
           </text>
-          <text id="/data/c_cluster_name:label">
+          <text id="/data/m_cluster_name:label">
             <value>Introduza o nome do local</value>
           </text>
-          <text id="/data/c_cluster_id:jr:constraintMsg">
-            <value>O código deve ser um número de dois algarismos entre 99 e 1000</value>
+          <text id="/data/m_cluster_id:jr:constraintMsg">
+            <value>The code must be a two-digit number between 99 and 1000</value>
           </text>
-          <text id="/data/c_cluster_id:label">
+          <text id="/data/m_cluster_id:label">
             <value>Introduza o código da localidade</value>
           </text>
-          <text id="/data/c_cluster_id:hint">
+          <text id="/data/m_cluster_id:hint">
             <value>O código de três dígitos associado a cada local</value>
           </text>
-          <text id="/data/c_gps:label">
-            <value>Registe a sua localização:</value>
+          <text id="/data/m_generatedid:jr:constraintMsg">
+            <value>The format must be 123-1234-567. Only the second and third parts of the code</value>
           </text>
-          <text id="/data/c_gps:hint">
-            <value>As coordenadas GPS são mais fáceis de recolher no exterior.</value>
+          <text id="/data/m_generatedid:label">
+            <value>Introduza a segunda parte e a terceira parte do código gerado (tem de ter o formato 1234-567 apenas com números e traços)</value>
           </text>
-          <text id="/data/c_ClusterNotes:label">
-            <value>Notas adicionais a acrescentar?</value>
+          <text id="/data/m_generatedid:hint">
+            <value>Por exemplo, se o código gerado foi 123-1234-567, a segunda e terceira partes do código é 123-1234-567</value>
+          </text>
+          <text id="/data/m_result1:label">
+            <value>Resultado da gota grossa noturna</value>
+          </text>
+          <text id="/data/m_result1:hint">
+            <value>Presença de microfilárias</value>
+          </text>
+          <text id="/data/m_result1/Positivo:label">
+            <value>Positivo</value>
+          </text>
+          <text id="/data/m_result1/Negativo:label">
+            <value>Negativo</value>
+          </text>
+          <text id="/data/m_notes:label">
+            <value>Notas adicionais sobre o formulário</value>
           </text>
           <text id="yes_no-0">
             <value>Sim</value>
           </text>
           <text id="yes_no-1">
-            <value>Não</value>
+            <value>Nao</value>
+          </text>
+          <text id="id_list-0">
+            <value>Scanner</value>
+          </text>
+          <text id="id_list-1">
+            <value>Geração automática</value>
+          </text>
+          <text id="results_list-0">
+            <value>Positivo</value>
+          </text>
+          <text id="results_list-1">
+            <value>Negativo</value>
+          </text>
+          <text id="why_invalid-0">
+            <value>Absence of control line</value>
+          </text>
+          <text id="why_invalid-1">
+            <value>Broken/partial control line</value>
+          </text>
+          <text id="why_invalid-2">
+            <value>Difficulty of absorbing sample</value>
+          </text>
+          <text id="why_invalid-3">
+            <value>Difficulty of migrating sample</value>
+          </text>
+          <text id="why_invalid-4">
+            <value>Trace of blood persists</value>
+          </text>
+          <text id="why_invalid-5">
+            <value>Insufficient blood volume due to pipette</value>
+          </text>
+          <text id="why_invalid-6">
+            <value>Other (pleas explain)</value>
           </text>
           <text id="province_list-0">
             <value>Principe</value>
@@ -1992,6 +2089,62 @@
           <item>
             <itextId>yes_no-1</itextId>
             <name>Nao</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="id_list">
+        <root>
+          <item>
+            <itextId>id_list-0</itextId>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <itextId>id_list-1</itextId>
+            <name>ID_generation</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="results_list">
+        <root>
+          <item>
+            <itextId>results_list-0</itextId>
+            <name>Positivo</name>
+          </item>
+          <item>
+            <itextId>results_list-1</itextId>
+            <name>Negativo</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="why_invalid">
+        <root>
+          <item>
+            <itextId>why_invalid-0</itextId>
+            <name>Sem.linha.de.controlo/acompanhamento</name>
+          </item>
+          <item>
+            <itextId>why_invalid-1</itextId>
+            <name>Linha.de.controlo.descontínuo/parcial</name>
+          </item>
+          <item>
+            <itextId>why_invalid-2</itextId>
+            <name>Dificuldade.na.absorção.da.amostra</name>
+          </item>
+          <item>
+            <itextId>why_invalid-3</itextId>
+            <name>Dificuldade.com.a.migração.de.amostras</name>
+          </item>
+          <item>
+            <itextId>why_invalid-4</itextId>
+            <name>O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras)</name>
+          </item>
+          <item>
+            <itextId>why_invalid-5</itextId>
+            <name>Volume.de.sangue.insuficiente.devido.à.pipetagem</name>
+          </item>
+          <item>
+            <itextId>why_invalid-6</itextId>
+            <name>Other</name>
           </item>
         </root>
       </instance>
@@ -3554,62 +3707,75 @@
           </item>
         </root>
       </instance>
-      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/c_recorder:jr:constraintMsg')" nodeset="/data/c_recorder" required="true()" type="int"/>
-      <bind nodeset="/data/c_eu_name" required="true()" type="string" db_add_col_1="."/>
-      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="/data/c_eu_name" db_add_col_2="."/>
-      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_district" db_add_col_3="."/>
-      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
-      <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
-      <bind nodeset="/data/c_ClusterNotes" type="string"/>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/m_recorderID:jr:constraintMsg')" nodeset="/data/m_recorderID" required="true()" type="int"/>
+      <bind nodeset="/data/m_eu_name" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/m_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/m_eu_name"/>
+      <bind nodeset="/data/m_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/m_district"/>
+      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/m_cluster_id:jr:constraintMsg')" nodeset="/data/m_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/m_cluster_name"/>
+      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/m_generatedid:jr:constraintMsg')" nodeset="/data/m_generatedid" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/m_cluster_id"/>
+      <bind nodeset="/data/m_result1" required="true()" type="string"/>
+      <bind nodeset="/data/m_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/m_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/m_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body>
-    <input ref="/data/c_recorder">
-      <label ref="jr:itext('/data/c_recorder:label')"/>
-      <hint ref="jr:itext('/data/c_recorder:hint')"/>
+    <input ref="/data/m_recorderID">
+      <label ref="jr:itext('/data/m_recorderID:label')"/>
+      <hint ref="jr:itext('/data/m_recorderID:hint')"/>
     </input>
-    <select1 ref="/data/c_eu_name">
-      <label ref="jr:itext('/data/c_eu_name:label')"/>
+    <select1 ref="/data/m_eu_name">
+      <label ref="jr:itext('/data/m_eu_name:label')"/>
       <item>
-        <label ref="jr:itext('/data/c_eu_name/Principe:label')"/>
+        <label ref="jr:itext('/data/m_eu_name/Principe:label')"/>
         <value>Principe</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/c_eu_name/Sao-Tomé:label')"/>
+        <label ref="jr:itext('/data/m_eu_name/Sao-Tomé:label')"/>
         <value>Sao-Tomé</value>
       </item>
     </select1>
-    <select1 ref="/data/c_district">
-      <label ref="jr:itext('/data/c_district:label')"/>
-      <itemset nodeset="instance('district_list')/root/item[province_list =  /data/c_eu_name ]">
+    <select1 ref="/data/m_district">
+      <label ref="jr:itext('/data/m_district:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[province_list =  /data/m_eu_name ]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <select1 ref="/data/c_cluster_name">
-      <label ref="jr:itext('/data/c_cluster_name:label')"/>
-      <itemset nodeset="instance('site_list')/root/item[district_list =  /data/c_district ]">
+    <select1 ref="/data/m_cluster_name">
+      <label ref="jr:itext('/data/m_cluster_name:label')"/>
+      <itemset nodeset="instance('site_list')/root/item[district_list =  /data/m_district ]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <select1 ref="/data/c_cluster_id">
-      <label ref="jr:itext('/data/c_cluster_id:label')"/>
-      <hint ref="jr:itext('/data/c_cluster_id:hint')"/>
-      <itemset nodeset="instance('site_code')/root/item[site_list =  /data/c_cluster_name ]">
+    <select1 ref="/data/m_cluster_id">
+      <label ref="jr:itext('/data/m_cluster_id:label')"/>
+      <hint ref="jr:itext('/data/m_cluster_id:hint')"/>
+      <itemset nodeset="instance('site_code')/root/item[site_list =  /data/m_cluster_name ]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <input ref="/data/c_gps">
-      <label ref="jr:itext('/data/c_gps:label')"/>
-      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    <input ref="/data/m_generatedid">
+      <label ref="jr:itext('/data/m_generatedid:label')"/>
+      <hint ref="jr:itext('/data/m_generatedid:hint')"/>
     </input>
-    <input ref="/data/c_ClusterNotes">
-      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    <select1 ref="/data/m_result1">
+      <label ref="jr:itext('/data/m_result1:label')"/>
+      <hint ref="jr:itext('/data/m_result1:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/m_result1/Positivo:label')"/>
+        <value>Positivo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_result1/Negativo:label')"/>
+        <value>Negativo</value>
+      </item>
+    </select1>
+    <input ref="/data/m_notes">
+      <label ref="jr:itext('/data/m_notes:label')"/>
     </input>
   </h:body>
 </h:html>

@@ -7,35 +7,22 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Abr 2022) 3. TAS1 FL - Resultado FTS</h:title>
+    <h:title>(Abr 2022) 3. TAS1 FL - Resultado FTS V2</h:title>
     <model >
 
       <instance>
-        <data id="st_lf_tas1_3_fts_result_202204">
+        <data id="st_lf_tas1_3_fts_result_202204_2">
           <d_recorderID/>
           <d_eu_name/>
           <d_district/>
           <d_cluster_name/>
           <d_cluster_id/>
-          <d_IDType/>
-          <d_BarcodeID/>
           <d_generatedid/>
-          <d_generatedid2/>
           <d_lotnumber1/>
           <d_result1/>
           <d_why_Invalido1/>
           <d_why_Invalido_other1/>
-          <d_display_result1/>
-          <d_need_second_test/>
-          <d_lotnumber2/>
-          <d_result2/>
-          <d_why_Invalido2/>
-          <d_why_Invalido_other2/>
-          <d_display_result2/>
-          <d_final_result/>
-          <d_display_final_result/>
-          <d_Positivo_why_no_tx/>
-          <notes_part/>
+          <d_notes/>
           <d_start/>
           <d_end/>
           <meta>
@@ -79,32 +66,11 @@
           <text id="/data/d_cluster_id:hint">
             <value>Le code a trois chiffres associés à chaque localité</value>
           </text>
-          <text id="/data/d_IDType:label">
-            <value>Avez-vous besoin de scanner le code barre sur le test diagnostique</value>
-          </text>
-          <text id="/data/d_IDType/Scanner:label">
-            <value>Scanner</value>
-          </text>
-          <text id="/data/d_IDType/ID_generation:label">
-            <value>Génération automatique</value>
-          </text>
-          <text id="/data/d_BarcodeID:label">
-            <value>Scanner le code-barres maintenant</value>
-          </text>
-          <text id="/data/d_generatedid:jr:constraintMsg">
-            <value>Le format doit être 123-1234-567. Juste la deuxième et la troisième partie du code</value>
-          </text>
           <text id="/data/d_generatedid:label">
             <value>Entrer la deuxième partie et la troisième partie du code généré (doit doit avoir le format 123-1234-567 uniquement avec des nombres et des tirets)</value>
           </text>
           <text id="/data/d_generatedid:hint">
             <value>Par exemple si le code généré était 123-1234-567, le deuxième et troisième partie du code est de 123-1234-567</value>
-          </text>
-          <text id="/data/d_generatedid2:jr:constraintMsg">
-            <value>Le code répété doit être le même</value>
-          </text>
-          <text id="/data/d_generatedid2:label">
-            <value>Répéter le code</value>
           </text>
           <text id="/data/d_lotnumber1:jr:constraintMsg">
             <value>Le lot doit être un nombre à six chiffre</value>
@@ -154,66 +120,7 @@
           <text id="/data/d_why_Invalido_other1:label">
             <value>Donner la raison du test Invalidoe</value>
           </text>
-          <text id="/data/d_need_second_test:label">
-            <value>Le premier résultat du test de ce participant est <output value=" /data/d_display_result1 "/>
-. Ce résultat nécessite un deuxième test. Continuez ce questionnaire pour entrer le deuxième résultat du test du participant.</value>
-          </text>
-          <text id="/data/d_lotnumber2:jr:constraintMsg">
-            <value>Le lot doit être un nombre à six chiffre</value>
-          </text>
-          <text id="/data/d_lotnumber2:label">
-            <value>Veuiller entrer le numéro de lot FTS 2</value>
-          </text>
-          <text id="/data/d_result2:label">
-            <value>FTS - Test 2</value>
-          </text>
-          <text id="/data/d_result2:hint">
-            <value>Invalidoe comprend des erreurs de test et un sang insuffisant</value>
-          </text>
-          <text id="/data/d_result2/Positivo:label">
-            <value>Positif</value>
-          </text>
-          <text id="/data/d_result2/Negativo:label">
-            <value>Négatif</value>
-          </text>
-          <text id="/data/d_result2/Invalido:label">
-            <value>Invalid</value>
-          </text>
-          <text id="/data/d_why_Invalido2:label">
-            <value>Donnez la raison du test Invalidoe</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Sem.linha.de.controlo/acompanhamento:label">
-            <value>Absence de ligne témoin/contrôle</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Linha.de.controlo.descontínuo/parcial:label">
-            <value>Ligne témoin discontinue/partielle</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Dificuldade.na.absorção.da.amostra:label">
-            <value>Difficulté d'absorption d'échantillon</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Dificuldade.com.a.migração.de.amostras:label">
-            <value>Difficulté de migration d'échantillon</value>
-          </text>
-          <text id="/data/d_why_Invalido2/O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras):label">
-            <value>Trace de sang persiste (sang resté sur la bandelette/a obscurci les lignes)</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Volume.de.sangue.insuficiente.devido.à.pipetagem:label">
-            <value>Insuffisance du volume de sang dû à la pipette</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Other:label">
-            <value>Autre (expliquer)</value>
-          </text>
-          <text id="/data/d_why_Invalido_other2:label">
-            <value>Donnez la raison du test Invalidoe</value>
-          </text>
-          <text id="/data/d_display_final_result:label">
-            <value>Le résultat final de ce participant est : <output value=" /data/d_final_result "/>
-            </value>
-          </text>
-          <text id="/data/d_Positivo_why_no_tx:label">
-            <value>Veuillez préciser le plan de traitement de ce participant ou expliquer pourquoi le traitement n'est pas possible.</value>
-          </text>
-          <text id="/data/notes_part:label">
+          <text id="/data/d_notes:label">
             <value>Notes supplémentaires</value>
           </text>
           <text id="yes_no-0">
@@ -1220,32 +1127,11 @@
           <text id="/data/d_cluster_id:hint">
             <value>O código de três dígitos associado a cada local</value>
           </text>
-          <text id="/data/d_IDType:label">
-            <value>É necessário digitalizar um código de barras no teste de diagnóstico?</value>
-          </text>
-          <text id="/data/d_IDType/Scanner:label">
-            <value>Scanner</value>
-          </text>
-          <text id="/data/d_IDType/ID_generation:label">
-            <value>Geração automática</value>
-          </text>
-          <text id="/data/d_BarcodeID:label">
-            <value>Digitalize agora o código de barras</value>
-          </text>
-          <text id="/data/d_generatedid:jr:constraintMsg">
-            <value>The format must be 123-1234-567. Only the second and third parts of the code</value>
-          </text>
           <text id="/data/d_generatedid:label">
             <value>Introduza a segunda parte e a terceira parte do código gerado (tem de ter o formato 1234-567 apenas com números e traços)</value>
           </text>
           <text id="/data/d_generatedid:hint">
             <value>Por exemplo, se o código gerado foi 123-1234-567, a segunda e terceira partes do código é 123-1234-567</value>
-          </text>
-          <text id="/data/d_generatedid2:jr:constraintMsg">
-            <value>O código repetido deve ser o mesmo</value>
-          </text>
-          <text id="/data/d_generatedid2:label">
-            <value>Repita o código</value>
           </text>
           <text id="/data/d_lotnumber1:jr:constraintMsg">
             <value>Lot must be a six-digit number</value>
@@ -1295,66 +1181,7 @@
           <text id="/data/d_why_Invalido_other1:label">
             <value>Dar razão para o teste inválido</value>
           </text>
-          <text id="/data/d_need_second_test:label">
-            <value>O resultado do primeiro teste deste participante foi <output value=" /data/d_display_result1 "/>
-. Este resultado requer um segundo teste. Continuar este questionário para introduzir o segundo resultado do teste do participante.</value>
-          </text>
-          <text id="/data/d_lotnumber2:jr:constraintMsg">
-            <value>O lote deve ser um número de seis dígitos</value>
-          </text>
-          <text id="/data/d_lotnumber2:label">
-            <value>Por favor, introduza o lote nº 2 do FTS</value>
-          </text>
-          <text id="/data/d_result2:label">
-            <value>FTS - Teste 2</value>
-          </text>
-          <text id="/data/d_result2:hint">
-            <value>Inválido inclui erros de teste e sangue insuficiente</value>
-          </text>
-          <text id="/data/d_result2/Positivo:label">
-            <value>Positivo</value>
-          </text>
-          <text id="/data/d_result2/Negativo:label">
-            <value>Negativo</value>
-          </text>
-          <text id="/data/d_result2/Invalido:label">
-            <value>Inválido</value>
-          </text>
-          <text id="/data/d_why_Invalido2:label">
-            <value>Dar razão para o teste inválido</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Sem.linha.de.controlo/acompanhamento:label">
-            <value>Absence of control line</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Linha.de.controlo.descontínuo/parcial:label">
-            <value>Broken/partial control line</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Dificuldade.na.absorção.da.amostra:label">
-            <value>Difficulty of absorbing sample</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Dificuldade.com.a.migração.de.amostras:label">
-            <value>Difficulty of migrating sample</value>
-          </text>
-          <text id="/data/d_why_Invalido2/O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras):label">
-            <value>Trace of blood persists</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Volume.de.sangue.insuficiente.devido.à.pipetagem:label">
-            <value>Insufficient blood volume due to pipette</value>
-          </text>
-          <text id="/data/d_why_Invalido2/Other:label">
-            <value>Other (pleas explain)</value>
-          </text>
-          <text id="/data/d_why_Invalido_other2:label">
-            <value>Dar razão para o teste inválido</value>
-          </text>
-          <text id="/data/d_display_final_result:label">
-            <value>O resultado final deste participante é: <output value=" /data/d_final_result "/>
-            </value>
-          </text>
-          <text id="/data/d_Positivo_why_no_tx:label">
-            <value>Por favor especificar o plano para tratar este participante ou explicar porque é que o tratamento não é possível.</value>
-          </text>
-          <text id="/data/notes_part:label">
+          <text id="/data/d_notes:label">
             <value>Notas adicionais sobre o formulário</value>
           </text>
           <text id="yes_no-0">
@@ -2328,7 +2155,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="yes_no">
         <root>
           <item>
@@ -3965,35 +3791,12 @@
       <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_eu_name"/>
       <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_district"/>
       <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/d_cluster_name"/>
-      <bind nodeset="/data/d_IDType" required="true()" type="string"/>
-      <bind nodeset="/data/d_BarcodeID" relevant=" /data/d_IDType  = &quot;Scanner&quot;" required="true()" type="barcode"/>
-      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_generatedid:jr:constraintMsg')" nodeset="/data/d_generatedid" relevant=" /data/d_IDType  = &quot;ID_generation&quot;" required="true()" type="string"/>
-      <bind constraint=". =  /data/d_generatedid " jr:constraintMsg="jr:itext('/data/d_generatedid2:jr:constraintMsg')" nodeset="/data/d_generatedid2" relevant=" /data/d_IDType  = &quot;ID_generation&quot;" required="true()" type="string"/>
+      <bind nodeset="/data/d_generatedid" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_cluster_id"/>
       <bind constraint="regex(.,'^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_lotnumber1:jr:constraintMsg')" nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_Invalido1" relevant=" /data/d_result1  = 'Invalido'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_Invalido_other1" relevant="selected( /data/d_why_Invalido1 ,'Other')" required="true()" type="string"/>
-      <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result1" required="true()" type="string"/>
-      <bind nodeset="/data/d_need_second_test" readonly="true()" relevant=" /data/d_result1 != 'Negativo'" type="string"/>
-      <bind constraint="regex(.,'^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_lotnumber2:jr:constraintMsg')" nodeset="/data/d_lotnumber2" relevant=" /data/d_result1 != 'Negativo'" required="true()" type="string"/>
-      <bind nodeset="/data/d_result2" relevant=" /data/d_result1 != 'Negativo'" required="true()" type="string"/>
-      <bind nodeset="/data/d_why_Invalido2" relevant=" /data/d_result2  = 'Invalido'" required="true()" type="string"/>
-      <bind nodeset="/data/d_why_Invalido_other2" relevant="selected( /data/d_why_Invalido2 ,'Other')" required="true()" type="string"/>
-      <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result2" relevant=" /data/d_result1 != 'Negativo'" type="string"/>
-      <bind calculate="if( /data/d_result1 =&quot;Positivo&quot; and  /data/d_result2 =&quot;Positivo&quot;, &quot;Positivo&quot;,
- if( /data/d_result1 =&quot;Positivo&quot; and  /data/d_result2 =&quot;Negativo&quot;, &quot;Indeterminate&quot;,
- if( /data/d_result1 =&quot;Positivo&quot; and  /data/d_result2 =&quot;Invalido&quot;, &quot;Positivo&quot;,
- if( /data/d_result1 =&quot;Invalido&quot; and  /data/d_result2 =&quot;Positivo&quot;, &quot;Positivo&quot;,
- if( /data/d_result1 =&quot;Invalido&quot; and  /data/d_result2 =&quot;Invalido&quot;, &quot;Indeterminate&quot;,
- if( /data/d_result1 =&quot;Invalido&quot; and  /data/d_result2 =&quot;Negativo&quot;, &quot;Negativo&quot;, &quot;Negativo&quot;)
- )
- )
- )
- )
-)" nodeset="/data/d_final_result" type="string"/>
-      <bind nodeset="/data/d_display_final_result" readonly="true()" type="string"/>
-      <bind nodeset="/data/d_Positivo_why_no_tx" relevant=" /data/d_final_result  = 'Positivo'" type="string"/>
-      <bind nodeset="/data/notes_part" type="string"/>
+      <bind nodeset="/data/d_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
@@ -4037,26 +3840,9 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <select1 ref="/data/d_IDType">
-      <label ref="jr:itext('/data/d_IDType:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_IDType/Scanner:label')"/>
-        <value>Scanner</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_IDType/ID_generation:label')"/>
-        <value>ID_generation</value>
-      </item>
-    </select1>
-    <input ref="/data/d_BarcodeID">
-      <label ref="jr:itext('/data/d_BarcodeID:label')"/>
-    </input>
     <input ref="/data/d_generatedid">
       <label ref="jr:itext('/data/d_generatedid:label')"/>
       <hint ref="jr:itext('/data/d_generatedid:hint')"/>
-    </input>
-    <input ref="/data/d_generatedid2">
-      <label ref="jr:itext('/data/d_generatedid2:label')"/>
     </input>
     <input ref="/data/d_lotnumber1">
       <label ref="jr:itext('/data/d_lotnumber1:label')"/>
@@ -4111,70 +3897,8 @@
     <input ref="/data/d_why_Invalido_other1">
       <label ref="jr:itext('/data/d_why_Invalido_other1:label')"/>
     </input>
-    <input ref="/data/d_need_second_test">
-      <label ref="jr:itext('/data/d_need_second_test:label')"/>
-    </input>
-    <input ref="/data/d_lotnumber2">
-      <label ref="jr:itext('/data/d_lotnumber2:label')"/>
-    </input>
-    <select1 ref="/data/d_result2">
-      <label ref="jr:itext('/data/d_result2:label')"/>
-      <hint ref="jr:itext('/data/d_result2:hint')"/>
-      <item>
-        <label ref="jr:itext('/data/d_result2/Positivo:label')"/>
-        <value>Positivo</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_result2/Negativo:label')"/>
-        <value>Negativo</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_result2/Invalido:label')"/>
-        <value>Invalido</value>
-      </item>
-    </select1>
-    <select ref="/data/d_why_Invalido2">
-      <label ref="jr:itext('/data/d_why_Invalido2:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_why_Invalido2/Sem.linha.de.controlo/acompanhamento:label')"/>
-        <value>Sem.linha.de.controlo/acompanhamento</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_why_Invalido2/Linha.de.controlo.descontínuo/parcial:label')"/>
-        <value>Linha.de.controlo.descontínuo/parcial</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_why_Invalido2/Dificuldade.na.absorção.da.amostra:label')"/>
-        <value>Dificuldade.na.absorção.da.amostra</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_why_Invalido2/Dificuldade.com.a.migração.de.amostras:label')"/>
-        <value>Dificuldade.com.a.migração.de.amostras</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_why_Invalido2/O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras):label')"/>
-        <value>O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras)</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_why_Invalido2/Volume.de.sangue.insuficiente.devido.à.pipetagem:label')"/>
-        <value>Volume.de.sangue.insuficiente.devido.à.pipetagem</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_why_Invalido2/Other:label')"/>
-        <value>Other</value>
-      </item>
-    </select>
-    <input ref="/data/d_why_Invalido_other2">
-      <label ref="jr:itext('/data/d_why_Invalido_other2:label')"/>
-    </input>
-    <input ref="/data/d_display_final_result">
-      <label ref="jr:itext('/data/d_display_final_result:label')"/>
-    </input>
-    <input ref="/data/d_Positivo_why_no_tx">
-      <label ref="jr:itext('/data/d_Positivo_why_no_tx:label')"/>
-    </input>
-    <input ref="/data/notes_part">
-      <label ref="jr:itext('/data/notes_part:label')"/>
+    <input ref="/data/d_notes">
+      <label ref="jr:itext('/data/d_notes:label')"/>
     </input>
   </h:body>
 </h:html>
