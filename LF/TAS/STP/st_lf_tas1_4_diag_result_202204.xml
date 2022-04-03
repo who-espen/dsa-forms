@@ -7,18 +7,20 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Abr 2022) 4. TAS1 FL - Filaremia noturna V2</h:title>
+    <h:title>(Abr 2022) 4. TAS1 FL - Filaremia noturna V2.1</h:title>
     <model >
 
       <instance>
-        <data id="st_lf_tas1_4_diag_result_202204_2">
+        <data id="st_lf_tas1_4_diag_result_202204_2_1">
           <m_recorderID/>
           <m_eu_name/>
           <m_district/>
           <m_cluster_name/>
           <m_cluster_id/>
           <m_generatedid/>
-          <m_result1/>
+          <m_heure_prelevement/>
+          <m_result/>
+          <m_nbre_parasite/>
           <m_notes/>
           <m_start/>
           <m_end/>
@@ -72,17 +74,23 @@
           <text id="/data/m_generatedid:hint">
             <value>Par exemple si le code généré était 123-1234-567, le deuxième et troisième partie du code est de 123-1234-567</value>
           </text>
-          <text id="/data/m_result1:label">
+          <text id="/data/m_heure_prelevement:label">
+            <value>Heure de prelevement</value>
+          </text>
+          <text id="/data/m_result:label">
             <value>Résultat de la goutte épaisse nocturne</value>
           </text>
-          <text id="/data/m_result1:hint">
+          <text id="/data/m_result:hint">
             <value>Presença de microfilárias</value>
           </text>
-          <text id="/data/m_result1/Positivo:label">
+          <text id="/data/m_result/Positivo:label">
             <value>Positif</value>
           </text>
-          <text id="/data/m_result1/Negativo:label">
+          <text id="/data/m_result/Negativo:label">
             <value>Négatif</value>
+          </text>
+          <text id="/data/m_nbre_parasite:label">
+            <value>Número de parasitas</value>
           </text>
           <text id="/data/m_notes:label">
             <value>Notes supplémentaires</value>
@@ -1097,17 +1105,23 @@
           <text id="/data/m_generatedid:hint">
             <value>Por exemplo, se o código gerado foi 123-1234-567, a segunda e terceira partes do código é 123-1234-567</value>
           </text>
-          <text id="/data/m_result1:label">
+          <text id="/data/m_heure_prelevement:label">
+            <value>Hora da recolha</value>
+          </text>
+          <text id="/data/m_result:label">
             <value>Resultado da gota grossa noturna</value>
           </text>
-          <text id="/data/m_result1:hint">
+          <text id="/data/m_result:hint">
             <value>Presença de microfilárias</value>
           </text>
-          <text id="/data/m_result1/Positivo:label">
+          <text id="/data/m_result/Positivo:label">
             <value>Positivo</value>
           </text>
-          <text id="/data/m_result1/Negativo:label">
+          <text id="/data/m_result/Negativo:label">
             <value>Negativo</value>
+          </text>
+          <text id="/data/m_nbre_parasite:label">
+            <value>Nombre de parasites</value>
           </text>
           <text id="/data/m_notes:label">
             <value>Notas adicionais sobre o formulário</value>
@@ -2080,6 +2094,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="yes_no">
         <root>
           <item>
@@ -3713,7 +3728,9 @@
       <bind nodeset="/data/m_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/m_district"/>
       <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/m_cluster_id:jr:constraintMsg')" nodeset="/data/m_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/m_cluster_name"/>
       <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/m_generatedid:jr:constraintMsg')" nodeset="/data/m_generatedid" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/m_cluster_id"/>
-      <bind nodeset="/data/m_result1" required="true()" type="string"/>
+      <bind nodeset="/data/m_heure_prelevement" required="true()" type="time"/>
+      <bind nodeset="/data/m_result" required="true()" type="string"/>
+      <bind nodeset="/data/m_nbre_parasite" required="true()" type="int"/>
       <bind nodeset="/data/m_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/m_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/m_end" type="dateTime"/>
@@ -3762,18 +3779,24 @@
       <label ref="jr:itext('/data/m_generatedid:label')"/>
       <hint ref="jr:itext('/data/m_generatedid:hint')"/>
     </input>
-    <select1 ref="/data/m_result1">
-      <label ref="jr:itext('/data/m_result1:label')"/>
-      <hint ref="jr:itext('/data/m_result1:hint')"/>
+    <input ref="/data/m_heure_prelevement">
+      <label ref="jr:itext('/data/m_heure_prelevement:label')"/>
+    </input>
+    <select1 ref="/data/m_result">
+      <label ref="jr:itext('/data/m_result:label')"/>
+      <hint ref="jr:itext('/data/m_result:hint')"/>
       <item>
-        <label ref="jr:itext('/data/m_result1/Positivo:label')"/>
+        <label ref="jr:itext('/data/m_result/Positivo:label')"/>
         <value>Positivo</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/m_result1/Negativo:label')"/>
+        <label ref="jr:itext('/data/m_result/Negativo:label')"/>
         <value>Negativo</value>
       </item>
     </select1>
+    <input ref="/data/m_nbre_parasite">
+      <label ref="jr:itext('/data/m_nbre_parasite:label')"/>
+    </input>
     <input ref="/data/m_notes">
       <label ref="jr:itext('/data/m_notes:label')"/>
     </input>
