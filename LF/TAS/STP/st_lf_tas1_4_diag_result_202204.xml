@@ -3353,6 +3353,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="yes_no">
         <root>
           <item>
@@ -6010,7 +6011,7 @@
       <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/m_generatedid:jr:constraintMsg')" nodeset="/data/m_generatedid" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/m_cluster_id"/>
       <bind nodeset="/data/m_heure_prelevement" required="true()" type="time"/>
       <bind nodeset="/data/m_result" required="true()" type="string"/>
-      <bind nodeset="/data/m_nbre_parasite" required="true()" type="int"/>
+      <bind nodeset="/data/m_nbre_parasite" relevant=" /data/m_result  = 'Positivo'" required="true()" type="int"/>
       <bind nodeset="/data/m_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/m_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/m_end" type="dateTime"/>
