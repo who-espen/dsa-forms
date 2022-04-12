@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Avr 2022) OEM - 1. Site Form</h:title>
+    <model >
+
+      <instance>
+        <data id="ng_oncho_oem_1_site_202204">
+          <c_recorder_id/>
+          <c_region/>
+          <c_district/>
+          <c_cluster_name/>
+          <c_cluster_id/>
+          <c_supervisor/>
+          <c_date/>
+          <c_health_facility/>
+          <c_type_health_facility/>
+          <c_gps/>
+          <c_admin_level/>
+          <c_river/>
+          <c_distance_community/>
+          <c_population/>
+          <c_hh_number/>
+          <c_receiving_ivm/>
+          <c_lengh_period_ivm/>
+          <c_month_dist/>
+          <c_year_dist/>
+          <c_last_dist/>
+          <c_notes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/c_recorder_id:jr:constraintMsg">
+            <value>Must be between 10 and 99 included</value>
+          </text>
+          <text id="/data/c_recorder_id:label">
+            <value>Enter the recorder ID</value>
+          </text>
+          <text id="/data/c_recorder_id:hint">
+            <value>2-digit code assigned to you</value>
+          </text>
+          <text id="/data/c_region:label">
+            <value>State</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Local Government Area</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Names of Community</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>Must be between 100 and 999 included</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Community Code</value>
+          </text>
+          <text id="/data/c_supervisor:label">
+            <value>Team Supervisor</value>
+          </text>
+          <text id="/data/c_date:label">
+            <value>Date of Survey</value>
+          </text>
+          <text id="/data/c_health_facility:label">
+            <value>Name of Nearest Health Facility</value>
+          </text>
+          <text id="/data/c_type_health_facility:label">
+            <value>Type of Health Facility</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Community Coordinates</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>Works best outside of any building</value>
+          </text>
+          <text id="/data/c_admin_level:label">
+            <value>Type of administrative level</value>
+          </text>
+          <text id="/data/c_river:label">
+            <value>Name of the nearest river</value>
+          </text>
+          <text id="/data/c_distance_community:label">
+            <value>Approximate distance to community (KM)</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Total Population of Community</value>
+          </text>
+          <text id="/data/c_hh_number:label">
+            <value>Estimated No of Households</value>
+          </text>
+          <text id="/data/c_receiving_ivm:label">
+            <value>Community Receiving Ivermectin</value>
+          </text>
+          <text id="/data/c_lengh_period_ivm:label">
+            <value>Length of Period ivermectin taken</value>
+          </text>
+          <text id="/data/c_month_dist:label">
+            <value>Month of Last Distribution</value>
+          </text>
+          <text id="/data/c_year_dist:jr:constraintMsg">
+            <value>Please enter a valid year</value>
+          </text>
+          <text id="/data/c_year_dist:label">
+            <value>Year of Last Distribution</value>
+          </text>
+          <text id="/data/c_last_dist:label">
+            <value>Last Distribution</value>
+          </text>
+          <text id="/data/c_notes:label">
+            <value>Remarks/Observations</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="level">
+        <root>
+          <item>
+            <district_list>Hamlet</district_list>
+            <label>Community/Village</label>
+            <name>Community/Village</name>
+          </item>
+          <item>
+            <label>Sub-Community/Village</label>
+            <name>Sub-Community/Village</name>
+          </item>
+          <item>
+            <label>Hamlet</label>
+            <name>Hamlet</name>
+          </item>
+          <item>
+            <label>IDP/Refugee camp</label>
+            <name>IDP/Refugee camp</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <label>Yes</label>
+            <name>Yes</name>
+          </item>
+          <item>
+            <label>No</label>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="months">
+        <root>
+          <item>
+            <label>January</label>
+            <name>January</name>
+          </item>
+          <item>
+            <label>February</label>
+            <name>February</name>
+          </item>
+          <item>
+            <label>March</label>
+            <name>March</name>
+          </item>
+          <item>
+            <label>April</label>
+            <name>April</name>
+          </item>
+          <item>
+            <label>May</label>
+            <name>May</name>
+          </item>
+          <item>
+            <label>June</label>
+            <name>June</name>
+          </item>
+          <item>
+            <label>July</label>
+            <name>July</name>
+          </item>
+          <item>
+            <label>August</label>
+            <name>August</name>
+          </item>
+          <item>
+            <label>September</label>
+            <name>September</name>
+          </item>
+          <item>
+            <label>October</label>
+            <name>October</name>
+          </item>
+          <item>
+            <label>November</label>
+            <name>November</name>
+          </item>
+          <item>
+            <label>December</label>
+            <name>December</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <label>Sokoto</label>
+            <name>Sokoto</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <label>Bodinga</label>
+            <name>Bodinga</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Goronyo</label>
+            <name>Goronyo</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Gudu</label>
+            <name>Gudu</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Illela</label>
+            <name>Illela</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Kebbe</label>
+            <name>Kebbe</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Kware</label>
+            <name>Kware</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Rabah</label>
+            <name>Rabah</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Sabon Birni</label>
+            <name>Sabon Birni</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Shagari</label>
+            <name>Shagari</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Silame</label>
+            <name>Silame</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Tambawal</label>
+            <name>Tambawal</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Tangaazar</label>
+            <name>Tangaazar</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Tureta</label>
+            <name>Tureta</name>
+            <region_list>Sokoto</region_list>
+          </item>
+          <item>
+            <label>Wamakko</label>
+            <name>Wamakko</name>
+            <region_list>Sokoto</region_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="community">
+        <root>
+          <item>
+            <district_list>Bodinga</district_list>
+            <label>Danchadi</label>
+            <name>Danchadi</name>
+          </item>
+          <item>
+            <district_list>Goronyo</district_list>
+            <label>Taloka</label>
+            <name>Taloka</name>
+          </item>
+          <item>
+            <district_list>Goronyo</district_list>
+            <label>Shinaka</label>
+            <name>Shinaka</name>
+          </item>
+          <item>
+            <district_list>Gudu</district_list>
+            <label>Balle</label>
+            <name>Balle</name>
+          </item>
+          <item>
+            <district_list>Gudu</district_list>
+            <label>Karfen Chana</label>
+            <name>Karfen Chana</name>
+          </item>
+          <item>
+            <district_list>Illela</district_list>
+            <label>Kalmalo</label>
+            <name>Kalmalo</name>
+          </item>
+          <item>
+            <district_list>Illela</district_list>
+            <label>Tudun Gudale</label>
+            <name>Tudun Gudale</name>
+          </item>
+          <item>
+            <district_list>Kebbe</district_list>
+            <label>Asarara Kaura</label>
+            <name>Asarara Kaura</name>
+          </item>
+          <item>
+            <district_list>Kware</district_list>
+            <label>Durbawa</label>
+            <name>Durbawa</name>
+          </item>
+          <item>
+            <district_list>Rabah</district_list>
+            <label>Gangare</label>
+            <name>Gangare</name>
+          </item>
+          <item>
+            <district_list>Rabah</district_list>
+            <label>Shinakashiyar Ubandawaki</label>
+            <name>Shinakashiyar Ubandawaki</name>
+          </item>
+          <item>
+            <district_list>Sabon Birni</district_list>
+            <label>Makuwana</label>
+            <name>Makuwana</name>
+          </item>
+          <item>
+            <district_list>Shagari</district_list>
+            <label>Shagari</label>
+            <name>Shagari</name>
+          </item>
+          <item>
+            <district_list>Silame</district_list>
+            <label>Anguwar Tsaka</label>
+            <name>Anguwar Tsaka</name>
+          </item>
+          <item>
+            <district_list>Tambawal</district_list>
+            <label>Kaya</label>
+            <name>Kaya</name>
+          </item>
+          <item>
+            <district_list>Tangaazar</district_list>
+            <label>Gidan Madi</label>
+            <name>Gidan Madi</name>
+          </item>
+          <item>
+            <district_list>Tureta</district_list>
+            <label>Tureta</label>
+            <name>Tureta</name>
+          </item>
+          <item>
+            <district_list>Wamakko</district_list>
+            <label>Yarume Rafi</label>
+            <name>Yarume Rafi</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="community_id">
+        <root>
+          <item>
+            <community>Danchadi</community>
+            <label>201</label>
+            <name>201</name>
+          </item>
+          <item>
+            <community>Taloka</community>
+            <label>202</label>
+            <name>202</name>
+          </item>
+          <item>
+            <community>Shinaka</community>
+            <label>203</label>
+            <name>203</name>
+          </item>
+          <item>
+            <community>Balle</community>
+            <label>204</label>
+            <name>204</name>
+          </item>
+          <item>
+            <community>Karfen Chana</community>
+            <label>205</label>
+            <name>205</name>
+          </item>
+          <item>
+            <community>Kalmalo</community>
+            <label>206</label>
+            <name>206</name>
+          </item>
+          <item>
+            <community>Tudun Gudale</community>
+            <label>207</label>
+            <name>207</name>
+          </item>
+          <item>
+            <community>Asarara Kaura</community>
+            <label>208</label>
+            <name>208</name>
+          </item>
+          <item>
+            <community>Durbawa</community>
+            <label>209</label>
+            <name>209</name>
+          </item>
+          <item>
+            <community>Gangare</community>
+            <label>210</label>
+            <name>210</name>
+          </item>
+          <item>
+            <community>Shinakashiyar Ubandawaki</community>
+            <label>211</label>
+            <name>211</name>
+          </item>
+          <item>
+            <community>Makuwana</community>
+            <label>212</label>
+            <name>212</name>
+          </item>
+          <item>
+            <community>Shagari</community>
+            <label>213</label>
+            <name>213</name>
+          </item>
+          <item>
+            <community>Anguwar Tsaka</community>
+            <label>214</label>
+            <name>214</name>
+          </item>
+          <item>
+            <community>Kaya</community>
+            <label>215</label>
+            <name>215</name>
+          </item>
+          <item>
+            <community>Gidan Madi</community>
+            <label>216</label>
+            <name>216</name>
+          </item>
+          <item>
+            <community>Tureta</community>
+            <label>217</label>
+            <name>217</name>
+          </item>
+          <item>
+            <community>Yarume Rafi</community>
+            <label>218</label>
+            <name>218</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/c_region" required="true()" type="string"/>
+     <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
+      <bind nodeset="/data/c_supervisor" required="true()" type="string"/>
+      <bind nodeset="/data/c_date" required="true()" type="date"/>
+      <bind nodeset="/data/c_health_facility" required="true()" type="string"/>
+      <bind nodeset="/data/c_type_health_facility" required="true()" type="string"/>
+      <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_admin_level" required="true()" type="string"/>
+      <bind nodeset="/data/c_river" required="true()" type="string"/>
+      <bind nodeset="/data/c_distance_community" required="true()" type="int"/>
+      <bind nodeset="/data/c_population" required="true()" type="int"/>
+      <bind nodeset="/data/c_hh_number" required="true()" type="int"/>
+      <bind nodeset="/data/c_receiving_ivm" required="true()" type="string"/>
+      <bind nodeset="/data/c_lengh_period_ivm" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_month_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="string"/>
+      <bind constraint=". &gt; 1970 and . &lt; 2022" jr:constraintMsg="jr:itext('/data/c_year_dist:jr:constraintMsg')" nodeset="/data/c_year_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="int"/>
+      <bind calculate="concat(B19,' ',B20)" nodeset="/data/c_last_dist" required="true()" type="string"/>
+      <bind nodeset="/data/c_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder_id">
+      <label ref="jr:itext('/data/c_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/c_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/c_region">
+      <label ref="jr:itext('/data/c_region:label')"/>
+      <item>
+        <label>Sokoto</label>
+        <value>Sokoto</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[region_list =  /data/c_region ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+      <itemset nodeset="instance('community')/root/item[district_list =  /data/c_district ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+      <itemset nodeset="instance('community_id')/root/item[community =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_supervisor">
+      <label ref="jr:itext('/data/c_supervisor:label')"/>
+    </input>
+    <input ref="/data/c_date">
+      <label ref="jr:itext('/data/c_date:label')"/>
+    </input>
+    <input ref="/data/c_health_facility">
+      <label ref="jr:itext('/data/c_health_facility:label')"/>
+    </input>
+    <input ref="/data/c_type_health_facility">
+      <label ref="jr:itext('/data/c_type_health_facility:label')"/>
+    </input>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <select1 ref="/data/c_admin_level">
+      <label ref="jr:itext('/data/c_admin_level:label')"/>
+      <item>
+        <label>Community/Village</label>
+        <value>Community/Village</value>
+      </item>
+      <item>
+        <label>Sub-Community/Village</label>
+        <value>Sub-Community/Village</value>
+      </item>
+      <item>
+        <label>Hamlet</label>
+        <value>Hamlet</value>
+      </item>
+      <item>
+        <label>IDP/Refugee camp</label>
+        <value>IDP/Refugee camp</value>
+      </item>
+    </select1>
+    <input ref="/data/c_river">
+      <label ref="jr:itext('/data/c_river:label')"/>
+    </input>
+    <input ref="/data/c_distance_community">
+      <label ref="jr:itext('/data/c_distance_community:label')"/>
+    </input>
+    <input ref="/data/c_population">
+      <label ref="jr:itext('/data/c_population:label')"/>
+    </input>
+    <input ref="/data/c_hh_number">
+      <label ref="jr:itext('/data/c_hh_number:label')"/>
+    </input>
+    <select1 ref="/data/c_receiving_ivm">
+      <label ref="jr:itext('/data/c_receiving_ivm:label')"/>
+      <item>
+        <label>Yes</label>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label>No</label>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/c_lengh_period_ivm">
+      <label ref="jr:itext('/data/c_lengh_period_ivm:label')"/>
+    </input>
+    <select1 ref="/data/c_month_dist">
+      <label ref="jr:itext('/data/c_month_dist:label')"/>
+      <item>
+        <label>January</label>
+        <value>January</value>
+      </item>
+      <item>
+        <label>February</label>
+        <value>February</value>
+      </item>
+      <item>
+        <label>March</label>
+        <value>March</value>
+      </item>
+      <item>
+        <label>April</label>
+        <value>April</value>
+      </item>
+      <item>
+        <label>May</label>
+        <value>May</value>
+      </item>
+      <item>
+        <label>June</label>
+        <value>June</value>
+      </item>
+      <item>
+        <label>July</label>
+        <value>July</value>
+      </item>
+      <item>
+        <label>August</label>
+        <value>August</value>
+      </item>
+      <item>
+        <label>September</label>
+        <value>September</value>
+      </item>
+      <item>
+        <label>October</label>
+        <value>October</value>
+      </item>
+      <item>
+        <label>November</label>
+        <value>November</value>
+      </item>
+      <item>
+        <label>December</label>
+        <value>December</value>
+      </item>
+    </select1>
+    <input ref="/data/c_year_dist">
+      <label ref="jr:itext('/data/c_year_dist:label')"/>
+    </input>
+    <input ref="/data/c_notes">
+      <label ref="jr:itext('/data/c_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>

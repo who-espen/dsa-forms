@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>1. Kenya - Pre TAS LF Site Form V3</h:title>
+    <model >
+
+      <instance>
+        <data id="ke_lf_pretas_1_site_202203_v3">
+          <c_date_visit/>
+          <c_enumerator/>
+          <c_county/>
+          <c_subcounty/>
+          <c_cluster_name/>
+          <c_cluster_id/>
+          <c_site_type/>
+          <c_gps/>
+          <c_ClusterNotes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/c_date_visit:label">
+            <value>Date of visit</value>
+          </text>
+          <text id="/data/c_enumerator:label">
+            <value>Enumerator</value>
+          </text>
+          <text id="/data/c_enumerator:hint">
+            <value>Write first and last name</value>
+          </text>
+          <text id="/data/c_county:label">
+            <value>County</value>
+          </text>
+          <text id="/data/c_county:hint">
+            <value>Select the appropriate county</value>
+          </text>
+          <text id="/data/c_county/Mombasa:label">
+            <value>Mombasa</value>
+          </text>
+          <text id="/data/c_subcounty:label">
+            <value>Subcounty</value>
+          </text>
+          <text id="/data/c_subcounty:hint">
+            <value>Select the appropriate subcounty within each respective county</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Village</value>
+          </text>
+          <text id="/data/c_cluster_name:hint">
+            <value>Select the appropriate village</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>The code must be a three-digit number</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Village ID</value>
+          </text>
+          <text id="/data/c_cluster_id:hint">
+            <value>Select village ID</value>
+          </text>
+          <text id="/data/c_site_type:label">
+            <value>Enter the site type</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Record your location:</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>GPS coordinates are easier to collect outside. 2 min timeout</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Additional notes to add?</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="yes_no-1">
+            <value>No</value>
+          </text>
+          <text id="enumarator-0">
+            <value>01</value>
+          </text>
+          <text id="enumarator-1">
+            <value>02</value>
+          </text>
+          <text id="enumarator-2">
+            <value>03</value>
+          </text>
+          <text id="enumarator-3">
+            <value>04</value>
+          </text>
+          <text id="enumarator-4">
+            <value>05</value>
+          </text>
+          <text id="county-0">
+            <value>Mombasa</value>
+          </text>
+          <text id="subcounty-0">
+            <value>Ganze</value>
+          </text>
+          <text id="subcounty-1">
+            <value>Kaloleni</value>
+          </text>
+          <text id="subcounty-2">
+            <value>Kilifi North</value>
+          </text>
+          <text id="subcounty-3">
+            <value>Kilifi South</value>
+          </text>
+          <text id="subcounty-4">
+            <value>Magarini</value>
+          </text>
+          <text id="subcounty-5">
+            <value>Malindi</value>
+          </text>
+          <text id="subcounty-6">
+            <value>Rabai</value>
+          </text>
+          <text id="subcounty-7">
+            <value>Kinango</value>
+          </text>
+          <text id="subcounty-8">
+            <value>Lunga Lunga</value>
+          </text>
+          <text id="subcounty-9">
+            <value>Matuga</value>
+          </text>
+          <text id="subcounty-10">
+            <value>Msambweni</value>
+          </text>
+          <text id="subcounty-11">
+            <value>Changamwe</value>
+          </text>
+          <text id="subcounty-12">
+            <value>Kisauni</value>
+          </text>
+          <text id="subcounty-13">
+            <value>Likoni</value>
+          </text>
+          <text id="subcounty-14">
+            <value>Mvita</value>
+          </text>
+          <text id="subcounty-15">
+            <value>Nyali</value>
+          </text>
+          <text id="cluster-0">
+            <value>Chaani</value>
+          </text>
+          <text id="cluster-1">
+            <value>Chuda</value>
+          </text>
+          <text id="cluster-2">
+            <value>Kidongo Basi</value>
+          </text>
+          <text id="cluster-3">
+            <value>Majengo</value>
+          </text>
+          <text id="cluster-4">
+            <value>Maweni</value>
+          </text>
+          <text id="cluster-5">
+            <value>Maweni ya Timbuani ward</value>
+          </text>
+          <text id="cluster-6">
+            <value>Msikiti Nuru</value>
+          </text>
+          <text id="cluster-7">
+            <value>Mtopanga</value>
+          </text>
+          <text id="cluster-8">
+            <value>Ng.ombeni</value>
+          </text>
+          <text id="cluster-9">
+            <value>Vijiweni ya Mtongwe ward</value>
+          </text>
+          <text id="site_type-0">
+            <value>Sentinel Site</value>
+          </text>
+          <text id="site_type-1">
+            <value>Spot Check</value>
+          </text>
+          <text id="site_type-2">
+            <value>Spot Check</value>
+          </text>
+          <text id="site_type-3">
+            <value>Sentinel Site</value>
+          </text>
+          <text id="site_type-4">
+            <value>Sentinel Site</value>
+          </text>
+          <text id="site_type-5">
+            <value>Spot Check</value>
+          </text>
+          <text id="site_type-6">
+            <value>Spot Check</value>
+          </text>
+          <text id="site_type-7">
+            <value>Sentinel Site</value>
+          </text>
+          <text id="site_type-8">
+            <value>Spot Check</value>
+          </text>
+          <text id="site_type-9">
+            <value>Sentinel Site</value>
+          </text>
+          <text id="cluster_id-0">
+            <value>101</value>
+          </text>
+          <text id="cluster_id-1">
+            <value>102</value>
+          </text>
+          <text id="cluster_id-2">
+            <value>103</value>
+          </text>
+          <text id="cluster_id-3">
+            <value>104</value>
+          </text>
+          <text id="cluster_id-4">
+            <value>105</value>
+          </text>
+          <text id="cluster_id-5">
+            <value>106</value>
+          </text>
+          <text id="cluster_id-6">
+            <value>107</value>
+          </text>
+          <text id="cluster_id-7">
+            <value>108</value>
+          </text>
+          <text id="cluster_id-8">
+            <value>109</value>
+          </text>
+          <text id="cluster_id-9">
+            <value>110</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="enumarator">
+        <root>
+          <item>
+            <itextId>enumarator-0</itextId>
+            <name>01</name>
+          </item>
+          <item>
+            <itextId>enumarator-1</itextId>
+            <name>02</name>
+          </item>
+          <item>
+            <itextId>enumarator-2</itextId>
+            <name>03</name>
+          </item>
+          <item>
+            <itextId>enumarator-3</itextId>
+            <name>04</name>
+          </item>
+          <item>
+            <itextId>enumarator-4</itextId>
+            <name>05</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="county">
+        <root>
+          <item>
+            <itextId>county-0</itextId>
+            <name>Mombasa</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="subcounty">
+        <root>
+          <item>
+            <itextId>subcounty-0</itextId>
+            <county>Kilifi</county>
+            <name>Ganze</name>
+          </item>
+          <item>
+            <itextId>subcounty-1</itextId>
+            <county>Kilifi</county>
+            <name>Kaloleni</name>
+          </item>
+          <item>
+            <itextId>subcounty-2</itextId>
+            <county>Kilifi</county>
+            <name>Kilifi North</name>
+          </item>
+          <item>
+            <itextId>subcounty-3</itextId>
+            <county>Kilifi</county>
+            <name>Kilifi South</name>
+          </item>
+          <item>
+            <itextId>subcounty-4</itextId>
+            <county>Kilifi</county>
+            <name>Magarini</name>
+          </item>
+          <item>
+            <itextId>subcounty-5</itextId>
+            <county>Kilifi</county>
+            <name>Malindi</name>
+          </item>
+          <item>
+            <itextId>subcounty-6</itextId>
+            <county>Kilifi</county>
+            <name>Rabai</name>
+          </item>
+          <item>
+            <itextId>subcounty-7</itextId>
+            <county>Kwale</county>
+            <name>Kinango</name>
+          </item>
+          <item>
+            <itextId>subcounty-8</itextId>
+            <county>Kwale</county>
+            <name>Lunga Lunga</name>
+          </item>
+          <item>
+            <itextId>subcounty-9</itextId>
+            <county>Kwale</county>
+            <name>Matuga</name>
+          </item>
+          <item>
+            <itextId>subcounty-10</itextId>
+            <county>Kwale</county>
+            <name>Msambweni</name>
+          </item>
+          <item>
+            <itextId>subcounty-11</itextId>
+            <county>Mombasa</county>
+            <name>Changamwe</name>
+          </item>
+          <item>
+            <itextId>subcounty-12</itextId>
+            <county>Mombasa</county>
+            <name>Kisauni</name>
+          </item>
+          <item>
+            <itextId>subcounty-13</itextId>
+            <county>Mombasa</county>
+            <name>Likoni</name>
+          </item>
+          <item>
+            <itextId>subcounty-14</itextId>
+            <county>Mombasa</county>
+            <name>Mvita</name>
+          </item>
+          <item>
+            <itextId>subcounty-15</itextId>
+            <county>Mombasa</county>
+            <name>Nyali</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="cluster">
+        <root>
+          <item>
+            <itextId>cluster-0</itextId>
+            <name>Chaani</name>
+            <subcounty>Changamwe</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-1</itextId>
+            <name>Chuda</name>
+            <subcounty>Mvita</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-2</itextId>
+            <name>Kidongo Basi</name>
+            <subcounty>Nyali</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-3</itextId>
+            <name>Majengo</name>
+            <subcounty>Mvita</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-4</itextId>
+            <name>Maweni</name>
+            <subcounty>Nyali</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-5</itextId>
+            <name>Maweni ya Timbuani ward</name>
+            <subcounty>Likoni</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-6</itextId>
+            <name>Msikiti Nuru</name>
+            <subcounty>Changamwe</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-7</itextId>
+            <name>Mtopanga</name>
+            <subcounty>Kisauni</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-8</itextId>
+            <name>Ng.ombeni</name>
+            <subcounty>Kisauni</subcounty>
+          </item>
+          <item>
+            <itextId>cluster-9</itextId>
+            <name>Vijiweni ya Mtongwe ward</name>
+            <subcounty>Likoni</subcounty>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_type">
+        <root>
+          <item>
+            <itextId>site_type-0</itextId>
+            <cluster>Chaani</cluster>
+            <name>Sentinel Site</name>
+          </item>
+          <item>
+            <itextId>site_type-1</itextId>
+            <cluster>Chuda</cluster>
+            <name>Spot Check</name>
+          </item>
+          <item>
+            <itextId>site_type-2</itextId>
+            <cluster>Kidongo Basi</cluster>
+            <name>Spot Check</name>
+          </item>
+          <item>
+            <itextId>site_type-3</itextId>
+            <cluster>Majengo</cluster>
+            <name>Sentinel Site</name>
+          </item>
+          <item>
+            <itextId>site_type-4</itextId>
+            <cluster>Maweni</cluster>
+            <name>Sentinel Site</name>
+          </item>
+          <item>
+            <itextId>site_type-5</itextId>
+            <cluster>Maweni ya Timbuani ward</cluster>
+            <name>Spot Check</name>
+          </item>
+          <item>
+            <itextId>site_type-6</itextId>
+            <cluster>Msikiti Nuru</cluster>
+            <name>Spot Check</name>
+          </item>
+          <item>
+            <itextId>site_type-7</itextId>
+            <cluster>Mtopanga</cluster>
+            <name>Sentinel Site</name>
+          </item>
+          <item>
+            <itextId>site_type-8</itextId>
+            <cluster>Ng.ombeni</cluster>
+            <name>Spot Check</name>
+          </item>
+          <item>
+            <itextId>site_type-9</itextId>
+            <cluster>Vijiweni ya Mtongwe ward</cluster>
+            <name>Sentinel Site</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="cluster_id">
+        <root>
+          <item>
+            <itextId>cluster_id-0</itextId>
+            <cluster>Chaani</cluster>
+            <name>101</name>
+          </item>
+          <item>
+            <itextId>cluster_id-1</itextId>
+            <cluster>Chuda</cluster>
+            <name>102</name>
+          </item>
+          <item>
+            <itextId>cluster_id-2</itextId>
+            <cluster>Kidongo Basi</cluster>
+            <name>103</name>
+          </item>
+          <item>
+            <itextId>cluster_id-3</itextId>
+            <cluster>Majengo</cluster>
+            <name>104</name>
+          </item>
+          <item>
+            <itextId>cluster_id-4</itextId>
+            <cluster>Maweni</cluster>
+            <name>105</name>
+          </item>
+          <item>
+            <itextId>cluster_id-5</itextId>
+            <cluster>Maweni ya Timbuani ward</cluster>
+            <name>106</name>
+          </item>
+          <item>
+            <itextId>cluster_id-6</itextId>
+            <cluster>Msikiti Nuru</cluster>
+            <name>107</name>
+          </item>
+          <item>
+            <itextId>cluster_id-7</itextId>
+            <cluster>Mtopanga</cluster>
+            <name>108</name>
+          </item>
+          <item>
+            <itextId>cluster_id-8</itextId>
+            <cluster>Ng.ombeni</cluster>
+            <name>109</name>
+          </item>
+          <item>
+            <itextId>cluster_id-9</itextId>
+            <cluster>Vijiweni ya Mtongwe ward</cluster>
+            <name>110</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/c_date_visit" required="true()" type="date"/>
+      <bind nodeset="/data/c_enumerator" required="true()" type="string"/>
+      <bind nodeset="/data/c_county" required="true()" type="string"  db_add_col_1="."/>
+      <bind nodeset="/data/c_subcounty" required="true()" type="string" db_add_col_1="/data/c_county" db_add_col_2="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_subcounty" db_add_col_3="."/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
+      <bind nodeset="/data/c_site_type" required="true()" type="string"/>
+      <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_date_visit">
+      <label ref="jr:itext('/data/c_date_visit:label')"/>
+    </input>
+    <input ref="/data/c_enumerator">
+      <label ref="jr:itext('/data/c_enumerator:label')"/>
+      <hint ref="jr:itext('/data/c_enumerator:hint')"/>
+    </input>
+    <select1 ref="/data/c_county">
+      <label ref="jr:itext('/data/c_county:label')"/>
+      <hint ref="jr:itext('/data/c_county:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/c_county/Mombasa:label')"/>
+        <value>Mombasa</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_subcounty">
+      <label ref="jr:itext('/data/c_subcounty:label')"/>
+      <hint ref="jr:itext('/data/c_subcounty:hint')"/>
+      <itemset nodeset="instance('subcounty')/root/item[county =  /data/c_county ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+      <hint ref="jr:itext('/data/c_cluster_name:hint')"/>
+      <itemset nodeset="instance('cluster')/root/item[subcounty =  /data/c_subcounty ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+      <hint ref="jr:itext('/data/c_cluster_id:hint')"/>
+      <itemset nodeset="instance('cluster_id')/root/item[cluster =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_site_type">
+      <label ref="jr:itext('/data/c_site_type:label')"/>
+      <itemset nodeset="instance('site_type')/root/item[cluster =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <input ref="/data/c_ClusterNotes">
+      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>

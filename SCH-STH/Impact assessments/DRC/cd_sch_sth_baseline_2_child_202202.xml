@@ -7,19 +7,18 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. SCH/STH - Fiche  individuelle  d'inscription</h:title>
+    <h:title>2. SCH/STH - Fiche  individuelle  d'inscription V2.1</h:title>
     <model >
 
       <instance>
-        <data id="cd_sch_sth_baseline_2_child_202202">
+        <data id="cd_sch_sth_baseline_2_child_202202_v2_1">
           <p_consent_note/>
           <p_Recorder_id/>
           <p_zone_sante/>
           <p_village/>
+          <p_ecole/>
           <p_code_ecole/>
           <p_consent/>
-          <p_idmethod/>
-          <p_barcode_id/>
           <p_generate_id/>
           <p_age/>
           <p_sexa/>
@@ -61,6 +60,9 @@
           <text id="/data/p_village:label">
             <value>Village (niveau admin 5)</value>
           </text>
+          <text id="/data/p_ecole:label">
+            <value>Nom de l'école</value>
+          </text>
           <text id="/data/p_code_ecole:label">
             <value>Code de l'école</value>
           </text>
@@ -75,18 +77,6 @@
           </text>
           <text id="/data/p_consent/2. A refusé:label">
             <value>2. A refusé</value>
-          </text>
-          <text id="/data/p_idmethod:label">
-            <value>Comment est-ce que l'identifiant individuel sera-t-il généré?</value>
-          </text>
-          <text id="/data/p_idmethod/Scanner:label">
-            <value>Scanner</value>
-          </text>
-          <text id="/data/p_idmethod/Génération Automatique:label">
-            <value>Génération Automatique</value>
-          </text>
-          <text id="/data/p_barcode_id:label">
-            <value>Scanner le barcode</value>
           </text>
           <text id="/data/p_generate_id:label">
             <value>Veuillez enregistrer le code d'identification unique suivant pour le répondant sur une liste séparée et sur chaque test de diagnostic administré, y compris les tests Kato Katz et de Filtration Urinaire</value>
@@ -168,15 +158,15 @@
           </text>
         </translation>
       </itext>
+
       <bind nodeset="/data/p_consent_note" readonly="true()" type="string"/>
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_Recorder_id:jr:constraintMsg')" nodeset="/data/p_Recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/p_zone_sante" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_village" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_zone_sante"/>
-      <bind nodeset="/data/p_code_ecole" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_village"/>
+      <bind nodeset="/data/p_ecole" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_village"/>
+      <bind nodeset="/data/p_code_ecole" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_ecole"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
-      <bind nodeset="/data/p_idmethod" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
-      <bind nodeset="/data/p_barcode_id" relevant=" /data/p_idmethod  = 'Scanner' and  /data/p_consent  = '1. A donné'" required="true()" type="barcode"/>
-      <bind nodeset="/data/p_generate_id" calculate="concat(/data/p_code_ecole,'-', /data/meta/randomnum)" readonly="true()" relevant=" /data/p_idmethod != 'Scanner' and  /data/p_consent  = '1. A donné'" required="true()" type="string"/>
+      <bind nodeset="/data/p_generate_id" calculate="concat(/data/p_code_ecole,'-', /data/meta/randomnum)" readonly="true()" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
       <bind constraint=". &gt;= 10 and . &lt; 15" jr:constraintMsg="jr:itext('/data/p_age:jr:constraintMsg')" nodeset="/data/p_age" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="int"/>
       <bind nodeset="/data/p_sexa" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
       <bind nodeset="/data/p_classe" relevant=" /data/p_consent  = '1. A donné'" required="true()" type="string"/>
@@ -208,6 +198,9 @@
     <input ref="/data/p_village">
       <label ref="jr:itext('/data/p_village:label')"/>
     </input>
+    <input ref="/data/p_ecole">
+      <label ref="jr:itext('/data/p_ecole:label')"/>
+    </input>
     <input ref="/data/p_code_ecole">
       <label ref="jr:itext('/data/p_code_ecole:label')"/>
     </input>
@@ -223,20 +216,6 @@
         <value>2. A refusé</value>
       </item>
     </select1>
-    <select1 ref="/data/p_idmethod">
-      <label ref="jr:itext('/data/p_idmethod:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_idmethod/Scanner:label')"/>
-        <value>Scanner</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_idmethod/Génération Automatique:label')"/>
-        <value>Génération Automatique</value>
-      </item>
-    </select1>
-    <input ref="/data/p_barcode_id">
-      <label ref="jr:itext('/data/p_barcode_id:label')"/>
-    </input>
     <input ref="/data/p_generate_id">
       <label ref="jr:itext('/data/p_generate_id:label')"/>
     </input>
