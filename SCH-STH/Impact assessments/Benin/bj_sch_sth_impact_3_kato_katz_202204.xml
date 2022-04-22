@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<h:head>
+		<h:title>(Avril 2022) - 3. SCH/STH - Kato Katz v1</h:title>
+		<model >
+
+			<instance>
+				<data id="bj_sch_sth_impact_3_kato_katz_202204_v1">
+					<k_recorder/>
+					<k_district/>
+					<k_subdistrict/>
+					<k_site_name/>
+					<k_site_code/>
+					<k_espen_code_id/>
+					<k_sch_man_sa/>
+					<k_ascaris_lumb_sa/>
+					<k_hookworm_sa/>
+					<k_trichuris_sa/>
+					<!-- <k_sch_hae_sa/> -->
+					<k_remarks/>
+					<k_start/>
+					<k_end/>
+					<meta>
+						<instanceID/>
+					</meta>
+				</data>
+			</instance>
+
+			<itext>
+				<translation default="true()" lang="French">
+					<text id="/data/k_recorder:jr:constraintMsg">
+						<value>Veuillez rentrer votre code sur 2 chiffres</value>
+					</text>
+					<text id="/data/k_recorder:label">
+						<value>Code de l'enquêteur</value>
+					</text>
+					<text id="/data/k_recorder:hint">
+						<value>Code sur 2 chiffres</value>
+					</text>
+					<text id="/data/k_district:label">
+						<value>Sélectionner la commune</value>
+					</text>
+					<text id="/data/k_subdistrict:label">
+						<value>Sélectionner l'arrondissement</value>
+					</text>
+					<text id="/data/k_site_name:label">
+						<value>Sélectionner le nom de l'école</value>
+					</text>
+					<text id="/data/k_site_code:label">
+						<value>Sélectionner le code de l'école</value>
+					</text>
+					<text id="/data/k_espen_code_id:label">
+						<value>Code d'identification du répondant (Veuillez Saisir le code du participant tel qu'il a été généré dans le formulaire 2)</value>
+					</text>
+					<text id="/data/k_sch_man_sa:label">
+						<value>Schistosoma mansoni (œufs)</value>
+					</text>
+					<text id="/data/k_ascaris_lumb_sa:label">
+						<value>Ascaris lumbricoides (œufs)</value>
+					</text>
+					<text id="/data/k_hookworm_sa:label">
+						<value>Ankylostome</value>
+					</text>
+					<text id="/data/k_trichuris_sa:label">
+						<value>Trichocéphale trichura</value>
+					</text>
+					<!-- <text id="/data/k_sch_hae_sa:label">
+						<value>Schistosoma haematobium</value>
+					</text> -->
+					<text id="/data/k_remarks:label">
+						<value>Notes additionnelles</value>
+					</text>
+				</translation>
+				<translation lang="English">
+					<text id="/data/k_recorder:label">
+						<value>Investigator code</value>
+					</text>
+					<text id="/data/k_recorder:hint">
+						<value>2 digits</value>
+					</text>
+					<text id="/data/k_district:label">
+						<value>Select the county</value>
+					</text>
+					<text id="/data/k_subdistrict:label">
+						<value>Select the Sub-district (USP)</value>
+					</text>
+					<text id="/data/k_site_name:label">
+						<value>Select the village</value>
+					</text>
+					<text id="/data/k_site_code:label">
+						<value>Select the code</value>
+					</text>
+					<text id="/data/k_espen_code_id:label">
+						<value>Respondent's identification code</value>
+					</text>
+					<text id="/data/k_sch_man_sa:label">
+						<value>Schistosoma mansoni (eggs)</value>
+					</text>
+					<text id="/data/k_ascaris_lumb_sa:label">
+						<value>Ascaris lumbricoides (eggs)</value>
+					</text>
+					<text id="/data/k_hookworm_sa:label">
+						<value>Hookworm</value>
+					</text>
+					<text id="/data/k_trichuris_sa:label">
+						<value>Trichuris trichura</value>
+					</text>
+					<!-- <text id="/data/k_sch_hae_sa:label">
+						<value>Schistosoma haematobium</value>
+					</text> -->
+					<text id="/data/k_remarks:label">
+						<value>Additional comment</value>
+					</text>
+					<text id="/data/k_recorder:jr:constraintMsg">
+						<value>-</value>
+					</text>
+				</translation>
+			</itext>
+			<bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/k_recorder:jr:constraintMsg')" nodeset="/data/k_recorder" required="true()" type="string"/>
+			<bind nodeset="/data/k_district" required="true()" type="string" db_get="col_1"/>
+			<bind nodeset="/data/k_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/k_district"/>
+			<bind nodeset="/data/k_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_subdistrict"/>
+			<bind nodeset="/data/k_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/k_site_name"/>
+			<bind constraint="regex(.,'^[0-9]{3}-[0-9]{2}$')" nodeset="/data/k_espen_code_id" required="true()" type="string"/>
+			<bind nodeset="/data/k_sch_man_sa" required="true()" type="int"/>
+			<bind nodeset="/data/k_ascaris_lumb_sa" required="true()" type="int"/>
+			<bind nodeset="/data/k_hookworm_sa" required="true()" type="int"/>
+			<bind nodeset="/data/k_trichuris_sa" required="true()" type="int"/>
+			<!-- <bind nodeset="/data/k_sch_hae_sa" type="int"/> -->
+			<bind nodeset="/data/k_remarks" type="string"/>
+			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/k_start" type="dateTime"/>
+			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/k_end" type="dateTime"/>
+			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+		</model>
+	</h:head>
+	<h:body>
+		<input ref="/data/k_recorder">
+			<label ref="jr:itext('/data/k_recorder:label')"/>
+			<hint ref="jr:itext('/data/k_recorder:hint')"/>
+		</input>
+		<input ref="/data/k_district">
+			<label ref="jr:itext('/data/k_district:label')"/>
+		</input>
+		<input ref="/data/k_subdistrict">
+			<label ref="jr:itext('/data/k_subdistrict:label')"/>
+		</input>
+		<input ref="/data/k_site_name">
+			<label ref="jr:itext('/data/k_site_name:label')"/>
+		</input>
+		<input ref="/data/k_site_code">
+			<label ref="jr:itext('/data/k_site_code:label')"/>
+		</input>
+		<input ref="/data/k_espen_code_id">
+			<label ref="jr:itext('/data/k_espen_code_id:label')"/>
+		</input>
+		<input ref="/data/k_sch_man_sa">
+			<label ref="jr:itext('/data/k_sch_man_sa:label')"/>
+		</input>
+		<input ref="/data/k_ascaris_lumb_sa">
+			<label ref="jr:itext('/data/k_ascaris_lumb_sa:label')"/>
+		</input>
+		<input ref="/data/k_hookworm_sa">
+			<label ref="jr:itext('/data/k_hookworm_sa:label')"/>
+		</input>
+		<input ref="/data/k_trichuris_sa">
+			<label ref="jr:itext('/data/k_trichuris_sa:label')"/>
+		</input>
+		<!-- <input ref="/data/k_sch_hae_sa">
+			<label ref="jr:itext('/data/k_sch_hae_sa:label')"/>
+		</input> -->
+		<input ref="/data/k_remarks">
+			<label ref="jr:itext('/data/k_remarks:label')"/>
+		</input>
+	</h:body>
+</h:html>
