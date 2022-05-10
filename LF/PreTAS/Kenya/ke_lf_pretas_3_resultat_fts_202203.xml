@@ -718,13 +718,13 @@
       <bind nodeset="/data/d_blood_sample" required="true()" type="string"/>
       <bind nodeset="/data/d_dbs_prepared" required="true()" type="string"/>
       <bind nodeset="/data/d_filter_paper_stored" required="true()" type="string"/>
-      <bind nodeset="/data/d_lotnumber1" relevant=" /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
+      <bind nodeset="/data/d_lotnumber1" type="barcode"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalid'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid_other1" relevant="selected( /data/d_why_invalid1 ,'Other')" required="true()" type="string"/>
       <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_need_second_test" readonly="true()" relevant=" /data/d_result1  = 'Positive' or  /data/d_result1  = 'Invalid'" type="string"/>
-      <bind nodeset="/data/d_lotnumber2" relevant=" /data/d_result1  = 'Positive' or  /data/d_result1  = 'Invalid'" required="true()" type="string"/>
+      <bind nodeset="/data/d_lotnumber2" relevant=" /data/d_result1  = 'Positive' or  /data/d_result1  = 'Invalid'" type="barcode"/>
       <bind nodeset="/data/d_result2" relevant=" /data/d_result1  = 'Positive' or  /data/d_result1  = 'Invalid'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid2" relevant=" /data/d_result2  = 'Invalid'" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid_other2" relevant="selected( /data/d_why_invalid2 ,'Other')" required="true()" type="string"/>
