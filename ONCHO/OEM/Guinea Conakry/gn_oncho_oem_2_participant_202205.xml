@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Avr 2022) OEM - 2. Participant Form</h:title>
+    <model >
+
+      <instance>
+        <data id="gn_oncho_oem_2_participant_202205">
+          <p_recorder_id/>
+          <p_district/>
+          <p_sub_district/>
+          <p_cluster_name/>
+          <p_cluster_id/>
+          <p_date/>
+          <p_consent/>
+          <p_ID_method/>
+          <p_barcode_id/>
+          <p_manual_code/>
+          <p_manual_code2/>
+          <p_sex/>
+          <p_age_yrs/>
+          <p_sample_collected/>
+          <p_end_survey_note/>
+          <p_AdditionalNotes/>
+          <p_start/>
+          <p_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/p_recorder_id:jr:constraintMsg">
+            <value>Doit être compris entre 10 et 99 inclus</value>
+          </text>
+          <text id="/data/p_recorder_id:label">
+            <value>Entrez le numéro de l'enregistreur</value>
+          </text>
+          <text id="/data/p_recorder_id:hint">
+            <value>Code à 2 chiffres qui vous est attribué</value>
+          </text>
+          <text id="/data/p_district:label">
+            <value>Sélectionnez le district</value>
+          </text>
+          <text id="/data/p_sub_district:label">
+            <value>Sélectionnez la Sous prefecture</value>
+          </text>
+          <text id="/data/p_cluster_name:label">
+            <value>Sélectionnez la communauté</value>
+          </text>
+          <text id="/data/p_cluster_id:label">
+            <value>Sélectionnez l'ID de la communauté</value>
+          </text>
+          <text id="/data/p_date:label">
+            <value>Entrez la date</value>
+          </text>
+          <text id="/data/p_consent:label">
+            <value>Le participant a-t-il donné son consentement ?</value>
+          </text>
+          <text id="/data/p_ID_method:label">
+            <value>Comment l'identifiant unique de l'individu sera-t-il géré ?</value>
+          </text>
+          <text id="/data/p_barcode_id:label">
+            <value>Veuillez capturer le code à bare/QR code</value>
+          </text>
+          <text id="/data/p_manual_code:label">
+            <value>Veuillez entrer le numéro du participant</value>
+          </text>
+          <text id="/data/p_manual_code2:jr:constraintMsg">
+            <value>Le code répété doit être le même</value>
+          </text>
+          <text id="/data/p_manual_code2:label">
+            <value>Veuillez répéter le numéro du participant</value>
+          </text>
+          <text id="/data/p_sex:label">
+            <value>Veuillez sélectionner le sexe</value>
+          </text>
+          <text id="/data/p_age_yrs:label">
+            <value>Entrez l'âge en années</value>
+          </text>
+          <text id="/data/p_sample_collected:label">
+            <value>L'échantillon est-il collecté</value>
+          </text>
+          <text id="/data/p_end_survey_note:label">
+            <value>Vous venez d'entrer une valeur qui mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/p_AdditionalNotes:label">
+            <value>Notes supplémentaires</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/p_district" required="true()" type="string"  db_get="col_1"/>
+      <bind nodeset="/data/p_sub_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_sub_district"/>
+      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_date" type="date"/>
+      <bind nodeset="/data/p_consent" required="true()" type="string"/>
+      <bind nodeset="/data/p_ID_method" type="string"/>
+      <bind nodeset="/data/p_barcode_id" relevant=" /data/p_consent  = 'Oui' and  /data/p_ID_method  = 'Scanner'" required="true()" type="barcode"/>
+      <bind nodeset="/data/p_manual_code" relevant=" /data/p_consent  = 'Oui' and  /data/p_ID_method != 'Scanner'" required="true()" type="string"/>
+      <bind constraint=". =  /data/p_manual_code " jr:constraintMsg="jr:itext('/data/p_manual_code2:jr:constraintMsg')" nodeset="/data/p_manual_code2" relevant=" /data/p_consent  = 'Oui' and  /data/p_ID_method != 'Scanner'" required="true()" type="string"/>
+      <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/p_sample_collected" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_end_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Non'" type="string"/>
+      <bind nodeset="/data/p_AdditionalNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/p_recorder_id">
+      <label ref="jr:itext('/data/p_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/p_recorder_id:hint')"/>
+    </input>
+    <input ref="/data/p_district">
+      <label ref="jr:itext('/data/p_district:label')"/>
+    </input>
+    <input ref="/data/p_sub_district">
+      <label ref="jr:itext('/data/p_sub_district:label')"/>
+    </input>
+    <input ref="/data/p_cluster_name">
+      <label ref="jr:itext('/data/p_cluster_name:label')"/>
+    </input>
+    <input ref="/data/p_cluster_id">
+      <label ref="jr:itext('/data/p_cluster_id:label')"/>
+    </input>
+    <input ref="/data/p_date">
+      <label ref="jr:itext('/data/p_date:label')"/>
+    </input>
+    <select1 ref="/data/p_consent">
+      <label ref="jr:itext('/data/p_consent:label')"/>
+      <item>
+        <label>Oui</label>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label>Non</label>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_ID_method">
+      <label ref="jr:itext('/data/p_ID_method:label')"/>
+      <item>
+        <label>Scanner</label>
+        <value>Scanner</value>
+      </item>
+      <item>
+        <label>Manuel</label>
+        <value>Manuel</value>
+      </item>
+    </select1>
+    <input ref="/data/p_barcode_id">
+      <label ref="jr:itext('/data/p_barcode_id:label')"/>
+    </input>
+    <input ref="/data/p_manual_code">
+      <label ref="jr:itext('/data/p_manual_code:label')"/>
+    </input>
+    <input ref="/data/p_manual_code2">
+      <label ref="jr:itext('/data/p_manual_code2:label')"/>
+    </input>
+    <select1 ref="/data/p_sex">
+      <label ref="jr:itext('/data/p_sex:label')"/>
+      <item>
+        <label>Homme</label>
+        <value>Homme</value>
+      </item>
+      <item>
+        <label>Femme</label>
+        <value>Femme</value>
+      </item>
+    </select1>
+    <input ref="/data/p_age_yrs">
+      <label ref="jr:itext('/data/p_age_yrs:label')"/>
+    </input>
+    <select1 ref="/data/p_sample_collected">
+      <label ref="jr:itext('/data/p_sample_collected:label')"/>
+      <item>
+        <label>Oui</label>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label>Non</label>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/p_end_survey_note">
+      <label ref="jr:itext('/data/p_end_survey_note:label')"/>
+    </input>
+    <input ref="/data/p_AdditionalNotes">
+      <label ref="jr:itext('/data/p_AdditionalNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>

@@ -1,0 +1,2758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Mai 2022) CEO - 1. Formulaire Site</h:title>
+    <model>
+
+      <instance>
+        <data id="gn_oncho_oem_1_site_202205">
+          <c_recorder_id/>
+          <c_district/>
+          <c_sub_district/>
+          <c_cluster_name/>
+          <c_cluster_id/>
+          <c_supervisor/>
+          <c_date/>
+          <c_health_facility/>
+          <c_type_health_facility/>
+          <c_gps/>
+          <c_river/>
+          <c_distance_community/>
+          <c_population/>
+          <c_hh_number/>
+          <c_receiving_ivm/>
+          <c_lengh_period_ivm/>
+          <c_month_dist/>
+          <c_year_dist/>
+          <c_last_dist/>
+          <c_notes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/c_recorder_id:jr:constraintMsg">
+            <value>Doit être compris entre 10 et 99 inclus</value>
+          </text>
+          <text id="/data/c_recorder_id:label">
+            <value>Entrez l'ID de l'enregistreur</value>
+          </text>
+          <text id="/data/c_recorder_id:hint">
+            <value>Code à 2 chiffres qui vous est attribué</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>District</value>
+          </text>
+          <text id="/data/c_sub_district:label">
+            <value>Sous Prefecture</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Village</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>Doit être compris entre 100 et 999 inclus</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Code Village</value>
+          </text>
+          <text id="/data/c_supervisor:label">
+            <value>Responsable de l'équipe</value>
+          </text>
+          <text id="/data/c_date:label">
+            <value>Date de l'enquête</value>
+          </text>
+          <text id="/data/c_health_facility:label">
+            <value>Nom de l'établissement de santé le plus proche</value>
+          </text>
+          <text id="/data/c_type_health_facility:label">
+            <value>Type d'établissement de santé</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Coordonnées de la communauté</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>Fonctionne mieux à l'extérieur de tout bâtiment</value>
+          </text>
+          <text id="/data/c_river:label">
+            <value>Nom de la rivière la plus proche</value>
+          </text>
+          <text id="/data/c_distance_community:label">
+            <value>Distance approximative de la communauté (KM)</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Population totale de la communauté</value>
+          </text>
+          <text id="/data/c_hh_number:label">
+            <value>Nombre estimé de ménages</value>
+          </text>
+          <text id="/data/c_receiving_ivm:label">
+            <value>Communauté recevant de l'ivermectine</value>
+          </text>
+          <text id="/data/c_lengh_period_ivm:label">
+            <value>Durée de la période de prise d'ivermectine</value>
+          </text>
+          <text id="/data/c_month_dist:label">
+            <value>Mois de la dernière distribution</value>
+          </text>
+          <text id="/data/c_year_dist:jr:constraintMsg">
+            <value>Veuillez entrer une année valide</value>
+          </text>
+          <text id="/data/c_year_dist:label">
+            <value>Année de la dernière distribution</value>
+          </text>
+          <text id="/data/c_last_dist:label">
+            <value>Dernière distribution</value>
+          </text>
+          <text id="/data/c_notes:label">
+            <value>Remarques/Observations</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <label>Oui</label>
+            <name>Oui</name>
+          </item>
+          <item>
+            <label>Non</label>
+            <name>Non</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="months">
+        <root>
+          <item>
+            <label>Janvier</label>
+            <name>Janvier</name>
+          </item>
+          <item>
+            <label>Février</label>
+            <name>Février</name>
+          </item>
+          <item>
+            <label>Mars</label>
+            <name>Mars</name>
+          </item>
+          <item>
+            <label>Avril</label>
+            <name>Avril</name>
+          </item>
+          <item>
+            <label>Mai</label>
+            <name>Mai</name>
+          </item>
+          <item>
+            <label>Juin</label>
+            <name>Juin</name>
+          </item>
+          <item>
+            <label>Juillet</label>
+            <name>Juillet</name>
+          </item>
+          <item>
+            <label>Août</label>
+            <name>Août</name>
+          </item>
+          <item>
+            <label>Septembre</label>
+            <name>Septembre</name>
+          </item>
+          <item>
+            <label>Octobre</label>
+            <name>Octobre</name>
+          </item>
+          <item>
+            <label>Novembre</label>
+            <name>Novembre</name>
+          </item>
+          <item>
+            <label>Décembre</label>
+            <name>Décembre</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <label>Boffa</label>
+            <name>Boffa</name>
+          </item>
+          <item>
+            <label>Boke</label>
+            <name>Boke</name>
+          </item>
+          <item>
+            <label>Coyah</label>
+            <name>Coyah</name>
+          </item>
+          <item>
+            <label>Dalaba</label>
+            <name>Dalaba</name>
+          </item>
+          <item>
+            <label>Dubreka</label>
+            <name>Dubreka</name>
+          </item>
+          <item>
+            <label>Fria</label>
+            <name>Fria</name>
+          </item>
+          <item>
+            <label>Labe</label>
+            <name>Labe</name>
+          </item>
+          <item>
+            <label>Pita</label>
+            <name>Pita</name>
+          </item>
+          <item>
+            <label>Telimele</label>
+            <name>Telimele</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sub_district_list">
+        <root>
+          <item>
+            <district_list>Boffa</district_list>
+            <label>Boffa Centre</label>
+            <name>Boffa Centre</name>
+          </item>
+          <item>
+            <district_list>Boffa</district_list>
+            <label>Douprou</label>
+            <name>Douprou</name>
+          </item>
+          <item>
+            <district_list>Boffa</district_list>
+            <label>Lisso</label>
+            <name>Lisso</name>
+          </item>
+          <item>
+            <district_list>Boffa</district_list>
+            <label>Mankountan</label>
+            <name>Mankountan</name>
+          </item>
+          <item>
+            <district_list>Boffa</district_list>
+            <label>Tamita</label>
+            <name>Tamita</name>
+          </item>
+          <item>
+            <district_list>Boffa</district_list>
+            <label>Tougnifily</label>
+            <name>Tougnifily</name>
+          </item>
+          <item>
+            <district_list>Boke</district_list>
+            <label>Dabiss</label>
+            <name>Dabiss</name>
+          </item>
+          <item>
+            <district_list>Boke</district_list>
+            <label>Korrera</label>
+            <name>Korrera</name>
+          </item>
+          <item>
+            <district_list>Boke</district_list>
+            <label>Sangaredi</label>
+            <name>Sangaredi</name>
+          </item>
+          <item>
+            <district_list>Boke</district_list>
+            <label>Tanene (Boke)</label>
+            <name>Tanene (Boke)</name>
+          </item>
+          <item>
+            <district_list>Coyah</district_list>
+            <label>Fily</label>
+            <name>Fily</name>
+          </item>
+          <item>
+            <district_list>Coyah</district_list>
+            <label>Kouriah</label>
+            <name>Kouriah</name>
+          </item>
+          <item>
+            <district_list>Coyah</district_list>
+            <label>Wonkifong</label>
+            <name>Wonkifong</name>
+          </item>
+          <item>
+            <district_list>Dalaba</district_list>
+            <label>Bodie</label>
+            <name>Bodie</name>
+          </item>
+          <item>
+            <district_list>Dalaba</district_list>
+            <label>Dalaba Centre</label>
+            <name>Dalaba Centre</name>
+          </item>
+          <item>
+            <district_list>Dalaba</district_list>
+            <label>Ditinn</label>
+            <name>Ditinn</name>
+          </item>
+          <item>
+            <district_list>Dalaba</district_list>
+            <label>Kankalabé</label>
+            <name>Kankalabé</name>
+          </item>
+          <item>
+            <district_list>Dalaba</district_list>
+            <label>Kébaly</label>
+            <name>Kébaly</name>
+          </item>
+          <item>
+            <district_list>Dalaba</district_list>
+            <label>Mombeya</label>
+            <name>Mombeya</name>
+          </item>
+          <item>
+            <district_list>Dubreka</district_list>
+            <label>Bady</label>
+            <name>Bady</name>
+          </item>
+          <item>
+            <district_list>Dubreka</district_list>
+            <label>Ouassou</label>
+            <name>Ouassou</name>
+          </item>
+          <item>
+            <district_list>Dubreka</district_list>
+            <label>Tanene (Dubreka)</label>
+            <name>Tanene (Dubreka)</name>
+          </item>
+          <item>
+            <district_list>Dubreka</district_list>
+            <label>Tondon</label>
+            <name>Tondon</name>
+          </item>
+          <item>
+            <district_list>Fria</district_list>
+            <label>Banguigny</label>
+            <name>Banguigny</name>
+          </item>
+          <item>
+            <district_list>Fria</district_list>
+            <label>Banguinet</label>
+            <name>Banguinet</name>
+          </item>
+          <item>
+            <district_list>Fria</district_list>
+            <label>Tormelin</label>
+            <name>Tormelin</name>
+          </item>
+          <item>
+            <district_list>Labe</district_list>
+            <label>Dalein</label>
+            <name>Dalein</name>
+          </item>
+          <item>
+            <district_list>Labe</district_list>
+            <label>Daralabe</label>
+            <name>Daralabe</name>
+          </item>
+          <item>
+            <district_list>Labe</district_list>
+            <label>Kouramangui</label>
+            <name>Kouramangui</name>
+          </item>
+          <item>
+            <district_list>Labe</district_list>
+            <label>Popodara</label>
+            <name>Popodara</name>
+          </item>
+          <item>
+            <district_list>Labe</district_list>
+            <label>Tountouroun</label>
+            <name>Tountouroun</name>
+          </item>
+          <item>
+            <district_list>Pita</district_list>
+            <label>Pita centre</label>
+            <name>Pita centre</name>
+          </item>
+          <item>
+            <district_list>Pita</district_list>
+            <label>Bantignel</label>
+            <name>Bantignel</name>
+          </item>
+          <item>
+            <district_list>Pita</district_list>
+            <label>Donghol Touma</label>
+            <name>Donghol Touma</name>
+          </item>
+          <item>
+            <district_list>Pita</district_list>
+            <label>Sintaly</label>
+            <name>Sintaly</name>
+          </item>
+          <item>
+            <district_list>Pita</district_list>
+            <label>Timbi Touni</label>
+            <name>Timbi Touni</name>
+          </item>
+          <item>
+            <district_list>Telimele</district_list>
+            <label>Gougoudje</label>
+            <name>Gougoudje</name>
+          </item>
+          <item>
+            <district_list>Telimele</district_list>
+            <label>Kollet</label>
+            <name>Kollet</name>
+          </item>
+          <item>
+            <district_list>Telimele</district_list>
+            <label>Missira</label>
+            <name>Missira</name>
+          </item>
+          <item>
+            <district_list>Telimele</district_list>
+            <label>Sinta</label>
+            <name>Sinta</name>
+          </item>
+          <item>
+            <district_list>Telimele</district_list>
+            <label>Tarihoye</label>
+            <name>Tarihoye</name>
+          </item>
+          <item>
+            <district_list>Telimele</district_list>
+            <label>Telimele Centre</label>
+            <name>Telimele Centre</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="cluster_name">
+        <root>
+          <item>
+            <label>Bangalan</label>
+            <name>Bangalan</name>
+            <sub_district_list>Boffa Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Baralandè</label>
+            <name>Baralandè</name>
+            <sub_district_list>Boffa Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Doba</label>
+            <name>Doba</name>
+            <sub_district_list>Boffa Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Farinya</label>
+            <name>Farinya</name>
+            <sub_district_list>Boffa Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Founna Khouré</label>
+            <name>Founna Khouré</name>
+            <sub_district_list>Boffa Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Sambaya</label>
+            <name>Sambaya</name>
+            <sub_district_list>Boffa Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Soumbourou</label>
+            <name>Soumbourou</name>
+            <sub_district_list>Boffa Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Tamboni</label>
+            <name>Tamboni</name>
+            <sub_district_list>Boffa Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Yimmayah</label>
+            <name>Yimmayah</name>
+            <sub_district_list>Boffa Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Bandegnidé</label>
+            <name>Bandegnidé</name>
+            <sub_district_list>Douprou</sub_district_list>
+          </item>
+          <item>
+            <label>Fokhogbie</label>
+            <name>Fokhogbie</name>
+            <sub_district_list>Douprou</sub_district_list>
+          </item>
+          <item>
+            <label>Kansiguirdé</label>
+            <name>Kansiguirdé</name>
+            <sub_district_list>Douprou</sub_district_list>
+          </item>
+          <item>
+            <label>Kawosso</label>
+            <name>Kawosso</name>
+            <sub_district_list>Douprou</sub_district_list>
+          </item>
+          <item>
+            <label>Saraya (Douprou)</label>
+            <name>Saraya (Douprou)</name>
+            <sub_district_list>Douprou</sub_district_list>
+          </item>
+          <item>
+            <label>Yèrèyadi</label>
+            <name>Yèrèyadi</name>
+            <sub_district_list>Douprou</sub_district_list>
+          </item>
+          <item>
+            <label>Lisso Centre</label>
+            <name>Lisso Centre</name>
+            <sub_district_list>Lisso</sub_district_list>
+          </item>
+          <item>
+            <label>Saman Sira</label>
+            <name>Saman Sira</name>
+            <sub_district_list>Lisso</sub_district_list>
+          </item>
+          <item>
+            <label>Wondety</label>
+            <name>Wondety</name>
+            <sub_district_list>Lisso</sub_district_list>
+          </item>
+          <item>
+            <label>Carrefour Kolon</label>
+            <name>Carrefour Kolon</name>
+            <sub_district_list>Mankountan</sub_district_list>
+          </item>
+          <item>
+            <label>Kolon</label>
+            <name>Kolon</name>
+            <sub_district_list>Mankountan</sub_district_list>
+          </item>
+          <item>
+            <label>Songoron</label>
+            <name>Songoron</name>
+            <sub_district_list>Mankountan</sub_district_list>
+          </item>
+          <item>
+            <label>Dondoly Fangni</label>
+            <name>Dondoly Fangni</name>
+            <sub_district_list>Tamita</sub_district_list>
+          </item>
+          <item>
+            <label>Koumbaya</label>
+            <name>Koumbaya</name>
+            <sub_district_list>Tougnifily</sub_district_list>
+          </item>
+          <item>
+            <label>Sokoutou</label>
+            <name>Sokoutou</name>
+            <sub_district_list>Tougnifily</sub_district_list>
+          </item>
+          <item>
+            <label>Tougnifily Centre</label>
+            <name>Tougnifily Centre</name>
+            <sub_district_list>Tougnifily</sub_district_list>
+          </item>
+          <item>
+            <label>Gnamakoûdjé</label>
+            <name>Gnamakoûdjé</name>
+            <sub_district_list>Dabiss</sub_district_list>
+          </item>
+          <item>
+            <label>Kandja Fara Dabis</label>
+            <name>Kandja Fara Dabis</name>
+            <sub_district_list>Dabiss</sub_district_list>
+          </item>
+          <item>
+            <label>Kounfa</label>
+            <name>Kounfa</name>
+            <sub_district_list>Dabiss</sub_district_list>
+          </item>
+          <item>
+            <label>Mangodjè</label>
+            <name>Mangodjè</name>
+            <sub_district_list>Dabiss</sub_district_list>
+          </item>
+          <item>
+            <label>Tantol</label>
+            <name>Tantol</name>
+            <sub_district_list>Dabiss</sub_district_list>
+          </item>
+          <item>
+            <label>Wessen</label>
+            <name>Wessen</name>
+            <sub_district_list>Dabiss</sub_district_list>
+          </item>
+          <item>
+            <label>Bakidhèra</label>
+            <name>Bakidhèra</name>
+            <sub_district_list>Korrera</sub_district_list>
+          </item>
+          <item>
+            <label>Kaweki</label>
+            <name>Kaweki</name>
+            <sub_district_list>Korrera</sub_district_list>
+          </item>
+          <item>
+            <label>Korrera Centre</label>
+            <name>Korrera Centre</name>
+            <sub_district_list>Korrera</sub_district_list>
+          </item>
+          <item>
+            <label>Madina Carrefoure</label>
+            <name>Madina Carrefoure</name>
+            <sub_district_list>Korrera</sub_district_list>
+          </item>
+          <item>
+            <label>Madina Kebeya</label>
+            <name>Madina Kebeya</name>
+            <sub_district_list>Korrera</sub_district_list>
+          </item>
+          <item>
+            <label>Barkerè</label>
+            <name>Barkerè</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Diwè Loumba Welto</label>
+            <name>Diwè Loumba Welto</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Doubhy Centre</label>
+            <name>Doubhy Centre</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Doumoun Kogon</label>
+            <name>Doumoun Kogon</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Filo Bowal N'Dantary</label>
+            <name>Filo Bowal N'Dantary</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Guildhé Centre</label>
+            <name>Guildhé Centre</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Kogonlenguiwi</label>
+            <name>Kogonlenguiwi</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Kogonpassague</label>
+            <name>Kogonpassague</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Poutétéya</label>
+            <name>Poutétéya</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Sinthourou Almamy</label>
+            <name>Sinthourou Almamy</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Tchanghè</label>
+            <name>Tchanghè</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Thiaghalle</label>
+            <name>Thiaghalle</name>
+            <sub_district_list>Sangaredi</sub_district_list>
+          </item>
+          <item>
+            <label>Gobiret</label>
+            <name>Gobiret</name>
+            <sub_district_list>Tanene (Boke)</sub_district_list>
+          </item>
+          <item>
+            <label>Tinguilinta</label>
+            <name>Tinguilinta</name>
+            <sub_district_list>Tanene (Boke)</sub_district_list>
+          </item>
+          <item>
+            <label>Sarbacane Quartier Centre</label>
+            <name>Sarbacane Quartier Centre</name>
+            <sub_district_list>Fily</sub_district_list>
+          </item>
+          <item>
+            <label>Gbalan</label>
+            <name>Gbalan</name>
+            <sub_district_list>Kouriah</sub_district_list>
+          </item>
+          <item>
+            <label>Wondidhè</label>
+            <name>Wondidhè</name>
+            <sub_district_list>Kouriah</sub_district_list>
+          </item>
+          <item>
+            <label>Toguilon Kondéya</label>
+            <name>Toguilon Kondéya</name>
+            <sub_district_list>Wonkifong</sub_district_list>
+          </item>
+          <item>
+            <label>Bodie</label>
+            <name>Bodie</name>
+            <sub_district_list>Bodie</sub_district_list>
+          </item>
+          <item>
+            <label>Diabere</label>
+            <name>Diabere</name>
+            <sub_district_list>Bodie</sub_district_list>
+          </item>
+          <item>
+            <label>Dow Bodie</label>
+            <name>Dow Bodie</name>
+            <sub_district_list>Bodie</sub_district_list>
+          </item>
+          <item>
+            <label>Sougue</label>
+            <name>Sougue</name>
+            <sub_district_list>Bodie</sub_district_list>
+          </item>
+          <item>
+            <label>Yale</label>
+            <name>Yale</name>
+            <sub_district_list>Bodie</sub_district_list>
+          </item>
+          <item>
+            <label>Boussoura (Dalaba Centre)</label>
+            <name>Boussoura (Dalaba Centre)</name>
+            <sub_district_list>Dalaba Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Donghui</label>
+            <name>Donghui</name>
+            <sub_district_list>Dalaba Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Hafia (Dalaba Centre)</label>
+            <name>Hafia (Dalaba Centre)</name>
+            <sub_district_list>Dalaba Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Kiret</label>
+            <name>Kiret</name>
+            <sub_district_list>Dalaba Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Legue</label>
+            <name>Legue</name>
+            <sub_district_list>Dalaba Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Tchangui</label>
+            <name>Tchangui</name>
+            <sub_district_list>Dalaba Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Hafia (Ditinn)</label>
+            <name>Hafia (Ditinn)</name>
+            <sub_district_list>Ditinn</sub_district_list>
+          </item>
+          <item>
+            <label>Dankolo</label>
+            <name>Dankolo</name>
+            <sub_district_list>Kankalabé</sub_district_list>
+          </item>
+          <item>
+            <label>Lamy</label>
+            <name>Lamy</name>
+            <sub_district_list>Kankalabé</sub_district_list>
+          </item>
+          <item>
+            <label>Daro</label>
+            <name>Daro</name>
+            <sub_district_list>Kébaly</sub_district_list>
+          </item>
+          <item>
+            <label>Bourouwel</label>
+            <name>Bourouwel</name>
+            <sub_district_list>Mombeya</sub_district_list>
+          </item>
+          <item>
+            <label>Dar-Es-Salam</label>
+            <name>Dar-Es-Salam</name>
+            <sub_district_list>Mombeya</sub_district_list>
+          </item>
+          <item>
+            <label>Kegna Hinde</label>
+            <name>Kegna Hinde</name>
+            <sub_district_list>Mombeya</sub_district_list>
+          </item>
+          <item>
+            <label>Lahoya</label>
+            <name>Lahoya</name>
+            <sub_district_list>Mombeya</sub_district_list>
+          </item>
+          <item>
+            <label>Seriya</label>
+            <name>Seriya</name>
+            <sub_district_list>Mombeya</sub_district_list>
+          </item>
+          <item>
+            <label>Silaya</label>
+            <name>Silaya</name>
+            <sub_district_list>Mombeya</sub_district_list>
+          </item>
+          <item>
+            <label>Sorondo</label>
+            <name>Sorondo</name>
+            <sub_district_list>Mombeya</sub_district_list>
+          </item>
+          <item>
+            <label>Bady Centre</label>
+            <name>Bady Centre</name>
+            <sub_district_list>Bady</sub_district_list>
+          </item>
+          <item>
+            <label>Mory Fodeyah</label>
+            <name>Mory Fodeyah</name>
+            <sub_district_list>Bady</sub_district_list>
+          </item>
+          <item>
+            <label>Saraya Tembe Pont</label>
+            <name>Saraya Tembe Pont</name>
+            <sub_district_list>Ouassou</sub_district_list>
+          </item>
+          <item>
+            <label>Bouramayah Tafory</label>
+            <name>Bouramayah Tafory</name>
+            <sub_district_list>Tanene (Dubreka)</sub_district_list>
+          </item>
+          <item>
+            <label>Quatre Pont</label>
+            <name>Quatre Pont</name>
+            <sub_district_list>Tanene (Dubreka)</sub_district_list>
+          </item>
+          <item>
+            <label>Amadouya Tanene</label>
+            <name>Amadouya Tanene</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Bara Landè</label>
+            <name>Bara Landè</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Bingalima</label>
+            <name>Bingalima</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Bouramaya</label>
+            <name>Bouramaya</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Diguilin</label>
+            <name>Diguilin</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Dinyama</label>
+            <name>Dinyama</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Falaba</label>
+            <name>Falaba</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Foton Foert</label>
+            <name>Foton Foert</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Foundenkhourè</label>
+            <name>Foundenkhourè</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Gabitèt</label>
+            <name>Gabitèt</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Garadara</label>
+            <name>Garadara</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Garkabeya</label>
+            <name>Garkabeya</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Kafa</label>
+            <name>Kafa</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Khourkhan</label>
+            <name>Khourkhan</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Lilin</label>
+            <name>Lilin</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Salakhou</label>
+            <name>Salakhou</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Tanene</label>
+            <name>Tanene</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Tondon 2</label>
+            <name>Tondon 2</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Tossa</label>
+            <name>Tossa</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Yenguissa</label>
+            <name>Yenguissa</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Yintery</label>
+            <name>Yintery</name>
+            <sub_district_list>Tondon</sub_district_list>
+          </item>
+          <item>
+            <label>Missira</label>
+            <name>Missira</name>
+            <sub_district_list>Banguigny</sub_district_list>
+          </item>
+          <item>
+            <label>Benna</label>
+            <name>Benna</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Boussoura (Banguinet)</label>
+            <name>Boussoura (Banguinet)</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Dola</label>
+            <name>Dola</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Donsoyah</label>
+            <name>Donsoyah</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Doroyi Centre</label>
+            <name>Doroyi Centre</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Fandjeta</label>
+            <name>Fandjeta</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Fria Village</label>
+            <name>Fria Village</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Gabayah</label>
+            <name>Gabayah</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Kardè</label>
+            <name>Kardè</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Kira Tagui</label>
+            <name>Kira Tagui</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Kobe Soodè</label>
+            <name>Kobe Soodè</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Kolabougni</label>
+            <name>Kolabougni</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Kountia</label>
+            <name>Kountia</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Leguelougou</label>
+            <name>Leguelougou</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Madina Touloun</label>
+            <name>Madina Touloun</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Manda Sôdè</label>
+            <name>Manda Sôdè</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Missidé Boulèreyah</label>
+            <name>Missidé Boulèreyah</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Simbakhouloun</label>
+            <name>Simbakhouloun</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Sinthourou</label>
+            <name>Sinthourou</name>
+            <sub_district_list>Banguinet</sub_district_list>
+          </item>
+          <item>
+            <label>Fanfaranyin</label>
+            <name>Fanfaranyin</name>
+            <sub_district_list>Tormelin</sub_district_list>
+          </item>
+          <item>
+            <label>Fôto</label>
+            <name>Fôto</name>
+            <sub_district_list>Tormelin</sub_district_list>
+          </item>
+          <item>
+            <label>Fotokhounyi</label>
+            <name>Fotokhounyi</name>
+            <sub_district_list>Tormelin</sub_district_list>
+          </item>
+          <item>
+            <label>Kila</label>
+            <name>Kila</name>
+            <sub_district_list>Tormelin</sub_district_list>
+          </item>
+          <item>
+            <label>Ningué Matodhé</label>
+            <name>Ningué Matodhé</name>
+            <sub_district_list>Tormelin</sub_district_list>
+          </item>
+          <item>
+            <label>Sabende Kolobeyah</label>
+            <name>Sabende Kolobeyah</name>
+            <sub_district_list>Tormelin</sub_district_list>
+          </item>
+          <item>
+            <label>Tafory</label>
+            <name>Tafory</name>
+            <sub_district_list>Tormelin</sub_district_list>
+          </item>
+          <item>
+            <label>Wèyèkhôri</label>
+            <name>Wèyèkhôri</name>
+            <sub_district_list>Tormelin</sub_district_list>
+          </item>
+          <item>
+            <label>Wondékhouré</label>
+            <name>Wondékhouré</name>
+            <sub_district_list>Tormelin</sub_district_list>
+          </item>
+          <item>
+            <label>Yatiyi</label>
+            <name>Yatiyi</name>
+            <sub_district_list>Tormelin</sub_district_list>
+          </item>
+          <item>
+            <label>Gadathiangui</label>
+            <name>Gadathiangui</name>
+            <sub_district_list>Dalein</sub_district_list>
+          </item>
+          <item>
+            <label>Kansakouma</label>
+            <name>Kansakouma</name>
+            <sub_district_list>Dalein</sub_district_list>
+          </item>
+          <item>
+            <label>Madina Kansaghi</label>
+            <name>Madina Kansaghi</name>
+            <sub_district_list>Dalein</sub_district_list>
+          </item>
+          <item>
+            <label>Ndiraye</label>
+            <name>Ndiraye</name>
+            <sub_district_list>Dalein</sub_district_list>
+          </item>
+          <item>
+            <label>Telikoto</label>
+            <name>Telikoto</name>
+            <sub_district_list>Dalein</sub_district_list>
+          </item>
+          <item>
+            <label>Louguel</label>
+            <name>Louguel</name>
+            <sub_district_list>Daralabe</sub_district_list>
+          </item>
+          <item>
+            <label>Beela</label>
+            <name>Beela</name>
+            <sub_district_list>Kouramangui</sub_district_list>
+          </item>
+          <item>
+            <label>Herrokassa</label>
+            <name>Herrokassa</name>
+            <sub_district_list>Kouramangui</sub_district_list>
+          </item>
+          <item>
+            <label>Hoore Kassa</label>
+            <name>Hoore Kassa</name>
+            <sub_district_list>Kouramangui</sub_district_list>
+          </item>
+          <item>
+            <label>Hore Wouloun</label>
+            <name>Hore Wouloun</name>
+            <sub_district_list>Kouramangui</sub_district_list>
+          </item>
+          <item>
+            <label>Kansa Gawol</label>
+            <name>Kansa Gawol</name>
+            <sub_district_list>Kouramangui</sub_district_list>
+          </item>
+          <item>
+            <label>Kassabinde Bowal</label>
+            <name>Kassabinde Bowal</name>
+            <sub_district_list>Kouramangui</sub_district_list>
+          </item>
+          <item>
+            <label>Leythandi</label>
+            <name>Leythandi</name>
+            <sub_district_list>Kouramangui</sub_district_list>
+          </item>
+          <item>
+            <label>Ndanta</label>
+            <name>Ndanta</name>
+            <sub_district_list>Kouramangui</sub_district_list>
+          </item>
+          <item>
+            <label>Thiankoye (Kouramangui)</label>
+            <name>Thiankoye (Kouramangui)</name>
+            <sub_district_list>Kouramangui</sub_district_list>
+          </item>
+          <item>
+            <label>Goungan</label>
+            <name>Goungan</name>
+            <sub_district_list>Popodara</sub_district_list>
+          </item>
+          <item>
+            <label>Nyiwa</label>
+            <name>Nyiwa</name>
+            <sub_district_list>Popodara</sub_district_list>
+          </item>
+          <item>
+            <label>Saagaran</label>
+            <name>Saagaran</name>
+            <sub_district_list>Popodara</sub_district_list>
+          </item>
+          <item>
+            <label>Satina</label>
+            <name>Satina</name>
+            <sub_district_list>Popodara</sub_district_list>
+          </item>
+          <item>
+            <label>Balaya</label>
+            <name>Balaya</name>
+            <sub_district_list>Tountouroun</sub_district_list>
+          </item>
+          <item>
+            <label>Ibouniabe</label>
+            <name>Ibouniabe</name>
+            <sub_district_list>Tountouroun</sub_district_list>
+          </item>
+          <item>
+            <label>Ley Korima</label>
+            <name>Ley Korima</name>
+            <sub_district_list>Tountouroun</sub_district_list>
+          </item>
+          <item>
+            <label>Madina Saare</label>
+            <name>Madina Saare</name>
+            <sub_district_list>Tountouroun</sub_district_list>
+          </item>
+          <item>
+            <label>Peliga</label>
+            <name>Peliga</name>
+            <sub_district_list>Tountouroun</sub_district_list>
+          </item>
+          <item>
+            <label>Telirè</label>
+            <name>Telirè</name>
+            <sub_district_list>Tountouroun</sub_district_list>
+          </item>
+          <item>
+            <label>Tolou</label>
+            <name>Tolou</name>
+            <sub_district_list>Tountouroun</sub_district_list>
+          </item>
+          <item>
+            <label>Bambewel</label>
+            <name>Bambewel</name>
+            <sub_district_list>Pita centre</sub_district_list>
+          </item>
+          <item>
+            <label>Congo Hafia</label>
+            <name>Congo Hafia</name>
+            <sub_district_list>Pita centre</sub_district_list>
+          </item>
+          <item>
+            <label>Darra</label>
+            <name>Darra</name>
+            <sub_district_list>Pita centre</sub_district_list>
+          </item>
+          <item>
+            <label>Kewol</label>
+            <name>Kewol</name>
+            <sub_district_list>Pita centre</sub_district_list>
+          </item>
+          <item>
+            <label>Kondenko</label>
+            <name>Kondenko</name>
+            <sub_district_list>Pita centre</sub_district_list>
+          </item>
+          <item>
+            <label>Kourassoro</label>
+            <name>Kourassoro</name>
+            <sub_district_list>Pita centre</sub_district_list>
+          </item>
+          <item>
+            <label>Sapepo</label>
+            <name>Sapepo</name>
+            <sub_district_list>Pita centre</sub_district_list>
+          </item>
+          <item>
+            <label>Sira</label>
+            <name>Sira</name>
+            <sub_district_list>Pita centre</sub_district_list>
+          </item>
+          <item>
+            <label>Toullelyereya</label>
+            <name>Toullelyereya</name>
+            <sub_district_list>Pita centre</sub_district_list>
+          </item>
+          <item>
+            <label>Djindji</label>
+            <name>Djindji</name>
+            <sub_district_list>Bantignel</sub_district_list>
+          </item>
+          <item>
+            <label>Hinde</label>
+            <name>Hinde</name>
+            <sub_district_list>Bantignel</sub_district_list>
+          </item>
+          <item>
+            <label>Horretayile</label>
+            <name>Horretayile</name>
+            <sub_district_list>Bantignel</sub_district_list>
+          </item>
+          <item>
+            <label>Leibowal</label>
+            <name>Leibowal</name>
+            <sub_district_list>Bantignel</sub_district_list>
+          </item>
+          <item>
+            <label>Lonyi</label>
+            <name>Lonyi</name>
+            <sub_district_list>Bantignel</sub_district_list>
+          </item>
+          <item>
+            <label>Pelloye</label>
+            <name>Pelloye</name>
+            <sub_district_list>Bantignel</sub_district_list>
+          </item>
+          <item>
+            <label>Foutaya</label>
+            <name>Foutaya</name>
+            <sub_district_list>Donghol Touma</sub_district_list>
+          </item>
+          <item>
+            <label>Bhoulal</label>
+            <name>Bhoulal</name>
+            <sub_district_list>Sintaly</sub_district_list>
+          </item>
+          <item>
+            <label>Kansodji</label>
+            <name>Kansodji</name>
+            <sub_district_list>Sintaly</sub_district_list>
+          </item>
+          <item>
+            <label>Kokoulo</label>
+            <name>Kokoulo</name>
+            <sub_district_list>Sintaly</sub_district_list>
+          </item>
+          <item>
+            <label>Linguerin</label>
+            <name>Linguerin</name>
+            <sub_district_list>Sintaly</sub_district_list>
+          </item>
+          <item>
+            <label>Madina Dibaya</label>
+            <name>Madina Dibaya</name>
+            <sub_district_list>Sintaly</sub_district_list>
+          </item>
+          <item>
+            <label>Saraya (Sintaly)</label>
+            <name>Saraya (Sintaly)</name>
+            <sub_district_list>Sintaly</sub_district_list>
+          </item>
+          <item>
+            <label>Sintaly Centre</label>
+            <name>Sintaly Centre</name>
+            <sub_district_list>Sintaly</sub_district_list>
+          </item>
+          <item>
+            <label>Touriya</label>
+            <name>Touriya</name>
+            <sub_district_list>Sintaly</sub_district_list>
+          </item>
+          <item>
+            <label>Brouwel</label>
+            <name>Brouwel</name>
+            <sub_district_list>Timbi Touni</sub_district_list>
+          </item>
+          <item>
+            <label>Dembeleya</label>
+            <name>Dembeleya</name>
+            <sub_district_list>Timbi Touni</sub_district_list>
+          </item>
+          <item>
+            <label>Djayilol</label>
+            <name>Djayilol</name>
+            <sub_district_list>Timbi Touni</sub_district_list>
+          </item>
+          <item>
+            <label>Bady</label>
+            <name>Bady</name>
+            <sub_district_list>Gougoudje</sub_district_list>
+          </item>
+          <item>
+            <label>Dowoubala</label>
+            <name>Dowoubala</name>
+            <sub_district_list>Gougoudje</sub_district_list>
+          </item>
+          <item>
+            <label>Kafimma</label>
+            <name>Kafimma</name>
+            <sub_district_list>Gougoudje</sub_district_list>
+          </item>
+          <item>
+            <label>Kignan</label>
+            <name>Kignan</name>
+            <sub_district_list>Gougoudje</sub_district_list>
+          </item>
+          <item>
+            <label>Koussy</label>
+            <name>Koussy</name>
+            <sub_district_list>Gougoudje</sub_district_list>
+          </item>
+          <item>
+            <label>Ley Fello</label>
+            <name>Ley Fello</name>
+            <sub_district_list>Gougoudje</sub_district_list>
+          </item>
+          <item>
+            <label>Megnekouré</label>
+            <name>Megnekouré</name>
+            <sub_district_list>Gougoudje</sub_district_list>
+          </item>
+          <item>
+            <label>Kaleta</label>
+            <name>Kaleta</name>
+            <sub_district_list>Kollet</sub_district_list>
+          </item>
+          <item>
+            <label>Khorié</label>
+            <name>Khorié</name>
+            <sub_district_list>Kollet</sub_district_list>
+          </item>
+          <item>
+            <label>Kogon Lenguey</label>
+            <name>Kogon Lenguey</name>
+            <sub_district_list>Missira</sub_district_list>
+          </item>
+          <item>
+            <label>Balou</label>
+            <name>Balou</name>
+            <sub_district_list>Sinta</sub_district_list>
+          </item>
+          <item>
+            <label>Bendè</label>
+            <name>Bendè</name>
+            <sub_district_list>Sinta</sub_district_list>
+          </item>
+          <item>
+            <label>Dagui</label>
+            <name>Dagui</name>
+            <sub_district_list>Sinta</sub_district_list>
+          </item>
+          <item>
+            <label>Djakoudara</label>
+            <name>Djakoudara</name>
+            <sub_district_list>Sinta</sub_district_list>
+          </item>
+          <item>
+            <label>Falissare</label>
+            <name>Falissare</name>
+            <sub_district_list>Sinta</sub_district_list>
+          </item>
+          <item>
+            <label>Kaaba</label>
+            <name>Kaaba</name>
+            <sub_district_list>Sinta</sub_district_list>
+          </item>
+          <item>
+            <label>Parawaly</label>
+            <name>Parawaly</name>
+            <sub_district_list>Sinta</sub_district_list>
+          </item>
+          <item>
+            <label>Souloudji (Sinta)</label>
+            <name>Souloudji (Sinta)</name>
+            <sub_district_list>Sinta</sub_district_list>
+          </item>
+          <item>
+            <label>Thiankoye (Sinta)</label>
+            <name>Thiankoye (Sinta)</name>
+            <sub_district_list>Sinta</sub_district_list>
+          </item>
+          <item>
+            <label>Wanssan</label>
+            <name>Wanssan</name>
+            <sub_district_list>Sinta</sub_district_list>
+          </item>
+          <item>
+            <label>Djolitougui</label>
+            <name>Djolitougui</name>
+            <sub_district_list>Tarihoye</sub_district_list>
+          </item>
+          <item>
+            <label>Dolonki</label>
+            <name>Dolonki</name>
+            <sub_district_list>Tarihoye</sub_district_list>
+          </item>
+          <item>
+            <label>Mabhè</label>
+            <name>Mabhè</name>
+            <sub_district_list>Tarihoye</sub_district_list>
+          </item>
+          <item>
+            <label>Boudoun Ami</label>
+            <name>Boudoun Ami</name>
+            <sub_district_list>Telimele Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Dounkaya</label>
+            <name>Dounkaya</name>
+            <sub_district_list>Telimele Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Souloudji (Telimele Centre)</label>
+            <name>Souloudji (Telimele Centre)</name>
+            <sub_district_list>Telimele Centre</sub_district_list>
+          </item>
+          <item>
+            <label>Soulouwoye</label>
+            <name>Soulouwoye</name>
+            <sub_district_list>Telimele Centre</sub_district_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="cluster_id">
+        <root>
+          <item>
+            <cluster_name>Bangalan</cluster_name>
+            <label>101</label>
+            <name>101</name>
+          </item>
+          <item>
+            <cluster_name>Baralandè</cluster_name>
+            <label>102</label>
+            <name>102</name>
+          </item>
+          <item>
+            <cluster_name>Doba</cluster_name>
+            <label>103</label>
+            <name>103</name>
+          </item>
+          <item>
+            <cluster_name>Farinya</cluster_name>
+            <label>104</label>
+            <name>104</name>
+          </item>
+          <item>
+            <cluster_name>Founna Khouré</cluster_name>
+            <label>105</label>
+            <name>105</name>
+          </item>
+          <item>
+            <cluster_name>Sambaya</cluster_name>
+            <label>106</label>
+            <name>106</name>
+          </item>
+          <item>
+            <cluster_name>Soumbourou</cluster_name>
+            <label>107</label>
+            <name>107</name>
+          </item>
+          <item>
+            <cluster_name>Tamboni</cluster_name>
+            <label>108</label>
+            <name>108</name>
+          </item>
+          <item>
+            <cluster_name>Yimmayah</cluster_name>
+            <label>109</label>
+            <name>109</name>
+          </item>
+          <item>
+            <cluster_name>Bandegnidé</cluster_name>
+            <label>110</label>
+            <name>110</name>
+          </item>
+          <item>
+            <cluster_name>Fokhogbie</cluster_name>
+            <label>111</label>
+            <name>111</name>
+          </item>
+          <item>
+            <cluster_name>Kansiguirdé</cluster_name>
+            <label>112</label>
+            <name>112</name>
+          </item>
+          <item>
+            <cluster_name>Kawosso</cluster_name>
+            <label>113</label>
+            <name>113</name>
+          </item>
+          <item>
+            <cluster_name>Saraya (Douprou)</cluster_name>
+            <label>114</label>
+            <name>114</name>
+          </item>
+          <item>
+            <cluster_name>Yèrèyadi</cluster_name>
+            <label>115</label>
+            <name>115</name>
+          </item>
+          <item>
+            <cluster_name>Lisso Centre</cluster_name>
+            <label>116</label>
+            <name>116</name>
+          </item>
+          <item>
+            <cluster_name>Saman Sira</cluster_name>
+            <label>117</label>
+            <name>117</name>
+          </item>
+          <item>
+            <cluster_name>Wondety</cluster_name>
+            <label>118</label>
+            <name>118</name>
+          </item>
+          <item>
+            <cluster_name>Carrefour Kolon</cluster_name>
+            <label>119</label>
+            <name>119</name>
+          </item>
+          <item>
+            <cluster_name>Kolon</cluster_name>
+            <label>120</label>
+            <name>120</name>
+          </item>
+          <item>
+            <cluster_name>Songoron</cluster_name>
+            <label>121</label>
+            <name>121</name>
+          </item>
+          <item>
+            <cluster_name>Dondoly Fangni</cluster_name>
+            <label>122</label>
+            <name>122</name>
+          </item>
+          <item>
+            <cluster_name>Koumbaya</cluster_name>
+            <label>123</label>
+            <name>123</name>
+          </item>
+          <item>
+            <cluster_name>Sokoutou</cluster_name>
+            <label>124</label>
+            <name>124</name>
+          </item>
+          <item>
+            <cluster_name>Tougnifily Centre</cluster_name>
+            <label>125</label>
+            <name>125</name>
+          </item>
+          <item>
+            <cluster_name>Gnamakoûdjé</cluster_name>
+            <label>126</label>
+            <name>126</name>
+          </item>
+          <item>
+            <cluster_name>Kandja Fara Dabis</cluster_name>
+            <label>127</label>
+            <name>127</name>
+          </item>
+          <item>
+            <cluster_name>Kounfa</cluster_name>
+            <label>128</label>
+            <name>128</name>
+          </item>
+          <item>
+            <cluster_name>Mangodjè</cluster_name>
+            <label>129</label>
+            <name>129</name>
+          </item>
+          <item>
+            <cluster_name>Tantol</cluster_name>
+            <label>130</label>
+            <name>130</name>
+          </item>
+          <item>
+            <cluster_name>Wessen</cluster_name>
+            <label>131</label>
+            <name>131</name>
+          </item>
+          <item>
+            <cluster_name>Bakidhèra</cluster_name>
+            <label>132</label>
+            <name>132</name>
+          </item>
+          <item>
+            <cluster_name>Kaweki</cluster_name>
+            <label>133</label>
+            <name>133</name>
+          </item>
+          <item>
+            <cluster_name>Korrera Centre</cluster_name>
+            <label>134</label>
+            <name>134</name>
+          </item>
+          <item>
+            <cluster_name>Madina Carrefoure</cluster_name>
+            <label>135</label>
+            <name>135</name>
+          </item>
+          <item>
+            <cluster_name>Madina Kebeya</cluster_name>
+            <label>136</label>
+            <name>136</name>
+          </item>
+          <item>
+            <cluster_name>Barkerè</cluster_name>
+            <label>137</label>
+            <name>137</name>
+          </item>
+          <item>
+            <cluster_name>Diwè Loumba Welto</cluster_name>
+            <label>138</label>
+            <name>138</name>
+          </item>
+          <item>
+            <cluster_name>Doubhy Centre</cluster_name>
+            <label>139</label>
+            <name>139</name>
+          </item>
+          <item>
+            <cluster_name>Doumoun Kogon</cluster_name>
+            <label>140</label>
+            <name>140</name>
+          </item>
+          <item>
+            <cluster_name>Filo Bowal N'Dantary</cluster_name>
+            <label>141</label>
+            <name>141</name>
+          </item>
+          <item>
+            <cluster_name>Guildhé Centre</cluster_name>
+            <label>142</label>
+            <name>142</name>
+          </item>
+          <item>
+            <cluster_name>Kogonlenguiwi</cluster_name>
+            <label>143</label>
+            <name>143</name>
+          </item>
+          <item>
+            <cluster_name>Kogonpassague</cluster_name>
+            <label>144</label>
+            <name>144</name>
+          </item>
+          <item>
+            <cluster_name>Poutétéya</cluster_name>
+            <label>145</label>
+            <name>145</name>
+          </item>
+          <item>
+            <cluster_name>Sinthourou Almamy</cluster_name>
+            <label>146</label>
+            <name>146</name>
+          </item>
+          <item>
+            <cluster_name>Tchanghè</cluster_name>
+            <label>147</label>
+            <name>147</name>
+          </item>
+          <item>
+            <cluster_name>Thiaghalle</cluster_name>
+            <label>148</label>
+            <name>148</name>
+          </item>
+          <item>
+            <cluster_name>Gobiret</cluster_name>
+            <label>149</label>
+            <name>149</name>
+          </item>
+          <item>
+            <cluster_name>Tinguilinta</cluster_name>
+            <label>150</label>
+            <name>150</name>
+          </item>
+          <item>
+            <cluster_name>Sarbacane Quartier Centre</cluster_name>
+            <label>151</label>
+            <name>151</name>
+          </item>
+          <item>
+            <cluster_name>Gbalan</cluster_name>
+            <label>152</label>
+            <name>152</name>
+          </item>
+          <item>
+            <cluster_name>Wondidhè</cluster_name>
+            <label>153</label>
+            <name>153</name>
+          </item>
+          <item>
+            <cluster_name>Toguilon Kondéya</cluster_name>
+            <label>154</label>
+            <name>154</name>
+          </item>
+          <item>
+            <cluster_name>Bodie</cluster_name>
+            <label>155</label>
+            <name>155</name>
+          </item>
+          <item>
+            <cluster_name>Diabere</cluster_name>
+            <label>156</label>
+            <name>156</name>
+          </item>
+          <item>
+            <cluster_name>Dow Bodie</cluster_name>
+            <label>157</label>
+            <name>157</name>
+          </item>
+          <item>
+            <cluster_name>Sougue</cluster_name>
+            <label>158</label>
+            <name>158</name>
+          </item>
+          <item>
+            <cluster_name>Yale</cluster_name>
+            <label>159</label>
+            <name>159</name>
+          </item>
+          <item>
+            <cluster_name>Boussoura (Dalaba Centre)</cluster_name>
+            <label>160</label>
+            <name>160</name>
+          </item>
+          <item>
+            <cluster_name>Donghui</cluster_name>
+            <label>161</label>
+            <name>161</name>
+          </item>
+          <item>
+            <cluster_name>Hafia (Dalaba Centre)</cluster_name>
+            <label>162</label>
+            <name>162</name>
+          </item>
+          <item>
+            <cluster_name>Kiret</cluster_name>
+            <label>163</label>
+            <name>163</name>
+          </item>
+          <item>
+            <cluster_name>Legue</cluster_name>
+            <label>164</label>
+            <name>164</name>
+          </item>
+          <item>
+            <cluster_name>Tchangui</cluster_name>
+            <label>165</label>
+            <name>165</name>
+          </item>
+          <item>
+            <cluster_name>Hafia (Ditinn)</cluster_name>
+            <label>166</label>
+            <name>166</name>
+          </item>
+          <item>
+            <cluster_name>Dankolo</cluster_name>
+            <label>167</label>
+            <name>167</name>
+          </item>
+          <item>
+            <cluster_name>Lamy</cluster_name>
+            <label>168</label>
+            <name>168</name>
+          </item>
+          <item>
+            <cluster_name>Daro</cluster_name>
+            <label>169</label>
+            <name>169</name>
+          </item>
+          <item>
+            <cluster_name>Bourouwel</cluster_name>
+            <label>170</label>
+            <name>170</name>
+          </item>
+          <item>
+            <cluster_name>Dar-Es-Salam</cluster_name>
+            <label>171</label>
+            <name>171</name>
+          </item>
+          <item>
+            <cluster_name>Kegna Hinde</cluster_name>
+            <label>172</label>
+            <name>172</name>
+          </item>
+          <item>
+            <cluster_name>Lahoya</cluster_name>
+            <label>173</label>
+            <name>173</name>
+          </item>
+          <item>
+            <cluster_name>Seriya</cluster_name>
+            <label>174</label>
+            <name>174</name>
+          </item>
+          <item>
+            <cluster_name>Silaya</cluster_name>
+            <label>175</label>
+            <name>175</name>
+          </item>
+          <item>
+            <cluster_name>Sorondo</cluster_name>
+            <label>176</label>
+            <name>176</name>
+          </item>
+          <item>
+            <cluster_name>Bady Centre</cluster_name>
+            <label>177</label>
+            <name>177</name>
+          </item>
+          <item>
+            <cluster_name>Mory Fodeyah</cluster_name>
+            <label>178</label>
+            <name>178</name>
+          </item>
+          <item>
+            <cluster_name>Saraya Tembe Pont</cluster_name>
+            <label>179</label>
+            <name>179</name>
+          </item>
+          <item>
+            <cluster_name>Bouramayah Tafory</cluster_name>
+            <label>180</label>
+            <name>180</name>
+          </item>
+          <item>
+            <cluster_name>Quatre Pont</cluster_name>
+            <label>181</label>
+            <name>181</name>
+          </item>
+          <item>
+            <cluster_name>Amadouya Tanene</cluster_name>
+            <label>182</label>
+            <name>182</name>
+          </item>
+          <item>
+            <cluster_name>Bara Landè</cluster_name>
+            <label>183</label>
+            <name>183</name>
+          </item>
+          <item>
+            <cluster_name>Bingalima</cluster_name>
+            <label>184</label>
+            <name>184</name>
+          </item>
+          <item>
+            <cluster_name>Bouramaya</cluster_name>
+            <label>185</label>
+            <name>185</name>
+          </item>
+          <item>
+            <cluster_name>Diguilin</cluster_name>
+            <label>186</label>
+            <name>186</name>
+          </item>
+          <item>
+            <cluster_name>Dinyama</cluster_name>
+            <label>187</label>
+            <name>187</name>
+          </item>
+          <item>
+            <cluster_name>Falaba</cluster_name>
+            <label>188</label>
+            <name>188</name>
+          </item>
+          <item>
+            <cluster_name>Foton Foert</cluster_name>
+            <label>189</label>
+            <name>189</name>
+          </item>
+          <item>
+            <cluster_name>Foundenkhourè</cluster_name>
+            <label>190</label>
+            <name>190</name>
+          </item>
+          <item>
+            <cluster_name>Gabitèt</cluster_name>
+            <label>191</label>
+            <name>191</name>
+          </item>
+          <item>
+            <cluster_name>Garadara</cluster_name>
+            <label>192</label>
+            <name>192</name>
+          </item>
+          <item>
+            <cluster_name>Garkabeya</cluster_name>
+            <label>193</label>
+            <name>193</name>
+          </item>
+          <item>
+            <cluster_name>Kafa</cluster_name>
+            <label>194</label>
+            <name>194</name>
+          </item>
+          <item>
+            <cluster_name>Khourkhan</cluster_name>
+            <label>195</label>
+            <name>195</name>
+          </item>
+          <item>
+            <cluster_name>Lilin</cluster_name>
+            <label>196</label>
+            <name>196</name>
+          </item>
+          <item>
+            <cluster_name>Salakhou</cluster_name>
+            <label>197</label>
+            <name>197</name>
+          </item>
+          <item>
+            <cluster_name>Tanene</cluster_name>
+            <label>198</label>
+            <name>198</name>
+          </item>
+          <item>
+            <cluster_name>Tondon 2</cluster_name>
+            <label>199</label>
+            <name>199</name>
+          </item>
+          <item>
+            <cluster_name>Tossa</cluster_name>
+            <label>200</label>
+            <name>200</name>
+          </item>
+          <item>
+            <cluster_name>Yenguissa</cluster_name>
+            <label>201</label>
+            <name>201</name>
+          </item>
+          <item>
+            <cluster_name>Yintery</cluster_name>
+            <label>202</label>
+            <name>202</name>
+          </item>
+          <item>
+            <cluster_name>Missira</cluster_name>
+            <label>203</label>
+            <name>203</name>
+          </item>
+          <item>
+            <cluster_name>Benna</cluster_name>
+            <label>204</label>
+            <name>204</name>
+          </item>
+          <item>
+            <cluster_name>Boussoura (Banguinet)</cluster_name>
+            <label>205</label>
+            <name>205</name>
+          </item>
+          <item>
+            <cluster_name>Dola</cluster_name>
+            <label>206</label>
+            <name>206</name>
+          </item>
+          <item>
+            <cluster_name>Donsoyah</cluster_name>
+            <label>207</label>
+            <name>207</name>
+          </item>
+          <item>
+            <cluster_name>Doroyi Centre</cluster_name>
+            <label>208</label>
+            <name>208</name>
+          </item>
+          <item>
+            <cluster_name>Fandjeta</cluster_name>
+            <label>209</label>
+            <name>209</name>
+          </item>
+          <item>
+            <cluster_name>Fria Village</cluster_name>
+            <label>210</label>
+            <name>210</name>
+          </item>
+          <item>
+            <cluster_name>Gabayah</cluster_name>
+            <label>211</label>
+            <name>211</name>
+          </item>
+          <item>
+            <cluster_name>Kardè</cluster_name>
+            <label>212</label>
+            <name>212</name>
+          </item>
+          <item>
+            <cluster_name>Kira Tagui</cluster_name>
+            <label>213</label>
+            <name>213</name>
+          </item>
+          <item>
+            <cluster_name>Kobe Soodè</cluster_name>
+            <label>214</label>
+            <name>214</name>
+          </item>
+          <item>
+            <cluster_name>Kolabougni</cluster_name>
+            <label>215</label>
+            <name>215</name>
+          </item>
+          <item>
+            <cluster_name>Kountia</cluster_name>
+            <label>216</label>
+            <name>216</name>
+          </item>
+          <item>
+            <cluster_name>Leguelougou</cluster_name>
+            <label>217</label>
+            <name>217</name>
+          </item>
+          <item>
+            <cluster_name>Madina Touloun</cluster_name>
+            <label>218</label>
+            <name>218</name>
+          </item>
+          <item>
+            <cluster_name>Manda Sôdè</cluster_name>
+            <label>219</label>
+            <name>219</name>
+          </item>
+          <item>
+            <cluster_name>Missidé Boulèreyah</cluster_name>
+            <label>220</label>
+            <name>220</name>
+          </item>
+          <item>
+            <cluster_name>Simbakhouloun</cluster_name>
+            <label>221</label>
+            <name>221</name>
+          </item>
+          <item>
+            <cluster_name>Sinthourou</cluster_name>
+            <label>222</label>
+            <name>222</name>
+          </item>
+          <item>
+            <cluster_name>Fanfaranyin</cluster_name>
+            <label>223</label>
+            <name>223</name>
+          </item>
+          <item>
+            <cluster_name>Fôto</cluster_name>
+            <label>224</label>
+            <name>224</name>
+          </item>
+          <item>
+            <cluster_name>Fotokhounyi</cluster_name>
+            <label>225</label>
+            <name>225</name>
+          </item>
+          <item>
+            <cluster_name>Kila</cluster_name>
+            <label>226</label>
+            <name>226</name>
+          </item>
+          <item>
+            <cluster_name>Ningué Matodhé</cluster_name>
+            <label>227</label>
+            <name>227</name>
+          </item>
+          <item>
+            <cluster_name>Sabende Kolobeyah</cluster_name>
+            <label>228</label>
+            <name>228</name>
+          </item>
+          <item>
+            <cluster_name>Tafory</cluster_name>
+            <label>229</label>
+            <name>229</name>
+          </item>
+          <item>
+            <cluster_name>Wèyèkhôri</cluster_name>
+            <label>230</label>
+            <name>230</name>
+          </item>
+          <item>
+            <cluster_name>Wondékhouré</cluster_name>
+            <label>231</label>
+            <name>231</name>
+          </item>
+          <item>
+            <cluster_name>Yatiyi</cluster_name>
+            <label>232</label>
+            <name>232</name>
+          </item>
+          <item>
+            <cluster_name>Gadathiangui</cluster_name>
+            <label>233</label>
+            <name>233</name>
+          </item>
+          <item>
+            <cluster_name>Kansakouma</cluster_name>
+            <label>234</label>
+            <name>234</name>
+          </item>
+          <item>
+            <cluster_name>Madina Kansaghi</cluster_name>
+            <label>235</label>
+            <name>235</name>
+          </item>
+          <item>
+            <cluster_name>Ndiraye</cluster_name>
+            <label>236</label>
+            <name>236</name>
+          </item>
+          <item>
+            <cluster_name>Telikoto</cluster_name>
+            <label>237</label>
+            <name>237</name>
+          </item>
+          <item>
+            <cluster_name>Louguel</cluster_name>
+            <label>238</label>
+            <name>238</name>
+          </item>
+          <item>
+            <cluster_name>Beela</cluster_name>
+            <label>239</label>
+            <name>239</name>
+          </item>
+          <item>
+            <cluster_name>Herrokassa</cluster_name>
+            <label>240</label>
+            <name>240</name>
+          </item>
+          <item>
+            <cluster_name>Hoore Kassa</cluster_name>
+            <label>241</label>
+            <name>241</name>
+          </item>
+          <item>
+            <cluster_name>Hore Wouloun</cluster_name>
+            <label>242</label>
+            <name>242</name>
+          </item>
+          <item>
+            <cluster_name>Kansa Gawol</cluster_name>
+            <label>243</label>
+            <name>243</name>
+          </item>
+          <item>
+            <cluster_name>Kassabinde Bowal</cluster_name>
+            <label>244</label>
+            <name>244</name>
+          </item>
+          <item>
+            <cluster_name>Leythandi</cluster_name>
+            <label>245</label>
+            <name>245</name>
+          </item>
+          <item>
+            <cluster_name>Ndanta</cluster_name>
+            <label>246</label>
+            <name>246</name>
+          </item>
+          <item>
+            <cluster_name>Thiankoye (Kouramangui)</cluster_name>
+            <label>247</label>
+            <name>247</name>
+          </item>
+          <item>
+            <cluster_name>Goungan</cluster_name>
+            <label>248</label>
+            <name>248</name>
+          </item>
+          <item>
+            <cluster_name>Nyiwa</cluster_name>
+            <label>249</label>
+            <name>249</name>
+          </item>
+          <item>
+            <cluster_name>Saagaran</cluster_name>
+            <label>250</label>
+            <name>250</name>
+          </item>
+          <item>
+            <cluster_name>Satina</cluster_name>
+            <label>251</label>
+            <name>251</name>
+          </item>
+          <item>
+            <cluster_name>Balaya</cluster_name>
+            <label>252</label>
+            <name>252</name>
+          </item>
+          <item>
+            <cluster_name>Ibouniabe</cluster_name>
+            <label>253</label>
+            <name>253</name>
+          </item>
+          <item>
+            <cluster_name>Ley Korima</cluster_name>
+            <label>254</label>
+            <name>254</name>
+          </item>
+          <item>
+            <cluster_name>Madina Saare</cluster_name>
+            <label>255</label>
+            <name>255</name>
+          </item>
+          <item>
+            <cluster_name>Peliga</cluster_name>
+            <label>256</label>
+            <name>256</name>
+          </item>
+          <item>
+            <cluster_name>Telirè</cluster_name>
+            <label>257</label>
+            <name>257</name>
+          </item>
+          <item>
+            <cluster_name>Tolou</cluster_name>
+            <label>258</label>
+            <name>258</name>
+          </item>
+          <item>
+            <cluster_name>Bambewel</cluster_name>
+            <label>259</label>
+            <name>259</name>
+          </item>
+          <item>
+            <cluster_name>Congo Hafia</cluster_name>
+            <label>260</label>
+            <name>260</name>
+          </item>
+          <item>
+            <cluster_name>Darra</cluster_name>
+            <label>261</label>
+            <name>261</name>
+          </item>
+          <item>
+            <cluster_name>Kewol</cluster_name>
+            <label>262</label>
+            <name>262</name>
+          </item>
+          <item>
+            <cluster_name>Kondenko</cluster_name>
+            <label>263</label>
+            <name>263</name>
+          </item>
+          <item>
+            <cluster_name>Kourassoro</cluster_name>
+            <label>264</label>
+            <name>264</name>
+          </item>
+          <item>
+            <cluster_name>Sapepo</cluster_name>
+            <label>265</label>
+            <name>265</name>
+          </item>
+          <item>
+            <cluster_name>Sira</cluster_name>
+            <label>266</label>
+            <name>266</name>
+          </item>
+          <item>
+            <cluster_name>Toullelyereya</cluster_name>
+            <label>267</label>
+            <name>267</name>
+          </item>
+          <item>
+            <cluster_name>Djindji</cluster_name>
+            <label>268</label>
+            <name>268</name>
+          </item>
+          <item>
+            <cluster_name>Hinde</cluster_name>
+            <label>269</label>
+            <name>269</name>
+          </item>
+          <item>
+            <cluster_name>Horretayile</cluster_name>
+            <label>270</label>
+            <name>270</name>
+          </item>
+          <item>
+            <cluster_name>Leibowal</cluster_name>
+            <label>271</label>
+            <name>271</name>
+          </item>
+          <item>
+            <cluster_name>Lonyi</cluster_name>
+            <label>272</label>
+            <name>272</name>
+          </item>
+          <item>
+            <cluster_name>Pelloye</cluster_name>
+            <label>273</label>
+            <name>273</name>
+          </item>
+          <item>
+            <cluster_name>Foutaya</cluster_name>
+            <label>274</label>
+            <name>274</name>
+          </item>
+          <item>
+            <cluster_name>Bhoulal</cluster_name>
+            <label>275</label>
+            <name>275</name>
+          </item>
+          <item>
+            <cluster_name>Kansodji</cluster_name>
+            <label>276</label>
+            <name>276</name>
+          </item>
+          <item>
+            <cluster_name>Kokoulo</cluster_name>
+            <label>277</label>
+            <name>277</name>
+          </item>
+          <item>
+            <cluster_name>Linguerin</cluster_name>
+            <label>278</label>
+            <name>278</name>
+          </item>
+          <item>
+            <cluster_name>Madina Dibaya</cluster_name>
+            <label>279</label>
+            <name>279</name>
+          </item>
+          <item>
+            <cluster_name>Saraya (Sintaly)</cluster_name>
+            <label>280</label>
+            <name>280</name>
+          </item>
+          <item>
+            <cluster_name>Sintaly Centre</cluster_name>
+            <label>281</label>
+            <name>281</name>
+          </item>
+          <item>
+            <cluster_name>Touriya</cluster_name>
+            <label>282</label>
+            <name>282</name>
+          </item>
+          <item>
+            <cluster_name>Brouwel</cluster_name>
+            <label>283</label>
+            <name>283</name>
+          </item>
+          <item>
+            <cluster_name>Dembeleya</cluster_name>
+            <label>284</label>
+            <name>284</name>
+          </item>
+          <item>
+            <cluster_name>Djayilol</cluster_name>
+            <label>285</label>
+            <name>285</name>
+          </item>
+          <item>
+            <cluster_name>Bady</cluster_name>
+            <label>286</label>
+            <name>286</name>
+          </item>
+          <item>
+            <cluster_name>Dowoubala</cluster_name>
+            <label>287</label>
+            <name>287</name>
+          </item>
+          <item>
+            <cluster_name>Kafimma</cluster_name>
+            <label>288</label>
+            <name>288</name>
+          </item>
+          <item>
+            <cluster_name>Kignan</cluster_name>
+            <label>289</label>
+            <name>289</name>
+          </item>
+          <item>
+            <cluster_name>Koussy</cluster_name>
+            <label>290</label>
+            <name>290</name>
+          </item>
+          <item>
+            <cluster_name>Ley Fello</cluster_name>
+            <label>291</label>
+            <name>291</name>
+          </item>
+          <item>
+            <cluster_name>Megnekouré</cluster_name>
+            <label>292</label>
+            <name>292</name>
+          </item>
+          <item>
+            <cluster_name>Kaleta</cluster_name>
+            <label>293</label>
+            <name>293</name>
+          </item>
+          <item>
+            <cluster_name>Khorié</cluster_name>
+            <label>294</label>
+            <name>294</name>
+          </item>
+          <item>
+            <cluster_name>Kogon Lenguey</cluster_name>
+            <label>295</label>
+            <name>295</name>
+          </item>
+          <item>
+            <cluster_name>Balou</cluster_name>
+            <label>296</label>
+            <name>296</name>
+          </item>
+          <item>
+            <cluster_name>Bendè</cluster_name>
+            <label>297</label>
+            <name>297</name>
+          </item>
+          <item>
+            <cluster_name>Dagui</cluster_name>
+            <label>298</label>
+            <name>298</name>
+          </item>
+          <item>
+            <cluster_name>Djakoudara</cluster_name>
+            <label>299</label>
+            <name>299</name>
+          </item>
+          <item>
+            <cluster_name>Falissare</cluster_name>
+            <label>300</label>
+            <name>300</name>
+          </item>
+          <item>
+            <cluster_name>Kaaba</cluster_name>
+            <label>301</label>
+            <name>301</name>
+          </item>
+          <item>
+            <cluster_name>Parawaly</cluster_name>
+            <label>302</label>
+            <name>302</name>
+          </item>
+          <item>
+            <cluster_name>Souloudji (Sinta)</cluster_name>
+            <label>303</label>
+            <name>303</name>
+          </item>
+          <item>
+            <cluster_name>Thiankoye (Sinta)</cluster_name>
+            <label>304</label>
+            <name>304</name>
+          </item>
+          <item>
+            <cluster_name>Wanssan</cluster_name>
+            <label>305</label>
+            <name>305</name>
+          </item>
+          <item>
+            <cluster_name>Djolitougui</cluster_name>
+            <label>306</label>
+            <name>306</name>
+          </item>
+          <item>
+            <cluster_name>Dolonki</cluster_name>
+            <label>307</label>
+            <name>307</name>
+          </item>
+          <item>
+            <cluster_name>Mabhè</cluster_name>
+            <label>308</label>
+            <name>308</name>
+          </item>
+          <item>
+            <cluster_name>Boudoun Ami</cluster_name>
+            <label>309</label>
+            <name>309</name>
+          </item>
+          <item>
+            <cluster_name>Dounkaya</cluster_name>
+            <label>310</label>
+            <name>310</name>
+          </item>
+          <item>
+            <cluster_name>Souloudji (Telimele Centre)</cluster_name>
+            <label>311</label>
+            <name>311</name>
+          </item>
+          <item>
+            <cluster_name>Soulouwoye</cluster_name>
+            <label>312</label>
+            <name>312</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_sub_district" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_sub_district" db_add_col_3="."/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
+      <bind nodeset="/data/c_supervisor" required="true()" type="string"/>
+      <bind nodeset="/data/c_date" required="true()" type="date"/>
+      <bind nodeset="/data/c_health_facility" required="true()" type="string"/>
+      <bind nodeset="/data/c_type_health_facility" required="true()" type="string"/>
+      <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_river" required="true()" type="string"/>
+      <bind nodeset="/data/c_distance_community" required="true()" type="int"/>
+      <bind nodeset="/data/c_population" required="true()" type="int"/>
+      <bind nodeset="/data/c_hh_number" required="true()" type="int"/>
+      <bind nodeset="/data/c_receiving_ivm" required="true()" type="string"/>
+      <bind nodeset="/data/c_lengh_period_ivm" relevant=" /data/c_receiving_ivm  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/c_month_dist" relevant=" /data/c_receiving_ivm  = 'Oui'" required="true()" type="string"/>
+      <bind constraint=". &gt; 1970 and . &lt; 2022" jr:constraintMsg="jr:itext('/data/c_year_dist:jr:constraintMsg')" nodeset="/data/c_year_dist" relevant=" /data/c_receiving_ivm  = 'Oui'" required="true()" type="int"/>
+      <bind calculate="concat(B19,' ',B20)" nodeset="/data/c_last_dist" required="true()" type="string"/>
+      <bind nodeset="/data/c_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder_id">
+      <label ref="jr:itext('/data/c_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/c_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+      <item>
+        <label>Boffa</label>
+        <value>Boffa</value>
+      </item>
+      <item>
+        <label>Boke</label>
+        <value>Boke</value>
+      </item>
+      <item>
+        <label>Coyah</label>
+        <value>Coyah</value>
+      </item>
+      <item>
+        <label>Dalaba</label>
+        <value>Dalaba</value>
+      </item>
+      <item>
+        <label>Dubreka</label>
+        <value>Dubreka</value>
+      </item>
+      <item>
+        <label>Fria</label>
+        <value>Fria</value>
+      </item>
+      <item>
+        <label>Labe</label>
+        <value>Labe</value>
+      </item>
+      <item>
+        <label>Pita</label>
+        <value>Pita</value>
+      </item>
+      <item>
+        <label>Telimele</label>
+        <value>Telimele</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_sub_district">
+      <label ref="jr:itext('/data/c_sub_district:label')"/>
+      <itemset nodeset="instance('sub_district_list')/root/item[district_list =  /data/c_district ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+      <itemset nodeset="instance('cluster_name')/root/item[sub_district_list =  /data/c_sub_district ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+      <itemset nodeset="instance('cluster_id')/root/item[cluster_name =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_supervisor">
+      <label ref="jr:itext('/data/c_supervisor:label')"/>
+    </input>
+    <input ref="/data/c_date">
+      <label ref="jr:itext('/data/c_date:label')"/>
+    </input>
+    <input ref="/data/c_health_facility">
+      <label ref="jr:itext('/data/c_health_facility:label')"/>
+    </input>
+    <input ref="/data/c_type_health_facility">
+      <label ref="jr:itext('/data/c_type_health_facility:label')"/>
+    </input>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <input ref="/data/c_river">
+      <label ref="jr:itext('/data/c_river:label')"/>
+    </input>
+    <input ref="/data/c_distance_community">
+      <label ref="jr:itext('/data/c_distance_community:label')"/>
+    </input>
+    <input ref="/data/c_population">
+      <label ref="jr:itext('/data/c_population:label')"/>
+    </input>
+    <input ref="/data/c_hh_number">
+      <label ref="jr:itext('/data/c_hh_number:label')"/>
+    </input>
+    <select1 ref="/data/c_receiving_ivm">
+      <label ref="jr:itext('/data/c_receiving_ivm:label')"/>
+      <item>
+        <label>Oui</label>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label>Non</label>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/c_lengh_period_ivm">
+      <label ref="jr:itext('/data/c_lengh_period_ivm:label')"/>
+    </input>
+    <select1 ref="/data/c_month_dist">
+      <label ref="jr:itext('/data/c_month_dist:label')"/>
+      <item>
+        <label>Janvier</label>
+        <value>Janvier</value>
+      </item>
+      <item>
+        <label>Février</label>
+        <value>Février</value>
+      </item>
+      <item>
+        <label>Mars</label>
+        <value>Mars</value>
+      </item>
+      <item>
+        <label>Avril</label>
+        <value>Avril</value>
+      </item>
+      <item>
+        <label>Mai</label>
+        <value>Mai</value>
+      </item>
+      <item>
+        <label>Juin</label>
+        <value>Juin</value>
+      </item>
+      <item>
+        <label>Juillet</label>
+        <value>Juillet</value>
+      </item>
+      <item>
+        <label>Août</label>
+        <value>Août</value>
+      </item>
+      <item>
+        <label>Septembre</label>
+        <value>Septembre</value>
+      </item>
+      <item>
+        <label>Octobre</label>
+        <value>Octobre</value>
+      </item>
+      <item>
+        <label>Novembre</label>
+        <value>Novembre</value>
+      </item>
+      <item>
+        <label>Décembre</label>
+        <value>Décembre</value>
+      </item>
+    </select1>
+    <input ref="/data/c_year_dist">
+      <label ref="jr:itext('/data/c_year_dist:label')"/>
+    </input>
+    <input ref="/data/c_notes">
+      <label ref="jr:itext('/data/c_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
