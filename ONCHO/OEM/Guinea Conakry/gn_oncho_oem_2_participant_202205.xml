@@ -7,7 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Avr 2022) OEM - 2. Participant Form</h:title>
+    <h:title>(Mai 2022) CEO - 2. Formulaire participant</h:title>
     <model >
 
       <instance>
@@ -65,8 +65,20 @@
           <text id="/data/p_consent:label">
             <value>Le participant a-t-il donné son consentement ?</value>
           </text>
+          <text id="/data/p_consent/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_consent/Non:label">
+            <value>Non</value>
+          </text>
           <text id="/data/p_ID_method:label">
             <value>Comment l'identifiant unique de l'individu sera-t-il géré ?</value>
+          </text>
+          <text id="/data/p_ID_method/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/p_ID_method/Manuel:label">
+            <value>Manuel</value>
           </text>
           <text id="/data/p_barcode_id:label">
             <value>Veuillez capturer le code à bare/QR code</value>
@@ -83,11 +95,23 @@
           <text id="/data/p_sex:label">
             <value>Veuillez sélectionner le sexe</value>
           </text>
+          <text id="/data/p_sex/Homme:label">
+            <value>Homme</value>
+          </text>
+          <text id="/data/p_sex/Femme:label">
+            <value>Femme</value>
+          </text>
           <text id="/data/p_age_yrs:label">
             <value>Entrez l'âge en années</value>
           </text>
           <text id="/data/p_sample_collected:label">
             <value>L'échantillon est-il collecté</value>
+          </text>
+          <text id="/data/p_sample_collected/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_sample_collected/Non:label">
+            <value>Non</value>
           </text>
           <text id="/data/p_end_survey_note:label">
             <value>Vous venez d'entrer une valeur qui mettra fin à l'enquête</value>
@@ -97,7 +121,6 @@
           </text>
         </translation>
       </itext>
-
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/p_district" required="true()" type="string"  db_get="col_1"/>
       <bind nodeset="/data/p_sub_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
@@ -142,22 +165,22 @@
     <select1 ref="/data/p_consent">
       <label ref="jr:itext('/data/p_consent:label')"/>
       <item>
-        <label>Oui</label>
+        <label ref="jr:itext('/data/p_consent/Oui:label')"/>
         <value>Oui</value>
       </item>
       <item>
-        <label>Non</label>
+        <label ref="jr:itext('/data/p_consent/Non:label')"/>
         <value>Non</value>
       </item>
     </select1>
     <select1 ref="/data/p_ID_method">
       <label ref="jr:itext('/data/p_ID_method:label')"/>
       <item>
-        <label>Scanner</label>
+        <label ref="jr:itext('/data/p_ID_method/Scanner:label')"/>
         <value>Scanner</value>
       </item>
       <item>
-        <label>Manuel</label>
+        <label ref="jr:itext('/data/p_ID_method/Manuel:label')"/>
         <value>Manuel</value>
       </item>
     </select1>
@@ -173,11 +196,11 @@
     <select1 ref="/data/p_sex">
       <label ref="jr:itext('/data/p_sex:label')"/>
       <item>
-        <label>Homme</label>
+        <label ref="jr:itext('/data/p_sex/Homme:label')"/>
         <value>Homme</value>
       </item>
       <item>
-        <label>Femme</label>
+        <label ref="jr:itext('/data/p_sex/Femme:label')"/>
         <value>Femme</value>
       </item>
     </select1>
@@ -187,11 +210,11 @@
     <select1 ref="/data/p_sample_collected">
       <label ref="jr:itext('/data/p_sample_collected:label')"/>
       <item>
-        <label>Oui</label>
+        <label ref="jr:itext('/data/p_sample_collected/Oui:label')"/>
         <value>Oui</value>
       </item>
       <item>
-        <label>Non</label>
+        <label ref="jr:itext('/data/p_sample_collected/Non:label')"/>
         <value>Non</value>
       </item>
     </select1>
