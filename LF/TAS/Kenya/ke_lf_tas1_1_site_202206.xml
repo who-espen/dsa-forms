@@ -9482,10 +9482,10 @@
       <bind nodeset="/data/c_enumerator" required="true()" type="string"/>
       <bind nodeset="/data/c_eu" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/c_subcounty" required="true()" type="string" db_add_col_1="/data/c_eu" db_add_col_2="."/>
-      <bind nodeset="/data/c_subcounty" type="string"/ db_add_col_2="/data/c_subcounty" db_add_col_3=".">
+      <bind nodeset="/data/c_ward" type="string" db_add_col_2="/data/c_subcounty" db_add_col_3="."/>
       <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_3="/data/c_subcounty" db_add_col_4="."/>
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')"
-       nodeset="/data/c_cluster_id" required="true()" type="string"  db_add_col_4="/data/c_cluster_name" db_add_col_5="."/>
+      nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_4="/data/c_cluster_name" db_add_col_5="."/>
       <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/c_ClusterNotes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
