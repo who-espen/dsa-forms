@@ -7,8 +7,48 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(June 2022) Kenya - 3. TAS1 LF FTS Results Form V4.1</h:title>
+    <h:title>(June 2022) Kenya - 3. TAS1 LF FTS Results Form V1</h:title>
     <model >
+
+      <instance>
+        <data id="ke_lf_tas1_3_resultat_fts_202206_v1">
+          <d_enumerator/>
+          <d_eu/>
+          <d_subcounty/>
+          <d_ward/>
+          <d_cluster_name/>
+          <d_cluster_id/>
+          <d_IDMethod/>
+          <p_BarcodeID/>
+          <d_code_id/>
+          <d_code_id2/>
+          <d_blood_sample/>
+          <d_dbs_prepared/>
+          <d_filter_paper_stored/>
+          <d_lotnumber1/>
+          <d_result1/>
+          <d_why_invalid1/>
+          <d_why_invalid_other1/>
+          <d_display_result1/>
+          <d_need_second_test/>
+          <d_lotnumber2/>
+          <d_result2/>
+          <d_why_invalid2/>
+          <d_why_invalid_other2/>
+          <d_display_result2/>
+          <d_final_result/>
+          <d_display_final_result/>
+          <d_mf_taken/>
+          <d_mf_counted/>
+          <s_notes_part/>
+          <d_start/>
+          <d_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
       <itext>
         <translation default="true()" lang="English">
           <text id="/data/d_enumerator:label">
@@ -177,6 +217,27 @@
           <text id="/data/d_display_final_result:label">
             <value>This participant's final result is: <output value=" /data/d_final_result "/>
             </value>
+          </text>
+          <text id="/data/d_mf_taken:jr:constraintMsg">
+            <value>Sampuli ya damu ya utambuzi wa mf ilichukuliwa</value>
+          </text>
+          <text id="/data/d_mf_taken:label">
+            <value>Blood sample for mf detection taken:</value>
+          </text>
+          <text id="/data/d_mf_taken/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/d_mf_taken/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/d_mf_counted:jr:constraintMsg">
+            <value>MF imehesabiwa</value>
+          </text>
+          <text id="/data/d_mf_counted:label">
+            <value>MF counted</value>
+          </text>
+          <text id="/data/d_mf_counted:hint">
+            <value>mf/100 µL</value>
           </text>
           <text id="/data/s_notes_part:label">
             <value>Additional Notes on form</value>
@@ -2976,6 +3037,24 @@
             <value>This participant's final result is: <output value=" /data/d_final_result "/>
             </value>
           </text>
+          <text id="/data/d_mf_taken:label">
+            <value>Blood sample for mf detection taken:</value>
+          </text>
+          <text id="/data/d_mf_taken/Yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/data/d_mf_taken/No:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/data/d_mf_counted:jr:constraintMsg">
+            <value>mf/100 µL</value>
+          </text>
+          <text id="/data/d_mf_counted:label">
+            <value>MF counted</value>
+          </text>
+          <text id="/data/d_mf_counted:hint">
+            <value>mf/100 µL</value>
+          </text>
           <text id="/data/s_notes_part:label">
             <value>Additional Notes on form</value>
           </text>
@@ -5557,44 +5636,12 @@
           <text id="cluster_id-383">
             <value>484</value>
           </text>
+          <text id="/data/d_mf_taken:jr:constraintMsg">
+            <value>-</value>
+          </text>
         </translation>
       </itext>
-      <instance>
-        <data id="ke_lf_tas1_3_resultat_fts_202206">
-          <d_enumerator/>
-          <d_eu/>
-          <d_subcounty/>
-          <d_ward/>
-          <d_cluster_name/>
-          <d_cluster_id/>
-          <d_IDMethod/>
-          <p_BarcodeID/>
-          <d_code_id/>
-          <d_code_id2/>
-          <d_blood_sample/>
-          <d_dbs_prepared/>
-          <d_filter_paper_stored/>
-          <d_lotnumber1/>
-          <d_result1/>
-          <d_why_invalid1/>
-          <d_why_invalid_other1/>
-          <d_display_result1/>
-          <d_need_second_test/>
-          <d_lotnumber2/>
-          <d_result2/>
-          <d_why_invalid2/>
-          <d_why_invalid_other2/>
-          <d_display_result2/>
-          <d_final_result/>
-          <d_display_final_result/>
-          <s_notes_part/>
-          <d_start/>
-          <d_end/>
-          <meta>
-            <instanceID/>
-          </meta>
-        </data>
-      </instance>
+
       <instance id="yes_no">
         <root>
           <item>
@@ -9948,6 +9995,8 @@
  )
 )" nodeset="/data/d_final_result" type="string"/>
       <bind nodeset="/data/d_display_final_result" readonly="true()" type="string"/>
+      <bind jr:constraintMsg="jr:itext('/data/d_mf_taken:jr:constraintMsg')" nodeset="/data/d_mf_taken" required="true()" type="string"/>
+      <bind jr:constraintMsg="jr:itext('/data/d_mf_counted:jr:constraintMsg')" nodeset="/data/d_mf_counted" required="true()" type="int"/>
       <bind nodeset="/data/s_notes_part" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
@@ -10167,6 +10216,21 @@
     </input>
     <input ref="/data/d_display_final_result">
       <label ref="jr:itext('/data/d_display_final_result:label')"/>
+    </input>
+    <select1 ref="/data/d_mf_taken">
+      <label ref="jr:itext('/data/d_mf_taken:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_mf_taken/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_mf_taken/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/d_mf_counted">
+      <label ref="jr:itext('/data/d_mf_counted:label')"/>
+      <hint ref="jr:itext('/data/d_mf_counted:hint')"/>
     </input>
     <input ref="/data/s_notes_part">
       <label ref="jr:itext('/data/s_notes_part:label')"/>

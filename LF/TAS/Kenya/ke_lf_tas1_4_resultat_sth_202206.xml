@@ -7,8 +7,40 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(June 2022) Kenya - 4. TAS1 LF STH Results Form V4.1</h:title>
-    <model odk:xforms-version="1.0.0">
+    <h:title>(June 2022) Kenya - 4. TAS1 LF STH Results Form V1</h:title>
+    <model >
+
+      <instance>
+        <data id="ke_lf_tas1_4_resultat_sth_202206_v1">
+          <s_enumerator/>
+          <s_eu/>
+          <s_subcounty/>
+          <s_ward/>
+          <s_cluster_name/>
+          <s_cluster_id/>
+          <s_IDMethod/>
+          <p_BarcodeID/>
+          <s_code_id/>
+          <s_code_id2/>
+          <s_stool_taken/>
+          <s_ascaris_nbr_sa/>
+          <s_ascaris_nbr_sb/>
+          <s_hookworm_nbr_sa/>
+          <s_hookworm_nbr_sb/>
+          <s_tricuris_nbr_sa/>
+          <s_tricuris_nbr_sb/>
+          <s_screened_Tungiasis/>
+          <s_tunga_Feet/>
+          <s_tunga_Hands/>
+          <s_notes_part/>
+          <s_start/>
+          <s_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
       <itext>
         <translation default="true()" lang="English">
           <text id="/data/s_enumerator:label">
@@ -67,6 +99,24 @@
           </text>
           <text id="/data/s_stool_taken/No:label">
             <value>No</value>
+          </text>
+          <text id="/data/s_ascaris_nbr_sa:label">
+            <value>Nbr Ascaris Slide A</value>
+          </text>
+          <text id="/data/s_ascaris_nbr_sb:label">
+            <value>Nbr Ascaris Slide B</value>
+          </text>
+          <text id="/data/s_hookworm_nbr_sa:label">
+            <value>Nbr Hookworm Slide A</value>
+          </text>
+          <text id="/data/s_hookworm_nbr_sb:label">
+            <value>Nbr Hookworm Slide B</value>
+          </text>
+          <text id="/data/s_tricuris_nbr_sa:label">
+            <value>Nbr Tricuris Slide A</value>
+          </text>
+          <text id="/data/s_tricuris_nbr_sb:label">
+            <value>Nbr Tricuris Slide B</value>
           </text>
           <text id="/data/s_screened_Tungiasis:label">
             <value>Screened for Tungiasis</value>
@@ -2759,6 +2809,24 @@
           <text id="/data/s_stool_taken/No:label">
             <value>Hapana</value>
           </text>
+          <text id="/data/s_ascaris_nbr_sa:label">
+            <value>Nbr Ascaris Slide A</value>
+          </text>
+          <text id="/data/s_ascaris_nbr_sb:label">
+            <value>Nbr Ascaris Slide B</value>
+          </text>
+          <text id="/data/s_hookworm_nbr_sa:label">
+            <value>Nbr Hookworm Slide A</value>
+          </text>
+          <text id="/data/s_hookworm_nbr_sb:label">
+            <value>Nbr Hookworm Slide B</value>
+          </text>
+          <text id="/data/s_tricuris_nbr_sa:label">
+            <value>Nbr Tricuris Slide A</value>
+          </text>
+          <text id="/data/s_tricuris_nbr_sb:label">
+            <value>Nbr Tricuris Slide B</value>
+          </text>
           <text id="/data/s_screened_Tungiasis:label">
             <value>Uchunguzwa kwa Tungiasis:</value>
           </text>
@@ -5369,30 +5437,7 @@
           </text>
         </translation>
       </itext>
-      <instance>
-        <data id="ke_lf_tas1_4_resultat_sth_202206">
-          <s_enumerator/>
-          <s_eu/>
-          <s_subcounty/>
-          <s_ward/>
-          <s_cluster_name/>
-          <s_cluster_id/>
-          <s_IDMethod/>
-          <p_BarcodeID/>
-          <s_code_id/>
-          <s_code_id2/>
-          <s_stool_taken/>
-          <s_screened_Tungiasis/>
-          <s_tunga_Feet/>
-          <s_tunga_Hands/>
-          <s_notes_part/>
-          <s_start/>
-          <s_end/>
-          <meta>
-            <instanceID/>
-          </meta>
-        </data>
-      </instance>
+
       <instance id="yes_no">
         <root>
           <item>
@@ -9720,10 +9765,16 @@
       <bind nodeset="/data/p_BarcodeID" relevant=" /data/s_IDMethod  = 'Scanner'" required="true()" type="barcode"/>
       <bind nodeset="/data/s_code_id" relevant=" /data/s_IDMethod != 'Scanner'" required="true()" type="string"/>
       <bind constraint=". =  /data/s_code_id " jr:constraintMsg="jr:itext('/data/s_code_id2:jr:constraintMsg')" nodeset="/data/s_code_id2" relevant=" /data/s_IDMethod != 'Scanner'" required="true()" type="string"/>
-      <bind nodeset="/data/s_stool_taken" type="string"/>
-      <bind nodeset="/data/s_screened_Tungiasis" type="string"/>
-      <bind nodeset="/data/s_tunga_Feet" type="string"/>
-      <bind nodeset="/data/s_tunga_Hands" type="string"/>
+      <bind nodeset="/data/s_stool_taken" required="true()" type="string"/>
+      <bind nodeset="/data/s_ascaris_nbr_sa" relevant=" /data/s_stool_taken  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/s_ascaris_nbr_sb" relevant=" /data/s_stool_taken  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/s_hookworm_nbr_sa" relevant=" /data/s_stool_taken  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/s_hookworm_nbr_sb" relevant=" /data/s_stool_taken  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/s_tricuris_nbr_sa" relevant=" /data/s_stool_taken  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/s_tricuris_nbr_sb" relevant=" /data/s_stool_taken  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/s_screened_Tungiasis" required="true()" type="string"/>
+      <bind nodeset="/data/s_tunga_Feet" relevant=" /data/s_screened_Tungiasis  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/s_tunga_Hands" relevant=" /data/s_screened_Tungiasis  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/s_notes_part" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/s_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/s_end" type="dateTime"/>
@@ -9808,6 +9859,24 @@
         <value>No</value>
       </item>
     </select1>
+    <input ref="/data/s_ascaris_nbr_sa">
+      <label ref="jr:itext('/data/s_ascaris_nbr_sa:label')"/>
+    </input>
+    <input ref="/data/s_ascaris_nbr_sb">
+      <label ref="jr:itext('/data/s_ascaris_nbr_sb:label')"/>
+    </input>
+    <input ref="/data/s_hookworm_nbr_sa">
+      <label ref="jr:itext('/data/s_hookworm_nbr_sa:label')"/>
+    </input>
+    <input ref="/data/s_hookworm_nbr_sb">
+      <label ref="jr:itext('/data/s_hookworm_nbr_sb:label')"/>
+    </input>
+    <input ref="/data/s_tricuris_nbr_sa">
+      <label ref="jr:itext('/data/s_tricuris_nbr_sa:label')"/>
+    </input>
+    <input ref="/data/s_tricuris_nbr_sb">
+      <label ref="jr:itext('/data/s_tricuris_nbr_sb:label')"/>
+    </input>
     <select1 ref="/data/s_screened_Tungiasis">
       <label ref="jr:itext('/data/s_screened_Tungiasis:label')"/>
       <item>
