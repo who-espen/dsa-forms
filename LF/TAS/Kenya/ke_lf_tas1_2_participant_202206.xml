@@ -114,7 +114,7 @@
             <value>Female</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>The age must be between 5 and 120 years</value>
+            <value>The age must be between 5 and 14 years</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Enter age in years</value>
@@ -543,7 +543,7 @@
       <bind constraint=". =  /data/p_code_id " jr:constraintMsg="jr:itext('/data/p_code_id2:jr:constraintMsg')" nodeset="/data/p_code_id2" relevant=" /data/p_consent  = 'Yes' and  /data/p_IDMethod != 'Scanner'" required="true()" type="string"/>
       <bind nodeset="/data/p_BarcodeID" relevant=" /data/p_consent  = 'Yes' and  /data/p_IDMethod  = 'Scanner'" required="true()" type="barcode"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/p_dob_" relevant=" /data/p_consent  = 'Yes'"/>
       <bind constraint=". &gt;= 1902 and . &lt;= 2017" jr:constraintMsg="jr:itext('/data/p_dob_/year:jr:constraintMsg')" nodeset="/data/p_dob_/year" required="true()" type="int"/>
       <bind nodeset="/data/p_dob_/month" required="true()" type="string"/>
