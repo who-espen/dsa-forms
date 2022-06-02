@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<h:head>
-		<h:title>(Mai 2022) - 2. SCH/STH – Participant V2</h:title>
+		<h:title>(Mai 2022) - 2. SCH/STH – Participant V4</h:title>
 		<model >
 			<itext>
 				<translation default="true()" lang="French">
@@ -29,103 +29,97 @@
 					<text id="/data/p_consent_note:label">
 						<value>Bonjour ! Je suis ici au nom du ministère de la Santé. Nous menons une enquête pour déterminer la présence de schistosomiase (SCH) et des géo-helminthiases (STH) dans votre école. Je vais vous poser quelques questions sur le mode et le mécanisme de transmission et apprécierais également de prélever des échantillons de selles et d'urine auprès de vous. Si vous souhaitez participer à l'enquête, dites-le-moi et je noterai vos réponses et vous fournirai des récipients de selles et d'urine. Si vous êtes d'accord, l'enquête ne prendra que quelques minutes. Participer à l'enquête scolaire vous sera directement bénéfique car en cas de diagnostic de vers, vous recevrez immédiatement des médicaments vermifuges. Votre communauté et votre école en bénéficieront également directement, car les résultats de cette enquête aideront le ministère de la Santé à mettre en œuvre des activités de déparasitage pour les enfants âgés de 5 à 14 ans, si les résultats de laboratoire révèlent la nécessité d'interventions. Vous pouvez refuser sans pénalité. Souhaitez-vous participer à notre enquête ?</value>
 					</text>
-					<text id="/data/p_boucle:label">
-						<value>Enrôlement</value>
-					</text>
-					<text id="/data/p_boucle/p_consent:label">
+					<text id="/data/p_consent:label">
 						<value>6. L'enfant a-t-il donné son consentement et le consentement de ses parents ou tuteurs ?</value>
 					</text>
-					<text id="/data/p_boucle/p_consent:hint">
+					<text id="/data/p_consent:hint">
 						<value>La réponse "Non" mettra fin à l'enquête</value>
 					</text>
-					<text id="/data/p_boucle/p_consent/A.donne:label">
+					<text id="/data/p_consent/A.donne:label">
 						<value>1. A donné</value>
 					</text>
-					<text id="/data/p_boucle/p_consent/A.refuse:label">
+					<text id="/data/p_consent/A.refuse:label">
 						<value>2. A refusé</value>
 					</text>
-					<text id="/data/p_boucle/p_barcodeid:label">
+					<text id="/data/p_barcodeid:label">
 						<value>7. Code unique du participant : Veuillez le recopier exactement tel qu'il est quelque part entre autres sur les tests de diagnostique.</value>
 					</text>
-					<text id="/data/p_boucle/p_barcodeid:hint">
-						<value>Ce code est composé du : Code de l'école sur 3 chiffres - Numéro d'ordre de l'enfant sur 3 chiffres suivi d'une lettre en majuscule correspondant au district. Exemple: 101-001D correspond au 1er participant de l'école numéro 101 du District DIAKHAO,</value>
-					</text>
-					<text id="/data/p_boucle/p_age_yrs:jr:constraintMsg">
+					<text id="/data/p_age_yrs:jr:constraintMsg">
 						<value>L'âge doit être compris entre 5 et 14 ans</value>
 					</text>
-					<text id="/data/p_boucle/p_age_yrs:label">
+					<text id="/data/p_age_yrs:label">
 						<value>8. Entrez l'âge de l'enfant en années</value>
 					</text>
-					<text id="/data/p_boucle/p_sex:label">
+					<text id="/data/p_sex:label">
 						<value>9. Sélectionnez le sexe de l'enfant</value>
 					</text>
-					<text id="/data/p_boucle/p_sex/F:label">
+					<text id="/data/p_sex/F:label">
 						<value>Féminin</value>
 					</text>
-					<text id="/data/p_boucle/p_sex/M:label">
+					<text id="/data/p_sex/M:label">
 						<value>Masculin</value>
 					</text>
-					<text id="/data/p_boucle/p_residence:label">
+					<text id="/data/p_residence:label">
 						<value>10. Où habite l'enfant?</value>
 					</text>
-					<text id="/data/p_boucle/p_residence/Dans le village:label">
+					<text id="/data/p_residence/Dans le village:label">
 						<value>Dans le village</value>
 					</text>
-					<text id="/data/p_boucle/p_residence/Dans un village proche (à moins de 10km):label">
+					<text id="/data/p_residence/Dans un village proche (à moins de 10km):label">
 						<value>Dans un village proche (à moins de 10km)</value>
 					</text>
-					<text id="/data/p_boucle/p_residence/Dans un village situé à plus de 10 km:label">
+					<text id="/data/p_residence/Dans un village situé à plus de 10 km:label">
 						<value>Dans un village situé à plus de 10 km</value>
 					</text>
-					<text id="/data/p_boucle/p_chaussures:label">
+					<text id="/data/p_chaussures:label">
 						<value>11. Observateur : L'enfant porte-t-il des chaussures au moment de l'enquete ?</value>
 					</text>
-					<text id="/data/p_boucle/p_chaussures/Oui:label">
+					<text id="/data/p_chaussures/Oui:label">
 						<value>Oui</value>
 					</text>
-					<text id="/data/p_boucle/p_chaussures/Non:label">
+					<text id="/data/p_chaussures/Non:label">
 						<value>Non</value>
 					</text>
-					<text id="/data/p_boucle/p_mares_deau:label">
+					<text id="/data/p_mares_deau:label">
 						<value>12. Est-ce que vous fréquentez les mares d'eau (marigot, fleuve, rivière, marre d'eau temporaire, …) ?</value>
 					</text>
-					<text id="/data/p_boucle/p_mares_deau/Oui:label">
+					<text id="/data/p_mares_deau/Oui:label">
 						<value>Oui</value>
 					</text>
-					<text id="/data/p_boucle/p_mares_deau/Non:label">
+					<text id="/data/p_mares_deau/Non:label">
 						<value>Non</value>
 					</text>
-					<text id="/data/p_boucle/p_connait_bilh:label">
+					<text id="/data/p_connait_bilh:label">
 						<value>13. Connaissez-vous la Bilharziose ?</value>
 					</text>
-					<text id="/data/p_boucle/p_connait_bilh/Oui:label">
+					<text id="/data/p_connait_bilh/Oui:label">
 						<value>Oui</value>
 					</text>
-					<text id="/data/p_boucle/p_connait_bilh/Non:label">
+					<text id="/data/p_connait_bilh/Non:label">
 						<value>Non</value>
 					</text>
-					<text id="/data/p_boucle/p_manif_bilh:label">
+					<text id="/data/p_manif_bilh:label">
 						<value>13.a. Comment se manifeste la Bilharziose ?</value>
 					</text>
-					<text id="/data/p_boucle/p_manif_bilh/Douleurs abdominales:label">
+					<text id="/data/p_manif_bilh/Douleurs abdominales:label">
 						<value>Douleurs abdominales</value>
 					</text>
-					<text id="/data/p_boucle/p_manif_bilh/Uriné du sang:label">
+					<text id="/data/p_manif_bilh/Uriné du sang:label">
 						<value>Uriné du sang</value>
 					</text>
-					<text id="/data/p_boucle/p_manif_bilh/Ne sait pas:label">
+					<text id="/data/p_manif_bilh/Ne sait pas:label">
 						<value>Ne sait pas</value>
 					</text>
-					<text id="/data/p_boucle/p_manif_bilh/Autres:label">
+					<text id="/data/p_manif_bilh/Autres:label">
 						<value>Autres</value>
 					</text>
-					<text id="/data/p_boucle/p_ending_survey_note:label">
+					<text id="/data/p_ending_survey_note:label">
 						<value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête</value>
 					</text>
-					<text id="/data/p_boucle/p_remarks:label">
+					<text id="/data/p_remarks:label">
 						<value>Note additionnelle :</value>
 					</text>
-					<text id="/data/p_boucle/p_note_thanks:label">
+					<text id="/data/p_note_thanks:label">
 						<value>Veuillez remercier l'enfant pour sa participation</value>
 					</text>
 				</translation>
@@ -154,148 +148,126 @@
 					<text id="/data/p_consent_note:label">
 						<value>Hello! I am here on behalf of the Ministry of Health. We are conducting a survey to determine the presence of schistosomiasis (SCH) and soil transmitted helminthiasis (STH) in your school. I will ask you a few questions on the mode and mechanism of SCH/STH transmission and would equally appreciate to collect stool and urine samples from you. If you wish to participate in the survey, tell me and I will note your answer and provide you with stool and urine containers. If you agree, the survey will only take a few minutes. Taking part in the school survey will be beneficial to you directly because if diagnosed with worms, you will immediately receive deworming medicine. Your community and school will equally benefit directly because the results of this survey will help the Ministry of Health implement deworming activities for children aged 5-14 years, if laboratory results reveal the need for interventions. You may refuse without penalty. Would you like to take part in our survey?</value>
 					</text>
-					<text id="/data/p_boucle:label">
-						<value>Enrollment</value>
-					</text>
-					<text id="/data/p_boucle/p_consent:label">
+					<text id="/data/p_consent:label">
 						<value>Did the child give assent, and parent or guardian consent?</value>
 					</text>
-					<text id="/data/p_boucle/p_consent:hint">
+					<text id="/data/p_consent:hint">
 						<value>"No" answer response will end survey</value>
 					</text>
-					<text id="/data/p_boucle/p_consent/A.donne:label">
+					<text id="/data/p_consent/A.donne:label">
 						<value>1. Given</value>
 					</text>
-					<text id="/data/p_boucle/p_consent/A.refuse:label">
+					<text id="/data/p_consent/A.refuse:label">
 						<value>2. Refused</value>
 					</text>
-					<text id="/data/p_boucle/p_barcodeid:label">
+					<text id="/data/p_barcodeid:label">
 						<value>Respondent's identification code (Please copy this code as it is somewhere, among other things, on the diagnostic tests)</value>
 					</text>
-					<text id="/data/p_boucle/p_barcodeid:hint">
-						<value>How is this code generated: First capital letter of the district - 3-digit school code - 3-digit child serial number. Example: D-101-001</value>
-					</text>
-					<text id="/data/p_boucle/p_age_yrs:jr:constraintMsg">
+					<text id="/data/p_age_yrs:jr:constraintMsg">
 						<value>The age must be between 5 and 14 years</value>
 					</text>
-					<text id="/data/p_boucle/p_age_yrs:label">
+					<text id="/data/p_age_yrs:label">
 						<value>Enter the child's age in years</value>
 					</text>
-					<text id="/data/p_boucle/p_sex:label">
+					<text id="/data/p_sex:label">
 						<value>Select the gender of the child</value>
 					</text>
-					<text id="/data/p_boucle/p_sex/F:label">
+					<text id="/data/p_sex/F:label">
 						<value>Female</value>
 					</text>
-					<text id="/data/p_boucle/p_sex/M:label">
+					<text id="/data/p_sex/M:label">
 						<value>Male</value>
 					</text>
-					<text id="/data/p_boucle/p_residence:label">
+					<text id="/data/p_residence:label">
 						<value>where does the child live?</value>
 					</text>
-					<text id="/data/p_boucle/p_residence/Dans le village:label">
+					<text id="/data/p_residence/Dans le village:label">
 						<value>In the village</value>
 					</text>
-					<text id="/data/p_boucle/p_residence/Dans un village proche (à moins de 10km):label">
+					<text id="/data/p_residence/Dans un village proche (à moins de 10km):label">
 						<value>In a nearby village (less than 10km)</value>
 					</text>
-					<text id="/data/p_boucle/p_residence/Dans un village situé à plus de 10 km:label">
+					<text id="/data/p_residence/Dans un village situé à plus de 10 km:label">
 						<value>In a village located more than 10 km</value>
 					</text>
-					<text id="/data/p_boucle/p_chaussures:label">
+					<text id="/data/p_chaussures:label">
 						<value>Observer: Is the child wearing shoes at the time of the survey?</value>
 					</text>
-					<text id="/data/p_boucle/p_chaussures/Oui:label">
+					<text id="/data/p_chaussures/Oui:label">
 						<value>Yes</value>
 					</text>
-					<text id="/data/p_boucle/p_chaussures/Non:label">
+					<text id="/data/p_chaussures/Non:label">
 						<value>No</value>
 					</text>
-					<text id="/data/p_boucle/p_mares_deau:label">
+					<text id="/data/p_mares_deau:label">
 						<value>Do you frequent pools of water (backwater, river, temporary pool of water, etc.)?</value>
 					</text>
-					<text id="/data/p_boucle/p_mares_deau/Oui:label">
+					<text id="/data/p_mares_deau/Oui:label">
 						<value>Yes</value>
 					</text>
-					<text id="/data/p_boucle/p_mares_deau/Non:label">
+					<text id="/data/p_mares_deau/Non:label">
 						<value>No</value>
 					</text>
-					<text id="/data/p_boucle/p_connait_bilh:label">
+					<text id="/data/p_connait_bilh:label">
 						<value>Do you know Bilharziasis?</value>
 					</text>
-					<text id="/data/p_boucle/p_connait_bilh/Oui:label">
+					<text id="/data/p_connait_bilh/Oui:label">
 						<value>Yes</value>
 					</text>
-					<text id="/data/p_boucle/p_connait_bilh/Non:label">
+					<text id="/data/p_connait_bilh/Non:label">
 						<value>No</value>
 					</text>
-					<text id="/data/p_boucle/p_manif_bilh:label">
+					<text id="/data/p_manif_bilh:label">
 						<value>How does bilharziasis manifest?</value>
 					</text>
-					<text id="/data/p_boucle/p_manif_bilh/Douleurs abdominales:label">
+					<text id="/data/p_manif_bilh/Douleurs abdominales:label">
 						<value>Abdominal pain</value>
 					</text>
-					<text id="/data/p_boucle/p_manif_bilh/Uriné du sang:label">
+					<text id="/data/p_manif_bilh/Uriné du sang:label">
 						<value>Urinated blood</value>
 					</text>
-					<text id="/data/p_boucle/p_manif_bilh/Ne sait pas:label">
+					<text id="/data/p_manif_bilh/Ne sait pas:label">
 						<value>Do not know</value>
 					</text>
-					<text id="/data/p_boucle/p_manif_bilh/Autres:label">
+					<text id="/data/p_manif_bilh/Autres:label">
 						<value>Others</value>
 					</text>
-					<text id="/data/p_boucle/p_ending_survey_note:label">
+					<text id="/data/p_ending_survey_note:label">
 						<value>You just entered a value that will end the survey</value>
 					</text>
-					<text id="/data/p_boucle/p_remarks:label">
+					<text id="/data/p_remarks:label">
 						<value>Additional notes</value>
 					</text>
-					<text id="/data/p_boucle/p_note_thanks:label">
+					<text id="/data/p_note_thanks:label">
 						<value>Please thank the child for their participation</value>
 					</text>
 				</translation>
 			</itext>
 			<instance>
-				<data id="sn_sch_sth_impact_2_child_202205_v2">
+				<data id="sn_sch_sth_impact_2_child_202205_v4">
 					<p_recorder/>
 					<p_district/>
 					<p_subdistrict/>
 					<p_site/>
 					<p_site_code/>
 					<p_consent_note/>
-					<p_first_letter/>
-					<p_boucle jr:template="">
-						<p_consent/>
-						<p_barcodeid/>
-						<p_age_yrs/>
-						<p_sex/>
-						<p_residence/>
-						<p_chaussures/>
-						<p_mares_deau/>
-						<p_connait_bilh/>
-						<p_manif_bilh/>
-						<p_ending_survey_note/>
-						<p_remarks/>
-						<p_note_thanks/>
-					</p_boucle>
-					<p_boucle>
-						<p_consent/>
-						<p_barcodeid/>
-						<p_age_yrs/>
-						<p_sex/>
-						<p_residence/>
-						<p_chaussures/>
-						<p_mares_deau/>
-						<p_connait_bilh/>
-						<p_manif_bilh/>
-						<p_ending_survey_note/>
-						<p_remarks/>
-						<p_note_thanks/>
-					</p_boucle>
+					<p_consent/>
+					<p_barcodeid/>
+					<p_age_yrs/>
+					<p_sex/>
+					<p_residence/>
+					<p_chaussures/>
+					<p_mares_deau/>
+					<p_connait_bilh/>
+					<p_manif_bilh/>
+					<p_ending_survey_note/>
+					<p_remarks/>
+					<p_note_thanks/>
 					<p_start/>
 					<p_end/>
 					<meta>
 						<instanceID/>
+						<randomnum/>
 					</meta>
 				</data>
 			</instance>
@@ -305,22 +277,22 @@
 			<bind nodeset="/data/p_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_subdistrict"/>
 			<bind nodeset="/data/p_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_site"/>
 			<bind nodeset="/data/p_consent_note" readonly="true()" type="string"/>
-			<bind calculate="if( /data/p_district ='DIAKHAO', 'D', if( /data/p_district ='FATICK', 'F', if( /data/p_district ='GOSSAS', 'G', if( /data/p_district ='KHOMBOLE', 'H', if( /data/p_district ='KOLDA', 'K', if( /data/p_district ='MALEM HODAR', 'M', if( /data/p_district ='NIAKHAR', 'N', if( /data/p_district ='VELINGARA', 'V', 'A' ))))))) )" nodeset="/data/p_first_letter" type="string"/>
-			<bind nodeset="/data/p_boucle/p_consent" required="true()" type="string"/>
-			<bind calculate="concat( /data/p_site_code , '-', if(position(..)&lt;10, concat('00', position(..)), if(position(..)&gt;=10 and position(..)&lt;100, concat('0', position(..)), position(..) )),  /data/p_first_letter )" nodeset="/data/p_boucle/p_barcodeid" relevant=" ../p_consent  = 'A.donne'" required="true()" type="string"/>
-			<bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_boucle/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_boucle/p_age_yrs" relevant=" ../p_consent  = 'A.donne'" required="true()" type="int"/>
-			<bind nodeset="/data/p_boucle/p_sex" relevant=" ../p_consent  = 'A.donne'" required="true()" type="string"/>
-			<bind nodeset="/data/p_boucle/p_residence" relevant=" ../p_consent  = 'A.donne'" required="true()" type="string"/>
-			<bind nodeset="/data/p_boucle/p_chaussures" relevant=" ../p_consent  = 'A.donne'" required="true()" type="string"/>
-			<bind nodeset="/data/p_boucle/p_mares_deau" relevant=" ../p_consent  = 'A.donne'" required="true()" type="string"/>
-			<bind nodeset="/data/p_boucle/p_connait_bilh" relevant=" ../p_consent  = 'A.donne'" required="true()" type="string"/>
-			<bind nodeset="/data/p_boucle/p_manif_bilh" relevant=" ../p_consent  = 'A.donne' and  ../p_connait_bilh  = 'Oui'" required="true()" type="string"/>
-			<bind nodeset="/data/p_boucle/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'A.refuse'" type="string"/>
-			<bind nodeset="/data/p_boucle/p_remarks" type="string"/>
-			<bind nodeset="/data/p_boucle/p_note_thanks" readonly="true()" relevant=" ../p_consent  = 'A.donne'" type="string"/>
+			<bind nodeset="/data/p_consent" required="true()" type="string"/>
+			<bind nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string" readonly="true()" calculate="concat( /data/p_site_code ,'-',/data/meta/randomnum)" db_add_col_4="/data/p_site_code" db_add_col_5="."/>
+			<bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="int"/>
+			<bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
+			<bind nodeset="/data/p_residence" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
+			<bind nodeset="/data/p_chaussures" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
+			<bind nodeset="/data/p_mares_deau" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
+			<bind nodeset="/data/p_connait_bilh" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
+			<bind nodeset="/data/p_manif_bilh" relevant=" /data/p_consent  = 'A.donne' and  /data/p_connait_bilh  = 'Oui'" required="true()" type="string"/>
+			<bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'A.refuse'" type="string"/>
+			<bind nodeset="/data/p_remarks" type="string"/>
+			<bind nodeset="/data/p_note_thanks" readonly="true()" relevant=" /data/p_consent  = 'A.donne'" type="string"/>
 			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
 			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
 			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+			<bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),2,6), '-', substr(random(),10,13))"/>
 		</model>
 	</h:head>
 	<h:body>
@@ -343,116 +315,110 @@
 		<input ref="/data/p_consent_note">
 			<label ref="jr:itext('/data/p_consent_note:label')"/>
 		</input>
-		<group ref="/data/p_boucle">
-			<label ref="jr:itext('/data/p_boucle:label')"/>
-			<repeat nodeset="/data/p_boucle">
-				<select1 ref="/data/p_boucle/p_consent">
-					<label ref="jr:itext('/data/p_boucle/p_consent:label')"/>
-					<hint ref="jr:itext('/data/p_boucle/p_consent:hint')"/>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_consent/A.donne:label')"/>
-						<value>A.donne</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_consent/A.refuse:label')"/>
-						<value>A.refuse</value>
-					</item>
-				</select1>
-				<input ref="/data/p_boucle/p_barcodeid">
-					<label ref="jr:itext('/data/p_boucle/p_barcodeid:label')"/>
-					<hint ref="jr:itext('/data/p_boucle/p_barcodeid:hint')"/>
-				</input>
-				<input ref="/data/p_boucle/p_age_yrs">
-					<label ref="jr:itext('/data/p_boucle/p_age_yrs:label')"/>
-				</input>
-				<select1 ref="/data/p_boucle/p_sex">
-					<label ref="jr:itext('/data/p_boucle/p_sex:label')"/>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_sex/F:label')"/>
-						<value>F</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_sex/M:label')"/>
-						<value>M</value>
-					</item>
-				</select1>
-				<select1 ref="/data/p_boucle/p_residence">
-					<label ref="jr:itext('/data/p_boucle/p_residence:label')"/>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_residence/Dans le village:label')"/>
-						<value>Dans le village</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_residence/Dans un village proche (à moins de 10km):label')"/>
-						<value>Dans un village proche (à moins de 10km)</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_residence/Dans un village situé à plus de 10 km:label')"/>
-						<value>Dans un village situé à plus de 10 km</value>
-					</item>
-				</select1>
-				<select1 ref="/data/p_boucle/p_chaussures">
-					<label ref="jr:itext('/data/p_boucle/p_chaussures:label')"/>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_chaussures/Oui:label')"/>
-						<value>Oui</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_chaussures/Non:label')"/>
-						<value>Non</value>
-					</item>
-				</select1>
-				<select1 ref="/data/p_boucle/p_mares_deau">
-					<label ref="jr:itext('/data/p_boucle/p_mares_deau:label')"/>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_mares_deau/Oui:label')"/>
-						<value>Oui</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_mares_deau/Non:label')"/>
-						<value>Non</value>
-					</item>
-				</select1>
-				<select1 ref="/data/p_boucle/p_connait_bilh">
-					<label ref="jr:itext('/data/p_boucle/p_connait_bilh:label')"/>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_connait_bilh/Oui:label')"/>
-						<value>Oui</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_connait_bilh/Non:label')"/>
-						<value>Non</value>
-					</item>
-				</select1>
-				<select1 ref="/data/p_boucle/p_manif_bilh">
-					<label ref="jr:itext('/data/p_boucle/p_manif_bilh:label')"/>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_manif_bilh/Douleurs abdominales:label')"/>
-						<value>Douleurs abdominales</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_manif_bilh/Uriné du sang:label')"/>
-						<value>Uriné du sang</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_manif_bilh/Ne sait pas:label')"/>
-						<value>Ne sait pas</value>
-					</item>
-					<item>
-						<label ref="jr:itext('/data/p_boucle/p_manif_bilh/Autres:label')"/>
-						<value>Autres</value>
-					</item>
-				</select1>
-				<input ref="/data/p_boucle/p_ending_survey_note">
-					<label ref="jr:itext('/data/p_boucle/p_ending_survey_note:label')"/>
-				</input>
-				<input ref="/data/p_boucle/p_remarks">
-					<label ref="jr:itext('/data/p_boucle/p_remarks:label')"/>
-				</input>
-				<input ref="/data/p_boucle/p_note_thanks">
-					<label ref="jr:itext('/data/p_boucle/p_note_thanks:label')"/>
-				</input>
-			</repeat>
-		</group>
+		<select1 ref="/data/p_consent">
+			<label ref="jr:itext('/data/p_consent:label')"/>
+			<hint ref="jr:itext('/data/p_consent:hint')"/>
+			<item>
+				<label ref="jr:itext('/data/p_consent/A.donne:label')"/>
+				<value>A.donne</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_consent/A.refuse:label')"/>
+				<value>A.refuse</value>
+			</item>
+		</select1>
+		<input ref="/data/p_barcodeid">
+			<label ref="jr:itext('/data/p_barcodeid:label')"/>
+		</input>
+		<input ref="/data/p_age_yrs">
+			<label ref="jr:itext('/data/p_age_yrs:label')"/>
+		</input>
+		<select1 ref="/data/p_sex">
+			<label ref="jr:itext('/data/p_sex:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_sex/F:label')"/>
+				<value>F</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_sex/M:label')"/>
+				<value>M</value>
+			</item>
+		</select1>
+		<select1 ref="/data/p_residence">
+			<label ref="jr:itext('/data/p_residence:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_residence/Dans le village:label')"/>
+				<value>Dans le village</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_residence/Dans un village proche (à moins de 10km):label')"/>
+				<value>Dans un village proche (à moins de 10km)</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_residence/Dans un village situé à plus de 10 km:label')"/>
+				<value>Dans un village situé à plus de 10 km</value>
+			</item>
+		</select1>
+		<select1 ref="/data/p_chaussures">
+			<label ref="jr:itext('/data/p_chaussures:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_chaussures/Oui:label')"/>
+				<value>Oui</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_chaussures/Non:label')"/>
+				<value>Non</value>
+			</item>
+		</select1>
+		<select1 ref="/data/p_mares_deau">
+			<label ref="jr:itext('/data/p_mares_deau:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_mares_deau/Oui:label')"/>
+				<value>Oui</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_mares_deau/Non:label')"/>
+				<value>Non</value>
+			</item>
+		</select1>
+		<select1 ref="/data/p_connait_bilh">
+			<label ref="jr:itext('/data/p_connait_bilh:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_connait_bilh/Oui:label')"/>
+				<value>Oui</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_connait_bilh/Non:label')"/>
+				<value>Non</value>
+			</item>
+		</select1>
+		<select1 ref="/data/p_manif_bilh">
+			<label ref="jr:itext('/data/p_manif_bilh:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_manif_bilh/Douleurs abdominales:label')"/>
+				<value>Douleurs abdominales</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_manif_bilh/Uriné du sang:label')"/>
+				<value>Uriné du sang</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_manif_bilh/Ne sait pas:label')"/>
+				<value>Ne sait pas</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_manif_bilh/Autres:label')"/>
+				<value>Autres</value>
+			</item>
+		</select1>
+		<input ref="/data/p_ending_survey_note">
+			<label ref="jr:itext('/data/p_ending_survey_note:label')"/>
+		</input>
+		<input ref="/data/p_remarks">
+			<label ref="jr:itext('/data/p_remarks:label')"/>
+		</input>
+		<input ref="/data/p_note_thanks">
+			<label ref="jr:itext('/data/p_note_thanks:label')"/>
+		</input>
 	</h:body>
 </h:html>
