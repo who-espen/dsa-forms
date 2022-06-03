@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<h:head>
-		<h:title>(Mai 2022) - 1. SCH/STH – Site V4</h:title>
+		<h:title>(Mai 2022) - 1. SCH/STH – Site V5</h:title>
 		<model >
 			<itext>
 				<translation default="true()" lang="French">
@@ -191,6 +191,21 @@
 					<text id="/data/w_flies_access_faeces/Non:label">
 						<value>Non</value>
 					</text>
+					<text id="/data/w_place_defecate:label">
+						<value>10. Où les enfants vont pour faire leur besoin ?</value>
+					</text>
+					<text id="/data/w_place_defecate/Dans.les.maisons.d.à.côté:label">
+						<value>Dans les maisons d à côté</value>
+					</text>
+					<text id="/data/w_place_defecate/Chez.eux:label">
+						<value>Chez eux</value>
+					</text>
+					<text id="/data/w_place_defecate/Dans.la.nature:label">
+						<value>Dans la nature</value>
+					</text>
+					<text id="/data/w_place_defecate/Au.bord.des.eaux.de.surface.(rivière,.marre,.fleuve,.etc):label">
+						<value>Au bord des eaux de surface (rivière, marre, fleuve...)</value>
+					</text>
 					<text id="/data/w_note1:label">
 						<value>Cette réponse entraine la fin de l'enquête dans cette école. Cette enquête ne peut continuer sans le consentement du Directeur/Président.</value>
 					</text>
@@ -328,6 +343,18 @@
 					</text>
 					<text id="washing_hand_type-4">
 						<value>Eau, savon/cendres et serviette jetable</value>
+					</text>
+					<text id="place_defecate-0">
+						<value>Dans les maisons d à côté</value>
+					</text>
+					<text id="place_defecate-1">
+						<value>Chez eux</value>
+					</text>
+					<text id="place_defecate-2">
+						<value>Dans la nature</value>
+					</text>
+					<text id="place_defecate-3">
+						<value>Au bord des eaux de surface (rivière, marre, fleuve...)</value>
 					</text>
 					<text id="district_list-0">
 						<value>DIAKHAO</value>
@@ -1543,6 +1570,21 @@
 					<text id="/data/w_flies_access_faeces/Non:label">
 						<value>No</value>
 					</text>
+					<text id="/data/w_place_defecate:label">
+						<value>Where children go to defecate ?</value>
+					</text>
+					<text id="/data/w_place_defecate/Dans.les.maisons.d.à.côté:label">
+						<value>In the houses next door</value>
+					</text>
+					<text id="/data/w_place_defecate/Chez.eux:label">
+						<value>At their home</value>
+					</text>
+					<text id="/data/w_place_defecate/Dans.la.nature:label">
+						<value>Outdoors</value>
+					</text>
+					<text id="/data/w_place_defecate/Au.bord.des.eaux.de.surface.(rivière,.marre,.fleuve,.etc):label">
+						<value>At the edge of surface water (river, pond, river, etc.)</value>
+					</text>
 					<text id="/data/w_note1:label">
 						<value>This answer leads to the end of the investigation in this school. This investigation cannot continue without the consent of the Director/President.</value>
 					</text>
@@ -1680,6 +1722,18 @@
 					</text>
 					<text id="washing_hand_type-4">
 						<value>Water, soap/ash, and disposable napkin</value>
+					</text>
+					<text id="place_defecate-0">
+						<value>In the houses next door</value>
+					</text>
+					<text id="place_defecate-1">
+						<value>At their home</value>
+					</text>
+					<text id="place_defecate-2">
+						<value>Outdoors</value>
+					</text>
+					<text id="place_defecate-3">
+						<value>At the edge of surface water (river, pond, river, etc.)</value>
 					</text>
 					<text id="district_list-0">
 						<value>DIAKHAO</value>
@@ -2710,7 +2764,7 @@
 				</translation>
 			</itext>
 			<instance>
-				<data id="sn_sch_sth_impact_1_school_202205_v4">
+				<data id="sn_sch_sth_impact_1_school_202205_v5">
 					<w_recorder/>
 					<w_district/>
 					<w_subdistrict/>
@@ -2729,6 +2783,7 @@
 					<w_toilet_clean/>
 					<w_washing_hand/>
 					<w_flies_access_faeces/>
+					<w_place_defecate/>
 					<w_note1/>
 					<w_remarks/>
 					<w_note2/>
@@ -2952,6 +3007,26 @@
 					<item>
 						<itextId>washing_hand_type-4</itextId>
 						<name>Eau, savon/cendres et serviette jetable</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="place_defecate">
+				<root>
+					<item>
+						<itextId>place_defecate-0</itextId>
+						<name>Dans.les.maisons.d.à.côté</name>
+					</item>
+					<item>
+						<itextId>place_defecate-1</itextId>
+						<name>Chez.eux</name>
+					</item>
+					<item>
+						<itextId>place_defecate-2</itextId>
+						<name>Dans.la.nature</name>
+					</item>
+					<item>
+						<itextId>place_defecate-3</itextId>
+						<name>Au.bord.des.eaux.de.surface.(rivière,.marre,.fleuve,.etc)</name>
 					</item>
 				</root>
 			</instance>
@@ -4691,6 +4766,7 @@
 			<bind nodeset="/data/w_toilet_clean" relevant=" /data/w_toilet  = 'Oui' and  /data/w_consent  = 'Oui'" required="true()" type="string"/>
 			<bind nodeset="/data/w_washing_hand" relevant=" /data/w_toilet  = 'Oui' and  /data/w_consent  = 'Oui' and  /data/w_toilet_clean  = 'Oui'" required="true()" type="string"/>
 			<bind nodeset="/data/w_flies_access_faeces" relevant=" /data/w_toilet  = 'Oui' and /data/w_consent  = 'Oui' and  /data/w_toilet_clean  = 'Non'" required="true()" type="string"/>
+			<bind nodeset="/data/w_place_defecate" relevant=" /data/w_toilet  = 'Non' and  /data/w_consent  = 'Oui'" required="true()" type="string"/>
 			<bind nodeset="/data/w_note1" readonly="true()" relevant=" /data/w_consent  = 'Non'" type="string"/>
 			<bind nodeset="/data/w_remarks" type="string"/>
 			<bind nodeset="/data/w_note2" readonly="true()" relevant=" /data/w_consent  = 'Oui'" type="string"/>
@@ -4932,6 +5008,25 @@
 				<value>Non</value>
 			</item>
 		</select1>
+		<select ref="/data/w_place_defecate">
+			<label ref="jr:itext('/data/w_place_defecate:label')"/>
+			<item>
+				<label ref="jr:itext('/data/w_place_defecate/Dans.les.maisons.d.à.côté:label')"/>
+				<value>Dans.les.maisons.d.à.côté</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/w_place_defecate/Chez.eux:label')"/>
+				<value>Chez.eux</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/w_place_defecate/Dans.la.nature:label')"/>
+				<value>Dans.la.nature</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/w_place_defecate/Au.bord.des.eaux.de.surface.(rivière,.marre,.fleuve,.etc):label')"/>
+				<value>Au.bord.des.eaux.de.surface.(rivière,.marre,.fleuve,.etc)</value>
+			</item>
+		</select>
 		<input ref="/data/w_note1">
 			<label ref="jr:itext('/data/w_note1:label')"/>
 		</input>
