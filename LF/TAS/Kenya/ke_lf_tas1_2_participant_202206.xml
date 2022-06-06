@@ -376,7 +376,7 @@
             <value>Date of birth</value>
           </text>
           <text id="/data/p_dob_/year:jr:constraintMsg">
-            <value>The year must be between 2017 and 1902</value>
+            <value>The year must be between 2018 and 2001</value>
           </text>
           <text id="/data/p_dob_/year:label">
             <value>Year of birth</value>
@@ -562,7 +562,7 @@
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 20" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/p_dob_" relevant=" /data/p_consent  = 'Yes'"/>
-      <bind constraint=". &gt;= 1902 and . &lt;= 2017" jr:constraintMsg="jr:itext('/data/p_dob_/year:jr:constraintMsg')" nodeset="/data/p_dob_/year" required="true()" type="int"/>
+      <bind constraint=". &gt;= 2001 and . &lt;= 2018" jr:constraintMsg="jr:itext('/data/p_dob_/year:jr:constraintMsg')" nodeset="/data/p_dob_/year" required="true()" type="int"/>
       <bind nodeset="/data/p_dob_/month" required="true()" type="string"/>
       <bind constraint=". &gt; 0 and . &lt; 32" jr:constraintMsg="jr:itext('/data/p_dob_/Day:jr:constraintMsg')" nodeset="/data/p_dob_/Day" required="true()" type="int"/>
       <bind nodeset="/data/p_lived_last_1yr" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
