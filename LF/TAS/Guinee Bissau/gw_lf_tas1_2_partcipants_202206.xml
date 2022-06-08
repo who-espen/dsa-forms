@@ -30,6 +30,7 @@
           <c_end/>
           <meta>
             <instanceID/>
+            <randomnum/>
           </meta>
         </data>
       </instance>
@@ -121,12 +122,13 @@
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
       <bind nodeset="/data/p_IDMethod" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
       <bind nodeset="/data/p_BarcodeID" relevant=" /data/p_IDMethod  = 'Scanner' and  /data/p_consent  = 'Sim'" required="true()" type="barcode"/>
-      <bind nodeset="/data/p_GenerateID" readonly="true()" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Sim'" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_cluster_id ,'-',/data/meta/randomnum)" nodeset="/data/p_GenerateID" readonly="true()" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Sim'" required="true()" type="string"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Nao'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,7), '-', substr(random(),10,13))"/>
     </model>
   </h:head>
   <h:body>
