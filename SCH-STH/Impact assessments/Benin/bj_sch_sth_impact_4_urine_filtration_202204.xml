@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Avril 2022) - 4. SCH/STH - Urine Filtration V1</h:title>
+    <model >
+
+      <instance>
+        <data id="bj_sch_sth_impact_4_urine_filtration_202204_v1">
+          <u_recorder/>
+          <u_district/>
+          <u_subdistrict/>
+          <u_site_name/>
+          <u_site_code/>
+          <espen_code_id/>
+          <u_urine_vol/>
+          <u_sh_egp_10ml/>
+          <k_sch_man/>
+          <u_remarks/>
+          <u_start/>
+          <u_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/u_recorder:jr:constraintMsg">
+            <value>Veuillez rentrer votre code sur 2 chiffres</value>
+          </text>
+          <text id="/data/u_recorder:label">
+            <value>Code de l'enquêteur</value>
+          </text>
+          <text id="/data/u_recorder:hint">
+            <value>Code sur 2 chiffres</value>
+          </text>
+          <text id="/data/u_district:label">
+            <value>Sélectionner la commune</value>
+          </text>
+          <text id="/data/u_subdistrict:label">
+            <value>Sélectionner l'arrondissement</value>
+          </text>
+          <text id="/data/u_site_name:label">
+            <value>Sélectionner l'école</value>
+          </text>
+          <text id="/data/u_site_code:label">
+            <value>Sélectionner le code de l'école</value>
+          </text>
+          <text id="/data/espen_code_id:jr:constraintMsg">
+            <value>Veuillez entrer le code du participant. Exemple 123-01</value>
+          </text>
+          <text id="/data/espen_code_id:label">
+            <value>Code d'identification du répondant (Veuillez Saisir le code du participant tel qu'il a été généré dans le formulaire 2)</value>
+          </text>
+          <text id="/data/espen_code_id:hint">
+            <value>Exemple: 123-01. Il s'agit du code de l'école suivi d'un tiret puis du numéro d'ordre du participant sur deux chiffres.</value>
+          </text>
+          <text id="/data/u_urine_vol:jr:constraintMsg">
+            <value>Le volume doit être limité à 10ml</value>
+          </text>
+          <text id="/data/u_urine_vol:label">
+            <value>Volume d'urine : Consigner les millilitres (ml) d'urine prélevés sur la personne</value>
+          </text>
+          <text id="/data/u_sh_egp_10ml:label">
+            <value>Nombre d'œufs de Schistosoma haematobium par 10 ml</value>
+          </text>
+          <text id="/data/k_sch_man:label">
+            <value>Nombre d'œufs de Schistosoma mansoni</value>
+          </text>
+          <text id="/data/u_remarks:label">
+            <value>Notes additionnelles</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/u_recorder:label">
+            <value>Investigator code</value>
+          </text>
+          <text id="/data/u_recorder:hint">
+            <value>2 digits</value>
+          </text>
+          <text id="/data/u_district:label">
+            <value>Select the county</value>
+          </text>
+          <text id="/data/u_subdistrict:label">
+            <value>Select the Sub-district</value>
+          </text>
+          <text id="/data/u_site_name:label">
+            <value>Select the school</value>
+          </text>
+          <text id="/data/u_site_code:label">
+            <value>Select the school code</value>
+          </text>
+          <text id="/data/espen_code_id:jr:constraintMsg">
+            <value>Please enter the code of the participant</value>
+          </text>
+          <text id="/data/espen_code_id:label">
+            <value>Respondent's identification code</value>
+          </text>
+          <text id="/data/u_urine_vol:jr:constraintMsg">
+            <value>The volume needs to be limited to 10ml</value>
+          </text>
+          <text id="/data/u_urine_vol:label">
+            <value>Urine volume: Record the milliliters (ml) of urine collected from the person</value>
+          </text>
+          <text id="/data/u_sh_egp_10ml:label">
+            <value>SH egp 10 ml</value>
+          </text>
+          <text id="/data/k_sch_man:label">
+            <value>Schistosoma mansoni (eggs)</value>
+          </text>
+          <text id="/data/u_remarks:label">
+            <value>Additional comment</value>
+          </text>
+          <text id="/data/u_recorder:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/espen_code_id:hint">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/u_recorder:jr:constraintMsg')" nodeset="/data/u_recorder" required="true()" type="string"/>
+      <bind nodeset="/data/u_district" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/u_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_district"/>
+      <bind nodeset="/data/u_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_subdistrict"/>
+      <bind nodeset="/data/u_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_site_name"/>
+      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/espen_code_id:jr:constraintMsg')" nodeset="/data/espen_code_id" required="true()" type="string"/>
+      <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" type="int"/>
+      <bind nodeset="/data/u_sh_egp_10ml" required="true()" type="int"/>
+      <bind nodeset="/data/k_sch_man" type="int"/>
+      <bind nodeset="/data/u_remarks" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/u_recorder">
+      <label ref="jr:itext('/data/u_recorder:label')"/>
+      <hint ref="jr:itext('/data/u_recorder:hint')"/>
+    </input>
+    <input ref="/data/u_district">
+      <label ref="jr:itext('/data/u_district:label')"/>
+    </input>
+    <input ref="/data/u_subdistrict">
+      <label ref="jr:itext('/data/u_subdistrict:label')"/>
+    </input>
+    <input ref="/data/u_site_name">
+      <label ref="jr:itext('/data/u_site_name:label')"/>
+    </input>
+    <input ref="/data/u_site_code">
+      <label ref="jr:itext('/data/u_site_code:label')"/>
+    </input>
+    <input ref="/data/espen_code_id">
+      <label ref="jr:itext('/data/espen_code_id:label')"/>
+      <hint ref="jr:itext('/data/espen_code_id:hint')"/>
+    </input>
+    <input ref="/data/u_urine_vol">
+      <label ref="jr:itext('/data/u_urine_vol:label')"/>
+    </input>
+    <input ref="/data/u_sh_egp_10ml">
+      <label ref="jr:itext('/data/u_sh_egp_10ml:label')"/>
+    </input>
+    <input ref="/data/k_sch_man">
+      <label ref="jr:itext('/data/k_sch_man:label')"/>
+    </input>
+    <input ref="/data/u_remarks">
+      <label ref="jr:itext('/data/u_remarks:label')"/>
+    </input>
+  </h:body>
+</h:html>
