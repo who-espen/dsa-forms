@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<h:head>
-		<h:title>(Mai 2022) - 3. SCH/STH - Resultats v1</h:title>
+		<h:title>(Mai 2022) - 3. SCH/STH - Resultats v3</h:title>
 		<model >
 			<itext>
 				<translation default="true()" lang="French">
@@ -51,13 +51,13 @@
 						<value>5. Sélectionnez le code de l'école</value>
 					</text>
 					<text id="/data/r_barcodeid:jr:constraintMsg">
-						<value>Entrez le code tel que généré par le formulaire 2</value>
+						<value>Le code tel que généré par le formulaire 2</value>
 					</text>
 					<text id="/data/r_barcodeid:label">
 						<value>6. Code unique de l'enfant: Veuillez entrer le code tel que généré par le formulaire 2.</value>
 					</text>
 					<text id="/data/r_barcodeid:hint">
-						<value>Entrez le code de l'enfant exactement tel qu'il a été généré dans le formulaire 2. Exemple: 123-001D</value>
+						<value>Le code de l'enfant exactement tel qu'il a été généré dans le formulaire 2.</value>
 					</text>
 					<text id="/data/r_note1:label">
 						<value>Résultats tests à la bandelettes</value>
@@ -99,7 +99,7 @@
 						<value>8.c. Mansoni nombre d'œufs par gramme de selles</value>
 					</text>
 					<text id="/data/r_sch_man_gram:hint">
-						<value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x24</value>
+						<value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
 					</text>
 					<text id="/data/r_ascaris_lumb_sa:label">
 						<value>9.a. Ascaris nombre d'œufs lame A</value>
@@ -111,7 +111,7 @@
 						<value>9.c. Ascaris nombre d'œufs par gramme de selles</value>
 					</text>
 					<text id="/data/r_ascaris_lumb_gram:hint">
-						<value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x24</value>
+						<value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
 					</text>
 					<text id="/data/r_hookworm_sa:label">
 						<value>10.a. Ankylostome nombre d'œufs lame A</value>
@@ -120,10 +120,10 @@
 						<value>10.b. Ankylostome nombre d'œufs lame B</value>
 					</text>
 					<text id="/data/r_hookworm_gram:label">
-						<value>10.c. Ankylostome nombre d'œufs par gramme de selles A</value>
+						<value>10.c. Ankylostome nombre d'œufs par gramme de selles</value>
 					</text>
 					<text id="/data/r_hookworm_gram:hint">
-						<value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x24</value>
+						<value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
 					</text>
 					<text id="/data/r_trichuris_sa:label">
 						<value>11.a. Trichocéphale nombre d'œufs lame A</value>
@@ -135,7 +135,7 @@
 						<value>11.c. Trichocéphale nombre d'œufs par gramme de selles</value>
 					</text>
 					<text id="/data/r_trichuris_gram:hint">
-						<value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x24</value>
+						<value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
 					</text>
 					<text id="/data/r_autre:label">
 						<value>12. Autres?</value>
@@ -159,7 +159,7 @@
 						<value>12.d. Nombre d'œufs par gramme de selles</value>
 					</text>
 					<text id="/data/r_autre_gram:hint">
-						<value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x24</value>
+						<value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
 					</text>
 					<text id="/data/r_note3:label">
 						<value>Résultats filtrations</value>
@@ -172,6 +172,9 @@
 					</text>
 					<text id="/data/r_sh_egr_10ml:label">
 						<value>Schistosoma haematobium - Nombre d'œufs dans 10 ml d'urine</value>
+					</text>
+					<text id="/data/r_sh_egr_10ml:hint">
+						<value>Formule utilisée: (Nombre d'œufs dans l'échantillon d'urine x 10) / Volume d'urine collectée</value>
 					</text>
 					<text id="/data/r_remarks:label">
 						<value>Notes additionnelles</value>
@@ -2449,10 +2452,13 @@
 					<text id="/data/r_autre_gram:hint">
 						<value>-</value>
 					</text>
+					<text id="/data/r_sh_egr_10ml:hint">
+						<value>-</value>
+					</text>
 				</translation>
 			</itext>
 			<instance>
-				<data id="sn_sch_sth_impact_3_Results_202205_v1">
+				<data id="sn_sch_sth_impact_3_Results_202205_v3">
 					<r_recorder/>
 					<r_district/>
 					<r_subdistrict/>
@@ -2482,7 +2488,6 @@
 					<r_note3/>
 					<r_urine_vol/>
 					<r_sh_egp/>
-					<test/>
 					<r_sh_egr_10ml/>
 					<r_remarks/>
 					<r_start/>
@@ -4255,31 +4260,30 @@
 			<bind nodeset="/data/r_subdistrict" required="true()" type="string"/>
 			<bind nodeset="/data/r_site_name" required="true()" type="string"/>
 			<bind nodeset="/data/r_site_code" required="true()" type="string"/>
-			<bind constraint="regex(.,'^[0-9]{3}-[0-9]{3}[A-Z]{1}$')" jr:constraintMsg="jr:itext('/data/r_barcodeid:jr:constraintMsg')" nodeset="/data/r_barcodeid" required="true()" type="string"/>
+			<bind jr:constraintMsg="jr:itext('/data/r_barcodeid:jr:constraintMsg')" nodeset="/data/r_barcodeid" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/r_site_code"/>
 			<bind nodeset="/data/r_note1" readonly="true()" type="string"/>
 			<bind nodeset="/data/r_grading" required="true()" type="string"/>
 			<bind nodeset="/data/r_note2" readonly="true()" type="string"/>
 			<bind nodeset="/data/r_sch_man_sa" required="true()" type="int"/>
 			<bind nodeset="/data/r_sch_man_sb" required="true()" type="int"/>
-			<bind calculate="( /data/r_sch_man_sa  +  /data/r_sch_man_sb )*24" nodeset="/data/r_sch_man_gram" readonly="true()" required="true()" type="int"/>
+			<bind calculate="( /data/r_sch_man_sa  +  /data/r_sch_man_sb )*12" nodeset="/data/r_sch_man_gram" readonly="true()" required="true()" type="int"/>
 			<bind nodeset="/data/r_ascaris_lumb_sa" required="true()" type="int"/>
 			<bind nodeset="/data/r_ascaris_lumb_sb" required="true()" type="int"/>
-			<bind calculate="( /data/r_ascaris_lumb_sa  +  /data/r_ascaris_lumb_sb )*24" nodeset="/data/r_ascaris_lumb_gram" readonly="true()" required="true()" type="int"/>
+			<bind calculate="( /data/r_ascaris_lumb_sa  +  /data/r_ascaris_lumb_sb )*12" nodeset="/data/r_ascaris_lumb_gram" readonly="true()" required="true()" type="int"/>
 			<bind nodeset="/data/r_hookworm_sa" required="true()" type="int"/>
 			<bind nodeset="/data/r_hookworm_sb" required="true()" type="int"/>
-			<bind calculate="( /data/r_hookworm_sa  +  /data/r_hookworm_sb )*24" nodeset="/data/r_hookworm_gram" readonly="true()" required="true()" type="int"/>
+			<bind calculate="( /data/r_hookworm_sa  +  /data/r_hookworm_sb )*12" nodeset="/data/r_hookworm_gram" readonly="true()" required="true()" type="int"/>
 			<bind nodeset="/data/r_trichuris_sa" required="true()" type="int"/>
 			<bind nodeset="/data/r_trichuris_sb" required="true()" type="int"/>
-			<bind calculate="( /data/r_trichuris_sa  +  /data/r_trichuris_sb )*24" nodeset="/data/r_trichuris_gram" readonly="true()" required="true()" type="int"/>
+			<bind calculate="( /data/r_trichuris_sa  +  /data/r_trichuris_sb )*12" nodeset="/data/r_trichuris_gram" readonly="true()" required="true()" type="int"/>
 			<bind nodeset="/data/r_autre" required="true()" type="string"/>
 			<bind nodeset="/data/r_nom_autre" relevant=" /data/r_autre ='Oui'" required="true()" type="string"/>
 			<bind nodeset="/data/r_autre_sa" relevant=" /data/r_autre ='Oui'" required="true()" type="int"/>
 			<bind nodeset="/data/r_autre_sb" relevant=" /data/r_autre ='Oui'" required="true()" type="int"/>
-			<bind calculate="( /data/r_autre_sa  +  /data/r_autre_sb )*24" nodeset="/data/r_autre_gram" readonly="true()" relevant=" /data/r_autre ='Oui'" required="true()" type="int"/>
+			<bind calculate="( /data/r_autre_sa  +  /data/r_autre_sb )*12" nodeset="/data/r_autre_gram" readonly="true()" relevant=" /data/r_autre ='Oui'" required="true()" type="int"/>
 			<bind nodeset="/data/r_note3" readonly="true()" type="string"/>
 			<bind nodeset="/data/r_urine_vol" required="true()" type="int"/>
 			<bind nodeset="/data/r_sh_egp" required="true()" type="int"/>
-			<bind calculate="4 div 2" nodeset="/data/test" type="string"/>
 			<bind calculate="( /data/r_sh_egp *10) div  /data/r_urine_vol " nodeset="/data/r_sh_egr_10ml" readonly="true()" required="true()" type="int"/>
 			<bind nodeset="/data/r_remarks" type="string"/>
 			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_start" type="dateTime"/>
@@ -4461,6 +4465,7 @@
 		</input>
 		<input ref="/data/r_sh_egr_10ml">
 			<label ref="jr:itext('/data/r_sh_egr_10ml:label')"/>
+			<hint ref="jr:itext('/data/r_sh_egr_10ml:hint')"/>
 		</input>
 		<input ref="/data/r_remarks">
 			<label ref="jr:itext('/data/r_remarks:label')"/>
