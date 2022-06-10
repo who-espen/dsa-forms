@@ -7,7 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Dec 2021) IAS - 3. Diagnostic Form V2</h:title>
+    <h:title>(July 2022) IAS - 3. Diagnostic Form V2</h:title>
     <model >
 
       <instance>
@@ -58,11 +58,23 @@
           <text id="/data/d_is_second_test:label">
             <value>Is this a second test?</value>
           </text>
+          <text id="/data/d_is_second_test/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/d_is_second_test/No:label">
+            <value>No</value>
+          </text>
           <text id="/data/d_lot_number:label">
             <value>Lot number</value>
           </text>
           <text id="/data/p_ID_method:label">
             <value>Participant ID format</value>
+          </text>
+          <text id="/data/p_ID_method/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/p_ID_method/Auto generate:label">
+            <value>Auto generate</value>
           </text>
           <text id="/data/p_Barcode_ID:label">
             <value>Please scan the QR code / barcode</value>
@@ -82,8 +94,23 @@
           <text id="/data/d_ov16_result:label">
             <value>Ov16 RDT result</value>
           </text>
+          <text id="/data/d_ov16_result/Positive:label">
+            <value>Positive</value>
+          </text>
+          <text id="/data/d_ov16_result/Negative:label">
+            <value>Negative</value>
+          </text>
+          <text id="/data/d_ov16_result/Invalid:label">
+            <value>Invalid</value>
+          </text>
           <text id="/data/d_dbs_collected:label">
             <value>Has DBS been collected?</value>
+          </text>
+          <text id="/data/d_dbs_collected/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/d_dbs_collected/No:label">
+            <value>No</value>
           </text>
           <text id="/data/d_notes:label">
             <value>Notes</value>
@@ -107,6 +134,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
     </model>
+    
   </h:head>
   <h:body>
     <input ref="/data/d_recorder_id">
@@ -122,11 +150,11 @@
     <select1 ref="/data/d_is_second_test">
       <label ref="jr:itext('/data/d_is_second_test:label')"/>
       <item>
-        <label>Yes</label>
+        <label ref="jr:itext('/data/d_is_second_test/Yes:label')"/>
         <value>Yes</value>
       </item>
       <item>
-        <label>No</label>
+        <label ref="jr:itext('/data/d_is_second_test/No:label')"/>
         <value>No</value>
       </item>
     </select1>
@@ -136,11 +164,11 @@
     <select1 ref="/data/p_ID_method">
       <label ref="jr:itext('/data/p_ID_method:label')"/>
       <item>
-        <label>Scanner</label>
+        <label ref="jr:itext('/data/p_ID_method/Scanner:label')"/>
         <value>Scanner</value>
       </item>
       <item>
-        <label>Auto generate</label>
+        <label ref="jr:itext('/data/p_ID_method/Auto generate:label')"/>
         <value>Auto generate</value>
       </item>
     </select1>
@@ -156,26 +184,26 @@
     <select1 ref="/data/d_ov16_result">
       <label ref="jr:itext('/data/d_ov16_result:label')"/>
       <item>
-        <label>Positive</label>
+        <label ref="jr:itext('/data/d_ov16_result/Positive:label')"/>
         <value>Positive</value>
       </item>
       <item>
-        <label>Negative</label>
+        <label ref="jr:itext('/data/d_ov16_result/Negative:label')"/>
         <value>Negative</value>
       </item>
       <item>
-        <label>Invalid</label>
+        <label ref="jr:itext('/data/d_ov16_result/Invalid:label')"/>
         <value>Invalid</value>
       </item>
     </select1>
     <select1 ref="/data/d_dbs_collected">
       <label ref="jr:itext('/data/d_dbs_collected:label')"/>
       <item>
-        <label>Yes</label>
+        <label ref="jr:itext('/data/d_dbs_collected/Yes:label')"/>
         <value>Yes</value>
       </item>
       <item>
-        <label>No</label>
+        <label ref="jr:itext('/data/d_dbs_collected/No:label')"/>
         <value>No</value>
       </item>
     </select1>
