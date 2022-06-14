@@ -3963,7 +3963,7 @@
       <bind nodeset="/data/d_cluster_id" required="true()" type="string"/>
       <bind nodeset="/data/d_IDType" required="true()" type="string"/>
       <bind nodeset="/data/d_BarcodeID" relevant=" /data/d_IDType  = &quot;Scanner&quot;" required="true()" type="barcode"/>
-      <bind constraint="regex(.,'^[0-9]{4}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_generatedid:jr:constraintMsg')" nodeset="/data/d_generatedid" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[0-9]{4}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_generatedid:jr:constraintMsg')" nodeset="/data/d_generatedid" relevant=" /data/d_IDType  = &quot;ID_generation&quot;" required="true()" type="string"/>
       <bind constraint="regex(.,'^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_lotnumber1:jr:constraintMsg')" nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalid'" required="true()" type="string"/>
