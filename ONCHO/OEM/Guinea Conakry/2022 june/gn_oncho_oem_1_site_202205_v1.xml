@@ -5,20 +5,14 @@
 		<model >
 			<itext>
 				<translation default="true()" lang="French">
+					<text id="/data/c_recorderID:jr:constraintMsg">
+						<value>Code sur 2 chiffres uniquement</value>
+					</text>
 					<text id="/data/c_recorderID:label">
-						<value>1. Personne remplissant le questionnaire :</value>
+						<value>1. Veuillez entrer l'identifiant de l'enregistreur:</value>
 					</text>
-					<text id="/data/c_recorderID/ALPHA OUMAR BAH:label">
-						<value>ALPHA OUMAR BAH</value>
-					</text>
-					<text id="/data/c_recorderID/Koly Béavogui:label">
-						<value>Koly Béavogui</value>
-					</text>
-					<text id="/data/c_recorderID/Gaston CHERIF:label">
-						<value>Gaston CHERIF</value>
-					</text>
-					<text id="/data/c_recorderID/MK:label">
-						<value>MK</value>
+					<text id="/data/c_recorderID:hint">
+						<value>L'identifiant de l'enregistreur est un code à 2 chiffres qui vous a été attribué, à vous ou à votre équipe.</value>
 					</text>
 					<text id="/data/c_district:label">
 						<value>2. Sélectionnez le District/Préfecture :</value>
@@ -139,18 +133,6 @@
 					</text>
 					<text id="/data/c_notes:label">
 						<value>13. Remarques / Observations :</value>
-					</text>
-					<text id="recorder_list-0">
-						<value>ALPHA OUMAR BAH</value>
-					</text>
-					<text id="recorder_list-1">
-						<value>Koly Béavogui</value>
-					</text>
-					<text id="recorder_list-2">
-						<value>Gaston CHERIF</value>
-					</text>
-					<text id="recorder_list-3">
-						<value>MK</value>
 					</text>
 					<text id="level-0">
 						<value>Communauté/Village</value>
@@ -1723,8 +1705,14 @@
 					</text>
 				</translation>
 				<translation lang="English">
+					<text id="/data/c_recorderID:jr:constraintMsg">
+						<value>Only 2 digits</value>
+					</text>
 					<text id="/data/c_recorderID:label">
-						<value>Select the recorder :</value>
+						<value>Please enter the recorder code:</value>
+					</text>
+					<text id="/data/c_recorderID:hint">
+						<value>Recorder ID is the 2-digit code assigned to you or your team.</value>
 					</text>
 					<text id="/data/c_district:label">
 						<value>District</value>
@@ -1776,18 +1764,6 @@
 					</text>
 					<text id="/data/c_notes:label">
 						<value>Remarks/Observations</value>
-					</text>
-					<text id="/data/c_recorderID/ALPHA OUMAR BAH:label">
-						<value>-</value>
-					</text>
-					<text id="/data/c_recorderID/Koly Béavogui:label">
-						<value>-</value>
-					</text>
-					<text id="/data/c_recorderID/Gaston CHERIF:label">
-						<value>-</value>
-					</text>
-					<text id="/data/c_recorderID/MK:label">
-						<value>-</value>
 					</text>
 					<text id="/data/c_district/Boffa:label">
 						<value>-</value>
@@ -1856,18 +1832,6 @@
 						<value>-</value>
 					</text>
 					<text id="/data/c_mois_dist/Decembre:label">
-						<value>-</value>
-					</text>
-					<text id="recorder_list-0">
-						<value>-</value>
-					</text>
-					<text id="recorder_list-1">
-						<value>-</value>
-					</text>
-					<text id="recorder_list-2">
-						<value>-</value>
-					</text>
-					<text id="recorder_list-3">
 						<value>-</value>
 					</text>
 					<text id="level-0">
@@ -3465,26 +3429,6 @@
 						<instanceID/>
 					</meta>
 				</data>
-			</instance>
-			<instance id="recorder_list">
-				<root>
-					<item>
-						<itextId>recorder_list-0</itextId>
-						<name>ALPHA OUMAR BAH</name>
-					</item>
-					<item>
-						<itextId>recorder_list-1</itextId>
-						<name>Koly Béavogui</name>
-					</item>
-					<item>
-						<itextId>recorder_list-2</itextId>
-						<name>Gaston CHERIF</name>
-					</item>
-					<item>
-						<itextId>recorder_list-3</itextId>
-						<name>MK</name>
-					</item>
-				</root>
 			</instance>
 			<instance id="level">
 				<root>
@@ -6103,7 +6047,7 @@
 					</item>
 				</root>
 			</instance>
-			<bind nodeset="/data/c_recorderID" required="true()" type="string"/>
+			<bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/c_recorderID:jr:constraintMsg')" nodeset="/data/c_recorderID" required="true()" type="string"/>
 			<bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
 			<bind nodeset="/data/c_sub_district" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
 			<bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_sub_district" db_add_col_3="."/>
@@ -6125,25 +6069,10 @@
 		</model>
 	</h:head>
 	<h:body>
-		<select1 ref="/data/c_recorderID">
+		<input ref="/data/c_recorderID">
 			<label ref="jr:itext('/data/c_recorderID:label')"/>
-			<item>
-				<label ref="jr:itext('/data/c_recorderID/ALPHA OUMAR BAH:label')"/>
-				<value>ALPHA OUMAR BAH</value>
-			</item>
-			<item>
-				<label ref="jr:itext('/data/c_recorderID/Koly Béavogui:label')"/>
-				<value>Koly Béavogui</value>
-			</item>
-			<item>
-				<label ref="jr:itext('/data/c_recorderID/Gaston CHERIF:label')"/>
-				<value>Gaston CHERIF</value>
-			</item>
-			<item>
-				<label ref="jr:itext('/data/c_recorderID/MK:label')"/>
-				<value>MK</value>
-			</item>
-		</select1>
+			<hint ref="jr:itext('/data/c_recorderID:hint')"/>
+		</input>
 		<select1 ref="/data/c_district">
 			<label ref="jr:itext('/data/c_district:label')"/>
 			<item>
