@@ -33,6 +33,7 @@
           <p_end/>
           <meta>
             <instanceID/>
+            <randomnum/>
           </meta>
         </data>
       </instance>
@@ -60,14 +61,32 @@
           <text id="/data/p_consent:label">
             <value>Le participant a-t-il donné son consentement ?</value>
           </text>
+          <text id="/data/p_consent/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_consent/Non:label">
+            <value>Non</value>
+          </text>
           <text id="/data/p_sex:label">
             <value>Veuillez capturer le GPS</value>
           </text>
           <text id="/data/p_sex:hint">
             <value>Fonctionne mieux à l'extérieur de tout batiment</value>
           </text>
+          <text id="/data/p_sex/Masculin:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/p_sex/Féminin:label">
+            <value>Féminin</value>
+          </text>
           <text id="/data/p_ID_method:label">
             <value>How will the individual's unique ID be generated?</value>
+          </text>
+          <text id="/data/p_ID_method/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/p_ID_method/Automatique:label">
+            <value>Automatique</value>
           </text>
           <text id="/data/p_BarcodeID:label">
             <value>Veuillez scanner le QR code</value>
@@ -87,8 +106,20 @@
           <text id="/data/p_dbs_collected:label">
             <value>Collecte de DBS chez les enfants 5-9 ans</value>
           </text>
+          <text id="/data/p_dbs_collected/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_dbs_collected/Non:label">
+            <value>Non</value>
+          </text>
           <text id="/data/p_is_natif:label">
             <value>La participation est-il originaire du village (né au village) ou migrant (n'est pas née au village et est venu s'installer)</value>
+          </text>
+          <text id="/data/p_is_natif/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_is_natif/Non:label">
+            <value>Non</value>
           </text>
           <text id="/data/p_yrs_arriving:jr:constraintMsg">
             <value>La valeur ne doit pas dépasser l'année de naissance</value>
@@ -99,8 +130,59 @@
           <text id="/data/p_filiation:label">
             <value>Filiation</value>
           </text>
+          <text id="/data/p_filiation/Chef de famille / ménage:label">
+            <value>Chef de famille / ménage</value>
+          </text>
+          <text id="/data/p_filiation/Epouse:label">
+            <value>Epouse</value>
+          </text>
+          <text id="/data/p_filiation/Fils /  fille:label">
+            <value>Fils /  fille</value>
+          </text>
+          <text id="/data/p_filiation/Frère / Soeur / cousin:label">
+            <value>Frère / Soeur / cousin</value>
+          </text>
+          <text id="/data/p_filiation/Neuveu / Nièce / Petit-flis / Petite-fille:label">
+            <value>Neuveu / Nièce / Petit-flis / Petite-fille</value>
+          </text>
+          <text id="/data/p_filiation/Veuf / veuve:label">
+            <value>Veuf / veuve</value>
+          </text>
+          <text id="/data/p_filiation/Père ou mère:label">
+            <value>Père ou mère</value>
+          </text>
+          <text id="/data/p_filiation/Pas de parenté:label">
+            <value>Pas de parenté</value>
+          </text>
           <text id="/data/p_occupation:label">
             <value>Occupation</value>
+          </text>
+          <text id="/data/p_occupation/Agriculteur:label">
+            <value>Agriculteur</value>
+          </text>
+          <text id="/data/p_occupation/Pêcheur:label">
+            <value>Pêcheur</value>
+          </text>
+          <text id="/data/p_occupation/Fonctionnaire:label">
+            <value>Fonctionnaire</value>
+          </text>
+          <text id="/data/p_occupation/Élève/étudiant:label">
+            <value>Élève/étudiant</value>
+          </text>
+          <text id="/data/p_occupation/Ouvrier:label">
+            <value>Ouvrier</value>
+          </text>
+          <text id="/data/p_occupation/Mécanicien:label">
+            <value>Mécanicien</value>
+          </text>
+          <text id="/data/p_occupation/Ménagère:label">
+            <value>Ménagère</value>
+          </text>
+          <text id="/data/p_occupation/Commerçant:label">
+            <value>Commerçant</value>
+          </text>
+          <text id="/data/p_occupation/Autre:label">
+            <value>Autre</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
             <value>Vous venez d'entrer une valeur qui mettra fin à l'enquête.</value>
@@ -119,7 +201,7 @@
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/p_ID_method" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/p_BarcodeID" relevant=" /data/p_consent  = 'Oui' and  /data/p_ID_method  = 'Scanner'" required="true()" type="barcode"/>
-      <bind nodeset="/data/p_GenerateID" readonly="true()" relevant=" /data/p_consent  = 'Oui' and  /data/p_ID_method  = 'Automatique'" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_cluster_id ,'-', /data/meta/randomnum)" nodeset="/data/p_GenerateID" readonly="true()" relevant=" /data/p_consent  = 'Oui' and  /data/p_ID_method  = 'Automatique'" required="true()" type="string"/>
       <bind constraint=". &gt; 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/p_dbs_collected" relevant=" /data/p_consent  = 'Oui' and  /data/p_age_yrs &gt;= 5 and  /data/p_age_yrs &lt;= 9" type="string"/>
       <bind nodeset="/data/p_is_natif" relevant=" /data/p_consent  = 'Oui'" type="string"/>
@@ -131,6 +213,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,9)"/>
     </model>
   </h:head>
   <h:body>
@@ -150,11 +233,11 @@
     <select1 ref="/data/p_consent">
       <label ref="jr:itext('/data/p_consent:label')"/>
       <item>
-        <label>Oui</label>
+        <label ref="jr:itext('/data/p_consent/Oui:label')"/>
         <value>Oui</value>
       </item>
       <item>
-        <label>Non</label>
+        <label ref="jr:itext('/data/p_consent/Non:label')"/>
         <value>Non</value>
       </item>
     </select1>
@@ -162,22 +245,22 @@
       <label ref="jr:itext('/data/p_sex:label')"/>
       <hint ref="jr:itext('/data/p_sex:hint')"/>
       <item>
-        <label>Masculin</label>
+        <label ref="jr:itext('/data/p_sex/Masculin:label')"/>
         <value>Masculin</value>
       </item>
       <item>
-        <label>Féminin</label>
+        <label ref="jr:itext('/data/p_sex/Féminin:label')"/>
         <value>Féminin</value>
       </item>
     </select1>
     <select1 ref="/data/p_ID_method">
       <label ref="jr:itext('/data/p_ID_method:label')"/>
       <item>
-        <label>Scanner</label>
+        <label ref="jr:itext('/data/p_ID_method/Scanner:label')"/>
         <value>Scanner</value>
       </item>
       <item>
-        <label>Automatique</label>
+        <label ref="jr:itext('/data/p_ID_method/Automatique:label')"/>
         <value>Automatique</value>
       </item>
     </select1>
@@ -194,22 +277,22 @@
     <select1 ref="/data/p_dbs_collected">
       <label ref="jr:itext('/data/p_dbs_collected:label')"/>
       <item>
-        <label>Oui</label>
+        <label ref="jr:itext('/data/p_dbs_collected/Oui:label')"/>
         <value>Oui</value>
       </item>
       <item>
-        <label>Non</label>
+        <label ref="jr:itext('/data/p_dbs_collected/Non:label')"/>
         <value>Non</value>
       </item>
     </select1>
     <select1 ref="/data/p_is_natif">
       <label ref="jr:itext('/data/p_is_natif:label')"/>
       <item>
-        <label>Oui</label>
+        <label ref="jr:itext('/data/p_is_natif/Oui:label')"/>
         <value>Oui</value>
       </item>
       <item>
-        <label>Non</label>
+        <label ref="jr:itext('/data/p_is_natif/Non:label')"/>
         <value>Non</value>
       </item>
     </select1>
@@ -219,74 +302,74 @@
     <select1 ref="/data/p_filiation">
       <label ref="jr:itext('/data/p_filiation:label')"/>
       <item>
-        <label></label>
+        <label ref="jr:itext('/data/p_filiation/Chef de famille / ménage:label')"/>
         <value>Chef de famille / ménage</value>
       </item>
       <item>
-        <label></label>
+        <label ref="jr:itext('/data/p_filiation/Epouse:label')"/>
         <value>Epouse</value>
       </item>
       <item>
-        <label></label>
+        <label ref="jr:itext('/data/p_filiation/Fils /  fille:label')"/>
         <value>Fils /  fille</value>
       </item>
       <item>
-        <label></label>
+        <label ref="jr:itext('/data/p_filiation/Frère / Soeur / cousin:label')"/>
         <value>Frère / Soeur / cousin</value>
       </item>
       <item>
-        <label></label>
+        <label ref="jr:itext('/data/p_filiation/Neuveu / Nièce / Petit-flis / Petite-fille:label')"/>
         <value>Neuveu / Nièce / Petit-flis / Petite-fille</value>
       </item>
       <item>
-        <label></label>
+        <label ref="jr:itext('/data/p_filiation/Veuf / veuve:label')"/>
         <value>Veuf / veuve</value>
       </item>
       <item>
-        <label></label>
+        <label ref="jr:itext('/data/p_filiation/Père ou mère:label')"/>
         <value>Père ou mère</value>
       </item>
       <item>
-        <label></label>
+        <label ref="jr:itext('/data/p_filiation/Pas de parenté:label')"/>
         <value>Pas de parenté</value>
       </item>
     </select1>
     <select1 ref="/data/p_occupation">
       <label ref="jr:itext('/data/p_occupation:label')"/>
       <item>
-        <label>Agriculteur</label>
+        <label ref="jr:itext('/data/p_occupation/Agriculteur:label')"/>
         <value>Agriculteur</value>
       </item>
       <item>
-        <label>Pêcheur</label>
+        <label ref="jr:itext('/data/p_occupation/Pêcheur:label')"/>
         <value>Pêcheur</value>
       </item>
       <item>
-        <label>Fonctionnaire</label>
+        <label ref="jr:itext('/data/p_occupation/Fonctionnaire:label')"/>
         <value>Fonctionnaire</value>
       </item>
       <item>
-        <label>Élève/étudiant</label>
+        <label ref="jr:itext('/data/p_occupation/Élève/étudiant:label')"/>
         <value>Élève/étudiant</value>
       </item>
       <item>
-        <label>Ouvrier</label>
+        <label ref="jr:itext('/data/p_occupation/Ouvrier:label')"/>
         <value>Ouvrier</value>
       </item>
       <item>
-        <label>Mécanicien</label>
+        <label ref="jr:itext('/data/p_occupation/Mécanicien:label')"/>
         <value>Mécanicien</value>
       </item>
       <item>
-        <label>Ménagère</label>
+        <label ref="jr:itext('/data/p_occupation/Ménagère:label')"/>
         <value>Ménagère</value>
       </item>
       <item>
-        <label>Commerçant</label>
+        <label ref="jr:itext('/data/p_occupation/Commerçant:label')"/>
         <value>Commerçant</value>
       </item>
       <item>
-        <label>Autre</label>
+        <label ref="jr:itext('/data/p_occupation/Autre:label')"/>
         <value>Autre</value>
       </item>
     </select1>
