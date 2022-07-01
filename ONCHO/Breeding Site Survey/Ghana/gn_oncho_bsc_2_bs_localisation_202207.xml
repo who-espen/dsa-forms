@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2022 July) - 1. Breeding Site Survey Form</h:title>
+    <model >
+
+      <instance>
+        <data id="gn_oncho_bsc_2_bs_localisation_202207">
+          <s_region/>
+          <s_district/>
+          <s_transmission_zonz/>
+          <s_gps/>
+          <s_village/>
+          <s_site/>
+          <s_site_id/>
+          <s_river/>
+          <s_collector_a/>
+          <s_collector_b/>
+          <s_date/>
+          <s_young_larvae/>
+          <s_old_larvae/>
+          <s_pupae/>
+          <s_cocoon/>
+          <s_other_species/>
+          <s_river_rock/>
+          <s_river_vegetation/>
+          <s_start/>
+          <s_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/s_region:label">
+            <value>Region</value>
+          </text>
+          <text id="/data/s_district:label">
+            <value>District</value>
+          </text>
+          <text id="/data/s_transmission_zonz:label">
+            <value>Transmission Zone</value>
+          </text>
+          <text id="/data/s_gps:label">
+            <value>Collectez les données GPS</value>
+          </text>
+          <text id="/data/s_gps:hint">
+            <value>Works best outside of buildings</value>
+          </text>
+          <text id="/data/s_village:label">
+            <value>Village Name</value>
+          </text>
+          <text id="/data/s_site:label">
+            <value>Breeding site</value>
+          </text>
+          <text id="/data/s_site_id:label">
+            <value>Site Code</value>
+          </text>
+          <text id="/data/s_river:label">
+            <value>River</value>
+          </text>
+          <text id="/data/s_collector_a:label">
+            <value>Name of Collector A</value>
+          </text>
+          <text id="/data/s_collector_b:label">
+            <value>Name of Collector B</value>
+          </text>
+          <text id="/data/s_date:label">
+            <value>Date</value>
+          </text>
+          <text id="/data/s_young_larvae:label">
+            <value>Young larvae - Simulium damnosum s.l.</value>
+          </text>
+          <text id="/data/s_young_larvae/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_young_larvae/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_old_larvae:label">
+            <value>Old Larvae - Simulium damnosum s.l.</value>
+          </text>
+          <text id="/data/s_old_larvae/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_old_larvae/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_pupae:label">
+            <value>Pupae - Simulium damnosum s.l.</value>
+          </text>
+          <text id="/data/s_pupae/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_pupae/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_cocoon:label">
+            <value>Empty coon - Simulium damnosum s.l.</value>
+          </text>
+          <text id="/data/s_cocoon/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_cocoon/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_other_species:label">
+            <value>Other species - Simulium damnosum s.l.</value>
+          </text>
+          <text id="/data/s_other_species/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_other_species/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_river_rock:label">
+            <value>River flow indicators - Presence of rocks</value>
+          </text>
+          <text id="/data/s_river_rock/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_river_rock/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_river_vegetation:label">
+            <value>River flow indicators - vegetation</value>
+          </text>
+          <text id="/data/s_river_vegetation/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_river_vegetation/No:label">
+            <value>No</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/s_region" required="true()" type="string"/>
+      <bind nodeset="/data/s_district" required="true()" type="string"/>
+      <bind nodeset="/data/s_transmission_zonz" required="true()" type="string"/>
+      <bind nodeset="/data/s_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/s_village" required="true()" type="string"/>
+      <bind nodeset="/data/s_site" required="true()" type="string"/>
+      <bind nodeset="/data/s_site_id" required="true()" type="string"/>
+      <bind nodeset="/data/s_river" required="true()" type="string"/>
+      <bind nodeset="/data/s_collector_a" required="true()" type="string"/>
+      <bind nodeset="/data/s_collector_b" required="true()" type="string"/>
+      <bind nodeset="/data/s_date" required="true()" type="date"/>
+      <bind nodeset="/data/s_young_larvae" required="true()" type="string"/>
+      <bind nodeset="/data/s_old_larvae" required="true()" type="string"/>
+      <bind nodeset="/data/s_pupae" required="true()" type="string"/>
+      <bind nodeset="/data/s_cocoon" required="true()" type="string"/>
+      <bind nodeset="/data/s_other_species" required="true()" type="string"/>
+      <bind nodeset="/data/s_river_rock" required="true()" type="string"/>
+      <bind nodeset="/data/s_river_vegetation" required="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/s_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/s_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/s_region">
+      <label ref="jr:itext('/data/s_region:label')"/>
+    </input>
+    <input ref="/data/s_district">
+      <label ref="jr:itext('/data/s_district:label')"/>
+    </input>
+    <input ref="/data/s_transmission_zonz">
+      <label ref="jr:itext('/data/s_transmission_zonz:label')"/>
+    </input>
+    <input ref="/data/s_gps">
+      <label ref="jr:itext('/data/s_gps:label')"/>
+      <hint ref="jr:itext('/data/s_gps:hint')"/>
+    </input>
+    <input ref="/data/s_village">
+      <label ref="jr:itext('/data/s_village:label')"/>
+    </input>
+    <input ref="/data/s_site">
+      <label ref="jr:itext('/data/s_site:label')"/>
+    </input>
+    <input ref="/data/s_site_id">
+      <label ref="jr:itext('/data/s_site_id:label')"/>
+    </input>
+    <input ref="/data/s_river">
+      <label ref="jr:itext('/data/s_river:label')"/>
+    </input>
+    <input ref="/data/s_collector_a">
+      <label ref="jr:itext('/data/s_collector_a:label')"/>
+    </input>
+    <input ref="/data/s_collector_b">
+      <label ref="jr:itext('/data/s_collector_b:label')"/>
+    </input>
+    <input ref="/data/s_date">
+      <label ref="jr:itext('/data/s_date:label')"/>
+    </input>
+    <select1 ref="/data/s_young_larvae">
+      <label ref="jr:itext('/data/s_young_larvae:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_young_larvae/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_young_larvae/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_old_larvae">
+      <label ref="jr:itext('/data/s_old_larvae:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_old_larvae/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_old_larvae/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_pupae">
+      <label ref="jr:itext('/data/s_pupae:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_pupae/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_pupae/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_cocoon">
+      <label ref="jr:itext('/data/s_cocoon:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_cocoon/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_cocoon/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_other_species">
+      <label ref="jr:itext('/data/s_other_species:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_other_species/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_other_species/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_river_rock">
+      <label ref="jr:itext('/data/s_river_rock:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_river_rock/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_river_rock/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_river_vegetation">
+      <label ref="jr:itext('/data/s_river_vegetation:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_river_vegetation/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_river_vegetation/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+  </h:body>
+</h:html>

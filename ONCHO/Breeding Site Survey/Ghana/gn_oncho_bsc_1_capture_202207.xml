@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2022 July) - 1. Coordinate Site</h:title>
+    <model>
+
+      <instance>
+        <data id="gn_oncho_bsc_1_capture_202207" >
+          <s_region/>
+          <s_district/>
+          <s_transmission_zonz/>
+          <s_gps/>
+          <s_village/>
+          <s_site/>
+          <s_site_id/>
+          <s_river/>
+          <s_collector_a/>
+          <s_collector_b/>
+          <s_date/>
+          <s_ jr:template="">
+            <add_fly/>
+            <time_interval/>
+            <nb_collected/>
+            <weather/>
+            <remark/>
+          </s_>
+          <s_start/>
+          <s_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/s_region:label">
+            <value>Region</value>
+          </text>
+          <text id="/data/s_district:label">
+            <value>District</value>
+          </text>
+          <text id="/data/s_transmission_zonz:label">
+            <value>Transmission Zone</value>
+          </text>
+          <text id="/data/s_gps:label">
+            <value>Collectez les données GPS</value>
+          </text>
+          <text id="/data/s_gps:hint">
+            <value>Works best outside of buildings</value>
+          </text>
+          <text id="/data/s_village:label">
+            <value>Village Name</value>
+          </text>
+          <text id="/data/s_site:label">
+            <value>Catching site</value>
+          </text>
+          <text id="/data/s_site_id:label">
+            <value>Site Code</value>
+          </text>
+          <text id="/data/s_river:label">
+            <value>River</value>
+          </text>
+          <text id="/data/s_collector_a:label">
+            <value>Name of Collector A</value>
+          </text>
+          <text id="/data/s_collector_b:label">
+            <value>Name of Collector B</value>
+          </text>
+          <text id="/data/s_date:label">
+            <value>Date</value>
+          </text>
+          <text id="/data/s_:label">
+            <value>Black flies collection</value>
+          </text>
+          <text id="/data/s_/add_fly:label">
+            <value>Do you want to add a capture</value>
+          </text>
+          <text id="/data/s_/add_fly/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_/add_fly/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_/time_interval:label">
+            <value>Hours</value>
+          </text>
+          <text id="/data/s_/time_interval/07:00 – 08:00:label">
+            <value>07:00 – 08:00</value>
+          </text>
+          <text id="/data/s_/time_interval/08:00 – 09:00:label">
+            <value>08:00 – 09:00</value>
+          </text>
+          <text id="/data/s_/time_interval/09:00 – 10:00:label">
+            <value>09:00 – 10:00</value>
+          </text>
+          <text id="/data/s_/time_interval/10:00 – 11:00:label">
+            <value>10:00 – 11:00</value>
+          </text>
+          <text id="/data/s_/time_interval/11:00 – 12:00:label">
+            <value>11:00 – 12:00</value>
+          </text>
+          <text id="/data/s_/time_interval/12:00 – 13:00:label">
+            <value>12:00 – 13:00</value>
+          </text>
+          <text id="/data/s_/time_interval/13:00 – 14:00:label">
+            <value>13:00 – 14:00</value>
+          </text>
+          <text id="/data/s_/time_interval/14:00 – 15:00:label">
+            <value>14:00 – 15:00</value>
+          </text>
+          <text id="/data/s_/time_interval/15:00 – 16:00:label">
+            <value>15:00 – 16:00</value>
+          </text>
+          <text id="/data/s_/time_interval/16:00 – 17:00:label">
+            <value>16:00 – 17:00</value>
+          </text>
+          <text id="/data/s_/time_interval/17:00 – 18:00:label">
+            <value>17:00 – 18:00</value>
+          </text>
+          <text id="/data/s_/nb_collected:label">
+            <value>Nomber of blackflies collected</value>
+          </text>
+          <text id="/data/s_/weather:label">
+            <value>Weather condition</value>
+          </text>
+          <text id="/data/s_/weather/Sunny:label">
+            <value>Sunny</value>
+          </text>
+          <text id="/data/s_/weather/Rainy:label">
+            <value>Rainy</value>
+          </text>
+          <text id="/data/s_/weather/Cloudy:label">
+            <value>Cloudy</value>
+          </text>
+          <text id="/data/s_/weather/Windy:label">
+            <value>Windy</value>
+          </text>
+          <text id="/data/s_/remark:label">
+            <value>remark</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/s_region" required="true()" type="string"/>
+      <bind nodeset="/data/s_district" required="true()" type="string"/>
+      <bind nodeset="/data/s_transmission_zonz" required="true()" type="string"/>
+      <bind nodeset="/data/s_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/s_village" required="true()" type="string"/>
+      <bind nodeset="/data/s_site" required="true()" type="string"/>
+      <bind nodeset="/data/s_site_id" required="true()" type="string"/>
+      <bind nodeset="/data/s_river" required="true()" type="string"/>
+      <bind nodeset="/data/s_collector_a" required="true()" type="string"/>
+      <bind nodeset="/data/s_collector_b" required="true()" type="string"/>
+      <bind nodeset="/data/s_date" required="true()" type="date"/>
+      <bind nodeset="/data/s_/add_fly" required="true()" type="select1"/>
+      <bind nodeset="/data/s_/time_interval" relevant=" ../add_fly  = &quot;Yes&quot;" required="true()" type="select1"/>
+      <bind nodeset="/data/s_/nb_collected" relevant=" ../add_fly  = &quot;Yes&quot;" required="true()" type="int"/>
+      <bind nodeset="/data/s_/weather" relevant=" ../add_fly  = &quot;Yes&quot;" required="true()" type="select1"/>
+      <bind nodeset="/data/s_/remark" relevant=" ../add_fly  = &quot;Yes&quot;" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/s_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/s_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/s_region">
+      <label ref="jr:itext('/data/s_region:label')"/>
+    </input>
+    <input ref="/data/s_district">
+      <label ref="jr:itext('/data/s_district:label')"/>
+    </input>
+    <input ref="/data/s_transmission_zonz">
+      <label ref="jr:itext('/data/s_transmission_zonz:label')"/>
+    </input>
+    <input ref="/data/s_gps">
+      <label ref="jr:itext('/data/s_gps:label')"/>
+      <hint ref="jr:itext('/data/s_gps:hint')"/>
+    </input>
+    <input ref="/data/s_village">
+      <label ref="jr:itext('/data/s_village:label')"/>
+    </input>
+    <input ref="/data/s_site">
+      <label ref="jr:itext('/data/s_site:label')"/>
+    </input>
+    <input ref="/data/s_site_id">
+      <label ref="jr:itext('/data/s_site_id:label')"/>
+    </input>
+    <input ref="/data/s_river">
+      <label ref="jr:itext('/data/s_river:label')"/>
+    </input>
+    <input ref="/data/s_collector_a">
+      <label ref="jr:itext('/data/s_collector_a:label')"/>
+    </input>
+    <input ref="/data/s_collector_b">
+      <label ref="jr:itext('/data/s_collector_b:label')"/>
+    </input>
+    <input ref="/data/s_date">
+      <label ref="jr:itext('/data/s_date:label')"/>
+    </input>
+    <group ref="/data/s_">
+      <label ref="jr:itext('/data/s_:label')"/>
+      <repeat nodeset="/data/s_">
+        <select1 ref="/data/s_/add_fly">
+          <label ref="jr:itext('/data/s_/add_fly:label')"/>
+          <item>
+            <label ref="jr:itext('/data/s_/add_fly/Yes:label')"/>
+            <value>Yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/add_fly/No:label')"/>
+            <value>No</value>
+          </item>
+        </select1>
+        <select1 ref="/data/s_/time_interval">
+          <label ref="jr:itext('/data/s_/time_interval:label')"/>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/07:00 – 08:00:label')"/>
+            <value>07:00 – 08:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/08:00 – 09:00:label')"/>
+            <value>08:00 – 09:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/09:00 – 10:00:label')"/>
+            <value>09:00 – 10:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/10:00 – 11:00:label')"/>
+            <value>10:00 – 11:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/11:00 – 12:00:label')"/>
+            <value>11:00 – 12:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/12:00 – 13:00:label')"/>
+            <value>12:00 – 13:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/13:00 – 14:00:label')"/>
+            <value>13:00 – 14:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/14:00 – 15:00:label')"/>
+            <value>14:00 – 15:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/15:00 – 16:00:label')"/>
+            <value>15:00 – 16:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/16:00 – 17:00:label')"/>
+            <value>16:00 – 17:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/time_interval/17:00 – 18:00:label')"/>
+            <value>17:00 – 18:00</value>
+          </item>
+        </select1>
+        <input ref="/data/s_/nb_collected">
+          <label ref="jr:itext('/data/s_/nb_collected:label')"/>
+        </input>
+        <select1 ref="/data/s_/weather">
+          <label ref="jr:itext('/data/s_/weather:label')"/>
+          <item>
+            <label ref="jr:itext('/data/s_/weather/Sunny:label')"/>
+            <value>Sunny</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/weather/Rainy:label')"/>
+            <value>Rainy</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/weather/Cloudy:label')"/>
+            <value>Cloudy</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/s_/weather/Windy:label')"/>
+            <value>Windy</value>
+          </item>
+        </select1>
+        <input ref="/data/s_/remark">
+          <label ref="jr:itext('/data/s_/remark:label')"/>
+        </input>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>
