@@ -1,0 +1,663 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2022 Juil) CEO - 1. Participant V2</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/c_recorder_id:jr:constraintMsg">
+            <value>Doit être entre 10 et 99 compris</value>
+          </text>
+          <text id="/data/c_recorder_id:label">
+            <value>Entrer le numéro de l'enregistreur</value>
+          </text>
+          <text id="/data/c_recorder_id:hint">
+            <value>Code à 2 chiffres qui vous est attribué</value>
+          </text>
+          <text id="/data/c_region:label">
+            <value>Sélectionner le département</value>
+          </text>
+          <text id="/data/c_region/Bouenza:label">
+            <value>Bouenza</value>
+          </text>
+          <text id="/data/c_region/Lékoumou:label">
+            <value>Lékoumou</value>
+          </text>
+          <text id="/data/c_region/Niari:label">
+            <value>Niari</value>
+          </text>
+          <text id="/data/c_region/Pool:label">
+            <value>Pool</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Entrer le nom du site/village</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>Doit être entre 100 et 999 compris</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Entrer le code du site</value>
+          </text>
+          <text id="/data/c_gps_method:label">
+            <value>Comment sera capturé le GPS</value>
+          </text>
+          <text id="/data/c_gps_method/Manuel:label">
+            <value>Manuel</value>
+          </text>
+          <text id="/data/c_gps_method/Automatique:label">
+            <value>Automatique</value>
+          </text>
+          <text id="/data/c_GPS:label">
+            <value>Veuillez capturer le GPS</value>
+          </text>
+          <text id="/data/c_GPS:hint">
+            <value>Fonctionne mieux à l'extérieur de tout batiment</value>
+          </text>
+          <text id="/data/c_lat:label">
+            <value>Latitude</value>
+          </text>
+          <text id="/data/c_lng:label">
+            <value>Longitude</value>
+          </text>
+          <text id="/data/c_date:label">
+            <value>Date prélèvement</value>
+          </text>
+          <text id="/data/c_:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/c_/add_participant:label">
+            <value>Voulez-vous ajouter un nouveau participant?</value>
+          </text>
+          <text id="/data/c_/add_participant/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_/add_participant/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_/consent:label">
+            <value>Le participant a-t-il donné son consentement ?</value>
+          </text>
+          <text id="/data/c_/consent/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_/consent/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_/sex:label">
+            <value>Veuillez sélectionner le sexe</value>
+          </text>
+          <text id="/data/c_/sex/Masculin:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/c_/sex/Féminin:label">
+            <value>Féminin</value>
+          </text>
+          <text id="/data/c_/ID_method:label">
+            <value>How will the individual's unique ID be generated?</value>
+          </text>
+          <text id="/data/c_/ID_method/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/c_/ID_method/Automatique:label">
+            <value>Automatique</value>
+          </text>
+          <text id="/data/c_/BarcodeID:label">
+            <value>Veuillez scanner le QR code</value>
+          </text>
+          <text id="/data/c_/GenerateID:label">
+            <value>Veuillez enregistrer le code d'identification unique suivant pour le répondant sur une liste distincte et sur chaque test de diagnostic administré</value>
+          </text>
+          <text id="/data/c_/age_yrs:jr:constraintMsg">
+            <value>L'âge doit être compris entre 5 et 9 ans</value>
+          </text>
+          <text id="/data/c_/age_yrs:label">
+            <value>Veuillez entrer l'âge du participant</value>
+          </text>
+          <text id="/data/c_/age_yrs:hint">
+            <value>Doit être entre 5 et 9 ans</value>
+          </text>
+          <text id="/data/c_/dbs_collected:label">
+            <value>Collecte de DBS chez les enfants 5-9 ans</value>
+          </text>
+          <text id="/data/c_/dbs_collected/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_/dbs_collected/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_/is_natif:label">
+            <value>La participation est-il originaire du village (né au village) ou migrant (n'est pas née au village et est venu s'installer)</value>
+          </text>
+          <text id="/data/c_/is_natif/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_/is_natif/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_/origine:jr:constraintMsg">
+            <value>La valeur ne doit pas dépasser l'année de naissance</value>
+          </text>
+          <text id="/data/c_/origine:label">
+            <value>Village d'origine</value>
+          </text>
+          <text id="/data/c_/yrs_arriving:label">
+            <value>Année d'arrivée dans le village</value>
+          </text>
+          <text id="/data/c_/ending_survey_note:label">
+            <value>Vous venez d'entrer une valeur qui mettra fin à l'enquête.</value>
+          </text>
+          <text id="/data/c_/AdditionalNotes:label">
+            <value>Notes additionnelles</value>
+          </text>
+          <text id="/data/c_cluster_notes:label">
+            <value>Notes additionnelles</value>
+          </text>
+          <text id="ID_method-0">
+            <value>Scanner</value>
+          </text>
+          <text id="ID_method-1">
+            <value>Automatique</value>
+          </text>
+          <text id="gps_method-0">
+            <value>Manuel</value>
+          </text>
+          <text id="gps_method-1">
+            <value>Automatique</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Oui</value>
+          </text>
+          <text id="yes_no-1">
+            <value>Non</value>
+          </text>
+          <text id="sex-0">
+            <value>Masculin</value>
+          </text>
+          <text id="sex-1">
+            <value>Féminin</value>
+          </text>
+          <text id="region_list-0">
+            <value>Bouenza</value>
+          </text>
+          <text id="region_list-1">
+            <value>Lékoumou</value>
+          </text>
+          <text id="region_list-2">
+            <value>Niari</value>
+          </text>
+          <text id="region_list-3">
+            <value>Pool</value>
+          </text>
+          <text id="district_list-0">
+            <value>Loudima</value>
+          </text>
+          <text id="district_list-1">
+            <value>Loutété</value>
+          </text>
+          <text id="district_list-2">
+            <value>Madingou</value>
+          </text>
+          <text id="district_list-3">
+            <value>Mouyondzi</value>
+          </text>
+          <text id="district_list-4">
+            <value>Nkayi</value>
+          </text>
+          <text id="district_list-5">
+            <value>Sibiti</value>
+          </text>
+          <text id="district_list-6">
+            <value>Zanaga</value>
+          </text>
+          <text id="district_list-7">
+            <value>Dolisie</value>
+          </text>
+          <text id="district_list-8">
+            <value>Kibangou</value>
+          </text>
+          <text id="district_list-9">
+            <value>Kimongo-Londela Nkayes</value>
+          </text>
+          <text id="district_list-10">
+            <value>Mayoko</value>
+          </text>
+          <text id="district_list-11">
+            <value>Mossendjo</value>
+          </text>
+          <text id="district_list-12">
+            <value>Boko</value>
+          </text>
+          <text id="district_list-13">
+            <value>Goma tsétsé</value>
+          </text>
+          <text id="district_list-14">
+            <value>Ignié</value>
+          </text>
+          <text id="district_list-15">
+            <value>Kindamba</value>
+          </text>
+          <text id="district_list-16">
+            <value>Kinkala</value>
+          </text>
+          <text id="district_list-17">
+            <value>Kintélé</value>
+          </text>
+          <text id="district_list-18">
+            <value>Mindouli</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data id="cg_oncho_oem_1_site_participant_202207_v2">
+          <c_recorder_id/>
+          <c_region/>
+          <c_district/>
+          <c_cluster_name/>
+          <c_cluster_id/>
+          <c_gps_method/>
+          <c_GPS/>
+          <c_lat/>
+          <c_lng/>
+          <c_date/>
+          <c_ jr:template="">
+            <add_participant/>
+            <consent/>
+            <sex/>
+            <ID_method/>
+            <BarcodeID/>
+            <GenerateID/>
+            <age_yrs/>
+            <dbs_collected/>
+            <is_natif/>
+            <origine/>
+            <yrs_arriving/>
+            <ending_survey_note/>
+            <AdditionalNotes/>
+          </c_>
+          <c_>
+            <add_participant/>
+            <consent/>
+            <sex/>
+            <ID_method/>
+            <BarcodeID/>
+            <GenerateID/>
+            <age_yrs/>
+            <dbs_collected/>
+            <is_natif/>
+            <origine/>
+            <yrs_arriving/>
+            <ending_survey_note/>
+            <AdditionalNotes/>
+          </c_>
+          <c_cluster_notes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="ID_method">
+        <root>
+          <item>
+            <itextId>ID_method-0</itextId>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <itextId>ID_method-1</itextId>
+            <name>Automatique</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="gps_method">
+        <root>
+          <item>
+            <itextId>gps_method-0</itextId>
+            <name>Manuel</name>
+          </item>
+          <item>
+            <itextId>gps_method-1</itextId>
+            <name>Automatique</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Oui</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>Non</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sex">
+        <root>
+          <item>
+            <itextId>sex-0</itextId>
+            <name>Masculin</name>
+          </item>
+          <item>
+            <itextId>sex-1</itextId>
+            <name>Féminin</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <itextId>region_list-0</itextId>
+            <name>Bouenza</name>
+          </item>
+          <item>
+            <itextId>region_list-1</itextId>
+            <name>Lékoumou</name>
+          </item>
+          <item>
+            <itextId>region_list-2</itextId>
+            <name>Niari</name>
+          </item>
+          <item>
+            <itextId>region_list-3</itextId>
+            <name>Pool</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>Loudima</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>Loutété</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>Madingou</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <itextId>district_list-3</itextId>
+            <name>Mouyondzi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <itextId>district_list-4</itextId>
+            <name>Nkayi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <itextId>district_list-5</itextId>
+            <name>Sibiti</name>
+            <region_list>Lékoumou</region_list>
+          </item>
+          <item>
+            <itextId>district_list-6</itextId>
+            <name>Zanaga</name>
+            <region_list>Lékoumou</region_list>
+          </item>
+          <item>
+            <itextId>district_list-7</itextId>
+            <name>Dolisie</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <itextId>district_list-8</itextId>
+            <name>Kibangou</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <itextId>district_list-9</itextId>
+            <name>Kimongo-Londela Nkayes</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <itextId>district_list-10</itextId>
+            <name>Mayoko</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <itextId>district_list-11</itextId>
+            <name>Mossendjo</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <itextId>district_list-12</itextId>
+            <name>Boko</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-13</itextId>
+            <name>Goma tsétsé</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-14</itextId>
+            <name>Ignié</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-15</itextId>
+            <name>Kindamba</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-16</itextId>
+            <name>Kinkala</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-17</itextId>
+            <name>Kintélé</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-18</itextId>
+            <name>Mindouli</name>
+            <region_list>Pool</region_list>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/c_region" required="true()" type="string"/>
+      <bind nodeset="/data/c_district" required="true()" type="string"/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string"/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="int"/>
+      <bind nodeset="/data/c_gps_method" required="true()" type="string"/>
+      <bind nodeset="/data/c_GPS" relevant=" /data/c_gps_method  = 'Automatique'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_lat" relevant=" /data/c_gps_method != 'Automatique'" required="true()" type="string"/>
+      <bind nodeset="/data/c_lng" relevant=" /data/c_gps_method != 'Automatique'" required="true()" type="string"/>
+      <bind nodeset="/data/c_date" required="true()" type="date"/>
+      <bind nodeset="/data/c_/add_participant" required="true()" type="string"/>
+      <bind nodeset="/data/c_/consent" relevant=" ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/c_/sex" relevant=" ../consent  = 'Oui' and  ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/c_/ID_method" relevant=" ../consent  = 'Oui' and  ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/c_/BarcodeID" relevant=" ../consent  = 'Oui' and  ../ID_method  = 'Scanner' and  ../add_participant  = 'Oui'" required="true()" type="barcode"/>
+      <bind nodeset="/data/c_/GenerateID" relevant=" ../consent  = 'Oui' and  ../ID_method  = 'Automatique' and  ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/c_/age_yrs:jr:constraintMsg')" nodeset="/data/c_/age_yrs" relevant=" ../consent  = 'Oui' and  ../add_participant  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/c_/dbs_collected" relevant=" ../consent  = 'Oui' and  ../age_yrs &gt;= 5 and  ../age_yrs &lt;= 9 and  ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/c_/is_natif" relevant=" ../consent  = 'Oui' and  ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind jr:constraintMsg="jr:itext('/data/c_/origine:jr:constraintMsg')" nodeset="/data/c_/origine" relevant=" ../consent  = 'Oui' and  ../is_natif  = 'Non' and  ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/c_/yrs_arriving" relevant=" ../consent  = 'Oui' and  ../is_natif  = 'Non' and  ../add_participant  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/c_/ending_survey_note" readonly="true()" relevant=" ../consent  = 'Non'" required="true()" type="string"/>
+      <bind nodeset="/data/c_/AdditionalNotes" relevant=" ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/c_cluster_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder_id">
+      <label ref="jr:itext('/data/c_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/c_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/c_region">
+      <label ref="jr:itext('/data/c_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_region/Bouenza:label')"/>
+        <value>Bouenza</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/Lékoumou:label')"/>
+        <value>Lékoumou</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/Niari:label')"/>
+        <value>Niari</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/Pool:label')"/>
+        <value>Pool</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[region_list =  /data/c_region ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+    </input>
+    <input ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+    </input>
+    <select1 ref="/data/c_gps_method">
+      <label ref="jr:itext('/data/c_gps_method:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_gps_method/Manuel:label')"/>
+        <value>Manuel</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_gps_method/Automatique:label')"/>
+        <value>Automatique</value>
+      </item>
+    </select1>
+    <input ref="/data/c_GPS">
+      <label ref="jr:itext('/data/c_GPS:label')"/>
+      <hint ref="jr:itext('/data/c_GPS:hint')"/>
+    </input>
+    <input ref="/data/c_lat">
+      <label ref="jr:itext('/data/c_lat:label')"/>
+    </input>
+    <input ref="/data/c_lng">
+      <label ref="jr:itext('/data/c_lng:label')"/>
+    </input>
+    <input ref="/data/c_date">
+      <label ref="jr:itext('/data/c_date:label')"/>
+    </input>
+    <group ref="/data/c_">
+      <label ref="jr:itext('/data/c_:label')"/>
+      <repeat nodeset="/data/c_">
+        <select1 ref="/data/c_/add_participant">
+          <label ref="jr:itext('/data/c_/add_participant:label')"/>
+          <item>
+            <label ref="jr:itext('/data/c_/add_participant/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/c_/add_participant/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <select1 ref="/data/c_/consent">
+          <label ref="jr:itext('/data/c_/consent:label')"/>
+          <item>
+            <label ref="jr:itext('/data/c_/consent/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/c_/consent/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <select1 ref="/data/c_/sex">
+          <label ref="jr:itext('/data/c_/sex:label')"/>
+          <item>
+            <label ref="jr:itext('/data/c_/sex/Masculin:label')"/>
+            <value>Masculin</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/c_/sex/Féminin:label')"/>
+            <value>Féminin</value>
+          </item>
+        </select1>
+        <select1 ref="/data/c_/ID_method">
+          <label ref="jr:itext('/data/c_/ID_method:label')"/>
+          <item>
+            <label ref="jr:itext('/data/c_/ID_method/Scanner:label')"/>
+            <value>Scanner</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/c_/ID_method/Automatique:label')"/>
+            <value>Automatique</value>
+          </item>
+        </select1>
+        <input ref="/data/c_/BarcodeID">
+          <label ref="jr:itext('/data/c_/BarcodeID:label')"/>
+        </input>
+        <input ref="/data/c_/GenerateID">
+          <label ref="jr:itext('/data/c_/GenerateID:label')"/>
+        </input>
+        <input ref="/data/c_/age_yrs">
+          <label ref="jr:itext('/data/c_/age_yrs:label')"/>
+          <hint ref="jr:itext('/data/c_/age_yrs:hint')"/>
+        </input>
+        <select1 ref="/data/c_/dbs_collected">
+          <label ref="jr:itext('/data/c_/dbs_collected:label')"/>
+          <item>
+            <label ref="jr:itext('/data/c_/dbs_collected/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/c_/dbs_collected/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <select1 ref="/data/c_/is_natif">
+          <label ref="jr:itext('/data/c_/is_natif:label')"/>
+          <item>
+            <label ref="jr:itext('/data/c_/is_natif/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/c_/is_natif/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <input ref="/data/c_/origine">
+          <label ref="jr:itext('/data/c_/origine:label')"/>
+        </input>
+        <input ref="/data/c_/yrs_arriving">
+          <label ref="jr:itext('/data/c_/yrs_arriving:label')"/>
+        </input>
+        <input ref="/data/c_/ending_survey_note">
+          <label ref="jr:itext('/data/c_/ending_survey_note:label')"/>
+        </input>
+        <input ref="/data/c_/AdditionalNotes">
+          <label ref="jr:itext('/data/c_/AdditionalNotes:label')"/>
+        </input>
+      </repeat>
+    </group>
+    <input ref="/data/c_cluster_notes">
+      <label ref="jr:itext('/data/c_cluster_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
