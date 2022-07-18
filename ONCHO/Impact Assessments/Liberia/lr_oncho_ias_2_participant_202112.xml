@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(July 2022) IAS - 2. Participant Form V2</h:title>
+    <h:title>(July 2022) IAS - 2. Participant Form V2.1</h:title>
     <model >
 
       <instance>
-        <data id="lr_oncho_ias_2_participant_202112_v2">
+        <data id="lr_oncho_ias_2_participant_202112_v2_1">
           <p_recorder_id/>
           <p_district/>
           <p_cluster_name/>
@@ -43,14 +43,65 @@
 
       <itext>
         <translation lang="English">
-          <text id="/data/p_recorder_id:jr:constraintMsg">
-            <value>Must be between 10 and 99 included</value>
-          </text>
           <text id="/data/p_recorder_id:label">
             <value>Recorder ID</value>
           </text>
           <text id="/data/p_recorder_id:hint">
             <value>2-digit code assigned to you</value>
+          </text>
+          <text id="/data/p_recorder_id/61:label">
+            <value>Alexlyn Monluo (61)</value>
+          </text>
+          <text id="/data/p_recorder_id/62:label">
+            <value>Jallah Gobeh (62)</value>
+          </text>
+          <text id="/data/p_recorder_id/63:label">
+            <value>Vivian Doedeh (63)</value>
+          </text>
+          <text id="/data/p_recorder_id/64:label">
+            <value>Emmanuel Pelham (64)</value>
+          </text>
+          <text id="/data/p_recorder_id/65:label">
+            <value>Larry Gee (65)</value>
+          </text>
+          <text id="/data/p_recorder_id/66:label">
+            <value>Habakkuk Garphen (66)</value>
+          </text>
+          <text id="/data/p_recorder_id/67:label">
+            <value>Youngor Kollie (67)</value>
+          </text>
+          <text id="/data/p_recorder_id/68:label">
+            <value>Life Kolako (68)</value>
+          </text>
+          <text id="/data/p_recorder_id/69:label">
+            <value>Anthony Bettee (69)</value>
+          </text>
+          <text id="/data/p_recorder_id/70:label">
+            <value>James Yanquoi (70)</value>
+          </text>
+          <text id="/data/p_recorder_id/71:label">
+            <value>Isaac Gbewo (71)</value>
+          </text>
+          <text id="/data/p_recorder_id/72:label">
+            <value>Alice T. Korleh (72)</value>
+          </text>
+          <text id="/data/p_recorder_id/73:label">
+            <value>Tarlo Bakai (73)</value>
+          </text>
+          <text id="/data/p_recorder_id/83:label">
+            <value>Sonnie Ziama Gbewo (83)</value>
+          </text>
+          <text id="/data/p_recorder_id/84:label">
+            <value>Karsor Kollie (84)</value>
+          </text>
+          <text id="/data/p_recorder_id/85:label">
+            <value>Partrick Ndongmo (85)</value>
+          </text>
+          <text id="/data/p_recorder_id/86:label">
+            <value>Anthony Tamba (86)</value>
+          </text>
+          <text id="/data/p_recorder_id/87:label">
+            <value>Gar Gargannah (87)</value>
           </text>
           <text id="/data/p_district:label">
             <value>Select district</value>
@@ -184,7 +235,7 @@
         </translation>
       </itext>
 
-      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/p_recorder_id" required="true()" type="string"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
       <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
@@ -210,10 +261,82 @@
     </model>
   </h:head>
   <h:body>
-    <input ref="/data/p_recorder_id">
+    <select1 ref="/data/p_recorder_id">
       <label ref="jr:itext('/data/p_recorder_id:label')"/>
       <hint ref="jr:itext('/data/p_recorder_id:hint')"/>
-    </input>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/61:label')"/>
+        <value>61</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/62:label')"/>
+        <value>62</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/63:label')"/>
+        <value>63</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/64:label')"/>
+        <value>64</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/65:label')"/>
+        <value>65</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/66:label')"/>
+        <value>66</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/67:label')"/>
+        <value>67</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/68:label')"/>
+        <value>68</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/69:label')"/>
+        <value>69</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/70:label')"/>
+        <value>70</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/71:label')"/>
+        <value>71</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/72:label')"/>
+        <value>72</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/73:label')"/>
+        <value>73</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/83:label')"/>
+        <value>83</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/84:label')"/>
+        <value>84</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/85:label')"/>
+        <value>85</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/86:label')"/>
+        <value>86</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recorder_id/87:label')"/>
+        <value>87</value>
+      </item>
+    </select1>
     <input ref="/data/p_district">
       <label ref="jr:itext('/data/p_district:label')"/>
     </input>
