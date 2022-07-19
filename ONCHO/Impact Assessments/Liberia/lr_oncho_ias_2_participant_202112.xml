@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(July 2022) IAS - 2. Participant Form V2.1</h:title>
+    <h:title>(July 2022) IAS - 2. Participant Form V2.2</h:title>
     <model >
 
       <instance>
-        <data id="lr_oncho_ias_2_participant_202112_v2_1">
+        <data id="lr_oncho_ias_2_participant_202112_v2_2">
           <p_recorder_id/>
           <p_district/>
           <p_cluster_name/>
@@ -160,6 +160,9 @@
           <text id="/data/p_ever_taken_ivm/No:label">
             <value>No</value>
           </text>
+          <text id="/data/p_times_took_ivm:jr:constraintMsg">
+            <value>The value must be between 1 and 5</value>
+          </text>
           <text id="/data/p_times_took_ivm:label">
             <value>How many times have you taken Mectizan?</value>
           </text>
@@ -245,10 +248,10 @@
       <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_accent  = 'Given' and  /data/p_consent  = 'Given'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long:jr:constraintMsg')" nodeset="/data/p_how_long" relevant=" /data/p_accent  = 'Given' and  /data/p_consent  = 'Given'" required="true()" type="int"/>
       <bind nodeset="/data/p_ever_taken_ivm" relevant=" /data/p_accent  = 'Given' and  /data/p_consent  = 'Given'" required="true()" type="string"/>
-      <bind nodeset="/data/p_times_took_ivm" relevant=" /data/p_accent  = 'Given' and  /data/p_consent  = 'Given' and  /data/p_ever_taken_ivm  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 1 and . &lt;= 5" jr:constraintMsg="jr:itext('/data/p_times_took_ivm:jr:constraintMsg')" nodeset="/data/p_times_took_ivm" relevant=" /data/p_accent  = 'Given' and  /data/p_consent  = 'Given' and  /data/p_ever_taken_ivm  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/p_ivm" relevant=" /data/p_accent  = 'Given' and  /data/p_consent  = 'Given' and  /data/p_ever_taken_ivm  = 'Yes'"/>
       <bind nodeset="/data/p_ivm/last_time_month" required="true()" type="string"/>
-      <bind constraint=". &gt;= 1970 and . &lt; 2022" jr:constraintMsg="jr:itext('/data/p_ivm/last_time_year:jr:constraintMsg')" nodeset="/data/p_ivm/last_time_year" required="true()" type="int"/>
+      <bind constraint=". &gt;= 1970 and . &lt;= 2022" jr:constraintMsg="jr:itext('/data/p_ivm/last_time_year:jr:constraintMsg')" nodeset="/data/p_ivm/last_time_year" required="true()" type="int"/>
       <bind nodeset="/data/p_ID_method" relevant=" /data/p_accent  = 'Given' and  /data/p_consent  = 'Given'" required="true()" type="string"/>
       <bind nodeset="/data/p_Barcode_ID" relevant=" /data/p_ID_method  = 'Scanner'" required="true()" type="barcode"/>
       <bind nodeset="/data/p_Generate_ID" calculate="concat( /data/p_recorder_id ,'-', /data/p_cluster_id ,'-', /data/meta/randomnum)" readonly="true()" relevant=" /data/p_ID_method  = 'Auto generate'" required="true()" type="string"/>
