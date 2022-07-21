@@ -16,8 +16,6 @@
           <d_district/>
           <d_cluster_name/>
           <d_cluster_id/>
-          <d_num/>
-          <d_num2/>
           <d_code_id/>
           <d_lotnumber1/>
           <d_result1/>
@@ -62,26 +60,8 @@
           <text id="/data/d_cluster_id:label">
             <value>Select your site code</value>
           </text>
-          <text id="/data/d_num:jr:constraintMsg">
-            <value>The value must be between 1 and 410</value>
-          </text>
-          <text id="/data/d_num:label">
-            <value>Enter the order number</value>
-          </text>
-          <text id="/data/d_num:hint">
-            <value>Must be between 1 and 500</value>
-          </text>
-          <text id="/data/d_num2:jr:constraintMsg">
-            <value>The order number must be the same</value>
-          </text>
-          <text id="/data/d_num2:label">
-            <value>Repeat order number</value>
-          </text>
-          <text id="/data/d_num2:hint">
-            <value>Must be between 1 and 500</value>
-          </text>
           <text id="/data/d_code_id:jr:constraintMsg">
-            <value>The format should be ABC-123-1234-567. Just the second and third part of the code</value>
+            <value>The format should be 123-1234-567.</value>
           </text>
           <text id="/data/d_code_id:label">
             <value>Enter unique ID from the diagnostic test</value>
@@ -216,26 +196,9 @@
           <text id="/data/d_cluster_id:label">
             <value>Sélectionner le code du site</value>
           </text>
-          <text id="/data/d_num:jr:constraintMsg">
-            <value>La valeur doit être compris entre 1 et 410</value>
-          </text>
-          <text id="/data/d_num:label">
-            <value>Numéro d'ordre</value>
-          </text>
-          <text id="/data/d_num:hint">
-            <value>Doit être compris entre 1 et 500</value>
-          </text>
-          <text id="/data/d_num2:jr:constraintMsg">
-            <value>Le numéro d'ordre doit être le même</value>
-          </text>
-          <text id="/data/d_num2:label">
-            <value>Répéter le numéro d'ordre</value>
-          </text>
-          <text id="/data/d_num2:hint">
-            <value>Doit être compris entre 1 et 500</value>
-          </text>
+
           <text id="/data/d_code_id:jr:constraintMsg">
-            <value>Le format doit être ABC-123-1234-567. Juste la deuxième et la troisième partie du code</value>
+            <value>Le format doit être 123-1234-567</value>
           </text>
           <text id="/data/d_code_id:label">
             <value>Entrer le code d'identification unique du test de diagnostic</value>
@@ -355,11 +318,9 @@
 
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/d_recorderID:jr:constraintMsg')" nodeset="/data/d_recorderID" required="true()" type="int"/>
       <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
-      <bind nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
-      <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
-      <bind constraint=". =  /data/d_num " jr:constraintMsg="jr:itext('/data/d_num2:jr:constraintMsg')" nodeset="/data/d_num2" required="true()" type="int"/>
-      <bind calculate="concat( /data/d_cluster_id , '-' , /data/d_num )" constraint="regex(.,'^[A-Z]{3}-[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_code_id:jr:constraintMsg')" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"  db_get="col_4" db_filter_by_col_3="/data/d_cluster_id"/>
+      <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_district"/>
+      <bind nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_cluster_name"/>
+      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_code_id:jr:constraintMsg')" nodeset="/data/d_code_id" required="true()" type="string"  db_get="col_4" db_filter_by_col_3="/data/d_cluster_id"/>
       <bind constraint="regex(.,'^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_lotnumber1:jr:constraintMsg')" nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalid'" required="true()" type="string"/>
@@ -404,14 +365,7 @@
     <input ref="/data/d_cluster_id">
       <label ref="jr:itext('/data/d_cluster_id:label')"/>
     </input>
-    <input ref="/data/d_num">
-      <label ref="jr:itext('/data/d_num:label')"/>
-      <hint ref="jr:itext('/data/d_num:hint')"/>
-    </input>
-    <input ref="/data/d_num2">
-      <label ref="jr:itext('/data/d_num2:label')"/>
-      <hint ref="jr:itext('/data/d_num2:hint')"/>
-    </input>
+    
     <input ref="/data/d_code_id">
       <label ref="jr:itext('/data/d_code_id:label')"/>
     </input>

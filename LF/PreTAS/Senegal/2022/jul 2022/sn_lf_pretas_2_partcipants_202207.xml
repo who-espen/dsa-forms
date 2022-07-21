@@ -17,7 +17,6 @@
           <p_cluster_name/>
           <p_cluster_id/>
           <p_consent/>
-          <p_num/>
           <p_sex/>
           <p_age_yrs/>
           <p_how_long_lived/>
@@ -61,15 +60,6 @@
           </text>
           <text id="/data/p_consent/Non:label">
             <value>No</value>
-          </text>
-          <text id="/data/p_num:jr:constraintMsg">
-            <value>The value must be between 1 and 410</value>
-          </text>
-          <text id="/data/p_num:label">
-            <value>Enter the order number</value>
-          </text>
-          <text id="/data/p_num:hint">
-            <value>Must be between 1 and 410</value>
           </text>
           <text id="/data/p_sex:label">
             <value>Sex of respondent</value>
@@ -130,15 +120,7 @@
           <text id="/data/p_consent/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/p_num:jr:constraintMsg">
-            <value>La valeur doit être compris entre 1 et 410</value>
-          </text>
-          <text id="/data/p_num:label">
-            <value>Numéro d'ordre</value>
-          </text>
-          <text id="/data/p_num:hint">
-            <value>Doit être compris entre 1 et 410</value>
-          </text>
+
           <text id="/data/p_sex:label">
             <value>Sexe du participant</value>
           </text>
@@ -177,18 +159,17 @@
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
       <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
-      <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind constraint=". &gt; 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
-      <bind calculate="concat( substr(/data/p_cluster_name,0,2) ,'-',/data/p_cluster_id ,'-',/data/meta/randomnum)" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string" db_add_col_3="/data/p_cluster_id" db_add_col_4="."/>
+      <bind calculate="concat(/data/p_cluster_id ,'-',/data/meta/randomnum)" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string" db_add_col_3="/data/p_cluster_id" db_add_col_4="."/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Non'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
       <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,7), '-', substr(random(),10,13))"/>
-    </model>
+     </model>
   </h:head>
   <h:body>
     <input ref="/data/p_recorderID">
@@ -215,10 +196,7 @@
         <value>Non</value>
       </item>
     </select1>
-    <input ref="/data/p_num">
-      <label ref="jr:itext('/data/p_num:label')"/>
-      <hint ref="jr:itext('/data/p_num:hint')"/>
-    </input>
+
     <select1 ref="/data/p_sex">
       <label ref="jr:itext('/data/p_sex:label')"/>
       <item>
