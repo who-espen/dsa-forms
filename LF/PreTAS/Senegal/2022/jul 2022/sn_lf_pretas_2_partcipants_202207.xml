@@ -7,31 +7,31 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Août 2021) 2. Pre-TAS FL Formulaire Participants</h:title>
-    <model >
+    <h:title>(Juillet 2022) 2. Pre-TAS FL Formulaire Participants V1</h:title>
+    <model odk:xforms-version="1.0.0">
 
-    <instance>
-      <data id="sn_lf_pretas_2_partcipants_202108" version="20210722">
-        <p_recorderID/>
-        <p_district/>
-        <p_cluster_name/>
-        <p_cluster_id/>
-        <p_consent/>
-        <p_num/>
-        <p_sex/>
-        <p_age_yrs/>
-        <p_how_long_lived/>
-        <p_IDMethod/>
-        <p_code_id/>
-        <p_ending_survey_note/>
-        <p_notes/>
-        <c_start/>
-        <c_end/>
-        <meta>
-          <instanceID/>
-        </meta>
-      </data>
-    </instance>
+      <instance>
+        <data id="sn_lf_pretas_2_partcipants_202207_v1">
+          <p_recorderID/>
+          <p_district/>
+          <p_cluster_name/>
+          <p_cluster_id/>
+          <p_consent/>
+          <p_num/>
+          <p_sex/>
+          <p_age_yrs/>
+          <p_how_long_lived/>
+          <p_code_id/>
+          <p_ending_survey_note/>
+          <p_notes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+            <randomnum/>
+          </meta>
+        </data>
+      </instance>
 
       <itext>
         <translation lang="English">
@@ -91,15 +91,6 @@
           </text>
           <text id="/data/p_how_long_lived:label">
             <value>How many years has the respondent lived in the area?</value>
-          </text>
-          <text id="/data/p_IDMethod:label">
-            <value>How will the individual's unique ID be generated?</value>
-          </text>
-          <text id="/data/p_IDMethod/Scanner:label">
-            <value>Scanner</value>
-          </text>
-          <text id="/data/p_IDMethod/ID_generation:label">
-            <value>Automatic ID generation</value>
           </text>
           <text id="/data/p_code_id:label">
             <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
@@ -169,15 +160,6 @@
           <text id="/data/p_how_long_lived:label">
             <value>Depuis combien d'années le participant habite-t-il dans la communauté?</value>
           </text>
-          <text id="/data/p_IDMethod:label">
-            <value>Comment l'ID unique de l'individu sera-t-il généré?</value>
-          </text>
-          <text id="/data/p_IDMethod/Scanner:label">
-            <value>Scanner</value>
-          </text>
-          <text id="/data/p_IDMethod/ID_generation:label">
-            <value>Génération automatique</value>
-          </text>
           <text id="/data/p_code_id:label">
             <value>Veuiller enregistrer le code d'identification unique du participant qui apparait sur une liste séparée et sur chaque test de diagnostic administré</value>
           </text>
@@ -189,6 +171,7 @@
           </text>
         </translation>
       </itext>
+
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorderID:jr:constraintMsg')" nodeset="/data/p_recorderID" required="true()" type="int"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
@@ -198,13 +181,13 @@
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind constraint=". &gt; 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
-      <bind nodeset="/data/p_IDMethod" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
-      <bind calculate="concat( /data/p_cluster_id , '-' , /data/p_num )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind calculate="concat( substr(/data/p_cluster_name,0,2) ,'-',/data/p_cluster_id ,'-',/data/meta/randomnum)" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string" db_add_col_3="/data/p_cluster_id" db_add_col_4="."/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Non'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,7), '-', substr(random(),10,13))"/>
     </model>
   </h:head>
   <h:body>
@@ -253,17 +236,6 @@
     <input ref="/data/p_how_long_lived">
       <label ref="jr:itext('/data/p_how_long_lived:label')"/>
     </input>
-    <select1 ref="/data/p_IDMethod">
-      <label ref="jr:itext('/data/p_IDMethod:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_IDMethod/Scanner:label')"/>
-        <value>Scanner</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_IDMethod/ID_generation:label')"/>
-        <value>ID_generation</value>
-      </item>
-    </select1>
     <input ref="/data/p_code_id">
       <label ref="jr:itext('/data/p_code_id:label')"/>
     </input>
