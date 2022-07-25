@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Juillet 2022) 1. Enquête Entomologique d'ONCHO - Inspection de la rivière</h:title>
-    <model odk:xforms-version="1.0.0">
+    <h:title>(Juillet 2022) 1. Enquête Entomologique d'ONCHO - Inspection de la rivière V2</h:title>
+    <model >
 
       <instance>
-        <data id="bj_oncho_bsa_1_river_assessment_202207">
+        <data id="bj_oncho_bsa_1_river_assessment_202207_v2">
           <s_recorder_id/>
           <s_zone_transmission/>
           <s_region/>
@@ -31,9 +31,11 @@
           <s_close_village/>
           <s_close_village_population/>
           <s_close_village_activity/>
+          <s_close_village_activity_other/>
           <s_close_village_habit/>
           <s_gps/>
           <s_notes/>
+          <s_notes_other/>
           <s_start/>
           <s_end/>
           <meta>
@@ -56,14 +58,14 @@
           <text id="/data/s_zone_transmission:label">
             <value>Sélectionne la zone de transmission</value>
           </text>
-          <text id="/data/s_zone_transmission/CENTER TRANSMISSION  AREA:label">
-            <value>CENTER TRANSMISSION  AREA</value>
+          <text id="/data/s_zone_transmission/ZONE DE TRANSMISSION CENTRALE:label">
+            <value>ZONE DE TRANSMISSION CENTRALE</value>
           </text>
-          <text id="/data/s_zone_transmission/NORTHERN TRANSMISSION ZONE:label">
-            <value>NORTHERN TRANSMISSION ZONE</value>
+          <text id="/data/s_zone_transmission/ZONE DE TRANSMISSION NORDIQUE:label">
+            <value>ZONE DE TRANSMISSION NORDIQUE</value>
           </text>
-          <text id="/data/s_zone_transmission/SOUTHERN TRANSMISSION ZONE:label">
-            <value>SOUTHERN TRANSMISSION ZONE</value>
+          <text id="/data/s_zone_transmission/ZONE DE TRANSMISSION MÉRIDIONALE:label">
+            <value>ZONE DE TRANSMISSION MÉRIDIONALE</value>
           </text>
           <text id="/data/s_region:label">
             <value>Sélectionner un département</value>
@@ -81,7 +83,7 @@
             <value>Sélectionner le code du site</value>
           </text>
           <text id="/data/s_river_basin_name:label">
-            <value>Nom de rivière</value>
+            <value>Nom du bassin</value>
           </text>
           <text id="/data/s_river_name:label">
             <value>Nom du fleuve ou de la rivière</value>
@@ -95,6 +97,12 @@
           <text id="/data/s_vegetation_type:label">
             <value>Type de végétation</value>
           </text>
+          <text id="/data/s_vegetation_type/Végétation dense:label">
+            <value>Végétation dense</value>
+          </text>
+          <text id="/data/s_vegetation_type/Végétation clairsemée:label">
+            <value>Végétation clairsemée</value>
+          </text>
           <text id="/data/s_tidc_date:label">
             <value>Date de lancement du TIDC</value>
           </text>
@@ -104,11 +112,26 @@
           <text id="/data/s_capture_point:label">
             <value>Point de capture</value>
           </text>
+          <text id="/data/s_capture_point/Point 1:label">
+            <value>Point 1</value>
+          </text>
+          <text id="/data/s_capture_point/Point 2:label">
+            <value>Point 2</value>
+          </text>
           <text id="/data/s_close_breeding:label">
             <value>Gîte de reproduction le plus proche</value>
           </text>
           <text id="/data/s_type_close_breeding_site:label">
             <value>Type de gîte de reproduction le plus proche</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/A) Artificiel / Naturel:label">
+            <value>A) Artificiel / Naturel</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/B) Permanent  / Temporaire:label">
+            <value>B) Permanent  / Temporaire</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/C) Ancien gite OCP / Nouveau gite:label">
+            <value>C) Ancien gite OCP / Nouveau gite</value>
           </text>
           <text id="/data/s_close_village:label">
             <value>Village sous traitement TIDC le plus proche</value>
@@ -118,6 +141,24 @@
           </text>
           <text id="/data/s_close_village_activity:label">
             <value>Activités agricole saisonières du village sous traitement TIDC le plus proche</value>
+          </text>
+          <text id="/data/s_close_village_activity/Agriculture:label">
+            <value>Agriculture</value>
+          </text>
+          <text id="/data/s_close_village_activity/Pêche:label">
+            <value>Pêche</value>
+          </text>
+          <text id="/data/s_close_village_activity/Elevage:label">
+            <value>Elevage</value>
+          </text>
+          <text id="/data/s_close_village_activity/Unité.industrielle:label">
+            <value>Unité industrielle</value>
+          </text>
+          <text id="/data/s_close_village_activity/Other:label">
+            <value>Autres</value>
+          </text>
+          <text id="/data/s_close_village_activity_other:label">
+            <value>Veuillez préciser les autres activités</value>
           </text>
           <text id="/data/s_close_village_habit:label">
             <value>Habitude de la population du village sous traitement TIDC le plus proche</value>
@@ -130,6 +171,36 @@
           </text>
           <text id="/data/s_notes:label">
             <value>Informations additionnelles</value>
+          </text>
+          <text id="/data/s_notes/Lessive.au.bord.des.cours.d.eau:label">
+            <value>Lessive au bord des cours d'eau</value>
+          </text>
+          <text id="/data/s_notes/Décharge.d.usine:label">
+            <value>Décharge d'usine</value>
+          </text>
+          <text id="/data/s_notes/Présence.de.tas.d.immondice:label">
+            <value>Présence de tas d'immondice</value>
+          </text>
+          <text id="/data/s_notes/Variation.de.la.température:label">
+            <value>Variation de la température</value>
+          </text>
+          <text id="/data/s_notes/Humidité.relative:label">
+            <value>Humidité relative</value>
+          </text>
+          <text id="/data/s_notes/Changement.des.points.de.capture:label">
+            <value>Changement des points de capture</value>
+          </text>
+          <text id="/data/s_notes/Gite.frontalier.avec.au.Togo:label">
+            <value>Gite frontalier avec au Togo</value>
+          </text>
+          <text id="/data/s_notes/Gite.frontalier.au.Nigeria:label">
+            <value>Gite frontalier au Nigeria</value>
+          </text>
+          <text id="/data/s_notes/Other:label">
+            <value>Autres</value>
+          </text>
+          <text id="/data/s_notes_other:label">
+            <value>Veuillez préciser les autres informations</value>
           </text>
           <text id="yesNoDontKnow-0">
             <value>Oui</value>
@@ -158,14 +229,77 @@
           <text id="yes_no-1">
             <value>Non</value>
           </text>
+          <text id="vegetation_type-0">
+            <value>Végétation dense</value>
+          </text>
+          <text id="vegetation_type-1">
+            <value>Végétation clairsemée</value>
+          </text>
+          <text id="capture_point-0">
+            <value>Point 1</value>
+          </text>
+          <text id="capture_point-1">
+            <value>Point 2</value>
+          </text>
+          <text id="breeding_site_type-0">
+            <value>A) Artificiel / Naturel</value>
+          </text>
+          <text id="breeding_site_type-1">
+            <value>B) Permanent  / Temporaire</value>
+          </text>
+          <text id="breeding_site_type-2">
+            <value>C) Ancien gite OCP / Nouveau gite</value>
+          </text>
+          <text id="village_activity-0">
+            <value>Agriculture</value>
+          </text>
+          <text id="village_activity-1">
+            <value>Pêche</value>
+          </text>
+          <text id="village_activity-2">
+            <value>Elevage</value>
+          </text>
+          <text id="village_activity-3">
+            <value>Unité industrielle</value>
+          </text>
+          <text id="village_activity-4">
+            <value>Autres</value>
+          </text>
+          <text id="notes-0">
+            <value>Lessive au bord des cours d'eau</value>
+          </text>
+          <text id="notes-1">
+            <value>Décharge d'usine</value>
+          </text>
+          <text id="notes-2">
+            <value>Présence de tas d'immondice</value>
+          </text>
+          <text id="notes-3">
+            <value>Variation de la température</value>
+          </text>
+          <text id="notes-4">
+            <value>Humidité relative</value>
+          </text>
+          <text id="notes-5">
+            <value>Changement des points de capture</value>
+          </text>
+          <text id="notes-6">
+            <value>Gite frontalier avec au Togo</value>
+          </text>
+          <text id="notes-7">
+            <value>Gite frontalier au Nigeria</value>
+          </text>
+          <text id="notes-8">
+            <value>Autres</value>
+          </text>
           <text id="zone_transmission-0">
-            <value>CENTER TRANSMISSION  AREA</value>
+            <value>ZONE DE TRANSMISSION CENTRALE</value>
           </text>
           <text id="zone_transmission-1">
-            <value>NORTHERN TRANSMISSION ZONE</value>
+            <value>ZONE DE TRANSMISSION NORDIQUE</value>
           </text>
           <text id="zone_transmission-2">
-            <value>SOUTHERN TRANSMISSION ZONE</value>
+            <value>ZONE DE TRANSMISSION MÉRIDIONALE</value>
           </text>
           <text id="region-0">
             <value>Alibori</value>
@@ -556,19 +690,123 @@
           </item>
         </root>
       </instance>
+      <instance id="vegetation_type">
+        <root>
+          <item>
+            <itextId>vegetation_type-0</itextId>
+            <name>Végétation dense</name>
+          </item>
+          <item>
+            <itextId>vegetation_type-1</itextId>
+            <name>Végétation clairsemée</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="capture_point">
+        <root>
+          <item>
+            <itextId>capture_point-0</itextId>
+            <name>Point 1</name>
+          </item>
+          <item>
+            <itextId>capture_point-1</itextId>
+            <name>Point 2</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="breeding_site_type">
+        <root>
+          <item>
+            <itextId>breeding_site_type-0</itextId>
+            <name>A) Artificiel / Naturel</name>
+          </item>
+          <item>
+            <itextId>breeding_site_type-1</itextId>
+            <name>B) Permanent  / Temporaire</name>
+          </item>
+          <item>
+            <itextId>breeding_site_type-2</itextId>
+            <name>C) Ancien gite OCP / Nouveau gite</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="village_activity">
+        <root>
+          <item>
+            <itextId>village_activity-0</itextId>
+            <name>Agriculture</name>
+          </item>
+          <item>
+            <itextId>village_activity-1</itextId>
+            <name>Pêche</name>
+          </item>
+          <item>
+            <itextId>village_activity-2</itextId>
+            <name>Elevage</name>
+          </item>
+          <item>
+            <itextId>village_activity-3</itextId>
+            <name>Unité.industrielle</name>
+          </item>
+          <item>
+            <itextId>village_activity-4</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="notes">
+        <root>
+          <item>
+            <itextId>notes-0</itextId>
+            <name>Lessive.au.bord.des.cours.d.eau</name>
+          </item>
+          <item>
+            <itextId>notes-1</itextId>
+            <name>Décharge.d.usine</name>
+          </item>
+          <item>
+            <itextId>notes-2</itextId>
+            <name>Présence.de.tas.d.immondice</name>
+          </item>
+          <item>
+            <itextId>notes-3</itextId>
+            <name>Variation.de.la.température</name>
+          </item>
+          <item>
+            <itextId>notes-4</itextId>
+            <name>Humidité.relative</name>
+          </item>
+          <item>
+            <itextId>notes-5</itextId>
+            <name>Changement.des.points.de.capture</name>
+          </item>
+          <item>
+            <itextId>notes-6</itextId>
+            <name>Gite.frontalier.avec.au.Togo</name>
+          </item>
+          <item>
+            <itextId>notes-7</itextId>
+            <name>Gite.frontalier.au.Nigeria</name>
+          </item>
+          <item>
+            <itextId>notes-8</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
       <instance id="zone_transmission">
         <root>
           <item>
             <itextId>zone_transmission-0</itextId>
-            <name>CENTER TRANSMISSION  AREA</name>
+            <name>ZONE DE TRANSMISSION CENTRALE</name>
           </item>
           <item>
             <itextId>zone_transmission-1</itextId>
-            <name>NORTHERN TRANSMISSION ZONE</name>
+            <name>ZONE DE TRANSMISSION NORDIQUE</name>
           </item>
           <item>
             <itextId>zone_transmission-2</itextId>
-            <name>SOUTHERN TRANSMISSION ZONE</name>
+            <name>ZONE DE TRANSMISSION MÉRIDIONALE</name>
           </item>
         </root>
       </instance>
@@ -577,42 +815,42 @@
           <item>
             <itextId>region-0</itextId>
             <name>Alibori</name>
-            <zone_transmission>NORTHERN TRANSMISSION ZONE</zone_transmission>
+            <zone_transmission>ZONE DE TRANSMISSION NORDIQUE</zone_transmission>
           </item>
           <item>
             <itextId>region-1</itextId>
             <name>Atacora</name>
-            <zone_transmission>NORTHERN TRANSMISSION ZONE</zone_transmission>
+            <zone_transmission>ZONE DE TRANSMISSION NORDIQUE</zone_transmission>
           </item>
           <item>
             <itextId>region-2</itextId>
             <name>Borgou</name>
-            <zone_transmission>CENTER TRANSMISSION  AREA</zone_transmission>
+            <zone_transmission>ZONE DE TRANSMISSION CENTRALE</zone_transmission>
           </item>
           <item>
             <itextId>region-3</itextId>
             <name>Collines</name>
-            <zone_transmission>SOUTHERN TRANSMISSION ZONE</zone_transmission>
+            <zone_transmission>ZONE DE TRANSMISSION MÉRIDIONALE</zone_transmission>
           </item>
           <item>
             <itextId>region-4</itextId>
             <name>Couffo</name>
-            <zone_transmission>SOUTHERN TRANSMISSION ZONE</zone_transmission>
+            <zone_transmission>ZONE DE TRANSMISSION MÉRIDIONALE</zone_transmission>
           </item>
           <item>
             <itextId>region-5</itextId>
             <name>Donga</name>
-            <zone_transmission>CENTER TRANSMISSION  AREA</zone_transmission>
+            <zone_transmission>ZONE DE TRANSMISSION CENTRALE</zone_transmission>
           </item>
           <item>
             <itextId>region-6</itextId>
             <name>Plateau</name>
-            <zone_transmission>SOUTHERN TRANSMISSION ZONE</zone_transmission>
+            <zone_transmission>ZONE DE TRANSMISSION MÉRIDIONALE</zone_transmission>
           </item>
           <item>
             <itextId>region-7</itextId>
             <name>Zou</name>
-            <zone_transmission>SOUTHERN TRANSMISSION ZONE</zone_transmission>
+            <zone_transmission>ZONE DE TRANSMISSION MÉRIDIONALE</zone_transmission>
           </item>
         </root>
       </instance>
@@ -1172,9 +1410,11 @@
       <bind nodeset="/data/s_close_village" type="string"/>
       <bind nodeset="/data/s_close_village_population" type="int"/>
       <bind nodeset="/data/s_close_village_activity" type="string"/>
+      <bind nodeset="/data/s_close_village_activity_other" relevant="selected( /data/s_close_village_activity , 'Other')" type="string"/>
       <bind nodeset="/data/s_close_village_habit" type="string"/>
       <bind nodeset="/data/s_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/s_notes" type="string"/>
+      <bind nodeset="/data/s_notes_other" relevant="selected( /data/s_notes , 'Other')" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/s_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/s_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
@@ -1188,16 +1428,16 @@
     <select1 ref="/data/s_zone_transmission">
       <label ref="jr:itext('/data/s_zone_transmission:label')"/>
       <item>
-        <label ref="jr:itext('/data/s_zone_transmission/CENTER TRANSMISSION  AREA:label')"/>
-        <value>CENTER TRANSMISSION  AREA</value>
+        <label ref="jr:itext('/data/s_zone_transmission/ZONE DE TRANSMISSION CENTRALE:label')"/>
+        <value>ZONE DE TRANSMISSION CENTRALE</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/s_zone_transmission/NORTHERN TRANSMISSION ZONE:label')"/>
-        <value>NORTHERN TRANSMISSION ZONE</value>
+        <label ref="jr:itext('/data/s_zone_transmission/ZONE DE TRANSMISSION NORDIQUE:label')"/>
+        <value>ZONE DE TRANSMISSION NORDIQUE</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/s_zone_transmission/SOUTHERN TRANSMISSION ZONE:label')"/>
-        <value>SOUTHERN TRANSMISSION ZONE</value>
+        <label ref="jr:itext('/data/s_zone_transmission/ZONE DE TRANSMISSION MÉRIDIONALE:label')"/>
+        <value>ZONE DE TRANSMISSION MÉRIDIONALE</value>
       </item>
     </select1>
     <select1 ref="/data/s_region">
@@ -1243,30 +1483,81 @@
     <input ref="/data/s_site_size">
       <label ref="jr:itext('/data/s_site_size:label')"/>
     </input>
-    <input ref="/data/s_vegetation_type">
+    <select1 ref="/data/s_vegetation_type">
       <label ref="jr:itext('/data/s_vegetation_type:label')"/>
-    </input>
+      <item>
+        <label ref="jr:itext('/data/s_vegetation_type/Végétation dense:label')"/>
+        <value>Végétation dense</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_vegetation_type/Végétation clairsemée:label')"/>
+        <value>Végétation clairsemée</value>
+      </item>
+    </select1>
     <input ref="/data/s_tidc_date">
       <label ref="jr:itext('/data/s_tidc_date:label')"/>
       <hint ref="jr:itext('/data/s_tidc_date:hint')"/>
     </input>
-    <input ref="/data/s_capture_point">
+    <select1 ref="/data/s_capture_point">
       <label ref="jr:itext('/data/s_capture_point:label')"/>
-    </input>
+      <item>
+        <label ref="jr:itext('/data/s_capture_point/Point 1:label')"/>
+        <value>Point 1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_capture_point/Point 2:label')"/>
+        <value>Point 2</value>
+      </item>
+    </select1>
     <input ref="/data/s_close_breeding">
       <label ref="jr:itext('/data/s_close_breeding:label')"/>
     </input>
-    <input ref="/data/s_type_close_breeding_site">
+    <select1 ref="/data/s_type_close_breeding_site">
       <label ref="jr:itext('/data/s_type_close_breeding_site:label')"/>
-    </input>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/A) Artificiel / Naturel:label')"/>
+        <value>A) Artificiel / Naturel</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/B) Permanent  / Temporaire:label')"/>
+        <value>B) Permanent  / Temporaire</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/C) Ancien gite OCP / Nouveau gite:label')"/>
+        <value>C) Ancien gite OCP / Nouveau gite</value>
+      </item>
+    </select1>
     <input ref="/data/s_close_village">
       <label ref="jr:itext('/data/s_close_village:label')"/>
     </input>
     <input ref="/data/s_close_village_population">
       <label ref="jr:itext('/data/s_close_village_population:label')"/>
     </input>
-    <input ref="/data/s_close_village_activity">
+    <select ref="/data/s_close_village_activity">
       <label ref="jr:itext('/data/s_close_village_activity:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_close_village_activity/Agriculture:label')"/>
+        <value>Agriculture</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_close_village_activity/Pêche:label')"/>
+        <value>Pêche</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_close_village_activity/Elevage:label')"/>
+        <value>Elevage</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_close_village_activity/Unité.industrielle:label')"/>
+        <value>Unité.industrielle</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_close_village_activity/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/s_close_village_activity_other">
+      <label ref="jr:itext('/data/s_close_village_activity_other:label')"/>
     </input>
     <input ref="/data/s_close_village_habit">
       <label ref="jr:itext('/data/s_close_village_habit:label')"/>
@@ -1275,8 +1566,47 @@
       <label ref="jr:itext('/data/s_gps:label')"/>
       <hint ref="jr:itext('/data/s_gps:hint')"/>
     </input>
-    <input ref="/data/s_notes">
+    <select ref="/data/s_notes">
       <label ref="jr:itext('/data/s_notes:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Lessive.au.bord.des.cours.d.eau:label')"/>
+        <value>Lessive.au.bord.des.cours.d.eau</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Décharge.d.usine:label')"/>
+        <value>Décharge.d.usine</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Présence.de.tas.d.immondice:label')"/>
+        <value>Présence.de.tas.d.immondice</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Variation.de.la.température:label')"/>
+        <value>Variation.de.la.température</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Humidité.relative:label')"/>
+        <value>Humidité.relative</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Changement.des.points.de.capture:label')"/>
+        <value>Changement.des.points.de.capture</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Gite.frontalier.avec.au.Togo:label')"/>
+        <value>Gite.frontalier.avec.au.Togo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Gite.frontalier.au.Nigeria:label')"/>
+        <value>Gite.frontalier.au.Nigeria</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/s_notes_other">
+      <label ref="jr:itext('/data/s_notes_other:label')"/>
     </input>
   </h:body>
 </h:html>
