@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Juillet 2022) 1. Enquête Entomologique d'ONCHO - Inspection de la rivière V2</h:title>
+    <h:title>(Juillet 2022) 1. Enquête Entomologique d'ONCHO - Inspection de la rivière V3</h:title>
     <model >
 
       <instance>
-        <data id="bj_oncho_bsa_1_river_assessment_202207_v2">
+        <data id="bj_oncho_bsa_1_river_assessment_202207_v3">
           <s_recorder_id/>
           <s_zone_transmission/>
           <s_region/>
@@ -22,7 +22,6 @@
           <s_river_basin_name/>
           <s_river_name/>
           <s_river_distance/>
-          <s_site_size/>
           <s_vegetation_type/>
           <s_tidc_date/>
           <s_capture_point/>
@@ -32,7 +31,6 @@
           <s_close_village_population/>
           <s_close_village_activity/>
           <s_close_village_activity_other/>
-          <s_close_village_habit/>
           <s_gps/>
           <s_notes/>
           <s_notes_other/>
@@ -91,9 +89,6 @@
           <text id="/data/s_river_distance:label">
             <value>Distance du Point de capture en mètre</value>
           </text>
-          <text id="/data/s_site_size:label">
-            <value>Etendue géographique</value>
-          </text>
           <text id="/data/s_vegetation_type:label">
             <value>Type de végétation</value>
           </text>
@@ -124,14 +119,23 @@
           <text id="/data/s_type_close_breeding_site:label">
             <value>Type de gîte de reproduction le plus proche</value>
           </text>
-          <text id="/data/s_type_close_breeding_site/A) Artificiel / Naturel:label">
-            <value>A) Artificiel / Naturel</value>
+          <text id="/data/s_type_close_breeding_site/Artificiel:label">
+            <value>Artificiel</value>
           </text>
-          <text id="/data/s_type_close_breeding_site/B) Permanent  / Temporaire:label">
-            <value>B) Permanent  / Temporaire</value>
+          <text id="/data/s_type_close_breeding_site/Naturel:label">
+            <value>Naturel</value>
           </text>
-          <text id="/data/s_type_close_breeding_site/C) Ancien gite OCP / Nouveau gite:label">
-            <value>C) Ancien gite OCP / Nouveau gite</value>
+          <text id="/data/s_type_close_breeding_site/Permanent:label">
+            <value>Permanent</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/Temporaire:label">
+            <value>Temporaire</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/Ancien.gite.OCP:label">
+            <value>Ancien gite OCP</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/Nouveau.gite:label">
+            <value>Nouveau gite</value>
           </text>
           <text id="/data/s_close_village:label">
             <value>Village sous traitement TIDC le plus proche</value>
@@ -159,9 +163,6 @@
           </text>
           <text id="/data/s_close_village_activity_other:label">
             <value>Veuillez préciser les autres activités</value>
-          </text>
-          <text id="/data/s_close_village_habit:label">
-            <value>Habitude de la population du village sous traitement TIDC le plus proche</value>
           </text>
           <text id="/data/s_gps:label">
             <value>Veillez capturer le GPS du site</value>
@@ -242,13 +243,22 @@
             <value>Point 2</value>
           </text>
           <text id="breeding_site_type-0">
-            <value>A) Artificiel / Naturel</value>
+            <value>Artificiel</value>
           </text>
           <text id="breeding_site_type-1">
-            <value>B) Permanent  / Temporaire</value>
+            <value>Naturel</value>
           </text>
           <text id="breeding_site_type-2">
-            <value>C) Ancien gite OCP / Nouveau gite</value>
+            <value>Permanent</value>
+          </text>
+          <text id="breeding_site_type-3">
+            <value>Temporaire</value>
+          </text>
+          <text id="breeding_site_type-4">
+            <value>Ancien gite OCP</value>
+          </text>
+          <text id="breeding_site_type-5">
+            <value>Nouveau gite</value>
           </text>
           <text id="village_activity-0">
             <value>Agriculture</value>
@@ -718,15 +728,27 @@
         <root>
           <item>
             <itextId>breeding_site_type-0</itextId>
-            <name>A) Artificiel / Naturel</name>
+            <name>Artificiel</name>
           </item>
           <item>
             <itextId>breeding_site_type-1</itextId>
-            <name>B) Permanent  / Temporaire</name>
+            <name>Naturel</name>
           </item>
           <item>
             <itextId>breeding_site_type-2</itextId>
-            <name>C) Ancien gite OCP / Nouveau gite</name>
+            <name>Permanent</name>
+          </item>
+          <item>
+            <itextId>breeding_site_type-3</itextId>
+            <name>Temporaire</name>
+          </item>
+          <item>
+            <itextId>breeding_site_type-4</itextId>
+            <name>Ancien.gite.OCP</name>
+          </item>
+          <item>
+            <itextId>breeding_site_type-5</itextId>
+            <name>Nouveau.gite</name>
           </item>
         </root>
       </instance>
@@ -1401,7 +1423,6 @@
       <bind nodeset="/data/s_river_basin_name" required="true()" type="string"/>
       <bind nodeset="/data/s_river_name" required="true()" type="string"/>
       <bind nodeset="/data/s_river_distance" required="true()" type="int"/>
-      <bind nodeset="/data/s_site_size" required="true()" type="string"/>
       <bind nodeset="/data/s_vegetation_type" required="true()" type="string"/>
       <bind nodeset="/data/s_tidc_date" required="true()" type="date"/>
       <bind nodeset="/data/s_capture_point" required="true()" type="string"/>
@@ -1411,7 +1432,6 @@
       <bind nodeset="/data/s_close_village_population" type="int"/>
       <bind nodeset="/data/s_close_village_activity" type="string"/>
       <bind nodeset="/data/s_close_village_activity_other" relevant="selected( /data/s_close_village_activity , 'Other')" type="string"/>
-      <bind nodeset="/data/s_close_village_habit" type="string"/>
       <bind nodeset="/data/s_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/s_notes" type="string"/>
       <bind nodeset="/data/s_notes_other" relevant="selected( /data/s_notes , 'Other')" type="string"/>
@@ -1480,9 +1500,6 @@
     <input ref="/data/s_river_distance">
       <label ref="jr:itext('/data/s_river_distance:label')"/>
     </input>
-    <input ref="/data/s_site_size">
-      <label ref="jr:itext('/data/s_site_size:label')"/>
-    </input>
     <select1 ref="/data/s_vegetation_type">
       <label ref="jr:itext('/data/s_vegetation_type:label')"/>
       <item>
@@ -1512,21 +1529,33 @@
     <input ref="/data/s_close_breeding">
       <label ref="jr:itext('/data/s_close_breeding:label')"/>
     </input>
-    <select1 ref="/data/s_type_close_breeding_site">
+    <select ref="/data/s_type_close_breeding_site">
       <label ref="jr:itext('/data/s_type_close_breeding_site:label')"/>
       <item>
-        <label ref="jr:itext('/data/s_type_close_breeding_site/A) Artificiel / Naturel:label')"/>
-        <value>A) Artificiel / Naturel</value>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Artificiel:label')"/>
+        <value>Artificiel</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/s_type_close_breeding_site/B) Permanent  / Temporaire:label')"/>
-        <value>B) Permanent  / Temporaire</value>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Naturel:label')"/>
+        <value>Naturel</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/s_type_close_breeding_site/C) Ancien gite OCP / Nouveau gite:label')"/>
-        <value>C) Ancien gite OCP / Nouveau gite</value>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Permanent:label')"/>
+        <value>Permanent</value>
       </item>
-    </select1>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Temporaire:label')"/>
+        <value>Temporaire</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Ancien.gite.OCP:label')"/>
+        <value>Ancien.gite.OCP</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Nouveau.gite:label')"/>
+        <value>Nouveau.gite</value>
+      </item>
+    </select>
     <input ref="/data/s_close_village">
       <label ref="jr:itext('/data/s_close_village:label')"/>
     </input>
@@ -1558,9 +1587,6 @@
     </select>
     <input ref="/data/s_close_village_activity_other">
       <label ref="jr:itext('/data/s_close_village_activity_other:label')"/>
-    </input>
-    <input ref="/data/s_close_village_habit">
-      <label ref="jr:itext('/data/s_close_village_habit:label')"/>
     </input>
     <input ref="/data/s_gps">
       <label ref="jr:itext('/data/s_gps:label')"/>
