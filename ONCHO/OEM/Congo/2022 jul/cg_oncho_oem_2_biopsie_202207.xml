@@ -1,0 +1,969 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2022 Juil) CEO - 2 Formulaire Biopsie V2</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/recorder_id:jr:constraintMsg">
+            <value>Doit être entre 10 et 99 compris</value>
+          </text>
+          <text id="/data/recorder_id:label">
+            <value>Entrer le numéro de l'enregistreur</value>
+          </text>
+          <text id="/data/recorder_id:hint">
+            <value>Code à 2 chiffres qui vous est attribué</value>
+          </text>
+          <text id="/data/region:label">
+            <value>Sélectionner le département</value>
+          </text>
+          <text id="/data/region/Bouenza:label">
+            <value>Bouenza</value>
+          </text>
+          <text id="/data/region/Lékoumou:label">
+            <value>Lékoumou</value>
+          </text>
+          <text id="/data/region/Niari:label">
+            <value>Niari</value>
+          </text>
+          <text id="/data/region/Pool:label">
+            <value>Pool</value>
+          </text>
+          <text id="/data/district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/cluster_name:label">
+            <value>Entrer le nom du site/village</value>
+          </text>
+          <text id="/data/cluster_id:jr:constraintMsg">
+            <value>Doit être entre 100 et 999 compris</value>
+          </text>
+          <text id="/data/cluster_id:label">
+            <value>Entrer le code du site</value>
+          </text>
+          <text id="/data/gps_method:label">
+            <value>Comment sera capturé le GPS</value>
+          </text>
+          <text id="/data/gps_method/Manuel:label">
+            <value>Manuel</value>
+          </text>
+          <text id="/data/gps_method/Automatique:label">
+            <value>Automatique</value>
+          </text>
+          <text id="/data/GPS:label">
+            <value>Veuillez capturer le GPS</value>
+          </text>
+          <text id="/data/GPS:hint">
+            <value>Fonctionne mieux à l'extérieur de tout batiment</value>
+          </text>
+          <text id="/data/lat:label">
+            <value>Latitude</value>
+          </text>
+          <text id="/data/lng:label">
+            <value>Longitude</value>
+          </text>
+          <text id="/data/p_:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/p_/add_participant:label">
+            <value>Voulez-vous ajouter un nouveau participant?</value>
+          </text>
+          <text id="/data/p_/add_participant/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_/add_participant/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_/Imethod:label">
+            <value>How will the individual's unique ID be generated?</value>
+          </text>
+          <text id="/data/p_/Imethod/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/p_/Imethod/Manuel:label">
+            <value>Manuel</value>
+          </text>
+          <text id="/data/p_/BarcodeID:jr:constraintMsg">
+            <value>Format du code incorrect. Ex d'un bon code "OEM-12345678"</value>
+          </text>
+          <text id="/data/p_/BarcodeID:label">
+            <value>Veuillez scanner le QR code</value>
+          </text>
+          <text id="/data/p_/GenerateID:jr:constraintMsg">
+            <value>Format du code incorrect. Ex d'un bon code "OEM-12345678"</value>
+          </text>
+          <text id="/data/p_/GenerateID:label">
+            <value>Veuillez enregistrer le code d'identification unique suivant pour le répondant sur une liste distincte et sur chaque test de diagnostic administré</value>
+          </text>
+          <text id="/data/p_/filiation:label">
+            <value>Filiation</value>
+          </text>
+          <text id="/data/p_/filiation/Chef de famille / ménage:label">
+            <value>Chef de famille / ménage</value>
+          </text>
+          <text id="/data/p_/filiation/Epouse:label">
+            <value>Epouse</value>
+          </text>
+          <text id="/data/p_/filiation/Fils /  fille:label">
+            <value>Fils /  fille</value>
+          </text>
+          <text id="/data/p_/filiation/Frère / Soeur / cousin:label">
+            <value>Frère / Soeur / cousin</value>
+          </text>
+          <text id="/data/p_/filiation/Neuveu / Nièce / Petit-flis / Petite-fille:label">
+            <value>Neuveu / Nièce / Petit-flis / Petite-fille</value>
+          </text>
+          <text id="/data/p_/filiation/Veuf / veuve:label">
+            <value>Veuf / veuve</value>
+          </text>
+          <text id="/data/p_/filiation/Père ou mère:label">
+            <value>Père ou mère</value>
+          </text>
+          <text id="/data/p_/filiation/Pas de parenté:label">
+            <value>Pas de parenté</value>
+          </text>
+          <text id="/data/p_/occupation:label">
+            <value>Occupation</value>
+          </text>
+          <text id="/data/p_/occupation/Agriculteur:label">
+            <value>Agriculteur</value>
+          </text>
+          <text id="/data/p_/occupation/Pêcheur:label">
+            <value>Pêcheur</value>
+          </text>
+          <text id="/data/p_/occupation/Fonctionnaire:label">
+            <value>Fonctionnaire</value>
+          </text>
+          <text id="/data/p_/occupation/Élève/étudiant:label">
+            <value>Élève/étudiant</value>
+          </text>
+          <text id="/data/p_/occupation/Ouvrier:label">
+            <value>Ouvrier</value>
+          </text>
+          <text id="/data/p_/occupation/Mécanicien:label">
+            <value>Mécanicien</value>
+          </text>
+          <text id="/data/p_/occupation/Ménagère:label">
+            <value>Ménagère</value>
+          </text>
+          <text id="/data/p_/occupation/Commerçant:label">
+            <value>Commerçant</value>
+          </text>
+          <text id="/data/p_/occupation/Autre:label">
+            <value>Autre</value>
+          </text>
+          <text id="/data/p_/sex:label">
+            <value>Veuillez sélectionner le sexe</value>
+          </text>
+          <text id="/data/p_/sex/Masculin:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/p_/sex/Féminin:label">
+            <value>Féminin</value>
+          </text>
+          <text id="/data/p_/age_yrs:label">
+            <value>Veuillez entrer l'âge du participant</value>
+          </text>
+          <text id="/data/p_/is_natif:label">
+            <value>La participation est-il originaire du village (né au village) ou migrant (n'est pas née au village et est venu s'installer)</value>
+          </text>
+          <text id="/data/p_/is_natif/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_/is_natif/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_/origine:jr:constraintMsg">
+            <value>La valeur ne doit pas dépasser l'année de naissance</value>
+          </text>
+          <text id="/data/p_/origine:label">
+            <value>Village d'origine</value>
+          </text>
+          <text id="/data/p_/yrs_arriving:label">
+            <value>Année d'arrivée dans le village</value>
+          </text>
+          <text id="/data/p_/num_biopsie:label">
+            <value>Numéro Biopsi</value>
+          </text>
+          <text id="/data/p_/has_nodule:label">
+            <value>Le participant a-t-il des nodules</value>
+          </text>
+          <text id="/data/p_/has_nodule/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_/has_nodule/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_/nodule_nbr:label">
+            <value>Nombre de nodules</value>
+          </text>
+          <text id="/data/p_/nodule_location:label">
+            <value>Veuillez localiser les nodules</value>
+          </text>
+          <text id="/data/p_/nodule_location/Membres.Supérieures:label">
+            <value>Membres Supérieures</value>
+          </text>
+          <text id="/data/p_/nodule_location/Membres.Inférieures:label">
+            <value>Membres Inférieures</value>
+          </text>
+          <text id="/data/p_/nodule_location/Torse:label">
+            <value>Torse</value>
+          </text>
+          <text id="/data/p_/mfs_gauche:label">
+            <value>mf gauche</value>
+          </text>
+          <text id="/data/p_/mfs_droite:label">
+            <value>mf droite</value>
+          </text>
+          <text id="/data/p_/AdditionalNotes:label">
+            <value>Notes additionnelles</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Oui</value>
+          </text>
+          <text id="yes_no-1">
+            <value>Non</value>
+          </text>
+          <text id="sex-0">
+            <value>Masculin</value>
+          </text>
+          <text id="sex-1">
+            <value>Féminin</value>
+          </text>
+          <text id="ID_method-0">
+            <value>Scanner</value>
+          </text>
+          <text id="ID_method-1">
+            <value>Manuel</value>
+          </text>
+          <text id="occupation-0">
+            <value>Agriculteur</value>
+          </text>
+          <text id="occupation-1">
+            <value>Pêcheur</value>
+          </text>
+          <text id="occupation-2">
+            <value>Fonctionnaire</value>
+          </text>
+          <text id="occupation-3">
+            <value>Élève/étudiant</value>
+          </text>
+          <text id="occupation-4">
+            <value>Ouvrier</value>
+          </text>
+          <text id="occupation-5">
+            <value>Mécanicien</value>
+          </text>
+          <text id="occupation-6">
+            <value>Ménagère</value>
+          </text>
+          <text id="occupation-7">
+            <value>Commerçant</value>
+          </text>
+          <text id="occupation-8">
+            <value>Autre</value>
+          </text>
+          <text id="filiation-0">
+            <value>Chef de famille / ménage</value>
+          </text>
+          <text id="filiation-1">
+            <value>Epouse</value>
+          </text>
+          <text id="filiation-2">
+            <value>Fils /  fille</value>
+          </text>
+          <text id="filiation-3">
+            <value>Frère / Soeur / cousin</value>
+          </text>
+          <text id="filiation-4">
+            <value>Neuveu / Nièce / Petit-flis / Petite-fille</value>
+          </text>
+          <text id="filiation-5">
+            <value>Veuf / veuve</value>
+          </text>
+          <text id="filiation-6">
+            <value>Père ou mère</value>
+          </text>
+          <text id="filiation-7">
+            <value>Pas de parenté</value>
+          </text>
+          <text id="gps_method-0">
+            <value>Manuel</value>
+          </text>
+          <text id="gps_method-1">
+            <value>Automatique</value>
+          </text>
+          <text id="nodule_location-0">
+            <value>Membres Supérieures</value>
+          </text>
+          <text id="nodule_location-1">
+            <value>Membres Inférieures</value>
+          </text>
+          <text id="nodule_location-2">
+            <value>Torse</value>
+          </text>
+          <text id="region_list-0">
+            <value>Bouenza</value>
+          </text>
+          <text id="region_list-1">
+            <value>Lékoumou</value>
+          </text>
+          <text id="region_list-2">
+            <value>Niari</value>
+          </text>
+          <text id="region_list-3">
+            <value>Pool</value>
+          </text>
+          <text id="district_list-0">
+            <value>Loudima</value>
+          </text>
+          <text id="district_list-1">
+            <value>Loutété</value>
+          </text>
+          <text id="district_list-2">
+            <value>Madingou</value>
+          </text>
+          <text id="district_list-3">
+            <value>Mouyondzi</value>
+          </text>
+          <text id="district_list-4">
+            <value>Nkayi</value>
+          </text>
+          <text id="district_list-5">
+            <value>Sibiti</value>
+          </text>
+          <text id="district_list-6">
+            <value>Zanaga</value>
+          </text>
+          <text id="district_list-7">
+            <value>Dolisie</value>
+          </text>
+          <text id="district_list-8">
+            <value>Kibangou</value>
+          </text>
+          <text id="district_list-9">
+            <value>Kimongo-Londela Nkayes</value>
+          </text>
+          <text id="district_list-10">
+            <value>Mayoko</value>
+          </text>
+          <text id="district_list-11">
+            <value>Mossendjo</value>
+          </text>
+          <text id="district_list-12">
+            <value>Boko</value>
+          </text>
+          <text id="district_list-13">
+            <value>Goma tsétsé</value>
+          </text>
+          <text id="district_list-14">
+            <value>Ignié</value>
+          </text>
+          <text id="district_list-15">
+            <value>Kindamba</value>
+          </text>
+          <text id="district_list-16">
+            <value>Kinkala</value>
+          </text>
+          <text id="district_list-17">
+            <value>Kintélé</value>
+          </text>
+          <text id="district_list-18">
+            <value>Mindouli</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data id="cg_oncho_oem_2_biopsie_202207_v2">
+          <recorder_id/>
+          <region/>
+          <district/>
+          <cluster_name/>
+          <cluster_id/>
+          <gps_method/>
+          <GPS/>
+          <lat/>
+          <lng/>
+          <p_ jr:template="">
+            <add_participant/>
+            <Imethod/>
+            <BarcodeID/>
+            <GenerateID/>
+            <filiation/>
+            <occupation/>
+            <sex/>
+            <age_yrs/>
+            <is_natif/>
+            <origine/>
+            <yrs_arriving/>
+            <num_biopsie/>
+            <has_nodule/>
+            <nodule_nbr/>
+            <nodule_location/>
+            <mfs_gauche/>
+            <mfs_droite/>
+            <AdditionalNotes/>
+          </p_>
+          <p_>
+            <add_participant/>
+            <Imethod/>
+            <BarcodeID/>
+            <GenerateID/>
+            <filiation/>
+            <occupation/>
+            <sex/>
+            <age_yrs/>
+            <is_natif/>
+            <origine/>
+            <yrs_arriving/>
+            <num_biopsie/>
+            <has_nodule/>
+            <nodule_nbr/>
+            <nodule_location/>
+            <mfs_gauche/>
+            <mfs_droite/>
+            <AdditionalNotes/>
+          </p_>
+          <start/>
+          <end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Oui</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>Non</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sex">
+        <root>
+          <item>
+            <itextId>sex-0</itextId>
+            <name>Masculin</name>
+          </item>
+          <item>
+            <itextId>sex-1</itextId>
+            <name>Féminin</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="ID_method">
+        <root>
+          <item>
+            <itextId>ID_method-0</itextId>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <itextId>ID_method-1</itextId>
+            <name>Manuel</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="occupation">
+        <root>
+          <item>
+            <itextId>occupation-0</itextId>
+            <name>Agriculteur</name>
+          </item>
+          <item>
+            <itextId>occupation-1</itextId>
+            <name>Pêcheur</name>
+          </item>
+          <item>
+            <itextId>occupation-2</itextId>
+            <name>Fonctionnaire</name>
+          </item>
+          <item>
+            <itextId>occupation-3</itextId>
+            <name>Élève/étudiant</name>
+          </item>
+          <item>
+            <itextId>occupation-4</itextId>
+            <name>Ouvrier</name>
+          </item>
+          <item>
+            <itextId>occupation-5</itextId>
+            <name>Mécanicien</name>
+          </item>
+          <item>
+            <itextId>occupation-6</itextId>
+            <name>Ménagère</name>
+          </item>
+          <item>
+            <itextId>occupation-7</itextId>
+            <name>Commerçant</name>
+          </item>
+          <item>
+            <itextId>occupation-8</itextId>
+            <name>Autre</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="filiation">
+        <root>
+          <item>
+            <itextId>filiation-0</itextId>
+            <name>Chef de famille / ménage</name>
+          </item>
+          <item>
+            <itextId>filiation-1</itextId>
+            <name>Epouse</name>
+          </item>
+          <item>
+            <itextId>filiation-2</itextId>
+            <name>Fils /  fille</name>
+          </item>
+          <item>
+            <itextId>filiation-3</itextId>
+            <name>Frère / Soeur / cousin</name>
+          </item>
+          <item>
+            <itextId>filiation-4</itextId>
+            <name>Neuveu / Nièce / Petit-flis / Petite-fille</name>
+          </item>
+          <item>
+            <itextId>filiation-5</itextId>
+            <name>Veuf / veuve</name>
+          </item>
+          <item>
+            <itextId>filiation-6</itextId>
+            <name>Père ou mère</name>
+          </item>
+          <item>
+            <itextId>filiation-7</itextId>
+            <name>Pas de parenté</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="gps_method">
+        <root>
+          <item>
+            <itextId>gps_method-0</itextId>
+            <name>Manuel</name>
+          </item>
+          <item>
+            <itextId>gps_method-1</itextId>
+            <name>Automatique</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="nodule_location">
+        <root>
+          <item>
+            <itextId>nodule_location-0</itextId>
+            <name>Membres.Supérieures</name>
+          </item>
+          <item>
+            <itextId>nodule_location-1</itextId>
+            <name>Membres.Inférieures</name>
+          </item>
+          <item>
+            <itextId>nodule_location-2</itextId>
+            <name>Torse</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <itextId>region_list-0</itextId>
+            <name>Bouenza</name>
+          </item>
+          <item>
+            <itextId>region_list-1</itextId>
+            <name>Lékoumou</name>
+          </item>
+          <item>
+            <itextId>region_list-2</itextId>
+            <name>Niari</name>
+          </item>
+          <item>
+            <itextId>region_list-3</itextId>
+            <name>Pool</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>Loudima</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>Loutété</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>Madingou</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <itextId>district_list-3</itextId>
+            <name>Mouyondzi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <itextId>district_list-4</itextId>
+            <name>Nkayi</name>
+            <region_list>Bouenza</region_list>
+          </item>
+          <item>
+            <itextId>district_list-5</itextId>
+            <name>Sibiti</name>
+            <region_list>Lékoumou</region_list>
+          </item>
+          <item>
+            <itextId>district_list-6</itextId>
+            <name>Zanaga</name>
+            <region_list>Lékoumou</region_list>
+          </item>
+          <item>
+            <itextId>district_list-7</itextId>
+            <name>Dolisie</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <itextId>district_list-8</itextId>
+            <name>Kibangou</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <itextId>district_list-9</itextId>
+            <name>Kimongo-Londela Nkayes</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <itextId>district_list-10</itextId>
+            <name>Mayoko</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <itextId>district_list-11</itextId>
+            <name>Mossendjo</name>
+            <region_list>Niari</region_list>
+          </item>
+          <item>
+            <itextId>district_list-12</itextId>
+            <name>Boko</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-13</itextId>
+            <name>Goma tsétsé</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-14</itextId>
+            <name>Ignié</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-15</itextId>
+            <name>Kindamba</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-16</itextId>
+            <name>Kinkala</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-17</itextId>
+            <name>Kintélé</name>
+            <region_list>Pool</region_list>
+          </item>
+          <item>
+            <itextId>district_list-18</itextId>
+            <name>Mindouli</name>
+            <region_list>Pool</region_list>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/recorder_id:jr:constraintMsg')" nodeset="/data/recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/region" required="true()" type="string"/>
+      <bind nodeset="/data/district" required="true()" type="string"/>
+      <bind nodeset="/data/cluster_name" required="true()" type="string"/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/cluster_id:jr:constraintMsg')" nodeset="/data/cluster_id" required="true()" type="int"/>
+      <bind nodeset="/data/gps_method" required="true()" type="string"/>
+      <bind nodeset="/data/GPS" relevant=" /data/gps_method  = 'Automatique'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/lat" relevant=" /data/gps_method != 'Automatique'" required="true()" type="string"/>
+      <bind nodeset="/data/lng" relevant=" /data/gps_method != 'Automatique'" required="true()" type="string"/>
+      <bind nodeset="/data/p_/add_participant" required="true()" type="string"/>
+      <bind nodeset="/data/p_/Imethod" relevant=" ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind constraint="regex(., '^OEM-[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/p_/BarcodeID:jr:constraintMsg')" nodeset="/data/p_/BarcodeID" relevant=" ../Imethod  = 'Scanner' and  ../add_participant  = 'Oui'" required="true()" type="barcode"/>
+      <bind constraint="regex(., '^OEM-[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/p_/GenerateID:jr:constraintMsg')" nodeset="/data/p_/GenerateID" relevant=" ../Imethod  = 'Manuel' and  ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_/filiation" relevant=" ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_/occupation" relevant=" ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_/sex" relevant=" ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_/age_yrs" relevant=" ../add_participant  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/p_/is_natif" relevant=" ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind jr:constraintMsg="jr:itext('/data/p_/origine:jr:constraintMsg')" nodeset="/data/p_/origine" relevant=" ../is_natif  = 'Non' and  ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_/yrs_arriving" relevant=" ../is_natif  = 'Non' and  ../add_participant  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/p_/num_biopsie" relevant=" ../add_participant  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/p_/has_nodule" relevant=" ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_/nodule_nbr" relevant=" ../has_nodule  = 'Oui' and  ../add_participant  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/p_/nodule_location" relevant=" ../has_nodule  = 'Oui' and  ../add_participant  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_/mfs_gauche" relevant=" ../add_participant  = 'Oui'" required="true()" type="decimal"/>
+      <bind nodeset="/data/p_/mfs_droite" relevant=" ../add_participant  = 'Oui'" required="true()" type="decimal"/>
+      <bind nodeset="/data/p_/AdditionalNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/recorder_id">
+      <label ref="jr:itext('/data/recorder_id:label')"/>
+      <hint ref="jr:itext('/data/recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/region">
+      <label ref="jr:itext('/data/region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/region/Bouenza:label')"/>
+        <value>Bouenza</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/region/Lékoumou:label')"/>
+        <value>Lékoumou</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/region/Niari:label')"/>
+        <value>Niari</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/region/Pool:label')"/>
+        <value>Pool</value>
+      </item>
+    </select1>
+    <select1 ref="/data/district">
+      <label ref="jr:itext('/data/district:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[region_list =  /data/region ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/cluster_name">
+      <label ref="jr:itext('/data/cluster_name:label')"/>
+    </input>
+    <input ref="/data/cluster_id">
+      <label ref="jr:itext('/data/cluster_id:label')"/>
+    </input>
+    <select1 ref="/data/gps_method">
+      <label ref="jr:itext('/data/gps_method:label')"/>
+      <item>
+        <label ref="jr:itext('/data/gps_method/Manuel:label')"/>
+        <value>Manuel</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/gps_method/Automatique:label')"/>
+        <value>Automatique</value>
+      </item>
+    </select1>
+    <input ref="/data/GPS">
+      <label ref="jr:itext('/data/GPS:label')"/>
+      <hint ref="jr:itext('/data/GPS:hint')"/>
+    </input>
+    <input ref="/data/lat">
+      <label ref="jr:itext('/data/lat:label')"/>
+    </input>
+    <input ref="/data/lng">
+      <label ref="jr:itext('/data/lng:label')"/>
+    </input>
+    <group ref="/data/p_">
+      <label ref="jr:itext('/data/p_:label')"/>
+      <repeat nodeset="/data/p_">
+        <select1 ref="/data/p_/add_participant">
+          <label ref="jr:itext('/data/p_/add_participant:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_/add_participant/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/add_participant/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <select1 ref="/data/p_/Imethod">
+          <label ref="jr:itext('/data/p_/Imethod:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_/Imethod/Scanner:label')"/>
+            <value>Scanner</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/Imethod/Manuel:label')"/>
+            <value>Manuel</value>
+          </item>
+        </select1>
+        <input ref="/data/p_/BarcodeID">
+          <label ref="jr:itext('/data/p_/BarcodeID:label')"/>
+        </input>
+        <input ref="/data/p_/GenerateID">
+          <label ref="jr:itext('/data/p_/GenerateID:label')"/>
+        </input>
+        <select1 ref="/data/p_/filiation">
+          <label ref="jr:itext('/data/p_/filiation:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_/filiation/Chef de famille / ménage:label')"/>
+            <value>Chef de famille / ménage</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/filiation/Epouse:label')"/>
+            <value>Epouse</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/filiation/Fils /  fille:label')"/>
+            <value>Fils /  fille</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/filiation/Frère / Soeur / cousin:label')"/>
+            <value>Frère / Soeur / cousin</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/filiation/Neuveu / Nièce / Petit-flis / Petite-fille:label')"/>
+            <value>Neuveu / Nièce / Petit-flis / Petite-fille</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/filiation/Veuf / veuve:label')"/>
+            <value>Veuf / veuve</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/filiation/Père ou mère:label')"/>
+            <value>Père ou mère</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/filiation/Pas de parenté:label')"/>
+            <value>Pas de parenté</value>
+          </item>
+        </select1>
+        <select1 ref="/data/p_/occupation">
+          <label ref="jr:itext('/data/p_/occupation:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_/occupation/Agriculteur:label')"/>
+            <value>Agriculteur</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/occupation/Pêcheur:label')"/>
+            <value>Pêcheur</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/occupation/Fonctionnaire:label')"/>
+            <value>Fonctionnaire</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/occupation/Élève/étudiant:label')"/>
+            <value>Élève/étudiant</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/occupation/Ouvrier:label')"/>
+            <value>Ouvrier</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/occupation/Mécanicien:label')"/>
+            <value>Mécanicien</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/occupation/Ménagère:label')"/>
+            <value>Ménagère</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/occupation/Commerçant:label')"/>
+            <value>Commerçant</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/occupation/Autre:label')"/>
+            <value>Autre</value>
+          </item>
+        </select1>
+        <select1 ref="/data/p_/sex">
+          <label ref="jr:itext('/data/p_/sex:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_/sex/Masculin:label')"/>
+            <value>Masculin</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/sex/Féminin:label')"/>
+            <value>Féminin</value>
+          </item>
+        </select1>
+        <input ref="/data/p_/age_yrs">
+          <label ref="jr:itext('/data/p_/age_yrs:label')"/>
+        </input>
+        <select1 ref="/data/p_/is_natif">
+          <label ref="jr:itext('/data/p_/is_natif:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_/is_natif/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/is_natif/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <input ref="/data/p_/origine">
+          <label ref="jr:itext('/data/p_/origine:label')"/>
+        </input>
+        <input ref="/data/p_/yrs_arriving">
+          <label ref="jr:itext('/data/p_/yrs_arriving:label')"/>
+        </input>
+        <input ref="/data/p_/num_biopsie">
+          <label ref="jr:itext('/data/p_/num_biopsie:label')"/>
+        </input>
+        <select1 ref="/data/p_/has_nodule">
+          <label ref="jr:itext('/data/p_/has_nodule:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_/has_nodule/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/has_nodule/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <input ref="/data/p_/nodule_nbr">
+          <label ref="jr:itext('/data/p_/nodule_nbr:label')"/>
+        </input>
+        <select ref="/data/p_/nodule_location">
+          <label ref="jr:itext('/data/p_/nodule_location:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_/nodule_location/Membres.Supérieures:label')"/>
+            <value>Membres.Supérieures</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/nodule_location/Membres.Inférieures:label')"/>
+            <value>Membres.Inférieures</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_/nodule_location/Torse:label')"/>
+            <value>Torse</value>
+          </item>
+        </select>
+        <input ref="/data/p_/mfs_gauche">
+          <label ref="jr:itext('/data/p_/mfs_gauche:label')"/>
+        </input>
+        <input ref="/data/p_/mfs_droite">
+          <label ref="jr:itext('/data/p_/mfs_droite:label')"/>
+        </input>
+        <input ref="/data/p_/AdditionalNotes">
+          <label ref="jr:itext('/data/p_/AdditionalNotes:label')"/>
+        </input>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>
