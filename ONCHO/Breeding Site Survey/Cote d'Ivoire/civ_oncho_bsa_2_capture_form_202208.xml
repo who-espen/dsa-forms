@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Août 2022) 2. Fiche de collecte des Simulies par équipe V3</h:title>
+    <model >
+
+      <instance>
+        <data id="civ_oncho_bsa_2_capture_form_202208">
+          <b_recorder_id/>
+          <b_district/>
+          <b_site/>
+          <b_capture_point/>
+          <b_health_area/>
+          <b_date/>
+          <b_gps/>
+          <b_hour/>
+          <b_nb_blackflies1/>
+          <b_weather/>
+          <b_notes/>
+          <b_start/>
+          <b_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/b_recorder_id:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
+          </text>
+          <text id="/data/b_recorder_id:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/b_recorder_id:hint">
+            <value>Code à deux chiffres qui vous a été assigné</value>
+          </text>
+          <text id="/data/b_district:label">
+            <value>Sélectionner un district</value>
+          </text>
+          <text id="/data/b_district/Agboville:label">
+            <value>Agboville</value>
+          </text>
+          <text id="/data/b_district/Sikensi:label">
+            <value>Sikensi</value>
+          </text>
+          <text id="/data/b_district/Tiassalé:label">
+            <value>Tiassalé</value>
+          </text>
+          <text id="/data/b_district/Koro:label">
+            <value>Koro</value>
+          </text>
+          <text id="/data/b_district/Ouaninou:label">
+            <value>Ouaninou</value>
+          </text>
+          <text id="/data/b_district/Touba:label">
+            <value>Touba</value>
+          </text>
+          <text id="/data/b_district/Boundiali:label">
+            <value>Boundiali</value>
+          </text>
+          <text id="/data/b_district/Kouto:label">
+            <value>Kouto</value>
+          </text>
+          <text id="/data/b_district/Didievi:label">
+            <value>Didievi</value>
+          </text>
+          <text id="/data/b_district/Tiébissou:label">
+            <value>Tiébissou</value>
+          </text>
+          <text id="/data/b_district/Toumodi:label">
+            <value>Toumodi</value>
+          </text>
+          <text id="/data/b_district/Yamoussoukro:label">
+            <value>Yamoussoukro</value>
+          </text>
+          <text id="/data/b_district/Dianra:label">
+            <value>Dianra</value>
+          </text>
+          <text id="/data/b_district/Kounahiri:label">
+            <value>Kounahiri</value>
+          </text>
+          <text id="/data/b_district/Mankono:label">
+            <value>Mankono</value>
+          </text>
+          <text id="/data/b_district/Bouna:label">
+            <value>Bouna</value>
+          </text>
+          <text id="/data/b_district/Doropo:label">
+            <value>Doropo</value>
+          </text>
+          <text id="/data/b_district/Nassian:label">
+            <value>Nassian</value>
+          </text>
+          <text id="/data/b_district/Tehini:label">
+            <value>Tehini</value>
+          </text>
+          <text id="/data/b_district/Blolequin:label">
+            <value>Blolequin</value>
+          </text>
+          <text id="/data/b_district/Guiglo:label">
+            <value>Guiglo</value>
+          </text>
+          <text id="/data/b_site:label">
+            <value>Nom du gîte larvaire enquêté</value>
+          </text>
+          <text id="/data/b_site:hint">
+            <value>Le nom de la communauté où vous êtes</value>
+          </text>
+          <text id="/data/b_capture_point:label">
+            <value>Point de capture</value>
+          </text>
+          <text id="/data/b_health_area:label">
+            <value>Aire sanitaire</value>
+          </text>
+          <text id="/data/b_date:label">
+            <value>Date</value>
+          </text>
+          <text id="/data/b_gps:label">
+            <value>Collectez les données GPS</value>
+          </text>
+          <text id="/data/b_gps:hint">
+            <value>Fonctionne mieux à l'extérieur des bâtiments</value>
+          </text>
+          <text id="/data/b_hour:label">
+            <value>Sélectionner l'heure</value>
+          </text>
+          <text id="/data/b_hour/7:00 - 8:00:label">
+            <value>7:00 - 8:00</value>
+          </text>
+          <text id="/data/b_hour/8:00 - 9:00:label">
+            <value>8:00 - 9:00</value>
+          </text>
+          <text id="/data/b_hour/9:00 - 10:00:label">
+            <value>9:00 - 10:00</value>
+          </text>
+          <text id="/data/b_hour/10:00 - 11:00:label">
+            <value>10:00 - 11:00</value>
+          </text>
+          <text id="/data/b_hour/11:00 - 12:00:label">
+            <value>11:00 - 12:00</value>
+          </text>
+          <text id="/data/b_hour/12:00 - 13:00:label">
+            <value>12:00 - 13:00</value>
+          </text>
+          <text id="/data/b_hour/13:00 - 14:00:label">
+            <value>13:00 - 14:00</value>
+          </text>
+          <text id="/data/b_hour/14:00 - 15:00:label">
+            <value>14:00 - 15:00</value>
+          </text>
+          <text id="/data/b_hour/15:00 - 16:00:label">
+            <value>15:00 - 16:00</value>
+          </text>
+          <text id="/data/b_hour/16:00 - 17:00:label">
+            <value>16:00 - 17:00</value>
+          </text>
+          <text id="/data/b_hour/17:00 - 18:00:label">
+            <value>17:00 - 18:00</value>
+          </text>
+          <text id="/data/b_nb_blackflies1:label">
+            <value>Nombre de larves recoltées</value>
+          </text>
+          <text id="/data/b_weather:label">
+            <value>Observation climatique</value>
+          </text>
+          <text id="/data/b_weather/Nuageux:label">
+            <value>Nuageux</value>
+          </text>
+          <text id="/data/b_weather/Pluvieux:label">
+            <value>Pluvieux</value>
+          </text>
+          <text id="/data/b_weather/Ensoleillé:label">
+            <value>Ensoleillé</value>
+          </text>
+          <text id="/data/b_notes:label">
+            <value>Informations additionnelles</value>
+          </text>
+        </translation>
+      </itext>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/b_recorder_id:jr:constraintMsg')" nodeset="/data/b_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/b_district" required="true()" type="string"/>
+      <bind nodeset="/data/b_site" required="true()" type="string"/>
+      <bind nodeset="/data/b_capture_point" required="true()" type="string"/>
+      <bind nodeset="/data/b_health_area" required="true()" type="string"/>
+      <bind nodeset="/data/b_date" required="true()" type="date"/>
+      <bind nodeset="/data/b_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/b_hour" required="true()" type="string"/>
+      <bind nodeset="/data/b_nb_blackflies1" required="true()" type="int"/>
+      <bind nodeset="/data/b_weather" required="true()" type="string"/>
+      <bind nodeset="/data/b_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/b_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/b_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/b_recorder_id">
+      <label ref="jr:itext('/data/b_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/b_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/b_district">
+      <label ref="jr:itext('/data/b_district:label')"/>
+      <item>
+        <label ref="jr:itext('/data/b_district/Agboville:label')"/>
+        <value>Agboville</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Sikensi:label')"/>
+        <value>Sikensi</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Tiassalé:label')"/>
+        <value>Tiassalé</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Koro:label')"/>
+        <value>Koro</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Ouaninou:label')"/>
+        <value>Ouaninou</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Touba:label')"/>
+        <value>Touba</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Boundiali:label')"/>
+        <value>Boundiali</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Kouto:label')"/>
+        <value>Kouto</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Didievi:label')"/>
+        <value>Didievi</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Tiébissou:label')"/>
+        <value>Tiébissou</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Toumodi:label')"/>
+        <value>Toumodi</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Yamoussoukro:label')"/>
+        <value>Yamoussoukro</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Dianra:label')"/>
+        <value>Dianra</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Kounahiri:label')"/>
+        <value>Kounahiri</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Mankono:label')"/>
+        <value>Mankono</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Bouna:label')"/>
+        <value>Bouna</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Doropo:label')"/>
+        <value>Doropo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Nassian:label')"/>
+        <value>Nassian</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Tehini:label')"/>
+        <value>Tehini</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Blolequin:label')"/>
+        <value>Blolequin</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_district/Guiglo:label')"/>
+        <value>Guiglo</value>
+      </item>
+    </select1>
+    <input ref="/data/b_site">
+      <label ref="jr:itext('/data/b_site:label')"/>
+      <hint ref="jr:itext('/data/b_site:hint')"/>
+    </input>
+    <input ref="/data/b_capture_point">
+      <label ref="jr:itext('/data/b_capture_point:label')"/>
+    </input>
+    <input ref="/data/b_health_area">
+      <label ref="jr:itext('/data/b_health_area:label')"/>
+    </input>
+    <input ref="/data/b_date">
+      <label ref="jr:itext('/data/b_date:label')"/>
+    </input>
+    <input ref="/data/b_gps">
+      <label ref="jr:itext('/data/b_gps:label')"/>
+      <hint ref="jr:itext('/data/b_gps:hint')"/>
+    </input>
+    <select1 appearance="minimal" ref="/data/b_hour">
+      <label ref="jr:itext('/data/b_hour:label')"/>
+      <item>
+        <label ref="jr:itext('/data/b_hour/7:00 - 8:00:label')"/>
+        <value>7:00 - 8:00</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_hour/8:00 - 9:00:label')"/>
+        <value>8:00 - 9:00</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_hour/9:00 - 10:00:label')"/>
+        <value>9:00 - 10:00</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_hour/10:00 - 11:00:label')"/>
+        <value>10:00 - 11:00</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_hour/11:00 - 12:00:label')"/>
+        <value>11:00 - 12:00</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_hour/12:00 - 13:00:label')"/>
+        <value>12:00 - 13:00</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_hour/13:00 - 14:00:label')"/>
+        <value>13:00 - 14:00</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_hour/14:00 - 15:00:label')"/>
+        <value>14:00 - 15:00</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_hour/15:00 - 16:00:label')"/>
+        <value>15:00 - 16:00</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_hour/16:00 - 17:00:label')"/>
+        <value>16:00 - 17:00</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_hour/17:00 - 18:00:label')"/>
+        <value>17:00 - 18:00</value>
+      </item>
+    </select1>
+    <input ref="/data/b_nb_blackflies1">
+      <label ref="jr:itext('/data/b_nb_blackflies1:label')"/>
+    </input>
+    <select1 ref="/data/b_weather">
+      <label ref="jr:itext('/data/b_weather:label')"/>
+      <item>
+        <label ref="jr:itext('/data/b_weather/Nuageux:label')"/>
+        <value>Nuageux</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_weather/Pluvieux:label')"/>
+        <value>Pluvieux</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/b_weather/Ensoleillé:label')"/>
+        <value>Ensoleillé</value>
+      </item>
+    </select1>
+    <input ref="/data/b_notes">
+      <label ref="jr:itext('/data/b_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
