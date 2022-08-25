@@ -33,6 +33,7 @@
           <s_end/>
           <meta>
             <instanceID/>
+            <randomnum/>
           </meta>
         </data>
       </instance>
@@ -148,7 +149,7 @@
             <value>Yobe</value>
           </text>
           <text id="district-0">
-            <value>Barde</value>
+            <value>Bade</value>
           </text>
           <text id="district-1">
             <value>Bursari</value>
@@ -181,7 +182,7 @@
             <value>Tarmuwa</value>
           </text>
           <text id="district-11">
-            <value>Yunusari</value>
+            <value>Yusufari</value>
           </text>
           <text id="community-0">
             <value>Dagona</value>
@@ -190,7 +191,7 @@
             <value>Kaliyari</value>
           </text>
           <text id="community-2">
-            <value>Rinukunu</value>
+            <value>Renukunu</value>
           </text>
           <text id="community-3">
             <value>Chana</value>
@@ -199,16 +200,16 @@
             <value>Doto</value>
           </text>
           <text id="community-5">
-            <value>Kermi</value>
+            <value>Kurmi</value>
           </text>
           <text id="community-6">
-            <value>Abakiri</value>
+            <value>Abakire</value>
           </text>
           <text id="community-7">
-            <value>Garin Bauci</value>
+            <value>Garin Baushe</value>
           </text>
           <text id="community-8">
-            <value>Gubber</value>
+            <value>Gubana</value>
           </text>
           <text id="community-9">
             <value>Madawun</value>
@@ -254,7 +255,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="yesno">
         <root>
           <item>
@@ -279,7 +279,7 @@
         <root>
           <item>
             <itextId>district-0</itextId>
-            <name>Barde</name>
+            <name>Bade</name>
             <region>Yobe</region>
           </item>
           <item>
@@ -334,7 +334,7 @@
           </item>
           <item>
             <itextId>district-11</itextId>
-            <name>Yunusari</name>
+            <name>Yusufari</name>
             <region>Yobe</region>
           </item>
         </root>
@@ -343,7 +343,7 @@
         <root>
           <item>
             <itextId>community-0</itextId>
-            <district>Barde</district>
+            <district>Bade</district>
             <name>Dagona</name>
           </item>
           <item>
@@ -354,7 +354,7 @@
           <item>
             <itextId>community-2</itextId>
             <district>Bursari</district>
-            <name>Rinukunu</name>
+            <name>Renukunu</name>
           </item>
           <item>
             <itextId>community-3</itextId>
@@ -369,22 +369,22 @@
           <item>
             <itextId>community-5</itextId>
             <district>Fika</district>
-            <name>Kermi</name>
+            <name>Kurmi</name>
           </item>
           <item>
             <itextId>community-6</itextId>
             <district>Fune</district>
-            <name>Abakiri</name>
+            <name>Abakire</name>
           </item>
           <item>
             <itextId>community-7</itextId>
             <district>Fune</district>
-            <name>Garin Bauci</name>
+            <name>Garin Baushe</name>
           </item>
           <item>
             <itextId>community-8</itextId>
             <district>Fune</district>
-            <name>Gubber</name>
+            <name>Gubana</name>
           </item>
           <item>
             <itextId>community-9</itextId>
@@ -453,7 +453,7 @@
           </item>
           <item>
             <itextId>community-22</itextId>
-            <district>Yunusari</district>
+            <district>Yusufari</district>
             <name>Kachellari</name>
           </item>
         </root>
@@ -462,7 +462,7 @@
       <bind nodeset="/data/s_district" required="true()" type="string"/>
       <bind nodeset="/data/s_community" required="true()" type="string"/>
       <bind nodeset="/data/s_site" required="true()" type="string"/>
-      <bind nodeset="/data/s_site_id" required="true()" type="string"/>
+      <bind nodeset="/data/s_site_id" calculate="concat(/data/s_community,'-',/data/meta/randomnum)" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/s_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/s_river" required="true()" type="string"/>
       <bind nodeset="/data/s_collector_a" required="true()" type="string"/>
@@ -478,6 +478,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/s_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/s_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="substr(random(),3,7)"/>
     </model>
   </h:head>
   <h:body>
