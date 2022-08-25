@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Jun 2022) 5. TAS1 FL - Formulário de participantes V2.1</h:title>
+    <h:title>(Jun 2022) 5. TAS1 FL - Formulário de participantes (Phase 2)</h:title>
     <model >
 
       <instance>
-        <data id="gw_lf_tas1_2_partcipants_202206_v2_1">
+        <data id="gw_lf_tas1_2_partcipants_phase2_202206">
           <p_recorderID/>
           <p_region/>
           <p_district/>
@@ -130,7 +130,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
       <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,7), '-', substr(random(),10,13))"/>
-       </model>
+    </model>
   </h:head>
   <h:body>
     <input ref="/data/p_recorderID">
