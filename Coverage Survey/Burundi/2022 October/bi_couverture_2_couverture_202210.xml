@@ -182,7 +182,7 @@
           <text id="/data/c_questions/non_present_campagne/1.Voyage:label">
             <value>1.Voyage</value>
           </text>
-          <text id="/data/c_questions/non_present_campagne/2. A l'internat /Ecole:label">
+          <text id="/data/c_questions/non_present_campagne/2. A l.internat /Ecole:label">
             <value>2. A l'internat /Ecole</value>
           </text>
           <text id="/data/c_questions/non_present_campagne/3. Pour la recherche du travail:label">
@@ -209,7 +209,7 @@
           <text id="/data/c_questions/non_menage_enregistre:label">
             <value>Pourquoi votre ménage n'était-il pas enregistré pendant la campagne?</value>
           </text>
-          <text id="/data/c_questions/non_menage_enregistre/1. DC/ASC n'est pas venu:label">
+          <text id="/data/c_questions/non_menage_enregistre/1. DC/ASC n.est pas venu:label">
             <value>1. DC/ASC n'est pas venu</value>
           </text>
           <text id="/data/c_questions/non_menage_enregistre/2. Pas de campagne:label">
@@ -218,7 +218,7 @@
           <text id="/data/c_questions/non_menage_enregistre/3. Absent pendant le jour de campagne:label">
             <value>3. Absent pendant le jour de campagne</value>
           </text>
-          <text id="/data/c_questions/non_menage_enregistre/4. Personne n'était à la maison:label">
+          <text id="/data/c_questions/non_menage_enregistre/4. Personne n.était à la maison:label">
             <value>4. Personne n'était à la maison</value>
           </text>
           <text id="/data/c_questions/non_menage_enregistre/Autre:label">
@@ -320,7 +320,7 @@
           <text id="/data/c_questions/ivm/pourquoi_pas_avale1/3.je.ne.suis.pas.malade:label">
             <value>3. Je ne suis pas malade</value>
           </text>
-          <text id="/data/c_questions/ivm/pourquoi_pas_avale1/4.pas.recu.suffisamment.d'informations:label">
+          <text id="/data/c_questions/ivm/pourquoi_pas_avale1/4.pas.recu.suffisamment.d.informations:label">
             <value>4. Je n'ai pas eu suffisament d'informations sur le médicament</value>
           </text>
           <text id="/data/c_questions/ivm/pourquoi_pas_avale1/Autre:label">
@@ -440,7 +440,7 @@
           <text id="/data/c_questions/alb/pourquoi_pas_avale2/3.je.ne.suis.pas.malade:label">
             <value>3. Je ne suis pas malade</value>
           </text>
-          <text id="/data/c_questions/alb/pourquoi_pas_avale2/4.pas.recu.suffisamment.d'informations:label">
+          <text id="/data/c_questions/alb/pourquoi_pas_avale2/4.pas.recu.suffisamment.d.informations:label">
             <value>4. Je n'ai pas eu suffisament d'informations sur le médicament</value>
           </text>
           <text id="/data/c_questions/alb/pourquoi_pas_avale2/Autre:label">
@@ -486,10 +486,10 @@
       </itext>
       <bind nodeset="/data/c_date" required="true()" type="date"/>
       <bind constraint=". &gt; 0 and . &lt; 100" jr:constraintMsg="jr:itext('/data/c_code_enqueteur:jr:constraintMsg')" nodeset="/data/c_code_enqueteur" required="true()" type="int"/>
-      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
-      <bind nodeset="/data/c_centre_sante" required="true()" type="string" db_add_col_2="." db_add_col_1="/data/c_district"/>
-      <bind nodeset="/data/c_colline" required="true()" type="string" db_add_col_3="." db_add_col_2="/data/c_centre_sante"/>
-      <bind nodeset="/data/c_colline_id" required="true()" type="string" db_add_col_4="." db_add_col_3="/data/c_colline"/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/c_centre_sante" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/c_district"/>
+      <bind nodeset="/data/c_colline" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/c_centre_sante"/>
+      <bind nodeset="/data/c_colline_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/c_colline"/>
       <bind nodeset="/data/c_num_menage" required="true()" type="string"/>
       <bind nodeset="/data/c_membre_present" required="true()" type="string"/>
       <bind nodeset="/data/c_questions" relevant="selected( /data/c_membre_present , 'Oui')"/>
@@ -614,8 +614,8 @@
             <value>1.Voyage</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/c_questions/non_present_campagne/2. A l'internat /Ecole:label')"/>
-            <value>2. A l'internat /Ecole</value>
+            <label ref="jr:itext('/data/c_questions/non_present_campagne/2. A l.internat /Ecole:label')"/>
+            <value>2. A l.internat /Ecole</value>
           </item>
           <item>
             <label ref="jr:itext('/data/c_questions/non_present_campagne/3. Pour la recherche du travail:label')"/>
@@ -647,8 +647,8 @@
         <select1 ref="/data/c_questions/non_menage_enregistre">
           <label ref="jr:itext('/data/c_questions/non_menage_enregistre:label')"/>
           <item>
-            <label ref="jr:itext('/data/c_questions/non_menage_enregistre/1. DC/ASC n'est pas venu:label')"/>
-            <value>1. DC/ASC n'est pas venu</value>
+            <label ref="jr:itext('/data/c_questions/non_menage_enregistre/1. DC/ASC n.est pas venu:label')"/>
+            <value>1. DC/ASC n.est pas venu</value>
           </item>
           <item>
             <label ref="jr:itext('/data/c_questions/non_menage_enregistre/2. Pas de campagne:label')"/>
@@ -659,8 +659,8 @@
             <value>3. Absent pendant le jour de campagne</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/c_questions/non_menage_enregistre/4. Personne n'était à la maison:label')"/>
-            <value>4. Personne n'était à la maison</value>
+            <label ref="jr:itext('/data/c_questions/non_menage_enregistre/4. Personne n.était à la maison:label')"/>
+            <value>4. Personne n.était à la maison</value>
           </item>
           <item>
             <label ref="jr:itext('/data/c_questions/non_menage_enregistre/Autre:label')"/>
@@ -785,8 +785,8 @@
               <value>3.je.ne.suis.pas.malade</value>
             </item>
             <item>
-              <label ref="jr:itext('/data/c_questions/ivm/pourquoi_pas_avale1/4.pas.recu.suffisamment.d'informations:label')"/>
-              <value>4.pas.recu.suffisamment.d'informations</value>
+              <label ref="jr:itext('/data/c_questions/ivm/pourquoi_pas_avale1/4.pas.recu.suffisamment.d.informations:label')"/>
+              <value>4.pas.recu.suffisamment.d.informations</value>
             </item>
             <item>
               <label ref="jr:itext('/data/c_questions/ivm/pourquoi_pas_avale1/Autre:label')"/>
@@ -934,8 +934,8 @@
               <value>3.je.ne.suis.pas.malade</value>
             </item>
             <item>
-              <label ref="jr:itext('/data/c_questions/alb/pourquoi_pas_avale2/4.pas.recu.suffisamment.d'informations:label')"/>
-              <value>4.pas.recu.suffisamment.d'informations</value>
+              <label ref="jr:itext('/data/c_questions/alb/pourquoi_pas_avale2/4.pas.recu.suffisamment.d.informations:label')"/>
+              <value>4.pas.recu.suffisamment.d.informations</value>
             </item>
             <item>
               <label ref="jr:itext('/data/c_questions/alb/pourquoi_pas_avale2/Autre:label')"/>
