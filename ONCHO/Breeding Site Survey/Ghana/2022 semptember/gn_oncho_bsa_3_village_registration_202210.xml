@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2022 October) - 3. Village registration</h:title>
+    <model >
+
+      <instance>
+        <data id="gn_oncho_bsa_3_village_registration_202210">
+          <v_recorder_id/>
+          <v_region/>
+          <v_district/>
+          <v_district_other/>
+          <v_site/>
+          <v_site_other/>
+          <v_gps/>
+          <v_total_population/>
+          <v_has_health_center/>
+          <v_has_health_center_type/>
+          <v_black_flies_present/>
+          <v_mda_carried/>
+          <v_mda>
+            <year/>
+            <month/>
+          </v_mda>
+          <v_notes/>
+          <v_start/>
+          <v_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/v_recorder_id:jr:constraintMsg">
+            <value>Must be two digit number</value>
+          </text>
+          <text id="/data/v_recorder_id:label">
+            <value>Enter recorder ID</value>
+          </text>
+          <text id="/data/v_recorder_id:hint">
+            <value>Enter 2-digit recorder code provided to each recorder (person doing the data entry)</value>
+          </text>
+          <text id="/data/v_region:label">
+            <value>Select Region</value>
+          </text>
+          <text id="/data/v_region/Bono:label">
+            <value>Bono</value>
+          </text>
+          <text id="/data/v_region/Western North:label">
+            <value>Western North</value>
+          </text>
+          <text id="/data/v_district:label">
+            <value>Select district</value>
+          </text>
+          <text id="/data/v_district:hint">
+            <value>Select the appropriate district</value>
+          </text>
+          <text id="/data/v_district_other:label">
+            <value>Enter the district</value>
+          </text>
+          <text id="/data/v_site:label">
+            <value>Select community name</value>
+          </text>
+          <text id="/data/v_site_other:label">
+            <value>Enter the site</value>
+          </text>
+          <text id="/data/v_gps:label">
+            <value>Enter GPS</value>
+          </text>
+          <text id="/data/v_gps:hint">
+            <value>Collect GPS coordinates - Must be outside to get accurate reading</value>
+          </text>
+          <text id="/data/v_total_population:label">
+            <value>What is the total population of this village?</value>
+          </text>
+          <text id="/data/v_total_population:hint">
+            <value>Please obtain this information from the community MDA register or local leaders</value>
+          </text>
+          <text id="/data/v_has_health_center:label">
+            <value>Is there a health centre in this community?</value>
+          </text>
+          <text id="/data/v_has_health_center/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/v_has_health_center/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/v_has_health_center_type:label">
+            <value>What type of Health Centre is it?</value>
+          </text>
+          <text id="/data/v_has_health_center_type/Primary:label">
+            <value>Primary</value>
+          </text>
+          <text id="/data/v_has_health_center_type/Secondary:label">
+            <value>Secondary</value>
+          </text>
+          <text id="/data/v_has_health_center_type/District hospital:label">
+            <value>District hospital</value>
+          </text>
+          <text id="/data/v_has_health_center_type/Other:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/v_black_flies_present:label">
+            <value>Are black flies present in this village?</value>
+          </text>
+          <text id="/data/v_black_flies_present:hint">
+            <value>Show printed picture of blackfly, ask about fast flowing rivers</value>
+          </text>
+          <text id="/data/v_black_flies_present/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/v_black_flies_present/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/v_black_flies_present/Do Not Know:label">
+            <value>Do Not Know</value>
+          </text>
+          <text id="/data/v_mda_carried:label">
+            <value>Is MDA carried out in this village?</value>
+          </text>
+          <text id="/data/v_mda_carried:hint">
+            <value>Do people come to distribute medicine for onchocerciasis or LF, Mectizan?</value>
+          </text>
+          <text id="/data/v_mda_carried/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/v_mda_carried/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/v_mda_carried/Do Not Know:label">
+            <value>Do Not Know</value>
+          </text>
+          <text id="/data/v_mda:label">
+            <value>When was the last MDA in this village?</value>
+          </text>
+          <text id="/data/v_mda/year:jr:constraintMsg">
+            <value>Please enter a valid year</value>
+          </text>
+          <text id="/data/v_mda/year:label">
+            <value>Enter the year of last MDA</value>
+          </text>
+          <text id="/data/v_mda/month:label">
+            <value>Enter the month of last MDA</value>
+          </text>
+          <text id="/data/v_mda/month/January:label">
+            <value>January</value>
+          </text>
+          <text id="/data/v_mda/month/February:label">
+            <value>February</value>
+          </text>
+          <text id="/data/v_mda/month/March:label">
+            <value>March</value>
+          </text>
+          <text id="/data/v_mda/month/April:label">
+            <value>April</value>
+          </text>
+          <text id="/data/v_mda/month/May:label">
+            <value>May</value>
+          </text>
+          <text id="/data/v_mda/month/June:label">
+            <value>June</value>
+          </text>
+          <text id="/data/v_mda/month/July:label">
+            <value>July</value>
+          </text>
+          <text id="/data/v_mda/month/August:label">
+            <value>August</value>
+          </text>
+          <text id="/data/v_mda/month/September:label">
+            <value>September</value>
+          </text>
+          <text id="/data/v_mda/month/October:label">
+            <value>October</value>
+          </text>
+          <text id="/data/v_mda/month/November:label">
+            <value>November</value>
+          </text>
+          <text id="/data/v_mda/month/December:label">
+            <value>December</value>
+          </text>
+          <text id="/data/v_notes:label">
+            <value>Additional Notes</value>
+          </text>
+          <text id="/data/v_notes:hint">
+            <value>Anything else you want to tell us?</value>
+          </text>
+          <text id="yesno-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesno-1">
+            <value>No</value>
+          </text>
+          <text id="yes_no_dont_know-0">
+            <value>Yes</value>
+          </text>
+          <text id="yes_no_dont_know-1">
+            <value>No</value>
+          </text>
+          <text id="yes_no_dont_know-2">
+            <value>Do Not Know</value>
+          </text>
+          <text id="health_center-0">
+            <value>Primary</value>
+          </text>
+          <text id="health_center-1">
+            <value>Secondary</value>
+          </text>
+          <text id="health_center-2">
+            <value>District hospital</value>
+          </text>
+          <text id="health_center-3">
+            <value>Other</value>
+          </text>
+          <text id="month-0">
+            <value>January</value>
+          </text>
+          <text id="month-1">
+            <value>February</value>
+          </text>
+          <text id="month-2">
+            <value>March</value>
+          </text>
+          <text id="month-3">
+            <value>April</value>
+          </text>
+          <text id="month-4">
+            <value>May</value>
+          </text>
+          <text id="month-5">
+            <value>June</value>
+          </text>
+          <text id="month-6">
+            <value>July</value>
+          </text>
+          <text id="month-7">
+            <value>August</value>
+          </text>
+          <text id="month-8">
+            <value>September</value>
+          </text>
+          <text id="month-9">
+            <value>October</value>
+          </text>
+          <text id="month-10">
+            <value>November</value>
+          </text>
+          <text id="month-11">
+            <value>December</value>
+          </text>
+          <text id="region-0">
+            <value>Bono</value>
+          </text>
+          <text id="region-1">
+            <value>Western North</value>
+          </text>
+          <text id="district-0">
+            <value>Bia East</value>
+          </text>
+          <text id="district-1">
+            <value>Dorma West</value>
+          </text>
+          <text id="district-2">
+            <value>Dormaa</value>
+          </text>
+          <text id="district-3">
+            <value>Jaman South</value>
+          </text>
+          <text id="district-4">
+            <value>Other</value>
+          </text>
+          <text id="district-5">
+            <value>Other</value>
+          </text>
+          <text id="community-0">
+            <value>Akwasiatuakurom (Kasapenso)</value>
+          </text>
+          <text id="community-1">
+            <value>Amoakokrom_1</value>
+          </text>
+          <text id="community-2">
+            <value>Anwona2</value>
+          </text>
+          <text id="community-3">
+            <value>Baanafo</value>
+          </text>
+          <text id="community-4">
+            <value>Baano No.1</value>
+          </text>
+          <text id="community-5">
+            <value>Bidienkwanta</value>
+          </text>
+          <text id="community-6">
+            <value>Dormaa Agogo</value>
+          </text>
+          <text id="community-7">
+            <value>Fosukrom</value>
+          </text>
+          <text id="community-8">
+            <value>Gyapekurom</value>
+          </text>
+          <text id="community-9">
+            <value>Kadwo Amakurom</value>
+          </text>
+          <text id="community-10">
+            <value>Kokorasua</value>
+          </text>
+          <text id="community-11">
+            <value>Komfuokurom</value>
+          </text>
+          <text id="community-12">
+            <value>Korase</value>
+          </text>
+          <text id="community-13">
+            <value>Kwabenkrakrom</value>
+          </text>
+          <text id="community-14">
+            <value>Kwanto Yaayaakrom</value>
+          </text>
+          <text id="community-15">
+            <value>Nkwantaso</value>
+          </text>
+          <text id="community-16">
+            <value>Owunta</value>
+          </text>
+          <text id="community-17">
+            <value>Sabreni</value>
+          </text>
+          <text id="community-18">
+            <value>Segera</value>
+          </text>
+          <text id="community-19">
+            <value>Tafro</value>
+          </text>
+          <text id="community-20">
+            <value>Tainano No.2</value>
+          </text>
+          <text id="community-21">
+            <value>Taino No.1</value>
+          </text>
+          <text id="community-22">
+            <value>Wamho No.1</value>
+          </text>
+          <text id="community-23">
+            <value>Other</value>
+          </text>
+          <text id="community-24">
+            <value>Other</value>
+          </text>
+          <text id="community-25">
+            <value>Other</value>
+          </text>
+          <text id="community-26">
+            <value>Other</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="yesno">
+        <root>
+          <item>
+            <itextId>yesno-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesno-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no_dont_know">
+        <root>
+          <item>
+            <itextId>yes_no_dont_know-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no_dont_know-1</itextId>
+            <name>No</name>
+          </item>
+          <item>
+            <itextId>yes_no_dont_know-2</itextId>
+            <name>Do Not Know</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="health_center">
+        <root>
+          <item>
+            <itextId>health_center-0</itextId>
+            <name>Primary</name>
+          </item>
+          <item>
+            <itextId>health_center-1</itextId>
+            <name>Secondary</name>
+          </item>
+          <item>
+            <itextId>health_center-2</itextId>
+            <name>District hospital</name>
+          </item>
+          <item>
+            <itextId>health_center-3</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="month">
+        <root>
+          <item>
+            <itextId>month-0</itextId>
+            <name>January</name>
+          </item>
+          <item>
+            <itextId>month-1</itextId>
+            <name>February</name>
+          </item>
+          <item>
+            <itextId>month-2</itextId>
+            <name>March</name>
+          </item>
+          <item>
+            <itextId>month-3</itextId>
+            <name>April</name>
+          </item>
+          <item>
+            <itextId>month-4</itextId>
+            <name>May</name>
+          </item>
+          <item>
+            <itextId>month-5</itextId>
+            <name>June</name>
+          </item>
+          <item>
+            <itextId>month-6</itextId>
+            <name>July</name>
+          </item>
+          <item>
+            <itextId>month-7</itextId>
+            <name>August</name>
+          </item>
+          <item>
+            <itextId>month-8</itextId>
+            <name>September</name>
+          </item>
+          <item>
+            <itextId>month-9</itextId>
+            <name>October</name>
+          </item>
+          <item>
+            <itextId>month-10</itextId>
+            <name>November</name>
+          </item>
+          <item>
+            <itextId>month-11</itextId>
+            <name>December</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region">
+        <root>
+          <item>
+            <itextId>region-0</itextId>
+            <name>Bono</name>
+          </item>
+          <item>
+            <itextId>region-1</itextId>
+            <name>Western North</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district">
+        <root>
+          <item>
+            <itextId>district-0</itextId>
+            <name>Bia East</name>
+            <region>Western North</region>
+          </item>
+          <item>
+            <itextId>district-1</itextId>
+            <name>Dorma West</name>
+            <region>Bono</region>
+          </item>
+          <item>
+            <itextId>district-2</itextId>
+            <name>Dormaa</name>
+            <region>Bono</region>
+          </item>
+          <item>
+            <itextId>district-3</itextId>
+            <name>Jaman South</name>
+            <region>Bono</region>
+          </item>
+          <item>
+            <itextId>district-4</itextId>
+            <name>Other</name>
+            <region>Western North</region>
+          </item>
+          <item>
+            <itextId>district-5</itextId>
+            <name>Other</name>
+            <region>Bono</region>
+          </item>
+        </root>
+      </instance>
+      <instance id="community">
+        <root>
+          <item>
+            <itextId>community-0</itextId>
+            <district>Bia East</district>
+            <name>Akwasiatuakurom (Kasapenso)</name>
+          </item>
+          <item>
+            <itextId>community-1</itextId>
+            <district>Dorma West</district>
+            <name>Amoakokrom_1</name>
+          </item>
+          <item>
+            <itextId>community-2</itextId>
+            <district>Dorma West</district>
+            <name>Anwona2</name>
+          </item>
+          <item>
+            <itextId>community-3</itextId>
+            <district>Jaman South</district>
+            <name>Baanafo</name>
+          </item>
+          <item>
+            <itextId>community-4</itextId>
+            <district>Jaman South</district>
+            <name>Baano No.1</name>
+          </item>
+          <item>
+            <itextId>community-5</itextId>
+            <district>Dorma West</district>
+            <name>Bidienkwanta</name>
+          </item>
+          <item>
+            <itextId>community-6</itextId>
+            <district>Dorma West</district>
+            <name>Dormaa Agogo</name>
+          </item>
+          <item>
+            <itextId>community-7</itextId>
+            <district>Bia East</district>
+            <name>Fosukrom</name>
+          </item>
+          <item>
+            <itextId>community-8</itextId>
+            <district>Jaman South</district>
+            <name>Gyapekurom</name>
+          </item>
+          <item>
+            <itextId>community-9</itextId>
+            <district>Bia East</district>
+            <name>Kadwo Amakurom</name>
+          </item>
+          <item>
+            <itextId>community-10</itextId>
+            <district>Dormaa</district>
+            <name>Kokorasua</name>
+          </item>
+          <item>
+            <itextId>community-11</itextId>
+            <district>Jaman South</district>
+            <name>Komfuokurom</name>
+          </item>
+          <item>
+            <itextId>community-12</itextId>
+            <district>Dormaa</district>
+            <name>Korase</name>
+          </item>
+          <item>
+            <itextId>community-13</itextId>
+            <district>Dorma West</district>
+            <name>Kwabenkrakrom</name>
+          </item>
+          <item>
+            <itextId>community-14</itextId>
+            <district>Dorma West</district>
+            <name>Kwanto Yaayaakrom</name>
+          </item>
+          <item>
+            <itextId>community-15</itextId>
+            <district>Dorma West</district>
+            <name>Nkwantaso</name>
+          </item>
+          <item>
+            <itextId>community-16</itextId>
+            <district>Bia East</district>
+            <name>Owunta</name>
+          </item>
+          <item>
+            <itextId>community-17</itextId>
+            <district>Jaman South</district>
+            <name>Sabreni</name>
+          </item>
+          <item>
+            <itextId>community-18</itextId>
+            <district>Jaman South</district>
+            <name>Segera</name>
+          </item>
+          <item>
+            <itextId>community-19</itextId>
+            <district>Dormaa</district>
+            <name>Tafro</name>
+          </item>
+          <item>
+            <itextId>community-20</itextId>
+            <district>Jaman South</district>
+            <name>Tainano No.2</name>
+          </item>
+          <item>
+            <itextId>community-21</itextId>
+            <district>Jaman South</district>
+            <name>Taino No.1</name>
+          </item>
+          <item>
+            <itextId>community-22</itextId>
+            <district>Dormaa</district>
+            <name>Wamho No.1</name>
+          </item>
+          <item>
+            <itextId>community-23</itextId>
+            <district>Bia East</district>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-24</itextId>
+            <district>Dorma West</district>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-25</itextId>
+            <district>Dormaa</district>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-26</itextId>
+            <district>Jaman South</district>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt;= 10 and . &lt;= 99" jr:constraintMsg="jr:itext('/data/v_recorder_id:jr:constraintMsg')" nodeset="/data/v_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/v_region" required="true()" type="string"/>
+      <bind nodeset="/data/v_district" required="true()" type="string"/>
+      <bind nodeset="/data/v_district_other" relevant="selected( /data/v_district , 'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/v_site" relevant="if(selected( /data/v_district , 'Other'), false(),true())" required="true()" type="string"/>
+      <bind nodeset="/data/v_site_other" relevant="selected( /data/v_site , 'Other') or selected( /data/v_district , 'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/v_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/v_total_population" required="true()" type="int"/>
+      <bind nodeset="/data/v_has_health_center" required="true()" type="string"/>
+      <bind nodeset="/data/v_has_health_center_type" relevant="selected( /data/v_has_health_center , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/v_black_flies_present" required="true()" type="string"/>
+      <bind nodeset="/data/v_mda_carried" relevant="selected( /data/v_black_flies_present , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/v_mda" relevant="selected( /data/v_black_flies_present , 'Yes')"/>
+      <bind constraint=". &gt; 1970 and . &lt; 2023" jr:constraintMsg="jr:itext('/data/v_mda/year:jr:constraintMsg')" nodeset="/data/v_mda/year" required="true()" type="int"/>
+      <bind nodeset="/data/v_mda/month" required="true()" type="string"/>
+      <bind nodeset="/data/v_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/v_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/v_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/v_recorder_id">
+      <label ref="jr:itext('/data/v_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/v_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/v_region">
+      <label ref="jr:itext('/data/v_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/v_region/Bono:label')"/>
+        <value>Bono</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_region/Western North:label')"/>
+        <value>Western North</value>
+      </item>
+    </select1>
+    <select1 ref="/data/v_district">
+      <label ref="jr:itext('/data/v_district:label')"/>
+      <hint ref="jr:itext('/data/v_district:hint')"/>
+      <itemset nodeset="instance('district')/root/item[region =  /data/v_region ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/v_district_other">
+      <label ref="jr:itext('/data/v_district_other:label')"/>
+    </input>
+    <select1 ref="/data/v_site">
+      <label ref="jr:itext('/data/v_site:label')"/>
+      <itemset nodeset="instance('community')/root/item[district =  /data/v_district ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/v_site_other">
+      <label ref="jr:itext('/data/v_site_other:label')"/>
+    </input>
+    <input ref="/data/v_gps">
+      <label ref="jr:itext('/data/v_gps:label')"/>
+      <hint ref="jr:itext('/data/v_gps:hint')"/>
+    </input>
+    <input ref="/data/v_total_population">
+      <label ref="jr:itext('/data/v_total_population:label')"/>
+      <hint ref="jr:itext('/data/v_total_population:hint')"/>
+    </input>
+    <select1 ref="/data/v_has_health_center">
+      <label ref="jr:itext('/data/v_has_health_center:label')"/>
+      <item>
+        <label ref="jr:itext('/data/v_has_health_center/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_has_health_center/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/v_has_health_center_type">
+      <label ref="jr:itext('/data/v_has_health_center_type:label')"/>
+      <item>
+        <label ref="jr:itext('/data/v_has_health_center_type/Primary:label')"/>
+        <value>Primary</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_has_health_center_type/Secondary:label')"/>
+        <value>Secondary</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_has_health_center_type/District hospital:label')"/>
+        <value>District hospital</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_has_health_center_type/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <select1 ref="/data/v_black_flies_present">
+      <label ref="jr:itext('/data/v_black_flies_present:label')"/>
+      <hint ref="jr:itext('/data/v_black_flies_present:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/v_black_flies_present/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_black_flies_present/No:label')"/>
+        <value>No</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_black_flies_present/Do Not Know:label')"/>
+        <value>Do Not Know</value>
+      </item>
+    </select1>
+    <select1 ref="/data/v_mda_carried">
+      <label ref="jr:itext('/data/v_mda_carried:label')"/>
+      <hint ref="jr:itext('/data/v_mda_carried:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/v_mda_carried/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_mda_carried/No:label')"/>
+        <value>No</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_mda_carried/Do Not Know:label')"/>
+        <value>Do Not Know</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/data/v_mda">
+      <label ref="jr:itext('/data/v_mda:label')"/>
+      <input ref="/data/v_mda/year">
+        <label ref="jr:itext('/data/v_mda/year:label')"/>
+      </input>
+      <select1 ref="/data/v_mda/month">
+        <label ref="jr:itext('/data/v_mda/month:label')"/>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/January:label')"/>
+          <value>January</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/February:label')"/>
+          <value>February</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/March:label')"/>
+          <value>March</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/April:label')"/>
+          <value>April</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/May:label')"/>
+          <value>May</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/June:label')"/>
+          <value>June</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/July:label')"/>
+          <value>July</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/August:label')"/>
+          <value>August</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/September:label')"/>
+          <value>September</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/October:label')"/>
+          <value>October</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/November:label')"/>
+          <value>November</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/v_mda/month/December:label')"/>
+          <value>December</value>
+        </item>
+      </select1>
+    </group>
+    <input ref="/data/v_notes">
+      <label ref="jr:itext('/data/v_notes:label')"/>
+      <hint ref="jr:itext('/data/v_notes:hint')"/>
+    </input>
+  </h:body>
+</h:html>

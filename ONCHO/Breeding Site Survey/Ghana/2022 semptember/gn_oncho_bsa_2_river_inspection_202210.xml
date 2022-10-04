@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2022 October) - 2. BSA river assessment form</h:title>
+    <model >
+
+      <instance>
+        <data id="gn_oncho_bsa_2_river_inspection_202210">
+          <r_recorder_id/>
+          <r_province/>
+          <r_district/>
+          <r_district_other/>
+          <r_site/>
+          <r_site_other/>
+          <r_gps/>
+          <r_river/>
+          <r_river_bassin/>
+          <r_water_temperature/>
+          <r_water_ph/>
+          <r_inspection_time/>
+          <r_larvae_evidence/>
+          <r_abundance/>
+          <r_note/>
+          <r_start/>
+          <r_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation lang="English">
+          <text id="/data/r_recorder_id:jr:constraintMsg">
+            <value>Must be two digit number</value>
+          </text>
+          <text id="/data/r_recorder_id:label">
+            <value>Enter recorder ID</value>
+          </text>
+          <text id="/data/r_recorder_id:hint">
+            <value>Enter 2-digit recorder code provided to each recorder (person doing the data entry)</value>
+          </text>
+          <text id="/data/r_province:label">
+            <value>Select Region</value>
+          </text>
+          <text id="/data/r_province/Bono:label">
+            <value>Bono</value>
+          </text>
+          <text id="/data/r_province/Western North:label">
+            <value>Western North</value>
+          </text>
+          <text id="/data/r_district:label">
+            <value>Select district</value>
+          </text>
+          <text id="/data/r_district_other:label">
+            <value>Enter the district</value>
+          </text>
+          <text id="/data/r_site:label">
+            <value>Enter site name</value>
+          </text>
+          <text id="/data/r_site_other:label">
+            <value>Enter the site</value>
+          </text>
+          <text id="/data/r_gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/data/r_river:label">
+            <value>Enter the name of the river</value>
+          </text>
+          <text id="/data/r_river_bassin:label">
+            <value>Enter the name of the river Basin</value>
+          </text>
+          <text id="/data/r_water_temperature:jr:constraintMsg">
+            <value>The value must be between 15 and 35</value>
+          </text>
+          <text id="/data/r_water_temperature:label">
+            <value>Enter water temperature</value>
+          </text>
+          <text id="/data/r_water_ph:jr:constraintMsg">
+            <value>The value must be between 0 and 14</value>
+          </text>
+          <text id="/data/r_water_ph:label">
+            <value>Enter the water pH</value>
+          </text>
+          <text id="/data/r_inspection_time:label">
+            <value>At time of inspection, did site appear suitable for black fly breeding.</value>
+          </text>
+          <text id="/data/r_inspection_time/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/r_inspection_time/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/r_larvae_evidence:label">
+            <value>At time of inspection, did site provide evidence of larvae.</value>
+          </text>
+          <text id="/data/r_larvae_evidence/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/r_larvae_evidence/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/r_abundance:label">
+            <value>Abundance - How many larvae where found?</value>
+          </text>
+          <text id="/data/r_abundance/1 – 10:label">
+            <value>1 – 10</value>
+          </text>
+          <text id="/data/r_abundance/11 – 50:label">
+            <value>11 – 50</value>
+          </text>
+          <text id="/data/r_abundance/More than 50:label">
+            <value>More than 50</value>
+          </text>
+          <text id="/data/r_note:label">
+            <value>Notes</value>
+          </text>
+          <text id="/data/r_note:hint">
+            <value>Optional additional notes</value>
+          </text>
+          <text id="yesno-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesno-1">
+            <value>No</value>
+          </text>
+          <text id="abundance-0">
+            <value>1 – 10</value>
+          </text>
+          <text id="abundance-1">
+            <value>11 – 50</value>
+          </text>
+          <text id="abundance-2">
+            <value>More than 50</value>
+          </text>
+          <text id="region-0">
+            <value>Bono</value>
+          </text>
+          <text id="region-1">
+            <value>Western North</value>
+          </text>
+          <text id="district-0">
+            <value>Bia East</value>
+          </text>
+          <text id="district-1">
+            <value>Dorma West</value>
+          </text>
+          <text id="district-2">
+            <value>Dormaa</value>
+          </text>
+          <text id="district-3">
+            <value>Jaman South</value>
+          </text>
+          <text id="district-4">
+            <value>Other</value>
+          </text>
+          <text id="district-5">
+            <value>Other</value>
+          </text>
+          <text id="community-0">
+            <value>Akwasiatuakurom (Kasapenso)</value>
+          </text>
+          <text id="community-1">
+            <value>Amoakokrom_1</value>
+          </text>
+          <text id="community-2">
+            <value>Anwona2</value>
+          </text>
+          <text id="community-3">
+            <value>Baanafo</value>
+          </text>
+          <text id="community-4">
+            <value>Baano No.1</value>
+          </text>
+          <text id="community-5">
+            <value>Bidienkwanta</value>
+          </text>
+          <text id="community-6">
+            <value>Dormaa Agogo</value>
+          </text>
+          <text id="community-7">
+            <value>Fosukrom</value>
+          </text>
+          <text id="community-8">
+            <value>Gyapekurom</value>
+          </text>
+          <text id="community-9">
+            <value>Kadwo Amakurom</value>
+          </text>
+          <text id="community-10">
+            <value>Kokorasua</value>
+          </text>
+          <text id="community-11">
+            <value>Komfuokurom</value>
+          </text>
+          <text id="community-12">
+            <value>Korase</value>
+          </text>
+          <text id="community-13">
+            <value>Kwabenkrakrom</value>
+          </text>
+          <text id="community-14">
+            <value>Kwanto Yaayaakrom</value>
+          </text>
+          <text id="community-15">
+            <value>Nkwantaso</value>
+          </text>
+          <text id="community-16">
+            <value>Owunta</value>
+          </text>
+          <text id="community-17">
+            <value>Sabreni</value>
+          </text>
+          <text id="community-18">
+            <value>Segera</value>
+          </text>
+          <text id="community-19">
+            <value>Tafro</value>
+          </text>
+          <text id="community-20">
+            <value>Tainano No.2</value>
+          </text>
+          <text id="community-21">
+            <value>Taino No.1</value>
+          </text>
+          <text id="community-22">
+            <value>Wamho No.1</value>
+          </text>
+          <text id="community-23">
+            <value>Other</value>
+          </text>
+          <text id="community-24">
+            <value>Other</value>
+          </text>
+          <text id="community-25">
+            <value>Other</value>
+          </text>
+          <text id="community-26">
+            <value>Other</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="yesno">
+        <root>
+          <item>
+            <itextId>yesno-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesno-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="abundance">
+        <root>
+          <item>
+            <itextId>abundance-0</itextId>
+            <name>1 – 10</name>
+          </item>
+          <item>
+            <itextId>abundance-1</itextId>
+            <name>11 – 50</name>
+          </item>
+          <item>
+            <itextId>abundance-2</itextId>
+            <name>More than 50</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region">
+        <root>
+          <item>
+            <itextId>region-0</itextId>
+            <name>Bono</name>
+          </item>
+          <item>
+            <itextId>region-1</itextId>
+            <name>Western North</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district">
+        <root>
+          <item>
+            <itextId>district-0</itextId>
+            <name>Bia East</name>
+            <region>Western North</region>
+          </item>
+          <item>
+            <itextId>district-1</itextId>
+            <name>Dorma West</name>
+            <region>Bono</region>
+          </item>
+          <item>
+            <itextId>district-2</itextId>
+            <name>Dormaa</name>
+            <region>Bono</region>
+          </item>
+          <item>
+            <itextId>district-3</itextId>
+            <name>Jaman South</name>
+            <region>Bono</region>
+          </item>
+          <item>
+            <itextId>district-4</itextId>
+            <name>Other</name>
+            <region>Western North</region>
+          </item>
+          <item>
+            <itextId>district-5</itextId>
+            <name>Other</name>
+            <region>Bono</region>
+          </item>
+        </root>
+      </instance>
+      <instance id="community">
+        <root>
+          <item>
+            <itextId>community-0</itextId>
+            <district>Bia East</district>
+            <name>Akwasiatuakurom (Kasapenso)</name>
+          </item>
+          <item>
+            <itextId>community-1</itextId>
+            <district>Dorma West</district>
+            <name>Amoakokrom_1</name>
+          </item>
+          <item>
+            <itextId>community-2</itextId>
+            <district>Dorma West</district>
+            <name>Anwona2</name>
+          </item>
+          <item>
+            <itextId>community-3</itextId>
+            <district>Jaman South</district>
+            <name>Baanafo</name>
+          </item>
+          <item>
+            <itextId>community-4</itextId>
+            <district>Jaman South</district>
+            <name>Baano No.1</name>
+          </item>
+          <item>
+            <itextId>community-5</itextId>
+            <district>Dorma West</district>
+            <name>Bidienkwanta</name>
+          </item>
+          <item>
+            <itextId>community-6</itextId>
+            <district>Dorma West</district>
+            <name>Dormaa Agogo</name>
+          </item>
+          <item>
+            <itextId>community-7</itextId>
+            <district>Bia East</district>
+            <name>Fosukrom</name>
+          </item>
+          <item>
+            <itextId>community-8</itextId>
+            <district>Jaman South</district>
+            <name>Gyapekurom</name>
+          </item>
+          <item>
+            <itextId>community-9</itextId>
+            <district>Bia East</district>
+            <name>Kadwo Amakurom</name>
+          </item>
+          <item>
+            <itextId>community-10</itextId>
+            <district>Dormaa</district>
+            <name>Kokorasua</name>
+          </item>
+          <item>
+            <itextId>community-11</itextId>
+            <district>Jaman South</district>
+            <name>Komfuokurom</name>
+          </item>
+          <item>
+            <itextId>community-12</itextId>
+            <district>Dormaa</district>
+            <name>Korase</name>
+          </item>
+          <item>
+            <itextId>community-13</itextId>
+            <district>Dorma West</district>
+            <name>Kwabenkrakrom</name>
+          </item>
+          <item>
+            <itextId>community-14</itextId>
+            <district>Dorma West</district>
+            <name>Kwanto Yaayaakrom</name>
+          </item>
+          <item>
+            <itextId>community-15</itextId>
+            <district>Dorma West</district>
+            <name>Nkwantaso</name>
+          </item>
+          <item>
+            <itextId>community-16</itextId>
+            <district>Bia East</district>
+            <name>Owunta</name>
+          </item>
+          <item>
+            <itextId>community-17</itextId>
+            <district>Jaman South</district>
+            <name>Sabreni</name>
+          </item>
+          <item>
+            <itextId>community-18</itextId>
+            <district>Jaman South</district>
+            <name>Segera</name>
+          </item>
+          <item>
+            <itextId>community-19</itextId>
+            <district>Dormaa</district>
+            <name>Tafro</name>
+          </item>
+          <item>
+            <itextId>community-20</itextId>
+            <district>Jaman South</district>
+            <name>Tainano No.2</name>
+          </item>
+          <item>
+            <itextId>community-21</itextId>
+            <district>Jaman South</district>
+            <name>Taino No.1</name>
+          </item>
+          <item>
+            <itextId>community-22</itextId>
+            <district>Dormaa</district>
+            <name>Wamho No.1</name>
+          </item>
+          <item>
+            <itextId>community-23</itextId>
+            <district>Bia East</district>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-24</itextId>
+            <district>Dorma West</district>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-25</itextId>
+            <district>Dormaa</district>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-26</itextId>
+            <district>Jaman South</district>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt;= 10 and . &lt;= 99" jr:constraintMsg="jr:itext('/data/r_recorder_id:jr:constraintMsg')" nodeset="/data/r_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/r_province" required="true()" type="string"/>
+      <bind nodeset="/data/r_district" required="true()" type="string"/>
+      <bind nodeset="/data/r_district_other" relevant="selected( /data/r_district , 'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/r_site" relevant="if(selected( /data/r_district , 'Other'), false(),true())" required="true()" type="string"/>
+      <bind nodeset="/data/r_site_other" relevant="selected( /data/r_site , 'Other') or selected( /data/r_district , 'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/r_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/r_river" required="true()" type="string"/>
+      <bind nodeset="/data/r_river_bassin" required="true()" type="string"/>
+      <bind constraint=". &gt;= 15 and . &lt;= 35" jr:constraintMsg="jr:itext('/data/r_water_temperature:jr:constraintMsg')" nodeset="/data/r_water_temperature" required="true()" type="decimal"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/r_water_ph:jr:constraintMsg')" nodeset="/data/r_water_ph" required="true()" type="decimal"/>
+      <bind nodeset="/data/r_inspection_time" required="true()" type="string"/>
+      <bind nodeset="/data/r_larvae_evidence" relevant="selected( /data/r_inspection_time , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/r_abundance" relevant="selected( /data/r_larvae_evidence , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/r_note" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/r_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/r_recorder_id">
+      <label ref="jr:itext('/data/r_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/r_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/r_province">
+      <label ref="jr:itext('/data/r_province:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_province/Bono:label')"/>
+        <value>Bono</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_province/Western North:label')"/>
+        <value>Western North</value>
+      </item>
+    </select1>
+    <select1 ref="/data/r_district">
+      <label ref="jr:itext('/data/r_district:label')"/>
+      <itemset nodeset="instance('district')/root/item[region =  /data/r_province ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/r_district_other">
+      <label ref="jr:itext('/data/r_district_other:label')"/>
+    </input>
+    <select1 ref="/data/r_site">
+      <label ref="jr:itext('/data/r_site:label')"/>
+      <itemset nodeset="instance('community')/root/item[district =  /data/r_district ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/r_site_other">
+      <label ref="jr:itext('/data/r_site_other:label')"/>
+    </input>
+    <input ref="/data/r_gps">
+      <label ref="jr:itext('/data/r_gps:label')"/>
+    </input>
+    <input ref="/data/r_river">
+      <label ref="jr:itext('/data/r_river:label')"/>
+    </input>
+    <input ref="/data/r_river_bassin">
+      <label ref="jr:itext('/data/r_river_bassin:label')"/>
+    </input>
+    <input ref="/data/r_water_temperature">
+      <label ref="jr:itext('/data/r_water_temperature:label')"/>
+    </input>
+    <input ref="/data/r_water_ph">
+      <label ref="jr:itext('/data/r_water_ph:label')"/>
+    </input>
+    <select1 ref="/data/r_inspection_time">
+      <label ref="jr:itext('/data/r_inspection_time:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_inspection_time/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_inspection_time/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/r_larvae_evidence">
+      <label ref="jr:itext('/data/r_larvae_evidence:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_larvae_evidence/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_larvae_evidence/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/r_abundance">
+      <label ref="jr:itext('/data/r_abundance:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_abundance/1 – 10:label')"/>
+        <value>1 – 10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_abundance/11 – 50:label')"/>
+        <value>11 – 50</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_abundance/More than 50:label')"/>
+        <value>More than 50</value>
+      </item>
+    </select1>
+    <input ref="/data/r_note">
+      <label ref="jr:itext('/data/r_note:label')"/>
+      <hint ref="jr:itext('/data/r_note:hint')"/>
+    </input>
+  </h:body>
+</h:html>
