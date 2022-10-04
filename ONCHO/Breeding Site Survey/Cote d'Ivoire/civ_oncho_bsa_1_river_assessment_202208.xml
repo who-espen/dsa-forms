@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Août 2022) 1. Enquête Entomologique d'ONCHO - Inspection de la rivière V2</h:title>
+    <model >
+
+      <instance>
+        <data id="civ_oncho_bsa_1_river_assessment_202208_v2">
+          <s_recorder_id/>
+          <s_zone_transmission/>
+          <s_region/>
+          <s_district/>
+          <s_health_facility/>
+          <s_site/>
+          <s_river_basin_name/>
+          <s_river_name/>
+          <s_river_distance/>
+          <s_vegetation_type/>
+          <s_tidc_date/>
+          <s_capture_point/>
+          <s_close_breeding/>
+          <s_type_close_breeding_site/>
+          <s_close_village/>
+          <s_close_village_population/>
+          <s_close_village_activity/>
+          <s_close_village_activity_other/>
+          <s_gps/>
+          <s_notes/>
+          <s_notes_other/>
+          <s_start/>
+          <s_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/s_recorder_id:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 1000</value>
+          </text>
+          <text id="/data/s_recorder_id:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/s_recorder_id:hint">
+            <value>Code à deux chiffres qui vous a été assigné</value>
+          </text>
+          <text id="/data/s_zone_transmission:label">
+            <value>Sélectionne la zone de transmission</value>
+          </text>
+          <text id="/data/s_zone_transmission/ZONE DE TRANSMISSION MIXTE:label">
+            <value>ZONE DE TRANSMISSION MIXTE</value>
+          </text>
+          <text id="/data/s_zone_transmission/ZONE DE TRANSMISSION SAVANICOLE:label">
+            <value>ZONE DE TRANSMISSION SAVANICOLE</value>
+          </text>
+          <text id="/data/s_zone_transmission/ZONE DE TRANSMISSION FORESTIERE:label">
+            <value>ZONE DE TRANSMISSION FORESTIERE</value>
+          </text>
+          <text id="/data/s_region:label">
+            <value>Sélectionner une région sanitaire</value>
+          </text>
+          <text id="/data/s_district:label">
+            <value>Sélectionner un district</value>
+          </text>
+          <text id="/data/s_health_facility:label">
+            <value>Aire sanitaire</value>
+          </text>
+          <text id="/data/s_site:label">
+            <value>Sélectionner un site</value>
+          </text>
+          <text id="/data/s_river_basin_name:label">
+            <value>Nom du bassin</value>
+          </text>
+          <text id="/data/s_river_name:label">
+            <value>Nom du fleuve ou de la rivière</value>
+          </text>
+          <text id="/data/s_river_distance:label">
+            <value>Distance du Point de capture en mètre</value>
+          </text>
+          <text id="/data/s_vegetation_type:label">
+            <value>Type de végétation</value>
+          </text>
+          <text id="/data/s_vegetation_type/Végétation dense:label">
+            <value>Végétation dense</value>
+          </text>
+          <text id="/data/s_vegetation_type/Végétation clairsemée:label">
+            <value>Végétation clairsemée</value>
+          </text>
+          <text id="/data/s_tidc_date:label">
+            <value>Date de début de traitement</value>
+          </text>
+          <text id="/data/s_tidc_date:hint">
+            <value>Exemple : Août 2022</value>
+          </text>
+          <text id="/data/s_capture_point:label">
+            <value>Point de capture</value>
+          </text>
+          <text id="/data/s_capture_point/Point 1:label">
+            <value>Point 1</value>
+          </text>
+          <text id="/data/s_capture_point/Point 2:label">
+            <value>Point 2</value>
+          </text>
+          <text id="/data/s_close_breeding:label">
+            <value>Gîte de reproduction le plus proche</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site:label">
+            <value>Type de gîte de reproduction le plus proche</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/Artificiel:label">
+            <value>Artificiel</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/Naturel:label">
+            <value>Naturel</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/Permanent:label">
+            <value>Permanent</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/Temporaire:label">
+            <value>Temporaire</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/Ancien.gite.OCP:label">
+            <value>Ancien gite OCP</value>
+          </text>
+          <text id="/data/s_type_close_breeding_site/Nouveau.gite:label">
+            <value>Nouveau gite</value>
+          </text>
+          <text id="/data/s_close_village:label">
+            <value>Village le plus proche</value>
+          </text>
+          <text id="/data/s_close_village_population:label">
+            <value>Population du village sous traitement TIDC le plus proche</value>
+          </text>
+          <text id="/data/s_close_village_activity:label">
+            <value>Activités agricole saisonières du village sous traitement TIDC le plus proche</value>
+          </text>
+          <text id="/data/s_close_village_activity/Agriculture:label">
+            <value>Agriculture</value>
+          </text>
+          <text id="/data/s_close_village_activity/Pêche:label">
+            <value>Pêche</value>
+          </text>
+          <text id="/data/s_close_village_activity/Elevage:label">
+            <value>Elevage</value>
+          </text>
+          <text id="/data/s_close_village_activity/Unité.industrielle:label">
+            <value>Unité industrielle</value>
+          </text>
+          <text id="/data/s_close_village_activity/Other:label">
+            <value>Autres</value>
+          </text>
+          <text id="/data/s_close_village_activity_other:label">
+            <value>Veuillez préciser les autres activités</value>
+          </text>
+          <text id="/data/s_gps:label">
+            <value>Veillez capturer le GPS du site</value>
+          </text>
+          <text id="/data/s_gps:hint">
+            <value>Fonctionne mieux à l'extérieur</value>
+          </text>
+          <text id="/data/s_notes:label">
+            <value>Informations additionnelles</value>
+          </text>
+          <text id="/data/s_notes/Lessive.au.bord.des.cours.d.eau:label">
+            <value>Lessive au bord des cours d'eau</value>
+          </text>
+          <text id="/data/s_notes/Décharge.d.usine:label">
+            <value>Décharge d'usine</value>
+          </text>
+          <text id="/data/s_notes/Présence.de.tas.d.immondice:label">
+            <value>Présence de tas d'immondice</value>
+          </text>
+          <text id="/data/s_notes/Variation.de.la.température:label">
+            <value>Variation de la température</value>
+          </text>
+          <text id="/data/s_notes/Humidité.relative:label">
+            <value>Humidité relative</value>
+          </text>
+          <text id="/data/s_notes/Changement.des.points.de.capture:label">
+            <value>Changement des points de capture</value>
+          </text>
+          <text id="/data/s_notes/Gite.frontalier.avec.au.Togo:label">
+            <value>Gite frontalier avec au Togo</value>
+          </text>
+          <text id="/data/s_notes/Gite.frontalier.au.Nigeria:label">
+            <value>Gite frontalier au Nigeria</value>
+          </text>
+          <text id="/data/s_notes/Other:label">
+            <value>Autres</value>
+          </text>
+          <text id="/data/s_notes_other:label">
+            <value>Veuillez préciser les autres informations</value>
+          </text>
+          <text id="yesNoDontKnow-0">
+            <value>Oui</value>
+          </text>
+          <text id="yesNoDontKnow-1">
+            <value>Non</value>
+          </text>
+          <text id="yesNoDontKnow-2">
+            <value>Ne sais pas</value>
+          </text>
+          <text id="densite_List-0">
+            <value>(-) : Gîte négatif</value>
+          </text>
+          <text id="densite_List-1">
+            <value>(+) : 10 Individus au moins</value>
+          </text>
+          <text id="densite_List-2">
+            <value>(++) : 11 à 50 individus</value>
+          </text>
+          <text id="densite_List-3">
+            <value>(+++) : Plus de 50 individus</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Oui</value>
+          </text>
+          <text id="yes_no-1">
+            <value>Non</value>
+          </text>
+          <text id="vegetation_type-0">
+            <value>Végétation dense</value>
+          </text>
+          <text id="vegetation_type-1">
+            <value>Végétation clairsemée</value>
+          </text>
+          <text id="capture_point-0">
+            <value>Point 1</value>
+          </text>
+          <text id="capture_point-1">
+            <value>Point 2</value>
+          </text>
+          <text id="breeding_site_type-0">
+            <value>Artificiel</value>
+          </text>
+          <text id="breeding_site_type-1">
+            <value>Naturel</value>
+          </text>
+          <text id="breeding_site_type-2">
+            <value>Permanent</value>
+          </text>
+          <text id="breeding_site_type-3">
+            <value>Temporaire</value>
+          </text>
+          <text id="breeding_site_type-4">
+            <value>Ancien gite OCP</value>
+          </text>
+          <text id="breeding_site_type-5">
+            <value>Nouveau gite</value>
+          </text>
+          <text id="village_activity-0">
+            <value>Agriculture</value>
+          </text>
+          <text id="village_activity-1">
+            <value>Pêche</value>
+          </text>
+          <text id="village_activity-2">
+            <value>Elevage</value>
+          </text>
+          <text id="village_activity-3">
+            <value>Unité industrielle</value>
+          </text>
+          <text id="village_activity-4">
+            <value>Autres</value>
+          </text>
+          <text id="notes-0">
+            <value>Lessive au bord des cours d'eau</value>
+          </text>
+          <text id="notes-1">
+            <value>Décharge d'usine</value>
+          </text>
+          <text id="notes-2">
+            <value>Présence de tas d'immondice</value>
+          </text>
+          <text id="notes-3">
+            <value>Variation de la température</value>
+          </text>
+          <text id="notes-4">
+            <value>Humidité relative</value>
+          </text>
+          <text id="notes-5">
+            <value>Changement des points de capture</value>
+          </text>
+          <text id="notes-6">
+            <value>Gite frontalier avec au Togo</value>
+          </text>
+          <text id="notes-7">
+            <value>Gite frontalier au Nigeria</value>
+          </text>
+          <text id="notes-8">
+            <value>Autres</value>
+          </text>
+          <text id="zone_transmission-0">
+            <value>ZONE DE TRANSMISSION MIXTE</value>
+          </text>
+          <text id="zone_transmission-1">
+            <value>ZONE DE TRANSMISSION SAVANICOLE</value>
+          </text>
+          <text id="zone_transmission-2">
+            <value>ZONE DE TRANSMISSION FORESTIERE</value>
+          </text>
+          <text id="region-0">
+            <value>Agneby-Tiassa</value>
+          </text>
+          <text id="region-1">
+            <value>Bafing</value>
+          </text>
+          <text id="region-2">
+            <value>Bagoué</value>
+          </text>
+          <text id="region-3">
+            <value>Belier</value>
+          </text>
+          <text id="region-4">
+            <value>Béré</value>
+          </text>
+          <text id="region-5">
+            <value>Bounkani</value>
+          </text>
+          <text id="region-6">
+            <value>Cavally</value>
+          </text>
+          <text id="region-7">
+            <value>Folon</value>
+          </text>
+          <text id="district-0">
+            <value>Agboville</value>
+          </text>
+          <text id="district-1">
+            <value>Sikensi</value>
+          </text>
+          <text id="district-2">
+            <value>Tiassalé</value>
+          </text>
+          <text id="district-3">
+            <value>Koro</value>
+          </text>
+          <text id="district-4">
+            <value>Ouaninou</value>
+          </text>
+          <text id="district-5">
+            <value>Touba</value>
+          </text>
+          <text id="district-6">
+            <value>Boundiali</value>
+          </text>
+          <text id="district-7">
+            <value>Kouto</value>
+          </text>
+          <text id="district-8">
+            <value>Didievi</value>
+          </text>
+          <text id="district-9">
+            <value>Tiébissou</value>
+          </text>
+          <text id="district-10">
+            <value>Toumodi</value>
+          </text>
+          <text id="district-11">
+            <value>Yamoussoukro</value>
+          </text>
+          <text id="district-12">
+            <value>Dianra</value>
+          </text>
+          <text id="district-13">
+            <value>Kounahiri</value>
+          </text>
+          <text id="district-14">
+            <value>Mankono</value>
+          </text>
+          <text id="district-15">
+            <value>Bouna</value>
+          </text>
+          <text id="district-16">
+            <value>Doropo</value>
+          </text>
+          <text id="district-17">
+            <value>Nassian</value>
+          </text>
+          <text id="district-18">
+            <value>Tehini</value>
+          </text>
+          <text id="district-19">
+            <value>Blolequin</value>
+          </text>
+          <text id="district-20">
+            <value>Guiglo</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="yesNoDontKnow">
+        <root>
+          <item>
+            <itextId>yesNoDontKnow-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-1</itextId>
+            <name>No</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-2</itextId>
+            <name>Don't know</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="densite_List">
+        <root>
+          <item>
+            <itextId>densite_List-0</itextId>
+            <name>-</name>
+          </item>
+          <item>
+            <itextId>densite_List-1</itextId>
+            <name>+</name>
+          </item>
+          <item>
+            <itextId>densite_List-2</itextId>
+            <name>++</name>
+          </item>
+          <item>
+            <itextId>densite_List-3</itextId>
+            <name>+++</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Oui</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>Non</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="vegetation_type">
+        <root>
+          <item>
+            <itextId>vegetation_type-0</itextId>
+            <name>Végétation dense</name>
+          </item>
+          <item>
+            <itextId>vegetation_type-1</itextId>
+            <name>Végétation clairsemée</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="capture_point">
+        <root>
+          <item>
+            <itextId>capture_point-0</itextId>
+            <name>Point 1</name>
+          </item>
+          <item>
+            <itextId>capture_point-1</itextId>
+            <name>Point 2</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="breeding_site_type">
+        <root>
+          <item>
+            <itextId>breeding_site_type-0</itextId>
+            <name>Artificiel</name>
+          </item>
+          <item>
+            <itextId>breeding_site_type-1</itextId>
+            <name>Naturel</name>
+          </item>
+          <item>
+            <itextId>breeding_site_type-2</itextId>
+            <name>Permanent</name>
+          </item>
+          <item>
+            <itextId>breeding_site_type-3</itextId>
+            <name>Temporaire</name>
+          </item>
+          <item>
+            <itextId>breeding_site_type-4</itextId>
+            <name>Ancien.gite.OCP</name>
+          </item>
+          <item>
+            <itextId>breeding_site_type-5</itextId>
+            <name>Nouveau.gite</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="village_activity">
+        <root>
+          <item>
+            <itextId>village_activity-0</itextId>
+            <name>Agriculture</name>
+          </item>
+          <item>
+            <itextId>village_activity-1</itextId>
+            <name>Pêche</name>
+          </item>
+          <item>
+            <itextId>village_activity-2</itextId>
+            <name>Elevage</name>
+          </item>
+          <item>
+            <itextId>village_activity-3</itextId>
+            <name>Unité.industrielle</name>
+          </item>
+          <item>
+            <itextId>village_activity-4</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="notes">
+        <root>
+          <item>
+            <itextId>notes-0</itextId>
+            <name>Lessive.au.bord.des.cours.d.eau</name>
+          </item>
+          <item>
+            <itextId>notes-1</itextId>
+            <name>Décharge.d.usine</name>
+          </item>
+          <item>
+            <itextId>notes-2</itextId>
+            <name>Présence.de.tas.d.immondice</name>
+          </item>
+          <item>
+            <itextId>notes-3</itextId>
+            <name>Variation.de.la.température</name>
+          </item>
+          <item>
+            <itextId>notes-4</itextId>
+            <name>Humidité.relative</name>
+          </item>
+          <item>
+            <itextId>notes-5</itextId>
+            <name>Changement.des.points.de.capture</name>
+          </item>
+          <item>
+            <itextId>notes-6</itextId>
+            <name>Gite.frontalier.avec.au.Togo</name>
+          </item>
+          <item>
+            <itextId>notes-7</itextId>
+            <name>Gite.frontalier.au.Nigeria</name>
+          </item>
+          <item>
+            <itextId>notes-8</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="zone_transmission">
+        <root>
+          <item>
+            <itextId>zone_transmission-0</itextId>
+            <name>ZONE DE TRANSMISSION MIXTE</name>
+          </item>
+          <item>
+            <itextId>zone_transmission-1</itextId>
+            <name>ZONE DE TRANSMISSION SAVANICOLE</name>
+          </item>
+          <item>
+            <itextId>zone_transmission-2</itextId>
+            <name>ZONE DE TRANSMISSION FORESTIERE</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region">
+        <root>
+          <item>
+            <itextId>region-0</itextId>
+            <name>Agneby-Tiassa</name>
+            <zone_transmission>ZONE DE TRANSMISSION FORESTIERE</zone_transmission>
+          </item>
+          <item>
+            <itextId>region-1</itextId>
+            <name>Bafing</name>
+            <zone_transmission>ZONE DE TRANSMISSION SAVANICOLE</zone_transmission>
+          </item>
+          <item>
+            <itextId>region-2</itextId>
+            <name>Bagoué</name>
+            <zone_transmission>ZONE DE TRANSMISSION SAVANICOLE</zone_transmission>
+          </item>
+          <item>
+            <itextId>region-3</itextId>
+            <name>Belier</name>
+            <zone_transmission>ZONE DE TRANSMISSION MIXTE</zone_transmission>
+          </item>
+          <item>
+            <itextId>region-4</itextId>
+            <name>Béré</name>
+            <zone_transmission>ZONE DE TRANSMISSION MIXTE</zone_transmission>
+          </item>
+          <item>
+            <itextId>region-5</itextId>
+            <name>Bounkani</name>
+            <zone_transmission>ZONE DE TRANSMISSION SAVANICOLE</zone_transmission>
+          </item>
+          <item>
+            <itextId>region-6</itextId>
+            <name>Cavally</name>
+            <zone_transmission>ZONE DE TRANSMISSION FORESTIERE</zone_transmission>
+          </item>
+          <item>
+            <itextId>region-7</itextId>
+            <name>Folon</name>
+            <zone_transmission>ZONE DE TRANSMISSION SAVANICOLE</zone_transmission>
+          </item>
+        </root>
+      </instance>
+      <instance id="district">
+        <root>
+          <item>
+            <itextId>district-0</itextId>
+            <name>Agboville</name>
+            <region>Agneby-Tiassa</region>
+          </item>
+          <item>
+            <itextId>district-1</itextId>
+            <name>Sikensi</name>
+            <region>Agneby-Tiassa</region>
+          </item>
+          <item>
+            <itextId>district-2</itextId>
+            <name>Tiassalé</name>
+            <region>Agneby-Tiassa</region>
+          </item>
+          <item>
+            <itextId>district-3</itextId>
+            <name>Koro</name>
+            <region>Bafing</region>
+          </item>
+          <item>
+            <itextId>district-4</itextId>
+            <name>Ouaninou</name>
+            <region>Bafing</region>
+          </item>
+          <item>
+            <itextId>district-5</itextId>
+            <name>Touba</name>
+            <region>Bafing</region>
+          </item>
+          <item>
+            <itextId>district-6</itextId>
+            <name>Boundiali</name>
+            <region>Bagoué</region>
+          </item>
+          <item>
+            <itextId>district-7</itextId>
+            <name>Kouto</name>
+            <region>Bagoué</region>
+          </item>
+          <item>
+            <itextId>district-8</itextId>
+            <name>Didievi</name>
+            <region>Belier</region>
+          </item>
+          <item>
+            <itextId>district-9</itextId>
+            <name>Tiébissou</name>
+            <region>Belier</region>
+          </item>
+          <item>
+            <itextId>district-10</itextId>
+            <name>Toumodi</name>
+            <region>Belier</region>
+          </item>
+          <item>
+            <itextId>district-11</itextId>
+            <name>Yamoussoukro</name>
+            <region>Belier</region>
+          </item>
+          <item>
+            <itextId>district-12</itextId>
+            <name>Dianra</name>
+            <region>Béré</region>
+          </item>
+          <item>
+            <itextId>district-13</itextId>
+            <name>Kounahiri</name>
+            <region>Béré</region>
+          </item>
+          <item>
+            <itextId>district-14</itextId>
+            <name>Mankono</name>
+            <region>Béré</region>
+          </item>
+          <item>
+            <itextId>district-15</itextId>
+            <name>Bouna</name>
+            <region>Bounkani</region>
+          </item>
+          <item>
+            <itextId>district-16</itextId>
+            <name>Doropo</name>
+            <region>Bounkani</region>
+          </item>
+          <item>
+            <itextId>district-17</itextId>
+            <name>Nassian</name>
+            <region>Bounkani</region>
+          </item>
+          <item>
+            <itextId>district-18</itextId>
+            <name>Tehini</name>
+            <region>Bounkani</region>
+          </item>
+          <item>
+            <itextId>district-19</itextId>
+            <name>Blolequin</name>
+            <region>Cavally</region>
+          </item>
+          <item>
+            <itextId>district-20</itextId>
+            <name>Guiglo</name>
+            <region>Cavally</region>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2,3}$')" jr:constraintMsg="jr:itext('/data/s_recorder_id:jr:constraintMsg')" nodeset="/data/s_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/s_zone_transmission" type="string"/>
+      <bind nodeset="/data/s_region" required="true()" type="string"/>
+      <bind nodeset="/data/s_district" required="true()" type="string"/>
+      <bind nodeset="/data/s_health_facility" required="true()" type="string"/>
+      <bind nodeset="/data/s_site" required="true()" type="string"/>
+      <bind nodeset="/data/s_river_basin_name" required="true()" type="string"/>
+      <bind nodeset="/data/s_river_name" required="true()" type="string"/>
+      <bind nodeset="/data/s_river_distance" required="true()" type="int"/>
+      <bind nodeset="/data/s_vegetation_type" required="true()" type="string"/>
+      <bind nodeset="/data/s_tidc_date" required="true()" type="date"/>
+      <bind nodeset="/data/s_capture_point" required="true()" type="string"/>
+      <bind nodeset="/data/s_close_breeding" required="true()" type="string"/>
+      <bind nodeset="/data/s_type_close_breeding_site" required="true()" type="string"/>
+      <bind nodeset="/data/s_close_village" type="string"/>
+      <bind nodeset="/data/s_close_village_population" type="int"/>
+      <bind nodeset="/data/s_close_village_activity" type="string"/>
+      <bind nodeset="/data/s_close_village_activity_other" relevant="selected( /data/s_close_village_activity , 'Other')" type="string"/>
+      <bind nodeset="/data/s_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/s_notes" type="string"/>
+      <bind nodeset="/data/s_notes_other" relevant="selected( /data/s_notes , 'Other')" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/s_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/s_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/s_recorder_id">
+      <label ref="jr:itext('/data/s_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/s_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/s_zone_transmission">
+      <label ref="jr:itext('/data/s_zone_transmission:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_zone_transmission/ZONE DE TRANSMISSION MIXTE:label')"/>
+        <value>ZONE DE TRANSMISSION MIXTE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_zone_transmission/ZONE DE TRANSMISSION SAVANICOLE:label')"/>
+        <value>ZONE DE TRANSMISSION SAVANICOLE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_zone_transmission/ZONE DE TRANSMISSION FORESTIERE:label')"/>
+        <value>ZONE DE TRANSMISSION FORESTIERE</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_region">
+      <label ref="jr:itext('/data/s_region:label')"/>
+      <itemset nodeset="instance('region')/root/item[zone_transmission =  /data/s_zone_transmission ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/s_district">
+      <label ref="jr:itext('/data/s_district:label')"/>
+      <itemset nodeset="instance('district')/root/item[region =  /data/s_region ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/s_health_facility">
+      <label ref="jr:itext('/data/s_health_facility:label')"/>
+    </input>
+    <input ref="/data/s_site">
+      <label ref="jr:itext('/data/s_site:label')"/>
+    </input>
+    <input ref="/data/s_river_basin_name">
+      <label ref="jr:itext('/data/s_river_basin_name:label')"/>
+    </input>
+    <input ref="/data/s_river_name">
+      <label ref="jr:itext('/data/s_river_name:label')"/>
+    </input>
+    <input ref="/data/s_river_distance">
+      <label ref="jr:itext('/data/s_river_distance:label')"/>
+    </input>
+    <select1 ref="/data/s_vegetation_type">
+      <label ref="jr:itext('/data/s_vegetation_type:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_vegetation_type/Végétation dense:label')"/>
+        <value>Végétation dense</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_vegetation_type/Végétation clairsemée:label')"/>
+        <value>Végétation clairsemée</value>
+      </item>
+    </select1>
+    <input ref="/data/s_tidc_date">
+      <label ref="jr:itext('/data/s_tidc_date:label')"/>
+      <hint ref="jr:itext('/data/s_tidc_date:hint')"/>
+    </input>
+    <select1 ref="/data/s_capture_point">
+      <label ref="jr:itext('/data/s_capture_point:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_capture_point/Point 1:label')"/>
+        <value>Point 1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_capture_point/Point 2:label')"/>
+        <value>Point 2</value>
+      </item>
+    </select1>
+    <input ref="/data/s_close_breeding">
+      <label ref="jr:itext('/data/s_close_breeding:label')"/>
+    </input>
+    <select ref="/data/s_type_close_breeding_site">
+      <label ref="jr:itext('/data/s_type_close_breeding_site:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Artificiel:label')"/>
+        <value>Artificiel</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Naturel:label')"/>
+        <value>Naturel</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Permanent:label')"/>
+        <value>Permanent</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Temporaire:label')"/>
+        <value>Temporaire</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Ancien.gite.OCP:label')"/>
+        <value>Ancien.gite.OCP</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_type_close_breeding_site/Nouveau.gite:label')"/>
+        <value>Nouveau.gite</value>
+      </item>
+    </select>
+    <input ref="/data/s_close_village">
+      <label ref="jr:itext('/data/s_close_village:label')"/>
+    </input>
+    <input ref="/data/s_close_village_population">
+      <label ref="jr:itext('/data/s_close_village_population:label')"/>
+    </input>
+    <select ref="/data/s_close_village_activity">
+      <label ref="jr:itext('/data/s_close_village_activity:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_close_village_activity/Agriculture:label')"/>
+        <value>Agriculture</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_close_village_activity/Pêche:label')"/>
+        <value>Pêche</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_close_village_activity/Elevage:label')"/>
+        <value>Elevage</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_close_village_activity/Unité.industrielle:label')"/>
+        <value>Unité.industrielle</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_close_village_activity/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/s_close_village_activity_other">
+      <label ref="jr:itext('/data/s_close_village_activity_other:label')"/>
+    </input>
+    <input ref="/data/s_gps">
+      <label ref="jr:itext('/data/s_gps:label')"/>
+      <hint ref="jr:itext('/data/s_gps:hint')"/>
+    </input>
+    <select ref="/data/s_notes">
+      <label ref="jr:itext('/data/s_notes:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Lessive.au.bord.des.cours.d.eau:label')"/>
+        <value>Lessive.au.bord.des.cours.d.eau</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Décharge.d.usine:label')"/>
+        <value>Décharge.d.usine</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Présence.de.tas.d.immondice:label')"/>
+        <value>Présence.de.tas.d.immondice</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Variation.de.la.température:label')"/>
+        <value>Variation.de.la.température</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Humidité.relative:label')"/>
+        <value>Humidité.relative</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Changement.des.points.de.capture:label')"/>
+        <value>Changement.des.points.de.capture</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Gite.frontalier.avec.au.Togo:label')"/>
+        <value>Gite.frontalier.avec.au.Togo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Gite.frontalier.au.Nigeria:label')"/>
+        <value>Gite.frontalier.au.Nigeria</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_notes/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/s_notes_other">
+      <label ref="jr:itext('/data/s_notes_other:label')"/>
+    </input>
+  </h:body>
+</h:html>
