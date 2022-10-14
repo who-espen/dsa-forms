@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2022 October) - 4. DBS collection</h:title>
+    <h:title>(2022 October) - 4. DBS collection V2</h:title>
     <model >
 
       <instance>
-        <data id="gn_oncho_bsa_4_dbs_collection_202210">
+        <data id="gn_oncho_bsa_4_dbs_collection_202210_v2">
           <d_recorder_id/>
           <d_region/>
           <d_district/>
@@ -39,6 +39,7 @@
           <d_end/>
           <meta>
             <instanceID/>
+            <randomnum/>
           </meta>
         </data>
       </instance>
@@ -685,12 +686,13 @@
       <bind nodeset="/data/d_ivm_where" relevant="selected( /data/d_consent ,'Yes') and  /data/d_ivm  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/d_IDMethod" relevant="selected( /data/d_consent ,'Yes')" required="true()" type="string"/>
       <bind nodeset="/data/d_BarcodeID" relevant="selected( /data/d_consent ,'Yes') and  /data/d_IDMethod  = 'Scanner'" required="true()" type="barcode"/>
-      <bind nodeset="/data/d_GenerateID" relevant="selected( /data/d_consent ,'Yes') and  /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
+      <bind calculate="concat(/data/meta/randomnum)" nodeset="/data/d_GenerateID" readonly="true()" relevant="selected( /data/d_consent ,'Yes') and  /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
       <bind nodeset="/data/d_end_survey_note" readonly="true()" relevant=" /data/d_consent  = 'No'" type="string"/>
       <bind nodeset="/data/d_AdditionalNotes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),1,3), '-',substr(random(),4,8), '-', substr(random(),11,14))"/>
     </model>
   </h:head>
   <h:body>

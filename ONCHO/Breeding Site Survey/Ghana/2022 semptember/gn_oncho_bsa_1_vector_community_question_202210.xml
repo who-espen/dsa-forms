@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2022 October) - 1. vector community questionnaire</h:title>
+    <h:title>(2022 October) - 1. vector community questionnaire V2</h:title>
     <model >
 
       <instance>
-        <data id="gn_oncho_bsa_1_vector_community_question_202210">
+        <data id="gn_oncho_bsa_1_vector_community_question_202210_v2">
           <c_recorder_id/>
           <c_district/>
           <c_district_other/>
@@ -28,6 +28,7 @@
           <c_time/>
           <c_know_oncho/>
           <c_oncho_explanation/>
+          <c_gps/>
           <c_note/>
           <c_end_survey_note/>
           <c_start/>
@@ -207,6 +208,12 @@
           </text>
           <text id="/data/c_oncho_explanation:label">
             <value>Can you explain what onchocerciasis/river blindness is?</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Enter GPS</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>Collect GPS coordinates - Must be outside to get accurate reading</value>
           </text>
           <text id="/data/c_note:label">
             <value>Note</value>
@@ -697,6 +704,7 @@
       <bind nodeset="/data/c_time" relevant=" /data/c_consent  = 'Yes' and  /data/c_black_fly_problem  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/c_know_oncho" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/c_oncho_explanation" relevant=" /data/c_consent  = 'Yes' and selected( /data/c_know_oncho , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
       <bind nodeset="/data/c_note" type="string"/>
       <bind nodeset="/data/c_end_survey_note" readonly="true()" relevant=" /data/c_consent  = 'No'" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
@@ -892,6 +900,10 @@
     </select1>
     <input ref="/data/c_oncho_explanation">
       <label ref="jr:itext('/data/c_oncho_explanation:label')"/>
+    </input>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
     </input>
     <input ref="/data/c_note">
       <label ref="jr:itext('/data/c_note:label')"/>
