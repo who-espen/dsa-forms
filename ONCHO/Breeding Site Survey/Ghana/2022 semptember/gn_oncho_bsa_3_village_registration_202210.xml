@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2022 October) - 3. Village registration V2</h:title>
+    <h:title>(2022 October) - 3. Village registration V3</h:title>
     <model >
 
       <instance>
-        <data id="gn_oncho_bsa_3_village_registration_202210_v2">
+        <data id="gn_oncho_bsa_3_village_registration_202210_v3">
           <v_recorder_id/>
           <v_region/>
           <v_district/>
@@ -19,8 +19,9 @@
           <v_site/>
           <v_site_other/>
           <v_total_population/>
+          <v_has_health_center_exist/>
           <v_has_health_center/>
-          <v_has_health_center_type/>
+          <v_has_health_center_other/>
           <v_black_flies_present/>
           <v_mda_carried/>
           <v_mda>
@@ -28,6 +29,7 @@
             <month/>
           </v_mda>
           <v_mda_everyone_take_dem/>
+          <v_gps/>
           <v_notes/>
           <v_start/>
           <v_end/>
@@ -78,29 +80,32 @@
           <text id="/data/v_total_population:hint">
             <value>Please obtain this information from the community MDA register or local leaders</value>
           </text>
-          <text id="/data/v_has_health_center:label">
+          <text id="/data/v_has_health_center_exist:label">
             <value>7. Is there a health centre in this community?</value>
           </text>
-          <text id="/data/v_has_health_center/Yes:label">
+          <text id="/data/v_has_health_center_exist/Yes:label">
             <value>Yes</value>
           </text>
-          <text id="/data/v_has_health_center/No:label">
+          <text id="/data/v_has_health_center_exist/No:label">
             <value>No</value>
           </text>
-          <text id="/data/v_has_health_center_type:label">
+          <text id="/data/v_has_health_center:label">
             <value>8. What type of Health Centre is it?</value>
           </text>
-          <text id="/data/v_has_health_center_type/Primary:label">
+          <text id="/data/v_has_health_center/Primary:label">
             <value>Primary</value>
           </text>
-          <text id="/data/v_has_health_center_type/Secondary:label">
+          <text id="/data/v_has_health_center/Secondary:label">
             <value>Secondary</value>
           </text>
-          <text id="/data/v_has_health_center_type/District hospital:label">
+          <text id="/data/v_has_health_center/District hospital:label">
             <value>District hospital</value>
           </text>
-          <text id="/data/v_has_health_center_type/Other:label">
+          <text id="/data/v_has_health_center/Other:label">
             <value>Other</value>
+          </text>
+          <text id="/data/v_has_health_center_other:label">
+            <value>Enter the Heath center Type</value>
           </text>
           <text id="/data/v_black_flies_present:label">
             <value>9. Are black flies present in this village?</value>
@@ -191,6 +196,12 @@
           </text>
           <text id="/data/v_mda_everyone_take_dem/Do Not Know:label">
             <value>Do Not Know</value>
+          </text>
+          <text id="/data/v_gps:label">
+            <value>5. Enter GPS</value>
+          </text>
+          <text id="/data/v_gps:hint">
+            <value>Collect GPS coordinates - Must be outside to get accurate reading</value>
           </text>
           <text id="/data/v_notes:label">
             <value>13. Additional Notes</value>
@@ -368,6 +379,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="yesno">
         <root>
           <item>
@@ -660,14 +672,16 @@
       <bind nodeset="/data/v_site" relevant="if(selected( /data/v_district , 'Other'), false(),true())" required="true()" type="string"/>
       <bind nodeset="/data/v_site_other" relevant="selected( /data/v_site , 'Other') or selected( /data/v_district , 'Other')" required="true()" type="string"/>
       <bind nodeset="/data/v_total_population" required="true()" type="int"/>
-      <bind nodeset="/data/v_has_health_center" required="true()" type="string"/>
-      <bind nodeset="/data/v_has_health_center_type" relevant="selected( /data/v_has_health_center , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/v_has_health_center_exist" required="true()" type="string"/>
+      <bind nodeset="/data/v_has_health_center" relevant="selected( /data/v_has_health_center_exist , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/v_has_health_center_other" relevant="selected( /data/v_has_health_center , 'Other')" required="true()" type="string"/>
       <bind nodeset="/data/v_black_flies_present" required="true()" type="string"/>
       <bind nodeset="/data/v_mda_carried" required="true()" type="string"/>
       <bind nodeset="/data/v_mda" relevant="selected( /data/v_mda_carried , 'Yes')"/>
       <bind constraint=". &gt; 1970 and . &lt; 2023" jr:constraintMsg="jr:itext('/data/v_mda/year:jr:constraintMsg')" nodeset="/data/v_mda/year" required="true()" type="int"/>
       <bind nodeset="/data/v_mda/month" required="true()" type="string"/>
       <bind nodeset="/data/v_mda_everyone_take_dem" relevant="selected( /data/v_mda_carried , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/v_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/v_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/v_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/v_end" type="dateTime"/>
@@ -715,36 +729,39 @@
       <label ref="jr:itext('/data/v_total_population:label')"/>
       <hint ref="jr:itext('/data/v_total_population:hint')"/>
     </input>
-    <select1 ref="/data/v_has_health_center">
-      <label ref="jr:itext('/data/v_has_health_center:label')"/>
+    <select1 ref="/data/v_has_health_center_exist">
+      <label ref="jr:itext('/data/v_has_health_center_exist:label')"/>
       <item>
-        <label ref="jr:itext('/data/v_has_health_center/Yes:label')"/>
+        <label ref="jr:itext('/data/v_has_health_center_exist/Yes:label')"/>
         <value>Yes</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/v_has_health_center/No:label')"/>
+        <label ref="jr:itext('/data/v_has_health_center_exist/No:label')"/>
         <value>No</value>
       </item>
     </select1>
-    <select1 ref="/data/v_has_health_center_type">
-      <label ref="jr:itext('/data/v_has_health_center_type:label')"/>
+    <select1 ref="/data/v_has_health_center">
+      <label ref="jr:itext('/data/v_has_health_center:label')"/>
       <item>
-        <label ref="jr:itext('/data/v_has_health_center_type/Primary:label')"/>
+        <label ref="jr:itext('/data/v_has_health_center/Primary:label')"/>
         <value>Primary</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/v_has_health_center_type/Secondary:label')"/>
+        <label ref="jr:itext('/data/v_has_health_center/Secondary:label')"/>
         <value>Secondary</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/v_has_health_center_type/District hospital:label')"/>
+        <label ref="jr:itext('/data/v_has_health_center/District hospital:label')"/>
         <value>District hospital</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/v_has_health_center_type/Other:label')"/>
+        <label ref="jr:itext('/data/v_has_health_center/Other:label')"/>
         <value>Other</value>
       </item>
     </select1>
+    <input ref="/data/v_has_health_center_other">
+      <label ref="jr:itext('/data/v_has_health_center_other:label')"/>
+    </input>
     <select1 ref="/data/v_black_flies_present">
       <label ref="jr:itext('/data/v_black_flies_present:label')"/>
       <hint ref="jr:itext('/data/v_black_flies_present:hint')"/>
@@ -849,6 +866,10 @@
         <value>Do Not Know</value>
       </item>
     </select1>
+    <input ref="/data/v_gps">
+      <label ref="jr:itext('/data/v_gps:label')"/>
+      <hint ref="jr:itext('/data/v_gps:hint')"/>
+    </input>
     <input ref="/data/v_notes">
       <label ref="jr:itext('/data/v_notes:label')"/>
       <hint ref="jr:itext('/data/v_notes:hint')"/>

@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2022 October) - 1. vector community questionnaire V2</h:title>
+    <h:title>(2022 October) - 1. vector community questionnaire V3</h:title>
     <model >
 
       <instance>
-        <data id="gn_oncho_bsa_1_vector_community_question_202210_v2">
+        <data id="gn_oncho_bsa_1_vector_community_question_202210_v3">
           <c_recorder_id/>
           <c_district/>
           <c_district_other/>
@@ -45,13 +45,13 @@
             <value>Must be two digit number</value>
           </text>
           <text id="/data/c_recorder_id:label">
-            <value>Enter recorder ID</value>
+            <value>1. Enter recorder ID</value>
           </text>
           <text id="/data/c_recorder_id:hint">
             <value>Enter 2-digit recorder code provided to each recorder (person doing the data entry)</value>
           </text>
           <text id="/data/c_district:label">
-            <value>Select district</value>
+            <value>2. Select district</value>
           </text>
           <text id="/data/c_district:hint">
             <value>Select the appropriate district</value>
@@ -75,13 +75,13 @@
             <value>Enter the district</value>
           </text>
           <text id="/data/c_site:label">
-            <value>Select community name</value>
+            <value>3. Select community name</value>
           </text>
           <text id="/data/c_site_other:label">
             <value>Enter the site</value>
           </text>
           <text id="/data/c_consent:label">
-            <value>Does this person consent to take part in the study?</value>
+            <value>4. Does this person consent to take part in the study?</value>
           </text>
           <text id="/data/c_consent/Yes:label">
             <value>Yes</value>
@@ -90,7 +90,7 @@
             <value>No</value>
           </text>
           <text id="/data/c_gender:label">
-            <value>What gender is this person?</value>
+            <value>5. What gender is this person?</value>
           </text>
           <text id="/data/c_gender/Male:label">
             <value>Male</value>
@@ -102,19 +102,19 @@
             <value>Please enter a correct age</value>
           </text>
           <text id="/data/c_age:label">
-            <value>What age is this person?</value>
+            <value>6. What age is this person?</value>
           </text>
           <text id="/data/c_occupation:label">
-            <value>What is their occupation?</value>
+            <value>7. What is their occupation?</value>
           </text>
           <text id="/data/c_how_lng_lived:jr:constraintMsg">
             <value>The value must be less than the age</value>
           </text>
           <text id="/data/c_how_lng_lived:label">
-            <value>How long has this person lived in this community?</value>
+            <value>8. How long has this person lived in this community?</value>
           </text>
           <text id="/data/c_black_fly_problem:label">
-            <value>Are black fly bites a problem in the community?</value>
+            <value>9. Are black fly bites a problem in the community?</value>
           </text>
           <text id="/data/c_black_fly_problem/Yes:label">
             <value>Yes</value>
@@ -126,7 +126,7 @@
             <value>Do not know</value>
           </text>
           <text id="/data/c_bites_number:label">
-            <value>Bites number</value>
+            <value>10. Bites number</value>
           </text>
           <text id="/data/c_bites_number:hint">
             <value>If yes, how many bites do you receive each day?</value>
@@ -141,7 +141,7 @@
             <value>More than 50</value>
           </text>
           <text id="/data/c_month:label">
-            <value>Black fly month</value>
+            <value>11. Black fly month</value>
           </text>
           <text id="/data/c_month:hint">
             <value>Select the month or months when the respondent reports blackfly biting is most frequent</value>
@@ -183,7 +183,7 @@
             <value>December</value>
           </text>
           <text id="/data/c_time:label">
-            <value>Black fly time of day</value>
+            <value>12. Black fly time of day</value>
           </text>
           <text id="/data/c_time/Morning:label">
             <value>Morning</value>
@@ -198,7 +198,7 @@
             <value>Evening</value>
           </text>
           <text id="/data/c_know_oncho:label">
-            <value>Onchocerciasis – do you know what onchocerciasis/river blindness is?</value>
+            <value>13. Onchocerciasis – do you know what onchocerciasis/river blindness is?</value>
           </text>
           <text id="/data/c_know_oncho/Yes:label">
             <value>Yes</value>
@@ -207,10 +207,10 @@
             <value>No</value>
           </text>
           <text id="/data/c_oncho_explanation:label">
-            <value>Can you explain what onchocerciasis/river blindness is?</value>
+            <value>14. Can you explain what onchocerciasis/river blindness is?</value>
           </text>
           <text id="/data/c_gps:label">
-            <value>Enter GPS</value>
+            <value>15. Enter GPS</value>
           </text>
           <text id="/data/c_gps:hint">
             <value>Collect GPS coordinates - Must be outside to get accurate reading</value>
@@ -397,6 +397,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="yesno">
         <root>
           <item>
@@ -816,7 +817,7 @@
         <value>More than 50</value>
       </item>
     </select1>
-    <select1 ref="/data/c_month">
+    <select ref="/data/c_month">
       <label ref="jr:itext('/data/c_month:label')"/>
       <hint ref="jr:itext('/data/c_month:hint')"/>
       <item>
@@ -867,7 +868,7 @@
         <label ref="jr:itext('/data/c_month/December:label')"/>
         <value>December</value>
       </item>
-    </select1>
+    </select>
     <select1 ref="/data/c_time">
       <label ref="jr:itext('/data/c_time:label')"/>
       <item>
