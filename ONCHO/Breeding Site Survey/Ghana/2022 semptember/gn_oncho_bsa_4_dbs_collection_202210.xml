@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2022 October) - 4. DBS collection</h:title>
+    <h:title>(2022 October) - 4. DBS collection V3</h:title>
     <model >
 
       <instance>
-        <data id="gn_oncho_bsa_4_dbs_collection_202210">
+        <data id="gn_oncho_bsa_4_dbs_collection_202210_v3">
           <d_recorder_id/>
           <d_region/>
           <d_district/>
@@ -19,7 +19,10 @@
           <d_site/>
           <d_site_other/>
           <d_consent/>
-          <d_time_lived_in_village/>
+          <d_time_lived_in_village>
+            <nb_year/>
+            <nb_month/>
+          </d_time_lived_in_village>
           <d_sex/>
           <d_age_yrs/>
           <d_travel/>
@@ -39,6 +42,7 @@
           <d_end/>
           <meta>
             <instanceID/>
+            <randomnum/>
           </meta>
         </data>
       </instance>
@@ -49,13 +53,13 @@
             <value>Must be two digit number</value>
           </text>
           <text id="/data/d_recorder_id:label">
-            <value>Enter recorder ID</value>
+            <value>1. Enter recorder ID</value>
           </text>
           <text id="/data/d_recorder_id:hint">
             <value>Enter 2-digit recorder code provided to each recorder (person doing the data entry)</value>
           </text>
           <text id="/data/d_region:label">
-            <value>Select Region</value>
+            <value>2. Select Region</value>
           </text>
           <text id="/data/d_region/Bono:label">
             <value>Bono</value>
@@ -64,7 +68,7 @@
             <value>Western North</value>
           </text>
           <text id="/data/d_district:label">
-            <value>Select district</value>
+            <value>3. Select district</value>
           </text>
           <text id="/data/d_district:hint">
             <value>Select the appropriate district</value>
@@ -73,13 +77,13 @@
             <value>Enter the district</value>
           </text>
           <text id="/data/d_site:label">
-            <value>Select community name</value>
+            <value>4. Select community name</value>
           </text>
           <text id="/data/d_site_other:label">
             <value>Enter the site</value>
           </text>
           <text id="/data/d_consent:label">
-            <value>Does respondent provide consent?</value>
+            <value>5. Does respondent provide consent?</value>
           </text>
           <text id="/data/d_consent:hint">
             <value>Yes or no. No will end the survey</value>
@@ -91,10 +95,16 @@
             <value>No</value>
           </text>
           <text id="/data/d_time_lived_in_village:label">
-            <value>How many years has the respondent lived in this village?</value>
+            <value>6. How many years has the respondent lived in this village?</value>
+          </text>
+          <text id="/data/d_time_lived_in_village/nb_year:label">
+            <value>Years the respondent lived in this village</value>
+          </text>
+          <text id="/data/d_time_lived_in_village/nb_month:label">
+            <value>Month the respondent lived in this village</value>
           </text>
           <text id="/data/d_sex:label">
-            <value>Is the respondent male or female?</value>
+            <value>7. Is the respondent male or female?</value>
           </text>
           <text id="/data/d_sex:hint">
             <value>Male or female</value>
@@ -109,13 +119,13 @@
             <value>Please enter a valid age</value>
           </text>
           <text id="/data/d_age_yrs:label">
-            <value>How old is the respondent</value>
+            <value>8. How old is the respondent</value>
           </text>
           <text id="/data/d_age_yrs:hint">
             <value>Enter age in years</value>
           </text>
           <text id="/data/d_travel:label">
-            <value>Do you frequently travel long distances from this village?</value>
+            <value>9. Do you frequently travel long distances from this village?</value>
           </text>
           <text id="/data/d_travel/Yes:label">
             <value>Yes</value>
@@ -124,10 +134,10 @@
             <value>No</value>
           </text>
           <text id="/data/d_travel_details:label">
-            <value>If yes, please give details</value>
+            <value>10. If yes, please give details</value>
           </text>
           <text id="/data/d_ivm:label">
-            <value>Have you taken Ivermectin in the past 12 months?</value>
+            <value>11. Have you taken Ivermectin in the past 12 months?</value>
           </text>
           <text id="/data/d_ivm/Yes:label">
             <value>Yes</value>
@@ -136,7 +146,7 @@
             <value>No</value>
           </text>
           <text id="/data/d_ivm_when:label">
-            <value>When were you given Ivermectin?</value>
+            <value>12. When were you given Ivermectin?</value>
           </text>
           <text id="/data/d_ivm_when/year:jr:constraintMsg">
             <value>Please enter a valid year</value>
@@ -184,10 +194,10 @@
             <value>December</value>
           </text>
           <text id="/data/d_ivm_where:label">
-            <value>Where were you given IVM? In this village, as part of a mass treatment campaign, at a Health Centre or other?</value>
+            <value>13. Where were you given IVM? In this village, as part of a mass treatment campaign, at a Health Centre or other?</value>
           </text>
           <text id="/data/d_IDMethod:label">
-            <value>How will the individual's unique ID be generated?</value>
+            <value>14. How will the individual's unique ID be generated?</value>
           </text>
           <text id="/data/d_IDMethod/Scanner:label">
             <value>Barcode</value>
@@ -196,16 +206,16 @@
             <value>Generated code</value>
           </text>
           <text id="/data/d_BarcodeID:label">
-            <value>Scan barcode now</value>
+            <value>15. Scan barcode now</value>
           </text>
           <text id="/data/d_GenerateID:label">
-            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered, including OV16 RDT and Dry Blood Spot tests</value>
+            <value>16. Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered, including OV16 RDT and Dry Blood Spot tests</value>
           </text>
           <text id="/data/d_end_survey_note:label">
             <value>You just entered a value that will end the survey</value>
           </text>
           <text id="/data/d_AdditionalNotes:label">
-            <value>Additional notes</value>
+            <value>17. Additional notes</value>
           </text>
           <text id="yesno-0">
             <value>Yes</value>
@@ -673,7 +683,9 @@
       <bind nodeset="/data/d_site" relevant="if(selected( /data/d_district , 'Other'), false(),true())" required="true()" type="string"/>
       <bind nodeset="/data/d_site_other" relevant="selected( /data/d_site , 'Other') or selected( /data/d_district , 'Other')" required="true()" type="string"/>
       <bind nodeset="/data/d_consent" required="true()" type="string"/>
-      <bind nodeset="/data/d_time_lived_in_village" relevant="selected( /data/d_consent ,'Yes')" required="true()" type="int"/>
+      <bind nodeset="/data/d_time_lived_in_village" relevant="selected( /data/d_consent ,'Yes')"/>
+      <bind nodeset="/data/d_time_lived_in_village/nb_year" required="true()" type="int"/>
+      <bind nodeset="/data/d_time_lived_in_village/nb_month" required="true()" type="int"/>
       <bind nodeset="/data/d_sex" relevant="selected( /data/d_consent ,'Yes')" required="true()" type="string"/>
       <bind constraint=". &gt;= 0 and .&lt;=120" jr:constraintMsg="jr:itext('/data/d_age_yrs:jr:constraintMsg')" nodeset="/data/d_age_yrs" relevant="selected( /data/d_consent ,'Yes')" required="true()" type="int"/>
       <bind nodeset="/data/d_travel" relevant="selected( /data/d_consent ,'Yes')" required="true()" type="string"/>
@@ -685,12 +697,13 @@
       <bind nodeset="/data/d_ivm_where" relevant="selected( /data/d_consent ,'Yes') and  /data/d_ivm  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/d_IDMethod" relevant="selected( /data/d_consent ,'Yes')" required="true()" type="string"/>
       <bind nodeset="/data/d_BarcodeID" relevant="selected( /data/d_consent ,'Yes') and  /data/d_IDMethod  = 'Scanner'" required="true()" type="barcode"/>
-      <bind nodeset="/data/d_GenerateID" relevant="selected( /data/d_consent ,'Yes') and  /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
+      <bind calculate="concat(/data/meta/randomnum)" nodeset="/data/d_GenerateID" readonly="true()" relevant="selected( /data/d_consent ,'Yes') and  /data/d_IDMethod != 'Scanner'" required="true()" type="string"/>
       <bind nodeset="/data/d_end_survey_note" readonly="true()" relevant=" /data/d_consent  = 'No'" type="string"/>
       <bind nodeset="/data/d_AdditionalNotes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),1,3), '-',substr(random(),4,8), '-', substr(random(),11,14))"/>
     </model>
   </h:head>
   <h:body>
@@ -742,9 +755,15 @@
         <value>No</value>
       </item>
     </select1>
-    <input ref="/data/d_time_lived_in_village">
+    <group appearance="field-list" ref="/data/d_time_lived_in_village">
       <label ref="jr:itext('/data/d_time_lived_in_village:label')"/>
-    </input>
+      <input ref="/data/d_time_lived_in_village/nb_year">
+        <label ref="jr:itext('/data/d_time_lived_in_village/nb_year:label')"/>
+      </input>
+      <input ref="/data/d_time_lived_in_village/nb_month">
+        <label ref="jr:itext('/data/d_time_lived_in_village/nb_month:label')"/>
+      </input>
+    </group>
     <select1 ref="/data/d_sex">
       <label ref="jr:itext('/data/d_sex:label')"/>
       <hint ref="jr:itext('/data/d_sex:hint')"/>
@@ -786,7 +805,7 @@
         <value>No</value>
       </item>
     </select1>
-    <group ref="/data/d_ivm_when">
+    <group appearance="field-list" ref="/data/d_ivm_when">
       <label ref="jr:itext('/data/d_ivm_when:label')"/>
       <input ref="/data/d_ivm_when/year">
         <label ref="jr:itext('/data/d_ivm_when/year:label')"/>

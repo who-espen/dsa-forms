@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<h:head>
+		<h:title>(Septembre 2022) BF Cov FL - 3.Formulaire CAP V3.1</h:title>
+		<model >
+			<itext>
+				<translation default="true()" lang="French">
+					<text id="/data/p_code_operateur:label">
+						<value>1. Code Equipe</value>
+					</text>
+					<text id="/data/p_code_operateur:hint">
+						<value>Entrer le code de l'équipe</value>
+					</text>
+					<text id="/data/p_code_operateur/1:label">
+						<value>1</value>
+					</text>
+					<text id="/data/p_code_operateur/2:label">
+						<value>2</value>
+					</text>
+					<text id="/data/p_code_operateur/3:label">
+						<value>3</value>
+					</text>
+					<text id="/data/p_code_operateur/4:label">
+						<value>4</value>
+					</text>
+					<text id="/data/p_code_operateur/5:label">
+						<value>5</value>
+					</text>
+					<text id="/data/p_district:label">
+						<value>2. District sanitaire</value>
+					</text>
+					<text id="/data/p_csps:label">
+						<value>3. CSPS</value>
+					</text>
+					<text id="/data/p_csps:hint">
+						<value>Sélectionnez le CSPS</value>
+					</text>
+					<text id="/data/p_grappe:label">
+						<value>4. Nom de la grappe</value>
+					</text>
+					<text id="/data/p_grappe:hint">
+						<value>Sélectionnez la grappe</value>
+					</text>
+					<text id="/data/p_num_grappe:jr:constraintMsg">
+						<value>Le numéro doit être compris entre 1 et 30</value>
+					</text>
+					<text id="/data/p_num_grappe:label">
+						<value>4a. Numéro grappe</value>
+					</text>
+					<text id="/data/p_num_grappe:hint">
+						<value>Entre 1 et 30</value>
+					</text>
+					<text id="/data/p_code_site:jr:constraintMsg">
+						<value>3 premières lettres du district en majuscule suivies de _ puis du numéro de grappe sur 2 chiffres. Exemple: AAA_01</value>
+					</text>
+					<text id="/data/p_code_site:label">
+						<value>4b. Code unique de la grappe</value>
+					</text>
+					<text id="/data/p_code_site:hint">
+						<value>3 premières lettres du district en majuscule suivies de _ puis du numéro de grappe sur 2 chiffres. Exemple: AAA_01</value>
+					</text>
+					<text id="/data/p_num_menage:jr:constraintMsg">
+						<value>Une lettre majuscule suivi de 2 chiffres. Exemple: A01</value>
+					</text>
+					<text id="/data/p_num_menage:label">
+						<value>5. Numéro ménage</value>
+					</text>
+					<text id="/data/p_num_menage:hint">
+						<value>Une lettre majuscule suivi de 2 chiffres. Exemple: A01</value>
+					</text>
+					<text id="/data/p_repondant:label">
+						<value>6. Le répondant est-il le chef de ménage?</value>
+					</text>
+					<text id="/data/p_repondant/Oui:label">
+						<value>Oui</value>
+					</text>
+					<text id="/data/p_repondant/Non:label">
+						<value>Non</value>
+					</text>
+					<text id="/data/p_repondant/Ne_sait_pas:label">
+						<value>Ne sait pas</value>
+					</text>
+					<text id="/data/p_sexe:label">
+						<value>7. Sexe</value>
+					</text>
+					<text id="/data/p_sexe/F:label">
+						<value>Féminin</value>
+					</text>
+					<text id="/data/p_sexe/M:label">
+						<value>Masculin</value>
+					</text>
+					<text id="/data/p_age:jr:constraintMsg">
+						<value>L'age doit être supérieur ou égal à 18 ans</value>
+					</text>
+					<text id="/data/p_age:label">
+						<value>8. Age (en année)</value>
+					</text>
+					<text id="/data/p_niveau_instruction:label">
+						<value>9. Niveau d'instruction du répondant</value>
+					</text>
+					<text id="/data/p_niveau_instruction/Aucun:label">
+						<value>Aucun</value>
+					</text>
+					<text id="/data/p_niveau_instruction/Primaire:label">
+						<value>Primaire</value>
+					</text>
+					<text id="/data/p_niveau_instruction/Secondaire:label">
+						<value>Secondaire</value>
+					</text>
+					<text id="/data/p_niveau_instruction/Superieur:label">
+						<value>Supérieur</value>
+					</text>
+					<text id="/data/p_niveau_instruction/Alphabetise:label">
+						<value>Alphabétisé</value>
+					</text>
+					<text id="/data/p_duree_resident:jr:constraintMsg">
+						<value>La durée de résidence ne peut pas être supérieure à son age!</value>
+					</text>
+					<text id="/data/p_duree_resident:label">
+						<value>10. Depuis combien de temps vivez -vous dans ce village ?</value>
+					</text>
+					<text id="/data/p_duree_resident:hint">
+						<value>Veuillez mettre 0 (zéro) pour toute durée de résidence inférieure à 1 an</value>
+					</text>
+					<text id="/data/p_duree_resident_mois:label">
+						<value>10b. Si la durée de résidence est moins de 1 an, préciser le nombre de mois</value>
+					</text>
+					<text id="/data/p_entendu_parler_FL:label">
+						<value>11. Avez-vous déjà entendu parler de la Filariose lymphatique (hydrocèle, éléphantiasis)?</value>
+					</text>
+					<text id="/data/p_entendu_parler_FL/Oui:label">
+						<value>Oui</value>
+					</text>
+					<text id="/data/p_entendu_parler_FL/Non:label">
+						<value>Non</value>
+					</text>
+					<text id="/data/p_entendu_parler_FL/Ne_sait_pas:label">
+						<value>Ne sait pas</value>
+					</text>
+					<text id="/data/p_vu_cas_fl:label">
+						<value>12. Avez-vous déjà vu un cas d'hydrocèle ou éléphantiasis ?</value>
+					</text>
+					<text id="/data/p_vu_cas_fl/Oui:label">
+						<value>Oui</value>
+					</text>
+					<text id="/data/p_vu_cas_fl/Non:label">
+						<value>Non</value>
+					</text>
+					<text id="/data/p_vu_cas_fl/Ne_sait_pas:label">
+						<value>Ne sait pas</value>
+					</text>
+					<text id="/data/p_causes_lymp:label">
+						<value>13. Selon vous comment peut-on contracter le lymphœdème (Mode de transmission du lymphœdème)</value>
+					</text>
+					<text id="/data/p_causes_lymp/Mouches:label">
+						<value>1.Mouches</value>
+					</text>
+					<text id="/data/p_causes_lymp/Moustiques:label">
+						<value>2. Moustiques</value>
+					</text>
+					<text id="/data/p_causes_lymp/Autres_insectes:label">
+						<value>3.Autres insectes</value>
+					</text>
+					<text id="/data/p_causes_lymp/contact_avec_sang:label">
+						<value>4.Contact avec du sang</value>
+					</text>
+					<text id="/data/p_causes_lymp/mauvais_temps:label">
+						<value>5.Mauvais temps</value>
+					</text>
+					<text id="/data/p_causes_lymp/pauvrete:label">
+						<value>6.Pauvreté</value>
+					</text>
+					<text id="/data/p_causes_lymp/mauvaise_hygiene:label">
+						<value>7.Mauvaise hygiène</value>
+					</text>
+					<text id="/data/p_causes_lymp/sorcellerie:label">
+						<value>8.Sorcellerie</value>
+					</text>
+					<text id="/data/p_causes_lymp/sort:label">
+						<value>9.Sort</value>
+					</text>
+					<text id="/data/p_causes_lymp/heredite:label">
+						<value>10.Hérédité</value>
+					</text>
+					<text id="/data/p_causes_lymp/punition_Dieu:label">
+						<value>11.Punition de Dieu</value>
+					</text>
+					<text id="/data/p_causes_lymp/ne_sait_pas:label">
+						<value>12. ne sais pas</value>
+					</text>
+					<text id="/data/p_causes_lymp/Autres:label">
+						<value>13.Autres (préciser)</value>
+					</text>
+					<text id="/data/p_causes_lymp_autres:label">
+						<value>13b. Si autres, veuillez préciser:</value>
+					</text>
+					<text id="/data/p_causes_hydro:label">
+						<value>14. Selon vous comment peut-on contracter le hydrocèle (Mode de transmission du hydrocèle)</value>
+					</text>
+					<text id="/data/p_causes_hydro/Mouches:label">
+						<value>1.Mouches</value>
+					</text>
+					<text id="/data/p_causes_hydro/Moustiques:label">
+						<value>2. Moustiques</value>
+					</text>
+					<text id="/data/p_causes_hydro/Autres_insectes:label">
+						<value>3.Autres insectes</value>
+					</text>
+					<text id="/data/p_causes_hydro/contact_avec_sang:label">
+						<value>4.Contact avec du sang</value>
+					</text>
+					<text id="/data/p_causes_hydro/mauvais_temps:label">
+						<value>5.Mauvais temps</value>
+					</text>
+					<text id="/data/p_causes_hydro/pauvrete:label">
+						<value>6.Pauvreté</value>
+					</text>
+					<text id="/data/p_causes_hydro/mauvaise_hygiene:label">
+						<value>7.Mauvaise hygiène</value>
+					</text>
+					<text id="/data/p_causes_hydro/sorcellerie:label">
+						<value>8.Sorcellerie</value>
+					</text>
+					<text id="/data/p_causes_hydro/sort:label">
+						<value>9.Sort</value>
+					</text>
+					<text id="/data/p_causes_hydro/heredite:label">
+						<value>10.Hérédité</value>
+					</text>
+					<text id="/data/p_causes_hydro/punition_Dieu:label">
+						<value>11.Punition de Dieu</value>
+					</text>
+					<text id="/data/p_causes_hydro/ne_sait_pas:label">
+						<value>12. ne sais pas</value>
+					</text>
+					<text id="/data/p_causes_hydro/Autres:label">
+						<value>13.Autres (préciser)</value>
+					</text>
+					<text id="/data/p_causes_hydro_autres:label">
+						<value>14b. Si autres, veuillez préciser:</value>
+					</text>
+					<text id="/data/p_prevent_fl:label">
+						<value>15. Comment peut-on prévenir cette maladie</value>
+					</text>
+					<text id="/data/p_prevent_fl/moustiquaire:label">
+						<value>1.Utilisation de moustiquaire</value>
+					</text>
+					<text id="/data/p_prevent_fl/tdm:label">
+						<value>2.Prise régulière de l'ivermectine+Albendazole</value>
+					</text>
+					<text id="/data/p_prevent_fl/hygiene:label">
+						<value>3.Hygiène et assainissement du milieu</value>
+					</text>
+					<text id="/data/p_prevent_fl/Autres:label">
+						<value>4.Autres</value>
+					</text>
+					<text id="/data/p_prevent_fl/Ne_sait_pas:label">
+						<value>5.Ne sait pas</value>
+					</text>
+					<text id="/data/p_autres_prevent_fl:label">
+						<value>15b. Autres modes de prévention de la FL</value>
+					</text>
+					<text id="/data/p_present_village:label">
+						<value>16. Durant la dernière campagne de distribution de masse contre la FL qui s'est déroulée du 20 au 30 juin 2022 étiez-vous dans ce village ?</value>
+					</text>
+					<text id="/data/p_present_village/Oui:label">
+						<value>Oui</value>
+					</text>
+					<text id="/data/p_present_village/Non:label">
+						<value>Non</value>
+					</text>
+					<text id="/data/p_present_village/Ne_sait_pas:label">
+						<value>Ne sait pas</value>
+					</text>
+					<text id="/data/p_informe:label">
+						<value>17. Avez-vous été informé de la campagne ?</value>
+					</text>
+					<text id="/data/p_informe/Oui:label">
+						<value>Oui</value>
+					</text>
+					<text id="/data/p_informe/Non:label">
+						<value>Non</value>
+					</text>
+					<text id="/data/p_informe/Ne_sait_pas:label">
+						<value>Ne sait pas</value>
+					</text>
+					<text id="/data/p_canaux_information:label">
+						<value>18. Si oui par quel canal avez-vous obtenu l'information sur la campagne ?</value>
+					</text>
+					<text id="/data/p_canaux_information/Message_dans_l.eglise/mosquee:label">
+						<value>Message dans l église/mosquée</value>
+					</text>
+					<text id="/data/p_canaux_information/Les_Distributeurs_communautaires/crieurs_publics:label">
+						<value>Les Distributeurs communautaires/crieurs publics</value>
+					</text>
+					<text id="/data/p_canaux_information/Les_responsables_administratifs_locaux:label">
+						<value>Les responsables administratifs locaux</value>
+					</text>
+					<text id="/data/p_canaux_information/Agents_de_sante:label">
+						<value>Agents de santé</value>
+					</text>
+					<text id="/data/p_canaux_information/Radio:label">
+						<value>Radio</value>
+					</text>
+					<text id="/data/p_canaux_information/Parent:label">
+						<value>Proche parent/ami</value>
+					</text>
+					<text id="/data/p_canaux_information/Affiches:label">
+						<value>Affiches</value>
+					</text>
+					<text id="/data/p_canaux_information/Autres:label">
+						<value>Autres (à préciser)</value>
+					</text>
+					<text id="/data/p_autres_canaux_information:label">
+						<value>18b. Autres canaux d'information</value>
+					</text>
+					<text id="/data/p_nbre_resident_menage:label">
+						<value>19. Combien de personnes habitent régulièrement dans votre ménage ?</value>
+					</text>
+					<text id="/data/p_nbre_resident_moins5ans:label">
+						<value>20. Parmi eux combien ont moins de 5 ans ?</value>
+					</text>
+					<text id="/data/p_resident_non_traite:label">
+						<value>21. Avez-vous des membres de votre famille de 5 ans et plus qui n'ont pas pu avoir les médicaments ?</value>
+					</text>
+					<text id="/data/p_resident_non_traite/Oui:label">
+						<value>Oui</value>
+					</text>
+					<text id="/data/p_resident_non_traite/Non:label">
+						<value>Non</value>
+					</text>
+					<text id="/data/p_resident_non_traite/Ne_sait_pas:label">
+						<value>Ne sait pas</value>
+					</text>
+					<text id="/data/p_nbre_resident_non_traite:label">
+						<value>21b.Si oui combien n'ont pas été traités?</value>
+					</text>
+					<text id="/data/p_volet_aime:label">
+						<value>22. Quels volets de campagne vous avez le plus aimé ?</value>
+					</text>
+					<text id="/data/p_volet_aime/proximite_site:label">
+						<value>1.Proximité du site de distribution</value>
+					</text>
+					<text id="/data/p_volet_aime/distribution_porte_porte:label">
+						<value>2.Distribution porte à porte</value>
+					</text>
+					<text id="/data/p_volet_aime/accueil_DC:label">
+						<value>3.Accueil des distributeurs</value>
+					</text>
+					<text id="/data/p_volet_aime/temps_attente_court:label">
+						<value>4.Temps d'attente court</value>
+					</text>
+					<text id="/data/p_volet_aime/communication:label">
+						<value>5.Communication</value>
+					</text>
+					<text id="/data/p_volet_aime/prise_supervise:label">
+						<value>6.Prise supervisée</value>
+					</text>
+					<text id="/data/p_volet_aime/marquage_concession:label">
+						<value>7.marquage de concession</value>
+					</text>
+					<text id="/data/p_volet_aime/autres_volet_aime:label">
+						<value>8.Autres(préciser)</value>
+					</text>
+					<text id="/data/p_autres_volet_aime:label">
+						<value>22b. Autres volets</value>
+					</text>
+					<text id="/data/p_suggestions:label">
+						<value>23. Quels changements souhaitez-vous qu'on apporte au TDM pour inciter une meilleure participation dans l'avenir ?</value>
+					</text>
+					<text id="/data/p_gps:jr:constraintMsg">
+						<value>Fonctionne mieux à l'extérieure des batiments</value>
+					</text>
+					<text id="/data/p_gps:label">
+						<value>24.GPS</value>
+					</text>
+					<text id="/data/p_commentaires:label">
+						<value>25. commentaires</value>
+					</text>
+				</translation>
+			</itext>
+			<instance>
+				<data id="bf_lf_cov_3_cap_tdm_202207_v3.1" version="20220824">
+					<p_code_operateur/>
+					<p_district/>
+					<p_csps/>
+					<p_grappe/>
+					<p_num_grappe/>
+					<p_prefix_district/>
+					<p_code_site/>
+					<p_num_menage/>
+					<p_repondant/>
+					<p_sexe/>
+					<p_age/>
+					<p_niveau_instruction/>
+					<p_duree_resident/>
+					<p_duree_resident_mois/>
+					<p_entendu_parler_FL/>
+					<p_vu_cas_fl/>
+					<p_causes_lymp/>
+					<p_causes_lymp_autres/>
+					<p_causes_hydro/>
+					<p_causes_hydro_autres/>
+					<p_prevent_fl/>
+					<p_autres_prevent_fl/>
+					<p_present_village/>
+					<p_informe/>
+					<p_canaux_information/>
+					<p_autres_canaux_information/>
+					<p_nbre_resident_menage/>
+					<p_nbre_resident_moins5ans/>
+					<p_resident_non_traite/>
+					<p_nbre_resident_non_traite/>
+					<p_volet_aime/>
+					<p_autres_volet_aime/>
+					<p_suggestions/>
+					<p_gps/>
+					<p_commentaires/>
+					<p_start/>
+					<p_end/>
+					<meta>
+						<instanceID/>
+					</meta>
+				</data>
+			</instance>
+			<bind nodeset="/data/p_code_operateur" required="true()" type="string"/>
+			<bind nodeset="/data/p_district" type="string" db_get="col_1"/>
+			<bind nodeset="/data/p_csps" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
+			<bind nodeset="/data/p_grappe" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_csps"/>
+			<bind constraint=". &gt;= 1 and . &lt;= 30" jr:constraintMsg="jr:itext('/data/p_num_grappe:jr:constraintMsg')" nodeset="/data/p_num_grappe" db_get="col_4" required="true()" type="string"/>
+			<bind calculate="if(  /data/p_district  = 'BATIE', 'BAT', if( /data/p_district  = 'BITTOU', 'BIT', 'GAO'))" nodeset="/data/p_prefix_district" type="string"/>
+			<bind calculate="if(  /data/p_num_grappe  &lt; 10, concat( /data/p_prefix_district , '_0',  /data/p_num_grappe ), concat( /data/p_prefix_district , '_',  /data/p_num_grappe ))" constraint="regex(.,'^[A-Z]{3}_[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_code_site:jr:constraintMsg')" nodeset="/data/p_code_site" readonly="true()" required="true()" type="string"/>
+			<bind constraint="regex(.,'^[A-Z]{1}[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_num_menage:jr:constraintMsg')" nodeset="/data/p_num_menage" required="true()" type="string"/>
+			<bind nodeset="/data/p_repondant" required="true()" type="string"/>
+			<bind nodeset="/data/p_sexe" required="true()" type="string"/>
+			<bind constraint=". &gt;= 18" jr:constraintMsg="jr:itext('/data/p_age:jr:constraintMsg')" nodeset="/data/p_age" required="true()" type="int"/>
+			<bind nodeset="/data/p_niveau_instruction" required="true()" type="string"/>
+			<bind constraint=". &lt;=  /data/p_age " jr:constraintMsg="jr:itext('/data/p_duree_resident:jr:constraintMsg')" nodeset="/data/p_duree_resident" required="true()" type="int"/>
+			<bind constraint=".&lt;12" nodeset="/data/p_duree_resident_mois" relevant=" /data/p_duree_resident  = 0" required="true()" type="int"/>
+			<bind nodeset="/data/p_entendu_parler_FL" required="true()" type="string"/>
+			<bind nodeset="/data/p_vu_cas_fl" required="true()" type="string"/>
+			<bind nodeset="/data/p_causes_lymp" required="true()" type="string"/>
+			<bind nodeset="/data/p_causes_lymp_autres" relevant="selected( /data/p_causes_lymp , 'Autres')" required="true()" type="string"/>
+			<bind nodeset="/data/p_causes_hydro" required="true()" type="string"/>
+			<bind nodeset="/data/p_causes_hydro_autres" relevant="selected( /data/p_causes_lymp , 'Autres')" required="true()" type="string"/>
+			<bind nodeset="/data/p_prevent_fl" required="true()" type="string"/>
+			<bind nodeset="/data/p_autres_prevent_fl" relevant="selected( /data/p_prevent_fl , 'Autres')" required="true()" type="string"/>
+			<bind nodeset="/data/p_present_village" required="true()" type="string"/>
+			<bind nodeset="/data/p_informe" required="true()" type="string"/>
+			<bind nodeset="/data/p_canaux_information" relevant=" /data/p_informe ='Oui'" required="true()" type="string"/>
+			<bind nodeset="/data/p_autres_canaux_information" relevant="selected( /data/p_canaux_information , 'Autres')" required="true()" type="string"/>
+			<bind nodeset="/data/p_nbre_resident_menage" required="true()" type="int"/>
+			<bind nodeset="/data/p_nbre_resident_moins5ans" relevant=" /data/p_nbre_resident_menage  &gt; 0" required="true()" type="int"/>
+			<bind nodeset="/data/p_resident_non_traite" required="true()" type="string"/>
+			<bind nodeset="/data/p_nbre_resident_non_traite" relevant=" /data/p_resident_non_traite  = 'Oui'" required="true()" type="int"/>
+			<bind nodeset="/data/p_volet_aime" required="true()" type="string"/>
+			<bind nodeset="/data/p_autres_volet_aime" relevant="selected( /data/p_volet_aime , 'autres_volet_aime')" required="true()" type="string"/>
+			<bind nodeset="/data/p_suggestions" required="true()" type="string"/>
+			<bind jr:constraintMsg="jr:itext('/data/p_gps:jr:constraintMsg')" nodeset="/data/p_gps" required="true()" type="geopoint"/>
+			<bind nodeset="/data/p_commentaires" required="true()" type="string"/>
+			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
+			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
+			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+		</model>
+	</h:head>
+	<h:body>
+		<select1 ref="/data/p_code_operateur">
+			<label ref="jr:itext('/data/p_code_operateur:label')"/>
+			<hint ref="jr:itext('/data/p_code_operateur:hint')"/>
+			<item>
+				<label ref="jr:itext('/data/p_code_operateur/1:label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_code_operateur/2:label')"/>
+				<value>2</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_code_operateur/3:label')"/>
+				<value>3</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_code_operateur/4:label')"/>
+				<value>4</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_code_operateur/5:label')"/>
+				<value>5</value>
+			</item>
+		</select1>
+		<input ref="/data/p_district">
+			<label ref="jr:itext('/data/p_district:label')"/>
+		</input>
+		<input ref="/data/p_csps">
+			<label ref="jr:itext('/data/p_csps:label')"/>
+			<hint ref="jr:itext('/data/p_csps:hint')"/>
+		</input>
+		<input ref="/data/p_grappe">
+			<label ref="jr:itext('/data/p_grappe:label')"/>
+			<hint ref="jr:itext('/data/p_grappe:hint')"/>
+		</input>
+		<input ref="/data/p_num_grappe">
+			<label ref="jr:itext('/data/p_num_grappe:label')"/>
+			<hint ref="jr:itext('/data/p_num_grappe:hint')"/>
+		</input>
+		<input ref="/data/p_code_site">
+			<label ref="jr:itext('/data/p_code_site:label')"/>
+			<hint ref="jr:itext('/data/p_code_site:hint')"/>
+		</input>
+		<input ref="/data/p_num_menage">
+			<label ref="jr:itext('/data/p_num_menage:label')"/>
+			<hint ref="jr:itext('/data/p_num_menage:hint')"/>
+		</input>
+		<select1 ref="/data/p_repondant">
+			<label ref="jr:itext('/data/p_repondant:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_repondant/Oui:label')"/>
+				<value>Oui</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_repondant/Non:label')"/>
+				<value>Non</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_repondant/Ne_sait_pas:label')"/>
+				<value>Ne_sait_pas</value>
+			</item>
+		</select1>
+		<select1 ref="/data/p_sexe">
+			<label ref="jr:itext('/data/p_sexe:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_sexe/F:label')"/>
+				<value>F</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_sexe/M:label')"/>
+				<value>M</value>
+			</item>
+		</select1>
+		<input ref="/data/p_age">
+			<label ref="jr:itext('/data/p_age:label')"/>
+		</input>
+		<select1 ref="/data/p_niveau_instruction">
+			<label ref="jr:itext('/data/p_niveau_instruction:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_niveau_instruction/Aucun:label')"/>
+				<value>Aucun</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_niveau_instruction/Primaire:label')"/>
+				<value>Primaire</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_niveau_instruction/Secondaire:label')"/>
+				<value>Secondaire</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_niveau_instruction/Superieur:label')"/>
+				<value>Superieur</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_niveau_instruction/Alphabetise:label')"/>
+				<value>Alphabetise</value>
+			</item>
+		</select1>
+		<input ref="/data/p_duree_resident">
+			<label ref="jr:itext('/data/p_duree_resident:label')"/>
+			<hint ref="jr:itext('/data/p_duree_resident:hint')"/>
+		</input>
+		<input ref="/data/p_duree_resident_mois">
+			<label ref="jr:itext('/data/p_duree_resident_mois:label')"/>
+		</input>
+		<select1 ref="/data/p_entendu_parler_FL">
+			<label ref="jr:itext('/data/p_entendu_parler_FL:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_entendu_parler_FL/Oui:label')"/>
+				<value>Oui</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_entendu_parler_FL/Non:label')"/>
+				<value>Non</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_entendu_parler_FL/Ne_sait_pas:label')"/>
+				<value>Ne_sait_pas</value>
+			</item>
+		</select1>
+		<select1 ref="/data/p_vu_cas_fl">
+			<label ref="jr:itext('/data/p_vu_cas_fl:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_vu_cas_fl/Oui:label')"/>
+				<value>Oui</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_vu_cas_fl/Non:label')"/>
+				<value>Non</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_vu_cas_fl/Ne_sait_pas:label')"/>
+				<value>Ne_sait_pas</value>
+			</item>
+		</select1>
+		<select ref="/data/p_causes_lymp">
+			<label ref="jr:itext('/data/p_causes_lymp:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/Mouches:label')"/>
+				<value>Mouches</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/Moustiques:label')"/>
+				<value>Moustiques</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/Autres_insectes:label')"/>
+				<value>Autres_insectes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/contact_avec_sang:label')"/>
+				<value>contact_avec_sang</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/mauvais_temps:label')"/>
+				<value>mauvais_temps</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/pauvrete:label')"/>
+				<value>pauvrete</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/mauvaise_hygiene:label')"/>
+				<value>mauvaise_hygiene</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/sorcellerie:label')"/>
+				<value>sorcellerie</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/sort:label')"/>
+				<value>sort</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/heredite:label')"/>
+				<value>heredite</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/punition_Dieu:label')"/>
+				<value>punition_Dieu</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/ne_sait_pas:label')"/>
+				<value>ne_sait_pas</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_lymp/Autres:label')"/>
+				<value>Autres</value>
+			</item>
+		</select>
+		<input ref="/data/p_causes_lymp_autres">
+			<label ref="jr:itext('/data/p_causes_lymp_autres:label')"/>
+		</input>
+		<select ref="/data/p_causes_hydro">
+			<label ref="jr:itext('/data/p_causes_hydro:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/Mouches:label')"/>
+				<value>Mouches</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/Moustiques:label')"/>
+				<value>Moustiques</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/Autres_insectes:label')"/>
+				<value>Autres_insectes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/contact_avec_sang:label')"/>
+				<value>contact_avec_sang</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/mauvais_temps:label')"/>
+				<value>mauvais_temps</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/pauvrete:label')"/>
+				<value>pauvrete</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/mauvaise_hygiene:label')"/>
+				<value>mauvaise_hygiene</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/sorcellerie:label')"/>
+				<value>sorcellerie</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/sort:label')"/>
+				<value>sort</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/heredite:label')"/>
+				<value>heredite</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/punition_Dieu:label')"/>
+				<value>punition_Dieu</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/ne_sait_pas:label')"/>
+				<value>ne_sait_pas</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_causes_hydro/Autres:label')"/>
+				<value>Autres</value>
+			</item>
+		</select>
+		<input ref="/data/p_causes_hydro_autres">
+			<label ref="jr:itext('/data/p_causes_hydro_autres:label')"/>
+		</input>
+		<select ref="/data/p_prevent_fl">
+			<label ref="jr:itext('/data/p_prevent_fl:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_prevent_fl/moustiquaire:label')"/>
+				<value>moustiquaire</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_prevent_fl/tdm:label')"/>
+				<value>tdm</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_prevent_fl/hygiene:label')"/>
+				<value>hygiene</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_prevent_fl/Autres:label')"/>
+				<value>Autres</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_prevent_fl/Ne_sait_pas:label')"/>
+				<value>Ne_sait_pas</value>
+			</item>
+		</select>
+		<input ref="/data/p_autres_prevent_fl">
+			<label ref="jr:itext('/data/p_autres_prevent_fl:label')"/>
+		</input>
+		<select1 ref="/data/p_present_village">
+			<label ref="jr:itext('/data/p_present_village:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_present_village/Oui:label')"/>
+				<value>Oui</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_present_village/Non:label')"/>
+				<value>Non</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_present_village/Ne_sait_pas:label')"/>
+				<value>Ne_sait_pas</value>
+			</item>
+		</select1>
+		<select1 ref="/data/p_informe">
+			<label ref="jr:itext('/data/p_informe:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_informe/Oui:label')"/>
+				<value>Oui</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_informe/Non:label')"/>
+				<value>Non</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_informe/Ne_sait_pas:label')"/>
+				<value>Ne_sait_pas</value>
+			</item>
+		</select1>
+		<select ref="/data/p_canaux_information">
+			<label ref="jr:itext('/data/p_canaux_information:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_canaux_information/Message_dans_l.eglise/mosquee:label')"/>
+				<value>Message_dans_l.eglise/mosquee</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_canaux_information/Les_Distributeurs_communautaires/crieurs_publics:label')"/>
+				<value>Les_Distributeurs_communautaires/crieurs_publics</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_canaux_information/Les_responsables_administratifs_locaux:label')"/>
+				<value>Les_responsables_administratifs_locaux</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_canaux_information/Agents_de_sante:label')"/>
+				<value>Agents_de_sante</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_canaux_information/Radio:label')"/>
+				<value>Radio</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_canaux_information/Parent:label')"/>
+				<value>Parent</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_canaux_information/Affiches:label')"/>
+				<value>Affiches</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_canaux_information/Autres:label')"/>
+				<value>Autres</value>
+			</item>
+		</select>
+		<input ref="/data/p_autres_canaux_information">
+			<label ref="jr:itext('/data/p_autres_canaux_information:label')"/>
+		</input>
+		<input ref="/data/p_nbre_resident_menage">
+			<label ref="jr:itext('/data/p_nbre_resident_menage:label')"/>
+		</input>
+		<input ref="/data/p_nbre_resident_moins5ans">
+			<label ref="jr:itext('/data/p_nbre_resident_moins5ans:label')"/>
+		</input>
+		<select1 ref="/data/p_resident_non_traite">
+			<label ref="jr:itext('/data/p_resident_non_traite:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_resident_non_traite/Oui:label')"/>
+				<value>Oui</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_resident_non_traite/Non:label')"/>
+				<value>Non</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_resident_non_traite/Ne_sait_pas:label')"/>
+				<value>Ne_sait_pas</value>
+			</item>
+		</select1>
+		<input ref="/data/p_nbre_resident_non_traite">
+			<label ref="jr:itext('/data/p_nbre_resident_non_traite:label')"/>
+		</input>
+		<select ref="/data/p_volet_aime">
+			<label ref="jr:itext('/data/p_volet_aime:label')"/>
+			<item>
+				<label ref="jr:itext('/data/p_volet_aime/proximite_site:label')"/>
+				<value>proximite_site</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_volet_aime/distribution_porte_porte:label')"/>
+				<value>distribution_porte_porte</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_volet_aime/accueil_DC:label')"/>
+				<value>accueil_DC</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_volet_aime/temps_attente_court:label')"/>
+				<value>temps_attente_court</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_volet_aime/communication:label')"/>
+				<value>communication</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_volet_aime/prise_supervise:label')"/>
+				<value>prise_supervise</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_volet_aime/marquage_concession:label')"/>
+				<value>marquage_concession</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/p_volet_aime/autres_volet_aime:label')"/>
+				<value>autres_volet_aime</value>
+			</item>
+		</select>
+		<input ref="/data/p_autres_volet_aime">
+			<label ref="jr:itext('/data/p_autres_volet_aime:label')"/>
+		</input>
+		<input ref="/data/p_suggestions">
+			<label ref="jr:itext('/data/p_suggestions:label')"/>
+		</input>
+		<input ref="/data/p_gps">
+			<label ref="jr:itext('/data/p_gps:label')"/>
+		</input>
+		<input ref="/data/p_commentaires">
+			<label ref="jr:itext('/data/p_commentaires:label')"/>
+		</input>
+	</h:body>
+</h:html>
