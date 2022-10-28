@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<h:head>
+		<h:title>(Septembre 2022) BFA Cov FL - 1.Formulaire Village V3.1</h:title>
+		<model >
+			<itext>
+				<translation default="true()" lang="French">
+					<text id="/data/v_code_operateur:label">
+						<value>Code opérateurs</value>
+					</text>
+					<text id="/data/v_code_operateur/1:label">
+						<value>1</value>
+					</text>
+					<text id="/data/v_code_operateur/2:label">
+						<value>2</value>
+					</text>
+					<text id="/data/v_code_operateur/3:label">
+						<value>3</value>
+					</text>
+					<text id="/data/v_code_operateur/4:label">
+						<value>4</value>
+					</text>
+					<text id="/data/v_code_operateur/5:label">
+						<value>5</value>
+					</text>
+					<text id="/data/v_district:label">
+						<value>Sélectionnez le nom du district</value>
+					</text>
+					<text id="/data/v_district/BATIE:label">
+						<value>BATIE</value>
+					</text>
+					<text id="/data/v_district/BITTOU:label">
+						<value>BITTOU</value>
+					</text>
+					<text id="/data/v_district/GAOUA:label">
+						<value>GAOUA</value>
+					</text>
+					<text id="/data/v_gaoua_cat:label">
+						<value>Sélectionnez la plage :</value>
+					</text>
+					<text id="/data/v_gaoua_cat/GAOUA [CSPS B]:label">
+						<value>GAOUA [CSPS B]</value>
+					</text>
+					<text id="/data/v_gaoua_cat/GAOUA [CSPS C - N]:label">
+						<value>GAOUA [CSPS C - N]</value>
+					</text>
+					<text id="/data/v_gaoua_cat/GAOUA [CSPS P - T]:label">
+						<value>GAOUA [CSPS P - T]</value>
+					</text>
+					<text id="/data/v_csps:label">
+						<value>Sélectionnez le CSPS</value>
+					</text>
+					<text id="/data/v_grappe:label">
+						<value>Sélectionnez la grappe</value>
+					</text>
+					<text id="/data/v_num_grappe:jr:constraintMsg">
+						<value>Le numéro doit être compris entre 1 et 30</value>
+					</text>
+					<text id="/data/v_num_grappe:label">
+						<value>N° Grappe :</value>
+					</text>
+					<text id="/data/v_code_site:jr:constraintMsg">
+						<value>3 premières lettres du district en majuscule suivies de _ puis du numéro de grappe sur 2 chiffres. Exemple: AAA_01</value>
+					</text>
+					<text id="/data/v_code_site:label">
+						<value>Code unique de la grappe :</value>
+					</text>
+					<text id="/data/v_code_site:hint">
+						<value>3 premières lettres du district en majuscule suivies de _ puis du numéro de grappe sur 2 chiffres. Exemple: AAA_01</value>
+					</text>
+					<text id="/data/v_Coverage_village22:jr:constraintMsg">
+						<value>Nombre décimal à 3chiffres avec 2 chiffres après la virgules (###,##)</value>
+					</text>
+					<text id="/data/v_Coverage_village22:label">
+						<value>Couverture thérapeutique du TDM FL 2022</value>
+					</text>
+					<text id="/data/v_Coverage_village22:hint">
+						<value>Nombre décimal à 3 chiffres avec 2 chiffres après la virgule (###,##)</value>
+					</text>
+					<text id="/data/v_gps:label">
+						<value>GPS</value>
+					</text>
+					<text id="/data/v_gps:hint">
+						<value>Fonctionne mieux à l'extérieure des batiments</value>
+					</text>
+					<text id="/data/v_commentaires:label">
+						<value>Commentaires</value>
+					</text>
+					<text id="operateur_list-0">
+						<value>1</value>
+					</text>
+					<text id="operateur_list-1">
+						<value>2</value>
+					</text>
+					<text id="operateur_list-2">
+						<value>3</value>
+					</text>
+					<text id="operateur_list-3">
+						<value>4</value>
+					</text>
+					<text id="operateur_list-4">
+						<value>5</value>
+					</text>
+					<text id="district_list-0">
+						<value>BATIE</value>
+					</text>
+					<text id="district_list-1">
+						<value>BITTOU</value>
+					</text>
+					<text id="district_list-2">
+						<value>GAOUA</value>
+					</text>
+					<text id="gaoua_cat_list-0">
+						<value>GAOUA [CSPS B]</value>
+					</text>
+					<text id="gaoua_cat_list-1">
+						<value>GAOUA [CSPS C - N]</value>
+					</text>
+					<text id="gaoua_cat_list-2">
+						<value>GAOUA [CSPS P - T]</value>
+					</text>
+					<text id="csps_list-0">
+						<value>BANABA</value>
+					</text>
+					<text id="csps_list-1">
+						<value>BATIE</value>
+					</text>
+					<text id="csps_list-2">
+						<value>BOPIEL</value>
+					</text>
+					<text id="csps_list-3">
+						<value>BOUSSOUKOULA</value>
+					</text>
+					<text id="csps_list-4">
+						<value>DANKANA</value>
+					</text>
+					<text id="csps_list-5">
+						<value>FADIO</value>
+					</text>
+					<text id="csps_list-6">
+						<value>KAMBA</value>
+					</text>
+					<text id="csps_list-7">
+						<value>KORIBA</value>
+					</text>
+					<text id="csps_list-8">
+						<value>Kosso</value>
+					</text>
+					<text id="csps_list-9">
+						<value>Kpuere</value>
+					</text>
+					<text id="csps_list-10">
+						<value>Legmoin</value>
+					</text>
+					<text id="csps_list-11">
+						<value>Midebdo</value>
+					</text>
+					<text id="csps_list-12">
+						<value>Tamipar</value>
+					</text>
+					<text id="csps_list-13">
+						<value>Timboura</value>
+					</text>
+					<text id="csps_list-14">
+						<value>BANE</value>
+					</text>
+					<text id="csps_list-15">
+						<value>BANTOUGRI</value>
+					</text>
+					<text id="csps_list-16">
+						<value>BITTOU</value>
+					</text>
+					<text id="csps_list-17">
+						<value>FOTTIGUE</value>
+					</text>
+					<text id="csps_list-18">
+						<value>GNANGDIN</value>
+					</text>
+					<text id="csps_list-19">
+						<value>LOABA</value>
+					</text>
+					<text id="csps_list-20">
+						<value>MOGANDE</value>
+					</text>
+					<text id="csps_list-21">
+						<value>MOGOMNORE</value>
+					</text>
+					<text id="csps_list-22">
+						<value>OUADA</value>
+					</text>
+					<text id="csps_list-23">
+						<value>OUMNONGHIN</value>
+					</text>
+					<text id="csps_list-24">
+						<value>ZEKEZE</value>
+					</text>
+					<text id="csps_list-25">
+						<value>Bakpara</value>
+					</text>
+					<text id="csps_list-26">
+						<value>Batié-Nord</value>
+					</text>
+					<text id="csps_list-27">
+						<value>BONKO</value>
+					</text>
+					<text id="csps_list-28">
+						<value>Boukéro</value>
+					</text>
+					<text id="csps_list-29">
+						<value>Boulera</value>
+					</text>
+					<text id="csps_list-30">
+						<value>Bouroum-Br</value>
+					</text>
+					<text id="csps_list-31">
+						<value>Boussera</value>
+					</text>
+					<text id="csps_list-32">
+						<value>CM Gaoua</value>
+					</text>
+					<text id="csps_list-33">
+						<value>Diégonao</value>
+					</text>
+					<text id="csps_list-34">
+						<value>Doudou</value>
+					</text>
+					<text id="csps_list-35">
+						<value>Gbomblora</value>
+					</text>
+					<text id="csps_list-36">
+						<value>Holly</value>
+					</text>
+					<text id="csps_list-37">
+						<value>Malba</value>
+					</text>
+					<text id="csps_list-38">
+						<value>Nako</value>
+					</text>
+					<text id="csps_list-39">
+						<value>Niampira</value>
+					</text>
+					<text id="csps_list-40">
+						<value>Perkora</value>
+					</text>
+					<text id="csps_list-41">
+						<value>sect 2</value>
+					</text>
+					<text id="csps_list-42">
+						<value>sect 8</value>
+					</text>
+					<text id="csps_list-43">
+						<value>Sibera</value>
+					</text>
+					<text id="csps_list-44">
+						<value>Talière</value>
+					</text>
+					<text id="csps_list-45">
+						<value>Tobo</value>
+					</text>
+					<text id="csps_list-46">
+						<value>Tonkar</value>
+					</text>
+					<text id="csps_list-47">
+						<value>Toumpena</value>
+					</text>
+					<text id="village_grappe_list-0">
+						<value>Banamba -Ipiel</value>
+					</text>
+					<text id="village_grappe_list-1">
+						<value>Bidardouo</value>
+					</text>
+					<text id="village_grappe_list-2">
+						<value>BONKOSSERA</value>
+					</text>
+					<text id="village_grappe_list-3">
+						<value>Bottara</value>
+					</text>
+					<text id="village_grappe_list-4">
+						<value>DANKANA</value>
+					</text>
+					<text id="village_grappe_list-5">
+						<value>Diémé 1 +2</value>
+					</text>
+					<text id="village_grappe_list-6">
+						<value>Donsere</value>
+					</text>
+					<text id="village_grappe_list-7">
+						<value>FARAKOUORA</value>
+					</text>
+					<text id="village_grappe_list-8">
+						<value>Gapar</value>
+					</text>
+					<text id="village_grappe_list-9">
+						<value>Koriba</value>
+					</text>
+					<text id="village_grappe_list-10">
+						<value>Kosso- You</value>
+					</text>
+					<text id="village_grappe_list-11">
+						<value>Koudio 1 + 2</value>
+					</text>
+					<text id="village_grappe_list-12">
+						<value>KOUR</value>
+					</text>
+					<text id="village_grappe_list-13">
+						<value>KPUERE</value>
+					</text>
+					<text id="village_grappe_list-14">
+						<value>LEGMOIN</value>
+					</text>
+					<text id="village_grappe_list-15">
+						<value>MEDICATEON</value>
+					</text>
+					<text id="village_grappe_list-16">
+						<value>MIDEBDO</value>
+					</text>
+					<text id="village_grappe_list-17">
+						<value>NIBIETEON</value>
+					</text>
+					<text id="village_grappe_list-18">
+						<value>Nobourodouo</value>
+					</text>
+					<text id="village_grappe_list-19">
+						<value>Secteur  N 1b</value>
+					</text>
+					<text id="village_grappe_list-20">
+						<value>Secteur  N°  3</value>
+					</text>
+					<text id="village_grappe_list-21">
+						<value>Secteur  N° 5</value>
+					</text>
+					<text id="village_grappe_list-22">
+						<value>SILOM DABORI</value>
+					</text>
+					<text id="village_grappe_list-23">
+						<value>SINAPERDOUO</value>
+					</text>
+					<text id="village_grappe_list-24">
+						<value>Tagneteon</value>
+					</text>
+					<text id="village_grappe_list-25">
+						<value>Tamipar</value>
+					</text>
+					<text id="village_grappe_list-26">
+						<value>TEHNI-SUD: Koulbi</value>
+					</text>
+					<text id="village_grappe_list-27">
+						<value>TIMBOURA</value>
+					</text>
+					<text id="village_grappe_list-28">
+						<value>Yoldetéon</value>
+					</text>
+					<text id="village_grappe_list-29">
+						<value>Zilatéon+</value>
+					</text>
+					<text id="village_grappe_list-30">
+						<value>BANTOUGRI3</value>
+					</text>
+					<text id="village_grappe_list-31">
+						<value>BEKOURE1</value>
+					</text>
+					<text id="village_grappe_list-32">
+						<value>BOURZOAGA</value>
+					</text>
+					<text id="village_grappe_list-33">
+						<value>DATTOU</value>
+					</text>
+					<text id="village_grappe_list-34">
+						<value>DEMA</value>
+					</text>
+					<text id="village_grappe_list-35">
+						<value>DOURE</value>
+					</text>
+					<text id="village_grappe_list-36">
+						<value>FOTTIGUE1</value>
+					</text>
+					<text id="village_grappe_list-37">
+						<value>FOTTIGUE3</value>
+					</text>
+					<text id="village_grappe_list-38">
+						<value>GARANGA</value>
+					</text>
+					<text id="village_grappe_list-39">
+						<value>GNANGDIN1</value>
+					</text>
+					<text id="village_grappe_list-40">
+						<value>GNANGDIN3</value>
+					</text>
+					<text id="village_grappe_list-41">
+						<value>KANYIRE1</value>
+					</text>
+					<text id="village_grappe_list-42">
+						<value>LARGHIN1</value>
+					</text>
+					<text id="village_grappe_list-43">
+						<value>LERE</value>
+					</text>
+					<text id="village_grappe_list-44">
+						<value>LOABA PEULH2</value>
+					</text>
+					<text id="village_grappe_list-45">
+						<value>MOGANDE2</value>
+					</text>
+					<text id="village_grappe_list-46">
+						<value>MOGOMNORE2</value>
+					</text>
+					<text id="village_grappe_list-47">
+						<value>NIANLE</value>
+					</text>
+					<text id="village_grappe_list-48">
+						<value>NOUHAO1</value>
+					</text>
+					<text id="village_grappe_list-49">
+						<value>OUADA AVV</value>
+					</text>
+					<text id="village_grappe_list-50">
+						<value>OUADA T</value>
+					</text>
+					<text id="village_grappe_list-51">
+						<value>OUMNONGHIN2</value>
+					</text>
+					<text id="village_grappe_list-52">
+						<value>Secteur 1 Bittou1</value>
+					</text>
+					<text id="village_grappe_list-53">
+						<value>Secteur 1 Bittou4</value>
+					</text>
+					<text id="village_grappe_list-54">
+						<value>Secteur 2 Bittou</value>
+					</text>
+					<text id="village_grappe_list-55">
+						<value>Secteur 4 Bittou2</value>
+					</text>
+					<text id="village_grappe_list-56">
+						<value>SECTEUR5</value>
+					</text>
+					<text id="village_grappe_list-57">
+						<value>V2</value>
+					</text>
+					<text id="village_grappe_list-58">
+						<value>ZAMPA1</value>
+					</text>
+					<text id="village_grappe_list-59">
+						<value>ZEKEZE</value>
+					</text>
+					<text id="village_grappe_list-60">
+						<value>Banipo</value>
+					</text>
+					<text id="village_grappe_list-61">
+						<value>BONKO PEROU</value>
+					</text>
+					<text id="village_grappe_list-62">
+						<value>Bouléra</value>
+					</text>
+					<text id="village_grappe_list-63">
+						<value>Bouroum-Bouroum2</value>
+					</text>
+					<text id="village_grappe_list-64">
+						<value>Djégonao</value>
+					</text>
+					<text id="village_grappe_list-65">
+						<value>Djikando</value>
+					</text>
+					<text id="village_grappe_list-66">
+						<value>Djipla</value>
+					</text>
+					<text id="village_grappe_list-67">
+						<value>Dolonsi</value>
+					</text>
+					<text id="village_grappe_list-68">
+						<value>Gamala</value>
+					</text>
+					<text id="village_grappe_list-69">
+						<value>Kamplidjou</value>
+					</text>
+					<text id="village_grappe_list-70">
+						<value>Komo</value>
+					</text>
+					<text id="village_grappe_list-71">
+						<value>Koulgane</value>
+					</text>
+					<text id="village_grappe_list-72">
+						<value>Kpeira</value>
+					</text>
+					<text id="village_grappe_list-73">
+						<value>kpèle</value>
+					</text>
+					<text id="village_grappe_list-74">
+						<value>LAHOL</value>
+					</text>
+					<text id="village_grappe_list-75">
+						<value>Lantao</value>
+					</text>
+					<text id="village_grappe_list-76">
+						<value>NIAMPIRA</value>
+					</text>
+					<text id="village_grappe_list-77">
+						<value>ORKOUPOUO GANE</value>
+					</text>
+					<text id="village_grappe_list-78">
+						<value>Pankionao</value>
+					</text>
+					<text id="village_grappe_list-79">
+						<value>Sandora+Sibtéon</value>
+					</text>
+					<text id="village_grappe_list-80">
+						<value>Secteur 2b</value>
+					</text>
+					<text id="village_grappe_list-81">
+						<value>Secteur 3 b</value>
+					</text>
+					<text id="village_grappe_list-82">
+						<value>Secteur 5</value>
+					</text>
+					<text id="village_grappe_list-83">
+						<value>Secteur 8</value>
+					</text>
+					<text id="village_grappe_list-84">
+						<value>Séwéra</value>
+					</text>
+					<text id="village_grappe_list-85">
+						<value>Sibéra</value>
+					</text>
+					<text id="village_grappe_list-86">
+						<value>Sourapéra</value>
+					</text>
+					<text id="village_grappe_list-87">
+						<value>Timbisseo</value>
+					</text>
+					<text id="village_grappe_list-88">
+						<value>Tolkaboua</value>
+					</text>
+					<text id="village_grappe_list-89">
+						<value>Tonkpourou</value>
+					</text>
+				</translation>
+			</itext>
+			<instance>
+				<data id="bf_lf_cov_1_village_202207_v3.1" version="20220830">
+					<v_code_operateur/>
+					<v_district/>
+					<v_gaoua_cat/>
+					<v_categorie/>
+					<v_csps/>
+					<v_grappe/>
+					<v_num_grappe/>
+					<v_prefix_district/>
+					<v_code_site/>
+					<v_Coverage_village22/>
+					<v_gps/>
+					<v_commentaires/>
+					<v_debut_enregistrement/>
+					<v_fin_enregistrement/>
+					<meta>
+						<instanceID/>
+					</meta>
+				</data>
+			</instance>
+			<instance id="operateur_list">
+				<root>
+					<item>
+						<itextId>operateur_list-0</itextId>
+						<name>1</name>
+					</item>
+					<item>
+						<itextId>operateur_list-1</itextId>
+						<name>2</name>
+					</item>
+					<item>
+						<itextId>operateur_list-2</itextId>
+						<name>3</name>
+					</item>
+					<item>
+						<itextId>operateur_list-3</itextId>
+						<name>4</name>
+					</item>
+					<item>
+						<itextId>operateur_list-4</itextId>
+						<name>5</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="district_list">
+				<root>
+					<item>
+						<itextId>district_list-0</itextId>
+						<name>BATIE</name>
+					</item>
+					<item>
+						<itextId>district_list-1</itextId>
+						<name>BITTOU</name>
+					</item>
+					<item>
+						<itextId>district_list-2</itextId>
+						<name>GAOUA</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="gaoua_cat_list">
+				<root>
+					<item>
+						<itextId>gaoua_cat_list-0</itextId>
+						<name>GAOUA [CSPS B]</name>
+					</item>
+					<item>
+						<itextId>gaoua_cat_list-1</itextId>
+						<name>GAOUA [CSPS C - N]</name>
+					</item>
+					<item>
+						<itextId>gaoua_cat_list-2</itextId>
+						<name>GAOUA [CSPS P - T]</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="csps_list">
+				<root>
+					<item>
+						<itextId>csps_list-0</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>BANABA</name>
+					</item>
+					<item>
+						<itextId>csps_list-1</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>BATIE</name>
+					</item>
+					<item>
+						<itextId>csps_list-2</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>BOPIEL</name>
+					</item>
+					<item>
+						<itextId>csps_list-3</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>BOUSSOUKOULA</name>
+					</item>
+					<item>
+						<itextId>csps_list-4</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>DANKANA</name>
+					</item>
+					<item>
+						<itextId>csps_list-5</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>FADIO</name>
+					</item>
+					<item>
+						<itextId>csps_list-6</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>KAMBA</name>
+					</item>
+					<item>
+						<itextId>csps_list-7</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>KORIBA</name>
+					</item>
+					<item>
+						<itextId>csps_list-8</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>Kosso</name>
+					</item>
+					<item>
+						<itextId>csps_list-9</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>Kpuere</name>
+					</item>
+					<item>
+						<itextId>csps_list-10</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>Legmoin</name>
+					</item>
+					<item>
+						<itextId>csps_list-11</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>Midebdo</name>
+					</item>
+					<item>
+						<itextId>csps_list-12</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>Tamipar</name>
+					</item>
+					<item>
+						<itextId>csps_list-13</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BATIE</district_list>
+						<name>Timboura</name>
+					</item>
+					<item>
+						<itextId>csps_list-14</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>BANE</name>
+					</item>
+					<item>
+						<itextId>csps_list-15</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>BANTOUGRI</name>
+					</item>
+					<item>
+						<itextId>csps_list-16</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>BITTOU</name>
+					</item>
+					<item>
+						<itextId>csps_list-17</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>FOTTIGUE</name>
+					</item>
+					<item>
+						<itextId>csps_list-18</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>GNANGDIN</name>
+					</item>
+					<item>
+						<itextId>csps_list-19</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>LOABA</name>
+					</item>
+					<item>
+						<itextId>csps_list-20</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>MOGANDE</name>
+					</item>
+					<item>
+						<itextId>csps_list-21</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>MOGOMNORE</name>
+					</item>
+					<item>
+						<itextId>csps_list-22</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>OUADA</name>
+					</item>
+					<item>
+						<itextId>csps_list-23</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>OUMNONGHIN</name>
+					</item>
+					<item>
+						<itextId>csps_list-24</itextId>
+						<categorie_list>notgaoua</categorie_list>
+						<district_list>BITTOU</district_list>
+						<name>ZEKEZE</name>
+					</item>
+					<item>
+						<itextId>csps_list-25</itextId>
+						<categorie_list>GAOUA [CSPS B]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Bakpara</name>
+					</item>
+					<item>
+						<itextId>csps_list-26</itextId>
+						<categorie_list>GAOUA [CSPS B]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Batié-Nord</name>
+					</item>
+					<item>
+						<itextId>csps_list-27</itextId>
+						<categorie_list>GAOUA [CSPS B]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>BONKO</name>
+					</item>
+					<item>
+						<itextId>csps_list-28</itextId>
+						<categorie_list>GAOUA [CSPS B]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Boukéro</name>
+					</item>
+					<item>
+						<itextId>csps_list-29</itextId>
+						<categorie_list>GAOUA [CSPS B]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Boulera</name>
+					</item>
+					<item>
+						<itextId>csps_list-30</itextId>
+						<categorie_list>GAOUA [CSPS B]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Bouroum-Br</name>
+					</item>
+					<item>
+						<itextId>csps_list-31</itextId>
+						<categorie_list>GAOUA [CSPS B]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Boussera</name>
+					</item>
+					<item>
+						<itextId>csps_list-32</itextId>
+						<categorie_list>GAOUA [CSPS C - N]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>CM Gaoua</name>
+					</item>
+					<item>
+						<itextId>csps_list-33</itextId>
+						<categorie_list>GAOUA [CSPS C - N]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Diégonao</name>
+					</item>
+					<item>
+						<itextId>csps_list-34</itextId>
+						<categorie_list>GAOUA [CSPS C - N]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Doudou</name>
+					</item>
+					<item>
+						<itextId>csps_list-35</itextId>
+						<categorie_list>GAOUA [CSPS C - N]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Gbomblora</name>
+					</item>
+					<item>
+						<itextId>csps_list-36</itextId>
+						<categorie_list>GAOUA [CSPS C - N]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Holly</name>
+					</item>
+					<item>
+						<itextId>csps_list-37</itextId>
+						<categorie_list>GAOUA [CSPS C - N]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Malba</name>
+					</item>
+					<item>
+						<itextId>csps_list-38</itextId>
+						<categorie_list>GAOUA [CSPS C - N]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Nako</name>
+					</item>
+					<item>
+						<itextId>csps_list-39</itextId>
+						<categorie_list>GAOUA [CSPS C - N]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Niampira</name>
+					</item>
+					<item>
+						<itextId>csps_list-40</itextId>
+						<categorie_list>GAOUA [CSPS P - T]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Perkora</name>
+					</item>
+					<item>
+						<itextId>csps_list-41</itextId>
+						<categorie_list>GAOUA [CSPS P - T]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>sect 2</name>
+					</item>
+					<item>
+						<itextId>csps_list-42</itextId>
+						<categorie_list>GAOUA [CSPS P - T]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>sect 8</name>
+					</item>
+					<item>
+						<itextId>csps_list-43</itextId>
+						<categorie_list>GAOUA [CSPS P - T]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Sibera</name>
+					</item>
+					<item>
+						<itextId>csps_list-44</itextId>
+						<categorie_list>GAOUA [CSPS P - T]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Talière</name>
+					</item>
+					<item>
+						<itextId>csps_list-45</itextId>
+						<categorie_list>GAOUA [CSPS P - T]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Tobo</name>
+					</item>
+					<item>
+						<itextId>csps_list-46</itextId>
+						<categorie_list>GAOUA [CSPS P - T]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Tonkar</name>
+					</item>
+					<item>
+						<itextId>csps_list-47</itextId>
+						<categorie_list>GAOUA [CSPS P - T]</categorie_list>
+						<district_list>GAOUA</district_list>
+						<name>Toumpena</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="village_grappe_list">
+				<root>
+					<item>
+						<itextId>village_grappe_list-0</itextId>
+						<csps_list>BANABA</csps_list>
+						<name>Banamba -Ipiel</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-1</itextId>
+						<csps_list>Kosso</csps_list>
+						<name>Bidardouo</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-2</itextId>
+						<csps_list>Midebdo</csps_list>
+						<name>BONKOSSERA</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-3</itextId>
+						<csps_list>BOUSSOUKOULA</csps_list>
+						<name>Bottara</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-4</itextId>
+						<csps_list>DANKANA</csps_list>
+						<name>DANKANA</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-5</itextId>
+						<csps_list>KAMBA</csps_list>
+						<name>Diémé 1 +2</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-6</itextId>
+						<csps_list>FADIO</csps_list>
+						<name>Donsere</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-7</itextId>
+						<csps_list>Timboura</csps_list>
+						<name>FARAKOUORA</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-8</itextId>
+						<csps_list>Tamipar</csps_list>
+						<name>Gapar</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-9</itextId>
+						<csps_list>KORIBA</csps_list>
+						<name>Koriba</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-10</itextId>
+						<csps_list>Kosso</csps_list>
+						<name>Kosso- You</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-11</itextId>
+						<csps_list>BATIE</csps_list>
+						<name>Koudio 1 + 2</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-12</itextId>
+						<csps_list>BOPIEL</csps_list>
+						<name>KOUR</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-13</itextId>
+						<csps_list>Kpuere</csps_list>
+						<name>KPUERE</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-14</itextId>
+						<csps_list>Legmoin</csps_list>
+						<name>LEGMOIN</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-15</itextId>
+						<csps_list>Kpuere</csps_list>
+						<name>MEDICATEON</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-16</itextId>
+						<csps_list>Midebdo</csps_list>
+						<name>MIDEBDO</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-17</itextId>
+						<csps_list>DANKANA</csps_list>
+						<name>NIBIETEON</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-18</itextId>
+						<csps_list>BOUSSOUKOULA</csps_list>
+						<name>Nobourodouo</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-19</itextId>
+						<csps_list>BATIE</csps_list>
+						<name>Secteur  N 1b</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-20</itextId>
+						<csps_list>BATIE</csps_list>
+						<name>Secteur  N°  3</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-21</itextId>
+						<csps_list>BATIE</csps_list>
+						<name>Secteur  N° 5</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-22</itextId>
+						<csps_list>Legmoin</csps_list>
+						<name>SILOM DABORI</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-23</itextId>
+						<csps_list>Midebdo</csps_list>
+						<name>SINAPERDOUO</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-24</itextId>
+						<csps_list>KORIBA</csps_list>
+						<name>Tagneteon</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-25</itextId>
+						<csps_list>Tamipar</csps_list>
+						<name>Tamipar</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-26</itextId>
+						<csps_list>Kpuere</csps_list>
+						<name>TEHNI-SUD: Koulbi</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-27</itextId>
+						<csps_list>Timboura</csps_list>
+						<name>TIMBOURA</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-28</itextId>
+						<csps_list>BANABA</csps_list>
+						<name>Yoldetéon</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-29</itextId>
+						<csps_list>KORIBA</csps_list>
+						<name>Zilatéon+</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-30</itextId>
+						<csps_list>BANTOUGRI</csps_list>
+						<name>BANTOUGRI3</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-31</itextId>
+						<csps_list>BITTOU</csps_list>
+						<name>BEKOURE1</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-32</itextId>
+						<csps_list>FOTTIGUE</csps_list>
+						<name>BOURZOAGA</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-33</itextId>
+						<csps_list>OUMNONGHIN</csps_list>
+						<name>DATTOU</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-34</itextId>
+						<csps_list>GNANGDIN</csps_list>
+						<name>DEMA</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-35</itextId>
+						<csps_list>OUMNONGHIN</csps_list>
+						<name>DOURE</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-36</itextId>
+						<csps_list>FOTTIGUE</csps_list>
+						<name>FOTTIGUE1</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-37</itextId>
+						<csps_list>FOTTIGUE</csps_list>
+						<name>FOTTIGUE3</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-38</itextId>
+						<csps_list>FOTTIGUE</csps_list>
+						<name>GARANGA</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-39</itextId>
+						<csps_list>GNANGDIN</csps_list>
+						<name>GNANGDIN1</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-40</itextId>
+						<csps_list>GNANGDIN</csps_list>
+						<name>GNANGDIN3</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-41</itextId>
+						<csps_list>MOGANDE</csps_list>
+						<name>KANYIRE1</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-42</itextId>
+						<csps_list>GNANGDIN</csps_list>
+						<name>LARGHIN1</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-43</itextId>
+						<csps_list>BANE</csps_list>
+						<name>LERE</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-44</itextId>
+						<csps_list>LOABA</csps_list>
+						<name>LOABA PEULH2</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-45</itextId>
+						<csps_list>MOGANDE</csps_list>
+						<name>MOGANDE2</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-46</itextId>
+						<csps_list>MOGOMNORE</csps_list>
+						<name>MOGOMNORE2</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-47</itextId>
+						<csps_list>MOGOMNORE</csps_list>
+						<name>NIANLE</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-48</itextId>
+						<csps_list>BITTOU</csps_list>
+						<name>NOUHAO1</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-49</itextId>
+						<csps_list>OUADA</csps_list>
+						<name>OUADA AVV</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-50</itextId>
+						<csps_list>OUADA</csps_list>
+						<name>OUADA T</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-51</itextId>
+						<csps_list>OUMNONGHIN</csps_list>
+						<name>OUMNONGHIN2</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-52</itextId>
+						<csps_list>BITTOU</csps_list>
+						<name>Secteur 1 Bittou1</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-53</itextId>
+						<csps_list>BITTOU</csps_list>
+						<name>Secteur 1 Bittou4</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-54</itextId>
+						<csps_list>BITTOU</csps_list>
+						<name>Secteur 2 Bittou</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-55</itextId>
+						<csps_list>BITTOU</csps_list>
+						<name>Secteur 4 Bittou2</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-56</itextId>
+						<csps_list>BITTOU</csps_list>
+						<name>SECTEUR5</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-57</itextId>
+						<csps_list>OUADA</csps_list>
+						<name>V2</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-58</itextId>
+						<csps_list>GNANGDIN</csps_list>
+						<name>ZAMPA1</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-59</itextId>
+						<csps_list>ZEKEZE</csps_list>
+						<name>ZEKEZE</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-60</itextId>
+						<csps_list>Malba</csps_list>
+						<name>Banipo</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-61</itextId>
+						<csps_list>BONKO</csps_list>
+						<name>BONKO PEROU</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-62</itextId>
+						<csps_list>Boulera</csps_list>
+						<name>Bouléra</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-63</itextId>
+						<csps_list>Bouroum-Br</csps_list>
+						<name>Bouroum-Bouroum2</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-64</itextId>
+						<csps_list>Diégonao</csps_list>
+						<name>Djégonao</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-65</itextId>
+						<csps_list>sect 2</csps_list>
+						<name>Djikando</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-66</itextId>
+						<csps_list>Nako</csps_list>
+						<name>Djipla</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-67</itextId>
+						<csps_list>Boukéro</csps_list>
+						<name>Dolonsi</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-68</itextId>
+						<csps_list>Tobo</csps_list>
+						<name>Gamala</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-69</itextId>
+						<csps_list>Batié-Nord</csps_list>
+						<name>Kamplidjou</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-70</itextId>
+						<csps_list>Talière</csps_list>
+						<name>Komo</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-71</itextId>
+						<csps_list>Holly</csps_list>
+						<name>Koulgane</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-72</itextId>
+						<csps_list>Perkora</csps_list>
+						<name>Kpeira</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-73</itextId>
+						<csps_list>Malba</csps_list>
+						<name>kpèle</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-74</itextId>
+						<csps_list>Niampira</csps_list>
+						<name>LAHOL</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-75</itextId>
+						<csps_list>Tonkar</csps_list>
+						<name>Lantao</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-76</itextId>
+						<csps_list>Niampira</csps_list>
+						<name>NIAMPIRA</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-77</itextId>
+						<csps_list>BONKO</csps_list>
+						<name>ORKOUPOUO GANE</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-78</itextId>
+						<csps_list>Toumpena</csps_list>
+						<name>Pankionao</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-79</itextId>
+						<csps_list>Nako</csps_list>
+						<name>Sandora+Sibtéon</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-80</itextId>
+						<csps_list>sect 2</csps_list>
+						<name>Secteur 2b</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-81</itextId>
+						<csps_list>CM Gaoua</csps_list>
+						<name>Secteur 3 b</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-82</itextId>
+						<csps_list>CM Gaoua</csps_list>
+						<name>Secteur 5</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-83</itextId>
+						<csps_list>sect 8</csps_list>
+						<name>Secteur 8</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-84</itextId>
+						<csps_list>Gbomblora</csps_list>
+						<name>Séwéra</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-85</itextId>
+						<csps_list>Sibera</csps_list>
+						<name>Sibéra</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-86</itextId>
+						<csps_list>Boussera</csps_list>
+						<name>Sourapéra</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-87</itextId>
+						<csps_list>Bakpara</csps_list>
+						<name>Timbisseo</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-88</itextId>
+						<csps_list>Doudou</csps_list>
+						<name>Tolkaboua</name>
+					</item>
+					<item>
+						<itextId>village_grappe_list-89</itextId>
+						<csps_list>Batié-Nord</csps_list>
+						<name>Tonkpourou</name>
+					</item>
+				</root>
+			</instance>
+			<bind nodeset="/data/v_code_operateur" required="true()" type="string"/>
+			<bind nodeset="/data/v_district" required="true()" type="string" db_add_col_1="."/>
+			<bind nodeset="/data/v_gaoua_cat" relevant=" /data/v_district ='GAOUA'" required="true()" type="string"/>
+			<bind calculate=" /data/v_gaoua_cat " nodeset="/data/v_categorie" required="true()" type="string"/>
+			<bind nodeset="/data/v_csps" required="true()" type="string" db_add_col_1="/data/v_district" db_add_col_2="."/>
+			<bind nodeset="/data/v_grappe" required="true()" type="string" db_add_col_2="/data/v_csps" db_add_col_3="."/>
+			<bind constraint=". &gt; 0 and . &lt;= 30" jr:constraintMsg="jr:itext('/data/v_num_grappe:jr:constraintMsg')" nodeset="/data/v_num_grappe" db_add_col_4="." required="true()" type="int"/>
+			<bind calculate="if(  /data/v_district  = 'BATIE', 'BAT', if( /data/v_district  = 'BITTOU', 'BIT', 'GAO'))" nodeset="/data/v_prefix_district" required="true()" type="string"/>
+			<bind calculate="if(  /data/v_num_grappe  &lt; 10, concat( /data/v_prefix_district , '_0',  /data/v_num_grappe ), concat( /data/v_prefix_district , '_',  /data/v_num_grappe ))" constraint="regex(.,'^[A-Z]{3}_[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/v_code_site:jr:constraintMsg')" nodeset="/data/v_code_site" readonly="true()" required="true()" type="string"/>
+			<bind constraint="regex(.,'^[0-9]{3},[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/v_Coverage_village22:jr:constraintMsg')" nodeset="/data/v_Coverage_village22" required="true()" type="string"/>
+			<bind nodeset="/data/v_gps" required="true()" type="geopoint"/>
+			<bind nodeset="/data/v_commentaires" type="string"/>
+			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/v_debut_enregistrement" type="dateTime"/>
+			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/v_fin_enregistrement" type="dateTime"/>
+			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+		</model>
+	</h:head>
+	<h:body>
+		<select1 ref="/data/v_code_operateur">
+			<label ref="jr:itext('/data/v_code_operateur:label')"/>
+			<item>
+				<label ref="jr:itext('/data/v_code_operateur/1:label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/v_code_operateur/2:label')"/>
+				<value>2</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/v_code_operateur/3:label')"/>
+				<value>3</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/v_code_operateur/4:label')"/>
+				<value>4</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/v_code_operateur/5:label')"/>
+				<value>5</value>
+			</item>
+		</select1>
+		<select1 ref="/data/v_district">
+			<label ref="jr:itext('/data/v_district:label')"/>
+			<item>
+				<label ref="jr:itext('/data/v_district/BATIE:label')"/>
+				<value>BATIE</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/v_district/BITTOU:label')"/>
+				<value>BITTOU</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/v_district/GAOUA:label')"/>
+				<value>GAOUA</value>
+			</item>
+		</select1>
+		<select1 ref="/data/v_gaoua_cat">
+			<label ref="jr:itext('/data/v_gaoua_cat:label')"/>
+			<item>
+				<label ref="jr:itext('/data/v_gaoua_cat/GAOUA [CSPS B]:label')"/>
+				<value>GAOUA [CSPS B]</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/v_gaoua_cat/GAOUA [CSPS C - N]:label')"/>
+				<value>GAOUA [CSPS C - N]</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/v_gaoua_cat/GAOUA [CSPS P - T]:label')"/>
+				<value>GAOUA [CSPS P - T]</value>
+			</item>
+		</select1>
+		<select1 ref="/data/v_csps">
+			<label ref="jr:itext('/data/v_csps:label')"/>
+			<itemset nodeset="instance('csps_list')/root/item[if(  /data/v_district  = 'GAOUA', district_list =  /data/v_district  and categorie_list =  /data/v_categorie , district_list =  /data/v_district  and categorie_list = 'notgaoua')]">
+				<value ref="name"/>
+				<label ref="jr:itext(itextId)"/>
+			</itemset>
+		</select1>
+		<select1 ref="/data/v_grappe">
+			<label ref="jr:itext('/data/v_grappe:label')"/>
+			<itemset nodeset="instance('village_grappe_list')/root/item[csps_list =  /data/v_csps ]">
+				<value ref="name"/>
+				<label ref="jr:itext(itextId)"/>
+			</itemset>
+		</select1>
+		<input ref="/data/v_num_grappe">
+			<label ref="jr:itext('/data/v_num_grappe:label')"/>
+		</input>
+		<input ref="/data/v_code_site">
+			<label ref="jr:itext('/data/v_code_site:label')"/>
+			<hint ref="jr:itext('/data/v_code_site:hint')"/>
+		</input>
+		<input ref="/data/v_Coverage_village22">
+			<label ref="jr:itext('/data/v_Coverage_village22:label')"/>
+			<hint ref="jr:itext('/data/v_Coverage_village22:hint')"/>
+		</input>
+		<input ref="/data/v_gps">
+			<label ref="jr:itext('/data/v_gps:label')"/>
+			<hint ref="jr:itext('/data/v_gps:hint')"/>
+		</input>
+		<input ref="/data/v_commentaires">
+			<label ref="jr:itext('/data/v_commentaires:label')"/>
+		</input>
+	</h:body>
+</h:html>
