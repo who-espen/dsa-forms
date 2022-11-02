@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Octobre 2022) RDC TAS FL - 1. Formulaire Village (Kasai central) V2</h:title>
+    <h:title>(Octobre 2022) RDC TAS FL - 1. Formulaire Village (Kasai central) V3</h:title>
     <model >
 
       <instance>
-        <data id="cd_lf_tas_1_site_kasai_central_202209_v2">
+        <data id="cd_lf_tas_1_site_kasai_central_202209_v3">
           <c_recorder/>
           <c_province/>
           <c_eu_name/>
@@ -24,8 +24,48 @@
           <c_cluster_leader_name/>
           <c_consent/>
           <c_population/>
-          <c_present/>
+          <c_present_6_7/>
+          <c_present_8_10/>
           <c_gps/>
+          <c_toilet_boy/>
+          <c_toilet_girl/>
+          <c_toilet_teacher/>
+          <c_urinal_boy/>
+          <c_urinal_teacher/>
+          <c_teacher_male/>
+          <c_teacher_female/>
+          <c_total_teacher/>
+          <c_pupil_boy/>
+          <c_pupil_girl/>
+          <c_total_pupil/>
+          <c_pupil_disability_boy/>
+          <c_pupil_disability_girl/>
+          <c_total_pupil_disability/>
+          <c_boy_limb_disability/>
+          <c_girl_limb_disability/>
+          <c_total_limb_disability/>
+          <c_src_drinking_water/>
+          <c_src_drinking_water_other/>
+          <c_other_src_water/>
+          <c_other_src_water_other/>
+          <c_src_distance/>
+          <c_fetch_water/>
+          <c_src_water_treated/>
+          <c_how_treat_water/>
+          <c_how_treat_water_other/>
+          <c_type_toilet_school/>
+          <c_toilet_sign_defecation_around/>
+          <c_toilet_sign_defecation_slab/>
+          <c_toilet_broken_slab/>
+          <c_wash_hand/>
+          <c_wash_hand_soap/>
+          <c_school_has_wash_facility/>
+          <c_type_washing_facilities/>
+          <c_type_water_sink/>
+          <c_type_bucket_tap/>
+          <c_type_leaky_tap/>
+          <c_type_basin_water/>
+          <c_washing_facility_location/>
           <p_ending_survey_note/>
           <c_ClusterNotes/>
           <c_start/>
@@ -110,17 +150,296 @@
           <text id="/data/c_population:label">
             <value>Nombre d'élèves de l'école</value>
           </text>
-          <text id="/data/c_present:jr:constraintMsg">
+          <text id="/data/c_present_6_7:jr:constraintMsg">
             <value>Le nombre de participants admissibles doit-être inférieur ou égal au nombre total d'élèves de l'école</value>
           </text>
-          <text id="/data/c_present:label">
+          <text id="/data/c_present_6_7:label">
             <value>Combien d'élèves agés entre 6 et 7 ans sont présents dans cette école ?</value>
+          </text>
+          <text id="/data/c_present_8_10:jr:constraintMsg">
+            <value>Le nombre de participants admissibles doit-être inférieur ou égal au nombre total d'élèves de l'école</value>
+          </text>
+          <text id="/data/c_present_8_10:label">
+            <value>Combien d'élèves agés entre 8 et 10 ans sont présents dans cette école ?</value>
           </text>
           <text id="/data/c_gps:label">
             <value>Prener vos coordonnées GPS :</value>
           </text>
           <text id="/data/c_gps:hint">
             <value>Les coordonnées GPS sont plus faciles à collecter à l'extérieur. Délai d'attente de 2 min</value>
+          </text>
+          <text id="/data/c_toilet_boy:label">
+            <value>Nombre de toilettes pour les garçons</value>
+          </text>
+          <text id="/data/c_toilet_girl:label">
+            <value>Nombre de toilettes pour les filles</value>
+          </text>
+          <text id="/data/c_toilet_teacher:label">
+            <value>Nombre de toilettes des enseignants</value>
+          </text>
+          <text id="/data/c_urinal_boy:label">
+            <value>Nombre d'urinoirs de garçons</value>
+          </text>
+          <text id="/data/c_urinal_teacher:label">
+            <value>Nombre d'urinoirs d'enseignants</value>
+          </text>
+          <text id="/data/c_teacher_male:label">
+            <value>Combien de professeurs masculins y a-t-il dans l'école ?</value>
+          </text>
+          <text id="/data/c_teacher_female:label">
+            <value>Combien de professeurs de sexe féminin y a-t-il à l'école ?</value>
+          </text>
+          <text id="/data/c_total_teacher:label">
+            <value>Total des enseignants</value>
+          </text>
+          <text id="/data/c_pupil_boy:label">
+            <value>Combien d'élèves garçons y a-t-il dans cette école ?</value>
+          </text>
+          <text id="/data/c_pupil_girl:label">
+            <value>Combien d'élèves filles y a-t-il dans cette école ?</value>
+          </text>
+          <text id="/data/c_total_pupil:label">
+            <value>Total des élèves</value>
+          </text>
+          <text id="/data/c_pupil_disability_boy:label">
+            <value>Combien de garçons vivent avec un handicap ?</value>
+          </text>
+          <text id="/data/c_pupil_disability_girl:label">
+            <value>Combien d'élèves filles vivent avec un handicap ?</value>
+          </text>
+          <text id="/data/c_total_pupil_disability:label">
+            <value>Total des élèves handicapés</value>
+          </text>
+          <text id="/data/c_boy_limb_disability:label">
+            <value>Combien de garçons ont un handicap des membres ?</value>
+          </text>
+          <text id="/data/c_girl_limb_disability:label">
+            <value>Combien de filles ont un handicap des membres ?</value>
+          </text>
+          <text id="/data/c_total_limb_disability:label">
+            <value>Total avec un handicap des membres</value>
+          </text>
+          <text id="/data/c_src_drinking_water:label">
+            <value>Quelle est la principale source d'eau potable pour les élèves et les enseignants de l'école ?</value>
+          </text>
+          <text id="/data/c_src_drinking_water/Eau.courante:label">
+            <value>Eau courante</value>
+          </text>
+          <text id="/data/c_src_drinking_water/Robinet.public/kiosque:label">
+            <value>Robinet public/kiosque</value>
+          </text>
+          <text id="/data/c_src_drinking_water/Trou.de.forage:label">
+            <value>Trou de forage</value>
+          </text>
+          <text id="/data/c_src_drinking_water/Puits.creusé.protégé:label">
+            <value>Puits creusé protégé</value>
+          </text>
+          <text id="/data/c_src_drinking_water/Source.protégée:label">
+            <value>Source protégée</value>
+          </text>
+          <text id="/data/c_src_drinking_water/Source.non.protégée:label">
+            <value>Source non protégée</value>
+          </text>
+          <text id="/data/c_src_drinking_water/Collecte.de.l.eau.de.pluie:label">
+            <value>Collecte de l'eau de pluie</value>
+          </text>
+          <text id="/data/c_src_drinking_water/Eau.livrée.par.camion-citerne:label">
+            <value>Eau livrée par camion-citerne</value>
+          </text>
+          <text id="/data/c_src_drinking_water/Sources.non.protégées.(rivière,.barrage,.lac,.étang,.ruisseau,.canal,.canaux.d.irrigation):label">
+            <value>Sources non protégées (rivière, barrage, lac, étang, ruisseau, canal, canaux d'irrigation)</value>
+          </text>
+          <text id="/data/c_src_drinking_water/Other:label">
+            <value>Autre</value>
+          </text>
+          <text id="/data/c_src_drinking_water_other:label">
+            <value>Veuillez préciser l'autre source principale d'eau potable pour les élèves et les enseignants de l'école ?</value>
+          </text>
+          <text id="/data/c_other_src_water:label">
+            <value>Quelle est la principale source d'eau utilisée à d'autres fins, par exemple pour se laver les mains/les classes ?</value>
+          </text>
+          <text id="/data/c_other_src_water/Eau.courante:label">
+            <value>Eau courante</value>
+          </text>
+          <text id="/data/c_other_src_water/Puits.de.forage:label">
+            <value>Puits de forage</value>
+          </text>
+          <text id="/data/c_other_src_water/Puits.creusé.protégé:label">
+            <value>Puits creusé protégé</value>
+          </text>
+          <text id="/data/c_other_src_water/Source.non.protégée:label">
+            <value>Source non protégée</value>
+          </text>
+          <text id="/data/c_other_src_water/Collecte.d.eau.de.pluie:label">
+            <value>Collecte d'eau de pluie</value>
+          </text>
+          <text id="/data/c_other_src_water/Robinet.public/kiosque:label">
+            <value>Robinet public/kiosque</value>
+          </text>
+          <text id="/data/c_other_src_water_other:label">
+            <value>Veuillez préciser l'autre source principale d'eau utilisée à d'autres fins comme le lavage des mains/les cours de lavage ?</value>
+          </text>
+          <text id="/data/c_src_distance:label">
+            <value>Si la source est éloignée de l'école, combien de temps faut-il pour aller chercher de l'eau et en revenir ?</value>
+          </text>
+          <text id="/data/c_src_distance/Moins de 30 minutes:label">
+            <value>Moins de 30 minutes</value>
+          </text>
+          <text id="/data/c_src_distance/Plus de 30 minutes:label">
+            <value>Plus de 30 minutes</value>
+          </text>
+          <text id="/data/c_fetch_water:label">
+            <value>Qui va habituellement chercher l'eau à cette source ?</value>
+          </text>
+          <text id="/data/c_fetch_water/Garçons:label">
+            <value>Garçons</value>
+          </text>
+          <text id="/data/c_fetch_water/Filles:label">
+            <value>Filles</value>
+          </text>
+          <text id="/data/c_fetch_water/Others:label">
+            <value>Autre</value>
+          </text>
+          <text id="/data/c_src_water_treated:label">
+            <value>Si vous utilisez des sources d'eau non protégées, traitez-vous cette eau de quelque manière que ce soit pour la rendre plus sûre à boire ?</value>
+          </text>
+          <text id="/data/c_src_water_treated/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_src_water_treated/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_src_water_treated/Don.t Know:label">
+            <value>Je ne sais pas</value>
+          </text>
+          <text id="/data/c_how_treat_water:label">
+            <value>Comment faites-vous habituellement pour rendre l'eau potable ?</value>
+          </text>
+          <text id="/data/c_how_treat_water/Ajouter de l.eau de Javel / du chlore:label">
+            <value>Ajouter de l.eau de Javel / du chlore</value>
+          </text>
+          <text id="/data/c_how_treat_water/Laisser reposer et décanter:label">
+            <value>Laisser reposer et décanter</value>
+          </text>
+          <text id="/data/c_how_treat_water/Autre:label">
+            <value>Autre</value>
+          </text>
+          <text id="/data/c_how_treat_water/Pas de traitement:label">
+            <value>Pas de traitement</value>
+          </text>
+          <text id="/data/c_how_treat_water_other:label">
+            <value>Veuillez préciser une autre façon de traiter l'eau</value>
+          </text>
+          <text id="/data/c_type_toilet_school:label">
+            <value>Quel type d'installations sanitaires est fourni dans cette école ?</value>
+          </text>
+          <text id="/data/c_type_toilet_school/Rinçage vers un réseau d.égouts/système septique.:label">
+            <value>Rinçage vers un réseau d.égouts/système septique.</value>
+          </text>
+          <text id="/data/c_type_toilet_school/Verser dans une fosse:label">
+            <value>Verser dans une fosse</value>
+          </text>
+          <text id="/data/c_type_toilet_school/Latrine VIP:label">
+            <value>Latrine VIP</value>
+          </text>
+          <text id="/data/c_type_toilet_school/Latrines fonctionnelles/traditionnelles:label">
+            <value>Latrines fonctionnelles/traditionnelles</value>
+          </text>
+          <text id="/data/c_toilet_sign_defecation_around:label">
+            <value>Signes de défécation/urination à l'air libre autour des toilettes/de l'enceinte de l'école</value>
+          </text>
+          <text id="/data/c_toilet_sign_defecation_around/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_toilet_sign_defecation_around/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_toilet_sign_defecation_slab:label">
+            <value>Signes de matières fécales/urine sur la dalle des toilettes ?</value>
+          </text>
+          <text id="/data/c_toilet_sign_defecation_slab/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_toilet_sign_defecation_slab/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_toilet_broken_slab:label">
+            <value>Signes d'une dalle en mauvais état ?</value>
+          </text>
+          <text id="/data/c_toilet_broken_slab/Murs:label">
+            <value>Murs</value>
+          </text>
+          <text id="/data/c_toilet_broken_slab/Portes:label">
+            <value>Portes</value>
+          </text>
+          <text id="/data/c_toilet_broken_slab/Toit:label">
+            <value>Toit</value>
+          </text>
+          <text id="/data/c_wash_hand:label">
+            <value>Les élèves se lavent-ils les mains ?</value>
+          </text>
+          <text id="/data/c_wash_hand/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_wash_hand/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_wash_hand_soap:label">
+            <value>Se lavent-ils les mains avec de l'eau et du savon ?</value>
+          </text>
+          <text id="/data/c_wash_hand_soap/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_wash_hand_soap/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_school_has_wash_facility:label">
+            <value>L'école a-t-elle fourni des installations pour se laver les mains ?</value>
+          </text>
+          <text id="/data/c_school_has_wash_facility/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_school_has_wash_facility/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_type_washing_facilities:label">
+            <value>Quel type d'installations de lavage des mains est fourni dans l'école ?</value>
+          </text>
+          <text id="/data/c_type_washing_facilities/Eau.du.robinet.avec.un.évier:label">
+            <value>Eau du robinet avec un évier</value>
+          </text>
+          <text id="/data/c_type_washing_facilities/Seau.avec.robinet:label">
+            <value>Seau avec robinet</value>
+          </text>
+          <text id="/data/c_type_washing_facilities/Robinets.qui.fuient:label">
+            <value>Robinets qui fuient</value>
+          </text>
+          <text id="/data/c_type_washing_facilities/Lavabo.avec.eau:label">
+            <value>Lavabo avec eau</value>
+          </text>
+          <text id="/data/c_type_water_sink:label">
+            <value>Combien de robinets d'eau avec un évier ?</value>
+          </text>
+          <text id="/data/c_type_bucket_tap:label">
+            <value>Combien de seaux avec robinet ?</value>
+          </text>
+          <text id="/data/c_type_leaky_tap:label">
+            <value>Combien de robinets qui fuient ?</value>
+          </text>
+          <text id="/data/c_type_basin_water:label">
+            <value>Combien de bassins avec de l'eau ?</value>
+          </text>
+          <text id="/data/c_washing_facility_location:label">
+            <value>Où sont situées les installations de lavage des mains ?</value>
+          </text>
+          <text id="/data/c_washing_facility_location/A l.intérieur/près des toilettes:label">
+            <value>A l.intérieur/près des toilettes</value>
+          </text>
+          <text id="/data/c_washing_facility_location/A l.extérieur/près des salles de classe:label">
+            <value>A l.extérieur/près des salles de classe</value>
+          </text>
+          <text id="/data/c_washing_facility_location/Other:label">
+            <value>Autre</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
             <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
@@ -133,6 +452,132 @@
           </text>
           <text id="yes_no-1">
             <value>Non</value>
+          </text>
+          <text id="yes_no_dont_know-0">
+            <value>Oui</value>
+          </text>
+          <text id="yes_no_dont_know-1">
+            <value>Non</value>
+          </text>
+          <text id="yes_no_dont_know-2">
+            <value>Je ne sais pas</value>
+          </text>
+          <text id="src_water-0">
+            <value>Eau courante</value>
+          </text>
+          <text id="src_water-1">
+            <value>Robinet public/kiosque</value>
+          </text>
+          <text id="src_water-2">
+            <value>Trou de forage</value>
+          </text>
+          <text id="src_water-3">
+            <value>Puits creusé protégé</value>
+          </text>
+          <text id="src_water-4">
+            <value>Source protégée</value>
+          </text>
+          <text id="src_water-5">
+            <value>Source non protégée</value>
+          </text>
+          <text id="src_water-6">
+            <value>Collecte de l'eau de pluie</value>
+          </text>
+          <text id="src_water-7">
+            <value>Eau livrée par camion-citerne</value>
+          </text>
+          <text id="src_water-8">
+            <value>Sources non protégées (rivière, barrage, lac, étang, ruisseau, canal, canaux d'irrigation)</value>
+          </text>
+          <text id="src_water-9">
+            <value>Autre</value>
+          </text>
+          <text id="src_water_other-0">
+            <value>Eau courante</value>
+          </text>
+          <text id="src_water_other-1">
+            <value>Puits de forage</value>
+          </text>
+          <text id="src_water_other-2">
+            <value>Puits creusé protégé</value>
+          </text>
+          <text id="src_water_other-3">
+            <value>Source non protégée</value>
+          </text>
+          <text id="src_water_other-4">
+            <value>Collecte d'eau de pluie</value>
+          </text>
+          <text id="src_water_other-5">
+            <value>Robinet public/kiosque</value>
+          </text>
+          <text id="src_distance-0">
+            <value>Moins de 30 minutes</value>
+          </text>
+          <text id="src_distance-1">
+            <value>Plus de 30 minutes</value>
+          </text>
+          <text id="fetch_water-0">
+            <value>Garçons</value>
+          </text>
+          <text id="fetch_water-1">
+            <value>Filles</value>
+          </text>
+          <text id="fetch_water-2">
+            <value>Autre</value>
+          </text>
+          <text id="how_treat_water-0">
+            <value>Ajouter de l.eau de Javel / du chlore</value>
+          </text>
+          <text id="how_treat_water-1">
+            <value>Laisser reposer et décanter</value>
+          </text>
+          <text id="how_treat_water-2">
+            <value>Autre</value>
+          </text>
+          <text id="how_treat_water-3">
+            <value>Pas de traitement</value>
+          </text>
+          <text id="type_toilet_school-0">
+            <value>Rinçage vers un réseau d.égouts/système septique.</value>
+          </text>
+          <text id="type_toilet_school-1">
+            <value>Verser dans une fosse</value>
+          </text>
+          <text id="type_toilet_school-2">
+            <value>Latrine VIP</value>
+          </text>
+          <text id="type_toilet_school-3">
+            <value>Latrines fonctionnelles/traditionnelles</value>
+          </text>
+          <text id="toilet_broken_slab-0">
+            <value>Murs</value>
+          </text>
+          <text id="toilet_broken_slab-1">
+            <value>Portes</value>
+          </text>
+          <text id="toilet_broken_slab-2">
+            <value>Toit</value>
+          </text>
+          <text id="type_washing_facilities-0">
+            <value>Eau du robinet avec un évier</value>
+          </text>
+          <text id="type_washing_facilities-1">
+            <value>Seau avec robinet</value>
+          </text>
+          <text id="type_washing_facilities-2">
+            <value>Robinets qui fuient</value>
+          </text>
+          <text id="type_washing_facilities-3">
+            <value>Lavabo avec eau</value>
+          </text>
+          <text id="washing_facility_location-0">
+            <value>A l.intérieur/près des toilettes</value>
+          </text>
+          <text id="washing_facility_location-1">
+            <value>A l.extérieur/près des salles de classe</value>
+          </text>
+          <text id="washing_facility_location-2">
+            <value>Autre</value>
           </text>
           <text id="province_list-0">
             <value>KASAI CENTRAL</value>
@@ -1489,7 +1934,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="yes_no">
         <root>
           <item>
@@ -1499,6 +1943,214 @@
           <item>
             <itextId>yes_no-1</itextId>
             <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no_dont_know">
+        <root>
+          <item>
+            <itextId>yes_no_dont_know-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no_dont_know-1</itextId>
+            <name>No</name>
+          </item>
+          <item>
+            <itextId>yes_no_dont_know-2</itextId>
+            <name>Don.t Know</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="src_water">
+        <root>
+          <item>
+            <itextId>src_water-0</itextId>
+            <name>Eau.courante</name>
+          </item>
+          <item>
+            <itextId>src_water-1</itextId>
+            <name>Robinet.public/kiosque</name>
+          </item>
+          <item>
+            <itextId>src_water-2</itextId>
+            <name>Trou.de.forage</name>
+          </item>
+          <item>
+            <itextId>src_water-3</itextId>
+            <name>Puits.creusé.protégé</name>
+          </item>
+          <item>
+            <itextId>src_water-4</itextId>
+            <name>Source.protégée</name>
+          </item>
+          <item>
+            <itextId>src_water-5</itextId>
+            <name>Source.non.protégée</name>
+          </item>
+          <item>
+            <itextId>src_water-6</itextId>
+            <name>Collecte.de.l.eau.de.pluie</name>
+          </item>
+          <item>
+            <itextId>src_water-7</itextId>
+            <name>Eau.livrée.par.camion-citerne</name>
+          </item>
+          <item>
+            <itextId>src_water-8</itextId>
+            <name>Sources.non.protégées.(rivière,.barrage,.lac,.étang,.ruisseau,.canal,.canaux.d.irrigation)</name>
+          </item>
+          <item>
+            <itextId>src_water-9</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="src_water_other">
+        <root>
+          <item>
+            <itextId>src_water_other-0</itextId>
+            <name>Eau.courante</name>
+          </item>
+          <item>
+            <itextId>src_water_other-1</itextId>
+            <name>Puits.de.forage</name>
+          </item>
+          <item>
+            <itextId>src_water_other-2</itextId>
+            <name>Puits.creusé.protégé</name>
+          </item>
+          <item>
+            <itextId>src_water_other-3</itextId>
+            <name>Source.non.protégée</name>
+          </item>
+          <item>
+            <itextId>src_water_other-4</itextId>
+            <name>Collecte.d.eau.de.pluie</name>
+          </item>
+          <item>
+            <itextId>src_water_other-5</itextId>
+            <name>Robinet.public/kiosque</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="src_distance">
+        <root>
+          <item>
+            <itextId>src_distance-0</itextId>
+            <name>Moins de 30 minutes</name>
+          </item>
+          <item>
+            <itextId>src_distance-1</itextId>
+            <name>Plus de 30 minutes</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="fetch_water">
+        <root>
+          <item>
+            <itextId>fetch_water-0</itextId>
+            <name>Garçons</name>
+          </item>
+          <item>
+            <itextId>fetch_water-1</itextId>
+            <name>Filles</name>
+          </item>
+          <item>
+            <itextId>fetch_water-2</itextId>
+            <name>Others</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="how_treat_water">
+        <root>
+          <item>
+            <itextId>how_treat_water-0</itextId>
+            <name>Ajouter de l.eau de Javel / du chlore</name>
+          </item>
+          <item>
+            <itextId>how_treat_water-1</itextId>
+            <name>Laisser reposer et décanter</name>
+          </item>
+          <item>
+            <itextId>how_treat_water-2</itextId>
+            <name>Autre</name>
+          </item>
+          <item>
+            <itextId>how_treat_water-3</itextId>
+            <name>Pas de traitement</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="type_toilet_school">
+        <root>
+          <item>
+            <itextId>type_toilet_school-0</itextId>
+            <name>Rinçage vers un réseau d.égouts/système septique.</name>
+          </item>
+          <item>
+            <itextId>type_toilet_school-1</itextId>
+            <name>Verser dans une fosse</name>
+          </item>
+          <item>
+            <itextId>type_toilet_school-2</itextId>
+            <name>Latrine VIP</name>
+          </item>
+          <item>
+            <itextId>type_toilet_school-3</itextId>
+            <name>Latrines fonctionnelles/traditionnelles</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="toilet_broken_slab">
+        <root>
+          <item>
+            <itextId>toilet_broken_slab-0</itextId>
+            <name>Murs</name>
+          </item>
+          <item>
+            <itextId>toilet_broken_slab-1</itextId>
+            <name>Portes</name>
+          </item>
+          <item>
+            <itextId>toilet_broken_slab-2</itextId>
+            <name>Toit</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="type_washing_facilities">
+        <root>
+          <item>
+            <itextId>type_washing_facilities-0</itextId>
+            <name>Eau.du.robinet.avec.un.évier</name>
+          </item>
+          <item>
+            <itextId>type_washing_facilities-1</itextId>
+            <name>Seau.avec.robinet</name>
+          </item>
+          <item>
+            <itextId>type_washing_facilities-2</itextId>
+            <name>Robinets.qui.fuient</name>
+          </item>
+          <item>
+            <itextId>type_washing_facilities-3</itextId>
+            <name>Lavabo.avec.eau</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="washing_facility_location">
+        <root>
+          <item>
+            <itextId>washing_facility_location-0</itextId>
+            <name>A l.intérieur/près des toilettes</name>
+          </item>
+          <item>
+            <itextId>washing_facility_location-1</itextId>
+            <name>A l.extérieur/près des salles de classe</name>
+          </item>
+          <item>
+            <itextId>washing_facility_location-2</itextId>
+            <name>Other</name>
           </item>
         </root>
       </instance>
@@ -3786,15 +4438,55 @@
 			<bind nodeset="/data/c_cluster_name2" relevant=" /data/c_school_planed  = 'No'" required="true()" type="string" db_add_col_4="." db_add_col_3="/data/c_commune"/>
 			<bind constraint="regex(.,'^[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/c_cluster_id2:jr:constraintMsg')" nodeset="/data/c_cluster_id2" db_add_col_5="." db_add_col_4="/data/c_cluster_name2" relevant=" /data/c_school_planed  = 'No'" required="true()" type="string"/>
 			<bind nodeset="/data/c_cluster_leader_name" required="true()" type="string"/>
-			<bind nodeset="/data/c_consent" required="true()" type="string"/>
-			<bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Yes'" required="false()" type="int"/>
-			<bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_present:jr:constraintMsg')" nodeset="/data/c_present" relevant=" /data/c_consent  = 'Yes'" required="false()" type="int"/>
-			<bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
-			<bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'No'" type="string"/>
-			<bind nodeset="/data/c_ClusterNotes" type="string"/>
-			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
-			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
-			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/c_consent" required="true()" type="string"/>
+      <bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Yes'" required="false()" type="int"/>
+      <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_present_6_7:jr:constraintMsg')" nodeset="/data/c_present_6_7" relevant=" /data/c_consent  = 'Yes'" required="false()" type="int"/>
+      <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_present_8_10:jr:constraintMsg')" nodeset="/data/c_present_8_10" relevant=" /data/c_consent  = 'Yes'" required="false()" type="int"/>
+      <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_toilet_boy" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_toilet_girl" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_toilet_teacher" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_urinal_boy" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_urinal_teacher" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_teacher_male" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_teacher_female" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind calculate=" /data/c_teacher_male  +  /data/c_teacher_female " nodeset="/data/c_total_teacher" relevant=" /data/c_consent  = 'Yes'" type="string"/>
+      <bind nodeset="/data/c_pupil_boy" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_pupil_girl" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind calculate=" /data/c_pupil_boy  +  /data/c_pupil_girl " nodeset="/data/c_total_pupil" relevant=" /data/c_consent  = 'Yes'" type="string"/>
+      <bind nodeset="/data/c_pupil_disability_boy" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_pupil_disability_girl" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind calculate=" /data/c_pupil_disability_boy  +  /data/c_pupil_disability_girl " nodeset="/data/c_total_pupil_disability" relevant=" /data/c_consent  = 'Yes'" type="string"/>
+      <bind nodeset="/data/c_boy_limb_disability" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_girl_limb_disability" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind calculate=" /data/c_boy_limb_disability  +  /data/c_girl_limb_disability " nodeset="/data/c_total_limb_disability" relevant=" /data/c_consent  = 'Yes'" type="string"/>
+      <bind nodeset="/data/c_src_drinking_water" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_src_drinking_water_other" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_other_src_water" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_other_src_water_other" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_src_distance" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_fetch_water" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_src_water_treated" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_how_treat_water" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_how_treat_water_other" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_type_toilet_school" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_toilet_sign_defecation_around" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_toilet_sign_defecation_slab" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_toilet_broken_slab" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_wash_hand" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_wash_hand_soap" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_school_has_wash_facility" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_type_washing_facilities" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_type_water_sink" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_type_bucket_tap" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_type_leaky_tap" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_type_basin_water" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_washing_facility_location" relevant=" /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'No'" type="string"/>
+      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -3874,13 +4566,329 @@
     <input ref="/data/c_population">
       <label ref="jr:itext('/data/c_population:label')"/>
     </input>
-    <input ref="/data/c_present">
-      <label ref="jr:itext('/data/c_present:label')"/>
+    <input ref="/data/c_present_6_7">
+      <label ref="jr:itext('/data/c_present_6_7:label')"/>
+    </input>
+    <input ref="/data/c_present_8_10">
+      <label ref="jr:itext('/data/c_present_8_10:label')"/>
     </input>
     <input ref="/data/c_gps">
       <label ref="jr:itext('/data/c_gps:label')"/>
       <hint ref="jr:itext('/data/c_gps:hint')"/>
     </input>
+    <input ref="/data/c_toilet_boy">
+      <label ref="jr:itext('/data/c_toilet_boy:label')"/>
+    </input>
+    <input ref="/data/c_toilet_girl">
+      <label ref="jr:itext('/data/c_toilet_girl:label')"/>
+    </input>
+    <input ref="/data/c_toilet_teacher">
+      <label ref="jr:itext('/data/c_toilet_teacher:label')"/>
+    </input>
+    <input ref="/data/c_urinal_boy">
+      <label ref="jr:itext('/data/c_urinal_boy:label')"/>
+    </input>
+    <input ref="/data/c_urinal_teacher">
+      <label ref="jr:itext('/data/c_urinal_teacher:label')"/>
+    </input>
+    <input ref="/data/c_teacher_male">
+      <label ref="jr:itext('/data/c_teacher_male:label')"/>
+    </input>
+    <input ref="/data/c_teacher_female">
+      <label ref="jr:itext('/data/c_teacher_female:label')"/>
+    </input>
+    <input ref="/data/c_pupil_boy">
+      <label ref="jr:itext('/data/c_pupil_boy:label')"/>
+    </input>
+    <input ref="/data/c_pupil_girl">
+      <label ref="jr:itext('/data/c_pupil_girl:label')"/>
+    </input>
+    <input ref="/data/c_pupil_disability_boy">
+      <label ref="jr:itext('/data/c_pupil_disability_boy:label')"/>
+    </input>
+    <input ref="/data/c_pupil_disability_girl">
+      <label ref="jr:itext('/data/c_pupil_disability_girl:label')"/>
+    </input>
+    <input ref="/data/c_boy_limb_disability">
+      <label ref="jr:itext('/data/c_boy_limb_disability:label')"/>
+    </input>
+    <input ref="/data/c_girl_limb_disability">
+      <label ref="jr:itext('/data/c_girl_limb_disability:label')"/>
+    </input>
+    <select ref="/data/c_src_drinking_water">
+      <label ref="jr:itext('/data/c_src_drinking_water:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_src_drinking_water/Eau.courante:label')"/>
+        <value>Eau.courante</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_drinking_water/Robinet.public/kiosque:label')"/>
+        <value>Robinet.public/kiosque</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_drinking_water/Trou.de.forage:label')"/>
+        <value>Trou.de.forage</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_drinking_water/Puits.creusé.protégé:label')"/>
+        <value>Puits.creusé.protégé</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_drinking_water/Source.protégée:label')"/>
+        <value>Source.protégée</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_drinking_water/Source.non.protégée:label')"/>
+        <value>Source.non.protégée</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_drinking_water/Collecte.de.l.eau.de.pluie:label')"/>
+        <value>Collecte.de.l.eau.de.pluie</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_drinking_water/Eau.livrée.par.camion-citerne:label')"/>
+        <value>Eau.livrée.par.camion-citerne</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_drinking_water/Sources.non.protégées.(rivière,.barrage,.lac,.étang,.ruisseau,.canal,.canaux.d.irrigation):label')"/>
+        <value>Sources.non.protégées.(rivière,.barrage,.lac,.étang,.ruisseau,.canal,.canaux.d.irrigation)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_drinking_water/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/c_src_drinking_water_other">
+      <label ref="jr:itext('/data/c_src_drinking_water_other:label')"/>
+    </input>
+    <select ref="/data/c_other_src_water">
+      <label ref="jr:itext('/data/c_other_src_water:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_other_src_water/Eau.courante:label')"/>
+        <value>Eau.courante</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_other_src_water/Puits.de.forage:label')"/>
+        <value>Puits.de.forage</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_other_src_water/Puits.creusé.protégé:label')"/>
+        <value>Puits.creusé.protégé</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_other_src_water/Source.non.protégée:label')"/>
+        <value>Source.non.protégée</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_other_src_water/Collecte.d.eau.de.pluie:label')"/>
+        <value>Collecte.d.eau.de.pluie</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_other_src_water/Robinet.public/kiosque:label')"/>
+        <value>Robinet.public/kiosque</value>
+      </item>
+    </select>
+    <input ref="/data/c_other_src_water_other">
+      <label ref="jr:itext('/data/c_other_src_water_other:label')"/>
+    </input>
+    <select1 ref="/data/c_src_distance">
+      <label ref="jr:itext('/data/c_src_distance:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_src_distance/Moins de 30 minutes:label')"/>
+        <value>Moins de 30 minutes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_distance/Plus de 30 minutes:label')"/>
+        <value>Plus de 30 minutes</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_fetch_water">
+      <label ref="jr:itext('/data/c_fetch_water:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_fetch_water/Garçons:label')"/>
+        <value>Garçons</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_fetch_water/Filles:label')"/>
+        <value>Filles</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_fetch_water/Others:label')"/>
+        <value>Others</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_src_water_treated">
+      <label ref="jr:itext('/data/c_src_water_treated:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_src_water_treated/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_water_treated/No:label')"/>
+        <value>No</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_src_water_treated/Don.t Know:label')"/>
+        <value>Don.t Know</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_how_treat_water">
+      <label ref="jr:itext('/data/c_how_treat_water:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_how_treat_water/Ajouter de l.eau de Javel / du chlore:label')"/>
+        <value>Ajouter de l.eau de Javel / du chlore</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_how_treat_water/Laisser reposer et décanter:label')"/>
+        <value>Laisser reposer et décanter</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_how_treat_water/Autre:label')"/>
+        <value>Autre</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_how_treat_water/Pas de traitement:label')"/>
+        <value>Pas de traitement</value>
+      </item>
+    </select1>
+    <input ref="/data/c_how_treat_water_other">
+      <label ref="jr:itext('/data/c_how_treat_water_other:label')"/>
+    </input>
+    <select1 ref="/data/c_type_toilet_school">
+      <label ref="jr:itext('/data/c_type_toilet_school:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_type_toilet_school/Rinçage vers un réseau d.égouts/système septique.:label')"/>
+        <value>Rinçage vers un réseau d.égouts/système septique.</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_type_toilet_school/Verser dans une fosse:label')"/>
+        <value>Verser dans une fosse</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_type_toilet_school/Latrine VIP:label')"/>
+        <value>Latrine VIP</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_type_toilet_school/Latrines fonctionnelles/traditionnelles:label')"/>
+        <value>Latrines fonctionnelles/traditionnelles</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_toilet_sign_defecation_around">
+      <label ref="jr:itext('/data/c_toilet_sign_defecation_around:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_toilet_sign_defecation_around/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_toilet_sign_defecation_around/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_toilet_sign_defecation_slab">
+      <label ref="jr:itext('/data/c_toilet_sign_defecation_slab:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_toilet_sign_defecation_slab/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_toilet_sign_defecation_slab/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_toilet_broken_slab">
+      <label ref="jr:itext('/data/c_toilet_broken_slab:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_toilet_broken_slab/Murs:label')"/>
+        <value>Murs</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_toilet_broken_slab/Portes:label')"/>
+        <value>Portes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_toilet_broken_slab/Toit:label')"/>
+        <value>Toit</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_wash_hand">
+      <label ref="jr:itext('/data/c_wash_hand:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_wash_hand/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_wash_hand/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_wash_hand_soap">
+      <label ref="jr:itext('/data/c_wash_hand_soap:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_wash_hand_soap/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_wash_hand_soap/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_school_has_wash_facility">
+      <label ref="jr:itext('/data/c_school_has_wash_facility:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_school_has_wash_facility/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_school_has_wash_facility/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select ref="/data/c_type_washing_facilities">
+      <label ref="jr:itext('/data/c_type_washing_facilities:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_type_washing_facilities/Eau.du.robinet.avec.un.évier:label')"/>
+        <value>Eau.du.robinet.avec.un.évier</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_type_washing_facilities/Seau.avec.robinet:label')"/>
+        <value>Seau.avec.robinet</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_type_washing_facilities/Robinets.qui.fuient:label')"/>
+        <value>Robinets.qui.fuient</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_type_washing_facilities/Lavabo.avec.eau:label')"/>
+        <value>Lavabo.avec.eau</value>
+      </item>
+    </select>
+    <input ref="/data/c_type_water_sink">
+      <label ref="jr:itext('/data/c_type_water_sink:label')"/>
+    </input>
+    <input ref="/data/c_type_bucket_tap">
+      <label ref="jr:itext('/data/c_type_bucket_tap:label')"/>
+    </input>
+    <input ref="/data/c_type_leaky_tap">
+      <label ref="jr:itext('/data/c_type_leaky_tap:label')"/>
+    </input>
+    <input ref="/data/c_type_basin_water">
+      <label ref="jr:itext('/data/c_type_basin_water:label')"/>
+    </input>
+    <select1 ref="/data/c_washing_facility_location">
+      <label ref="jr:itext('/data/c_washing_facility_location:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_washing_facility_location/A l.intérieur/près des toilettes:label')"/>
+        <value>A l.intérieur/près des toilettes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_washing_facility_location/A l.extérieur/près des salles de classe:label')"/>
+        <value>A l.extérieur/près des salles de classe</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_washing_facility_location/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
     <input ref="/data/p_ending_survey_note">
       <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
     </input>
