@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Novembre 2022) ONCHO - 3. Formulaire OV16</h:title>
+    <model >
+
+      <instance>
+        <data id="cd_oncho_3_elisa_202211">
+          <d_RecorderID/>
+          <d_province/>
+          <d_district_name/>
+          <d_commune/>
+          <d_cluster_name/>
+          <d_cluster_id/>
+          <d_code_id/>
+          <d_LabELISA/>
+          <d_Notes/>
+          <d_StartTime/>
+          <d_EndTime/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/d_RecorderID:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 99</value>
+          </text>
+          <text id="/data/d_RecorderID:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/d_RecorderID:hint">
+            <value>Code à deux chiffres qui vous a été assigné</value>
+          </text>
+          <text id="/data/d_province:label">
+            <value>Sélectionnez la Province</value>
+          </text>
+          <text id="/data/d_district_name:label">
+            <value>Sélectionner la Zone de santé</value>
+          </text>
+          <text id="/data/d_commune:label">
+            <value>Sélectionner l'Aire de santé</value>
+          </text>
+          <text id="/data/d_cluster_name:label">
+            <value>Sélectionner le nom de l'école</value>
+          </text>
+          <text id="/data/d_cluster_id:label">
+            <value>Sélectionner le code de l'école</value>
+          </text>
+          <text id="/data/d_cluster_id:hint">
+            <value>Le code a trois chiffre associé à chaque école</value>
+          </text>
+          <text id="/data/d_code_id:jr:constraintMsg">
+            <value>Le format du QR code est incorrect. Ex s'un format correct : SA 00001 22</value>
+          </text>
+          <text id="/data/d_code_id:label">
+            <value>Scanner l'identification (Identifiant) du Participant</value>
+          </text>
+          <text id="/data/d_LabELISA:label">
+            <value>Résultat du test RDT ELISA</value>
+          </text>
+          <text id="/data/d_LabELISA/Positif:label">
+            <value>Positif</value>
+          </text>
+          <text id="/data/d_LabELISA/Negatif:label">
+            <value>Négatif</value>
+          </text>
+          <text id="/data/d_LabELISA/Invalide:label">
+            <value>Invalide (y compris les erreurs de test et le sang insuffisant)</value>
+          </text>
+          <text id="/data/d_LabELISA/Refuse:label">
+            <value>Refusé (retrait du consentement)</value>
+          </text>
+          <text id="/data/d_Notes:label">
+            <value>Notes Additionnelles</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/d_RecorderID:jr:constraintMsg')" nodeset="/data/d_RecorderID" required="true()" type="int"/>
+      <bind nodeset="/data/d_province" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/d_district_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_province"/>
+      <bind nodeset="/data/d_commune" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_district_name"/>
+      <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/d_commune"/>
+      <bind nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_cluster_name"/>
+      <bind constraint="regex(., '^SA [0-9]{5} [0-9]{2}$')" jr:constraintMsg="jr:itext('/data/d_code_id:jr:constraintMsg')" nodeset="/data/d_code_id" required="true()" type="barcode" db_get="col_6" db_filter_by_col_7="/data/d_cluster_id"/>
+      <bind nodeset="/data/d_LabELISA" required="true()" type="string"/>
+      <bind nodeset="/data/d_Notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_StartTime" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_EndTime" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/d_RecorderID">
+      <label ref="jr:itext('/data/d_RecorderID:label')"/>
+      <hint ref="jr:itext('/data/d_RecorderID:hint')"/>
+    </input>
+    <input ref="/data/d_province">
+      <label ref="jr:itext('/data/d_province:label')"/>
+    </input>
+    <input ref="/data/d_district_name">
+      <label ref="jr:itext('/data/d_district_name:label')"/>
+    </input>
+    <input ref="/data/d_commune">
+      <label ref="jr:itext('/data/d_commune:label')"/>
+    </input>
+    <input ref="/data/d_cluster_name">
+      <label ref="jr:itext('/data/d_cluster_name:label')"/>
+    </input>
+    <input ref="/data/d_cluster_id">
+      <label ref="jr:itext('/data/d_cluster_id:label')"/>
+      <hint ref="jr:itext('/data/d_cluster_id:hint')"/>
+    </input>
+    <input ref="/data/d_code_id">
+      <label ref="jr:itext('/data/d_code_id:label')"/>
+    </input>
+    <select1 ref="/data/d_LabELISA">
+      <label ref="jr:itext('/data/d_LabELISA:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_LabELISA/Positif:label')"/>
+        <value>Positif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabELISA/Negatif:label')"/>
+        <value>Negatif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabELISA/Invalide:label')"/>
+        <value>Invalide</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabELISA/Refuse:label')"/>
+        <value>Refuse</value>
+      </item>
+    </select1>
+    <input ref="/data/d_Notes">
+      <label ref="jr:itext('/data/d_Notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
