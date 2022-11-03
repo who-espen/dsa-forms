@@ -20,6 +20,7 @@
           <p_cluster_id/>
           <p_Consent/>
           <p_live_to_village/>
+          <p_num_ordre/>
           <p_code_id/>
           <p_Sex/>
           <p_AgeYrs/>
@@ -82,11 +83,11 @@
           <text id="/data/p_live_to_village/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/p_code_id:jr:constraintMsg">
-            <value>Le format du QR code est incorrect. Ex s'un format correct : SA 00001 22</value>
+          <text id="/data/p_num_ordre:label">
+            <value>Veuillez entrer le numéro d'ordre du participant:</value>
           </text>
           <text id="/data/p_code_id:label">
-            <value>Scanner l'identification (Identifiant) du Participant</value>
+            <value>Sélectionnez le code d'identification unique du participant</value>
           </text>
           <text id="/data/p_Sex:label">
             <value>Sexe du répondant</value>
@@ -138,7 +139,8 @@
       <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_cluster_name"/>
       <bind nodeset="/data/p_Consent" required="true()" type="string"/>
       <bind nodeset="/data/p_live_to_village" relevant=" /data/p_Consent  = 'Oui'" type="string"/>
-      <bind constraint="regex(., '^SA [0-9]{5} [0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_code_id:jr:constraintMsg')" nodeset="/data/p_code_id" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="barcode" db_add_col_6="." db_add_col_7="/data/p_cluster_id" />
+      <bind nodeset="/data/p_num_ordre" required="true()" type="int"/>
+      <bind calculate="concat( /data/p_cluster_id ,'-',if( /data/p_num_ordre  &lt; 10, concat('00', /data/p_num_ordre ), if( /data/p_num_ordre &gt;=10 and  /data/p_num_ordre  &lt;100, concat('0',  /data/p_num_ordre ),  /data/p_num_ordre )))" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="string" db_add_col_6="." db_add_col_7="/data/p_cluster_id"/>
       <bind nodeset="/data/p_Sex" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="string"/>
       <bind constraint=". &gt;=5 and .&lt;=9" jr:constraintMsg="jr:itext('/data/p_AgeYrs:jr:constraintMsg')" nodeset="/data/p_AgeYrs" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="int"/>
       <bind constraint="regex(., '^[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/p_contact_tuteur:jr:constraintMsg')" nodeset="/data/p_contact_tuteur" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" type="string"/>
@@ -193,6 +195,9 @@
         <value>Non</value>
       </item>
     </select1>
+    <input ref="/data/p_num_ordre">
+      <label ref="jr:itext('/data/p_num_ordre:label')"/>
+    </input>
     <input ref="/data/p_code_id">
       <label ref="jr:itext('/data/p_code_id:label')"/>
     </input>

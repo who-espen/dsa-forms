@@ -62,7 +62,7 @@
             <value>Le format du QR code est incorrect. Ex s'un format correct : SA 00001 22</value>
           </text>
           <text id="/data/d_code_id:label">
-            <value>Scanner l'identification (Identifiant) du Participant</value>
+            <value>Sélectionnez le code d'identification unique du participant</value>
           </text>
           <text id="/data/d_LabELISA:label">
             <value>Résultat du test RDT ELISA</value>
@@ -91,7 +91,7 @@
       <bind nodeset="/data/d_commune" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_district_name"/>
       <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/d_commune"/>
       <bind nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_cluster_name"/>
-      <bind constraint="regex(., '^SA [0-9]{5} [0-9]{2}$')" jr:constraintMsg="jr:itext('/data/d_code_id:jr:constraintMsg')" nodeset="/data/d_code_id" required="true()" type="barcode" db_get="col_6" db_filter_by_col_7="/data/d_cluster_id"/>
+      <bind nodeset="/data/d_code_id" required="true()" type="string" db_get="col_6" db_filter_by_col_7="/data/d_cluster_id"/>
       <bind nodeset="/data/d_LabELISA" required="true()" type="string"/>
       <bind nodeset="/data/d_Notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_StartTime" type="dateTime"/>
