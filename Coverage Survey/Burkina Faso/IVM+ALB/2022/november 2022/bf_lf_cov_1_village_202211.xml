@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -7,18 +7,20 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Novembre 2022) BFA Cov ONCHO - 1. Formulaire Village</h:title>
+    <h:title>(Novembre 2022) BFA Cov ONCHO - 1. Formulaire Village V2</h:title>
     <model >
 
       <instance>
-        <data id="bf_lf_cov_1_village_202211" version="20221012">
+        <data id="bf_lf_cov_1_village_202211_v2" version="20221012">
           <Code_Equipe/>
           <District/>
-          <List_grappe/>
+          <list_grappe/>
           <CSPS/>
           <grappe/>
-          <Numero_grappe/>
-          <Code_grappe/>
+          <grappe_remplacement/>
+          <numero_grappe/>
+          <numero_grappe_remplacement/>
+          <code_grappe/>
           <Nombre_menage/>
           <Nombre_segment/>
           <GPS/>
@@ -63,26 +65,23 @@
           <text id="/data/District/Banfora:label">
             <value>Banfora</value>
           </text>
-          <text id="/data/List_grappe:label">
+          <text id="/data/list_grappe:label">
             <value>La grappe est-elle dans la liste des grappes tirées?</value>
           </text>
-          <text id="/data/List_grappe/Oui:label">
+          <text id="/data/list_grappe/Oui:label">
             <value>Oui</value>
           </text>
-          <text id="/data/List_grappe/Non:label">
+          <text id="/data/list_grappe/Non:label">
             <value>Non</value>
           </text>
           <text id="/data/CSPS:label">
             <value>CSPS</value>
           </text>
-          <text id="/data/CSPS/Boko:label">
-            <value>Boko</value>
-          </text>
-          <text id="/data/CSPS/Boulo:label">
-            <value>Boulo</value>
-          </text>
           <text id="/data/CSPS/Bérégadougou:label">
             <value>Bérégadougou</value>
+          </text>
+          <text id="/data/CSPS/CMU Banfora:label">
+            <value>CMU Banfora</value>
           </text>
           <text id="/data/CSPS/Diamon:label">
             <value>Diamon</value>
@@ -90,23 +89,14 @@
           <text id="/data/CSPS/Diarabakoko:label">
             <value>Diarabakoko</value>
           </text>
-          <text id="/data/CSPS/Folonzo:label">
-            <value>Folonzo</value>
-          </text>
-          <text id="/data/CSPS/Gbagbar:label">
-            <value>Gbagbar</value>
-          </text>
-          <text id="/data/CSPS/Kankounadeni:label">
-            <value>Kankounadeni</value>
-          </text>
           <text id="/data/CSPS/karfiguela:label">
             <value>karfiguela</value>
           </text>
-          <text id="/data/CSPS/Kimini:label">
-            <value>Kimini</value>
-          </text>
           <text id="/data/CSPS/Koutoura:label">
             <value>Koutoura</value>
+          </text>
+          <text id="/data/CSPS/Moussodougou:label">
+            <value>Moussodougou</value>
           </text>
           <text id="/data/CSPS/Nafona:label">
             <value>Nafona</value>
@@ -120,6 +110,9 @@
           <text id="/data/CSPS/Tengela:label">
             <value>Tengela</value>
           </text>
+          <text id="/data/CSPS/Tengrela:label">
+            <value>Tengrela</value>
+          </text>
           <text id="/data/CSPS/Tiékouna:label">
             <value>Tiékouna</value>
           </text>
@@ -129,10 +122,109 @@
           <text id="/data/grappe:label">
             <value>Nom de la grappe</value>
           </text>
-          <text id="/data/Numero_grappe:label">
+          <text id="/data/grappe_remplacement:label">
+            <value>Entrer le nom de la grappe de remplacement</value>
+          </text>
+          <text id="/data/numero_grappe:jr:constraintMsg">
+            <value>Le numéro doit être entre 1 et 30</value>
+          </text>
+          <text id="/data/numero_grappe:label">
             <value>Numéro grappe</value>
           </text>
-          <text id="/data/Code_grappe:label">
+          <text id="/data/numero_grappe/1:label">
+            <value>1</value>
+          </text>
+          <text id="/data/numero_grappe/2:label">
+            <value>2</value>
+          </text>
+          <text id="/data/numero_grappe/3:label">
+            <value>3</value>
+          </text>
+          <text id="/data/numero_grappe/4:label">
+            <value>4</value>
+          </text>
+          <text id="/data/numero_grappe/5:label">
+            <value>5</value>
+          </text>
+          <text id="/data/numero_grappe/6:label">
+            <value>6</value>
+          </text>
+          <text id="/data/numero_grappe/7:label">
+            <value>7</value>
+          </text>
+          <text id="/data/numero_grappe/8:label">
+            <value>8</value>
+          </text>
+          <text id="/data/numero_grappe/9:label">
+            <value>9</value>
+          </text>
+          <text id="/data/numero_grappe/10:label">
+            <value>10</value>
+          </text>
+          <text id="/data/numero_grappe/11:label">
+            <value>11</value>
+          </text>
+          <text id="/data/numero_grappe/12:label">
+            <value>12</value>
+          </text>
+          <text id="/data/numero_grappe/13:label">
+            <value>13</value>
+          </text>
+          <text id="/data/numero_grappe/14:label">
+            <value>14</value>
+          </text>
+          <text id="/data/numero_grappe/15:label">
+            <value>15</value>
+          </text>
+          <text id="/data/numero_grappe/16:label">
+            <value>16</value>
+          </text>
+          <text id="/data/numero_grappe/17:label">
+            <value>18</value>
+          </text>
+          <text id="/data/numero_grappe/18:label">
+            <value>19</value>
+          </text>
+          <text id="/data/numero_grappe/19:label">
+            <value>19</value>
+          </text>
+          <text id="/data/numero_grappe/20:label">
+            <value>20</value>
+          </text>
+          <text id="/data/numero_grappe/21:label">
+            <value>21</value>
+          </text>
+          <text id="/data/numero_grappe/22:label">
+            <value>22</value>
+          </text>
+          <text id="/data/numero_grappe/23:label">
+            <value>23</value>
+          </text>
+          <text id="/data/numero_grappe/24:label">
+            <value>24</value>
+          </text>
+          <text id="/data/numero_grappe/25:label">
+            <value>25</value>
+          </text>
+          <text id="/data/numero_grappe/26:label">
+            <value>26</value>
+          </text>
+          <text id="/data/numero_grappe/27:label">
+            <value>27</value>
+          </text>
+          <text id="/data/numero_grappe/28:label">
+            <value>28</value>
+          </text>
+          <text id="/data/numero_grappe/29:label">
+            <value>29</value>
+          </text>
+          <text id="/data/numero_grappe/30:label">
+            <value>30</value>
+          </text>
+          <text id="/data/numero_grappe_remplacement:label">
+            <value>Numéro du grappe de remplacement</value>
+          </text>
+          <text id="/data/code_grappe:label">
             <value>Code de la grappe</value>
           </text>
           <text id="/data/Nombre_menage:label">
@@ -172,64 +264,55 @@
             <value>Banfora</value>
           </text>
           <text id="CSPS-0">
-            <value>Boko</value>
-          </text>
-          <text id="CSPS-1">
-            <value>Boulo</value>
-          </text>
-          <text id="CSPS-2">
             <value>Bérégadougou</value>
           </text>
-          <text id="CSPS-3">
+          <text id="CSPS-1">
+            <value>CMU Banfora</value>
+          </text>
+          <text id="CSPS-2">
             <value>Diamon</value>
           </text>
-          <text id="CSPS-4">
+          <text id="CSPS-3">
             <value>Diarabakoko</value>
           </text>
-          <text id="CSPS-5">
-            <value>Folonzo</value>
-          </text>
-          <text id="CSPS-6">
-            <value>Gbagbar</value>
-          </text>
-          <text id="CSPS-7">
-            <value>Kankounadeni</value>
-          </text>
-          <text id="CSPS-8">
+          <text id="CSPS-4">
             <value>karfiguela</value>
           </text>
-          <text id="CSPS-9">
-            <value>Kimini</value>
-          </text>
-          <text id="CSPS-10">
+          <text id="CSPS-5">
             <value>Koutoura</value>
           </text>
-          <text id="CSPS-11">
+          <text id="CSPS-6">
+            <value>Moussodougou</value>
+          </text>
+          <text id="CSPS-7">
             <value>Nafona</value>
           </text>
-          <text id="CSPS-12">
+          <text id="CSPS-8">
             <value>Secteur 8 Banfora</value>
           </text>
-          <text id="CSPS-13">
+          <text id="CSPS-9">
             <value>Siniéna</value>
           </text>
-          <text id="CSPS-14">
+          <text id="CSPS-10">
             <value>Tengela</value>
           </text>
-          <text id="CSPS-15">
+          <text id="CSPS-11">
+            <value>Tengrela</value>
+          </text>
+          <text id="CSPS-12">
             <value>Tiékouna</value>
           </text>
-          <text id="CSPS-16">
+          <text id="CSPS-13">
             <value>Toumousseni</value>
           </text>
           <text id="grappe-0">
-            <value>Badara Dogossè</value>
+            <value>Fabédougou</value>
           </text>
           <text id="grappe-1">
-            <value>Bossobougou</value>
+            <value>Nafona Nanfié</value>
           </text>
           <text id="grappe-2">
-            <value>Fabédougou</value>
+            <value>Vobli</value>
           </text>
           <text id="grappe-3">
             <value>Tanouflana</value>
@@ -244,67 +327,163 @@
             <value>Niarebama</value>
           </text>
           <text id="grappe-7">
-            <value>Badara Mossi</value>
+            <value>Tiemblé</value>
           </text>
           <text id="grappe-8">
-            <value>Folonzo</value>
+            <value>Kayouna</value>
           </text>
           <text id="grappe-9">
-            <value>Gbabar</value>
+            <value>Kossougou</value>
           </text>
           <text id="grappe-10">
-            <value>Lingueyirikoro</value>
+            <value>Gnerpien</value>
           </text>
           <text id="grappe-11">
-            <value>Sakora</value>
+            <value>Gnagnana</value>
           </text>
           <text id="grappe-12">
-            <value>Karfiguela+Bondougou</value>
+            <value>Nekanklou (Nakana)</value>
           </text>
           <text id="grappe-13">
-            <value>Camp dagara</value>
+            <value>Karfiguela+Bandougou</value>
           </text>
           <text id="grappe-14">
-            <value>Camp lobi</value>
+            <value>Djénédjan</value>
           </text>
           <text id="grappe-15">
-            <value>Gnandona</value>
+            <value>Leire Norale</value>
           </text>
           <text id="grappe-16">
-            <value>Nafona Tanfié</value>
+            <value>Gnandona1</value>
           </text>
           <text id="grappe-17">
-            <value>Secteur 8 Kiribina 1</value>
+            <value>Gnandona2</value>
           </text>
           <text id="grappe-18">
-            <value>Kitobama</value>
+            <value>Nafona Tanfié</value>
           </text>
           <text id="grappe-19">
-            <value>Niankar kintara</value>
+            <value>Secteur 8 Kiribina 1</value>
           </text>
           <text id="grappe-20">
-            <value>Niankar komambara</value>
+            <value>Niankar kintara</value>
           </text>
           <text id="grappe-21">
-            <value>Bakono</value>
+            <value>Niankar komambara</value>
           </text>
           <text id="grappe-22">
-            <value>Ferme I</value>
+            <value>Kitobama</value>
           </text>
           <text id="grappe-23">
-            <value>Koko</value>
+            <value>Ferme I</value>
           </text>
           <text id="grappe-24">
-            <value>Sitiena+ Onaye II</value>
+            <value>Bakono</value>
           </text>
           <text id="grappe-25">
             <value>Tiekouna</value>
           </text>
           <text id="grappe-26">
-            <value>Ferme+ Barrage</value>
+            <value>Koko</value>
           </text>
           <text id="grappe-27">
+            <value>Sitiena+ Onaye II</value>
+          </text>
+          <text id="grappe-28">
+            <value>Ferme+ Barrage</value>
+          </text>
+          <text id="grappe-29">
             <value>Nitiona+Yolna</value>
+          </text>
+          <text id="numero_grappe-0">
+            <value>1</value>
+          </text>
+          <text id="numero_grappe-1">
+            <value>2</value>
+          </text>
+          <text id="numero_grappe-2">
+            <value>3</value>
+          </text>
+          <text id="numero_grappe-3">
+            <value>4</value>
+          </text>
+          <text id="numero_grappe-4">
+            <value>5</value>
+          </text>
+          <text id="numero_grappe-5">
+            <value>6</value>
+          </text>
+          <text id="numero_grappe-6">
+            <value>7</value>
+          </text>
+          <text id="numero_grappe-7">
+            <value>8</value>
+          </text>
+          <text id="numero_grappe-8">
+            <value>9</value>
+          </text>
+          <text id="numero_grappe-9">
+            <value>10</value>
+          </text>
+          <text id="numero_grappe-10">
+            <value>11</value>
+          </text>
+          <text id="numero_grappe-11">
+            <value>12</value>
+          </text>
+          <text id="numero_grappe-12">
+            <value>13</value>
+          </text>
+          <text id="numero_grappe-13">
+            <value>14</value>
+          </text>
+          <text id="numero_grappe-14">
+            <value>15</value>
+          </text>
+          <text id="numero_grappe-15">
+            <value>16</value>
+          </text>
+          <text id="numero_grappe-16">
+            <value>18</value>
+          </text>
+          <text id="numero_grappe-17">
+            <value>19</value>
+          </text>
+          <text id="numero_grappe-18">
+            <value>19</value>
+          </text>
+          <text id="numero_grappe-19">
+            <value>20</value>
+          </text>
+          <text id="numero_grappe-20">
+            <value>21</value>
+          </text>
+          <text id="numero_grappe-21">
+            <value>22</value>
+          </text>
+          <text id="numero_grappe-22">
+            <value>23</value>
+          </text>
+          <text id="numero_grappe-23">
+            <value>24</value>
+          </text>
+          <text id="numero_grappe-24">
+            <value>25</value>
+          </text>
+          <text id="numero_grappe-25">
+            <value>26</value>
+          </text>
+          <text id="numero_grappe-26">
+            <value>27</value>
+          </text>
+          <text id="numero_grappe-27">
+            <value>28</value>
+          </text>
+          <text id="numero_grappe-28">
+            <value>29</value>
+          </text>
+          <text id="numero_grappe-29">
+            <value>30</value>
           </text>
         </translation>
       </itext>
@@ -356,70 +535,58 @@
         <root>
           <item>
             <itextId>CSPS-0</itextId>
-            <name>Boko</name>
-          </item>
-          <item>
-            <itextId>CSPS-1</itextId>
-            <name>Boulo</name>
-          </item>
-          <item>
-            <itextId>CSPS-2</itextId>
             <name>Bérégadougou</name>
           </item>
           <item>
-            <itextId>CSPS-3</itextId>
+            <itextId>CSPS-1</itextId>
+            <name>CMU Banfora</name>
+          </item>
+          <item>
+            <itextId>CSPS-2</itextId>
             <name>Diamon</name>
           </item>
           <item>
-            <itextId>CSPS-4</itextId>
+            <itextId>CSPS-3</itextId>
             <name>Diarabakoko</name>
           </item>
           <item>
-            <itextId>CSPS-5</itextId>
-            <name>Folonzo</name>
-          </item>
-          <item>
-            <itextId>CSPS-6</itextId>
-            <name>Gbagbar</name>
-          </item>
-          <item>
-            <itextId>CSPS-7</itextId>
-            <name>Kankounadeni</name>
-          </item>
-          <item>
-            <itextId>CSPS-8</itextId>
+            <itextId>CSPS-4</itextId>
             <name>karfiguela</name>
           </item>
           <item>
-            <itextId>CSPS-9</itextId>
-            <name>Kimini</name>
-          </item>
-          <item>
-            <itextId>CSPS-10</itextId>
+            <itextId>CSPS-5</itextId>
             <name>Koutoura</name>
           </item>
           <item>
-            <itextId>CSPS-11</itextId>
+            <itextId>CSPS-6</itextId>
+            <name>Moussodougou</name>
+          </item>
+          <item>
+            <itextId>CSPS-7</itextId>
             <name>Nafona</name>
           </item>
           <item>
-            <itextId>CSPS-12</itextId>
+            <itextId>CSPS-8</itextId>
             <name>Secteur 8 Banfora</name>
           </item>
           <item>
-            <itextId>CSPS-13</itextId>
+            <itextId>CSPS-9</itextId>
             <name>Siniéna</name>
           </item>
           <item>
-            <itextId>CSPS-14</itextId>
+            <itextId>CSPS-10</itextId>
             <name>Tengela</name>
           </item>
           <item>
-            <itextId>CSPS-15</itextId>
+            <itextId>CSPS-11</itextId>
+            <name>Tengrela</name>
+          </item>
+          <item>
+            <itextId>CSPS-12</itextId>
             <name>Tiékouna</name>
           </item>
           <item>
-            <itextId>CSPS-16</itextId>
+            <itextId>CSPS-13</itextId>
             <name>Toumousseni</name>
           </item>
         </root>
@@ -428,18 +595,18 @@
         <root>
           <item>
             <itextId>grappe-0</itextId>
-            <CSPS>Boko</CSPS>
-            <name>Badara Dogossè</name>
+            <CSPS>Bérégadougou</CSPS>
+            <name>Fabédougou</name>
           </item>
           <item>
             <itextId>grappe-1</itextId>
-            <CSPS>Boulo</CSPS>
-            <name>Bossobougou</name>
+            <CSPS>Nafona</CSPS>
+            <name>Nafona Nanfié</name>
           </item>
           <item>
             <itextId>grappe-2</itextId>
-            <CSPS>Bérégadougou</CSPS>
-            <name>Fabédougou</name>
+            <CSPS>Diamon</CSPS>
+            <name>Vobli</name>
           </item>
           <item>
             <itextId>grappe-3</itextId>
@@ -463,93 +630,93 @@
           </item>
           <item>
             <itextId>grappe-7</itextId>
-            <CSPS>Folonzo</CSPS>
-            <name>Badara Mossi</name>
+            <CSPS>Moussodougou</CSPS>
+            <name>Tiemblé</name>
           </item>
           <item>
             <itextId>grappe-8</itextId>
-            <CSPS>Folonzo</CSPS>
-            <name>Folonzo</name>
+            <CSPS>Moussodougou</CSPS>
+            <name>Kayouna</name>
           </item>
           <item>
             <itextId>grappe-9</itextId>
-            <CSPS>Gbagbar</CSPS>
-            <name>Gbabar</name>
+            <CSPS>Moussodougou</CSPS>
+            <name>Kossougou</name>
           </item>
           <item>
             <itextId>grappe-10</itextId>
-            <CSPS>Gbagbar</CSPS>
-            <name>Lingueyirikoro</name>
+            <CSPS>Moussodougou</CSPS>
+            <name>Gnerpien</name>
           </item>
           <item>
             <itextId>grappe-11</itextId>
-            <CSPS>Kankounadeni</CSPS>
-            <name>Sakora</name>
+            <CSPS>CMU Banfora</CSPS>
+            <name>Gnagnana</name>
           </item>
           <item>
             <itextId>grappe-12</itextId>
-            <CSPS>karfiguela</CSPS>
-            <name>Karfiguela+Bondougou</name>
+            <CSPS>Tiékouna</CSPS>
+            <name>Nekanklou (Nakana)</name>
           </item>
           <item>
             <itextId>grappe-13</itextId>
-            <CSPS>Kimini</CSPS>
-            <name>Camp dagara</name>
+            <CSPS>karfiguela</CSPS>
+            <name>Karfiguela+Bandougou</name>
           </item>
           <item>
             <itextId>grappe-14</itextId>
-            <CSPS>Kimini</CSPS>
-            <name>Camp lobi</name>
+            <CSPS>Tengrela</CSPS>
+            <name>Djénédjan</name>
           </item>
           <item>
             <itextId>grappe-15</itextId>
-            <CSPS>Koutoura</CSPS>
-            <name>Gnandona</name>
+            <CSPS>Tengrela</CSPS>
+            <name>Leire Norale</name>
           </item>
           <item>
             <itextId>grappe-16</itextId>
+            <CSPS>Koutoura</CSPS>
+            <name>Gnandona1</name>
+          </item>
+          <item>
+            <itextId>grappe-17</itextId>
+            <CSPS>Koutoura</CSPS>
+            <name>Gnandona2</name>
+          </item>
+          <item>
+            <itextId>grappe-18</itextId>
             <CSPS>Nafona</CSPS>
             <name>Nafona Tanfié</name>
           </item>
           <item>
-            <itextId>grappe-17</itextId>
+            <itextId>grappe-19</itextId>
             <CSPS>Secteur 8 Banfora</CSPS>
             <name>Secteur 8 Kiribina 1</name>
           </item>
           <item>
-            <itextId>grappe-18</itextId>
-            <CSPS>Siniéna</CSPS>
-            <name>Kitobama</name>
-          </item>
-          <item>
-            <itextId>grappe-19</itextId>
+            <itextId>grappe-20</itextId>
             <CSPS>Siniéna</CSPS>
             <name>Niankar kintara</name>
           </item>
           <item>
-            <itextId>grappe-20</itextId>
+            <itextId>grappe-21</itextId>
             <CSPS>Siniéna</CSPS>
             <name>Niankar komambara</name>
           </item>
           <item>
-            <itextId>grappe-21</itextId>
-            <CSPS>Tengela</CSPS>
-            <name>Bakono</name>
+            <itextId>grappe-22</itextId>
+            <CSPS>Siniéna</CSPS>
+            <name>Kitobama</name>
           </item>
           <item>
-            <itextId>grappe-22</itextId>
+            <itextId>grappe-23</itextId>
             <CSPS>Tengela</CSPS>
             <name>Ferme I</name>
           </item>
           <item>
-            <itextId>grappe-23</itextId>
-            <CSPS>Tiékouna</CSPS>
-            <name>Koko</name>
-          </item>
-          <item>
             <itextId>grappe-24</itextId>
-            <CSPS>Tiékouna</CSPS>
-            <name>Sitiena+ Onaye II</name>
+            <CSPS>Tengela</CSPS>
+            <name>Bakono</name>
           </item>
           <item>
             <itextId>grappe-25</itextId>
@@ -558,23 +725,189 @@
           </item>
           <item>
             <itextId>grappe-26</itextId>
+            <CSPS>Tiékouna</CSPS>
+            <name>Koko</name>
+          </item>
+          <item>
+            <itextId>grappe-27</itextId>
+            <CSPS>Tiékouna</CSPS>
+            <name>Sitiena+ Onaye II</name>
+          </item>
+          <item>
+            <itextId>grappe-28</itextId>
             <CSPS>Toumousseni</CSPS>
             <name>Ferme+ Barrage</name>
           </item>
           <item>
-            <itextId>grappe-27</itextId>
+            <itextId>grappe-29</itextId>
             <CSPS>Toumousseni</CSPS>
             <name>Nitiona+Yolna</name>
           </item>
         </root>
       </instance>
+      <instance id="numero_grappe">
+        <root>
+          <item>
+            <itextId>numero_grappe-0</itextId>
+            <grappe>Fabédougou</grappe>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-1</itextId>
+            <grappe>Nafona Nanfié</grappe>
+            <name>2</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-2</itextId>
+            <grappe>Vobli</grappe>
+            <name>3</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-3</itextId>
+            <grappe>Tanouflana</grappe>
+            <name>4</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-4</itextId>
+            <grappe>Diaraba</grappe>
+            <name>5</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-5</itextId>
+            <grappe>Dionouna</grappe>
+            <name>6</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-6</itextId>
+            <grappe>Niarebama</grappe>
+            <name>7</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-7</itextId>
+            <grappe>Tiemblé</grappe>
+            <name>8</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-8</itextId>
+            <grappe>Kayouna</grappe>
+            <name>9</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-9</itextId>
+            <grappe>Kossougou</grappe>
+            <name>10</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-10</itextId>
+            <grappe>Gnerpien</grappe>
+            <name>11</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-11</itextId>
+            <grappe>Gnagnana</grappe>
+            <name>12</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-12</itextId>
+            <grappe>Nekanklou (Nakana)</grappe>
+            <name>13</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-13</itextId>
+            <grappe>Karfiguela+Bandougou</grappe>
+            <name>14</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-14</itextId>
+            <grappe>Djénédjan</grappe>
+            <name>15</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-15</itextId>
+            <grappe>Leire Norale</grappe>
+            <name>16</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-16</itextId>
+            <grappe>Gnandona1</grappe>
+            <name>17</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-17</itextId>
+            <grappe>Gnandona2</grappe>
+            <name>18</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-18</itextId>
+            <grappe>Nafona Tanfié</grappe>
+            <name>19</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-19</itextId>
+            <grappe>Secteur 8 Kiribina 1</grappe>
+            <name>20</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-20</itextId>
+            <grappe>Niankar kintara</grappe>
+            <name>21</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-21</itextId>
+            <grappe>Niankar komambara</grappe>
+            <name>22</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-22</itextId>
+            <grappe>Kitobama</grappe>
+            <name>23</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-23</itextId>
+            <grappe>Ferme I</grappe>
+            <name>24</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-24</itextId>
+            <grappe>Bakono</grappe>
+            <name>25</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-25</itextId>
+            <grappe>Tiekouna</grappe>
+            <name>26</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-26</itextId>
+            <grappe>Koko</grappe>
+            <name>27</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-27</itextId>
+            <grappe>Sitiena+ Onaye II</grappe>
+            <name>28</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-28</itextId>
+            <grappe>Ferme+ Barrage</grappe>
+            <name>29</name>
+          </item>
+          <item>
+            <itextId>numero_grappe-29</itextId>
+            <grappe>Nitiona+Yolna</grappe>
+            <name>30</name>
+          </item>
+        </root>
+      </instance>
       <bind nodeset="/data/Code_Equipe" required="true()" type="string"/>
       <bind nodeset="/data/District" required="true()" type="string"/>
-      <bind nodeset="/data/List_grappe" required="true()" type="string"/>
+      <bind nodeset="/data/list_grappe" required="true()" type="string"/>
       <bind nodeset="/data/CSPS" required="true()" type="string"/>
-      <bind nodeset="/data/grappe" required="true()" type="string"/>
-      <bind constraint=". &gt;= 1 and . &lt;= 30" nodeset="/data/Numero_grappe" required="true()" type="int"/>
-      <bind nodeset="/data/Code_grappe" required="true()" type="int"/>
+      <bind nodeset="/data/grappe" relevant=" /data/list_grappe  = 'Oui'" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/grappe_remplacement" relevant=" /data/list_grappe  = 'Non'" required="true()" type="string" db_add_col_1="."/>
+      <bind constraint=". &gt;= 1 and . &lt;= 30" jr:constraintMsg="jr:itext('/data/numero_grappe:jr:constraintMsg')" nodeset="/data/numero_grappe" relevant=" /data/list_grappe  = 'Oui'" required="true()" type="string" db_add_col_1="/data/grappe" db_add_col_2="."/>
+      <bind constraint=". &gt;= 1 and . &lt;= 30" nodeset="/data/numero_grappe_remplacement" relevant=" /data/list_grappe  = 'Non'" required="true()" type="int" db_add_col_1="/data/grappe_remplacement" db_add_col_2="."/>
+      <bind calculate="if( /data/list_grappe  = 'Oui', concat( /data/numero_grappe , '-',  /data/grappe ), concat( /data/numero_grappe_remplacement , '-',  /data/grappe_remplacement ))" nodeset="/data/code_grappe" readonly="true()" required="true()" type="string" db_add_col_1="/data/grappe" db_add_col_3="."/>
       <bind nodeset="/data/Nombre_menage" required="true()" type="int"/>
       <bind nodeset="/data/Nombre_segment" required="true()" type="int"/>
       <bind nodeset="/data/GPS" required="true()" type="geopoint"/>
@@ -617,30 +950,26 @@
         <value>Banfora</value>
       </item>
     </select1>
-    <select1 ref="/data/List_grappe">
-      <label ref="jr:itext('/data/List_grappe:label')"/>
+    <select1 ref="/data/list_grappe">
+      <label ref="jr:itext('/data/list_grappe:label')"/>
       <item>
-        <label ref="jr:itext('/data/List_grappe/Oui:label')"/>
+        <label ref="jr:itext('/data/list_grappe/Oui:label')"/>
         <value>Oui</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/List_grappe/Non:label')"/>
+        <label ref="jr:itext('/data/list_grappe/Non:label')"/>
         <value>Non</value>
       </item>
     </select1>
     <select1 ref="/data/CSPS">
       <label ref="jr:itext('/data/CSPS:label')"/>
       <item>
-        <label ref="jr:itext('/data/CSPS/Boko:label')"/>
-        <value>Boko</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/CSPS/Boulo:label')"/>
-        <value>Boulo</value>
-      </item>
-      <item>
         <label ref="jr:itext('/data/CSPS/Bérégadougou:label')"/>
         <value>Bérégadougou</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/CSPS/CMU Banfora:label')"/>
+        <value>CMU Banfora</value>
       </item>
       <item>
         <label ref="jr:itext('/data/CSPS/Diamon:label')"/>
@@ -651,28 +980,16 @@
         <value>Diarabakoko</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/CSPS/Folonzo:label')"/>
-        <value>Folonzo</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/CSPS/Gbagbar:label')"/>
-        <value>Gbagbar</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/CSPS/Kankounadeni:label')"/>
-        <value>Kankounadeni</value>
-      </item>
-      <item>
         <label ref="jr:itext('/data/CSPS/karfiguela:label')"/>
         <value>karfiguela</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/CSPS/Kimini:label')"/>
-        <value>Kimini</value>
-      </item>
-      <item>
         <label ref="jr:itext('/data/CSPS/Koutoura:label')"/>
         <value>Koutoura</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/CSPS/Moussodougou:label')"/>
+        <value>Moussodougou</value>
       </item>
       <item>
         <label ref="jr:itext('/data/CSPS/Nafona:label')"/>
@@ -691,6 +1008,10 @@
         <value>Tengela</value>
       </item>
       <item>
+        <label ref="jr:itext('/data/CSPS/Tengrela:label')"/>
+        <value>Tengrela</value>
+      </item>
+      <item>
         <label ref="jr:itext('/data/CSPS/Tiékouna:label')"/>
         <value>Tiékouna</value>
       </item>
@@ -706,11 +1027,137 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <input ref="/data/Numero_grappe">
-      <label ref="jr:itext('/data/Numero_grappe:label')"/>
+    <input ref="/data/grappe_remplacement">
+      <label ref="jr:itext('/data/grappe_remplacement:label')"/>
     </input>
-    <input ref="/data/Code_grappe">
-      <label ref="jr:itext('/data/Code_grappe:label')"/>
+    <select1 ref="/data/numero_grappe">
+      <label ref="jr:itext('/data/numero_grappe:label')"/>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/6:label')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/7:label')"/>
+        <value>7</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/8:label')"/>
+        <value>8</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/9:label')"/>
+        <value>9</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/10:label')"/>
+        <value>10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/11:label')"/>
+        <value>11</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/12:label')"/>
+        <value>12</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/13:label')"/>
+        <value>13</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/14:label')"/>
+        <value>14</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/15:label')"/>
+        <value>15</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/16:label')"/>
+        <value>16</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/17:label')"/>
+        <value>17</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/18:label')"/>
+        <value>18</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/19:label')"/>
+        <value>19</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/20:label')"/>
+        <value>20</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/21:label')"/>
+        <value>21</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/22:label')"/>
+        <value>22</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/23:label')"/>
+        <value>23</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/24:label')"/>
+        <value>24</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/25:label')"/>
+        <value>25</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/26:label')"/>
+        <value>26</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/27:label')"/>
+        <value>27</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/28:label')"/>
+        <value>28</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/29:label')"/>
+        <value>29</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/numero_grappe/30:label')"/>
+        <value>30</value>
+      </item>
+    </select1>
+    <input ref="/data/numero_grappe_remplacement">
+      <label ref="jr:itext('/data/numero_grappe_remplacement:label')"/>
+    </input>
+    <input ref="/data/code_grappe">
+      <label ref="jr:itext('/data/code_grappe:label')"/>
     </input>
     <input ref="/data/Nombre_menage">
       <label ref="jr:itext('/data/Nombre_menage:label')"/>
