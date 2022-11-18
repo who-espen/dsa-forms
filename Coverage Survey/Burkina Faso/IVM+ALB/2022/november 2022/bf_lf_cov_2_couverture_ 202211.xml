@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -7,16 +7,16 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Novembre 2022) BFA Cov ONCHO - 2. Formulaire Couverture 2022</h:title>
+    <h:title>(Novembre 2022) BFA Cov ONCHO - 2. Formulaire Couverture 2022 V2</h:title>
     <model >
 
       <instance>
-        <data id="bf_lf_cov_2_couverture_ 202211" version="20221012">
+        <data id="bf_lf_cov_2_couverture_ 202211_v2" version="20221012">
           <Code_enqueteur/>
           <District/>
           <Code_grappe/>
-          <Numero_menage/>
-          <Numero_enquete/>
+          <numero_menage/>
+          <numero_enquete/>
           <Code_enquete/>
           <repondant/>
           <enquete_present/>
@@ -54,6 +54,7 @@
           </meta>
         </data>
       </instance>
+
       <itext>
         <translation default="true()" lang="French">
           <text id="/data/Code_enqueteur:label">
@@ -80,19 +81,19 @@
           <text id="/data/District/Banfora:label">
             <value>Banfora</value>
           </text>
-          <text id="/data/Code_grappe:jr:constraintMsg">
-            <value>Sélectionner à partir des grappes enregistrées</value>
-          </text>
           <text id="/data/Code_grappe:label">
             <value>3. Code grappe</value>
           </text>
-          <text id="/data/Numero_menage:jr:constraintMsg">
+          <text id="/data/numero_menage:jr:constraintMsg">
             <value>Exemple: M01</value>
           </text>
-          <text id="/data/Numero_menage:label">
+          <text id="/data/numero_menage:label">
             <value>5. Numéro ménage</value>
           </text>
-          <text id="/data/Numero_enquete:label">
+          <text id="/data/numero_enquete:jr:constraintMsg">
+            <value>Doit être un code à deux chiffre</value>
+          </text>
+          <text id="/data/numero_enquete:label">
             <value>6. Numero enqueté</value>
           </text>
           <text id="/data/Code_enquete:jr:constraintMsg">
@@ -526,10 +527,10 @@
 
       <bind nodeset="/data/Code_enqueteur" required="true()" type="string"/>
       <bind nodeset="/data/District" required="true()" type="string"/>
-      <bind jr:constraintMsg="jr:itext('/data/Code_grappe:jr:constraintMsg')" nodeset="/data/Code_grappe" required="true()" type="int"/>
-      <bind jr:constraintMsg="jr:itext('/data/Numero_menage:jr:constraintMsg')" nodeset="/data/Numero_menage" required="true()" type="int"/>
-      <bind nodeset="/data/Numero_enquete" required="true()" type="int"/>
-      <bind jr:constraintMsg="jr:itext('/data/Code_enquete:jr:constraintMsg')" nodeset="/data/Code_enquete" required="true()" type="int"/>
+      <bind nodeset="/data/Code_grappe" required="true()" type="string" db_get="col_3"/>
+      <bind constraint="regex(., '^[A-Z]{1}[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/numero_menage:jr:constraintMsg')" nodeset="/data/numero_menage" required="true()" type="string"/>
+      <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/numero_enquete:jr:constraintMsg')" nodeset="/data/numero_enquete" required="true()" type="string"/>
+      <bind calculate="concat( /data/numero_menage , '-',  /data/numero_enquete )" jr:constraintMsg="jr:itext('/data/Code_enquete:jr:constraintMsg')" nodeset="/data/Code_enquete" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/repondant" required="true()" type="string"/>
       <bind nodeset="/data/enquete_present" required="true()" type="string"/>
       <bind constraint=". &gt;= 0 and .&lt;120" jr:constraintMsg="jr:itext('/data/Age:jr:constraintMsg')" nodeset="/data/Age" required="true()" type="int"/>
@@ -545,7 +546,7 @@
       <bind nodeset="/data/Avale_IVM" relevant=" /data/Recu_IVM  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/Nb_Comp_Avale" relevant=" /data/Avale_IVM  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/Prise_Supervisee" relevant=" /data/Avale_IVM  = 'Oui'" required="true()" type="string"/>
-      <bind nodeset="/data/Pourquoi_Avale" relevant=" /data/Recu_IVM  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/Pourquoi_Avale" relevant=" /data/Avale_IVM  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/Pourquoi_pas_Avale" relevant=" /data/Avale_IVM  = 'Non'" required="true()" type="string"/>
       <bind nodeset="/data/Lieux" relevant=" /data/Recu_IVM  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/Prise_taille" relevant=" /data/Recu_IVM  = 'Oui'" required="true()" type="string"/>
@@ -598,11 +599,11 @@
     <input ref="/data/Code_grappe">
       <label ref="jr:itext('/data/Code_grappe:label')"/>
     </input>
-    <input ref="/data/Numero_menage">
-      <label ref="jr:itext('/data/Numero_menage:label')"/>
+    <input ref="/data/numero_menage">
+      <label ref="jr:itext('/data/numero_menage:label')"/>
     </input>
-    <input ref="/data/Numero_enquete">
-      <label ref="jr:itext('/data/Numero_enquete:label')"/>
+    <input ref="/data/numero_enquete">
+      <label ref="jr:itext('/data/numero_enquete:label')"/>
     </input>
     <input ref="/data/Code_enquete">
       <label ref="jr:itext('/data/Code_enquete:label')"/>
