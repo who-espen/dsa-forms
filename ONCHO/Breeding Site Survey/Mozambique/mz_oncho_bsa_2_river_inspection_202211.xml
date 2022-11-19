@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(November 2022) - 2. BSA river assessment form</h:title>
+    <model odk:xforms-version="1.0.0">
+
+      <instance>
+        <data id="mz_oncho_bsa_2_river_inspection_202211">
+          <r_recorder_id/>
+          <r_province/>
+          <r_district/>
+          <r_site/>
+          <r_date/>
+          <r_gps/>
+          <r_river/>
+          <r_river_bassin/>
+          <r_water_temperature/>
+          <r_water_ph/>
+          <r_inspection_time/>
+          <r_site_suitability/>
+          <r_larvae_evidence/>
+          <r_abundance/>
+          <r_note/>
+          <r_start/>
+          <r_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/r_recorder_id:jr:constraintMsg">
+            <value>Must be two digit number</value>
+          </text>
+          <text id="/data/r_recorder_id:label">
+            <value>Enter recorder ID</value>
+          </text>
+          <text id="/data/r_recorder_id:hint">
+            <value>Enter 2-digit recorder code provided to each recorder (person doing the data entry)</value>
+          </text>
+          <text id="/data/r_province:label">
+            <value>Select Region</value>
+          </text>
+          <text id="/data/r_province/Region 1:label">
+            <value>Region 1</value>
+          </text>
+          <text id="/data/r_province/Region 2:label">
+            <value>Region 2</value>
+          </text>
+          <text id="/data/r_district:label">
+            <value>Select district</value>
+          </text>
+          <text id="/data/r_site:label">
+            <value>Enter site name</value>
+          </text>
+          <text id="/data/r_date:label">
+            <value>Enter today's date</value>
+          </text>
+          <text id="/data/r_gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/data/r_river:label">
+            <value>Enter the name of the river</value>
+          </text>
+          <text id="/data/r_river_bassin:label">
+            <value>Enter the name of the river Basin</value>
+          </text>
+          <text id="/data/r_water_temperature:jr:constraintMsg">
+            <value>The value must be between 15 and 35</value>
+          </text>
+          <text id="/data/r_water_temperature:label">
+            <value>Enter water temperature</value>
+          </text>
+          <text id="/data/r_water_ph:jr:constraintMsg">
+            <value>The value must be between 0 and 14</value>
+          </text>
+          <text id="/data/r_water_ph:label">
+            <value>Enter the water pH</value>
+          </text>
+          <text id="/data/r_inspection_time:label">
+            <value>What time was inspection.</value>
+          </text>
+          <text id="/data/r_site_suitability:label">
+            <value>At time of inspection, did site appear suitable for black fly breeding.</value>
+          </text>
+          <text id="/data/r_site_suitability/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/r_site_suitability/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/r_larvae_evidence:label">
+            <value>At time of inspection, did site provide evidence of larvae.</value>
+          </text>
+          <text id="/data/r_larvae_evidence/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/r_larvae_evidence/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/r_abundance:label">
+            <value>Abundance - How many larvae where found?</value>
+          </text>
+          <text id="/data/r_abundance/1 – 10:label">
+            <value>1 – 10</value>
+          </text>
+          <text id="/data/r_abundance/11 – 50:label">
+            <value>11 – 50</value>
+          </text>
+          <text id="/data/r_abundance/51 – 100:label">
+            <value>51 – 100</value>
+          </text>
+          <text id="/data/r_abundance/101 – 150:label">
+            <value>101 – 150</value>
+          </text>
+          <text id="/data/r_abundance/151 – 200:label">
+            <value>151 – 200</value>
+          </text>
+          <text id="/data/r_abundance/More than 201:label">
+            <value>More than 201</value>
+          </text>
+          <text id="/data/r_note:label">
+            <value>Notes</value>
+          </text>
+          <text id="/data/r_note:hint">
+            <value>Optional additional notes</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint=". &gt;= 10 and . &lt;= 99" jr:constraintMsg="jr:itext('/data/r_recorder_id:jr:constraintMsg')" nodeset="/data/r_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/r_province" required="true()" type="string"/>
+      <bind nodeset="/data/r_district" required="true()" type="string"/>
+      <bind nodeset="/data/r_site" relevant="if(selected( /data/r_district , 'Other'), false(),true())" required="true()" type="string"/>
+      <bind nodeset="/data/r_date" required="true()" type="date"/>
+      <bind nodeset="/data/r_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/r_river" required="true()" type="string"/>
+      <bind nodeset="/data/r_river_bassin" required="true()" type="string"/>
+      <bind constraint=". &gt;= 15 and . &lt;= 35" jr:constraintMsg="jr:itext('/data/r_water_temperature:jr:constraintMsg')" nodeset="/data/r_water_temperature" required="true()" type="decimal"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/r_water_ph:jr:constraintMsg')" nodeset="/data/r_water_ph" required="true()" type="decimal"/>
+      <bind nodeset="/data/r_inspection_time" required="true()" type="time"/>
+      <bind nodeset="/data/r_site_suitability" required="true()" type="string"/>
+      <bind nodeset="/data/r_larvae_evidence" relevant="selected( /data/r_inspection_time , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/r_abundance" relevant="selected( /data/r_larvae_evidence , 'Yes')" required="true()" type="string"/>
+      <bind nodeset="/data/r_note" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/r_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/r_recorder_id">
+      <label ref="jr:itext('/data/r_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/r_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/r_province">
+      <label ref="jr:itext('/data/r_province:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_province/Region 1:label')"/>
+        <value>Region 1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_province/Region 2:label')"/>
+        <value>Region 2</value>
+      </item>
+    </select1>
+    <input ref="/data/r_district">
+      <label ref="jr:itext('/data/r_district:label')"/>
+    </input>
+    <input ref="/data/r_site">
+      <label ref="jr:itext('/data/r_site:label')"/>
+    </input>
+    <input ref="/data/r_date">
+      <label ref="jr:itext('/data/r_date:label')"/>
+    </input>
+    <input ref="/data/r_gps">
+      <label ref="jr:itext('/data/r_gps:label')"/>
+    </input>
+    <input ref="/data/r_river">
+      <label ref="jr:itext('/data/r_river:label')"/>
+    </input>
+    <input ref="/data/r_river_bassin">
+      <label ref="jr:itext('/data/r_river_bassin:label')"/>
+    </input>
+    <input ref="/data/r_water_temperature">
+      <label ref="jr:itext('/data/r_water_temperature:label')"/>
+    </input>
+    <input ref="/data/r_water_ph">
+      <label ref="jr:itext('/data/r_water_ph:label')"/>
+    </input>
+    <input ref="/data/r_inspection_time">
+      <label ref="jr:itext('/data/r_inspection_time:label')"/>
+    </input>
+    <select1 ref="/data/r_site_suitability">
+      <label ref="jr:itext('/data/r_site_suitability:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_site_suitability/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_site_suitability/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/r_larvae_evidence">
+      <label ref="jr:itext('/data/r_larvae_evidence:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_larvae_evidence/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_larvae_evidence/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/r_abundance">
+      <label ref="jr:itext('/data/r_abundance:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_abundance/1 – 10:label')"/>
+        <value>1 – 10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_abundance/11 – 50:label')"/>
+        <value>11 – 50</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_abundance/51 – 100:label')"/>
+        <value>51 – 100</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_abundance/101 – 150:label')"/>
+        <value>101 – 150</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_abundance/151 – 200:label')"/>
+        <value>151 – 200</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_abundance/More than 201:label')"/>
+        <value>More than 201</value>
+      </item>
+    </select1>
+    <input ref="/data/r_note">
+      <label ref="jr:itext('/data/r_note:label')"/>
+      <hint ref="jr:itext('/data/r_note:hint')"/>
+    </input>
+  </h:body>
+</h:html>
