@@ -16,21 +16,9 @@
           <c_district/>
           <c_cluster_name/>
           <c_cluster_id/>
-          <c_supervisor/>
           <c_date/>
-          <c_health_facility/>
-          <c_type_health_facility/>
           <c_gps/>
-          <c_admin_level/>
-          <c_river/>
-          <c_distance_community/>
-          <c_population/>
-          <c_hh_number/>
-          <c_receiving_ivm/>
-          <c_lengh_period_ivm/>
-          <c_month_dist/>
-          <c_year_dist/>
-          <c_last_dist/>
+          <c_BlackFly/>
           <c_notes/>
           <c_start/>
           <c_end/>
@@ -63,17 +51,8 @@
           <text id="/data/c_cluster_id:label">
             <value>Community Code</value>
           </text>
-          <text id="/data/c_supervisor:label">
-            <value>Team Supervisor</value>
-          </text>
           <text id="/data/c_date:label">
             <value>Date of Survey</value>
-          </text>
-          <text id="/data/c_health_facility:label">
-            <value>Name of Nearest Health Facility</value>
-          </text>
-          <text id="/data/c_type_health_facility:label">
-            <value>Type of Health Facility</value>
           </text>
           <text id="/data/c_gps:label">
             <value>Community Coordinates</value>
@@ -81,38 +60,8 @@
           <text id="/data/c_gps:hint">
             <value>Works best outside of any building</value>
           </text>
-          <text id="/data/c_admin_level:label">
-            <value>Type of administrative level</value>
-          </text>
-          <text id="/data/c_river:label">
-            <value>Name of the nearest river</value>
-          </text>
-          <text id="/data/c_distance_community:label">
-            <value>Approximate distance to community (KM)</value>
-          </text>
-          <text id="/data/c_population:label">
-            <value>Total Population of Community</value>
-          </text>
-          <text id="/data/c_hh_number:label">
-            <value>Estimated No of Households</value>
-          </text>
-          <text id="/data/c_receiving_ivm:label">
-            <value>Community Receiving Ivermectin</value>
-          </text>
-          <text id="/data/c_lengh_period_ivm:label">
-            <value>Length of Period ivermectin taken</value>
-          </text>
-          <text id="/data/c_month_dist:label">
-            <value>Month of Last Distribution</value>
-          </text>
-          <text id="/data/c_year_dist:jr:constraintMsg">
-            <value>Please enter a valid year</value>
-          </text>
-          <text id="/data/c_year_dist:label">
-            <value>Year of Last Distribution</value>
-          </text>
-          <text id="/data/c_last_dist:label">
-            <value>Last Distribution</value>
+          <text id="/data/c_BlackFly:label">
+            <value>Can local leaders confirm the presence of biting black flies in or near the community?</value>
           </text>
           <text id="/data/c_notes:label">
             <value>Remarks/Observations</value>
@@ -349,21 +298,9 @@
       <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
-      <bind nodeset="/data/c_supervisor" required="true()" type="string"/>
       <bind nodeset="/data/c_date" required="true()" type="date"/>
-      <bind nodeset="/data/c_health_facility" required="true()" type="string"/>
-      <bind nodeset="/data/c_type_health_facility" required="true()" type="string"/>
       <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
-      <bind nodeset="/data/c_admin_level" required="true()" type="string"/>
-      <bind nodeset="/data/c_river" required="true()" type="string"/>
-      <bind nodeset="/data/c_distance_community" required="true()" type="int"/>
-      <bind nodeset="/data/c_population" required="true()" type="int"/>
-      <bind nodeset="/data/c_hh_number" required="true()" type="int"/>
-      <bind nodeset="/data/c_receiving_ivm" required="true()" type="string"/>
-      <bind nodeset="/data/c_lengh_period_ivm" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/c_month_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="string"/>
-      <bind constraint=". &gt; 1970 and . &lt; 2022" jr:constraintMsg="jr:itext('/data/c_year_dist:jr:constraintMsg')" nodeset="/data/c_year_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="int"/>
-      <bind calculate="concat(B19,' ',B20)" nodeset="/data/c_last_dist" required="true()" type="string"/>
+      <bind calculate="concat(B19,' ',B20)" nodeset="/data/c_BlackFly" required="true()" type="string"/>
       <bind nodeset="/data/c_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
@@ -400,55 +337,15 @@
         <label ref="label"/>
       </itemset>
     </select1>
-    <input ref="/data/c_supervisor">
-      <label ref="jr:itext('/data/c_supervisor:label')"/>
-    </input>
     <input ref="/data/c_date">
       <label ref="jr:itext('/data/c_date:label')"/>
-    </input>
-    <input ref="/data/c_health_facility">
-      <label ref="jr:itext('/data/c_health_facility:label')"/>
-    </input>
-    <input ref="/data/c_type_health_facility">
-      <label ref="jr:itext('/data/c_type_health_facility:label')"/>
     </input>
     <input ref="/data/c_gps">
       <label ref="jr:itext('/data/c_gps:label')"/>
       <hint ref="jr:itext('/data/c_gps:hint')"/>
     </input>
-    <select1 ref="/data/c_admin_level">
-      <label ref="jr:itext('/data/c_admin_level:label')"/>
-      <item>
-        <label>Community/Village</label>
-        <value>Community/Village</value>
-      </item>
-      <item>
-        <label>Sub-Community/Village</label>
-        <value>Sub-Community/Village</value>
-      </item>
-      <item>
-        <label>Hamlet</label>
-        <value>Hamlet</value>
-      </item>
-      <item>
-        <label>IDP/Refugee camp</label>
-        <value>IDP/Refugee camp</value>
-      </item>
-    </select1>
-    <input ref="/data/c_river">
-      <label ref="jr:itext('/data/c_river:label')"/>
-    </input>
-    <input ref="/data/c_distance_community">
-      <label ref="jr:itext('/data/c_distance_community:label')"/>
-    </input>
-    <input ref="/data/c_population">
-      <label ref="jr:itext('/data/c_population:label')"/>
-    </input>
-    <input ref="/data/c_hh_number">
-      <label ref="jr:itext('/data/c_hh_number:label')"/>
-    </input>
-    <select1 ref="/data/c_receiving_ivm">
-      <label ref="jr:itext('/data/c_receiving_ivm:label')"/>
+    <select1 ref="/data/c_BlackFly">
+      <label ref="jr:itext('/data/c_BlackFly:label')"/>
       <item>
         <label>Yes</label>
         <value>Yes</value>
@@ -458,63 +355,6 @@
         <value>No</value>
       </item>
     </select1>
-    <input ref="/data/c_lengh_period_ivm">
-      <label ref="jr:itext('/data/c_lengh_period_ivm:label')"/>
-    </input>
-    <select1 ref="/data/c_month_dist">
-      <label ref="jr:itext('/data/c_month_dist:label')"/>
-      <item>
-        <label>January</label>
-        <value>January</value>
-      </item>
-      <item>
-        <label>February</label>
-        <value>February</value>
-      </item>
-      <item>
-        <label>March</label>
-        <value>March</value>
-      </item>
-      <item>
-        <label>April</label>
-        <value>April</value>
-      </item>
-      <item>
-        <label>May</label>
-        <value>May</value>
-      </item>
-      <item>
-        <label>June</label>
-        <value>June</value>
-      </item>
-      <item>
-        <label>July</label>
-        <value>July</value>
-      </item>
-      <item>
-        <label>August</label>
-        <value>August</value>
-      </item>
-      <item>
-        <label>September</label>
-        <value>September</value>
-      </item>
-      <item>
-        <label>October</label>
-        <value>October</value>
-      </item>
-      <item>
-        <label>November</label>
-        <value>November</value>
-      </item>
-      <item>
-        <label>December</label>
-        <value>December</value>
-      </item>
-    </select1>
-    <input ref="/data/c_year_dist">
-      <label ref="jr:itext('/data/c_year_dist:label')"/>
-    </input>
     <input ref="/data/c_notes">
       <label ref="jr:itext('/data/c_notes:label')"/>
     </input>
