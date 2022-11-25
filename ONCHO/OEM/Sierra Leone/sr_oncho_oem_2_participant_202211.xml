@@ -22,7 +22,11 @@
           <p_serial_number2/>
           <p_code_id/>
           <p_sex/>
+          <p_HowLongLived/>
           <p_age_yrs/>
+          <p_Travel/>
+          <p_IVM/>
+          <p_IVMWhere/>
           <p_sample_collected/>
           <p_end_survey_note/>
           <p_AdditionalNotes/>
@@ -78,11 +82,29 @@
           <text id="/data/p_sex:label">
             <value>Please select the gender</value>
           </text>
+          <text id="/data/p_HowLongLived:jr:constraintMsg">
+            <value>Age must be greater than or equal 10 years</value>
+          </text>
+          <text id="/data/p_HowLongLived:label">
+            <value>How many years has the respondent lived in the area?</value>
+          </text>
+          <text id="/data/p_HowLongLived:hint">
+            <value>Less than 10 years will end survey</value>
+          </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>Age must be between 5 and 9 years old</value>
+            <value>Age must be greater than or equal 20 years</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Enter the age in years</value>
+          </text>
+          <text id="/data/p_Travel:label">
+            <value>Do you frequently travel long distances from this village?</value>
+          </text>
+          <text id="/data/p_IVM:label">
+            <value>Have you taken Ivermectin in the past 12 months?</value>
+          </text>
+          <text id="/data/p_IVMWhere:label">
+            <value>If Yes, where were you given Ivermectin?</value>
           </text>
           <text id="/data/p_sample_collected:label">
             <value>Are the sample collected</value>
@@ -106,7 +128,11 @@
       <bind constraint=". =  /data/p_serial_number1 " jr:constraintMsg="jr:itext('/data/p_serial_number2:jr:constraintMsg')" nodeset="/data/p_serial_number2" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind calculate="concat( /data/p_recorder_id , '-',  /data/p_cluster_id , '-',  /data/p_serial_number1 )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 10" jr:constraintMsg="jr:itext('/data/p_HowLongLived:jr:constraintMsg')" nodeset="/data/p_HowLongLived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 20" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/p_Travel" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/p_IVM" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/p_IVMWhere" relevant=" /data/p_consent  = 'Yes' and  /data/p_IVM = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_sample_collected" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_end_survey_note" readonly="true()" relevant=" /data/p_consent  = 'No'" type="string"/>
       <bind nodeset="/data/p_AdditionalNotes" type="string"/>
@@ -155,16 +181,53 @@
     <select1 ref="/data/p_sex">
       <label ref="jr:itext('/data/p_sex:label')"/>
       <item>
-        <label>Male</label>
-        <value>Male</value>
-      </item>
-      <item>
         <label>Female</label>
         <value>Female</value>
       </item>
+      <item>
+        <label>Male</label>
+        <value>Male</value>
+      </item>
     </select1>
+    <input ref="/data/p_HowLongLived">
+      <label ref="jr:itext('/data/p_HowLongLived:label')"/>
+      <hint ref="jr:itext('/data/p_HowLongLived:hint')"/>
+    </input>
     <input ref="/data/p_age_yrs">
       <label ref="jr:itext('/data/p_age_yrs:label')"/>
+    </input>
+    <select1 ref="/data/p_Travel">
+      <label ref="jr:itext('/data/p_Travel:label')"/>
+      <item>
+        <label>Yes</label>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label>No</label>
+        <value>No</value>
+      </item>
+      <item>
+        <label>Do not know</label>
+        <value>Do not know</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_IVM">
+      <label ref="jr:itext('/data/p_IVM:label')"/>
+      <item>
+        <label>Yes</label>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label>No</label>
+        <value>No</value>
+      </item>
+      <item>
+        <label>Do not know</label>
+        <value>Do not know</value>
+      </item>
+    </select1>
+    <input ref="/data/p_IVMWhere">
+      <label ref="jr:itext('/data/p_IVMWhere:label')"/>
     </input>
     <select1 ref="/data/p_sample_collected">
       <label ref="jr:itext('/data/p_sample_collected:label')"/>
