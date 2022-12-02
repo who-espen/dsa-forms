@@ -7,17 +7,16 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Nov 2022) OEM - 1. Site Form V1</h:title>
+    <h:title>(Nov 2022) OEM - 1. Site Form V1.2</h:title>
     <model >
 
       <instance>
-        <data id="sr_oncho_oem_1_site_202211 V1">
+        <data id="sr_oncho_oem_1_site_202211 V1.2">
           <c_recorder_id/>
           <c_district/>
           <c_cluster_name/>
           <c_cluster_name_other/>
           <c_cluster_id/>
-          <c_cluster_id_other/>
           <c_date/>
           <c_gps/>
           <c_population/>
@@ -62,12 +61,6 @@
           </text>
           <text id="/data/c_cluster_id:label">
             <value>Community Code</value>
-          </text>
-          <text id="/data/c_cluster_id_other:jr:constraintMsg">
-            <value>Must be between 100 and 999 included</value>
-          </text>
-          <text id="/data/c_cluster_id_other:label">
-            <value>Please select the initial code of the replaced community</value>
           </text>
           <text id="/data/c_date:label">
             <value>Date of Survey</value>
@@ -190,10 +183,22 @@
             <value>Yargoi</value>
           </text>
           <text id="community-12">
-            <value>Other</value>
+            <value>T1 Spare 2</value>
           </text>
           <text id="community-13">
-            <value>Other</value>
+            <value>T1 Spare 3</value>
+          </text>
+          <text id="community-14">
+            <value>T1 Spare 4</value>
+          </text>
+          <text id="community-15">
+            <value>T2 Spare 2</value>
+          </text>
+          <text id="community-16">
+            <value>T2 Spare 3</value>
+          </text>
+          <text id="community-17">
+            <value>T2 Spare 4</value>
           </text>
           <text id="community_id-0">
             <value>101</value>
@@ -231,44 +236,27 @@
           <text id="community_id-11">
             <value>112</value>
           </text>
-          <text id="community_replacement_id-0">
-            <value>101 (China Compound)</value>
+          <text id="community_id-12">
+            <value>113</value>
           </text>
-          <text id="community_replacement_id-1">
-            <value>102 (# 2 RIVER)</value>
+          <text id="community_id-13">
+            <value>114</value>
           </text>
-          <text id="community_replacement_id-2">
-            <value>103 (Wales)</value>
+          <text id="community_id-14">
+            <value>115</value>
           </text>
-          <text id="community_replacement_id-3">
-            <value>104 (John obay)</value>
+          <text id="community_id-15">
+            <value>116</value>
           </text>
-          <text id="community_replacement_id-4">
-            <value>105 (TOMBO)</value>
+          <text id="community_id-16">
+            <value>117</value>
           </text>
-          <text id="community_replacement_id-5">
-            <value>106 (MARCDONAL)</value>
-          </text>
-          <text id="community_replacement_id-6">
-            <value>107 (BULLOM)</value>
-          </text>
-          <text id="community_replacement_id-7">
-            <value>108 (Gbap)</value>
-          </text>
-          <text id="community_replacement_id-8">
-            <value>109 (Yargoi)</value>
-          </text>
-          <text id="community_replacement_id-9">
-            <value>110 (Momaria)</value>
-          </text>
-          <text id="community_replacement_id-10">
-            <value>111 (Senjehun)</value>
-          </text>
-          <text id="community_replacement_id-11">
-            <value>112 (Tissana)</value>
+          <text id="community_id-17">
+            <value>118</value>
           </text>
         </translation>
       </itext>
+
       <instance id="level">
         <root>
           <item>
@@ -431,12 +419,32 @@
           <item>
             <itextId>community-12</itextId>
             <district_list>BONTHE</district_list>
-            <name>Other</name>
+            <name>T1 Spare 1</name>
           </item>
           <item>
             <itextId>community-13</itextId>
+            <district_list>BONTHE</district_list>
+            <name>T1 Spare 2</name>
+          </item>
+          <item>
+            <itextId>community-14</itextId>
+            <district_list>BONTHE</district_list>
+            <name>T1 Spare 3</name>
+          </item>
+          <item>
+            <itextId>community-15</itextId>
             <district_list>WESTERN RURAL</district_list>
-            <name>Other</name>
+            <name>T2 Spare 1</name>
+          </item>
+          <item>
+            <itextId>community-16</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name>T2 Spare 2</name>
+          </item>
+          <item>
+            <itextId>community-17</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name>T2 Spare 3</name>
           </item>
         </root>
       </instance>
@@ -502,78 +510,48 @@
             <community>Tissana</community>
             <name>112</name>
           </item>
-        </root>
-      </instance>
-      <instance id="community_replacement_id">
-        <root>
           <item>
-            <itextId>community_replacement_id-0</itextId>
-            <district_list>WESTERN RURAL</district_list>
-            <name>101</name>
+            <itextId>community_id-12</itextId>
+            <community>T1 Spare 1</community>
+            <name>113</name>
           </item>
           <item>
-            <itextId>community_replacement_id-1</itextId>
-            <district_list>WESTERN RURAL</district_list>
-            <name>102</name>
+            <itextId>community_id-13</itextId>
+            <community>T1 Spare 2</community>
+            <name>114</name>
           </item>
           <item>
-            <itextId>community_replacement_id-2</itextId>
-            <district_list>WESTERN RURAL</district_list>
-            <name>103</name>
+            <itextId>community_id-14</itextId>
+            <community>T1 Spare 3</community>
+            <name>115</name>
           </item>
           <item>
-            <itextId>community_replacement_id-3</itextId>
-            <district_list>WESTERN RURAL</district_list>
-            <name>104</name>
+            <itextId>community_id-15</itextId>
+            <community>T2 Spare 1</community>
+            <name>116</name>
           </item>
           <item>
-            <itextId>community_replacement_id-4</itextId>
-            <district_list>WESTERN RURAL</district_list>
-            <name>105</name>
+            <itextId>community_id-16</itextId>
+            <community>T2 Spare 2</community>
+            <name>117</name>
           </item>
           <item>
-            <itextId>community_replacement_id-5</itextId>
-            <district_list>WESTERN RURAL</district_list>
-            <name>106</name>
-          </item>
-          <item>
-            <itextId>community_replacement_id-6</itextId>
-            <district_list>BONTHE</district_list>
-            <name>107</name>
-          </item>
-          <item>
-            <itextId>community_replacement_id-7</itextId>
-            <district_list>BONTHE</district_list>
-            <name>108</name>
-          </item>
-          <item>
-            <itextId>community_replacement_id-8</itextId>
-            <district_list>BONTHE</district_list>
-            <name>109</name>
-          </item>
-          <item>
-            <itextId>community_replacement_id-9</itextId>
-            <district_list>BONTHE</district_list>
-            <name>110</name>
-          </item>
-          <item>
-            <itextId>community_replacement_id-10</itextId>
-            <district_list>BONTHE</district_list>
-            <name>111</name>
-          </item>
-          <item>
-            <itextId>community_replacement_id-11</itextId>
-            <district_list>BONTHE</district_list>
-            <name>112</name>
+            <itextId>community_id-17</itextId>
+            <community>T2 Spare 3</community>
+            <name>118</name>
           </item>
         </root>
       </instance>
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
-      <bind nodeset="/data/c_cluster_name_other" relevant=" /data/c_cluster_name  = 'Other'" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
-      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" relevant=" /data/c_cluster_name != 'Other'" required="true()" type="string"  db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
-      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id_other:jr:constraintMsg')" nodeset="/data/c_cluster_id_other" relevant=" /data/c_cluster_name  = 'Other'" required="true()" type="string" db_add_col_2="/data/c_cluster_name_other" db_add_col_3="."/>
+      <bind nodeset="/data/c_cluster_name_other" relevant=" /data/c_cluster_name  = 'T1 Spare 1' or
+ /data/c_cluster_name  = 'T1 Spare 2' or
+ /data/c_cluster_name  = 'T1 Spare 3' or
+ /data/c_cluster_name  = 'T2 Spare 1' or
+ /data/c_cluster_name  = 'T2 Spare 1' or
+ /data/c_cluster_name  = 'T2 Spare 1'" required="true()" type="string"  db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" relevant=" /data/c_cluster_name != 'Other'" required="true()" type="string" db_add_col_2="/data/c_cluster_name" db_add_col_4="."/>
       <bind nodeset="/data/c_date" required="true()" type="date"/>
       <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/c_population" required="true()" type="int"/>
@@ -613,13 +591,6 @@
     <select1 ref="/data/c_cluster_id">
       <label ref="jr:itext('/data/c_cluster_id:label')"/>
       <itemset nodeset="instance('community_id')/root/item[community =  /data/c_cluster_name ]">
-        <value ref="name"/>
-        <label ref="jr:itext(itextId)"/>
-      </itemset>
-    </select1>
-    <select1 ref="/data/c_cluster_id_other">
-      <label ref="jr:itext('/data/c_cluster_id_other:label')"/>
-      <itemset nodeset="instance('community_replacement_id')/root/item[district_list =  /data/c_district ]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>

@@ -7,14 +7,15 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Nov 2022) OEM - 2. Participant Form V1</h:title>
+    <h:title>(Nov 2022) OEM - 2. Participant Form V1.2</h:title>
     <model >
 
       <instance>
-        <data id="sr_oncho_oem_2_participant_202211_v1">
+        <data id="sr_oncho_oem_2_participant_202211_v1_2">
           <p_recorder_id/>
           <p_district/>
           <p_cluster_name/>
+          <p_cluster_name_other/>
           <p_cluster_id/>
           <p_date/>
           <p_consent/>
@@ -54,6 +55,9 @@
           </text>
           <text id="/data/p_cluster_name:label">
             <value>Select the community</value>
+          </text>
+          <text id="/data/p_cluster_name_other:label">
+            <value>Select the community Name</value>
           </text>
           <text id="/data/p_cluster_id:label">
             <value>Select the community ID</value>
@@ -157,7 +161,13 @@
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
-      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_cluster_name_other" relevant=" /data/p_cluster_name  = 'T1 Spare 1' or
+ /data/p_cluster_name  = 'T1 Spare 2' or
+ /data/p_cluster_name  = 'T1 Spare 3' or
+ /data/p_cluster_name  = 'T2 Spare 1' or
+ /data/p_cluster_name  = 'T2 Spare 1' or
+ /data/p_cluster_name  = 'T2 Spare 1'" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/p_cluster_name"/>
       <bind nodeset="/data/p_date" type="date"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_serial_number1:jr:constraintMsg')" nodeset="/data/p_serial_number1" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
@@ -187,6 +197,9 @@
     </input>
     <input ref="/data/p_cluster_name">
       <label ref="jr:itext('/data/p_cluster_name:label')"/>
+    </input>
+    <input ref="/data/p_cluster_name_other">
+      <label ref="jr:itext('/data/p_cluster_name_other:label')"/>
     </input>
     <input ref="/data/p_cluster_id">
       <label ref="jr:itext('/data/p_cluster_id:label')"/>
