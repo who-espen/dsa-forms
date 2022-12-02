@@ -8,7 +8,7 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>(Nov 2022) OEM - 1. Site Form V1.3</h:title>
-    <model>
+    <model >
 
       <instance>
         <data id="sr_oncho_oem_1_site_202211_v_3">
@@ -271,6 +271,24 @@
           </text>
           <text id="community_id-17">
             <value>118</value>
+          </text>
+          <text id="community_id-18">
+            <value>119</value>
+          </text>
+          <text id="community_id-19">
+            <value>120</value>
+          </text>
+          <text id="community_id-20">
+            <value>121</value>
+          </text>
+          <text id="community_id-21">
+            <value>122</value>
+          </text>
+          <text id="community_id-22">
+            <value>123</value>
+          </text>
+          <text id="community_id-23">
+            <value>124</value>
           </text>
         </translation>
       </itext>
@@ -588,6 +606,36 @@
             <community>T2 Spare 3</community>
             <name>118</name>
           </item>
+          <item>
+            <itextId>community_id-18</itextId>
+            <community>T1 Spare 4</community>
+            <name>119</name>
+          </item>
+          <item>
+            <itextId>community_id-19</itextId>
+            <community>T1 Spare 5</community>
+            <name>120</name>
+          </item>
+          <item>
+            <itextId>community_id-20</itextId>
+            <community>T1 Spare 6</community>
+            <name>121</name>
+          </item>
+          <item>
+            <itextId>community_id-21</itextId>
+            <community>T2 Spare 4</community>
+            <name>122</name>
+          </item>
+          <item>
+            <itextId>community_id-22</itextId>
+            <community>T2 Spare 5</community>
+            <name>123</name>
+          </item>
+          <item>
+            <itextId>community_id-23</itextId>
+            <community>T2 Spare 6</community>
+            <name>124</name>
+          </item>
         </root>
       </instance>
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
@@ -606,7 +654,7 @@
  /data/c_cluster_name  = 'T2 Spare 5' or
  /data/c_cluster_name  = 'T2 Spare 6'" required="true()" type="string" db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" relevant=" /data/c_cluster_name != 'Other'" required="true()" type="string" db_add_col_2="/data/c_cluster_name" db_add_col_4="."/>
-      <bind nodeset="/data/c_date" required="true()" type="date"/>
+      s<bind nodeset="/data/c_date" required="true()" type="date"/>
       <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/c_population" required="true()" type="int"/>
       <bind calculate="concat(B19,' ',B20)" nodeset="/data/c_BlackFly" required="true()" type="string"/>
