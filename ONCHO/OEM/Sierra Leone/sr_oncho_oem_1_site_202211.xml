@@ -7,17 +7,20 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Nov 2022) OEM - 1. Site Form</h:title>
+    <h:title>(Nov 2022) OEM - 1. Site Form V1</h:title>
     <model >
 
       <instance>
-        <data id="sr_oncho_oem_1_site_202211">
+        <data id="sr_oncho_oem_1_site_202211 V1">
           <c_recorder_id/>
           <c_district/>
           <c_cluster_name/>
+          <c_cluster_name_other/>
           <c_cluster_id/>
+          <c_cluster_id_other/>
           <c_date/>
           <c_gps/>
+          <c_population/>
           <c_BlackFly/>
           <c_notes/>
           <c_start/>
@@ -45,11 +48,20 @@
           <text id="/data/c_cluster_name:label">
             <value>Names of Community</value>
           </text>
+          <text id="/data/c_cluster_name_other:label">
+            <value>Please enter the name of community</value>
+          </text>
           <text id="/data/c_cluster_id:jr:constraintMsg">
             <value>Must be between 100 and 999 included</value>
           </text>
           <text id="/data/c_cluster_id:label">
             <value>Community Code</value>
+          </text>
+          <text id="/data/c_cluster_id_other:jr:constraintMsg">
+            <value>Must be between 100 and 999 included</value>
+          </text>
+          <text id="/data/c_cluster_id_other:label">
+            <value>Please select the initial code of the replaced community</value>
           </text>
           <text id="/data/c_date:label">
             <value>Date of Survey</value>
@@ -60,6 +72,9 @@
           <text id="/data/c_gps:hint">
             <value>Works best outside of any building</value>
           </text>
+          <text id="/data/c_population:label">
+            <value>Total Population of Community</value>
+          </text>
           <text id="/data/c_BlackFly:label">
             <value>Can local leaders confirm the presence of biting black flies in or near the community?</value>
           </text>
@@ -68,7 +83,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="level">
         <root>
           <item>
@@ -228,6 +242,16 @@
             <label>Yargoi</label>
             <name>Yargoi</name>
           </item>
+          <item>
+            <district_list>BONTHE</district_list>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
+          <item>
+            <district_list>WESTERN RURAL</district_list>
+            <label>Other</label>
+            <name>Other</name>
+          </item>
         </root>
       </instance>
       <instance id="community_id">
@@ -294,12 +318,79 @@
           </item>
         </root>
       </instance>
+      <instance id="community_replacement_id">
+        <root>
+          <item>
+            <district_list>WESTERN RURAL</district_list>
+            <label>101 (China Compound)</label>
+            <name>101</name>
+          </item>
+          <item>
+            <district_list>WESTERN RURAL</district_list>
+            <label>102 (# 2 RIVER)</label>
+            <name>102</name>
+          </item>
+          <item>
+            <district_list>WESTERN RURAL</district_list>
+            <label>103 (Wales)</label>
+            <name>103</name>
+          </item>
+          <item>
+            <district_list>WESTERN RURAL</district_list>
+            <label>104 (John obay)</label>
+            <name>104</name>
+          </item>
+          <item>
+            <district_list>WESTERN RURAL</district_list>
+            <label>105 (TOMBO)</label>
+            <name>105</name>
+          </item>
+          <item>
+            <district_list>WESTERN RURAL</district_list>
+            <label>106 (MARCDONAL)</label>
+            <name>106</name>
+          </item>
+          <item>
+            <district_list>BONTHE</district_list>
+            <label>107 (BULLOM)</label>
+            <name>107</name>
+          </item>
+          <item>
+            <district_list>BONTHE</district_list>
+            <label>108 (Gbap)</label>
+            <name>108</name>
+          </item>
+          <item>
+            <district_list>BONTHE</district_list>
+            <label>109 (Yargoi)</label>
+            <name>109</name>
+          </item>
+          <item>
+            <district_list>BONTHE</district_list>
+            <label>110 (Momaria)</label>
+            <name>110</name>
+          </item>
+          <item>
+            <district_list>BONTHE</district_list>
+            <label>111 (Senjehun)</label>
+            <name>111</name>
+          </item>
+          <item>
+            <district_list>BONTHE</district_list>
+            <label>112 (Tissana)</label>
+            <name>112</name>
+          </item>
+        </root>
+      </instance>
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
-      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
+      <bind nodeset="/data/c_cluster_name_other" relevant=" /data/c_cluster_name  = 'Other'" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" relevant=" /data/c_cluster_name != 'Other'" required="true()" type="string"  db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id_other:jr:constraintMsg')" nodeset="/data/c_cluster_id_other" relevant=" /data/c_cluster_name  = 'Other'" required="true()" type="string" db_add_col_2="/data/c_cluster_name_other" db_add_col_3="."/>
       <bind nodeset="/data/c_date" required="true()" type="date"/>
       <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_population" required="true()" type="int"/>
       <bind calculate="concat(B19,' ',B20)" nodeset="/data/c_BlackFly" required="true()" type="string"/>
       <bind nodeset="/data/c_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
@@ -330,9 +421,19 @@
         <label ref="label"/>
       </itemset>
     </select1>
+    <input ref="/data/c_cluster_name_other">
+      <label ref="jr:itext('/data/c_cluster_name_other:label')"/>
+    </input>
     <select1 ref="/data/c_cluster_id">
       <label ref="jr:itext('/data/c_cluster_id:label')"/>
       <itemset nodeset="instance('community_id')/root/item[community =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="label"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_id_other">
+      <label ref="jr:itext('/data/c_cluster_id_other:label')"/>
+      <itemset nodeset="instance('community_replacement_id')/root/item[district_list =  /data/c_district ]">
         <value ref="name"/>
         <label ref="label"/>
       </itemset>
@@ -343,6 +444,9 @@
     <input ref="/data/c_gps">
       <label ref="jr:itext('/data/c_gps:label')"/>
       <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <input ref="/data/c_population">
+      <label ref="jr:itext('/data/c_population:label')"/>
     </input>
     <select1 ref="/data/c_BlackFly">
       <label ref="jr:itext('/data/c_BlackFly:label')"/>
