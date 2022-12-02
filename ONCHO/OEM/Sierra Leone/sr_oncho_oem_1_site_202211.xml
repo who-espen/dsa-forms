@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Nov 2022) OEM - 1. Site Form V1.2</h:title>
-    <model >
+    <h:title>(Nov 2022) OEM - 1. Site Form V1.3</h:title>
+    <model>
 
       <instance>
-        <data id="sr_oncho_oem_1_site_202211 V1.2">
+        <data id="sr_oncho_oem_1_site_202211_v_3">
           <c_recorder_id/>
           <c_district/>
           <c_cluster_name/>
@@ -192,13 +192,31 @@
             <value>T1 Spare 3</value>
           </text>
           <text id="community-15">
-            <value>T2 Spare 1</value>
+            <value>T1 Spare 4</value>
           </text>
           <text id="community-16">
-            <value>T2 Spare 2</value>
+            <value>T1 Spare 5</value>
           </text>
           <text id="community-17">
+            <value>T1 Spare 6</value>
+          </text>
+          <text id="community-18">
+            <value>T2 Spare 1</value>
+          </text>
+          <text id="community-19">
+            <value>T2 Spare 2</value>
+          </text>
+          <text id="community-20">
             <value>T2 Spare 3</value>
+          </text>
+          <text id="community-21">
+            <value>T2 Spare 4</value>
+          </text>
+          <text id="community-22">
+            <value>T2 Spare 5</value>
+          </text>
+          <text id="community-23">
+            <value>T2 Spare 6</value>
           </text>
           <text id="community_id-0">
             <value>101</value>
@@ -433,18 +451,48 @@
           </item>
           <item>
             <itextId>community-15</itextId>
+            <district_list>BONTHE</district_list>
+            <name>T1 Spare 4</name>
+          </item>
+          <item>
+            <itextId>community-16</itextId>
+            <district_list>BONTHE</district_list>
+            <name>T1 Spare 5</name>
+          </item>
+          <item>
+            <itextId>community-17</itextId>
+            <district_list>BONTHE</district_list>
+            <name>T1 Spare 6</name>
+          </item>
+          <item>
+            <itextId>community-18</itextId>
             <district_list>WESTERN RURAL</district_list>
             <name>T2 Spare 1</name>
           </item>
           <item>
-            <itextId>community-16</itextId>
+            <itextId>community-19</itextId>
             <district_list>WESTERN RURAL</district_list>
             <name>T2 Spare 2</name>
           </item>
           <item>
-            <itextId>community-17</itextId>
+            <itextId>community-20</itextId>
             <district_list>WESTERN RURAL</district_list>
             <name>T2 Spare 3</name>
+          </item>
+          <item>
+            <itextId>community-21</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name>T2 Spare 4</name>
+          </item>
+          <item>
+            <itextId>community-22</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name>T2 Spare 5</name>
+          </item>
+          <item>
+            <itextId>community-23</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name>T2 Spare 6</name>
           </item>
         </root>
       </instance>
@@ -548,9 +596,15 @@
       <bind nodeset="/data/c_cluster_name_other" relevant=" /data/c_cluster_name  = 'T1 Spare 1' or
  /data/c_cluster_name  = 'T1 Spare 2' or
  /data/c_cluster_name  = 'T1 Spare 3' or
+ /data/c_cluster_name  = 'T1 Spare 4' or
+ /data/c_cluster_name  = 'T1 Spare 5' or
+ /data/c_cluster_name  = 'T1 Spare 6' or
  /data/c_cluster_name  = 'T2 Spare 1' or
- /data/c_cluster_name  = 'T2 Spare 1' or
- /data/c_cluster_name  = 'T2 Spare 1'" required="true()" type="string"  db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
+ /data/c_cluster_name  = 'T2 Spare 2' or
+ /data/c_cluster_name  = 'T2 Spare 3' or
+ /data/c_cluster_name  = 'T2 Spare 4' or
+ /data/c_cluster_name  = 'T2 Spare 5' or
+ /data/c_cluster_name  = 'T2 Spare 6'" required="true()" type="string" db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" relevant=" /data/c_cluster_name != 'Other'" required="true()" type="string" db_add_col_2="/data/c_cluster_name" db_add_col_4="."/>
       <bind nodeset="/data/c_date" required="true()" type="date"/>
       <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>

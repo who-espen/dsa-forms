@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Nov 2022) OEM - 2. Participant Form V1.2</h:title>
+    <h:title>(Nov 2022) OEM - 2. Participant Form V1.3</h:title>
     <model >
 
       <instance>
-        <data id="sr_oncho_oem_2_participant_202211_v1_2">
+        <data id="sr_oncho_oem_2_participant_202211_v1_3">
           <p_recorder_id/>
           <p_district/>
           <p_cluster_name/>
@@ -164,9 +164,15 @@
       <bind nodeset="/data/p_cluster_name_other" relevant=" /data/p_cluster_name  = 'T1 Spare 1' or
  /data/p_cluster_name  = 'T1 Spare 2' or
  /data/p_cluster_name  = 'T1 Spare 3' or
+ /data/p_cluster_name  = 'T1 Spare 4' or
+ /data/p_cluster_name  = 'T1 Spare 5' or
+ /data/p_cluster_name  = 'T1 Spare 6' or
  /data/p_cluster_name  = 'T2 Spare 1' or
- /data/p_cluster_name  = 'T2 Spare 1' or
- /data/p_cluster_name  = 'T2 Spare 1'" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
+ /data/p_cluster_name  = 'T2 Spare 2' or
+ /data/p_cluster_name  = 'T2 Spare 3' or
+ /data/p_cluster_name  = 'T2 Spare 4' or
+ /data/p_cluster_name  = 'T2 Spare 5' or
+ /data/p_cluster_name  = 'T2 Spare 6'" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
       <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/p_cluster_name"/>
       <bind nodeset="/data/p_date" type="date"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
