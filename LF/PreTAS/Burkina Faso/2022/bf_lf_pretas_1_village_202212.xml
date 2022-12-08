@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Dec 2022) Pré TAS FL - 1. Formulaire Village</h:title>
+    <h:title>(BF - Dec 2022) Pré TAS FL - 1. Formulaire Village V1.2</h:title>
     <model >
 
       <instance>
-        <data id="bf_lf_pretas_1_village_202212">
+        <data id="bf_lf_pretas_1_village_202212_v1_2">
           <c_recorder/>
           <c_drs/>
           <c_district/>
@@ -746,9 +746,9 @@
       <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/c_csps" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
       <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_csps" db_add_col_3="."/>
-      <bind nodeset="/data/c_site" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
+      <bind nodeset="/data/c_site" required="true()" type="string"/>
       <bind nodeset="/data/c_site_type" required="true()" type="string"/>
-      <bind nodeset="/data/c_cluster_id1" required="true()" type="string"/>
+      <bind nodeset="/data/c_cluster_id1" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
       <bind constraint=".&gt;400" jr:constraintMsg="jr:itext('/data/c_population:jr:constraintMsg')" nodeset="/data/c_population" required="true()" type="int"/>
       <bind jr:constraintMsg="jr:itext('/data/c_couverture_tdm_2022:jr:constraintMsg')" nodeset="/data/c_couverture_tdm_2022" required="true()" type="decimal"/>
       <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
