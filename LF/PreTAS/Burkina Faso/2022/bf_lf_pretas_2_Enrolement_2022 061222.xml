@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Dec 2022) Pré TAS FL - 2. Formulaire Enrôlement</h:title>
+    <h:title>(BF - Dec 2022) Pré TAS FL - 2. Formulaire Enrôlement V1</h:title>
     <model >
 
     <instance>
-      <data id="bf_lf_pretas_2_Enrolement_2022 061222">
+      <data id="bf_lf_pretas_2_Enrolement_2022 061222_v1">
         <p_recorder_id/>
         <p_district/>
         <c_csps/>
@@ -263,7 +263,7 @@
     <bind constraint="string-length(.)=10" jr:constraintMsg="jr:itext('/data/p_code_id:jr:constraintMsg')" nodeset="/data/p_code_id" relevant=" /data/p_id_method ='manuel' and  /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind constraint=". =  /data/p_code_id " jr:constraintMsg="jr:itext('/data/p_code_id2:jr:constraintMsg')" nodeset="/data/p_code_id2" relevant=" /data/p_id_method ='manuel' and  /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_Numero_famille:jr:constraintMsg')" nodeset="/data/p_Numero_famille" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
-    <bind calculate="concat( /data/p_recorder_id ,  /data/p_Numero_famille )" constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_Numero_Enquete:jr:constraintMsg')" nodeset="/data/p_Numero_Enquete" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
+    <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_Numero_Enquete:jr:constraintMsg')" nodeset="/data/p_Numero_Enquete" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind calculate="concat( /data/p_cluster_id , '-', /data/p_recorder_id ,'-',  /data/p_Numero_famille ,'-', /data/p_Numero_Enquete )" nodeset="/data/p_Numero_Enquete_complet" readonly="true()" relevant=" /data/p_consent  = '1_oui'" type="string"/>
     <bind constraint=".&gt;4 and .&lt;110" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = '1_oui'" required="true()" type="int"/>
     <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>

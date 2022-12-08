@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Dec 2022) Pré TAS FL - 3. Formulaire Résultats V0</h:title>
+    <h:title>(BF - Dec 2022) Pré TAS FL - 3. Formulaire Résultats V1</h:title>
     <model >
 
       <instance>
-        <data id="bf_lf_pretas_3_Resultats_2022_06122022">
+        <data id="bf_lf_pretas_3_Resultats_2022_06122022_v1">
           <d_recorder_id/>
           <d_district/>
           <d_cluster_name/>
@@ -112,7 +112,7 @@
             <value>5.Saisir le code barre</value>
           </text>
           <text id="/data/d_manual_code:hint">
-            <value>Exemple "PreTas0001"</value>
+            <value>Exemple "FL22120001"</value>
           </text>
           <text id="/data/d_manual_code2:jr:constraintMsg">
             <value>Le code répété doit être le même</value>
@@ -121,7 +121,7 @@
             <value>6.Saisir le code barre à nouveau</value>
           </text>
           <text id="/data/d_manual_code2:hint">
-            <value>Exemple "PreTas0001"</value>
+            <value>Exemple "FL22120001"</value>
           </text>
           <text id="/data/satut:label">
             <value>7.Le participant a t_il été prélevé?</value>
@@ -482,6 +482,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="operateur">
         <root>
           <item>
@@ -828,7 +829,7 @@
       <bind nodeset="/data/d_barcode_id" relevant=" /data/d_id_type ='scanner'" required="true()" type="barcode"/>
       <bind constraint="string-length(.)=10 and regex(.,'^[a-zA-Z]{6}[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/d_manual_code:jr:constraintMsg')" nodeset="/data/d_manual_code" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
       <bind constraint="string-length(.)=10 and . = /data/d_manual_code" jr:constraintMsg="jr:itext('/data/d_manual_code2:jr:constraintMsg')" nodeset="/data/d_manual_code2" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
-      <bind nodeset="/data/satut" type="string"/>
+      <bind nodeset="/data/satut" required="true()" type="string"/>
       <bind constraint=".&gt;=1 and .&lt;=2" nodeset="/data/nb_bandelette" relevant=" /data/satut  = '1_Oui'" required="true()" type="string"/>
       <bind nodeset="/data/d_lotnumber1" relevant=" /data/satut  = '1_Oui'" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" relevant=" /data/satut  = '1_Oui'" required="true()" type="string"/>
@@ -839,7 +840,7 @@
       <bind nodeset="/data/d_result2" relevant=" /data/nb_bandelette  &gt; 1" required="true()" type="string"/>
       <bind nodeset="/data/fts2_invalid_description" relevant=" /data/d_result2  = '3_Invalide'" required="true()" type="string"/>
       <bind nodeset="/data/photo2" relevant=" /data/d_result2  = '1_Positif' or  /data/d_result2  = '3_Invalide'" required="true()" type="binary"/>
-      <bind nodeset="/data/defis_operationnels" required="true()" type="string"/>
+      <bind nodeset="/data/defis_operationnels" relevant=" /data/satut  = '1_Oui'" required="true()" type="string"/>
       <bind nodeset="/data/defis_operationnels_autre" relevant=" /data/defis_operationnels ='S_Autre (expliquer)'" required="true()" type="string"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/satut  = '2_Non' or  /data/satut  = '3_Refus'" type="string"/>
       <bind nodeset="/data/Commentaires" type="string"/>
