@@ -827,8 +827,8 @@
       <bind nodeset="/data/d_cluster_id" required="true()" type="string"/>
       <bind nodeset="/data/d_id_type" required="true()" type="string"/>
       <bind nodeset="/data/d_barcode_id" relevant=" /data/d_id_type ='scanner'" required="true()" type="barcode"/>
-      <bind constraint="string-length(.)=10 and regex(.,'^[a-zA-Z]{6}[0-9]{4}$')" jr:constraintMsg="jr:itext('/data/d_manual_code:jr:constraintMsg')" nodeset="/data/d_manual_code" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
-      <bind constraint="string-length(.)=10 and . = /data/d_manual_code" jr:constraintMsg="jr:itext('/data/d_manual_code2:jr:constraintMsg')" nodeset="/data/d_manual_code2" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
+      <bind constraint="string-length(.)=10" jr:constraintMsg="jr:itext('/data/d_manual_code:jr:constraintMsg')" nodeset="/data/d_manual_code" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
+      <bind constraint=". =  /data/d_manual_code " jr:constraintMsg="jr:itext('/data/d_manual_code2:jr:constraintMsg')" nodeset="/data/d_manual_code2" relevant=" /data/d_id_type ='manuel'" required="true()" type="string"/>
       <bind nodeset="/data/satut" required="true()" type="string"/>
       <bind constraint=".&gt;=1 and .&lt;=2" nodeset="/data/nb_bandelette" relevant=" /data/satut  = '1_Oui'" required="true()" type="string"/>
       <bind nodeset="/data/d_lotnumber1" relevant=" /data/satut  = '1_Oui'" required="true()" type="string"/>
