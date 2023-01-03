@@ -1,318 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<h:head>
-		<h:title>(Octobre 2022) RDC TAS FL - 2. Formulaire Participants V2</h:title>
-		<model >
-			<itext>
-				<translation default="true()" lang="French">
-					<text id="/data/p_recorderID:jr:constraintMsg">
-						<value>Le code doit être un nombre à deux chiffres.</value>
-					</text>
-					<text id="/data/p_recorderID:label">
-						<value>Entrer l'identifiant de l'enregistreur</value>
-					</text>
-					<text id="/data/p_recorderID:hint">
-						<value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui a été attribué à vous ou à votre équipe.</value>
-					</text>
-					<text id="/data/p_province:label">
-						<value>Sélectionnez la Province</value>
-					</text>
-					<text id="/data/p_eu_name:label">
-						<value>Sélectionnez la Zone de santé</value>
-					</text>
-					<text id="/data/p_commune:label">
-						<value>Sélectionnez l'Aire de santé</value>
-					</text>
-					<text id="/data/p_cluster_name:label">
-						<value>Sélectionnez le nom de l'école</value>
-					</text>
-					<text id="/data/p_cluster_id:label">
-						<value>Sélectionnez le code de l'école</value>
-					</text>
-					<text id="/data/p_sex:label">
-						<value>Sexe du participant</value>
-					</text>
-					<text id="/data/p_sex/Masculin:label">
-						<value>Masculin</value>
-					</text>
-					<text id="/data/p_sex/Feminin:label">
-						<value>Féminin</value>
-					</text>
-					<text id="/data/p_age_yrs:jr:constraintMsg">
-						<value>L'age doit être compris entre 6 et 7 ans</value>
-					</text>
-					<text id="/data/p_age_yrs:label">
-						<value>Entrez l'âge du participant (en années)</value>
-					</text>
-					<text id="/data/p_how_long_lived:jr:constraintMsg">
-						<value>La valeur ne doit pas être supérieure à l'âge</value>
-					</text>
-					<text id="/data/p_how_long_lived:label">
-						<value>Depuis combien d'années le participant habite-t-il dans la communauté?</value>
-					</text>
-					<text id="/data/p_num_ordre:label">
-						<value>Veuillez entrer le numéro d'ordre du participant:</value>
-					</text>
-					<text id="/data/p_GenerateID:label">
-						<value>Le code d'identification unique du participant apparait sur l'écran. Veuiller l'enregistrer sur une liste séparée et sur chaque test de diagnostic administré.</value>
-					</text>
-					<text id="/data/p_mares_deau:label">
-						<value>Est-ce que vous fréquentez les mares d'eau (marigot, fleuve, rivière, marre d'eau temporaire, …) ?</value>
-					</text>
-					<text id="/data/p_mares_deau/Yes:label">
-						<value>Oui</value>
-					</text>
-					<text id="/data/p_mares_deau/No:label">
-						<value>Non</value>
-					</text>
-					<text id="/data/p_connait_bilh:label">
-						<value>Connaissez-vous la Bilharziose ?</value>
-					</text>
-					<text id="/data/p_connait_bilh/Yes:label">
-						<value>Oui</value>
-					</text>
-					<text id="/data/p_connait_bilh/No:label">
-						<value>Non</value>
-					</text>
-					<text id="/data/p_manif_bilh:label">
-						<value>Comment se manifeste la Bilharziose ?</value>
-					</text>
-					<text id="/data/p_manif_bilh/Douleurs abdominales:label">
-						<value>Douleurs abdominales</value>
-					</text>
-					<text id="/data/p_manif_bilh/Uriner du sang:label">
-						<value>Uriner du sang</value>
-					</text>
-					<text id="/data/p_manif_bilh/Ne sait pas:label">
-						<value>Ne sait pas</value>
-					</text>
-					<text id="/data/p_manif_bilh/Autres:label">
-						<value>Autres</value>
-					</text>
-					<text id="/data/p_notes:label">
-						<value>Notes complémentaires</value>
-					</text>
-				</translation>
-				<translation lang="English">
-					<text id="/data/p_recorderID:jr:constraintMsg">
-						<value>The code must be a two-digit number</value>
-					</text>
-					<text id="/data/p_recorderID:label">
-						<value>Enter Recorder ID</value>
-					</text>
-					<text id="/data/p_recorderID:hint">
-						<value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
-					</text>
-					<text id="/data/p_province:label">
-						<value>Select the province</value>
-					</text>
-					<text id="/data/p_eu_name:label">
-						<value>Select your evaluation unit (EU)</value>
-					</text>
-					<text id="/data/p_commune:label">
-						<value>Select your commune</value>
-					</text>
-					<text id="/data/p_cluster_name:label">
-						<value>Select your school name</value>
-					</text>
-					<text id="/data/p_cluster_id:label">
-						<value>Select your school id</value>
-					</text>
-					<text id="/data/p_sex:label">
-						<value>Sex of respondent</value>
-					</text>
-					<text id="/data/p_sex/Masculin:label">
-						<value>Male</value>
-					</text>
-					<text id="/data/p_sex/Feminin:label">
-						<value>Female</value>
-					</text>
-					<text id="/data/p_age_yrs:jr:constraintMsg">
-						<value>The age must be between 6 and 7 years</value>
-					</text>
-					<text id="/data/p_age_yrs:label">
-						<value>Enter age in years</value>
-					</text>
-					<text id="/data/p_how_long_lived:jr:constraintMsg">
-						<value>The value must not be greater than the age</value>
-					</text>
-					<text id="/data/p_how_long_lived:label">
-						<value>How many years has the respondent lived in the area?</value>
-					</text>
-					<text id="/data/p_num_ordre:label">
-						<value>Number order</value>
-					</text>
-					<text id="/data/p_GenerateID:label">
-						<value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
-					</text>
-					<text id="/data/p_mares_deau:label">
-						<value>Do you frequent pools of water (backwater, river, temporary pool of water, etc.)?</value>
-					</text>
-					<text id="/data/p_mares_deau/Yes:label">
-						<value>Yes</value>
-					</text>
-					<text id="/data/p_mares_deau/No:label">
-						<value>No</value>
-					</text>
-					<text id="/data/p_connait_bilh:label">
-						<value>Do you know Bilharzia?</value>
-					</text>
-					<text id="/data/p_connait_bilh/Yes:label">
-						<value>Yes</value>
-					</text>
-					<text id="/data/p_connait_bilh/No:label">
-						<value>No</value>
-					</text>
-					<text id="/data/p_manif_bilh:label">
-						<value>How does bilharziasis manifest?</value>
-					</text>
-					<text id="/data/p_manif_bilh/Douleurs abdominales:label">
-						<value>Douleurs abdominales</value>
-					</text>
-					<text id="/data/p_manif_bilh/Uriner du sang:label">
-						<value>Uriner du sang</value>
-					</text>
-					<text id="/data/p_manif_bilh/Ne sait pas:label">
-						<value>Ne sait pas</value>
-					</text>
-					<text id="/data/p_manif_bilh/Autres:label">
-						<value>Autres</value>
-					</text>
-					<text id="/data/p_notes:label">
-						<value>Additional Notes</value>
-					</text>
-				</translation>
-			</itext>
-			<instance>
-				<data id="cd_lf_tas_2_participants_202210_v2" version="20210928">
-					<p_recorderID/>
-					<p_province/>
-					<p_eu_name/>
-					<p_commune/>
-					<p_cluster_name/>
-					<p_cluster_id/>
-					<p_sex/>
-					<p_age_yrs/>
-					<p_how_long_lived/>
-					<p_num_ordre/>
-					<p_GenerateID/>
-					<p_mares_deau/>
-					<p_connait_bilh/>
-					<p_manif_bilh/>
-					<p_notes/>
-					<c_start/>
-					<c_end/>
-					<meta>
-						<instanceID/>
-					</meta>
-				</data>
-			</instance>
-			<bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorderID:jr:constraintMsg')" nodeset="/data/p_recorderID" required="true()" type="string"/>
-			<bind nodeset="/data/p_province" required="true()" type="string" db_get="col_1"/>
-			<bind nodeset="/data/p_eu_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_province"/>
-			<bind nodeset="/data/p_commune" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_eu_name"/>
-			<bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_commune"/>
-			<bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_cluster_name"/>
-			<bind nodeset="/data/p_sex" required="true()" type="string"/>
-			<bind constraint=". &gt;= 6 and . &lt;= 7" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" required="true()" type="int"/>
-			<bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" required="true()" type="int"/>
-			<bind nodeset="/data/p_num_ordre" required="true()" type="int"/>
-			<bind calculate="concat( /data/p_cluster_id ,'-',if( /data/p_num_ordre  &lt; 10, concat('00', /data/p_num_ordre ), if( /data/p_num_ordre  &gt;=10 and  /data/p_num_ordre  &lt;100, concat('0',  /data/p_num_ordre ),  /data/p_num_ordre )))" nodeset="/data/p_GenerateID" db_add_col_6="." db_add_col_7="/data/p_cluster_id" readonly="true()" required="true()" type="string"/>
-			<bind nodeset="/data/p_mares_deau" required="true()" type="string"/>
-			<bind nodeset="/data/p_connait_bilh" required="true()" type="string"/>
-			<bind nodeset="/data/p_manif_bilh" relevant=" /data/p_connait_bilh  = 'Yes'" required="true()" type="string"/>
-			<bind nodeset="/data/p_notes" type="string"/>
-			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
-			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
-			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-		</model>
-	</h:head>
-	<h:body>
-		<input ref="/data/p_recorderID">
-			<label ref="jr:itext('/data/p_recorderID:label')"/>
-			<hint ref="jr:itext('/data/p_recorderID:hint')"/>
-		</input>
-		<input ref="/data/p_province">
-			<label ref="jr:itext('/data/p_province:label')"/>
-		</input>
-		<input ref="/data/p_eu_name">
-			<label ref="jr:itext('/data/p_eu_name:label')"/>
-		</input>
-		<input ref="/data/p_commune">
-			<label ref="jr:itext('/data/p_commune:label')"/>
-		</input>
-		<input ref="/data/p_cluster_name">
-			<label ref="jr:itext('/data/p_cluster_name:label')"/>
-		</input>
-		<input ref="/data/p_cluster_id">
-			<label ref="jr:itext('/data/p_cluster_id:label')"/>
-		</input>
-		<select1 ref="/data/p_sex">
-			<label ref="jr:itext('/data/p_sex:label')"/>
-			<item>
-				<label ref="jr:itext('/data/p_sex/Masculin:label')"/>
-				<value>Masculin</value>
-			</item>
-			<item>
-				<label ref="jr:itext('/data/p_sex/Feminin:label')"/>
-				<value>Feminin</value>
-			</item>
-		</select1>
-		<input ref="/data/p_age_yrs">
-			<label ref="jr:itext('/data/p_age_yrs:label')"/>
-		</input>
-		<input ref="/data/p_how_long_lived">
-			<label ref="jr:itext('/data/p_how_long_lived:label')"/>
-		</input>
-		<input ref="/data/p_num_ordre">
-			<label ref="jr:itext('/data/p_num_ordre:label')"/>
-		</input>
-		<input ref="/data/p_GenerateID">
-			<label ref="jr:itext('/data/p_GenerateID:label')"/>
-		</input>
-		<select1 ref="/data/p_mares_deau">
-			<label ref="jr:itext('/data/p_mares_deau:label')"/>
-			<item>
-				<label ref="jr:itext('/data/p_mares_deau/Yes:label')"/>
-				<value>Yes</value>
-			</item>
-			<item>
-				<label ref="jr:itext('/data/p_mares_deau/No:label')"/>
-				<value>No</value>
-			</item>
-		</select1>
-		<select1 ref="/data/p_connait_bilh">
-			<label ref="jr:itext('/data/p_connait_bilh:label')"/>
-			<item>
-				<label ref="jr:itext('/data/p_connait_bilh/Yes:label')"/>
-				<value>Yes</value>
-			</item>
-			<item>
-				<label ref="jr:itext('/data/p_connait_bilh/No:label')"/>
-				<value>No</value>
-			</item>
-		</select1>
-		<select1 ref="/data/p_manif_bilh">
-			<label ref="jr:itext('/data/p_manif_bilh:label')"/>
-			<item>
-				<label ref="jr:itext('/data/p_manif_bilh/Douleurs abdominales:label')"/>
-				<value>Douleurs abdominales</value>
-			</item>
-			<item>
-				<label ref="jr:itext('/data/p_manif_bilh/Uriner du sang:label')"/>
-				<value>Uriner du sang</value>
-			</item>
-			<item>
-				<label ref="jr:itext('/data/p_manif_bilh/Ne sait pas:label')"/>
-				<value>Ne sait pas</value>
-			</item>
-			<item>
-				<label ref="jr:itext('/data/p_manif_bilh/Autres:label')"/>
-				<value>Autres</value>
-			</item>
-		</select1>
-		<input ref="/data/p_notes">
-			<label ref="jr:itext('/data/p_notes:label')"/>
-		</input>
-	</h:body>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Octobre 2022) RDC TAS FL - 2.1 Formulaire Participants (TAS) V3</h:title>
+    <model >
+
+      <instance>
+        <data id="cd_lf_tas_2_participants_202210_v3" version="20210928">
+          <p_recorderID/>
+          <p_province/>
+          <p_eu_name/>
+          <p_commune/>
+          <p_cluster_name/>
+          <p_cluster_id/>
+          <p_sex/>
+          <p_age_yrs/>
+          <p_how_long_lived/>
+          <p_num_ordre/>
+          <p_GenerateID/>
+          <p_notes/>
+          <p_start/>
+          <p_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/p_recorderID:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres.</value>
+          </text>
+          <text id="/data/p_recorderID:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/p_recorderID:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui a été attribué à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/p_province:label">
+            <value>Sélectionnez la Province</value>
+          </text>
+          <text id="/data/p_eu_name:label">
+            <value>Sélectionnez la Zone de santé</value>
+          </text>
+          <text id="/data/p_commune:label">
+            <value>Sélectionnez l'Aire de santé</value>
+          </text>
+          <text id="/data/p_cluster_name:label">
+            <value>Sélectionnez le nom de l'école</value>
+          </text>
+          <text id="/data/p_cluster_id:label">
+            <value>Sélectionnez le code de l'école</value>
+          </text>
+          <text id="/data/p_sex:label">
+            <value>Sexe du participant</value>
+          </text>
+          <text id="/data/p_sex/Masculin:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/p_sex/Feminin:label">
+            <value>Féminin</value>
+          </text>
+          <text id="/data/p_age_yrs:jr:constraintMsg">
+            <value>L'age doit être compris entre 6 et 7 ans</value>
+          </text>
+          <text id="/data/p_age_yrs:label">
+            <value>Entrez l'âge du participant (en années)</value>
+          </text>
+          <text id="/data/p_how_long_lived:jr:constraintMsg">
+            <value>La valeur ne doit pas être supérieure à l'âge</value>
+          </text>
+          <text id="/data/p_how_long_lived:label">
+            <value>Depuis combien d'années le participant habite-t-il dans la communauté?</value>
+          </text>
+          <text id="/data/p_num_ordre:label">
+            <value>Veuillez entrer le numéro d'ordre du participant:</value>
+          </text>
+          <text id="/data/p_GenerateID:label">
+            <value>Le code d'identification unique du participant apparait sur l'écran. Veuiller l'enregistrer sur une liste séparée et sur chaque test de diagnostic administré.</value>
+          </text>
+          <text id="/data/p_notes:label">
+            <value>Notes complémentaires</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/p_recorderID:jr:constraintMsg">
+            <value>The code must be a two-digit number</value>
+          </text>
+          <text id="/data/p_recorderID:label">
+            <value>Enter Recorder ID</value>
+          </text>
+          <text id="/data/p_recorderID:hint">
+            <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
+          </text>
+          <text id="/data/p_province:label">
+            <value>Select the province</value>
+          </text>
+          <text id="/data/p_eu_name:label">
+            <value>Select your evaluation unit (EU)</value>
+          </text>
+          <text id="/data/p_commune:label">
+            <value>Select your commune</value>
+          </text>
+          <text id="/data/p_cluster_name:label">
+            <value>Select your school name</value>
+          </text>
+          <text id="/data/p_cluster_id:label">
+            <value>Select your school id</value>
+          </text>
+          <text id="/data/p_sex:label">
+            <value>Sex of respondent</value>
+          </text>
+          <text id="/data/p_sex/Masculin:label">
+            <value>Male</value>
+          </text>
+          <text id="/data/p_sex/Feminin:label">
+            <value>Female</value>
+          </text>
+          <text id="/data/p_age_yrs:jr:constraintMsg">
+            <value>The age must be between 6 and 7 years</value>
+          </text>
+          <text id="/data/p_age_yrs:label">
+            <value>Enter age in years</value>
+          </text>
+          <text id="/data/p_how_long_lived:jr:constraintMsg">
+            <value>The value must not be greater than the age</value>
+          </text>
+          <text id="/data/p_how_long_lived:label">
+            <value>How many years has the respondent lived in the area?</value>
+          </text>
+          <text id="/data/p_num_ordre:label">
+            <value>Number order</value>
+          </text>
+          <text id="/data/p_GenerateID:label">
+            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
+          </text>
+          <text id="/data/p_notes:label">
+            <value>Additional Notes</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorderID:jr:constraintMsg')" nodeset="/data/p_recorderID" required="true()" type="string"/>
+      <bind nodeset="/data/p_province" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/p_eu_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_province"/>
+      <bind nodeset="/data/p_commune" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_eu_name"/>
+      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_commune"/>
+      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_sex" required="true()" type="string"/>
+      <bind constraint=". &gt;= 6 and . &lt;= 7" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" required="true()" type="int"/>
+      <bind nodeset="/data/p_num_ordre" required="true()" type="int"/>
+      <bind calculate="concat( /data/p_cluster_id ,'-',if( /data/p_num_ordre  &lt; 10, concat('00', /data/p_num_ordre ), if( /data/p_num_ordre &gt;=10 and  /data/p_num_ordre  &lt;100, concat('0',  /data/p_num_ordre ),  /data/p_num_ordre )))" nodeset="/data/p_GenerateID" readonly="true()" required="true()" type="string" db_add_col_6="." db_add_col_7="/data/p_cluster_id" />
+      <bind nodeset="/data/p_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/p_recorderID">
+      <label ref="jr:itext('/data/p_recorderID:label')"/>
+      <hint ref="jr:itext('/data/p_recorderID:hint')"/>
+    </input>
+    <input ref="/data/p_province">
+      <label ref="jr:itext('/data/p_province:label')"/>
+    </input>
+    <input ref="/data/p_eu_name">
+      <label ref="jr:itext('/data/p_eu_name:label')"/>
+    </input>
+    <input ref="/data/p_commune">
+      <label ref="jr:itext('/data/p_commune:label')"/>
+    </input>
+    <input ref="/data/p_cluster_name">
+      <label ref="jr:itext('/data/p_cluster_name:label')"/>
+    </input>
+    <input ref="/data/p_cluster_id">
+      <label ref="jr:itext('/data/p_cluster_id:label')"/>
+    </input>
+    <select1 ref="/data/p_sex">
+      <label ref="jr:itext('/data/p_sex:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_sex/Masculin:label')"/>
+        <value>Masculin</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_sex/Feminin:label')"/>
+        <value>Feminin</value>
+      </item>
+    </select1>
+    <input ref="/data/p_age_yrs">
+      <label ref="jr:itext('/data/p_age_yrs:label')"/>
+    </input>
+    <input ref="/data/p_how_long_lived">
+      <label ref="jr:itext('/data/p_how_long_lived:label')"/>
+    </input>
+    <input ref="/data/p_num_ordre">
+      <label ref="jr:itext('/data/p_num_ordre:label')"/>
+    </input>
+    <input ref="/data/p_GenerateID">
+      <label ref="jr:itext('/data/p_GenerateID:label')"/>
+    </input>
+    <input ref="/data/p_notes">
+      <label ref="jr:itext('/data/p_notes:label')"/>
+    </input>
+  </h:body>
 </h:html>

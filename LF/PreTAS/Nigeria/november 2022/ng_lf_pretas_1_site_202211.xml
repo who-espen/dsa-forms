@@ -1,0 +1,1835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2022 Nov) - 1. Nigeria - Pre TAS LF Site Form V1</h:title>
+    <model >
+
+      <instance>
+        <data id="ng_lf_pretas_1_site_202211_v1">
+          <c_recorder/>
+          <c_region/>
+          <c_district/>
+          <c_cluster_name/>
+          <c_site_type/>
+          <c_cluster_id/>
+          <c_cluster_leader/>
+          <c_consent/>
+          <c_gps/>
+          <c_ending_survey_note/>
+          <c_ClusterNotes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>The code must be a two-digit number between 9 and 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Enter Recorder ID</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
+          </text>
+          <text id="/data/c_region:label">
+            <value>Select your state</value>
+          </text>
+          <text id="/data/c_region/Kano:label">
+            <value>Kano</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Select your IU</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Select the site</value>
+          </text>
+          <text id="/data/c_site_type:label">
+            <value>Select the site type</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>The code must be a three-digit number</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Enter Site ID</value>
+          </text>
+          <text id="/data/c_cluster_leader:label">
+            <value>Name of Village Leader or Head Teacher</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>Does the school leader or community leader consent to participating in this survey?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Record your location:</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>GPS coordinates are easier to collect outside. 2 min timeout</value>
+          </text>
+          <text id="/data/c_ending_survey_note:label">
+            <value>You just entered a value that will end the survey</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Additional notes to add?</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="yes_no-1">
+            <value>No</value>
+          </text>
+          <text id="region-0">
+            <value>Kano</value>
+          </text>
+          <text id="district-0">
+            <value>Bunkure</value>
+          </text>
+          <text id="district-1">
+            <value>Dambata</value>
+          </text>
+          <text id="district-2">
+            <value>Dawakin Kudu</value>
+          </text>
+          <text id="district-3">
+            <value>Dawakin Tofa</value>
+          </text>
+          <text id="district-4">
+            <value>Fagge</value>
+          </text>
+          <text id="district-5">
+            <value>Garun Mallam</value>
+          </text>
+          <text id="district-6">
+            <value>Gaya</value>
+          </text>
+          <text id="district-7">
+            <value>Gwalle</value>
+          </text>
+          <text id="district-8">
+            <value>Gwarzo</value>
+          </text>
+          <text id="district-9">
+            <value>Kabo</value>
+          </text>
+          <text id="district-10">
+            <value>Kiru</value>
+          </text>
+          <text id="district-11">
+            <value>Kunchi</value>
+          </text>
+          <text id="district-12">
+            <value>Kura</value>
+          </text>
+          <text id="district-13">
+            <value>Madobi</value>
+          </text>
+          <text id="district-14">
+            <value>Nassarawa</value>
+          </text>
+          <text id="district-15">
+            <value>Rimin Gado</value>
+          </text>
+          <text id="district-16">
+            <value>Rogo</value>
+          </text>
+          <text id="district-17">
+            <value>Shanono</value>
+          </text>
+          <text id="district-18">
+            <value>Takai</value>
+          </text>
+          <text id="district-19">
+            <value>Tarauni</value>
+          </text>
+          <text id="site_liste-0">
+            <value>Barkun Cikin Gari</value>
+          </text>
+          <text id="site_liste-1">
+            <value>Bunkure</value>
+          </text>
+          <text id="site_liste-2">
+            <value>Ajumawa</value>
+          </text>
+          <text id="site_liste-3">
+            <value>Sansan</value>
+          </text>
+          <text id="site_liste-4">
+            <value>Kogakaza</value>
+          </text>
+          <text id="site_liste-5">
+            <value>Tanburawa Gari</value>
+          </text>
+          <text id="site_liste-6">
+            <value>Kunnawa</value>
+          </text>
+          <text id="site_liste-7">
+            <value>Sarauniya</value>
+          </text>
+          <text id="site_liste-8">
+            <value>Jabba</value>
+          </text>
+          <text id="site_liste-9">
+            <value>Yammata</value>
+          </text>
+          <text id="site_liste-10">
+            <value>Dakasoye</value>
+          </text>
+          <text id="site_liste-11">
+            <value>Garun Babba</value>
+          </text>
+          <text id="site_liste-12">
+            <value>G/North</value>
+          </text>
+          <text id="site_liste-13">
+            <value>Kademi</value>
+          </text>
+          <text id="site_liste-14">
+            <value>Jaen</value>
+          </text>
+          <text id="site_liste-15">
+            <value>Sani Mai Nagge</value>
+          </text>
+          <text id="site_liste-16">
+            <value>Kara</value>
+          </text>
+          <text id="site_liste-17">
+            <value>Koya</value>
+          </text>
+          <text id="site_liste-18">
+            <value>Durun</value>
+          </text>
+          <text id="site_liste-19">
+            <value>Gammo</value>
+          </text>
+          <text id="site_liste-20">
+            <value>Bauda</value>
+          </text>
+          <text id="site_liste-21">
+            <value>Kiru</value>
+          </text>
+          <text id="site_liste-22">
+            <value>Matan Fada</value>
+          </text>
+          <text id="site_liste-23">
+            <value>Shuwaki</value>
+          </text>
+          <text id="site_liste-24">
+            <value>Dalili-Kura</value>
+          </text>
+          <text id="site_liste-25">
+            <value>Karfi</value>
+          </text>
+          <text id="site_liste-26">
+            <value>Kwankwaso</value>
+          </text>
+          <text id="site_liste-27">
+            <value>Rikadawa</value>
+          </text>
+          <text id="site_liste-28">
+            <value>Getsi Tudun Murtala</value>
+          </text>
+          <text id="site_liste-29">
+            <value>Kofar Goji</value>
+          </text>
+          <text id="site_liste-30">
+            <value>Rimin Gado</value>
+          </text>
+          <text id="site_liste-31">
+            <value>Yalwa</value>
+          </text>
+          <text id="site_liste-32">
+            <value>Kaleku</value>
+          </text>
+          <text id="site_liste-33">
+            <value>Tajaye</value>
+          </text>
+          <text id="site_liste-34">
+            <value>Kofar Gabas</value>
+          </text>
+          <text id="site_liste-35">
+            <value>Marabutawa</value>
+          </text>
+          <text id="site_liste-36">
+            <value>Faruruwa</value>
+          </text>
+          <text id="site_liste-37">
+            <value>Kuka</value>
+          </text>
+          <text id="site_liste-38">
+            <value>Dansinke</value>
+          </text>
+          <text id="site_liste-39">
+            <value>Unguwa Uku Cikin Gari</value>
+          </text>
+          <text id="site_type-0">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-1">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-2">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-3">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-4">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-5">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-6">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-7">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-8">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-9">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-10">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-11">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-12">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-13">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-14">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-15">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-16">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-17">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-18">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-19">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-20">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-21">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-22">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-23">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-24">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-25">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-26">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-27">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-28">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-29">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-30">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-31">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-32">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-33">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-34">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-35">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-36">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-37">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-38">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-39">
+            <value>Spot check</value>
+          </text>
+          <text id="site_code-0">
+            <value>101</value>
+          </text>
+          <text id="site_code-1">
+            <value>102</value>
+          </text>
+          <text id="site_code-2">
+            <value>103</value>
+          </text>
+          <text id="site_code-3">
+            <value>104</value>
+          </text>
+          <text id="site_code-4">
+            <value>105</value>
+          </text>
+          <text id="site_code-5">
+            <value>106</value>
+          </text>
+          <text id="site_code-6">
+            <value>107</value>
+          </text>
+          <text id="site_code-7">
+            <value>108</value>
+          </text>
+          <text id="site_code-8">
+            <value>109</value>
+          </text>
+          <text id="site_code-9">
+            <value>110</value>
+          </text>
+          <text id="site_code-10">
+            <value>111</value>
+          </text>
+          <text id="site_code-11">
+            <value>112</value>
+          </text>
+          <text id="site_code-12">
+            <value>113</value>
+          </text>
+          <text id="site_code-13">
+            <value>114</value>
+          </text>
+          <text id="site_code-14">
+            <value>115</value>
+          </text>
+          <text id="site_code-15">
+            <value>116</value>
+          </text>
+          <text id="site_code-16">
+            <value>117</value>
+          </text>
+          <text id="site_code-17">
+            <value>118</value>
+          </text>
+          <text id="site_code-18">
+            <value>119</value>
+          </text>
+          <text id="site_code-19">
+            <value>120</value>
+          </text>
+          <text id="site_code-20">
+            <value>121</value>
+          </text>
+          <text id="site_code-21">
+            <value>122</value>
+          </text>
+          <text id="site_code-22">
+            <value>123</value>
+          </text>
+          <text id="site_code-23">
+            <value>124</value>
+          </text>
+          <text id="site_code-24">
+            <value>125</value>
+          </text>
+          <text id="site_code-25">
+            <value>126</value>
+          </text>
+          <text id="site_code-26">
+            <value>127</value>
+          </text>
+          <text id="site_code-27">
+            <value>128</value>
+          </text>
+          <text id="site_code-28">
+            <value>129</value>
+          </text>
+          <text id="site_code-29">
+            <value>130</value>
+          </text>
+          <text id="site_code-30">
+            <value>131</value>
+          </text>
+          <text id="site_code-31">
+            <value>132</value>
+          </text>
+          <text id="site_code-32">
+            <value>133</value>
+          </text>
+          <text id="site_code-33">
+            <value>134</value>
+          </text>
+          <text id="site_code-34">
+            <value>135</value>
+          </text>
+          <text id="site_code-35">
+            <value>136</value>
+          </text>
+          <text id="site_code-36">
+            <value>137</value>
+          </text>
+          <text id="site_code-37">
+            <value>138</value>
+          </text>
+          <text id="site_code-38">
+            <value>139</value>
+          </text>
+          <text id="site_code-39">
+            <value>140</value>
+          </text>
+        </translation>
+        <translation lang="French">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui vous a été attribué, à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/c_region:label">
+            <value>Sélectionner la région</value>
+          </text>
+          <text id="/data/c_region/Kano:label">
+            <value>Kano</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Sélectionner le site</value>
+          </text>
+          <text id="/data/c_site_type:label">
+            <value>Sélectionnet le type de site</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>Le code doit être un nombre à tois chiffres</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Entrer le code du site</value>
+          </text>
+          <text id="/data/c_cluster_leader:label">
+            <value>Nom et contact du chef village</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>Le chef de village consent-il à la mise en oeuvre de cette enquête ?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Prener vos coordonnées GPS :</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>Les coordonnées GPS sont plus faciles à collecter à l'extérieur. Délai d'attente de 2 min</value>
+          </text>
+          <text id="/data/c_ending_survey_note:label">
+            <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Informations supplémentaires</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Oui</value>
+          </text>
+          <text id="yes_no-1">
+            <value>Non</value>
+          </text>
+          <text id="region-0">
+            <value>Kano</value>
+          </text>
+          <text id="district-0">
+            <value>Bunkure</value>
+          </text>
+          <text id="district-1">
+            <value>Dambata</value>
+          </text>
+          <text id="district-2">
+            <value>Dawakin Kudu</value>
+          </text>
+          <text id="district-3">
+            <value>Dawakin Tofa</value>
+          </text>
+          <text id="district-4">
+            <value>Fagge</value>
+          </text>
+          <text id="district-5">
+            <value>Garun Mallam</value>
+          </text>
+          <text id="district-6">
+            <value>Gaya</value>
+          </text>
+          <text id="district-7">
+            <value>Gwalle</value>
+          </text>
+          <text id="district-8">
+            <value>Gwarzo</value>
+          </text>
+          <text id="district-9">
+            <value>Kabo</value>
+          </text>
+          <text id="district-10">
+            <value>Kiru</value>
+          </text>
+          <text id="district-11">
+            <value>Kunchi</value>
+          </text>
+          <text id="district-12">
+            <value>Kura</value>
+          </text>
+          <text id="district-13">
+            <value>Madobi</value>
+          </text>
+          <text id="district-14">
+            <value>Nassarawa</value>
+          </text>
+          <text id="district-15">
+            <value>Rimin Gado</value>
+          </text>
+          <text id="district-16">
+            <value>Rogo</value>
+          </text>
+          <text id="district-17">
+            <value>Shanono</value>
+          </text>
+          <text id="district-18">
+            <value>Takai</value>
+          </text>
+          <text id="district-19">
+            <value>Tarauni</value>
+          </text>
+          <text id="site_liste-0">
+            <value>Barkun Cikin Gari</value>
+          </text>
+          <text id="site_liste-1">
+            <value>Bunkure</value>
+          </text>
+          <text id="site_liste-2">
+            <value>Ajumawa</value>
+          </text>
+          <text id="site_liste-3">
+            <value>Sansan</value>
+          </text>
+          <text id="site_liste-4">
+            <value>Kogakaza</value>
+          </text>
+          <text id="site_liste-5">
+            <value>Tanburawa Gari</value>
+          </text>
+          <text id="site_liste-6">
+            <value>Kunnawa</value>
+          </text>
+          <text id="site_liste-7">
+            <value>Sarauniya</value>
+          </text>
+          <text id="site_liste-8">
+            <value>Jabba</value>
+          </text>
+          <text id="site_liste-9">
+            <value>Yammata</value>
+          </text>
+          <text id="site_liste-10">
+            <value>Dakasoye</value>
+          </text>
+          <text id="site_liste-11">
+            <value>Garun Babba</value>
+          </text>
+          <text id="site_liste-12">
+            <value>G/North</value>
+          </text>
+          <text id="site_liste-13">
+            <value>Kademi</value>
+          </text>
+          <text id="site_liste-14">
+            <value>Jaen</value>
+          </text>
+          <text id="site_liste-15">
+            <value>Sani Mai Nagge</value>
+          </text>
+          <text id="site_liste-16">
+            <value>Kara</value>
+          </text>
+          <text id="site_liste-17">
+            <value>Koya</value>
+          </text>
+          <text id="site_liste-18">
+            <value>Durun</value>
+          </text>
+          <text id="site_liste-19">
+            <value>Gammo</value>
+          </text>
+          <text id="site_liste-20">
+            <value>Bauda</value>
+          </text>
+          <text id="site_liste-21">
+            <value>Kiru</value>
+          </text>
+          <text id="site_liste-22">
+            <value>Matan Fada</value>
+          </text>
+          <text id="site_liste-23">
+            <value>Shuwaki</value>
+          </text>
+          <text id="site_liste-24">
+            <value>Dalili-Kura</value>
+          </text>
+          <text id="site_liste-25">
+            <value>Karfi</value>
+          </text>
+          <text id="site_liste-26">
+            <value>Kwankwaso</value>
+          </text>
+          <text id="site_liste-27">
+            <value>Rikadawa</value>
+          </text>
+          <text id="site_liste-28">
+            <value>Getsi Tudun Murtala</value>
+          </text>
+          <text id="site_liste-29">
+            <value>Kofar Goji</value>
+          </text>
+          <text id="site_liste-30">
+            <value>Rimin Gado</value>
+          </text>
+          <text id="site_liste-31">
+            <value>Yalwa</value>
+          </text>
+          <text id="site_liste-32">
+            <value>Kaleku</value>
+          </text>
+          <text id="site_liste-33">
+            <value>Tajaye</value>
+          </text>
+          <text id="site_liste-34">
+            <value>Kofar Gabas</value>
+          </text>
+          <text id="site_liste-35">
+            <value>Marabutawa</value>
+          </text>
+          <text id="site_liste-36">
+            <value>Faruruwa</value>
+          </text>
+          <text id="site_liste-37">
+            <value>Kuka</value>
+          </text>
+          <text id="site_liste-38">
+            <value>Dansinke</value>
+          </text>
+          <text id="site_liste-39">
+            <value>Unguwa Uku Cikin Gari</value>
+          </text>
+          <text id="site_type-0">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-1">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-2">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-3">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-4">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-5">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-6">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-7">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-8">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-9">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-10">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-11">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-12">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-13">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-14">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-15">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-16">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-17">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-18">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-19">
+            <value>Sentinel site</value>
+          </text>
+          <text id="site_type-20">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-21">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-22">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-23">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-24">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-25">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-26">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-27">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-28">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-29">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-30">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-31">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-32">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-33">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-34">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-35">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-36">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-37">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-38">
+            <value>Spot check</value>
+          </text>
+          <text id="site_type-39">
+            <value>Spot check</value>
+          </text>
+          <text id="site_code-0">
+            <value>101</value>
+          </text>
+          <text id="site_code-1">
+            <value>102</value>
+          </text>
+          <text id="site_code-2">
+            <value>103</value>
+          </text>
+          <text id="site_code-3">
+            <value>104</value>
+          </text>
+          <text id="site_code-4">
+            <value>105</value>
+          </text>
+          <text id="site_code-5">
+            <value>106</value>
+          </text>
+          <text id="site_code-6">
+            <value>107</value>
+          </text>
+          <text id="site_code-7">
+            <value>108</value>
+          </text>
+          <text id="site_code-8">
+            <value>109</value>
+          </text>
+          <text id="site_code-9">
+            <value>110</value>
+          </text>
+          <text id="site_code-10">
+            <value>111</value>
+          </text>
+          <text id="site_code-11">
+            <value>112</value>
+          </text>
+          <text id="site_code-12">
+            <value>113</value>
+          </text>
+          <text id="site_code-13">
+            <value>114</value>
+          </text>
+          <text id="site_code-14">
+            <value>115</value>
+          </text>
+          <text id="site_code-15">
+            <value>116</value>
+          </text>
+          <text id="site_code-16">
+            <value>117</value>
+          </text>
+          <text id="site_code-17">
+            <value>118</value>
+          </text>
+          <text id="site_code-18">
+            <value>119</value>
+          </text>
+          <text id="site_code-19">
+            <value>120</value>
+          </text>
+          <text id="site_code-20">
+            <value>121</value>
+          </text>
+          <text id="site_code-21">
+            <value>122</value>
+          </text>
+          <text id="site_code-22">
+            <value>123</value>
+          </text>
+          <text id="site_code-23">
+            <value>124</value>
+          </text>
+          <text id="site_code-24">
+            <value>125</value>
+          </text>
+          <text id="site_code-25">
+            <value>126</value>
+          </text>
+          <text id="site_code-26">
+            <value>127</value>
+          </text>
+          <text id="site_code-27">
+            <value>128</value>
+          </text>
+          <text id="site_code-28">
+            <value>129</value>
+          </text>
+          <text id="site_code-29">
+            <value>130</value>
+          </text>
+          <text id="site_code-30">
+            <value>131</value>
+          </text>
+          <text id="site_code-31">
+            <value>132</value>
+          </text>
+          <text id="site_code-32">
+            <value>133</value>
+          </text>
+          <text id="site_code-33">
+            <value>134</value>
+          </text>
+          <text id="site_code-34">
+            <value>135</value>
+          </text>
+          <text id="site_code-35">
+            <value>136</value>
+          </text>
+          <text id="site_code-36">
+            <value>137</value>
+          </text>
+          <text id="site_code-37">
+            <value>138</value>
+          </text>
+          <text id="site_code-38">
+            <value>139</value>
+          </text>
+          <text id="site_code-39">
+            <value>140</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>-</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region">
+        <root>
+          <item>
+            <itextId>region-0</itextId>
+            <name>Kano</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district">
+        <root>
+          <item>
+            <itextId>district-0</itextId>
+            <name>Bunkure</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-1</itextId>
+            <name>Dambata</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-2</itextId>
+            <name>Dawakin Kudu</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-3</itextId>
+            <name>Dawakin Tofa</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-4</itextId>
+            <name>Fagge</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-5</itextId>
+            <name>Garun Mallam</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-6</itextId>
+            <name>Gaya</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-7</itextId>
+            <name>Gwalle</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-8</itextId>
+            <name>Gwarzo</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-9</itextId>
+            <name>Kabo</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-10</itextId>
+            <name>Kiru</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-11</itextId>
+            <name>Kunchi</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-12</itextId>
+            <name>Kura</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-13</itextId>
+            <name>Madobi</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-14</itextId>
+            <name>Nassarawa</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-15</itextId>
+            <name>Rimin Gado</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-16</itextId>
+            <name>Rogo</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-17</itextId>
+            <name>Shanono</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-18</itextId>
+            <name>Takai</name>
+            <region>Kano</region>
+          </item>
+          <item>
+            <itextId>district-19</itextId>
+            <name>Tarauni</name>
+            <region>Kano</region>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_liste">
+        <root>
+          <item>
+            <itextId>site_liste-0</itextId>
+            <district>Bunkure</district>
+            <name>Barkun Cikin Gari</name>
+          </item>
+          <item>
+            <itextId>site_liste-1</itextId>
+            <district>Bunkure</district>
+            <name>Bunkure</name>
+          </item>
+          <item>
+            <itextId>site_liste-2</itextId>
+            <district>Dambata</district>
+            <name>Ajumawa</name>
+          </item>
+          <item>
+            <itextId>site_liste-3</itextId>
+            <district>Dambata</district>
+            <name>Sansan</name>
+          </item>
+          <item>
+            <itextId>site_liste-4</itextId>
+            <district>Dawakin Kudu</district>
+            <name>Kogakaza</name>
+          </item>
+          <item>
+            <itextId>site_liste-5</itextId>
+            <district>Dawakin Kudu</district>
+            <name>Tanburawa Gari</name>
+          </item>
+          <item>
+            <itextId>site_liste-6</itextId>
+            <district>Dawakin Tofa</district>
+            <name>Kunnawa</name>
+          </item>
+          <item>
+            <itextId>site_liste-7</itextId>
+            <district>Dawakin Tofa</district>
+            <name>Sarauniya</name>
+          </item>
+          <item>
+            <itextId>site_liste-8</itextId>
+            <district>Fagge</district>
+            <name>Jabba</name>
+          </item>
+          <item>
+            <itextId>site_liste-9</itextId>
+            <district>Fagge</district>
+            <name>Yammata</name>
+          </item>
+          <item>
+            <itextId>site_liste-10</itextId>
+            <district>Garun Mallam</district>
+            <name>Dakasoye</name>
+          </item>
+          <item>
+            <itextId>site_liste-11</itextId>
+            <district>Garun Mallam</district>
+            <name>Garun Babba</name>
+          </item>
+          <item>
+            <itextId>site_liste-12</itextId>
+            <district>Gaya</district>
+            <name>G/North</name>
+          </item>
+          <item>
+            <itextId>site_liste-13</itextId>
+            <district>Gaya</district>
+            <name>Kademi</name>
+          </item>
+          <item>
+            <itextId>site_liste-14</itextId>
+            <district>Gwalle</district>
+            <name>Jaen</name>
+          </item>
+          <item>
+            <itextId>site_liste-15</itextId>
+            <district>Gwalle</district>
+            <name>Sani Mai Nagge</name>
+          </item>
+          <item>
+            <itextId>site_liste-16</itextId>
+            <district>Gwarzo</district>
+            <name>Kara</name>
+          </item>
+          <item>
+            <itextId>site_liste-17</itextId>
+            <district>Gwarzo</district>
+            <name>Koya</name>
+          </item>
+          <item>
+            <itextId>site_liste-18</itextId>
+            <district>Kabo</district>
+            <name>Durun</name>
+          </item>
+          <item>
+            <itextId>site_liste-19</itextId>
+            <district>Kabo</district>
+            <name>Gammo</name>
+          </item>
+          <item>
+            <itextId>site_liste-20</itextId>
+            <district>Kiru</district>
+            <name>Bauda</name>
+          </item>
+          <item>
+            <itextId>site_liste-21</itextId>
+            <district>Kiru</district>
+            <name>Kiru</name>
+          </item>
+          <item>
+            <itextId>site_liste-22</itextId>
+            <district>Kunchi</district>
+            <name>Matan Fada</name>
+          </item>
+          <item>
+            <itextId>site_liste-23</itextId>
+            <district>Kunchi</district>
+            <name>Shuwaki</name>
+          </item>
+          <item>
+            <itextId>site_liste-24</itextId>
+            <district>Kura</district>
+            <name>Dalili-Kura</name>
+          </item>
+          <item>
+            <itextId>site_liste-25</itextId>
+            <district>Kura</district>
+            <name>Karfi</name>
+          </item>
+          <item>
+            <itextId>site_liste-26</itextId>
+            <district>Madobi</district>
+            <name>Kwankwaso</name>
+          </item>
+          <item>
+            <itextId>site_liste-27</itextId>
+            <district>Madobi</district>
+            <name>Rikadawa</name>
+          </item>
+          <item>
+            <itextId>site_liste-28</itextId>
+            <district>Nassarawa</district>
+            <name>Getsi Tudun Murtala</name>
+          </item>
+          <item>
+            <itextId>site_liste-29</itextId>
+            <district>Nassarawa</district>
+            <name>Kofar Goji</name>
+          </item>
+          <item>
+            <itextId>site_liste-30</itextId>
+            <district>Rimin Gado</district>
+            <name>Rimin Gado</name>
+          </item>
+          <item>
+            <itextId>site_liste-31</itextId>
+            <district>Rimin Gado</district>
+            <name>Yalwa</name>
+          </item>
+          <item>
+            <itextId>site_liste-32</itextId>
+            <district>Rogo</district>
+            <name>Kaleku</name>
+          </item>
+          <item>
+            <itextId>site_liste-33</itextId>
+            <district>Rogo</district>
+            <name>Tajaye</name>
+          </item>
+          <item>
+            <itextId>site_liste-34</itextId>
+            <district>Shanono</district>
+            <name>Kofar Gabas</name>
+          </item>
+          <item>
+            <itextId>site_liste-35</itextId>
+            <district>Shanono</district>
+            <name>Marabutawa</name>
+          </item>
+          <item>
+            <itextId>site_liste-36</itextId>
+            <district>Takai</district>
+            <name>Faruruwa</name>
+          </item>
+          <item>
+            <itextId>site_liste-37</itextId>
+            <district>Takai</district>
+            <name>Kuka</name>
+          </item>
+          <item>
+            <itextId>site_liste-38</itextId>
+            <district>Tarauni</district>
+            <name>Dansinke</name>
+          </item>
+          <item>
+            <itextId>site_liste-39</itextId>
+            <district>Tarauni</district>
+            <name>Unguwa Uku Cikin Gari</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_type">
+        <root>
+          <item>
+            <itextId>site_type-0</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Bunkure</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-1</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Ajumawa</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-2</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Kogakaza</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-3</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Sarauniya</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-4</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Jabba</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-5</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Garun Babba</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-6</itextId>
+            <name>Sentinel site</name>
+            <site_liste>G/North</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-7</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Jaen</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-8</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Koya</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-9</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Durun</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-10</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Bauda</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-11</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Shuwaki</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-12</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Dalili-Kura</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-13</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Rikadawa</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-14</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Kofar Goji</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-15</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Rimin Gado</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-16</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Tajaye</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-17</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Marabutawa</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-18</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Faruruwa</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-19</itextId>
+            <name>Sentinel site</name>
+            <site_liste>Dansinke</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-20</itextId>
+            <name>Spot check</name>
+            <site_liste>Barkun Cikin Gari</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-21</itextId>
+            <name>Spot check</name>
+            <site_liste>Sansan</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-22</itextId>
+            <name>Spot check</name>
+            <site_liste>Tanburawa Gari</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-23</itextId>
+            <name>Spot check</name>
+            <site_liste>Kunnawa</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-24</itextId>
+            <name>Spot check</name>
+            <site_liste>Yammata</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-25</itextId>
+            <name>Spot check</name>
+            <site_liste>Dakasoye</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-26</itextId>
+            <name>Spot check</name>
+            <site_liste>Kademi</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-27</itextId>
+            <name>Spot check</name>
+            <site_liste>Sani Mai Nagge</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-28</itextId>
+            <name>Spot check</name>
+            <site_liste>Kara</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-29</itextId>
+            <name>Spot check</name>
+            <site_liste>Gammo</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-30</itextId>
+            <name>Spot check</name>
+            <site_liste>Kiru</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-31</itextId>
+            <name>Spot check</name>
+            <site_liste>Matan Fada</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-32</itextId>
+            <name>Spot check</name>
+            <site_liste>Karfi</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-33</itextId>
+            <name>Spot check</name>
+            <site_liste>Kwankwaso</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-34</itextId>
+            <name>Spot check</name>
+            <site_liste>Getsi Tudun Murtala</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-35</itextId>
+            <name>Spot check</name>
+            <site_liste>Yalwa</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-36</itextId>
+            <name>Spot check</name>
+            <site_liste>Kaleku</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-37</itextId>
+            <name>Spot check</name>
+            <site_liste>Kofar Gabas</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-38</itextId>
+            <name>Spot check</name>
+            <site_liste>Kuka</site_liste>
+          </item>
+          <item>
+            <itextId>site_type-39</itextId>
+            <name>Spot check</name>
+            <site_liste>Unguwa Uku Cikin Gari</site_liste>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_code">
+        <root>
+          <item>
+            <itextId>site_code-0</itextId>
+            <name>101</name>
+            <site_liste>Bunkure</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-1</itextId>
+            <name>102</name>
+            <site_liste>Ajumawa</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-2</itextId>
+            <name>103</name>
+            <site_liste>Kogakaza</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-3</itextId>
+            <name>104</name>
+            <site_liste>Sarauniya</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-4</itextId>
+            <name>105</name>
+            <site_liste>Jabba</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-5</itextId>
+            <name>106</name>
+            <site_liste>Garun Babba</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-6</itextId>
+            <name>107</name>
+            <site_liste>G/North</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-7</itextId>
+            <name>108</name>
+            <site_liste>Jaen</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-8</itextId>
+            <name>109</name>
+            <site_liste>Koya</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-9</itextId>
+            <name>110</name>
+            <site_liste>Durun</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-10</itextId>
+            <name>111</name>
+            <site_liste>Bauda</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-11</itextId>
+            <name>112</name>
+            <site_liste>Shuwaki</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-12</itextId>
+            <name>113</name>
+            <site_liste>Dalili-Kura</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-13</itextId>
+            <name>114</name>
+            <site_liste>Rikadawa</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-14</itextId>
+            <name>115</name>
+            <site_liste>Kofar Goji</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-15</itextId>
+            <name>116</name>
+            <site_liste>Rimin Gado</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-16</itextId>
+            <name>117</name>
+            <site_liste>Tajaye</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-17</itextId>
+            <name>118</name>
+            <site_liste>Marabutawa</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-18</itextId>
+            <name>119</name>
+            <site_liste>Faruruwa</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-19</itextId>
+            <name>120</name>
+            <site_liste>Dansinke</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-20</itextId>
+            <name>121</name>
+            <site_liste>Barkun Cikin Gari</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-21</itextId>
+            <name>122</name>
+            <site_liste>Sansan</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-22</itextId>
+            <name>123</name>
+            <site_liste>Tanburawa Gari</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-23</itextId>
+            <name>124</name>
+            <site_liste>Kunnawa</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-24</itextId>
+            <name>125</name>
+            <site_liste>Yammata</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-25</itextId>
+            <name>126</name>
+            <site_liste>Dakasoye</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-26</itextId>
+            <name>127</name>
+            <site_liste>Kademi</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-27</itextId>
+            <name>128</name>
+            <site_liste>Sani Mai Nagge</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-28</itextId>
+            <name>129</name>
+            <site_liste>Kara</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-29</itextId>
+            <name>130</name>
+            <site_liste>Gammo</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-30</itextId>
+            <name>131</name>
+            <site_liste>Kiru</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-31</itextId>
+            <name>132</name>
+            <site_liste>Matan Fada</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-32</itextId>
+            <name>133</name>
+            <site_liste>Karfi</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-33</itextId>
+            <name>134</name>
+            <site_liste>Kwankwaso</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-34</itextId>
+            <name>135</name>
+            <site_liste>Getsi Tudun Murtala</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-35</itextId>
+            <name>136</name>
+            <site_liste>Yalwa</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-36</itextId>
+            <name>137</name>
+            <site_liste>Kaleku</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-37</itextId>
+            <name>138</name>
+            <site_liste>Kofar Gabas</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-38</itextId>
+            <name>139</name>
+            <site_liste>Kuka</site_liste>
+          </item>
+          <item>
+            <itextId>site_code-39</itextId>
+            <name>140</name>
+            <site_liste>Unguwa Uku Cikin Gari</site_liste>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and . &lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder:jr:constraintMsg')" nodeset="/data/c_recorder" required="true()" type="int"/>
+      <bind nodeset="/data/c_region" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="/data/c_region" db_add_col_2="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_district" db_add_col_3="."/>
+      <bind nodeset="/data/c_site_type" required="true()" type="string"/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
+      <bind nodeset="/data/c_cluster_leader" required="true()" type="string"/>
+      <bind nodeset="/data/c_consent" required="true()" type="string"/>
+      <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'No'" type="string"/>
+      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder">
+      <label ref="jr:itext('/data/c_recorder:label')"/>
+      <hint ref="jr:itext('/data/c_recorder:hint')"/>
+    </input>
+    <select1 ref="/data/c_region">
+      <label ref="jr:itext('/data/c_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_region/Kano:label')"/>
+        <value>Kano</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+      <itemset nodeset="instance('district')/root/item[region =  /data/c_region ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+      <itemset nodeset="instance('site_liste')/root/item[district =  /data/c_district ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_site_type">
+      <label ref="jr:itext('/data/c_site_type:label')"/>
+      <itemset nodeset="instance('site_type')/root/item[site_liste=  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+      <itemset nodeset="instance('site_code')/root/item[site_liste=  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_cluster_leader">
+      <label ref="jr:itext('/data/c_cluster_leader:label')"/>
+    </input>
+    <select1 ref="/data/c_consent">
+      <label ref="jr:itext('/data/c_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_consent/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_consent/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <input ref="/data/c_ending_survey_note">
+      <label ref="jr:itext('/data/c_ending_survey_note:label')"/>
+    </input>
+    <input ref="/data/c_ClusterNotes">
+      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>

@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Octobre 2022) RDC TAS FL - 2.2 Formulaire Participants (Géo Helminthiases) V3</h:title>
+    <model >
+
+      <instance>
+        <data id="cd_lf_tas_2_participant_sth_202209_v3" version="20210928">
+          <s_recorderID/>
+          <s_province/>
+          <s_eu_name/>
+          <s_commune/>
+          <s_cluster_name/>
+          <s_cluster_id/>
+          <s_sex/>
+          <s_age_yrs/>
+          <s_num_ordre/>
+          <s_GenerateID/>
+          <s_lived_last_1yr/>
+          <s_oth_recent_subcounties/>
+          <s_length_reside/>
+          <s_bednet/>
+          <s_bednet_lastnight/>
+          <s_previous_trt/>
+          <s_wash_hand/>
+          <s_wash_hand_soap/>
+          <s_when_wash_hand/>
+          <s_when_wash_hand_soap/>
+          <s_why_wash_hand_soap/>
+          <s_notes/>
+          <s_start/>
+          <s_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/s_recorderID:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres.</value>
+          </text>
+          <text id="/data/s_recorderID:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/s_recorderID:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui a été attribué à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/s_province:label">
+            <value>Sélectionnez la Province</value>
+          </text>
+          <text id="/data/s_eu_name:label">
+            <value>Sélectionnez la Zone de santé</value>
+          </text>
+          <text id="/data/s_commune:label">
+            <value>Sélectionnez l'Aire de santé</value>
+          </text>
+          <text id="/data/s_cluster_name:label">
+            <value>Sélectionnez le nom de l'école</value>
+          </text>
+          <text id="/data/s_cluster_id:label">
+            <value>Sélectionnez le code de l'école</value>
+          </text>
+          <text id="/data/s_sex:label">
+            <value>Sexe du participant</value>
+          </text>
+          <text id="/data/s_sex/Masculin:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/s_sex/Feminin:label">
+            <value>Féminin</value>
+          </text>
+          <text id="/data/s_age_yrs:jr:constraintMsg">
+            <value>L'age doit être compris entre 8 et 10 ans</value>
+          </text>
+          <text id="/data/s_age_yrs:label">
+            <value>Entrez l'âge du participant (en années)</value>
+          </text>
+          <text id="/data/s_num_ordre:label">
+            <value>Veuillez entrer le numéro d'ordre du participant:</value>
+          </text>
+          <text id="/data/s_GenerateID:label">
+            <value>Le code d'identification unique du participant apparait sur l'écran. Veuiller l'enregistrer sur une liste séparée et sur chaque test de diagnostic administré.</value>
+          </text>
+          <text id="/data/s_lived_last_1yr:label">
+            <value>A1. Avez-vous vécu dans ce sous-comté au cours de la dernière année ?</value>
+          </text>
+          <text id="/data/s_lived_last_1yr/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/s_lived_last_1yr/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/s_oth_recent_subcounties:label">
+            <value>A2. Si non, dans quel autre sous-comté avez-vous vécu récemment ?</value>
+          </text>
+          <text id="/data/s_length_reside:label">
+            <value>A3. Pendant combien de temps avez-vous résidé dans ce dernier sous-comté ?</value>
+          </text>
+          <text id="/data/s_bednet:label">
+            <value>B1. Dormez-vous normalement sous une moustiquaire ?</value>
+          </text>
+          <text id="/data/s_bednet/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/s_bednet/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/s_bednet_lastnight:label">
+            <value>B2. Avez-vous dormi sous une moustiquaire la nuit dernière ?</value>
+          </text>
+          <text id="/data/s_bednet_lastnight/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/s_bednet_lastnight/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/s_previous_trt:label">
+            <value>C1. En comptant cette année, combien de fois avez-vous pris des comprimés pour la FL ?</value>
+          </text>
+          <text id="/data/s_wash_hand:label">
+            <value>Te laves-tu habituellement les mains ?</value>
+          </text>
+          <text id="/data/s_wash_hand/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/s_wash_hand/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/s_wash_hand_soap:label">
+            <value>Te laves-tu habituellement les mains avec du savon ?</value>
+          </text>
+          <text id="/data/s_wash_hand_soap/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/s_wash_hand_soap/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/s_when_wash_hand:label">
+            <value>Quand te laves-tu les mains ?</value>
+          </text>
+          <text id="/data/s_when_wash_hand/Before eating:label">
+            <value>Avant de manger</value>
+          </text>
+          <text id="/data/s_when_wash_hand/When hands are dirty:label">
+            <value>Lorsque les mains sont sales</value>
+          </text>
+          <text id="/data/s_when_wash_hand/After eating:label">
+            <value>Après avoir mangé</value>
+          </text>
+          <text id="/data/s_when_wash_hand/Before preparing food:label">
+            <value>Avant de préparer la nourriture</value>
+          </text>
+          <text id="/data/s_when_wash_hand/After visiting the toilet:label">
+            <value>Après être allé aux toilettes</value>
+          </text>
+          <text id="/data/s_when_wash_hand/When returning to the house from school:label">
+            <value>En rentrant de l'école à la maison</value>
+          </text>
+          <text id="/data/s_when_wash_hand/After changing the baby diaper:label">
+            <value>Après avoir changé la couche du bébé</value>
+          </text>
+          <text id="/data/s_when_wash_hand_soap:label">
+            <value>Quand te laves-tu les mains avec de l'eau et du savon ?</value>
+          </text>
+          <text id="/data/s_when_wash_hand_soap/Always wash with soap and water:label">
+            <value>Toujours se laver à l'eau et au savon</value>
+          </text>
+          <text id="/data/s_when_wash_hand_soap/Sometimes wash with soap and water:label">
+            <value>Parfois, avec de l'eau et du savon</value>
+          </text>
+          <text id="/data/s_when_wash_hand_soap/Never wash with soap and water:label">
+            <value>Jamais avec de l'eau et du savon</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap:label">
+            <value>Pourquoi te laves-tu les mains avec de l'eau et du savon ?</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap/Remove dirt/ make them clean:label">
+            <value>Enlever la saleté/les rendre propres</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap/Remove microbes/ bacteria:label">
+            <value>Éliminer les microbes/bactéries</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap/Personal appearance/ to look good:label">
+            <value>Apparence personnelle / avoir une belle apparence</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap/Prevent diseases:label">
+            <value>Prévenir les maladies</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap/Make hands smell good:label">
+            <value>Donner une bonne odeur aux mains</value>
+          </text>
+          <text id="/data/s_notes:label">
+            <value>Notes complémentaires</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/s_recorderID:jr:constraintMsg">
+            <value>The code must be a two-digit number</value>
+          </text>
+          <text id="/data/s_recorderID:label">
+            <value>Enter Recorder ID</value>
+          </text>
+          <text id="/data/s_recorderID:hint">
+            <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
+          </text>
+          <text id="/data/s_province:label">
+            <value>Select the province</value>
+          </text>
+          <text id="/data/s_eu_name:label">
+            <value>Select your evaluation unit (EU)</value>
+          </text>
+          <text id="/data/s_commune:label">
+            <value>Select your commune</value>
+          </text>
+          <text id="/data/s_cluster_name:label">
+            <value>Select your school name</value>
+          </text>
+          <text id="/data/s_cluster_id:label">
+            <value>Select your school id</value>
+          </text>
+          <text id="/data/s_sex:label">
+            <value>Sex of respondent</value>
+          </text>
+          <text id="/data/s_sex/Masculin:label">
+            <value>Male</value>
+          </text>
+          <text id="/data/s_sex/Feminin:label">
+            <value>Female</value>
+          </text>
+          <text id="/data/s_age_yrs:jr:constraintMsg">
+            <value>The age must be between 8 and 10 years</value>
+          </text>
+          <text id="/data/s_age_yrs:label">
+            <value>Enter age in years</value>
+          </text>
+          <text id="/data/s_num_ordre:label">
+            <value>Number order</value>
+          </text>
+          <text id="/data/s_GenerateID:label">
+            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
+          </text>
+          <text id="/data/s_lived_last_1yr:label">
+            <value>A1. Have you lived in this Sub-County for the last 1 year?</value>
+          </text>
+          <text id="/data/s_lived_last_1yr/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_lived_last_1yr/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_oth_recent_subcounties:label">
+            <value>A2. If no, which is the last recent other Sub-County you lived in?</value>
+          </text>
+          <text id="/data/s_length_reside:label">
+            <value>A3. For how long did you reside in that recent last Sub-County?</value>
+          </text>
+          <text id="/data/s_bednet:label">
+            <value>B1. Do you normally sleep under a bed net?</value>
+          </text>
+          <text id="/data/s_bednet/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_bednet/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_bednet_lastnight:label">
+            <value>B2. Did you sleep under a bed net last night?</value>
+          </text>
+          <text id="/data/s_bednet_lastnight/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_bednet_lastnight/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_previous_trt:label">
+            <value>C1. Including this year, how many times have you taken pills for LF?</value>
+          </text>
+          <text id="/data/s_wash_hand:label">
+            <value>Do you usually wash your hands?</value>
+          </text>
+          <text id="/data/s_wash_hand/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_wash_hand/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_wash_hand_soap:label">
+            <value>Do you usually wash your hands with soap?</value>
+          </text>
+          <text id="/data/s_wash_hand_soap/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/s_wash_hand_soap/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/s_when_wash_hand:label">
+            <value>When do you wash your hands?</value>
+          </text>
+          <text id="/data/s_when_wash_hand/Before eating:label">
+            <value>Before eating</value>
+          </text>
+          <text id="/data/s_when_wash_hand/When hands are dirty:label">
+            <value>When hands are dirty</value>
+          </text>
+          <text id="/data/s_when_wash_hand/After eating:label">
+            <value>After eating</value>
+          </text>
+          <text id="/data/s_when_wash_hand/Before preparing food:label">
+            <value>Before preparing food</value>
+          </text>
+          <text id="/data/s_when_wash_hand/After visiting the toilet:label">
+            <value>After visiting the toilet</value>
+          </text>
+          <text id="/data/s_when_wash_hand/When returning to the house from school:label">
+            <value>When returning to the house from school</value>
+          </text>
+          <text id="/data/s_when_wash_hand/After changing the baby diaper:label">
+            <value>After changing the baby diaper</value>
+          </text>
+          <text id="/data/s_when_wash_hand_soap:label">
+            <value>When do you wash your hands with soap and water?</value>
+          </text>
+          <text id="/data/s_when_wash_hand_soap/Always wash with soap and water:label">
+            <value>Always wash with soap and water</value>
+          </text>
+          <text id="/data/s_when_wash_hand_soap/Sometimes wash with soap and water:label">
+            <value>Sometimes wash with soap and water</value>
+          </text>
+          <text id="/data/s_when_wash_hand_soap/Never wash with soap and water:label">
+            <value>Never wash with soap and water</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap:label">
+            <value>Why do you wash your hands with water and soap?</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap/Remove dirt/ make them clean:label">
+            <value>Remove dirt/ make them clean</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap/Remove microbes/ bacteria:label">
+            <value>Remove microbes/ bacteria</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap/Personal appearance/ to look good:label">
+            <value>Personal appearance/ to look good</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap/Prevent diseases:label">
+            <value>Prevent diseases</value>
+          </text>
+          <text id="/data/s_why_wash_hand_soap/Make hands smell good:label">
+            <value>Make hands smell good</value>
+          </text>
+          <text id="/data/s_notes:label">
+            <value>Additional Notes</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/s_recorderID:jr:constraintMsg')" nodeset="/data/s_recorderID" required="true()" type="string"/>
+      <bind nodeset="/data/s_province" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/s_eu_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/s_province"/>
+      <bind nodeset="/data/s_commune" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/s_eu_name"/>
+      <bind nodeset="/data/s_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/s_commune"/>
+      <bind nodeset="/data/s_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/s_cluster_name"/>
+      <bind nodeset="/data/s_sex" required="true()" type="string"/>
+      <bind constraint=". &gt;= 8 and . &lt;= 10" jr:constraintMsg="jr:itext('/data/s_age_yrs:jr:constraintMsg')" nodeset="/data/s_age_yrs" required="true()" type="int"/>
+      <bind nodeset="/data/s_num_ordre" required="true()" type="int"/>
+      <bind calculate="concat( /data/s_cluster_id ,'-',if( /data/s_num_ordre  &lt; 10, concat('00', /data/s_num_ordre ), if( /data/s_num_ordre &gt;=10 and  /data/s_num_ordre  &lt;100, concat('0',  /data/s_num_ordre ),  /data/s_num_ordre )))" nodeset="/data/s_GenerateID" readonly="true()" required="true()" type="string" db_add_col_6="." db_add_col_7="/data/s_cluster_id" />
+      <bind nodeset="/data/s_lived_last_1yr" required="true()" type="string"/>
+      <bind nodeset="/data/s_oth_recent_subcounties" required="true()" type="string"/>
+      <bind nodeset="/data/s_length_reside" required="true()" type="int"/>
+      <bind nodeset="/data/s_bednet" required="true()" type="string"/>
+      <bind nodeset="/data/s_bednet_lastnight" required="true()" type="string"/>
+      <bind nodeset="/data/s_previous_trt" required="true()" type="int"/>
+      <bind nodeset="/data/s_wash_hand" required="true()" type="string"/>
+      <bind nodeset="/data/s_wash_hand_soap" required="true()" type="string"/>
+      <bind nodeset="/data/s_when_wash_hand" required="true()" type="string"/>
+      <bind nodeset="/data/s_when_wash_hand_soap" required="true()" type="string"/>
+      <bind nodeset="/data/s_why_wash_hand_soap" required="true()" type="string"/>
+      <bind nodeset="/data/s_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/s_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/s_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/s_recorderID">
+      <label ref="jr:itext('/data/s_recorderID:label')"/>
+      <hint ref="jr:itext('/data/s_recorderID:hint')"/>
+    </input>
+    <input ref="/data/s_province">
+      <label ref="jr:itext('/data/s_province:label')"/>
+    </input>
+    <input ref="/data/s_eu_name">
+      <label ref="jr:itext('/data/s_eu_name:label')"/>
+    </input>
+    <input ref="/data/s_commune">
+      <label ref="jr:itext('/data/s_commune:label')"/>
+    </input>
+    <input ref="/data/s_cluster_name">
+      <label ref="jr:itext('/data/s_cluster_name:label')"/>
+    </input>
+    <input ref="/data/s_cluster_id">
+      <label ref="jr:itext('/data/s_cluster_id:label')"/>
+    </input>
+    <select1 ref="/data/s_sex">
+      <label ref="jr:itext('/data/s_sex:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_sex/Masculin:label')"/>
+        <value>Masculin</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_sex/Feminin:label')"/>
+        <value>Feminin</value>
+      </item>
+    </select1>
+    <input ref="/data/s_age_yrs">
+      <label ref="jr:itext('/data/s_age_yrs:label')"/>
+    </input>
+    <input ref="/data/s_num_ordre">
+      <label ref="jr:itext('/data/s_num_ordre:label')"/>
+    </input>
+    <input ref="/data/s_GenerateID">
+      <label ref="jr:itext('/data/s_GenerateID:label')"/>
+    </input>
+    <select1 ref="/data/s_lived_last_1yr">
+      <label ref="jr:itext('/data/s_lived_last_1yr:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_lived_last_1yr/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_lived_last_1yr/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/s_oth_recent_subcounties">
+      <label ref="jr:itext('/data/s_oth_recent_subcounties:label')"/>
+    </input>
+    <input ref="/data/s_length_reside">
+      <label ref="jr:itext('/data/s_length_reside:label')"/>
+    </input>
+    <select1 ref="/data/s_bednet">
+      <label ref="jr:itext('/data/s_bednet:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_bednet/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_bednet/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_bednet_lastnight">
+      <label ref="jr:itext('/data/s_bednet_lastnight:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_bednet_lastnight/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_bednet_lastnight/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/s_previous_trt">
+      <label ref="jr:itext('/data/s_previous_trt:label')"/>
+    </input>
+    <select1 ref="/data/s_wash_hand">
+      <label ref="jr:itext('/data/s_wash_hand:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_wash_hand/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_wash_hand/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_wash_hand_soap">
+      <label ref="jr:itext('/data/s_wash_hand_soap:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_wash_hand_soap/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_wash_hand_soap/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_when_wash_hand">
+      <label ref="jr:itext('/data/s_when_wash_hand:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_when_wash_hand/Before eating:label')"/>
+        <value>Before eating</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_when_wash_hand/When hands are dirty:label')"/>
+        <value>When hands are dirty</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_when_wash_hand/After eating:label')"/>
+        <value>After eating</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_when_wash_hand/Before preparing food:label')"/>
+        <value>Before preparing food</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_when_wash_hand/After visiting the toilet:label')"/>
+        <value>After visiting the toilet</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_when_wash_hand/When returning to the house from school:label')"/>
+        <value>When returning to the house from school</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_when_wash_hand/After changing the baby diaper:label')"/>
+        <value>After changing the baby diaper</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_when_wash_hand_soap">
+      <label ref="jr:itext('/data/s_when_wash_hand_soap:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_when_wash_hand_soap/Always wash with soap and water:label')"/>
+        <value>Always wash with soap and water</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_when_wash_hand_soap/Sometimes wash with soap and water:label')"/>
+        <value>Sometimes wash with soap and water</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_when_wash_hand_soap/Never wash with soap and water:label')"/>
+        <value>Never wash with soap and water</value>
+      </item>
+    </select1>
+    <select1 ref="/data/s_why_wash_hand_soap">
+      <label ref="jr:itext('/data/s_why_wash_hand_soap:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_why_wash_hand_soap/Remove dirt/ make them clean:label')"/>
+        <value>Remove dirt/ make them clean</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_why_wash_hand_soap/Remove microbes/ bacteria:label')"/>
+        <value>Remove microbes/ bacteria</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_why_wash_hand_soap/Personal appearance/ to look good:label')"/>
+        <value>Personal appearance/ to look good</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_why_wash_hand_soap/Prevent diseases:label')"/>
+        <value>Prevent diseases</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_why_wash_hand_soap/Make hands smell good:label')"/>
+        <value>Make hands smell good</value>
+      </item>
+    </select1>
+    <input ref="/data/s_notes">
+      <label ref="jr:itext('/data/s_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
