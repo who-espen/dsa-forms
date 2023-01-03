@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Nov 2022) OEM - 3. Formulaire Resultat</h:title>
+    <model >
+
+      <instance>
+        <data id="sr_oncho_oem_3_resultat_202211">
+          <r_recorder_id/>
+          <r_district/>
+          <r_cluster_name/>
+          <r_cluster_id/>
+          <r_serial_number1/>
+          <r_serial_number2/>
+          <r_code_id/>
+          <r_ov16/>
+          <r_Notes/>
+          <r_StartTime/>
+          <r_EndTime/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/r_recorder_id:jr:constraintMsg">
+            <value>Must be between 10 and 99 included</value>
+          </text>
+          <text id="/data/r_recorder_id:label">
+            <value>Enter the recorder number</value>
+          </text>
+          <text id="/data/r_recorder_id:hint">
+            <value>2-digit code assigned to you</value>
+          </text>
+          <text id="/data/r_district:label">
+            <value>Select the district :</value>
+          </text>
+          <text id="/data/r_district/BONTHE:label">
+            <value>BONTHE</value>
+          </text>
+          <text id="/data/r_district/WESTERN RURAL:label">
+            <value>WESTERN RURAL</value>
+          </text>
+          <text id="/data/r_cluster_name:label">
+            <value>Select the village or community</value>
+          </text>
+          <text id="/data/r_cluster_id:label">
+            <value>Select the village or community</value>
+          </text>
+          <text id="/data/r_serial_number1:jr:constraintMsg">
+            <value>Must be a three-digit number. example: 001</value>
+          </text>
+          <text id="/data/r_serial_number1:label">
+            <value>Please, enter the participant serial number</value>
+          </text>
+          <text id="/data/r_serial_number2:jr:constraintMsg">
+            <value>Le code répété doit être le même</value>
+          </text>
+          <text id="/data/r_serial_number2:label">
+            <value>Please, repeat the participant serial number</value>
+          </text>
+          <text id="/data/r_code_id:label">
+            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
+          </text>
+          <text id="/data/r_ov16:label">
+            <value>OV16 test result</value>
+          </text>
+          <text id="/data/r_ov16/Positive:label">
+            <value>Positive</value>
+          </text>
+          <text id="/data/r_ov16/Negative:label">
+            <value>Negative</value>
+          </text>
+          <text id="/data/r_ov16/Invalid.(including.test.errors.and.insufficient.blood):label">
+            <value>Invalid (including test errors and insufficient blood)</value>
+          </text>
+          <text id="/data/r_ov16/Refused.(withdrawal.of.consent):label">
+            <value>Refused (withdrawal of consent)</value>
+          </text>
+          <text id="/data/r_Notes:label">
+            <value>Additional notes</value>
+          </text>
+          <text id="yesNoDontKnow-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesNoDontKnow-1">
+            <value>No</value>
+          </text>
+          <text id="yesNoDontKnow-2">
+            <value>Do not know</value>
+          </text>
+          <text id="yesNo-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesNo-1">
+            <value>No</value>
+          </text>
+          <text id="ID_method_list-0">
+            <value>Scanner le QR Code</value>
+          </text>
+          <text id="ID_method_list-1">
+            <value>Entrer Manuellement le code (En cas de problème avec votre scanner de code QR)</value>
+          </text>
+          <text id="results-0">
+            <value>Positive</value>
+          </text>
+          <text id="results-1">
+            <value>Negative</value>
+          </text>
+          <text id="results-2">
+            <value>Invalid (including test errors and insufficient blood)</value>
+          </text>
+          <text id="results-3">
+            <value>Refused (withdrawal of consent)</value>
+          </text>
+          <text id="why_invalid-0">
+            <value>No control line</value>
+          </text>
+          <text id="why_invalid-1">
+            <value>Broken/partial control line</value>
+          </text>
+          <text id="why_invalid-2">
+            <value>Difficulty in sample uptake</value>
+          </text>
+          <text id="why_invalid-3">
+            <value>Difficulty with sample migration</value>
+          </text>
+          <text id="why_invalid-4">
+            <value>Trace of blood remains</value>
+          </text>
+          <text id="why_invalid-5">
+            <value>Insufficient blood volume due to pipette</value>
+          </text>
+          <text id="why_invalid-6">
+            <value>Other (explain)</value>
+          </text>
+          <text id="district_list-0">
+            <value>BONTHE</value>
+          </text>
+          <text id="district_list-1">
+            <value>WESTERN RURAL</value>
+          </text>
+          <text id="community-0">
+            <value># 2 RIVER</value>
+          </text>
+          <text id="community-1">
+            <value>BULLOM</value>
+          </text>
+          <text id="community-2">
+            <value>China Compound</value>
+          </text>
+          <text id="community-3">
+            <value>Gbap</value>
+          </text>
+          <text id="community-4">
+            <value>John obay</value>
+          </text>
+          <text id="community-5">
+            <value>MARCDONAL</value>
+          </text>
+          <text id="community-6">
+            <value>Momaria</value>
+          </text>
+          <text id="community-7">
+            <value>Senjehun</value>
+          </text>
+          <text id="community-8">
+            <value>Tissana</value>
+          </text>
+          <text id="community-9">
+            <value>TOMBO</value>
+          </text>
+          <text id="community-10">
+            <value>Wales</value>
+          </text>
+          <text id="community-11">
+            <value>Yargoi</value>
+          </text>
+          <text id="community_id-0">
+            <value>101</value>
+          </text>
+          <text id="community_id-1">
+            <value>102</value>
+          </text>
+          <text id="community_id-2">
+            <value>103</value>
+          </text>
+          <text id="community_id-3">
+            <value>104</value>
+          </text>
+          <text id="community_id-4">
+            <value>105</value>
+          </text>
+          <text id="community_id-5">
+            <value>106</value>
+          </text>
+          <text id="community_id-6">
+            <value>107</value>
+          </text>
+          <text id="community_id-7">
+            <value>108</value>
+          </text>
+          <text id="community_id-8">
+            <value>109</value>
+          </text>
+          <text id="community_id-9">
+            <value>110</value>
+          </text>
+          <text id="community_id-10">
+            <value>111</value>
+          </text>
+          <text id="community_id-11">
+            <value>112</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="yesNoDontKnow">
+        <root>
+          <item>
+            <itextId>yesNoDontKnow-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-1</itextId>
+            <name>No</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-2</itextId>
+            <name>Do not know</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yesNo">
+        <root>
+          <item>
+            <itextId>yesNo-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesNo-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="ID_method_list">
+        <root>
+          <item>
+            <itextId>ID_method_list-0</itextId>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <itextId>ID_method_list-1</itextId>
+            <name>Manual</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="results">
+        <root>
+          <item>
+            <itextId>results-0</itextId>
+            <name>Positive</name>
+          </item>
+          <item>
+            <itextId>results-1</itextId>
+            <name>Negative</name>
+          </item>
+          <item>
+            <itextId>results-2</itextId>
+            <name>Invalid.(including.test.errors.and.insufficient.blood)</name>
+          </item>
+          <item>
+            <itextId>results-3</itextId>
+            <name>Refused.(withdrawal.of.consent)</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="why_invalid">
+        <root>
+          <item>
+            <itextId>why_invalid-0</itextId>
+            <name>No.control.line</name>
+          </item>
+          <item>
+            <itextId>why_invalid-1</itextId>
+            <name>Broken/partial.control.line</name>
+          </item>
+          <item>
+            <itextId>why_invalid-2</itextId>
+            <name>Difficulty.in.sample.uptake</name>
+          </item>
+          <item>
+            <itextId>why_invalid-3</itextId>
+            <name>Difficulty.with.sample.migration</name>
+          </item>
+          <item>
+            <itextId>why_invalid-4</itextId>
+            <name>Trace.of.blood.remains</name>
+          </item>
+          <item>
+            <itextId>why_invalid-5</itextId>
+            <name>Insufficient.blood.volume.due.to.pipette</name>
+          </item>
+          <item>
+            <itextId>why_invalid-6</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>BONTHE</name>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>WESTERN RURAL</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="community">
+        <root>
+          <item>
+            <itextId>community-0</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name># 2 RIVER</name>
+          </item>
+          <item>
+            <itextId>community-1</itextId>
+            <district_list>BONTHE</district_list>
+            <name>BULLOM</name>
+          </item>
+          <item>
+            <itextId>community-2</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name>China Compound</name>
+          </item>
+          <item>
+            <itextId>community-3</itextId>
+            <district_list>BONTHE</district_list>
+            <name>Gbap</name>
+          </item>
+          <item>
+            <itextId>community-4</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name>John obay</name>
+          </item>
+          <item>
+            <itextId>community-5</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name>MARCDONAL</name>
+          </item>
+          <item>
+            <itextId>community-6</itextId>
+            <district_list>BONTHE</district_list>
+            <name>Momaria</name>
+          </item>
+          <item>
+            <itextId>community-7</itextId>
+            <district_list>BONTHE</district_list>
+            <name>Senjehun</name>
+          </item>
+          <item>
+            <itextId>community-8</itextId>
+            <district_list>BONTHE</district_list>
+            <name>Tissana</name>
+          </item>
+          <item>
+            <itextId>community-9</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name>TOMBO</name>
+          </item>
+          <item>
+            <itextId>community-10</itextId>
+            <district_list>WESTERN RURAL</district_list>
+            <name>Wales</name>
+          </item>
+          <item>
+            <itextId>community-11</itextId>
+            <district_list>BONTHE</district_list>
+            <name>Yargoi</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="community_id">
+        <root>
+          <item>
+            <itextId>community_id-0</itextId>
+            <community>China Compound</community>
+            <name>101</name>
+          </item>
+          <item>
+            <itextId>community_id-1</itextId>
+            <community># 2 RIVER</community>
+            <name>102</name>
+          </item>
+          <item>
+            <itextId>community_id-2</itextId>
+            <community>Wales</community>
+            <name>103</name>
+          </item>
+          <item>
+            <itextId>community_id-3</itextId>
+            <community>John obay</community>
+            <name>104</name>
+          </item>
+          <item>
+            <itextId>community_id-4</itextId>
+            <community>TOMBO</community>
+            <name>105</name>
+          </item>
+          <item>
+            <itextId>community_id-5</itextId>
+            <community>MARCDONAL</community>
+            <name>106</name>
+          </item>
+          <item>
+            <itextId>community_id-6</itextId>
+            <community>BULLOM</community>
+            <name>107</name>
+          </item>
+          <item>
+            <itextId>community_id-7</itextId>
+            <community>Gbap</community>
+            <name>108</name>
+          </item>
+          <item>
+            <itextId>community_id-8</itextId>
+            <community>Yargoi</community>
+            <name>109</name>
+          </item>
+          <item>
+            <itextId>community_id-9</itextId>
+            <community>Momaria</community>
+            <name>110</name>
+          </item>
+          <item>
+            <itextId>community_id-10</itextId>
+            <community>Senjehun</community>
+            <name>111</name>
+          </item>
+          <item>
+            <itextId>community_id-11</itextId>
+            <community>Tissana</community>
+            <name>112</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/r_recorder_id:jr:constraintMsg')" nodeset="/data/r_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/r_district" required="true()" type="string"/>
+      <bind nodeset="/data/r_cluster_name" required="true()" type="string"/>
+      <bind nodeset="/data/r_cluster_id" required="true()" type="string"/>
+      <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/r_serial_number1:jr:constraintMsg')" nodeset="/data/r_serial_number1" required="true()" type="string"/>
+      <bind constraint=". =  /data/r_serial_number1 " jr:constraintMsg="jr:itext('/data/r_serial_number2:jr:constraintMsg')" nodeset="/data/r_serial_number2" required="true()" type="string"/>
+      <bind calculate="concat( /data/r_recorder_id , '-',  /data/r_cluster_id , '-',  /data/r_serial_number1 )" nodeset="/data/r_code_id" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/data/r_ov16" required="true()" type="string"/>
+      <bind nodeset="/data/r_Notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_StartTime" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/r_EndTime" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/r_recorder_id">
+      <label ref="jr:itext('/data/r_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/r_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/r_district">
+      <label ref="jr:itext('/data/r_district:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_district/BONTHE:label')"/>
+        <value>BONTHE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_district/WESTERN RURAL:label')"/>
+        <value>WESTERN RURAL</value>
+      </item>
+    </select1>
+    <select1 ref="/data/r_cluster_name">
+      <label ref="jr:itext('/data/r_cluster_name:label')"/>
+      <itemset nodeset="instance('community')/root/item[district_list =  /data/r_district ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/r_cluster_id">
+      <label ref="jr:itext('/data/r_cluster_id:label')"/>
+      <itemset nodeset="instance('community_id')/root/item[community =  /data/r_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/r_serial_number1">
+      <label ref="jr:itext('/data/r_serial_number1:label')"/>
+    </input>
+    <input ref="/data/r_serial_number2">
+      <label ref="jr:itext('/data/r_serial_number2:label')"/>
+    </input>
+    <input ref="/data/r_code_id">
+      <label ref="jr:itext('/data/r_code_id:label')"/>
+    </input>
+    <select1 ref="/data/r_ov16">
+      <label ref="jr:itext('/data/r_ov16:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_ov16/Positive:label')"/>
+        <value>Positive</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_ov16/Negative:label')"/>
+        <value>Negative</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_ov16/Invalid.(including.test.errors.and.insufficient.blood):label')"/>
+        <value>Invalid.(including.test.errors.and.insufficient.blood)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_ov16/Refused.(withdrawal.of.consent):label')"/>
+        <value>Refused.(withdrawal.of.consent)</value>
+      </item>
+    </select1>
+    <input ref="/data/r_Notes">
+      <label ref="jr:itext('/data/r_Notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
