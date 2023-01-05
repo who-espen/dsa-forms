@@ -35,7 +35,7 @@
           </meta>
         </data>
       </instance>
-      
+
       <itext>
         <translation default="true()" lang="French">
           <text id="/data/u_recorder:label">
@@ -91,6 +91,9 @@
           </text>
           <text id="/data/u_Consentement/2_non:label">
             <value>Non</value>
+          </text>
+          <text id="/data/u_Code_site:jr:constraintMsg">
+            <value>3 prmières letrre du village en lettre majuscule</value>
           </text>
           <text id="/data/u_Code_site:label">
             <value>Code site</value>
@@ -948,9 +951,9 @@
       <bind nodeset="/data/u_district" required="true()" type="string"/>
       <bind nodeset="/data/u_csps" required="true()" type="string"/>
       <bind nodeset="/data/u_Consentement" type="string"/>
-      <bind nodeset="/data/u_Code_site" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[A-Z]{3}$')" jr:constraintMsg="jr:itext('/data/u_Code_site:jr:constraintMsg')" nodeset="/data/u_Code_site" required="true()" type="string"/>
       <bind constraint=". &lt;30" jr:constraintMsg="jr:itext('/data/u_Numero_Enquete:jr:constraintMsg')" nodeset="/data/u_Numero_Enquete" required="true()" type="string"/>
-      <bind calculate="concat( /data/u_recorder , '_',  /data/u_Code_site  ,'_',  /data/u_Numero_Enquete )" jr:constraintMsg="jr:itext('/data/u_Numero_Enquete_complet:jr:constraintMsg')" nodeset="/data/u_Numero_Enquete_complet" required="true()" type="string"/>
+      <bind calculate="concat( /data/u_recorder , '_',  /data/u_Code_site  ,'_',  /data/u_Numero_Enquete )" jr:constraintMsg="jr:itext('/data/u_Numero_Enquete_complet:jr:constraintMsg')" nodeset="/data/u_Numero_Enquete_complet" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/u_Echantilliontraite" required="true()" type="string"/>
       <bind nodeset="/data/u_volumeurine" relevant=" /data/u_Echantilliontraite  = '1_oui'" required="true()" type="int"/>
       <bind nodeset="/data/u_Microhematurie" relevant=" /data/u_Echantilliontraite  = '1_oui'" required="true()" type="string"/>
