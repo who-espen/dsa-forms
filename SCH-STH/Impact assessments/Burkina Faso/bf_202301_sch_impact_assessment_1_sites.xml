@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Jan 2023) impact schisto - 1. Formulaire Village</h:title>
+    <h:title>(BF - Jan 2023) impact schisto - 1. Formulaire Village V2</h:title>
     <model >
 
       <instance>
-        <data id="bf_202301_sch_impact_assessment_1_sites">
+        <data id="bf_202301_sch_impact_assessment_1_sites_v2">
           <c_recorder/>
           <c_drshp/>
           <c_district/>
@@ -236,7 +236,7 @@
             <value>Non</value>
           </text>
           <text id="/data/c_eaulavage:label">
-            <value>Y a-t-il de l'eau pour se laver les mains après être allé aux toilettes(observer)?</value>
+            <value>Y a-t-il de l'eau et du savon pour se laver dans le dispositif (observer)?</value>
           </text>
           <text id="/data/c_eaulavage/1_Pas_eau:label">
             <value>1_Pas d'eau</value>
@@ -263,7 +263,7 @@
             <value>3_Jamais</value>
           </text>
           <text id="/data/c_sourceeau:label">
-            <value>Y a-t-il un source d'eau dans le village</value>
+            <value>Y a-t-il une source d'eau dans le village ?</value>
           </text>
           <text id="/data/c_sourceeau/1_Aucun:label">
             <value>1_Aucun</value>
@@ -284,7 +284,7 @@
             <value>6_Autre surface humide (spécifier</value>
           </text>
           <text id="/data/c_permancesource:label">
-            <value>Cette source d'eau se dessèche-t-elle pendant la saison des pluies?</value>
+            <value>Cette source d'eau se dessèche-t-elle pendant la saison sèche ?</value>
           </text>
           <text id="/data/c_permancesource/Oui:label">
             <value>Oui</value>
@@ -1419,10 +1419,10 @@
       <bind nodeset="/data/c_latrinetype" relevant=" /data/c_latrine  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/c_Conditionlatrine" relevant=" /data/c_latrine  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/c_existencedispositif" required="true()" type="string"/>
-      <bind nodeset="/data/c_eaulavage" relevant=" /data/c_existencedispositif  = 'oui'" required="true()" type="string"/>
+      <bind nodeset="/data/c_eaulavage" relevant=" /data/c_existencedispositif  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/c_sourceeau" required="true()" type="string"/>
-      <bind nodeset="/data/c_permancesource" required="true()" type="string"/>
-      <bind nodeset="/data/c_activites" required="true()" type="string"/>
+      <bind nodeset="/data/c_permancesource" relevant=" /data/c_sourceeau != '1_Aucun'" required="true()" type="string"/>
+      <bind nodeset="/data/c_activites" relevant=" /data/c_sourceeau != '1_Aucun'" required="true()" type="string"/>
       <bind nodeset="/data/c_Casschisto" required="true()" type="string"/>
       <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/c_commentaires" type="string"/>

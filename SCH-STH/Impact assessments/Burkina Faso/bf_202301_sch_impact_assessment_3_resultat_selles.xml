@@ -7,16 +7,15 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Jan 2023) impact schisto - 3. Formulaire Resultats Selles</h:title>
+    <h:title>(BF - Jan 2023) impact schisto - 3. Formulaire Resultats Selles V2</h:title>
     <model >
 
       <instance>
-        <data id="bf_202301_sch_impact_assessment_3_resultat_selles">
+        <data id="bf_202301_sch_impact_assessment_3_resultat_selles_v2">
           <d_recorder/>
           <d_drshp/>
           <d_district/>
           <d_csps/>
-          <d_Consentement/>
           <d_Code_site/>
           <d_Numero_Enquete/>
           <d_Numero_Enquete_complet/>
@@ -93,15 +92,6 @@
           </text>
           <text id="/data/d_csps:label">
             <value>CSPS</value>
-          </text>
-          <text id="/data/d_Consentement:label">
-            <value>Le répondant a-t-il donné son consentement?</value>
-          </text>
-          <text id="/data/d_Consentement/1_oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/d_Consentement/2_non:label">
-            <value>Non</value>
           </text>
           <text id="/data/d_Code_site:jr:constraintMsg">
             <value>3 prmières letrre du village en lettre majuscule</value>
@@ -936,7 +926,6 @@
       <bind nodeset="/data/d_drshp" required="true()" type="string"/>
       <bind nodeset="/data/d_district" required="true()" type="string"/>
       <bind nodeset="/data/d_csps" required="true()" type="string"/>
-      <bind nodeset="/data/d_Consentement" type="string"/>
       <bind constraint="regex(.,'^[A-Z]{3}$')" jr:constraintMsg="jr:itext('/data/d_Code_site:jr:constraintMsg')" nodeset="/data/d_Code_site" required="true()" type="string"/>
       <bind constraint=". &lt;30" jr:constraintMsg="jr:itext('/data/d_Numero_Enquete:jr:constraintMsg')" nodeset="/data/d_Numero_Enquete" required="true()" type="int"/>
       <bind calculate="concat( /data/d_recorder , '_',  /data/d_Code_site  ,'_',  /data/d_Numero_Enquete )" jr:constraintMsg="jr:itext('/data/d_Numero_Enquete_complet:jr:constraintMsg')" nodeset="/data/d_Numero_Enquete_complet" readonly="true()" required="true()" type="string"/>
@@ -1028,17 +1017,6 @@
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
-    </select1>
-    <select1 ref="/data/d_Consentement">
-      <label ref="jr:itext('/data/d_Consentement:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_Consentement/1_oui:label')"/>
-        <value>1_oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_Consentement/2_non:label')"/>
-        <value>2_non</value>
-      </item>
     </select1>
     <input ref="/data/d_Code_site">
       <label ref="jr:itext('/data/d_Code_site:label')"/>
