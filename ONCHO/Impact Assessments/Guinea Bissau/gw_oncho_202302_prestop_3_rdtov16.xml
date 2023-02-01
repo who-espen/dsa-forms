@@ -1,0 +1,3714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Fev 2022) ONCHO PreStop - 3. RDT OV16 Form</h:title>
+    <model >
+
+      <instance>
+        <data id="gw_oncho_202302_prestop_3_rdtov16">
+          <d_recorder_id/>
+          <d_region/>
+          <d_District/>
+          <d_Cluster_Name/>
+          <d_cluster_id/>
+          <d_Cluster_Name2/>
+          <d_cluster_id2/>
+          <d_LabOV162ndTest/>
+          <d_lotnumber/>
+          <d_id_method/>
+          <d_serial_number1/>
+          <d_serial_number2/>
+          <d_code_id/>
+          <d_barcode_id/>
+          <d_LabOV16/>
+          <d_LabOV16Invalid/>
+          <d_LabOV16Invalid_other/>
+          <d_Notes/>
+          <d_StartTime/>
+          <d_EndTime/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="Portugese">
+          <text id="/data/d_recorder_id:jr:constraintMsg">
+            <value>O código deve ser um número de dois algarismos entre 9 e 99</value>
+          </text>
+          <text id="/data/d_recorder_id:label">
+            <value>Introduzir o ID do gravador</value>
+          </text>
+          <text id="/data/d_recorder_id:hint">
+            <value>Código de dois dígitos atribuído a si</value>
+          </text>
+          <text id="/data/d_region:label">
+            <value>Seleccione um departamento</value>
+          </text>
+          <text id="/data/d_region/Bafata:label">
+            <value>Bafata</value>
+          </text>
+          <text id="/data/d_region/Gabu:label">
+            <value>Gabu</value>
+          </text>
+          <text id="/data/d_District:label">
+            <value>Seleccione uma comuna</value>
+          </text>
+          <text id="/data/d_Cluster_Name:label">
+            <value>Introduza o nome do agrupamento</value>
+          </text>
+          <text id="/data/d_cluster_id:label">
+            <value>Introduza o ID do agrupamento</value>
+          </text>
+          <text id="/data/d_Cluster_Name2:label">
+            <value>Introduza o nome da outra comunidade</value>
+          </text>
+          <text id="/data/d_cluster_id2:label">
+            <value>Introduza o nome da comunidade do código</value>
+          </text>
+          <text id="/data/d_LabOV162ndTest:label">
+            <value>É este um segundo teste OV16</value>
+          </text>
+          <text id="/data/d_LabOV162ndTest/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/d_LabOV162ndTest/Não:label">
+            <value>Não</value>
+          </text>
+          <text id="/data/d_lotnumber:label">
+            <value>Introduza o número do lote RDT</value>
+          </text>
+          <text id="/data/d_id_method:label">
+            <value>Irá usar código de barras / Código QR</value>
+          </text>
+          <text id="/data/d_id_method/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/d_id_method/Não:label">
+            <value>Não</value>
+          </text>
+          <text id="/data/d_serial_number1:jr:constraintMsg">
+            <value>Deve ser um número com três dígitos. exemplo: 001</value>
+          </text>
+          <text id="/data/d_serial_number1:label">
+            <value>Por favor, introduza o número de série do participante</value>
+          </text>
+          <text id="/data/d_serial_number2:jr:constraintMsg">
+            <value>O código repetido deve ser o mesmo</value>
+          </text>
+          <text id="/data/d_serial_number2:label">
+            <value>Por favor, repita o número de série do participante</value>
+          </text>
+          <text id="/data/d_code_id:label">
+            <value>Registar o seguinte código de identificação único para o respondente numa lista separada e em cada teste(s) de diagnóstico administrado(s)</value>
+          </text>
+          <text id="/data/d_barcode_id:label">
+            <value>Por favor, digitalizar o código de barras</value>
+          </text>
+          <text id="/data/d_LabOV16:label">
+            <value>Resultado do teste RDT OV16</value>
+          </text>
+          <text id="/data/d_LabOV16/Positivo:label">
+            <value>Positivo</value>
+          </text>
+          <text id="/data/d_LabOV16/Negativo:label">
+            <value>Negativo</value>
+          </text>
+          <text id="/data/d_LabOV16/Inválido.(incluindo.erros.de.teste.e.sangue.insuficiente):label">
+            <value>Inválido (incluindo erros de teste e sangue insuficiente)</value>
+          </text>
+          <text id="/data/d_LabOV16/Recusado.(retirada.do.consentimento):label">
+            <value>Recusado (retirada do consentimento)</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid:label">
+            <value>Detalhes do Resultado Inválido</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Sem.linhas.de.controlo:label">
+            <value>Sem linhas de controlo</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Linha.de.controlo.quebrada/parcial:label">
+            <value>Linha de controlo quebrada/parcial</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Dificuldade.na.absorção.da.amostra:label">
+            <value>Dificuldade na absorção da amostra</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Dificuldade.com.a.migração.de.amostras:label">
+            <value>Dificuldade com a migração de amostras</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Vestígios.de.sangue:label">
+            <value>Vestígios de sangue</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Volume.de.sangue.insuficiente.devido.à.pipeta:label">
+            <value>Volume de sangue insuficiente devido à pipeta</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Other:label">
+            <value>Outro (queira explicar)</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid_other:label">
+            <value>Detalhes do Resultado Inválido</value>
+          </text>
+          <text id="/data/d_Notes:label">
+            <value>Notas Adicionais</value>
+          </text>
+          <text id="yesNoDontKnow-0">
+            <value>Sim</value>
+          </text>
+          <text id="yesNoDontKnow-1">
+            <value>Não</value>
+          </text>
+          <text id="yesNoDontKnow-2">
+            <value>Não sei</value>
+          </text>
+          <text id="yesNo-0">
+            <value>Sim</value>
+          </text>
+          <text id="yesNo-1">
+            <value>Não</value>
+          </text>
+          <text id="p_IDMethod-0">
+            <value>Scanner</value>
+          </text>
+          <text id="p_IDMethod-1">
+            <value>Automatic Generation</value>
+          </text>
+          <text id="results-0">
+            <value>Positivo</value>
+          </text>
+          <text id="results-1">
+            <value>Negativo</value>
+          </text>
+          <text id="results-2">
+            <value>Inválido (incluindo erros de teste e sangue insuficiente)</value>
+          </text>
+          <text id="results-3">
+            <value>Recusado (retirada do consentimento)</value>
+          </text>
+          <text id="why_invalid-0">
+            <value>Sem linhas de controlo</value>
+          </text>
+          <text id="why_invalid-1">
+            <value>Linha de controlo quebrada/parcial</value>
+          </text>
+          <text id="why_invalid-2">
+            <value>Dificuldade na absorção da amostra</value>
+          </text>
+          <text id="why_invalid-3">
+            <value>Dificuldade com a migração de amostras</value>
+          </text>
+          <text id="why_invalid-4">
+            <value>Vestígios de sangue</value>
+          </text>
+          <text id="why_invalid-5">
+            <value>Volume de sangue insuficiente devido à pipeta</value>
+          </text>
+          <text id="why_invalid-6">
+            <value>Outro (queira explicar)</value>
+          </text>
+          <text id="region_list-0">
+            <value>Bafata</value>
+          </text>
+          <text id="region_list-1">
+            <value>Gabu</value>
+          </text>
+          <text id="district_list-0">
+            <value>Bafata</value>
+          </text>
+          <text id="district_list-1">
+            <value>Cambadju</value>
+          </text>
+          <text id="district_list-2">
+            <value>Contuboel</value>
+          </text>
+          <text id="district_list-3">
+            <value>Gamamudo</value>
+          </text>
+          <text id="district_list-4">
+            <value>Sare-Bacar</value>
+          </text>
+          <text id="district_list-5">
+            <value>Tantam Cosse</value>
+          </text>
+          <text id="district_list-6">
+            <value>Xitole Saltinho</value>
+          </text>
+          <text id="district_list-7">
+            <value>Bajocunda</value>
+          </text>
+          <text id="district_list-8">
+            <value>Beli</value>
+          </text>
+          <text id="district_list-9">
+            <value>Buruntuma</value>
+          </text>
+          <text id="district_list-10">
+            <value>Canjadude</value>
+          </text>
+          <text id="district_list-11">
+            <value>Canquelifa</value>
+          </text>
+          <text id="district_list-12">
+            <value>Dara</value>
+          </text>
+          <text id="district_list-13">
+            <value>Fasse</value>
+          </text>
+          <text id="district_list-14">
+            <value>Gabu</value>
+          </text>
+          <text id="district_list-15">
+            <value>Jugadjole</value>
+          </text>
+          <text id="district_list-16">
+            <value>Mansadjam</value>
+          </text>
+          <text id="district_list-17">
+            <value>Pirada</value>
+          </text>
+          <text id="district_list-18">
+            <value>Pitche</value>
+          </text>
+          <text id="district_list-19">
+            <value>Sonaco</value>
+          </text>
+          <text id="district_list-20">
+            <value>Tumana</value>
+          </text>
+          <text id="community-0">
+            <value>Bantael</value>
+          </text>
+          <text id="community-1">
+            <value>Camamudo</value>
+          </text>
+          <text id="community-2">
+            <value>Cansamba Jau</value>
+          </text>
+          <text id="community-3">
+            <value>Cusselintra</value>
+          </text>
+          <text id="community-4">
+            <value>Fulamansa</value>
+          </text>
+          <text id="community-5">
+            <value>Sincha-Mamudo</value>
+          </text>
+          <text id="community-6">
+            <value>Dembube</value>
+          </text>
+          <text id="community-7">
+            <value>Cahone</value>
+          </text>
+          <text id="community-8">
+            <value>Canquenhe</value>
+          </text>
+          <text id="community-9">
+            <value>Cansanuma</value>
+          </text>
+          <text id="community-10">
+            <value>Madina Sare</value>
+          </text>
+          <text id="community-11">
+            <value>Sare Yero Nai</value>
+          </text>
+          <text id="community-12">
+            <value>Sare-Tchumo</value>
+          </text>
+          <text id="community-13">
+            <value>Madina-Samba</value>
+          </text>
+          <text id="community-14">
+            <value>Andezinho</value>
+          </text>
+          <text id="community-15">
+            <value>Lenqueto</value>
+          </text>
+          <text id="community-16">
+            <value>Sare Djide</value>
+          </text>
+          <text id="community-17">
+            <value>Sare Midjaca</value>
+          </text>
+          <text id="community-18">
+            <value>Sintcha Sadjo</value>
+          </text>
+          <text id="community-19">
+            <value>Balindjam</value>
+          </text>
+          <text id="community-20">
+            <value>Assana-Djau</value>
+          </text>
+          <text id="community-21">
+            <value>Bairo-Cola (Lenqueto)</value>
+          </text>
+          <text id="community-22">
+            <value>Camibesse</value>
+          </text>
+          <text id="community-23">
+            <value>Gunti</value>
+          </text>
+          <text id="community-24">
+            <value>Mampata-Corubal</value>
+          </text>
+          <text id="community-25">
+            <value>Sincha-Madio</value>
+          </text>
+          <text id="community-26">
+            <value>Colondinto</value>
+          </text>
+          <text id="community-27">
+            <value>Cupuda</value>
+          </text>
+          <text id="community-28">
+            <value>Diabugo</value>
+          </text>
+          <text id="community-29">
+            <value>Sintcha-Samba Djalo</value>
+          </text>
+          <text id="community-30">
+            <value>Tabassaye</value>
+          </text>
+          <text id="community-31">
+            <value>Coboho</value>
+          </text>
+          <text id="community-32">
+            <value>Dalaba</value>
+          </text>
+          <text id="community-33">
+            <value>Dandula</value>
+          </text>
+          <text id="community-34">
+            <value>Dandun</value>
+          </text>
+          <text id="community-35">
+            <value>Pataqui</value>
+          </text>
+          <text id="community-36">
+            <value>Queue</value>
+          </text>
+          <text id="community-37">
+            <value>Quissem</value>
+          </text>
+          <text id="community-38">
+            <value>Sutumaca</value>
+          </text>
+          <text id="community-39">
+            <value>Tabadara</value>
+          </text>
+          <text id="community-40">
+            <value>Afiaba-Demba</value>
+          </text>
+          <text id="community-41">
+            <value>Bucure-Afia</value>
+          </text>
+          <text id="community-42">
+            <value>Bucure-Boboti</value>
+          </text>
+          <text id="community-43">
+            <value>Bucure-Cuntcha</value>
+          </text>
+          <text id="community-44">
+            <value>Bucure-Dara</value>
+          </text>
+          <text id="community-45">
+            <value>Bucure-Mory</value>
+          </text>
+          <text id="community-46">
+            <value>Djarem</value>
+          </text>
+          <text id="community-47">
+            <value>Fadja</value>
+          </text>
+          <text id="community-48">
+            <value>Sincha Bucary</value>
+          </text>
+          <text id="community-49">
+            <value>Sincha Dady</value>
+          </text>
+          <text id="community-50">
+            <value>Sintcha Barros</value>
+          </text>
+          <text id="community-51">
+            <value>Afia</value>
+          </text>
+          <text id="community-52">
+            <value>Bugafal</value>
+          </text>
+          <text id="community-53">
+            <value>Cabuca (Canjadude)</value>
+          </text>
+          <text id="community-54">
+            <value>Candecoly</value>
+          </text>
+          <text id="community-55">
+            <value>Diquel</value>
+          </text>
+          <text id="community-56">
+            <value>Limbimanga-Tamba</value>
+          </text>
+          <text id="community-57">
+            <value>Maria</value>
+          </text>
+          <text id="community-58">
+            <value>Orotchom</value>
+          </text>
+          <text id="community-59">
+            <value>Tche-Che Chamra</value>
+          </text>
+          <text id="community-60">
+            <value>Tchetche</value>
+          </text>
+          <text id="community-61">
+            <value>Vendo-Tcham</value>
+          </text>
+          <text id="community-62">
+            <value>Oloto</value>
+          </text>
+          <text id="community-63">
+            <value>Sintcha Aladje Yero</value>
+          </text>
+          <text id="community-64">
+            <value>Sintcha-Yero</value>
+          </text>
+          <text id="community-65">
+            <value>Bantaquilin</value>
+          </text>
+          <text id="community-66">
+            <value>Cabuca Porto</value>
+          </text>
+          <text id="community-67">
+            <value>Cambadjana</value>
+          </text>
+          <text id="community-68">
+            <value>Camedina</value>
+          </text>
+          <text id="community-69">
+            <value>Camidina</value>
+          </text>
+          <text id="community-70">
+            <value>Cobuncara</value>
+          </text>
+          <text id="community-71">
+            <value>Dembacunda</value>
+          </text>
+          <text id="community-72">
+            <value>Madina Djalocunda</value>
+          </text>
+          <text id="community-73">
+            <value>Madina Mandinga</value>
+          </text>
+          <text id="community-74">
+            <value>Sagoia</value>
+          </text>
+          <text id="community-75">
+            <value>Sutuco</value>
+          </text>
+          <text id="community-76">
+            <value>Sutuco (Sonaco)</value>
+          </text>
+          <text id="community-77">
+            <value>Tambatcha</value>
+          </text>
+          <text id="community-78">
+            <value>Camare</value>
+          </text>
+          <text id="community-79">
+            <value>Fulamory Djomel</value>
+          </text>
+          <text id="community-80">
+            <value>Burutumba</value>
+          </text>
+          <text id="community-81">
+            <value>Cabuca</value>
+          </text>
+          <text id="community-82">
+            <value>Canguiro</value>
+          </text>
+          <text id="community-83">
+            <value>Cantire</value>
+          </text>
+          <text id="community-84">
+            <value>Ché-Ché</value>
+          </text>
+          <text id="community-85">
+            <value>Gã Guirô</value>
+          </text>
+          <text id="community-86">
+            <value>Gabu-Sare</value>
+          </text>
+          <text id="community-87">
+            <value>Samadoro</value>
+          </text>
+          <text id="community-88">
+            <value>Samba Gana</value>
+          </text>
+          <text id="community-89">
+            <value>Sele-Sele</value>
+          </text>
+          <text id="community-90">
+            <value>Siay</value>
+          </text>
+          <text id="community-91">
+            <value>Sintcha-Arafam</value>
+          </text>
+          <text id="community-92">
+            <value>Balandugo</value>
+          </text>
+          <text id="community-93">
+            <value>Carantaba</value>
+          </text>
+          <text id="community-94">
+            <value>Mamadu-Molo</value>
+          </text>
+          <text id="community-95">
+            <value>Sintcha-Ussumane</value>
+          </text>
+          <text id="community-96">
+            <value>Mansacunda Maunda</value>
+          </text>
+          <text id="community-97">
+            <value>Benfica</value>
+          </text>
+          <text id="community-98">
+            <value>Binam Alimo</value>
+          </text>
+          <text id="community-99">
+            <value>Cambumburou</value>
+          </text>
+          <text id="community-100">
+            <value>Cuatche</value>
+          </text>
+          <text id="community-101">
+            <value>Cuatche(4521)</value>
+          </text>
+          <text id="community-102">
+            <value>Madi Tchucaya</value>
+          </text>
+          <text id="community-103">
+            <value>Madina Djan</value>
+          </text>
+          <text id="community-104">
+            <value>Mady Maudo</value>
+          </text>
+          <text id="community-105">
+            <value>Malam Dalassy</value>
+          </text>
+          <text id="community-106">
+            <value>Nangue-Ulane</value>
+          </text>
+          <text id="community-107">
+            <value>Rauna</value>
+          </text>
+          <text id="community-108">
+            <value>Sintcha Demba</value>
+          </text>
+          <text id="community-109">
+            <value>Codum Djombo</value>
+          </text>
+          <text id="community-110">
+            <value>Fulamory</value>
+          </text>
+          <text id="community-111">
+            <value>Meta Seidi</value>
+          </text>
+          <text id="community-112">
+            <value>Sintcha-Side</value>
+          </text>
+          <text id="community-113">
+            <value>Sonaco (Bairro Praça)</value>
+          </text>
+          <text id="community-114">
+            <value>Camboido</value>
+          </text>
+          <text id="community-115">
+            <value>Cansamba</value>
+          </text>
+          <text id="community-116">
+            <value>Salquenhe</value>
+          </text>
+          <text id="community-117">
+            <value>Outros</value>
+          </text>
+          <text id="community-118">
+            <value>Outros</value>
+          </text>
+          <text id="community-119">
+            <value>Outros</value>
+          </text>
+          <text id="community-120">
+            <value>Outros</value>
+          </text>
+          <text id="community-121">
+            <value>Outros</value>
+          </text>
+          <text id="community-122">
+            <value>Outros</value>
+          </text>
+          <text id="community-123">
+            <value>Outros</value>
+          </text>
+          <text id="community-124">
+            <value>Outros</value>
+          </text>
+          <text id="community-125">
+            <value>Outros</value>
+          </text>
+          <text id="community-126">
+            <value>Outros</value>
+          </text>
+          <text id="community-127">
+            <value>Outros</value>
+          </text>
+          <text id="community-128">
+            <value>Outros</value>
+          </text>
+          <text id="community-129">
+            <value>Outros</value>
+          </text>
+          <text id="community-130">
+            <value>Outros</value>
+          </text>
+          <text id="community-131">
+            <value>Outros</value>
+          </text>
+          <text id="community-132">
+            <value>Outros</value>
+          </text>
+          <text id="community-133">
+            <value>Outros</value>
+          </text>
+          <text id="community-134">
+            <value>Outros</value>
+          </text>
+          <text id="community-135">
+            <value>Outros</value>
+          </text>
+          <text id="community-136">
+            <value>Outros</value>
+          </text>
+          <text id="community-137">
+            <value>Outros</value>
+          </text>
+          <text id="community_id-0">
+            <value>101</value>
+          </text>
+          <text id="community_id-1">
+            <value>102</value>
+          </text>
+          <text id="community_id-2">
+            <value>103</value>
+          </text>
+          <text id="community_id-3">
+            <value>104</value>
+          </text>
+          <text id="community_id-4">
+            <value>105</value>
+          </text>
+          <text id="community_id-5">
+            <value>106</value>
+          </text>
+          <text id="community_id-6">
+            <value>107</value>
+          </text>
+          <text id="community_id-7">
+            <value>108</value>
+          </text>
+          <text id="community_id-8">
+            <value>109</value>
+          </text>
+          <text id="community_id-9">
+            <value>110</value>
+          </text>
+          <text id="community_id-10">
+            <value>111</value>
+          </text>
+          <text id="community_id-11">
+            <value>112</value>
+          </text>
+          <text id="community_id-12">
+            <value>113</value>
+          </text>
+          <text id="community_id-13">
+            <value>114</value>
+          </text>
+          <text id="community_id-14">
+            <value>115</value>
+          </text>
+          <text id="community_id-15">
+            <value>116</value>
+          </text>
+          <text id="community_id-16">
+            <value>117</value>
+          </text>
+          <text id="community_id-17">
+            <value>118</value>
+          </text>
+          <text id="community_id-18">
+            <value>119</value>
+          </text>
+          <text id="community_id-19">
+            <value>120</value>
+          </text>
+          <text id="community_id-20">
+            <value>121</value>
+          </text>
+          <text id="community_id-21">
+            <value>122</value>
+          </text>
+          <text id="community_id-22">
+            <value>123</value>
+          </text>
+          <text id="community_id-23">
+            <value>124</value>
+          </text>
+          <text id="community_id-24">
+            <value>125</value>
+          </text>
+          <text id="community_id-25">
+            <value>126</value>
+          </text>
+          <text id="community_id-26">
+            <value>127</value>
+          </text>
+          <text id="community_id-27">
+            <value>128</value>
+          </text>
+          <text id="community_id-28">
+            <value>129</value>
+          </text>
+          <text id="community_id-29">
+            <value>130</value>
+          </text>
+          <text id="community_id-30">
+            <value>131</value>
+          </text>
+          <text id="community_id-31">
+            <value>132</value>
+          </text>
+          <text id="community_id-32">
+            <value>133</value>
+          </text>
+          <text id="community_id-33">
+            <value>134</value>
+          </text>
+          <text id="community_id-34">
+            <value>135</value>
+          </text>
+          <text id="community_id-35">
+            <value>136</value>
+          </text>
+          <text id="community_id-36">
+            <value>137</value>
+          </text>
+          <text id="community_id-37">
+            <value>138</value>
+          </text>
+          <text id="community_id-38">
+            <value>139</value>
+          </text>
+          <text id="community_id-39">
+            <value>140</value>
+          </text>
+          <text id="community_id-40">
+            <value>141</value>
+          </text>
+          <text id="community_id-41">
+            <value>142</value>
+          </text>
+          <text id="community_id-42">
+            <value>143</value>
+          </text>
+          <text id="community_id-43">
+            <value>144</value>
+          </text>
+          <text id="community_id-44">
+            <value>145</value>
+          </text>
+          <text id="community_id-45">
+            <value>146</value>
+          </text>
+          <text id="community_id-46">
+            <value>147</value>
+          </text>
+          <text id="community_id-47">
+            <value>148</value>
+          </text>
+          <text id="community_id-48">
+            <value>149</value>
+          </text>
+          <text id="community_id-49">
+            <value>150</value>
+          </text>
+          <text id="community_id-50">
+            <value>151</value>
+          </text>
+          <text id="community_id-51">
+            <value>152</value>
+          </text>
+          <text id="community_id-52">
+            <value>153</value>
+          </text>
+          <text id="community_id-53">
+            <value>154</value>
+          </text>
+          <text id="community_id-54">
+            <value>155</value>
+          </text>
+          <text id="community_id-55">
+            <value>156</value>
+          </text>
+          <text id="community_id-56">
+            <value>157</value>
+          </text>
+          <text id="community_id-57">
+            <value>158</value>
+          </text>
+          <text id="community_id-58">
+            <value>159</value>
+          </text>
+          <text id="community_id-59">
+            <value>160</value>
+          </text>
+          <text id="community_id-60">
+            <value>161</value>
+          </text>
+          <text id="community_id-61">
+            <value>162</value>
+          </text>
+          <text id="community_id-62">
+            <value>163</value>
+          </text>
+          <text id="community_id-63">
+            <value>164</value>
+          </text>
+          <text id="community_id-64">
+            <value>165</value>
+          </text>
+          <text id="community_id-65">
+            <value>166</value>
+          </text>
+          <text id="community_id-66">
+            <value>167</value>
+          </text>
+          <text id="community_id-67">
+            <value>168</value>
+          </text>
+          <text id="community_id-68">
+            <value>169</value>
+          </text>
+          <text id="community_id-69">
+            <value>170</value>
+          </text>
+          <text id="community_id-70">
+            <value>171</value>
+          </text>
+          <text id="community_id-71">
+            <value>172</value>
+          </text>
+          <text id="community_id-72">
+            <value>173</value>
+          </text>
+          <text id="community_id-73">
+            <value>174</value>
+          </text>
+          <text id="community_id-74">
+            <value>175</value>
+          </text>
+          <text id="community_id-75">
+            <value>176</value>
+          </text>
+          <text id="community_id-76">
+            <value>177</value>
+          </text>
+          <text id="community_id-77">
+            <value>178</value>
+          </text>
+          <text id="community_id-78">
+            <value>179</value>
+          </text>
+          <text id="community_id-79">
+            <value>180</value>
+          </text>
+          <text id="community_id-80">
+            <value>181</value>
+          </text>
+          <text id="community_id-81">
+            <value>182</value>
+          </text>
+          <text id="community_id-82">
+            <value>183</value>
+          </text>
+          <text id="community_id-83">
+            <value>184</value>
+          </text>
+          <text id="community_id-84">
+            <value>185</value>
+          </text>
+          <text id="community_id-85">
+            <value>186</value>
+          </text>
+          <text id="community_id-86">
+            <value>187</value>
+          </text>
+          <text id="community_id-87">
+            <value>188</value>
+          </text>
+          <text id="community_id-88">
+            <value>189</value>
+          </text>
+          <text id="community_id-89">
+            <value>190</value>
+          </text>
+          <text id="community_id-90">
+            <value>191</value>
+          </text>
+          <text id="community_id-91">
+            <value>192</value>
+          </text>
+          <text id="community_id-92">
+            <value>193</value>
+          </text>
+          <text id="community_id-93">
+            <value>194</value>
+          </text>
+          <text id="community_id-94">
+            <value>195</value>
+          </text>
+          <text id="community_id-95">
+            <value>196</value>
+          </text>
+          <text id="community_id-96">
+            <value>197</value>
+          </text>
+          <text id="community_id-97">
+            <value>198</value>
+          </text>
+          <text id="community_id-98">
+            <value>199</value>
+          </text>
+          <text id="community_id-99">
+            <value>200</value>
+          </text>
+          <text id="community_id-100">
+            <value>201</value>
+          </text>
+          <text id="community_id-101">
+            <value>202</value>
+          </text>
+          <text id="community_id-102">
+            <value>203</value>
+          </text>
+          <text id="community_id-103">
+            <value>204</value>
+          </text>
+          <text id="community_id-104">
+            <value>205</value>
+          </text>
+          <text id="community_id-105">
+            <value>206</value>
+          </text>
+          <text id="community_id-106">
+            <value>207</value>
+          </text>
+          <text id="community_id-107">
+            <value>208</value>
+          </text>
+          <text id="community_id-108">
+            <value>209</value>
+          </text>
+          <text id="community_id-109">
+            <value>210</value>
+          </text>
+          <text id="community_id-110">
+            <value>211</value>
+          </text>
+          <text id="community_id-111">
+            <value>212</value>
+          </text>
+          <text id="community_id-112">
+            <value>213</value>
+          </text>
+          <text id="community_id-113">
+            <value>214</value>
+          </text>
+          <text id="community_id-114">
+            <value>215</value>
+          </text>
+          <text id="community_id-115">
+            <value>216</value>
+          </text>
+          <text id="community_id-116">
+            <value>217</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/d_recorder_id:jr:constraintMsg">
+            <value>The code must be a two-digit number between 9 and 99</value>
+          </text>
+          <text id="/data/d_recorder_id:label">
+            <value>Enter the recorder ID</value>
+          </text>
+          <text id="/data/d_recorder_id:hint">
+            <value>Two-digit code assigned to you</value>
+          </text>
+          <text id="/data/d_region:label">
+            <value>Select a department</value>
+          </text>
+          <text id="/data/d_region/Bafata:label">
+            <value>Bafata</value>
+          </text>
+          <text id="/data/d_region/Gabu:label">
+            <value>Gabu</value>
+          </text>
+          <text id="/data/d_District:label">
+            <value>Select a commune</value>
+          </text>
+          <text id="/data/d_Cluster_Name:label">
+            <value>Enter cluster name</value>
+          </text>
+          <text id="/data/d_cluster_id:label">
+            <value>Enter cluster ID</value>
+          </text>
+          <text id="/data/d_Cluster_Name2:label">
+            <value>Enter cluster name</value>
+          </text>
+          <text id="/data/d_cluster_id2:label">
+            <value>Enter cluster ID</value>
+          </text>
+          <text id="/data/d_LabOV162ndTest:label">
+            <value>Is this a second OV16 test</value>
+          </text>
+          <text id="/data/d_LabOV162ndTest/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/d_LabOV162ndTest/Não:label">
+            <value>No</value>
+          </text>
+          <text id="/data/d_lotnumber:label">
+            <value>Enter RDT batch number</value>
+          </text>
+          <text id="/data/d_id_method:label">
+            <value>Will you use Barcode / QR Code</value>
+          </text>
+          <text id="/data/d_id_method/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/d_id_method/Não:label">
+            <value>No</value>
+          </text>
+          <text id="/data/d_serial_number1:jr:constraintMsg">
+            <value>Must be a three-digit number. example: 001</value>
+          </text>
+          <text id="/data/d_serial_number1:label">
+            <value>Please, enter the participant serial number</value>
+          </text>
+          <text id="/data/d_serial_number2:jr:constraintMsg">
+            <value>The repeated code must be the same</value>
+          </text>
+          <text id="/data/d_serial_number2:label">
+            <value>Please, repeat the participant serial number</value>
+          </text>
+          <text id="/data/d_code_id:label">
+            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) adminstered</value>
+          </text>
+          <text id="/data/d_barcode_id:label">
+            <value>Please, scan the barcode</value>
+          </text>
+          <text id="/data/d_LabOV16:label">
+            <value>RDT OV16 test result</value>
+          </text>
+          <text id="/data/d_LabOV16/Positivo:label">
+            <value>Positive</value>
+          </text>
+          <text id="/data/d_LabOV16/Negativo:label">
+            <value>Negative</value>
+          </text>
+          <text id="/data/d_LabOV16/Inválido.(incluindo.erros.de.teste.e.sangue.insuficiente):label">
+            <value>Invalid (including test errors and insufficient blood)</value>
+          </text>
+          <text id="/data/d_LabOV16/Recusado.(retirada.do.consentimento):label">
+            <value>Refused (withdrawal of consent)</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid:label">
+            <value>Invalid Result Details</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Sem.linhas.de.controlo:label">
+            <value>No control lines</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Linha.de.controlo.quebrada/parcial:label">
+            <value>Broken/partial control line</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Dificuldade.na.absorção.da.amostra:label">
+            <value>Difficulty with sample absorption</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Dificuldade.com.a.migração.de.amostras:label">
+            <value>Difficulty with sample migration</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Vestígios.de.sangue:label">
+            <value>Trace of blood remains</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Volume.de.sangue.insuficiente.devido.à.pipeta:label">
+            <value>Insufficient blood volume due to pipette</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Other:label">
+            <value>Other (please explain)</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid_other:label">
+            <value>Invalid Result Details</value>
+          </text>
+          <text id="/data/d_Notes:label">
+            <value>Additional Notes</value>
+          </text>
+          <text id="yesNoDontKnow-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesNoDontKnow-1">
+            <value>No</value>
+          </text>
+          <text id="yesNoDontKnow-2">
+            <value>Don't know</value>
+          </text>
+          <text id="yesNo-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesNo-1">
+            <value>No</value>
+          </text>
+          <text id="p_IDMethod-0">
+            <value>Scanner</value>
+          </text>
+          <text id="p_IDMethod-1">
+            <value>Automatic Generation</value>
+          </text>
+          <text id="results-0">
+            <value>Positive</value>
+          </text>
+          <text id="results-1">
+            <value>Negative</value>
+          </text>
+          <text id="results-2">
+            <value>Invalid (including test errors and insufficient blood)</value>
+          </text>
+          <text id="results-3">
+            <value>Refused (withdrawal of consent)</value>
+          </text>
+          <text id="why_invalid-0">
+            <value>No control lines</value>
+          </text>
+          <text id="why_invalid-1">
+            <value>Broken/partial control line</value>
+          </text>
+          <text id="why_invalid-2">
+            <value>Difficulty with sample absorption</value>
+          </text>
+          <text id="why_invalid-3">
+            <value>Difficulty with sample migration</value>
+          </text>
+          <text id="why_invalid-4">
+            <value>Trace of blood remains</value>
+          </text>
+          <text id="why_invalid-5">
+            <value>Insufficient blood volume due to pipette</value>
+          </text>
+          <text id="why_invalid-6">
+            <value>Other (please explain)</value>
+          </text>
+          <text id="region_list-0">
+            <value>Bafata</value>
+          </text>
+          <text id="region_list-1">
+            <value>Gabu</value>
+          </text>
+          <text id="district_list-0">
+            <value>Bafata</value>
+          </text>
+          <text id="district_list-1">
+            <value>Cambadju</value>
+          </text>
+          <text id="district_list-2">
+            <value>Contuboel</value>
+          </text>
+          <text id="district_list-3">
+            <value>Gamamudo</value>
+          </text>
+          <text id="district_list-4">
+            <value>Sare-Bacar</value>
+          </text>
+          <text id="district_list-5">
+            <value>Tantam Cosse</value>
+          </text>
+          <text id="district_list-6">
+            <value>Xitole Saltinho</value>
+          </text>
+          <text id="district_list-7">
+            <value>Bajocunda</value>
+          </text>
+          <text id="district_list-8">
+            <value>Beli</value>
+          </text>
+          <text id="district_list-9">
+            <value>Buruntuma</value>
+          </text>
+          <text id="district_list-10">
+            <value>Canjadude</value>
+          </text>
+          <text id="district_list-11">
+            <value>Canquelifa</value>
+          </text>
+          <text id="district_list-12">
+            <value>Dara</value>
+          </text>
+          <text id="district_list-13">
+            <value>Fasse</value>
+          </text>
+          <text id="district_list-14">
+            <value>Gabu</value>
+          </text>
+          <text id="district_list-15">
+            <value>Jugadjole</value>
+          </text>
+          <text id="district_list-16">
+            <value>Mansadjam</value>
+          </text>
+          <text id="district_list-17">
+            <value>Pirada</value>
+          </text>
+          <text id="district_list-18">
+            <value>Pitche</value>
+          </text>
+          <text id="district_list-19">
+            <value>Sonaco</value>
+          </text>
+          <text id="district_list-20">
+            <value>Tumana</value>
+          </text>
+          <text id="community-0">
+            <value>Bantael</value>
+          </text>
+          <text id="community-1">
+            <value>Camamudo</value>
+          </text>
+          <text id="community-2">
+            <value>Cansamba Jau</value>
+          </text>
+          <text id="community-3">
+            <value>Cusselintra</value>
+          </text>
+          <text id="community-4">
+            <value>Fulamansa</value>
+          </text>
+          <text id="community-5">
+            <value>Sincha-Mamudo</value>
+          </text>
+          <text id="community-6">
+            <value>Dembube</value>
+          </text>
+          <text id="community-7">
+            <value>Cahone</value>
+          </text>
+          <text id="community-8">
+            <value>Canquenhe</value>
+          </text>
+          <text id="community-9">
+            <value>Cansanuma</value>
+          </text>
+          <text id="community-10">
+            <value>Madina Sare</value>
+          </text>
+          <text id="community-11">
+            <value>Sare Yero Nai</value>
+          </text>
+          <text id="community-12">
+            <value>Sare-Tchumo</value>
+          </text>
+          <text id="community-13">
+            <value>Madina-Samba</value>
+          </text>
+          <text id="community-14">
+            <value>Andezinho</value>
+          </text>
+          <text id="community-15">
+            <value>Lenqueto</value>
+          </text>
+          <text id="community-16">
+            <value>Sare Djide</value>
+          </text>
+          <text id="community-17">
+            <value>Sare Midjaca</value>
+          </text>
+          <text id="community-18">
+            <value>Sintcha Sadjo</value>
+          </text>
+          <text id="community-19">
+            <value>Balindjam</value>
+          </text>
+          <text id="community-20">
+            <value>Assana-Djau</value>
+          </text>
+          <text id="community-21">
+            <value>Bairo-Cola (Lenqueto)</value>
+          </text>
+          <text id="community-22">
+            <value>Camibesse</value>
+          </text>
+          <text id="community-23">
+            <value>Gunti</value>
+          </text>
+          <text id="community-24">
+            <value>Mampata-Corubal</value>
+          </text>
+          <text id="community-25">
+            <value>Sincha-Madio</value>
+          </text>
+          <text id="community-26">
+            <value>Colondinto</value>
+          </text>
+          <text id="community-27">
+            <value>Cupuda</value>
+          </text>
+          <text id="community-28">
+            <value>Diabugo</value>
+          </text>
+          <text id="community-29">
+            <value>Sintcha-Samba Djalo</value>
+          </text>
+          <text id="community-30">
+            <value>Tabassaye</value>
+          </text>
+          <text id="community-31">
+            <value>Coboho</value>
+          </text>
+          <text id="community-32">
+            <value>Dalaba</value>
+          </text>
+          <text id="community-33">
+            <value>Dandula</value>
+          </text>
+          <text id="community-34">
+            <value>Dandun</value>
+          </text>
+          <text id="community-35">
+            <value>Pataqui</value>
+          </text>
+          <text id="community-36">
+            <value>Queue</value>
+          </text>
+          <text id="community-37">
+            <value>Quissem</value>
+          </text>
+          <text id="community-38">
+            <value>Sutumaca</value>
+          </text>
+          <text id="community-39">
+            <value>Tabadara</value>
+          </text>
+          <text id="community-40">
+            <value>Afiaba-Demba</value>
+          </text>
+          <text id="community-41">
+            <value>Bucure-Afia</value>
+          </text>
+          <text id="community-42">
+            <value>Bucure-Boboti</value>
+          </text>
+          <text id="community-43">
+            <value>Bucure-Cuntcha</value>
+          </text>
+          <text id="community-44">
+            <value>Bucure-Dara</value>
+          </text>
+          <text id="community-45">
+            <value>Bucure-Mory</value>
+          </text>
+          <text id="community-46">
+            <value>Djarem</value>
+          </text>
+          <text id="community-47">
+            <value>Fadja</value>
+          </text>
+          <text id="community-48">
+            <value>Sincha Bucary</value>
+          </text>
+          <text id="community-49">
+            <value>Sincha Dady</value>
+          </text>
+          <text id="community-50">
+            <value>Sintcha Barros</value>
+          </text>
+          <text id="community-51">
+            <value>Afia</value>
+          </text>
+          <text id="community-52">
+            <value>Bugafal</value>
+          </text>
+          <text id="community-53">
+            <value>Cabuca (Canjadude)</value>
+          </text>
+          <text id="community-54">
+            <value>Candecoly</value>
+          </text>
+          <text id="community-55">
+            <value>Diquel</value>
+          </text>
+          <text id="community-56">
+            <value>Limbimanga-Tamba</value>
+          </text>
+          <text id="community-57">
+            <value>Maria</value>
+          </text>
+          <text id="community-58">
+            <value>Orotchom</value>
+          </text>
+          <text id="community-59">
+            <value>Tche-Che Chamra</value>
+          </text>
+          <text id="community-60">
+            <value>Tchetche</value>
+          </text>
+          <text id="community-61">
+            <value>Vendo-Tcham</value>
+          </text>
+          <text id="community-62">
+            <value>Oloto</value>
+          </text>
+          <text id="community-63">
+            <value>Sintcha Aladje Yero</value>
+          </text>
+          <text id="community-64">
+            <value>Sintcha-Yero</value>
+          </text>
+          <text id="community-65">
+            <value>Bantaquilin</value>
+          </text>
+          <text id="community-66">
+            <value>Cabuca Porto</value>
+          </text>
+          <text id="community-67">
+            <value>Cambadjana</value>
+          </text>
+          <text id="community-68">
+            <value>Camedina</value>
+          </text>
+          <text id="community-69">
+            <value>Camidina</value>
+          </text>
+          <text id="community-70">
+            <value>Cobuncara</value>
+          </text>
+          <text id="community-71">
+            <value>Dembacunda</value>
+          </text>
+          <text id="community-72">
+            <value>Madina Djalocunda</value>
+          </text>
+          <text id="community-73">
+            <value>Madina Mandinga</value>
+          </text>
+          <text id="community-74">
+            <value>Sagoia</value>
+          </text>
+          <text id="community-75">
+            <value>Sutuco</value>
+          </text>
+          <text id="community-76">
+            <value>Sutuco (Sonaco)</value>
+          </text>
+          <text id="community-77">
+            <value>Tambatcha</value>
+          </text>
+          <text id="community-78">
+            <value>Camare</value>
+          </text>
+          <text id="community-79">
+            <value>Fulamory Djomel</value>
+          </text>
+          <text id="community-80">
+            <value>Burutumba</value>
+          </text>
+          <text id="community-81">
+            <value>Cabuca</value>
+          </text>
+          <text id="community-82">
+            <value>Canguiro</value>
+          </text>
+          <text id="community-83">
+            <value>Cantire</value>
+          </text>
+          <text id="community-84">
+            <value>Ché-Ché</value>
+          </text>
+          <text id="community-85">
+            <value>Gã Guirô</value>
+          </text>
+          <text id="community-86">
+            <value>Gabu-Sare</value>
+          </text>
+          <text id="community-87">
+            <value>Samadoro</value>
+          </text>
+          <text id="community-88">
+            <value>Samba Gana</value>
+          </text>
+          <text id="community-89">
+            <value>Sele-Sele</value>
+          </text>
+          <text id="community-90">
+            <value>Siay</value>
+          </text>
+          <text id="community-91">
+            <value>Sintcha-Arafam</value>
+          </text>
+          <text id="community-92">
+            <value>Balandugo</value>
+          </text>
+          <text id="community-93">
+            <value>Carantaba</value>
+          </text>
+          <text id="community-94">
+            <value>Mamadu-Molo</value>
+          </text>
+          <text id="community-95">
+            <value>Sintcha-Ussumane</value>
+          </text>
+          <text id="community-96">
+            <value>Mansacunda Maunda</value>
+          </text>
+          <text id="community-97">
+            <value>Benfica</value>
+          </text>
+          <text id="community-98">
+            <value>Binam Alimo</value>
+          </text>
+          <text id="community-99">
+            <value>Cambumburou</value>
+          </text>
+          <text id="community-100">
+            <value>Cuatche</value>
+          </text>
+          <text id="community-101">
+            <value>Cuatche(4521)</value>
+          </text>
+          <text id="community-102">
+            <value>Madi Tchucaya</value>
+          </text>
+          <text id="community-103">
+            <value>Madina Djan</value>
+          </text>
+          <text id="community-104">
+            <value>Mady Maudo</value>
+          </text>
+          <text id="community-105">
+            <value>Malam Dalassy</value>
+          </text>
+          <text id="community-106">
+            <value>Nangue-Ulane</value>
+          </text>
+          <text id="community-107">
+            <value>Rauna</value>
+          </text>
+          <text id="community-108">
+            <value>Sintcha Demba</value>
+          </text>
+          <text id="community-109">
+            <value>Codum Djombo</value>
+          </text>
+          <text id="community-110">
+            <value>Fulamory</value>
+          </text>
+          <text id="community-111">
+            <value>Meta Seidi</value>
+          </text>
+          <text id="community-112">
+            <value>Sintcha-Side</value>
+          </text>
+          <text id="community-113">
+            <value>Sonaco (Bairro Praça)</value>
+          </text>
+          <text id="community-114">
+            <value>Camboido</value>
+          </text>
+          <text id="community-115">
+            <value>Cansamba</value>
+          </text>
+          <text id="community-116">
+            <value>Salquenhe</value>
+          </text>
+          <text id="community-117">
+            <value>Other</value>
+          </text>
+          <text id="community-118">
+            <value>Other</value>
+          </text>
+          <text id="community-119">
+            <value>Other</value>
+          </text>
+          <text id="community-120">
+            <value>Other</value>
+          </text>
+          <text id="community-121">
+            <value>Other</value>
+          </text>
+          <text id="community-122">
+            <value>Other</value>
+          </text>
+          <text id="community-123">
+            <value>Other</value>
+          </text>
+          <text id="community-124">
+            <value>Other</value>
+          </text>
+          <text id="community-125">
+            <value>Other</value>
+          </text>
+          <text id="community-126">
+            <value>Other</value>
+          </text>
+          <text id="community-127">
+            <value>Other</value>
+          </text>
+          <text id="community-128">
+            <value>Other</value>
+          </text>
+          <text id="community-129">
+            <value>Other</value>
+          </text>
+          <text id="community-130">
+            <value>Other</value>
+          </text>
+          <text id="community-131">
+            <value>Other</value>
+          </text>
+          <text id="community-132">
+            <value>Other</value>
+          </text>
+          <text id="community-133">
+            <value>Other</value>
+          </text>
+          <text id="community-134">
+            <value>Other</value>
+          </text>
+          <text id="community-135">
+            <value>Other</value>
+          </text>
+          <text id="community-136">
+            <value>Other</value>
+          </text>
+          <text id="community-137">
+            <value>Other</value>
+          </text>
+          <text id="community_id-0">
+            <value>101</value>
+          </text>
+          <text id="community_id-1">
+            <value>102</value>
+          </text>
+          <text id="community_id-2">
+            <value>103</value>
+          </text>
+          <text id="community_id-3">
+            <value>104</value>
+          </text>
+          <text id="community_id-4">
+            <value>105</value>
+          </text>
+          <text id="community_id-5">
+            <value>106</value>
+          </text>
+          <text id="community_id-6">
+            <value>107</value>
+          </text>
+          <text id="community_id-7">
+            <value>108</value>
+          </text>
+          <text id="community_id-8">
+            <value>109</value>
+          </text>
+          <text id="community_id-9">
+            <value>110</value>
+          </text>
+          <text id="community_id-10">
+            <value>111</value>
+          </text>
+          <text id="community_id-11">
+            <value>112</value>
+          </text>
+          <text id="community_id-12">
+            <value>113</value>
+          </text>
+          <text id="community_id-13">
+            <value>114</value>
+          </text>
+          <text id="community_id-14">
+            <value>115</value>
+          </text>
+          <text id="community_id-15">
+            <value>116</value>
+          </text>
+          <text id="community_id-16">
+            <value>117</value>
+          </text>
+          <text id="community_id-17">
+            <value>118</value>
+          </text>
+          <text id="community_id-18">
+            <value>119</value>
+          </text>
+          <text id="community_id-19">
+            <value>120</value>
+          </text>
+          <text id="community_id-20">
+            <value>121</value>
+          </text>
+          <text id="community_id-21">
+            <value>122</value>
+          </text>
+          <text id="community_id-22">
+            <value>123</value>
+          </text>
+          <text id="community_id-23">
+            <value>124</value>
+          </text>
+          <text id="community_id-24">
+            <value>125</value>
+          </text>
+          <text id="community_id-25">
+            <value>126</value>
+          </text>
+          <text id="community_id-26">
+            <value>127</value>
+          </text>
+          <text id="community_id-27">
+            <value>128</value>
+          </text>
+          <text id="community_id-28">
+            <value>129</value>
+          </text>
+          <text id="community_id-29">
+            <value>130</value>
+          </text>
+          <text id="community_id-30">
+            <value>131</value>
+          </text>
+          <text id="community_id-31">
+            <value>132</value>
+          </text>
+          <text id="community_id-32">
+            <value>133</value>
+          </text>
+          <text id="community_id-33">
+            <value>134</value>
+          </text>
+          <text id="community_id-34">
+            <value>135</value>
+          </text>
+          <text id="community_id-35">
+            <value>136</value>
+          </text>
+          <text id="community_id-36">
+            <value>137</value>
+          </text>
+          <text id="community_id-37">
+            <value>138</value>
+          </text>
+          <text id="community_id-38">
+            <value>139</value>
+          </text>
+          <text id="community_id-39">
+            <value>140</value>
+          </text>
+          <text id="community_id-40">
+            <value>141</value>
+          </text>
+          <text id="community_id-41">
+            <value>142</value>
+          </text>
+          <text id="community_id-42">
+            <value>143</value>
+          </text>
+          <text id="community_id-43">
+            <value>144</value>
+          </text>
+          <text id="community_id-44">
+            <value>145</value>
+          </text>
+          <text id="community_id-45">
+            <value>146</value>
+          </text>
+          <text id="community_id-46">
+            <value>147</value>
+          </text>
+          <text id="community_id-47">
+            <value>148</value>
+          </text>
+          <text id="community_id-48">
+            <value>149</value>
+          </text>
+          <text id="community_id-49">
+            <value>150</value>
+          </text>
+          <text id="community_id-50">
+            <value>151</value>
+          </text>
+          <text id="community_id-51">
+            <value>152</value>
+          </text>
+          <text id="community_id-52">
+            <value>153</value>
+          </text>
+          <text id="community_id-53">
+            <value>154</value>
+          </text>
+          <text id="community_id-54">
+            <value>155</value>
+          </text>
+          <text id="community_id-55">
+            <value>156</value>
+          </text>
+          <text id="community_id-56">
+            <value>157</value>
+          </text>
+          <text id="community_id-57">
+            <value>158</value>
+          </text>
+          <text id="community_id-58">
+            <value>159</value>
+          </text>
+          <text id="community_id-59">
+            <value>160</value>
+          </text>
+          <text id="community_id-60">
+            <value>161</value>
+          </text>
+          <text id="community_id-61">
+            <value>162</value>
+          </text>
+          <text id="community_id-62">
+            <value>163</value>
+          </text>
+          <text id="community_id-63">
+            <value>164</value>
+          </text>
+          <text id="community_id-64">
+            <value>165</value>
+          </text>
+          <text id="community_id-65">
+            <value>166</value>
+          </text>
+          <text id="community_id-66">
+            <value>167</value>
+          </text>
+          <text id="community_id-67">
+            <value>168</value>
+          </text>
+          <text id="community_id-68">
+            <value>169</value>
+          </text>
+          <text id="community_id-69">
+            <value>170</value>
+          </text>
+          <text id="community_id-70">
+            <value>171</value>
+          </text>
+          <text id="community_id-71">
+            <value>172</value>
+          </text>
+          <text id="community_id-72">
+            <value>173</value>
+          </text>
+          <text id="community_id-73">
+            <value>174</value>
+          </text>
+          <text id="community_id-74">
+            <value>175</value>
+          </text>
+          <text id="community_id-75">
+            <value>176</value>
+          </text>
+          <text id="community_id-76">
+            <value>177</value>
+          </text>
+          <text id="community_id-77">
+            <value>178</value>
+          </text>
+          <text id="community_id-78">
+            <value>179</value>
+          </text>
+          <text id="community_id-79">
+            <value>180</value>
+          </text>
+          <text id="community_id-80">
+            <value>181</value>
+          </text>
+          <text id="community_id-81">
+            <value>182</value>
+          </text>
+          <text id="community_id-82">
+            <value>183</value>
+          </text>
+          <text id="community_id-83">
+            <value>184</value>
+          </text>
+          <text id="community_id-84">
+            <value>185</value>
+          </text>
+          <text id="community_id-85">
+            <value>186</value>
+          </text>
+          <text id="community_id-86">
+            <value>187</value>
+          </text>
+          <text id="community_id-87">
+            <value>188</value>
+          </text>
+          <text id="community_id-88">
+            <value>189</value>
+          </text>
+          <text id="community_id-89">
+            <value>190</value>
+          </text>
+          <text id="community_id-90">
+            <value>191</value>
+          </text>
+          <text id="community_id-91">
+            <value>192</value>
+          </text>
+          <text id="community_id-92">
+            <value>193</value>
+          </text>
+          <text id="community_id-93">
+            <value>194</value>
+          </text>
+          <text id="community_id-94">
+            <value>195</value>
+          </text>
+          <text id="community_id-95">
+            <value>196</value>
+          </text>
+          <text id="community_id-96">
+            <value>197</value>
+          </text>
+          <text id="community_id-97">
+            <value>198</value>
+          </text>
+          <text id="community_id-98">
+            <value>199</value>
+          </text>
+          <text id="community_id-99">
+            <value>200</value>
+          </text>
+          <text id="community_id-100">
+            <value>201</value>
+          </text>
+          <text id="community_id-101">
+            <value>202</value>
+          </text>
+          <text id="community_id-102">
+            <value>203</value>
+          </text>
+          <text id="community_id-103">
+            <value>204</value>
+          </text>
+          <text id="community_id-104">
+            <value>205</value>
+          </text>
+          <text id="community_id-105">
+            <value>206</value>
+          </text>
+          <text id="community_id-106">
+            <value>207</value>
+          </text>
+          <text id="community_id-107">
+            <value>208</value>
+          </text>
+          <text id="community_id-108">
+            <value>209</value>
+          </text>
+          <text id="community_id-109">
+            <value>210</value>
+          </text>
+          <text id="community_id-110">
+            <value>211</value>
+          </text>
+          <text id="community_id-111">
+            <value>212</value>
+          </text>
+          <text id="community_id-112">
+            <value>213</value>
+          </text>
+          <text id="community_id-113">
+            <value>214</value>
+          </text>
+          <text id="community_id-114">
+            <value>215</value>
+          </text>
+          <text id="community_id-115">
+            <value>216</value>
+          </text>
+          <text id="community_id-116">
+            <value>217</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="yesNoDontKnow">
+        <root>
+          <item>
+            <itextId>yesNoDontKnow-0</itextId>
+            <name>Sim</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-1</itextId>
+            <name>Não</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-2</itextId>
+            <name>Não sei</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yesNo">
+        <root>
+          <item>
+            <itextId>yesNo-0</itextId>
+            <name>Sim</name>
+          </item>
+          <item>
+            <itextId>yesNo-1</itextId>
+            <name>Não</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="p_IDMethod">
+        <root>
+          <item>
+            <itextId>p_IDMethod-0</itextId>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <itextId>p_IDMethod-1</itextId>
+            <name>ID_generation</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="results">
+        <root>
+          <item>
+            <itextId>results-0</itextId>
+            <name>Positivo</name>
+          </item>
+          <item>
+            <itextId>results-1</itextId>
+            <name>Negativo</name>
+          </item>
+          <item>
+            <itextId>results-2</itextId>
+            <name>Inválido.(incluindo.erros.de.teste.e.sangue.insuficiente)</name>
+          </item>
+          <item>
+            <itextId>results-3</itextId>
+            <name>Recusado.(retirada.do.consentimento)</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="why_invalid">
+        <root>
+          <item>
+            <itextId>why_invalid-0</itextId>
+            <name>Sem.linhas.de.controlo</name>
+          </item>
+          <item>
+            <itextId>why_invalid-1</itextId>
+            <name>Linha.de.controlo.quebrada/parcial</name>
+          </item>
+          <item>
+            <itextId>why_invalid-2</itextId>
+            <name>Dificuldade.na.absorção.da.amostra</name>
+          </item>
+          <item>
+            <itextId>why_invalid-3</itextId>
+            <name>Dificuldade.com.a.migração.de.amostras</name>
+          </item>
+          <item>
+            <itextId>why_invalid-4</itextId>
+            <name>Vestígios.de.sangue</name>
+          </item>
+          <item>
+            <itextId>why_invalid-5</itextId>
+            <name>Volume.de.sangue.insuficiente.devido.à.pipeta</name>
+          </item>
+          <item>
+            <itextId>why_invalid-6</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <itextId>region_list-0</itextId>
+            <name>Bafata</name>
+          </item>
+          <item>
+            <itextId>region_list-1</itextId>
+            <name>Gabu</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>Bafata</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>Cambadju</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>Contuboel</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-3</itextId>
+            <name>Gamamudo</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-4</itextId>
+            <name>Sare-Bacar</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-5</itextId>
+            <name>Tantam Cosse</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-6</itextId>
+            <name>Xitole Saltinho</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-7</itextId>
+            <name>Bajocunda</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-8</itextId>
+            <name>Beli</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-9</itextId>
+            <name>Buruntuma</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-10</itextId>
+            <name>Canjadude</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-11</itextId>
+            <name>Canquelifa</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-12</itextId>
+            <name>Dara</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-13</itextId>
+            <name>Fasse</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-14</itextId>
+            <name>Gabu</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-15</itextId>
+            <name>Jugadjole</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-16</itextId>
+            <name>Mansadjam</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-17</itextId>
+            <name>Pirada</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-18</itextId>
+            <name>Pitche</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-19</itextId>
+            <name>Sonaco</name>
+            <region_list>Gabu</region_list>
+          </item>
+          <item>
+            <itextId>district_list-20</itextId>
+            <name>Tumana</name>
+            <region_list>Gabu</region_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="community">
+        <root>
+          <item>
+            <itextId>community-0</itextId>
+            <district_list>Bafata</district_list>
+            <name>Bantael</name>
+          </item>
+          <item>
+            <itextId>community-1</itextId>
+            <district_list>Bafata</district_list>
+            <name>Camamudo</name>
+          </item>
+          <item>
+            <itextId>community-2</itextId>
+            <district_list>Bafata</district_list>
+            <name>Cansamba Jau</name>
+          </item>
+          <item>
+            <itextId>community-3</itextId>
+            <district_list>Bafata</district_list>
+            <name>Cusselintra</name>
+          </item>
+          <item>
+            <itextId>community-4</itextId>
+            <district_list>Bafata</district_list>
+            <name>Fulamansa</name>
+          </item>
+          <item>
+            <itextId>community-5</itextId>
+            <district_list>Bafata</district_list>
+            <name>Sincha-Mamudo</name>
+          </item>
+          <item>
+            <itextId>community-6</itextId>
+            <district_list>Cambadju</district_list>
+            <name>Dembube</name>
+          </item>
+          <item>
+            <itextId>community-7</itextId>
+            <district_list>Contuboel</district_list>
+            <name>Cahone</name>
+          </item>
+          <item>
+            <itextId>community-8</itextId>
+            <district_list>Contuboel</district_list>
+            <name>Canquenhe</name>
+          </item>
+          <item>
+            <itextId>community-9</itextId>
+            <district_list>Contuboel</district_list>
+            <name>Cansanuma</name>
+          </item>
+          <item>
+            <itextId>community-10</itextId>
+            <district_list>Contuboel</district_list>
+            <name>Madina Sare</name>
+          </item>
+          <item>
+            <itextId>community-11</itextId>
+            <district_list>Contuboel</district_list>
+            <name>Sare Yero Nai</name>
+          </item>
+          <item>
+            <itextId>community-12</itextId>
+            <district_list>Contuboel</district_list>
+            <name>Sare-Tchumo</name>
+          </item>
+          <item>
+            <itextId>community-13</itextId>
+            <district_list>Gamamudo</district_list>
+            <name>Madina-Samba</name>
+          </item>
+          <item>
+            <itextId>community-14</itextId>
+            <district_list>Sare-Bacar</district_list>
+            <name>Andezinho</name>
+          </item>
+          <item>
+            <itextId>community-15</itextId>
+            <district_list>Sare-Bacar</district_list>
+            <name>Lenqueto</name>
+          </item>
+          <item>
+            <itextId>community-16</itextId>
+            <district_list>Sare-Bacar</district_list>
+            <name>Sare Djide</name>
+          </item>
+          <item>
+            <itextId>community-17</itextId>
+            <district_list>Sare-Bacar</district_list>
+            <name>Sare Midjaca</name>
+          </item>
+          <item>
+            <itextId>community-18</itextId>
+            <district_list>Sare-Bacar</district_list>
+            <name>Sintcha Sadjo</name>
+          </item>
+          <item>
+            <itextId>community-19</itextId>
+            <district_list>Tantam Cosse</district_list>
+            <name>Balindjam</name>
+          </item>
+          <item>
+            <itextId>community-20</itextId>
+            <district_list>Xitole Saltinho</district_list>
+            <name>Assana-Djau</name>
+          </item>
+          <item>
+            <itextId>community-21</itextId>
+            <district_list>Xitole Saltinho</district_list>
+            <name>Bairo-Cola (Lenqueto)</name>
+          </item>
+          <item>
+            <itextId>community-22</itextId>
+            <district_list>Xitole Saltinho</district_list>
+            <name>Camibesse</name>
+          </item>
+          <item>
+            <itextId>community-23</itextId>
+            <district_list>Xitole Saltinho</district_list>
+            <name>Gunti</name>
+          </item>
+          <item>
+            <itextId>community-24</itextId>
+            <district_list>Xitole Saltinho</district_list>
+            <name>Mampata-Corubal</name>
+          </item>
+          <item>
+            <itextId>community-25</itextId>
+            <district_list>Xitole Saltinho</district_list>
+            <name>Sincha-Madio</name>
+          </item>
+          <item>
+            <itextId>community-26</itextId>
+            <district_list>Bajocunda</district_list>
+            <name>Colondinto</name>
+          </item>
+          <item>
+            <itextId>community-27</itextId>
+            <district_list>Bajocunda</district_list>
+            <name>Cupuda</name>
+          </item>
+          <item>
+            <itextId>community-28</itextId>
+            <district_list>Bajocunda</district_list>
+            <name>Diabugo</name>
+          </item>
+          <item>
+            <itextId>community-29</itextId>
+            <district_list>Bajocunda</district_list>
+            <name>Sintcha-Samba Djalo</name>
+          </item>
+          <item>
+            <itextId>community-30</itextId>
+            <district_list>Bajocunda</district_list>
+            <name>Tabassaye</name>
+          </item>
+          <item>
+            <itextId>community-31</itextId>
+            <district_list>Beli</district_list>
+            <name>Coboho</name>
+          </item>
+          <item>
+            <itextId>community-32</itextId>
+            <district_list>Beli</district_list>
+            <name>Dalaba</name>
+          </item>
+          <item>
+            <itextId>community-33</itextId>
+            <district_list>Beli</district_list>
+            <name>Dandula</name>
+          </item>
+          <item>
+            <itextId>community-34</itextId>
+            <district_list>Beli</district_list>
+            <name>Dandun</name>
+          </item>
+          <item>
+            <itextId>community-35</itextId>
+            <district_list>Beli</district_list>
+            <name>Pataqui</name>
+          </item>
+          <item>
+            <itextId>community-36</itextId>
+            <district_list>Beli</district_list>
+            <name>Queue</name>
+          </item>
+          <item>
+            <itextId>community-37</itextId>
+            <district_list>Beli</district_list>
+            <name>Quissem</name>
+          </item>
+          <item>
+            <itextId>community-38</itextId>
+            <district_list>Beli</district_list>
+            <name>Sutumaca</name>
+          </item>
+          <item>
+            <itextId>community-39</itextId>
+            <district_list>Beli</district_list>
+            <name>Tabadara</name>
+          </item>
+          <item>
+            <itextId>community-40</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Afiaba-Demba</name>
+          </item>
+          <item>
+            <itextId>community-41</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Bucure-Afia</name>
+          </item>
+          <item>
+            <itextId>community-42</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Bucure-Boboti</name>
+          </item>
+          <item>
+            <itextId>community-43</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Bucure-Cuntcha</name>
+          </item>
+          <item>
+            <itextId>community-44</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Bucure-Dara</name>
+          </item>
+          <item>
+            <itextId>community-45</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Bucure-Mory</name>
+          </item>
+          <item>
+            <itextId>community-46</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Djarem</name>
+          </item>
+          <item>
+            <itextId>community-47</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Fadja</name>
+          </item>
+          <item>
+            <itextId>community-48</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Sincha Bucary</name>
+          </item>
+          <item>
+            <itextId>community-49</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Sincha Dady</name>
+          </item>
+          <item>
+            <itextId>community-50</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Sintcha Barros</name>
+          </item>
+          <item>
+            <itextId>community-51</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Afia</name>
+          </item>
+          <item>
+            <itextId>community-52</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Bugafal</name>
+          </item>
+          <item>
+            <itextId>community-53</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Cabuca (Canjadude)</name>
+          </item>
+          <item>
+            <itextId>community-54</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Candecoly</name>
+          </item>
+          <item>
+            <itextId>community-55</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Diquel</name>
+          </item>
+          <item>
+            <itextId>community-56</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Limbimanga-Tamba</name>
+          </item>
+          <item>
+            <itextId>community-57</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Maria</name>
+          </item>
+          <item>
+            <itextId>community-58</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Orotchom</name>
+          </item>
+          <item>
+            <itextId>community-59</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Tche-Che Chamra</name>
+          </item>
+          <item>
+            <itextId>community-60</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Tchetche</name>
+          </item>
+          <item>
+            <itextId>community-61</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Vendo-Tcham</name>
+          </item>
+          <item>
+            <itextId>community-62</itextId>
+            <district_list>Canquelifa</district_list>
+            <name>Oloto</name>
+          </item>
+          <item>
+            <itextId>community-63</itextId>
+            <district_list>Canquelifa</district_list>
+            <name>Sintcha Aladje Yero</name>
+          </item>
+          <item>
+            <itextId>community-64</itextId>
+            <district_list>Canquelifa</district_list>
+            <name>Sintcha-Yero</name>
+          </item>
+          <item>
+            <itextId>community-65</itextId>
+            <district_list>Dara</district_list>
+            <name>Bantaquilin</name>
+          </item>
+          <item>
+            <itextId>community-66</itextId>
+            <district_list>Dara</district_list>
+            <name>Cabuca Porto</name>
+          </item>
+          <item>
+            <itextId>community-67</itextId>
+            <district_list>Dara</district_list>
+            <name>Cambadjana</name>
+          </item>
+          <item>
+            <itextId>community-68</itextId>
+            <district_list>Dara</district_list>
+            <name>Camedina</name>
+          </item>
+          <item>
+            <itextId>community-69</itextId>
+            <district_list>Dara</district_list>
+            <name>Camidina</name>
+          </item>
+          <item>
+            <itextId>community-70</itextId>
+            <district_list>Dara</district_list>
+            <name>Cobuncara</name>
+          </item>
+          <item>
+            <itextId>community-71</itextId>
+            <district_list>Dara</district_list>
+            <name>Dembacunda</name>
+          </item>
+          <item>
+            <itextId>community-72</itextId>
+            <district_list>Dara</district_list>
+            <name>Madina Djalocunda</name>
+          </item>
+          <item>
+            <itextId>community-73</itextId>
+            <district_list>Dara</district_list>
+            <name>Madina Mandinga</name>
+          </item>
+          <item>
+            <itextId>community-74</itextId>
+            <district_list>Dara</district_list>
+            <name>Sagoia</name>
+          </item>
+          <item>
+            <itextId>community-75</itextId>
+            <district_list>Dara</district_list>
+            <name>Sutuco</name>
+          </item>
+          <item>
+            <itextId>community-76</itextId>
+            <district_list>Dara</district_list>
+            <name>Sutuco (Sonaco)</name>
+          </item>
+          <item>
+            <itextId>community-77</itextId>
+            <district_list>Dara</district_list>
+            <name>Tambatcha</name>
+          </item>
+          <item>
+            <itextId>community-78</itextId>
+            <district_list>Fasse</district_list>
+            <name>Camare</name>
+          </item>
+          <item>
+            <itextId>community-79</itextId>
+            <district_list>Fasse</district_list>
+            <name>Fulamory Djomel</name>
+          </item>
+          <item>
+            <itextId>community-80</itextId>
+            <district_list>Gabu</district_list>
+            <name>Burutumba</name>
+          </item>
+          <item>
+            <itextId>community-81</itextId>
+            <district_list>Gabu</district_list>
+            <name>Cabuca</name>
+          </item>
+          <item>
+            <itextId>community-82</itextId>
+            <district_list>Gabu</district_list>
+            <name>Canguiro</name>
+          </item>
+          <item>
+            <itextId>community-83</itextId>
+            <district_list>Gabu</district_list>
+            <name>Cantire</name>
+          </item>
+          <item>
+            <itextId>community-84</itextId>
+            <district_list>Gabu</district_list>
+            <name>Ché-Ché</name>
+          </item>
+          <item>
+            <itextId>community-85</itextId>
+            <district_list>Gabu</district_list>
+            <name>Gã Guirô</name>
+          </item>
+          <item>
+            <itextId>community-86</itextId>
+            <district_list>Gabu</district_list>
+            <name>Gabu-Sare</name>
+          </item>
+          <item>
+            <itextId>community-87</itextId>
+            <district_list>Gabu</district_list>
+            <name>Samadoro</name>
+          </item>
+          <item>
+            <itextId>community-88</itextId>
+            <district_list>Gabu</district_list>
+            <name>Samba Gana</name>
+          </item>
+          <item>
+            <itextId>community-89</itextId>
+            <district_list>Gabu</district_list>
+            <name>Sele-Sele</name>
+          </item>
+          <item>
+            <itextId>community-90</itextId>
+            <district_list>Gabu</district_list>
+            <name>Siay</name>
+          </item>
+          <item>
+            <itextId>community-91</itextId>
+            <district_list>Gabu</district_list>
+            <name>Sintcha-Arafam</name>
+          </item>
+          <item>
+            <itextId>community-92</itextId>
+            <district_list>Jugadjole</district_list>
+            <name>Balandugo</name>
+          </item>
+          <item>
+            <itextId>community-93</itextId>
+            <district_list>Mansadjam</district_list>
+            <name>Carantaba</name>
+          </item>
+          <item>
+            <itextId>community-94</itextId>
+            <district_list>Mansadjam</district_list>
+            <name>Mamadu-Molo</name>
+          </item>
+          <item>
+            <itextId>community-95</itextId>
+            <district_list>Mansadjam</district_list>
+            <name>Sintcha-Ussumane</name>
+          </item>
+          <item>
+            <itextId>community-96</itextId>
+            <district_list>Pirada</district_list>
+            <name>Mansacunda Maunda</name>
+          </item>
+          <item>
+            <itextId>community-97</itextId>
+            <district_list>Pitche</district_list>
+            <name>Benfica</name>
+          </item>
+          <item>
+            <itextId>community-98</itextId>
+            <district_list>Pitche</district_list>
+            <name>Binam Alimo</name>
+          </item>
+          <item>
+            <itextId>community-99</itextId>
+            <district_list>Pitche</district_list>
+            <name>Cambumburou</name>
+          </item>
+          <item>
+            <itextId>community-100</itextId>
+            <district_list>Pitche</district_list>
+            <name>Cuatche</name>
+          </item>
+          <item>
+            <itextId>community-101</itextId>
+            <district_list>Pitche</district_list>
+            <name>Cuatche(4521)</name>
+          </item>
+          <item>
+            <itextId>community-102</itextId>
+            <district_list>Pitche</district_list>
+            <name>Madi Tchucaya</name>
+          </item>
+          <item>
+            <itextId>community-103</itextId>
+            <district_list>Pitche</district_list>
+            <name>Madina Djan</name>
+          </item>
+          <item>
+            <itextId>community-104</itextId>
+            <district_list>Pitche</district_list>
+            <name>Mady Maudo</name>
+          </item>
+          <item>
+            <itextId>community-105</itextId>
+            <district_list>Pitche</district_list>
+            <name>Malam Dalassy</name>
+          </item>
+          <item>
+            <itextId>community-106</itextId>
+            <district_list>Pitche</district_list>
+            <name>Nangue-Ulane</name>
+          </item>
+          <item>
+            <itextId>community-107</itextId>
+            <district_list>Pitche</district_list>
+            <name>Rauna</name>
+          </item>
+          <item>
+            <itextId>community-108</itextId>
+            <district_list>Pitche</district_list>
+            <name>Sintcha Demba</name>
+          </item>
+          <item>
+            <itextId>community-109</itextId>
+            <district_list>Sonaco</district_list>
+            <name>Codum Djombo</name>
+          </item>
+          <item>
+            <itextId>community-110</itextId>
+            <district_list>Sonaco</district_list>
+            <name>Fulamory</name>
+          </item>
+          <item>
+            <itextId>community-111</itextId>
+            <district_list>Sonaco</district_list>
+            <name>Meta Seidi</name>
+          </item>
+          <item>
+            <itextId>community-112</itextId>
+            <district_list>Sonaco</district_list>
+            <name>Sintcha-Side</name>
+          </item>
+          <item>
+            <itextId>community-113</itextId>
+            <district_list>Sonaco</district_list>
+            <name>Sonaco (Bairro Praça)</name>
+          </item>
+          <item>
+            <itextId>community-114</itextId>
+            <district_list>Tumana</district_list>
+            <name>Camboido</name>
+          </item>
+          <item>
+            <itextId>community-115</itextId>
+            <district_list>Tumana</district_list>
+            <name>Cansamba</name>
+          </item>
+          <item>
+            <itextId>community-116</itextId>
+            <district_list>Tumana</district_list>
+            <name>Salquenhe</name>
+          </item>
+          <item>
+            <itextId>community-117</itextId>
+            <district_list>Bafata</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-118</itextId>
+            <district_list>Cambadju</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-119</itextId>
+            <district_list>Contuboel</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-120</itextId>
+            <district_list>Gamamudo</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-121</itextId>
+            <district_list>Sare-Bacar</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-122</itextId>
+            <district_list>Tantam Cosse</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-123</itextId>
+            <district_list>Xitole Saltinho</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-124</itextId>
+            <district_list>Bajocunda</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-125</itextId>
+            <district_list>Beli</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-126</itextId>
+            <district_list>Buruntuma</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-127</itextId>
+            <district_list>Canjadude</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-128</itextId>
+            <district_list>Canquelifa</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-129</itextId>
+            <district_list>Dara</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-130</itextId>
+            <district_list>Fasse</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-131</itextId>
+            <district_list>Gabu</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-132</itextId>
+            <district_list>Jugadjole</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-133</itextId>
+            <district_list>Mansadjam</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-134</itextId>
+            <district_list>Pirada</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-135</itextId>
+            <district_list>Pitche</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-136</itextId>
+            <district_list>Sonaco</district_list>
+            <name>Other</name>
+          </item>
+          <item>
+            <itextId>community-137</itextId>
+            <district_list>Tumana</district_list>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="community_id">
+        <root>
+          <item>
+            <itextId>community_id-0</itextId>
+            <community>Bantael</community>
+            <name>101</name>
+          </item>
+          <item>
+            <itextId>community_id-1</itextId>
+            <community>Camamudo</community>
+            <name>102</name>
+          </item>
+          <item>
+            <itextId>community_id-2</itextId>
+            <community>Cansamba Jau</community>
+            <name>103</name>
+          </item>
+          <item>
+            <itextId>community_id-3</itextId>
+            <community>Cusselintra</community>
+            <name>104</name>
+          </item>
+          <item>
+            <itextId>community_id-4</itextId>
+            <community>Fulamansa</community>
+            <name>105</name>
+          </item>
+          <item>
+            <itextId>community_id-5</itextId>
+            <community>Sincha-Mamudo</community>
+            <name>106</name>
+          </item>
+          <item>
+            <itextId>community_id-6</itextId>
+            <community>Dembube</community>
+            <name>107</name>
+          </item>
+          <item>
+            <itextId>community_id-7</itextId>
+            <community>Cahone</community>
+            <name>108</name>
+          </item>
+          <item>
+            <itextId>community_id-8</itextId>
+            <community>Canquenhe</community>
+            <name>109</name>
+          </item>
+          <item>
+            <itextId>community_id-9</itextId>
+            <community>Cansanuma</community>
+            <name>110</name>
+          </item>
+          <item>
+            <itextId>community_id-10</itextId>
+            <community>Madina Sare</community>
+            <name>111</name>
+          </item>
+          <item>
+            <itextId>community_id-11</itextId>
+            <community>Sare Yero Nai</community>
+            <name>112</name>
+          </item>
+          <item>
+            <itextId>community_id-12</itextId>
+            <community>Sare-Tchumo</community>
+            <name>113</name>
+          </item>
+          <item>
+            <itextId>community_id-13</itextId>
+            <community>Madina-Samba</community>
+            <name>114</name>
+          </item>
+          <item>
+            <itextId>community_id-14</itextId>
+            <community>Andezinho</community>
+            <name>115</name>
+          </item>
+          <item>
+            <itextId>community_id-15</itextId>
+            <community>Lenqueto</community>
+            <name>116</name>
+          </item>
+          <item>
+            <itextId>community_id-16</itextId>
+            <community>Sare Djide</community>
+            <name>117</name>
+          </item>
+          <item>
+            <itextId>community_id-17</itextId>
+            <community>Sare Midjaca</community>
+            <name>118</name>
+          </item>
+          <item>
+            <itextId>community_id-18</itextId>
+            <community>Sintcha Sadjo</community>
+            <name>119</name>
+          </item>
+          <item>
+            <itextId>community_id-19</itextId>
+            <community>Balindjam</community>
+            <name>120</name>
+          </item>
+          <item>
+            <itextId>community_id-20</itextId>
+            <community>Assana-Djau</community>
+            <name>121</name>
+          </item>
+          <item>
+            <itextId>community_id-21</itextId>
+            <community>Bairo-Cola (Lenqueto)</community>
+            <name>122</name>
+          </item>
+          <item>
+            <itextId>community_id-22</itextId>
+            <community>Camibesse</community>
+            <name>123</name>
+          </item>
+          <item>
+            <itextId>community_id-23</itextId>
+            <community>Gunti</community>
+            <name>124</name>
+          </item>
+          <item>
+            <itextId>community_id-24</itextId>
+            <community>Mampata-Corubal</community>
+            <name>125</name>
+          </item>
+          <item>
+            <itextId>community_id-25</itextId>
+            <community>Sincha-Madio</community>
+            <name>126</name>
+          </item>
+          <item>
+            <itextId>community_id-26</itextId>
+            <community>Colondinto</community>
+            <name>127</name>
+          </item>
+          <item>
+            <itextId>community_id-27</itextId>
+            <community>Cupuda</community>
+            <name>128</name>
+          </item>
+          <item>
+            <itextId>community_id-28</itextId>
+            <community>Diabugo</community>
+            <name>129</name>
+          </item>
+          <item>
+            <itextId>community_id-29</itextId>
+            <community>Sintcha-Samba Djalo</community>
+            <name>130</name>
+          </item>
+          <item>
+            <itextId>community_id-30</itextId>
+            <community>Tabassaye</community>
+            <name>131</name>
+          </item>
+          <item>
+            <itextId>community_id-31</itextId>
+            <community>Coboho</community>
+            <name>132</name>
+          </item>
+          <item>
+            <itextId>community_id-32</itextId>
+            <community>Dalaba</community>
+            <name>133</name>
+          </item>
+          <item>
+            <itextId>community_id-33</itextId>
+            <community>Dandula</community>
+            <name>134</name>
+          </item>
+          <item>
+            <itextId>community_id-34</itextId>
+            <community>Dandun</community>
+            <name>135</name>
+          </item>
+          <item>
+            <itextId>community_id-35</itextId>
+            <community>Pataqui</community>
+            <name>136</name>
+          </item>
+          <item>
+            <itextId>community_id-36</itextId>
+            <community>Queue</community>
+            <name>137</name>
+          </item>
+          <item>
+            <itextId>community_id-37</itextId>
+            <community>Quissem</community>
+            <name>138</name>
+          </item>
+          <item>
+            <itextId>community_id-38</itextId>
+            <community>Sutumaca</community>
+            <name>139</name>
+          </item>
+          <item>
+            <itextId>community_id-39</itextId>
+            <community>Tabadara</community>
+            <name>140</name>
+          </item>
+          <item>
+            <itextId>community_id-40</itextId>
+            <community>Afiaba-Demba</community>
+            <name>141</name>
+          </item>
+          <item>
+            <itextId>community_id-41</itextId>
+            <community>Bucure-Afia</community>
+            <name>142</name>
+          </item>
+          <item>
+            <itextId>community_id-42</itextId>
+            <community>Bucure-Boboti</community>
+            <name>143</name>
+          </item>
+          <item>
+            <itextId>community_id-43</itextId>
+            <community>Bucure-Cuntcha</community>
+            <name>144</name>
+          </item>
+          <item>
+            <itextId>community_id-44</itextId>
+            <community>Bucure-Dara</community>
+            <name>145</name>
+          </item>
+          <item>
+            <itextId>community_id-45</itextId>
+            <community>Bucure-Mory</community>
+            <name>146</name>
+          </item>
+          <item>
+            <itextId>community_id-46</itextId>
+            <community>Djarem</community>
+            <name>147</name>
+          </item>
+          <item>
+            <itextId>community_id-47</itextId>
+            <community>Fadja</community>
+            <name>148</name>
+          </item>
+          <item>
+            <itextId>community_id-48</itextId>
+            <community>Sincha Bucary</community>
+            <name>149</name>
+          </item>
+          <item>
+            <itextId>community_id-49</itextId>
+            <community>Sincha Dady</community>
+            <name>150</name>
+          </item>
+          <item>
+            <itextId>community_id-50</itextId>
+            <community>Sintcha Barros</community>
+            <name>151</name>
+          </item>
+          <item>
+            <itextId>community_id-51</itextId>
+            <community>Afia</community>
+            <name>152</name>
+          </item>
+          <item>
+            <itextId>community_id-52</itextId>
+            <community>Bugafal</community>
+            <name>153</name>
+          </item>
+          <item>
+            <itextId>community_id-53</itextId>
+            <community>Cabuca (Canjadude)</community>
+            <name>154</name>
+          </item>
+          <item>
+            <itextId>community_id-54</itextId>
+            <community>Candecoly</community>
+            <name>155</name>
+          </item>
+          <item>
+            <itextId>community_id-55</itextId>
+            <community>Diquel</community>
+            <name>156</name>
+          </item>
+          <item>
+            <itextId>community_id-56</itextId>
+            <community>Limbimanga-Tamba</community>
+            <name>157</name>
+          </item>
+          <item>
+            <itextId>community_id-57</itextId>
+            <community>Maria</community>
+            <name>158</name>
+          </item>
+          <item>
+            <itextId>community_id-58</itextId>
+            <community>Orotchom</community>
+            <name>159</name>
+          </item>
+          <item>
+            <itextId>community_id-59</itextId>
+            <community>Tche-Che Chamra</community>
+            <name>160</name>
+          </item>
+          <item>
+            <itextId>community_id-60</itextId>
+            <community>Tchetche</community>
+            <name>161</name>
+          </item>
+          <item>
+            <itextId>community_id-61</itextId>
+            <community>Vendo-Tcham</community>
+            <name>162</name>
+          </item>
+          <item>
+            <itextId>community_id-62</itextId>
+            <community>Oloto</community>
+            <name>163</name>
+          </item>
+          <item>
+            <itextId>community_id-63</itextId>
+            <community>Sintcha Aladje Yero</community>
+            <name>164</name>
+          </item>
+          <item>
+            <itextId>community_id-64</itextId>
+            <community>Sintcha-Yero</community>
+            <name>165</name>
+          </item>
+          <item>
+            <itextId>community_id-65</itextId>
+            <community>Bantaquilin</community>
+            <name>166</name>
+          </item>
+          <item>
+            <itextId>community_id-66</itextId>
+            <community>Cabuca Porto</community>
+            <name>167</name>
+          </item>
+          <item>
+            <itextId>community_id-67</itextId>
+            <community>Cambadjana</community>
+            <name>168</name>
+          </item>
+          <item>
+            <itextId>community_id-68</itextId>
+            <community>Camedina</community>
+            <name>169</name>
+          </item>
+          <item>
+            <itextId>community_id-69</itextId>
+            <community>Camidina</community>
+            <name>170</name>
+          </item>
+          <item>
+            <itextId>community_id-70</itextId>
+            <community>Cobuncara</community>
+            <name>171</name>
+          </item>
+          <item>
+            <itextId>community_id-71</itextId>
+            <community>Dembacunda</community>
+            <name>172</name>
+          </item>
+          <item>
+            <itextId>community_id-72</itextId>
+            <community>Madina Djalocunda</community>
+            <name>173</name>
+          </item>
+          <item>
+            <itextId>community_id-73</itextId>
+            <community>Madina Mandinga</community>
+            <name>174</name>
+          </item>
+          <item>
+            <itextId>community_id-74</itextId>
+            <community>Sagoia</community>
+            <name>175</name>
+          </item>
+          <item>
+            <itextId>community_id-75</itextId>
+            <community>Sutuco</community>
+            <name>176</name>
+          </item>
+          <item>
+            <itextId>community_id-76</itextId>
+            <community>Sutuco (Sonaco)</community>
+            <name>177</name>
+          </item>
+          <item>
+            <itextId>community_id-77</itextId>
+            <community>Tambatcha</community>
+            <name>178</name>
+          </item>
+          <item>
+            <itextId>community_id-78</itextId>
+            <community>Camare</community>
+            <name>179</name>
+          </item>
+          <item>
+            <itextId>community_id-79</itextId>
+            <community>Fulamory Djomel</community>
+            <name>180</name>
+          </item>
+          <item>
+            <itextId>community_id-80</itextId>
+            <community>Burutumba</community>
+            <name>181</name>
+          </item>
+          <item>
+            <itextId>community_id-81</itextId>
+            <community>Cabuca</community>
+            <name>182</name>
+          </item>
+          <item>
+            <itextId>community_id-82</itextId>
+            <community>Canguiro</community>
+            <name>183</name>
+          </item>
+          <item>
+            <itextId>community_id-83</itextId>
+            <community>Cantire</community>
+            <name>184</name>
+          </item>
+          <item>
+            <itextId>community_id-84</itextId>
+            <community>Ché-Ché</community>
+            <name>185</name>
+          </item>
+          <item>
+            <itextId>community_id-85</itextId>
+            <community>Gã Guirô</community>
+            <name>186</name>
+          </item>
+          <item>
+            <itextId>community_id-86</itextId>
+            <community>Gabu-Sare</community>
+            <name>187</name>
+          </item>
+          <item>
+            <itextId>community_id-87</itextId>
+            <community>Samadoro</community>
+            <name>188</name>
+          </item>
+          <item>
+            <itextId>community_id-88</itextId>
+            <community>Samba Gana</community>
+            <name>189</name>
+          </item>
+          <item>
+            <itextId>community_id-89</itextId>
+            <community>Sele-Sele</community>
+            <name>190</name>
+          </item>
+          <item>
+            <itextId>community_id-90</itextId>
+            <community>Siay</community>
+            <name>191</name>
+          </item>
+          <item>
+            <itextId>community_id-91</itextId>
+            <community>Sintcha-Arafam</community>
+            <name>192</name>
+          </item>
+          <item>
+            <itextId>community_id-92</itextId>
+            <community>Balandugo</community>
+            <name>193</name>
+          </item>
+          <item>
+            <itextId>community_id-93</itextId>
+            <community>Carantaba</community>
+            <name>194</name>
+          </item>
+          <item>
+            <itextId>community_id-94</itextId>
+            <community>Mamadu-Molo</community>
+            <name>195</name>
+          </item>
+          <item>
+            <itextId>community_id-95</itextId>
+            <community>Sintcha-Ussumane</community>
+            <name>196</name>
+          </item>
+          <item>
+            <itextId>community_id-96</itextId>
+            <community>Mansacunda Maunda</community>
+            <name>197</name>
+          </item>
+          <item>
+            <itextId>community_id-97</itextId>
+            <community>Benfica</community>
+            <name>198</name>
+          </item>
+          <item>
+            <itextId>community_id-98</itextId>
+            <community>Binam Alimo</community>
+            <name>199</name>
+          </item>
+          <item>
+            <itextId>community_id-99</itextId>
+            <community>Cambumburou</community>
+            <name>200</name>
+          </item>
+          <item>
+            <itextId>community_id-100</itextId>
+            <community>Cuatche</community>
+            <name>201</name>
+          </item>
+          <item>
+            <itextId>community_id-101</itextId>
+            <community>Cuatche(4521)</community>
+            <name>202</name>
+          </item>
+          <item>
+            <itextId>community_id-102</itextId>
+            <community>Madi Tchucaya</community>
+            <name>203</name>
+          </item>
+          <item>
+            <itextId>community_id-103</itextId>
+            <community>Madina Djan</community>
+            <name>204</name>
+          </item>
+          <item>
+            <itextId>community_id-104</itextId>
+            <community>Mady Maudo</community>
+            <name>205</name>
+          </item>
+          <item>
+            <itextId>community_id-105</itextId>
+            <community>Malam Dalassy</community>
+            <name>206</name>
+          </item>
+          <item>
+            <itextId>community_id-106</itextId>
+            <community>Nangue-Ulane</community>
+            <name>207</name>
+          </item>
+          <item>
+            <itextId>community_id-107</itextId>
+            <community>Rauna</community>
+            <name>208</name>
+          </item>
+          <item>
+            <itextId>community_id-108</itextId>
+            <community>Sintcha Demba</community>
+            <name>209</name>
+          </item>
+          <item>
+            <itextId>community_id-109</itextId>
+            <community>Codum Djombo</community>
+            <name>210</name>
+          </item>
+          <item>
+            <itextId>community_id-110</itextId>
+            <community>Fulamory</community>
+            <name>211</name>
+          </item>
+          <item>
+            <itextId>community_id-111</itextId>
+            <community>Meta Seidi</community>
+            <name>212</name>
+          </item>
+          <item>
+            <itextId>community_id-112</itextId>
+            <community>Sintcha-Side</community>
+            <name>213</name>
+          </item>
+          <item>
+            <itextId>community_id-113</itextId>
+            <community>Sonaco (Bairro Praça)</community>
+            <name>214</name>
+          </item>
+          <item>
+            <itextId>community_id-114</itextId>
+            <community>Camboido</community>
+            <name>215</name>
+          </item>
+          <item>
+            <itextId>community_id-115</itextId>
+            <community>Cansamba</community>
+            <name>216</name>
+          </item>
+          <item>
+            <itextId>community_id-116</itextId>
+            <community>Salquenhe</community>
+            <name>217</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/d_recorder_id:jr:constraintMsg')" nodeset="/data/d_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/d_region" required="true()" type="string"/>
+      <bind nodeset="/data/d_District" required="true()" type="string"/>
+      <bind nodeset="/data/d_Cluster_Name" required="true()" type="string"/>
+      <bind nodeset="/data/d_cluster_id" relevant=" /data/d_Cluster_Name != 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/d_Cluster_Name2" relevant=" /data/d_Cluster_Name  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/d_cluster_id2" relevant=" /data/d_Cluster_Name  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/d_LabOV162ndTest" required="true()" type="string"/>
+      <bind nodeset="/data/d_lotnumber" required="true()" type="string"/>
+      <bind nodeset="/data/d_id_method" required="true()" type="string"/>
+      <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_serial_number1:jr:constraintMsg')" nodeset="/data/d_serial_number1" relevant=" /data/d_id_method  = 'Não'" required="true()" type="string"/>
+      <bind constraint=". =  /data/d_serial_number1 " jr:constraintMsg="jr:itext('/data/d_serial_number2:jr:constraintMsg')" nodeset="/data/d_serial_number2" relevant=" /data/d_id_method  = 'Não'" required="true()" type="string"/>
+      <bind calculate="concat( /data/d_recorder_id , '-',  /data/d_cluster_id , '-',  /data/d_serial_number1 )" nodeset="/data/d_code_id" readonly="true()" relevant=" /data/d_id_method  = 'Não'" required="true()" type="string"/>
+      <bind nodeset="/data/d_barcode_id" readonly="true()" relevant=" /data/d_id_method  = 'Sim'" required="true()" type="barcode"/>
+      <bind nodeset="/data/d_LabOV16" required="true()" type="string"/>
+      <bind nodeset="/data/d_LabOV16Invalid" relevant=" /data/d_LabOV16  = 'Invalid'" required="true()" type="string"/>
+      <bind nodeset="/data/d_LabOV16Invalid_other" relevant=" /data/d_LabOV16Invalid  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/d_Notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_StartTime" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_EndTime" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/d_recorder_id">
+      <label ref="jr:itext('/data/d_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/d_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/d_region">
+      <label ref="jr:itext('/data/d_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_region/Bafata:label')"/>
+        <value>Bafata</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_region/Gabu:label')"/>
+        <value>Gabu</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_District">
+      <label ref="jr:itext('/data/d_District:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[ /data/d_region  = region_list]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_Cluster_Name">
+      <label ref="jr:itext('/data/d_Cluster_Name:label')"/>
+      <itemset nodeset="instance('community')/root/item[ /data/d_District  = district_list]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_cluster_id">
+      <label ref="jr:itext('/data/d_cluster_id:label')"/>
+      <itemset nodeset="instance('community_id')/root/item[ /data/d_Cluster_Name  = community]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/d_Cluster_Name2">
+      <label ref="jr:itext('/data/d_Cluster_Name2:label')"/>
+    </input>
+    <input ref="/data/d_cluster_id2">
+      <label ref="jr:itext('/data/d_cluster_id2:label')"/>
+    </input>
+    <select1 ref="/data/d_LabOV162ndTest">
+      <label ref="jr:itext('/data/d_LabOV162ndTest:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV162ndTest/Sim:label')"/>
+        <value>Sim</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV162ndTest/Não:label')"/>
+        <value>Não</value>
+      </item>
+    </select1>
+    <input ref="/data/d_lotnumber">
+      <label ref="jr:itext('/data/d_lotnumber:label')"/>
+    </input>
+    <select1 ref="/data/d_id_method">
+      <label ref="jr:itext('/data/d_id_method:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_id_method/Sim:label')"/>
+        <value>Sim</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_id_method/Não:label')"/>
+        <value>Não</value>
+      </item>
+    </select1>
+    <input ref="/data/d_serial_number1">
+      <label ref="jr:itext('/data/d_serial_number1:label')"/>
+    </input>
+    <input ref="/data/d_serial_number2">
+      <label ref="jr:itext('/data/d_serial_number2:label')"/>
+    </input>
+    <input ref="/data/d_code_id">
+      <label ref="jr:itext('/data/d_code_id:label')"/>
+    </input>
+    <input ref="/data/d_barcode_id">
+      <label ref="jr:itext('/data/d_barcode_id:label')"/>
+    </input>
+    <select1 ref="/data/d_LabOV16">
+      <label ref="jr:itext('/data/d_LabOV16:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16/Positivo:label')"/>
+        <value>Positivo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16/Negativo:label')"/>
+        <value>Negativo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16/Inválido.(incluindo.erros.de.teste.e.sangue.insuficiente):label')"/>
+        <value>Inválido.(incluindo.erros.de.teste.e.sangue.insuficiente)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16/Recusado.(retirada.do.consentimento):label')"/>
+        <value>Recusado.(retirada.do.consentimento)</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_LabOV16Invalid">
+      <label ref="jr:itext('/data/d_LabOV16Invalid:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Sem.linhas.de.controlo:label')"/>
+        <value>Sem.linhas.de.controlo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Linha.de.controlo.quebrada/parcial:label')"/>
+        <value>Linha.de.controlo.quebrada/parcial</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Dificuldade.na.absorção.da.amostra:label')"/>
+        <value>Dificuldade.na.absorção.da.amostra</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Dificuldade.com.a.migração.de.amostras:label')"/>
+        <value>Dificuldade.com.a.migração.de.amostras</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Vestígios.de.sangue:label')"/>
+        <value>Vestígios.de.sangue</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Volume.de.sangue.insuficiente.devido.à.pipeta:label')"/>
+        <value>Volume.de.sangue.insuficiente.devido.à.pipeta</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/d_LabOV16Invalid_other">
+      <label ref="jr:itext('/data/d_LabOV16Invalid_other:label')"/>
+    </input>
+    <input ref="/data/d_Notes">
+      <label ref="jr:itext('/data/d_Notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
