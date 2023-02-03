@@ -7,12 +7,13 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Fev 2023) ONCHO PreStop - 2. Participant Form</h:title>
+    <h:title>(Fev 2023) ONCHO PreStop - 2. Participant Form V1</h:title>
     <model >
 
       <instance>
-        <data id="gw_oncho_202302_prestop_2_participant">
+        <data id="gw_oncho_202302_prestop_2_participant_v1">
           <p_recorder_id/>
+          <p_region/>
           <p_district/>
           <p_cluster_name/>
           <p_cluster_id/>
@@ -52,6 +53,9 @@
           </text>
           <text id="/data/p_recorder_id:hint">
             <value>Código de 2 dígitos atribuído a si</value>
+          </text>
+          <text id="/data/p_region:label">
+            <value>Seleccione a região</value>
           </text>
           <text id="/data/p_district:label">
             <value>Seleccione o Distrito</value>
@@ -232,6 +236,9 @@
           <text id="/data/p_recorder_id:hint">
             <value>2-digit code assigned to you</value>
           </text>
+          <text id="/data/p_region:label">
+            <value>Select the region</value>
+          </text>
           <text id="/data/p_district:label">
             <value>Select the district</value>
           </text>
@@ -404,9 +411,10 @@
       </itext>
 
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
-      <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
-      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
+      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
       <bind nodeset="/data/p_date" type="date"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind nodeset="/data/p_id_method" relevant=" /data/p_consent  = 'Sim'" type="string"/>
@@ -434,6 +442,9 @@
     <input ref="/data/p_recorder_id">
       <label ref="jr:itext('/data/p_recorder_id:label')"/>
       <hint ref="jr:itext('/data/p_recorder_id:hint')"/>
+    </input>
+    <input ref="/data/p_region">
+      <label ref="jr:itext('/data/p_region:label')"/>
     </input>
     <input ref="/data/p_district">
       <label ref="jr:itext('/data/p_district:label')"/>
