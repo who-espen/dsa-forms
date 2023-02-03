@@ -423,7 +423,6 @@
           </text>
         </translation>
       </itext>
-
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/p_region" required="true()" type="string"  db_get="col_1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
@@ -436,7 +435,7 @@
       <bind nodeset="/data/p_id_method" relevant=" /data/p_consent  = 'Sim'" type="string"/>
       <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_serial_number1:jr:constraintMsg')" nodeset="/data/p_serial_number1" relevant=" /data/p_consent  = 'Sim' and  /data/p_id_method  = 'Não'" required="true()" type="string"/>
       <bind constraint=". =  /data/p_serial_number1 " jr:constraintMsg="jr:itext('/data/p_serial_number2:jr:constraintMsg')" nodeset="/data/p_serial_number2" relevant=" /data/p_consent  = 'Sim' and  /data/p_id_method  = 'Não'" required="true()" type="string"/>
-      <bind calculate="concat( /data/p_recorder_id , '-',  /data/p_cluster_id , '-',  /data/p_serial_number1 )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Sim' and  /data/p_id_method  = 'Não'" required="true()" type="string"/>
+      <bind calculate="if( /data/p_cluster_name != 'Other', concat( /data/p_recorder_id , '-',  /data/p_cluster_id , '-',  /data/p_serial_number1 ), concat( /data/p_recorder_id , '-',  /data/p_cluster_id2 , '-',  /data/p_serial_number1 ))" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Sim' and  /data/p_id_method  = 'Não'" required="true()" type="string"/>
       <bind nodeset="/data/p_barcode_id" relevant=" /data/p_consent  = 'Sim' and  /data/p_id_method  = 'Sim'" required="true()" type="barcode"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
