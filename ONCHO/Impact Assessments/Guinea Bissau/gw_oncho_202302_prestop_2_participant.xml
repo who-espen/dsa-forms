@@ -7,16 +7,18 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Fev 2023) ONCHO PreStop - 2. Participant Form V1</h:title>
+    <h:title>(Fev 2023) ONCHO PreStop - 2. Participant Form V1.2</h:title>
     <model >
 
       <instance>
-        <data id="gw_oncho_202302_prestop_2_participant_v1">
+        <data id="gw_oncho_202302_prestop_2_participant_v1_2">
           <p_recorder_id/>
           <p_region/>
           <p_district/>
           <p_cluster_name/>
           <p_cluster_id/>
+          <p_cluster_name2/>
+          <p_cluster_id2/>
           <p_date/>
           <p_consent/>
           <p_id_method/>
@@ -65,6 +67,12 @@
           </text>
           <text id="/data/p_cluster_id:label">
             <value>Seleccionar o ID da comunidade</value>
+          </text>
+          <text id="/data/p_cluster_name2:label">
+            <value>Seleccione a outra comunidade</value>
+          </text>
+          <text id="/data/p_cluster_id2:label">
+            <value>Seleccionar o outro ID da comunidade</value>
           </text>
           <text id="/data/p_date:label">
             <value>Introduza a data</value>
@@ -248,6 +256,12 @@
           <text id="/data/p_cluster_id:label">
             <value>Select the community ID</value>
           </text>
+          <text id="/data/p_cluster_name2:label">
+            <value>Select the other community</value>
+          </text>
+          <text id="/data/p_cluster_id2:label">
+            <value>Select the other community ID</value>
+          </text>
           <text id="/data/p_date:label">
             <value>Enter the date</value>
           </text>
@@ -411,10 +425,12 @@
       </itext>
 
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
-      <bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/p_region" required="true()" type="string"  db_get="col_1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
-      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_cluster_id" relevant=" /data/p_cluster_name != 'Other'" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_cluster_name2" relevant=" /data/p_cluster_name  = 'Other'" required="true()" type="string" db_get="col_5" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_id2" relevant=" /data/p_cluster_name  = 'Other'" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_cluster_name2"/>
       <bind nodeset="/data/p_date" type="date"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind nodeset="/data/p_id_method" relevant=" /data/p_consent  = 'Sim'" type="string"/>
@@ -454,6 +470,12 @@
     </input>
     <input ref="/data/p_cluster_id">
       <label ref="jr:itext('/data/p_cluster_id:label')"/>
+    </input>
+    <input ref="/data/p_cluster_name2">
+      <label ref="jr:itext('/data/p_cluster_name2:label')"/>
+    </input>
+    <input ref="/data/p_cluster_id2">
+      <label ref="jr:itext('/data/p_cluster_id2:label')"/>
     </input>
     <input ref="/data/p_date">
       <label ref="jr:itext('/data/p_date:label')"/>
