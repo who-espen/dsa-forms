@@ -7,13 +7,13 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Dev) 2. TAS1 FL - Résultat FTS</h:title>
+    <h:title>(2023 Fev) 2. Recartographie FL - Résultat FTS</h:title>
     <model >
 
       <instance>
-        <data id="ci_202302_lf_tas1_3_fts_result">
+        <data id="ci_202302_lf_conf_3_fts_result">
           <d_recorderID/>
-          <d_eu_name/>
+          <d_region_name/>
           <d_district/>
           <d_district_id/>
           <d_cluster_name/>
@@ -60,7 +60,7 @@
           <text id="/data/d_recorderID:hint">
             <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui vous a été attribué, à vous ou à votre équipe.</value>
           </text>
-          <text id="/data/d_eu_name:label">
+          <text id="/data/d_region_name:label">
             <value>Sélectionner l'unité d'évaluation (UE)</value>
           </text>
           <text id="/data/d_district:label">
@@ -235,7 +235,7 @@
           <text id="/data/d_recorderID:hint">
             <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
           </text>
-          <text id="/data/d_eu_name:label">
+          <text id="/data/d_region_name:label">
             <value>Select the evaluation unit (EU)</value>
           </text>
           <text id="/data/d_district:label">
@@ -403,8 +403,8 @@
       </itext>
 
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/d_recorderID:jr:constraintMsg')" nodeset="/data/d_recorderID" required="true()" type="int"/>
-      <bind nodeset="/data/d_eu_name" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_eu_name"/>
+      <bind nodeset="/data/d_region_name" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_region_name"/>
       <bind nodeset="/data/d_district_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_district"/>
       <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/d_district"/>
       <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" relevant=" /data/d_cluster_name != 'Autre'" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/d_cluster_name"/>
@@ -451,8 +451,8 @@
       <label ref="jr:itext('/data/d_recorderID:label')"/>
       <hint ref="jr:itext('/data/d_recorderID:hint')"/>
     </input>
-    <input ref="/data/d_eu_name">
-      <label ref="jr:itext('/data/d_eu_name:label')"/>
+    <input ref="/data/d_region_name">
+      <label ref="jr:itext('/data/d_region_name:label')"/>
     </input>
     <input ref="/data/d_district">
       <label ref="jr:itext('/data/d_district:label')"/>
