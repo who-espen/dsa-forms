@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Fev) 2. Recartographie FL - Participants</h:title>
+    <h:title>(2023 Fev) 2. Recartographie FL - Participants V1</h:title>
     <model >
 
       <instance>
-        <data id="ci_202302_lf_conf_2_partcipants">
+        <data id="ci_202302_lf_conf_2_partcipants_v1">
           <p_recorderID/>
           <p_region_name/>
           <p_district/>
@@ -87,16 +87,22 @@
             <value>Féminin</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>L'age doit être compris entre 5 et 9 ans</value>
+            <value>Veuillez entrer un age correcte</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Entrer l'âge du participant (en années)</value>
           </text>
-          <text id="/data/p_how_long_lived:jr:constraintMsg">
-            <value>La valeur ne doit pas être supérieure à l'âge</value>
-          </text>
           <text id="/data/p_how_long_lived:label">
             <value>Depuis combien d'années le participant habite-t-il dans la communauté?</value>
+          </text>
+          <text id="/data/p_how_long_lived/&gt; 1 an:label">
+            <value>&gt; 1 an</value>
+          </text>
+          <text id="/data/p_how_long_lived/&lt; 1 an:label">
+            <value>&lt; 1 an</value>
+          </text>
+          <text id="/data/p_how_long_lived/Je ne sais pas:label">
+            <value>Je ne sais pas</value>
           </text>
           <text id="/data/p_num:jr:constraintMsg">
             <value>La valeur doit être compris entre 1 et 410</value>
@@ -167,20 +173,26 @@
             <value>Female</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>The age must be between 5 and 9 years</value>
+            <value>Please enter a correct age</value>
           </text>
           <text id="/data/p_age_yrs:label">
             <value>Enter age in years</value>
           </text>
-          <text id="/data/p_how_long_lived:jr:constraintMsg">
-            <value>The value must not be greater than the age</value>
-          </text>
           <text id="/data/p_how_long_lived:label">
             <value>How many years has the respondent lived in the area?</value>
           </text>
+          <text id="/data/p_how_long_lived/&gt; 1 an:label">
+            <value>&gt; 1 year</value>
+          </text>
+          <text id="/data/p_how_long_lived/&lt; 1 an:label">
+            <value>&lt; 1 year</value>
+          </text>
+          <text id="/data/p_how_long_lived/Je ne sais pas:label">
+            <value>Do not know</value>
+          </text>
           <text id="/data/p_num:jr:constraintMsg">
             <value>The value must be between 1 and 410</value>
-          </text>required
+          </text>
           <text id="/data/p_num:label">
             <value>Enter the order number</value>
           </text>
@@ -209,8 +221,8 @@
       <bind nodeset="/data/p_cluster_id2" relevant=" /data/p_cluster_name  = 'Autre'" required="true()" type="string" db_get="col_7" db_filter_by_col_3="/data/p_cluster_name"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
-      <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
+      <bind constraint=". &gt; 0 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind calculate="if( /data/p_cluster_name  = 'Autre', concat( /data/p_district_id , '-',  /data/p_cluster_id2 , '-' , /data/p_num ), concat( /data/p_district_id , '-',  /data/p_cluster_id , '-' , /data/p_num ))" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Non'" type="string"/>
@@ -271,9 +283,21 @@
     <input ref="/data/p_age_yrs">
       <label ref="jr:itext('/data/p_age_yrs:label')"/>
     </input>
-    <input ref="/data/p_how_long_lived">
+    <select1 ref="/data/p_how_long_lived">
       <label ref="jr:itext('/data/p_how_long_lived:label')"/>
-    </input>
+      <item>
+        <label ref="jr:itext('/data/p_how_long_lived/&gt; 1 an:label')"/>
+        <value>&gt; 1 an</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_how_long_lived/&lt; 1 an:label')"/>
+        <value>&lt; 1 an</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_how_long_lived/Je ne sais pas:label')"/>
+        <value>Je ne sais pas</value>
+      </item>
+    </select1>
     <input ref="/data/p_num">
       <label ref="jr:itext('/data/p_num:label')"/>
       <hint ref="jr:itext('/data/p_num:hint')"/>
