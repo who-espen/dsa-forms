@@ -109,7 +109,7 @@
             <value>Féminin</value>
           </text>
           <text id="/data/d_age_yrs:jr:constraintMsg">
-            <value>L'age doit être compris entre 5 et 9 ans</value>
+            <value>Veuillez entrer un âge valide</value>
           </text>
           <text id="/data/d_age_yrs:label">
             <value>Entrer l'âge du participant (en années)</value>
@@ -284,7 +284,7 @@
             <value>Female</value>
           </text>
           <text id="/data/d_age_yrs:jr:constraintMsg">
-            <value>The age must be between 5 and 9 years</value>
+            <value>Please enter a valide age</value>
           </text>
           <text id="/data/d_age_yrs:label">
             <value>Enter age in years</value>
@@ -413,7 +413,7 @@
       <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
       <bind calculate="if( /data/d_cluster_name  = 'Autre', concat( /data/d_district_id , '-',  /data/d_cluster_id2 , '-' , /data/d_num ), concat( /data/d_district_id , '-',  /data/d_cluster_id , '-' , /data/d_num ))" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/d_sex" required="true()" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/d_age_yrs:jr:constraintMsg')" nodeset="/data/d_age_yrs" required="true()" type="int"/>
+      <bind constraint=". &gt;= 1 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/d_age_yrs:jr:constraintMsg')" nodeset="/data/d_age_yrs" required="true()" type="int"/>
       <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalide'" required="true()" type="string"/>
