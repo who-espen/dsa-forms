@@ -1,0 +1,2536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Jan 2023) ONCHO PreStop - 1. Site Form</h:title>
+    <model >
+
+      <instance>
+        <data id="ng_oncho_202301_prestop_1_site">
+          <c_recorder_id/>
+          <c_region/>
+          <c_district/>
+          <c_cluster_name/>
+          <c_cluster_id/>
+          <c_supervisor/>
+          <c_date/>
+          <c_health_facility/>
+          <c_type_health_facility/>
+          <c_gps/>
+          <c_admin_level/>
+          <c_river/>
+          <c_distance_community/>
+          <c_population/>
+          <c_hh_number/>
+          <c_receiving_ivm/>
+          <c_lengh_period_ivm/>
+          <c_month_dist/>
+          <c_year_dist/>
+          <c_last_dist/>
+          <c_notes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/c_recorder_id:jr:constraintMsg">
+            <value>Must be between 10 and 99 included</value>
+          </text>
+          <text id="/data/c_recorder_id:label">
+            <value>Enter the recorder ID</value>
+          </text>
+          <text id="/data/c_recorder_id:hint">
+            <value>2-digit code assigned to you</value>
+          </text>
+          <text id="/data/c_region:label">
+            <value>State</value>
+          </text>
+          <text id="/data/c_region/Adamawa:label">
+            <value>Adamawa</value>
+          </text>
+          <text id="/data/c_region/Kogi:label">
+            <value>Kogi</value>
+          </text>
+          <text id="/data/c_region/Kwara:label">
+            <value>Kwara</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Local Government Area</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Names of Community</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>Must be between 100 and 999 included</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Community Code</value>
+          </text>
+          <text id="/data/c_supervisor:label">
+            <value>Team Supervisor</value>
+          </text>
+          <text id="/data/c_date:label">
+            <value>Date of Survey</value>
+          </text>
+          <text id="/data/c_health_facility:label">
+            <value>Name of Nearest Health Facility</value>
+          </text>
+          <text id="/data/c_type_health_facility:label">
+            <value>Type of Health Facility</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Community Coordinates</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>Works best outside of any building</value>
+          </text>
+          <text id="/data/c_admin_level:label">
+            <value>Type of administrative level</value>
+          </text>
+          <text id="/data/c_admin_level/Community/Village:label">
+            <value>Community/Village</value>
+          </text>
+          <text id="/data/c_admin_level/Sub-Community/Village:label">
+            <value>Sub-Community/Village</value>
+          </text>
+          <text id="/data/c_admin_level/Hamlet:label">
+            <value>Hamlet</value>
+          </text>
+          <text id="/data/c_admin_level/IDP/Refugee camp:label">
+            <value>IDP/Refugee camp</value>
+          </text>
+          <text id="/data/c_river:label">
+            <value>Name of the nearest river</value>
+          </text>
+          <text id="/data/c_distance_community:label">
+            <value>Approximate distance to community (KM)</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Total Population of Community</value>
+          </text>
+          <text id="/data/c_hh_number:label">
+            <value>Estimated No of Households</value>
+          </text>
+          <text id="/data/c_receiving_ivm:label">
+            <value>Community Receiving Ivermectin</value>
+          </text>
+          <text id="/data/c_receiving_ivm/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/c_receiving_ivm/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/c_lengh_period_ivm:label">
+            <value>Length of Period ivermectin taken</value>
+          </text>
+          <text id="/data/c_month_dist:label">
+            <value>Month of Last Distribution</value>
+          </text>
+          <text id="/data/c_month_dist/January:label">
+            <value>January</value>
+          </text>
+          <text id="/data/c_month_dist/February:label">
+            <value>February</value>
+          </text>
+          <text id="/data/c_month_dist/March:label">
+            <value>March</value>
+          </text>
+          <text id="/data/c_month_dist/April:label">
+            <value>April</value>
+          </text>
+          <text id="/data/c_month_dist/May:label">
+            <value>May</value>
+          </text>
+          <text id="/data/c_month_dist/June:label">
+            <value>June</value>
+          </text>
+          <text id="/data/c_month_dist/July:label">
+            <value>July</value>
+          </text>
+          <text id="/data/c_month_dist/August:label">
+            <value>August</value>
+          </text>
+          <text id="/data/c_month_dist/September:label">
+            <value>September</value>
+          </text>
+          <text id="/data/c_month_dist/October:label">
+            <value>October</value>
+          </text>
+          <text id="/data/c_month_dist/November:label">
+            <value>November</value>
+          </text>
+          <text id="/data/c_month_dist/December:label">
+            <value>December</value>
+          </text>
+          <text id="/data/c_year_dist:jr:constraintMsg">
+            <value>Please enter a valid year</value>
+          </text>
+          <text id="/data/c_year_dist:label">
+            <value>Year of Last Distribution</value>
+          </text>
+          <text id="/data/c_last_dist:label">
+            <value>Last Distribution</value>
+          </text>
+          <text id="/data/c_notes:label">
+            <value>Remarks/Observations</value>
+          </text>
+          <text id="level-0">
+            <value>Community/Village</value>
+          </text>
+          <text id="level-1">
+            <value>Sub-Community/Village</value>
+          </text>
+          <text id="level-2">
+            <value>Hamlet</value>
+          </text>
+          <text id="level-3">
+            <value>IDP/Refugee camp</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="yes_no-1">
+            <value>No</value>
+          </text>
+          <text id="months-0">
+            <value>January</value>
+          </text>
+          <text id="months-1">
+            <value>February</value>
+          </text>
+          <text id="months-2">
+            <value>March</value>
+          </text>
+          <text id="months-3">
+            <value>April</value>
+          </text>
+          <text id="months-4">
+            <value>May</value>
+          </text>
+          <text id="months-5">
+            <value>June</value>
+          </text>
+          <text id="months-6">
+            <value>July</value>
+          </text>
+          <text id="months-7">
+            <value>August</value>
+          </text>
+          <text id="months-8">
+            <value>September</value>
+          </text>
+          <text id="months-9">
+            <value>October</value>
+          </text>
+          <text id="months-10">
+            <value>November</value>
+          </text>
+          <text id="months-11">
+            <value>December</value>
+          </text>
+          <text id="region_list-0">
+            <value>Adamawa</value>
+          </text>
+          <text id="region_list-1">
+            <value>Kogi</value>
+          </text>
+          <text id="region_list-2">
+            <value>Kwara</value>
+          </text>
+          <text id="district_list-0">
+            <value>Demsa</value>
+          </text>
+          <text id="district_list-1">
+            <value>Fufore</value>
+          </text>
+          <text id="district_list-2">
+            <value>Ganye</value>
+          </text>
+          <text id="district_list-3">
+            <value>Girei</value>
+          </text>
+          <text id="district_list-4">
+            <value>Guyuk</value>
+          </text>
+          <text id="district_list-5">
+            <value>Hong</value>
+          </text>
+          <text id="district_list-6">
+            <value>Jada</value>
+          </text>
+          <text id="district_list-7">
+            <value>Lamurde</value>
+          </text>
+          <text id="district_list-8">
+            <value>Madagali</value>
+          </text>
+          <text id="district_list-9">
+            <value>Maiha</value>
+          </text>
+          <text id="district_list-10">
+            <value>Mayo Belwa</value>
+          </text>
+          <text id="district_list-11">
+            <value>Mubi North</value>
+          </text>
+          <text id="district_list-12">
+            <value>Numan</value>
+          </text>
+          <text id="district_list-13">
+            <value>Song</value>
+          </text>
+          <text id="district_list-14">
+            <value>Toungo</value>
+          </text>
+          <text id="district_list-15">
+            <value>Adavi</value>
+          </text>
+          <text id="district_list-16">
+            <value>Ajaokuta</value>
+          </text>
+          <text id="district_list-17">
+            <value>Ankpa</value>
+          </text>
+          <text id="district_list-18">
+            <value>Bassa</value>
+          </text>
+          <text id="district_list-19">
+            <value>Dekina</value>
+          </text>
+          <text id="district_list-20">
+            <value>Ibaji</value>
+          </text>
+          <text id="district_list-21">
+            <value>Idah</value>
+          </text>
+          <text id="district_list-22">
+            <value>Igala Mela Odolu</value>
+          </text>
+          <text id="district_list-23">
+            <value>Igalamela-Olodu</value>
+          </text>
+          <text id="district_list-24">
+            <value>Ijumu</value>
+          </text>
+          <text id="district_list-25">
+            <value>Kabba/Bunu</value>
+          </text>
+          <text id="district_list-26">
+            <value>Lokoja</value>
+          </text>
+          <text id="district_list-27">
+            <value>Mopa Muro</value>
+          </text>
+          <text id="district_list-28">
+            <value>Ofu</value>
+          </text>
+          <text id="district_list-29">
+            <value>Ogori/Magongo</value>
+          </text>
+          <text id="district_list-30">
+            <value>Olamaboro</value>
+          </text>
+          <text id="district_list-31">
+            <value>Omala</value>
+          </text>
+          <text id="district_list-32">
+            <value>Yagba East</value>
+          </text>
+          <text id="district_list-33">
+            <value>Yagba West</value>
+          </text>
+          <text id="district_list-34">
+            <value>Asa</value>
+          </text>
+          <text id="district_list-35">
+            <value>Baruten</value>
+          </text>
+          <text id="district_list-36">
+            <value>Edu</value>
+          </text>
+          <text id="district_list-37">
+            <value>Ifelodun</value>
+          </text>
+          <text id="district_list-38">
+            <value>Ilorin West</value>
+          </text>
+          <text id="district_list-39">
+            <value>Isin</value>
+          </text>
+          <text id="district_list-40">
+            <value>Kaiama</value>
+          </text>
+          <text id="district_list-41">
+            <value>Moro</value>
+          </text>
+          <text id="district_list-42">
+            <value>Oke Ero</value>
+          </text>
+          <text id="district_list-43">
+            <value>Patigi</value>
+          </text>
+          <text id="community-0">
+            <value>Agbobo</value>
+          </text>
+          <text id="community-1">
+            <value>Osara Ii</value>
+          </text>
+          <text id="community-2">
+            <value>Geregu</value>
+          </text>
+          <text id="community-3">
+            <value>Aguyaya</value>
+          </text>
+          <text id="community-4">
+            <value>Okaba</value>
+          </text>
+          <text id="community-5">
+            <value>Okeso</value>
+          </text>
+          <text id="community-6">
+            <value>Budo Aiki</value>
+          </text>
+          <text id="community-7">
+            <value>Bukuro Bwen</value>
+          </text>
+          <text id="community-8">
+            <value>Gbaraguru</value>
+          </text>
+          <text id="community-9">
+            <value>Guma Suno</value>
+          </text>
+          <text id="community-10">
+            <value>Ilesha</value>
+          </text>
+          <text id="community-11">
+            <value>Moshi</value>
+          </text>
+          <text id="community-12">
+            <value>Sheyen</value>
+          </text>
+          <text id="community-13">
+            <value>Tewu</value>
+          </text>
+          <text id="community-14">
+            <value>Yash./Gando S</value>
+          </text>
+          <text id="community-15">
+            <value>Duru</value>
+          </text>
+          <text id="community-16">
+            <value>Gande</value>
+          </text>
+          <text id="community-17">
+            <value>Kpanche</value>
+          </text>
+          <text id="community-18">
+            <value>Ajonoja</value>
+          </text>
+          <text id="community-19">
+            <value>Ochi-Ofago</value>
+          </text>
+          <text id="community-20">
+            <value>Oganeaji</value>
+          </text>
+          <text id="community-21">
+            <value>Demsa</value>
+          </text>
+          <text id="community-22">
+            <value>Mbula</value>
+          </text>
+          <text id="community-23">
+            <value>Magabiko-Ndaningi</value>
+          </text>
+          <text id="community-24">
+            <value>Shekwuti</value>
+          </text>
+          <text id="community-25">
+            <value>Daware</value>
+          </text>
+          <text id="community-26">
+            <value>Karewa Moto</value>
+          </text>
+          <text id="community-27">
+            <value>Karlahi Gogra</value>
+          </text>
+          <text id="community-28">
+            <value>Kochel</value>
+          </text>
+          <text id="community-29">
+            <value>Malabu</value>
+          </text>
+          <text id="community-30">
+            <value>Muninga</value>
+          </text>
+          <text id="community-31">
+            <value>Wuro Sam</value>
+          </text>
+          <text id="community-32">
+            <value>Disol</value>
+          </text>
+          <text id="community-33">
+            <value>Songti</value>
+          </text>
+          <text id="community-34">
+            <value>Zaman Lafiya</value>
+          </text>
+          <text id="community-35">
+            <value>Jamtari</value>
+          </text>
+          <text id="community-36">
+            <value>Bodeno</value>
+          </text>
+          <text id="community-37">
+            <value>Boshikiri</value>
+          </text>
+          <text id="community-38">
+            <value>Mile Talatin</value>
+          </text>
+          <text id="community-39">
+            <value>Puba</value>
+          </text>
+          <text id="community-40">
+            <value>Shiwa</value>
+          </text>
+          <text id="community-41">
+            <value>Ayah</value>
+          </text>
+          <text id="community-42">
+            <value>Ekanyi</value>
+          </text>
+          <text id="community-43">
+            <value>Iyele</value>
+          </text>
+          <text id="community-44">
+            <value>Nwajala</value>
+          </text>
+          <text id="community-45">
+            <value>Odeke</value>
+          </text>
+          <text id="community-46">
+            <value>Inachalo</value>
+          </text>
+          <text id="community-47">
+            <value>Adigun</value>
+          </text>
+          <text id="community-48">
+            <value>Agbeku</value>
+          </text>
+          <text id="community-49">
+            <value>Amayo</value>
+          </text>
+          <text id="community-50">
+            <value>Ibare</value>
+          </text>
+          <text id="community-51">
+            <value>Alla Oggu</value>
+          </text>
+          <text id="community-52">
+            <value>Efakwu-Od</value>
+          </text>
+          <text id="community-53">
+            <value>Iluke</value>
+          </text>
+          <text id="community-54">
+            <value>Osin Aremu</value>
+          </text>
+          <text id="community-55">
+            <value>Iji</value>
+          </text>
+          <text id="community-56">
+            <value>Pola</value>
+          </text>
+          <text id="community-57">
+            <value>Akutupa</value>
+          </text>
+          <text id="community-58">
+            <value>Odoape</value>
+          </text>
+          <text id="community-59">
+            <value>Otafun</value>
+          </text>
+          <text id="community-60">
+            <value>Ale Gongo</value>
+          </text>
+          <text id="community-61">
+            <value>Eko Ado</value>
+          </text>
+          <text id="community-62">
+            <value>Jebba/Gana</value>
+          </text>
+          <text id="community-63">
+            <value>Bolere</value>
+          </text>
+          <text id="community-64">
+            <value>Lafiya</value>
+          </text>
+          <text id="community-65">
+            <value>Adankolo</value>
+          </text>
+          <text id="community-66">
+            <value>Agini</value>
+          </text>
+          <text id="community-67">
+            <value>Chakaruku</value>
+          </text>
+          <text id="community-68">
+            <value>Gerinya</value>
+          </text>
+          <text id="community-69">
+            <value>Jingere/Zhono</value>
+          </text>
+          <text id="community-70">
+            <value>Lumadu</value>
+          </text>
+          <text id="community-71">
+            <value>Pakka</value>
+          </text>
+          <text id="community-72">
+            <value>Ribadu</value>
+          </text>
+          <text id="community-73">
+            <value>Okeagi</value>
+          </text>
+          <text id="community-74">
+            <value>Aiyilekan</value>
+          </text>
+          <text id="community-75">
+            <value>Bonni</value>
+          </text>
+          <text id="community-76">
+            <value>Budo-Ode</value>
+          </text>
+          <text id="community-77">
+            <value>Maduguva</value>
+          </text>
+          <text id="community-78">
+            <value>Mayo Bani</value>
+          </text>
+          <text id="community-79">
+            <value>Muchalla</value>
+          </text>
+          <text id="community-80">
+            <value>Imburu</value>
+          </text>
+          <text id="community-81">
+            <value>Akpagidigbo</value>
+          </text>
+          <text id="community-82">
+            <value>Akonegboro</value>
+          </text>
+          <text id="community-83">
+            <value>Ayekale</value>
+          </text>
+          <text id="community-84">
+            <value>Ogbugbu1</value>
+          </text>
+          <text id="community-85">
+            <value>Echa</value>
+          </text>
+          <text id="community-86">
+            <value>Igodo</value>
+          </text>
+          <text id="community-87">
+            <value>Ogodu</value>
+          </text>
+          <text id="community-88">
+            <value>Kpada</value>
+          </text>
+          <text id="community-89">
+            <value>Okolushe-Egboro</value>
+          </text>
+          <text id="community-90">
+            <value>Chibawuro</value>
+          </text>
+          <text id="community-91">
+            <value>Handa</value>
+          </text>
+          <text id="community-92">
+            <value>Laro</value>
+          </text>
+          <text id="community-93">
+            <value>Murke</value>
+          </text>
+          <text id="community-94">
+            <value>Kobalti Chitta/Lainde</value>
+          </text>
+          <text id="community-95">
+            <value>Mayo Butali</value>
+          </text>
+          <text id="community-96">
+            <value>Mayo Sangnare</value>
+          </text>
+          <text id="community-97">
+            <value>Mayo Unurdu</value>
+          </text>
+          <text id="community-98">
+            <value>Toungo</value>
+          </text>
+          <text id="community-99">
+            <value>Odogbe</value>
+          </text>
+          <text id="community-100">
+            <value>Onari</value>
+          </text>
+          <text id="community-101">
+            <value>Okunran</value>
+          </text>
+          <text id="community_id-0">
+            <value>101</value>
+          </text>
+          <text id="community_id-1">
+            <value>102</value>
+          </text>
+          <text id="community_id-2">
+            <value>103</value>
+          </text>
+          <text id="community_id-3">
+            <value>104</value>
+          </text>
+          <text id="community_id-4">
+            <value>105</value>
+          </text>
+          <text id="community_id-5">
+            <value>106</value>
+          </text>
+          <text id="community_id-6">
+            <value>107</value>
+          </text>
+          <text id="community_id-7">
+            <value>108</value>
+          </text>
+          <text id="community_id-8">
+            <value>109</value>
+          </text>
+          <text id="community_id-9">
+            <value>110</value>
+          </text>
+          <text id="community_id-10">
+            <value>111</value>
+          </text>
+          <text id="community_id-11">
+            <value>112</value>
+          </text>
+          <text id="community_id-12">
+            <value>113</value>
+          </text>
+          <text id="community_id-13">
+            <value>114</value>
+          </text>
+          <text id="community_id-14">
+            <value>115</value>
+          </text>
+          <text id="community_id-15">
+            <value>116</value>
+          </text>
+          <text id="community_id-16">
+            <value>117</value>
+          </text>
+          <text id="community_id-17">
+            <value>118</value>
+          </text>
+          <text id="community_id-18">
+            <value>119</value>
+          </text>
+          <text id="community_id-19">
+            <value>120</value>
+          </text>
+          <text id="community_id-20">
+            <value>121</value>
+          </text>
+          <text id="community_id-21">
+            <value>122</value>
+          </text>
+          <text id="community_id-22">
+            <value>123</value>
+          </text>
+          <text id="community_id-23">
+            <value>124</value>
+          </text>
+          <text id="community_id-24">
+            <value>125</value>
+          </text>
+          <text id="community_id-25">
+            <value>126</value>
+          </text>
+          <text id="community_id-26">
+            <value>127</value>
+          </text>
+          <text id="community_id-27">
+            <value>128</value>
+          </text>
+          <text id="community_id-28">
+            <value>129</value>
+          </text>
+          <text id="community_id-29">
+            <value>130</value>
+          </text>
+          <text id="community_id-30">
+            <value>131</value>
+          </text>
+          <text id="community_id-31">
+            <value>132</value>
+          </text>
+          <text id="community_id-32">
+            <value>133</value>
+          </text>
+          <text id="community_id-33">
+            <value>134</value>
+          </text>
+          <text id="community_id-34">
+            <value>135</value>
+          </text>
+          <text id="community_id-35">
+            <value>136</value>
+          </text>
+          <text id="community_id-36">
+            <value>137</value>
+          </text>
+          <text id="community_id-37">
+            <value>138</value>
+          </text>
+          <text id="community_id-38">
+            <value>139</value>
+          </text>
+          <text id="community_id-39">
+            <value>140</value>
+          </text>
+          <text id="community_id-40">
+            <value>141</value>
+          </text>
+          <text id="community_id-41">
+            <value>142</value>
+          </text>
+          <text id="community_id-42">
+            <value>143</value>
+          </text>
+          <text id="community_id-43">
+            <value>144</value>
+          </text>
+          <text id="community_id-44">
+            <value>145</value>
+          </text>
+          <text id="community_id-45">
+            <value>146</value>
+          </text>
+          <text id="community_id-46">
+            <value>147</value>
+          </text>
+          <text id="community_id-47">
+            <value>148</value>
+          </text>
+          <text id="community_id-48">
+            <value>149</value>
+          </text>
+          <text id="community_id-49">
+            <value>150</value>
+          </text>
+          <text id="community_id-50">
+            <value>151</value>
+          </text>
+          <text id="community_id-51">
+            <value>152</value>
+          </text>
+          <text id="community_id-52">
+            <value>153</value>
+          </text>
+          <text id="community_id-53">
+            <value>154</value>
+          </text>
+          <text id="community_id-54">
+            <value>155</value>
+          </text>
+          <text id="community_id-55">
+            <value>156</value>
+          </text>
+          <text id="community_id-56">
+            <value>157</value>
+          </text>
+          <text id="community_id-57">
+            <value>158</value>
+          </text>
+          <text id="community_id-58">
+            <value>159</value>
+          </text>
+          <text id="community_id-59">
+            <value>160</value>
+          </text>
+          <text id="community_id-60">
+            <value>161</value>
+          </text>
+          <text id="community_id-61">
+            <value>162</value>
+          </text>
+          <text id="community_id-62">
+            <value>163</value>
+          </text>
+          <text id="community_id-63">
+            <value>164</value>
+          </text>
+          <text id="community_id-64">
+            <value>165</value>
+          </text>
+          <text id="community_id-65">
+            <value>166</value>
+          </text>
+          <text id="community_id-66">
+            <value>167</value>
+          </text>
+          <text id="community_id-67">
+            <value>168</value>
+          </text>
+          <text id="community_id-68">
+            <value>169</value>
+          </text>
+          <text id="community_id-69">
+            <value>170</value>
+          </text>
+          <text id="community_id-70">
+            <value>171</value>
+          </text>
+          <text id="community_id-71">
+            <value>172</value>
+          </text>
+          <text id="community_id-72">
+            <value>173</value>
+          </text>
+          <text id="community_id-73">
+            <value>174</value>
+          </text>
+          <text id="community_id-74">
+            <value>175</value>
+          </text>
+          <text id="community_id-75">
+            <value>176</value>
+          </text>
+          <text id="community_id-76">
+            <value>177</value>
+          </text>
+          <text id="community_id-77">
+            <value>178</value>
+          </text>
+          <text id="community_id-78">
+            <value>179</value>
+          </text>
+          <text id="community_id-79">
+            <value>180</value>
+          </text>
+          <text id="community_id-80">
+            <value>181</value>
+          </text>
+          <text id="community_id-81">
+            <value>182</value>
+          </text>
+          <text id="community_id-82">
+            <value>183</value>
+          </text>
+          <text id="community_id-83">
+            <value>184</value>
+          </text>
+          <text id="community_id-84">
+            <value>185</value>
+          </text>
+          <text id="community_id-85">
+            <value>186</value>
+          </text>
+          <text id="community_id-86">
+            <value>187</value>
+          </text>
+          <text id="community_id-87">
+            <value>188</value>
+          </text>
+          <text id="community_id-88">
+            <value>189</value>
+          </text>
+          <text id="community_id-89">
+            <value>190</value>
+          </text>
+          <text id="community_id-90">
+            <value>191</value>
+          </text>
+          <text id="community_id-91">
+            <value>192</value>
+          </text>
+          <text id="community_id-92">
+            <value>193</value>
+          </text>
+          <text id="community_id-93">
+            <value>194</value>
+          </text>
+          <text id="community_id-94">
+            <value>195</value>
+          </text>
+          <text id="community_id-95">
+            <value>196</value>
+          </text>
+          <text id="community_id-96">
+            <value>197</value>
+          </text>
+          <text id="community_id-97">
+            <value>198</value>
+          </text>
+          <text id="community_id-98">
+            <value>199</value>
+          </text>
+          <text id="community_id-99">
+            <value>200</value>
+          </text>
+          <text id="community_id-100">
+            <value>201</value>
+          </text>
+          <text id="community_id-101">
+            <value>202</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="level">
+        <root>
+          <item>
+            <itextId>level-0</itextId>
+            <district_list>Hamlet</district_list>
+            <name>Community/Village</name>
+          </item>
+          <item>
+            <itextId>level-1</itextId>
+            <name>Sub-Community/Village</name>
+          </item>
+          <item>
+            <itextId>level-2</itextId>
+            <name>Hamlet</name>
+          </item>
+          <item>
+            <itextId>level-3</itextId>
+            <name>IDP/Refugee camp</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="months">
+        <root>
+          <item>
+            <itextId>months-0</itextId>
+            <name>January</name>
+          </item>
+          <item>
+            <itextId>months-1</itextId>
+            <name>February</name>
+          </item>
+          <item>
+            <itextId>months-2</itextId>
+            <name>March</name>
+          </item>
+          <item>
+            <itextId>months-3</itextId>
+            <name>April</name>
+          </item>
+          <item>
+            <itextId>months-4</itextId>
+            <name>May</name>
+          </item>
+          <item>
+            <itextId>months-5</itextId>
+            <name>June</name>
+          </item>
+          <item>
+            <itextId>months-6</itextId>
+            <name>July</name>
+          </item>
+          <item>
+            <itextId>months-7</itextId>
+            <name>August</name>
+          </item>
+          <item>
+            <itextId>months-8</itextId>
+            <name>September</name>
+          </item>
+          <item>
+            <itextId>months-9</itextId>
+            <name>October</name>
+          </item>
+          <item>
+            <itextId>months-10</itextId>
+            <name>November</name>
+          </item>
+          <item>
+            <itextId>months-11</itextId>
+            <name>December</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <itextId>region_list-0</itextId>
+            <name>Adamawa</name>
+          </item>
+          <item>
+            <itextId>region_list-1</itextId>
+            <name>Kogi</name>
+          </item>
+          <item>
+            <itextId>region_list-2</itextId>
+            <name>Kwara</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>Demsa</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>Fufore</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>Ganye</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-3</itextId>
+            <name>Girei</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-4</itextId>
+            <name>Guyuk</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-5</itextId>
+            <name>Hong</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-6</itextId>
+            <name>Jada</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-7</itextId>
+            <name>Lamurde</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-8</itextId>
+            <name>Madagali</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-9</itextId>
+            <name>Maiha</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-10</itextId>
+            <name>Mayo Belwa</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-11</itextId>
+            <name>Mubi North</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-12</itextId>
+            <name>Numan</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-13</itextId>
+            <name>Song</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-14</itextId>
+            <name>Toungo</name>
+            <region_list>Adamawa</region_list>
+          </item>
+          <item>
+            <itextId>district_list-15</itextId>
+            <name>Adavi</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-16</itextId>
+            <name>Ajaokuta</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-17</itextId>
+            <name>Ankpa</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-18</itextId>
+            <name>Bassa</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-19</itextId>
+            <name>Dekina</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-20</itextId>
+            <name>Ibaji</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-21</itextId>
+            <name>Idah</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-22</itextId>
+            <name>Igala Mela Odolu</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-23</itextId>
+            <name>Igalamela-Olodu</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-24</itextId>
+            <name>Ijumu</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-25</itextId>
+            <name>Kabba/Bunu</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-26</itextId>
+            <name>Lokoja</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-27</itextId>
+            <name>Mopa Muro</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-28</itextId>
+            <name>Ofu</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-29</itextId>
+            <name>Ogori/Magongo</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-30</itextId>
+            <name>Olamaboro</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-31</itextId>
+            <name>Omala</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-32</itextId>
+            <name>Yagba East</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-33</itextId>
+            <name>Yagba West</name>
+            <region_list>Kogi</region_list>
+          </item>
+          <item>
+            <itextId>district_list-34</itextId>
+            <name>Asa</name>
+            <region_list>Kwara</region_list>
+          </item>
+          <item>
+            <itextId>district_list-35</itextId>
+            <name>Baruten</name>
+            <region_list>Kwara</region_list>
+          </item>
+          <item>
+            <itextId>district_list-36</itextId>
+            <name>Edu</name>
+            <region_list>Kwara</region_list>
+          </item>
+          <item>
+            <itextId>district_list-37</itextId>
+            <name>Ifelodun</name>
+            <region_list>Kwara</region_list>
+          </item>
+          <item>
+            <itextId>district_list-38</itextId>
+            <name>Ilorin West</name>
+            <region_list>Kwara</region_list>
+          </item>
+          <item>
+            <itextId>district_list-39</itextId>
+            <name>Isin</name>
+            <region_list>Kwara</region_list>
+          </item>
+          <item>
+            <itextId>district_list-40</itextId>
+            <name>Kaiama</name>
+            <region_list>Kwara</region_list>
+          </item>
+          <item>
+            <itextId>district_list-41</itextId>
+            <name>Moro</name>
+            <region_list>Kwara</region_list>
+          </item>
+          <item>
+            <itextId>district_list-42</itextId>
+            <name>Oke Ero</name>
+            <region_list>Kwara</region_list>
+          </item>
+          <item>
+            <itextId>district_list-43</itextId>
+            <name>Patigi</name>
+            <region_list>Kwara</region_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="community">
+        <root>
+          <item>
+            <itextId>community-0</itextId>
+            <district_list>Adavi</district_list>
+            <name>Agbobo</name>
+          </item>
+          <item>
+            <itextId>community-1</itextId>
+            <district_list>Adavi</district_list>
+            <name>Osara Ii</name>
+          </item>
+          <item>
+            <itextId>community-2</itextId>
+            <district_list>Ajaokuta</district_list>
+            <name>Geregu</name>
+          </item>
+          <item>
+            <itextId>community-3</itextId>
+            <district_list>Ankpa</district_list>
+            <name>Aguyaya</name>
+          </item>
+          <item>
+            <itextId>community-4</itextId>
+            <district_list>Ankpa</district_list>
+            <name>Okaba</name>
+          </item>
+          <item>
+            <itextId>community-5</itextId>
+            <district_list>Asa</district_list>
+            <name>Okeso</name>
+          </item>
+          <item>
+            <itextId>community-6</itextId>
+            <district_list>Baruten</district_list>
+            <name>Budo Aiki</name>
+          </item>
+          <item>
+            <itextId>community-7</itextId>
+            <district_list>Baruten</district_list>
+            <name>Bukuro Bwen</name>
+          </item>
+          <item>
+            <itextId>community-8</itextId>
+            <district_list>Baruten</district_list>
+            <name>Gbaraguru</name>
+          </item>
+          <item>
+            <itextId>community-9</itextId>
+            <district_list>Baruten</district_list>
+            <name>Guma Suno</name>
+          </item>
+          <item>
+            <itextId>community-10</itextId>
+            <district_list>Baruten</district_list>
+            <name>Ilesha</name>
+          </item>
+          <item>
+            <itextId>community-11</itextId>
+            <district_list>Baruten</district_list>
+            <name>Moshi</name>
+          </item>
+          <item>
+            <itextId>community-12</itextId>
+            <district_list>Baruten</district_list>
+            <name>Sheyen</name>
+          </item>
+          <item>
+            <itextId>community-13</itextId>
+            <district_list>Baruten</district_list>
+            <name>Tewu</name>
+          </item>
+          <item>
+            <itextId>community-14</itextId>
+            <district_list>Baruten</district_list>
+            <name>Yash./Gando S</name>
+          </item>
+          <item>
+            <itextId>community-15</itextId>
+            <district_list>Bassa</district_list>
+            <name>Duru</name>
+          </item>
+          <item>
+            <itextId>community-16</itextId>
+            <district_list>Bassa</district_list>
+            <name>Gande</name>
+          </item>
+          <item>
+            <itextId>community-17</itextId>
+            <district_list>Bassa</district_list>
+            <name>Kpanche</name>
+          </item>
+          <item>
+            <itextId>community-18</itextId>
+            <district_list>Dekina</district_list>
+            <name>Ajonoja</name>
+          </item>
+          <item>
+            <itextId>community-19</itextId>
+            <district_list>Dekina</district_list>
+            <name>Ochi-Ofago</name>
+          </item>
+          <item>
+            <itextId>community-20</itextId>
+            <district_list>Dekina</district_list>
+            <name>Oganeaji</name>
+          </item>
+          <item>
+            <itextId>community-21</itextId>
+            <district_list>Demsa</district_list>
+            <name>Demsa</name>
+          </item>
+          <item>
+            <itextId>community-22</itextId>
+            <district_list>Demsa</district_list>
+            <name>Mbula</name>
+          </item>
+          <item>
+            <itextId>community-23</itextId>
+            <district_list>Edu</district_list>
+            <name>Magabiko-Ndaningi</name>
+          </item>
+          <item>
+            <itextId>community-24</itextId>
+            <district_list>Edu</district_list>
+            <name>Shekwuti</name>
+          </item>
+          <item>
+            <itextId>community-25</itextId>
+            <district_list>Fufore</district_list>
+            <name>Daware</name>
+          </item>
+          <item>
+            <itextId>community-26</itextId>
+            <district_list>Fufore</district_list>
+            <name>Karewa Moto</name>
+          </item>
+          <item>
+            <itextId>community-27</itextId>
+            <district_list>Fufore</district_list>
+            <name>Karlahi Gogra</name>
+          </item>
+          <item>
+            <itextId>community-28</itextId>
+            <district_list>Fufore</district_list>
+            <name>Kochel</name>
+          </item>
+          <item>
+            <itextId>community-29</itextId>
+            <district_list>Fufore</district_list>
+            <name>Malabu</name>
+          </item>
+          <item>
+            <itextId>community-30</itextId>
+            <district_list>Fufore</district_list>
+            <name>Muninga</name>
+          </item>
+          <item>
+            <itextId>community-31</itextId>
+            <district_list>Fufore</district_list>
+            <name>Wuro Sam</name>
+          </item>
+          <item>
+            <itextId>community-32</itextId>
+            <district_list>Ganye</district_list>
+            <name>Disol</name>
+          </item>
+          <item>
+            <itextId>community-33</itextId>
+            <district_list>Ganye</district_list>
+            <name>Songti</name>
+          </item>
+          <item>
+            <itextId>community-34</itextId>
+            <district_list>Ganye</district_list>
+            <name>Zaman Lafiya</name>
+          </item>
+          <item>
+            <itextId>community-35</itextId>
+            <district_list>Girei</district_list>
+            <name>Jamtari</name>
+          </item>
+          <item>
+            <itextId>community-36</itextId>
+            <district_list>Guyuk</district_list>
+            <name>Bodeno</name>
+          </item>
+          <item>
+            <itextId>community-37</itextId>
+            <district_list>Guyuk</district_list>
+            <name>Boshikiri</name>
+          </item>
+          <item>
+            <itextId>community-38</itextId>
+            <district_list>Hong</district_list>
+            <name>Mile Talatin</name>
+          </item>
+          <item>
+            <itextId>community-39</itextId>
+            <district_list>Hong</district_list>
+            <name>Puba</name>
+          </item>
+          <item>
+            <itextId>community-40</itextId>
+            <district_list>Hong</district_list>
+            <name>Shiwa</name>
+          </item>
+          <item>
+            <itextId>community-41</itextId>
+            <district_list>Ibaji</district_list>
+            <name>Ayah</name>
+          </item>
+          <item>
+            <itextId>community-42</itextId>
+            <district_list>Ibaji</district_list>
+            <name>Ekanyi</name>
+          </item>
+          <item>
+            <itextId>community-43</itextId>
+            <district_list>Ibaji</district_list>
+            <name>Iyele</name>
+          </item>
+          <item>
+            <itextId>community-44</itextId>
+            <district_list>Ibaji</district_list>
+            <name>Nwajala</name>
+          </item>
+          <item>
+            <itextId>community-45</itextId>
+            <district_list>Ibaji</district_list>
+            <name>Odeke</name>
+          </item>
+          <item>
+            <itextId>community-46</itextId>
+            <district_list>Idah</district_list>
+            <name>Inachalo</name>
+          </item>
+          <item>
+            <itextId>community-47</itextId>
+            <district_list>Ifelodun</district_list>
+            <name>Adigun</name>
+          </item>
+          <item>
+            <itextId>community-48</itextId>
+            <district_list>Ifelodun</district_list>
+            <name>Agbeku</name>
+          </item>
+          <item>
+            <itextId>community-49</itextId>
+            <district_list>Ifelodun</district_list>
+            <name>Amayo</name>
+          </item>
+          <item>
+            <itextId>community-50</itextId>
+            <district_list>Ifelodun</district_list>
+            <name>Ibare</name>
+          </item>
+          <item>
+            <itextId>community-51</itextId>
+            <district_list>Igala Mela Odolu</district_list>
+            <name>Alla Oggu</name>
+          </item>
+          <item>
+            <itextId>community-52</itextId>
+            <district_list>Igalamela-Olodu</district_list>
+            <name>Efakwu-Od</name>
+          </item>
+          <item>
+            <itextId>community-53</itextId>
+            <district_list>Ijumu</district_list>
+            <name>Iluke</name>
+          </item>
+          <item>
+            <itextId>community-54</itextId>
+            <district_list>Ilorin West</district_list>
+            <name>Osin Aremu</name>
+          </item>
+          <item>
+            <itextId>community-55</itextId>
+            <district_list>Isin</district_list>
+            <name>Iji</name>
+          </item>
+          <item>
+            <itextId>community-56</itextId>
+            <district_list>Jada</district_list>
+            <name>Pola</name>
+          </item>
+          <item>
+            <itextId>community-57</itextId>
+            <district_list>Kabba/Bunu</district_list>
+            <name>Akutupa</name>
+          </item>
+          <item>
+            <itextId>community-58</itextId>
+            <district_list>Kabba/Bunu</district_list>
+            <name>Odoape</name>
+          </item>
+          <item>
+            <itextId>community-59</itextId>
+            <district_list>Kabba/Bunu</district_list>
+            <name>Otafun</name>
+          </item>
+          <item>
+            <itextId>community-60</itextId>
+            <district_list>Kaiama</district_list>
+            <name>Ale Gongo</name>
+          </item>
+          <item>
+            <itextId>community-61</itextId>
+            <district_list>Kaiama</district_list>
+            <name>Eko Ado</name>
+          </item>
+          <item>
+            <itextId>community-62</itextId>
+            <district_list>Kaiama</district_list>
+            <name>Jebba/Gana</name>
+          </item>
+          <item>
+            <itextId>community-63</itextId>
+            <district_list>Lamurde</district_list>
+            <name>Bolere</name>
+          </item>
+          <item>
+            <itextId>community-64</itextId>
+            <district_list>Lamurde</district_list>
+            <name>Lafiya</name>
+          </item>
+          <item>
+            <itextId>community-65</itextId>
+            <district_list>Lokoja</district_list>
+            <name>Adankolo</name>
+          </item>
+          <item>
+            <itextId>community-66</itextId>
+            <district_list>Lokoja</district_list>
+            <name>Agini</name>
+          </item>
+          <item>
+            <itextId>community-67</itextId>
+            <district_list>Lokoja</district_list>
+            <name>Chakaruku</name>
+          </item>
+          <item>
+            <itextId>community-68</itextId>
+            <district_list>Lokoja</district_list>
+            <name>Gerinya</name>
+          </item>
+          <item>
+            <itextId>community-69</itextId>
+            <district_list>Lokoja</district_list>
+            <name>Jingere/Zhono</name>
+          </item>
+          <item>
+            <itextId>community-70</itextId>
+            <district_list>Madagali</district_list>
+            <name>Lumadu</name>
+          </item>
+          <item>
+            <itextId>community-71</itextId>
+            <district_list>Maiha</district_list>
+            <name>Pakka</name>
+          </item>
+          <item>
+            <itextId>community-72</itextId>
+            <district_list>Mayo Belwa</district_list>
+            <name>Ribadu</name>
+          </item>
+          <item>
+            <itextId>community-73</itextId>
+            <district_list>Mopa Muro</district_list>
+            <name>Okeagi</name>
+          </item>
+          <item>
+            <itextId>community-74</itextId>
+            <district_list>Moro</district_list>
+            <name>Aiyilekan</name>
+          </item>
+          <item>
+            <itextId>community-75</itextId>
+            <district_list>Moro</district_list>
+            <name>Bonni</name>
+          </item>
+          <item>
+            <itextId>community-76</itextId>
+            <district_list>Moro</district_list>
+            <name>Budo-Ode</name>
+          </item>
+          <item>
+            <itextId>community-77</itextId>
+            <district_list>Mubi North</district_list>
+            <name>Maduguva</name>
+          </item>
+          <item>
+            <itextId>community-78</itextId>
+            <district_list>Mubi North</district_list>
+            <name>Mayo Bani</name>
+          </item>
+          <item>
+            <itextId>community-79</itextId>
+            <district_list>Mubi North</district_list>
+            <name>Muchalla</name>
+          </item>
+          <item>
+            <itextId>community-80</itextId>
+            <district_list>Numan</district_list>
+            <name>Imburu</name>
+          </item>
+          <item>
+            <itextId>community-81</itextId>
+            <district_list>Ofu</district_list>
+            <name>Akpagidigbo</name>
+          </item>
+          <item>
+            <itextId>community-82</itextId>
+            <district_list>Ogori/Magongo</district_list>
+            <name>Akonegboro</name>
+          </item>
+          <item>
+            <itextId>community-83</itextId>
+            <district_list>Oke Ero</district_list>
+            <name>Ayekale</name>
+          </item>
+          <item>
+            <itextId>community-84</itextId>
+            <district_list>Olamaboro</district_list>
+            <name>Ogbugbu1</name>
+          </item>
+          <item>
+            <itextId>community-85</itextId>
+            <district_list>Omala</district_list>
+            <name>Echa</name>
+          </item>
+          <item>
+            <itextId>community-86</itextId>
+            <district_list>Omala</district_list>
+            <name>Igodo</name>
+          </item>
+          <item>
+            <itextId>community-87</itextId>
+            <district_list>Omala</district_list>
+            <name>Ogodu</name>
+          </item>
+          <item>
+            <itextId>community-88</itextId>
+            <district_list>Patigi</district_list>
+            <name>Kpada</name>
+          </item>
+          <item>
+            <itextId>community-89</itextId>
+            <district_list>Patigi</district_list>
+            <name>Okolushe-Egboro</name>
+          </item>
+          <item>
+            <itextId>community-90</itextId>
+            <district_list>Song</district_list>
+            <name>Chibawuro</name>
+          </item>
+          <item>
+            <itextId>community-91</itextId>
+            <district_list>Song</district_list>
+            <name>Handa</name>
+          </item>
+          <item>
+            <itextId>community-92</itextId>
+            <district_list>Song</district_list>
+            <name>Laro</name>
+          </item>
+          <item>
+            <itextId>community-93</itextId>
+            <district_list>Song</district_list>
+            <name>Murke</name>
+          </item>
+          <item>
+            <itextId>community-94</itextId>
+            <district_list>Toungo</district_list>
+            <name>Kobalti Chitta/Lainde</name>
+          </item>
+          <item>
+            <itextId>community-95</itextId>
+            <district_list>Toungo</district_list>
+            <name>Mayo Butali</name>
+          </item>
+          <item>
+            <itextId>community-96</itextId>
+            <district_list>Toungo</district_list>
+            <name>Mayo Sangnare</name>
+          </item>
+          <item>
+            <itextId>community-97</itextId>
+            <district_list>Toungo</district_list>
+            <name>Mayo Unurdu</name>
+          </item>
+          <item>
+            <itextId>community-98</itextId>
+            <district_list>Toungo</district_list>
+            <name>Toungo</name>
+          </item>
+          <item>
+            <itextId>community-99</itextId>
+            <district_list>Yagba East</district_list>
+            <name>Odogbe</name>
+          </item>
+          <item>
+            <itextId>community-100</itextId>
+            <district_list>Yagba East</district_list>
+            <name>Onari</name>
+          </item>
+          <item>
+            <itextId>community-101</itextId>
+            <district_list>Yagba West</district_list>
+            <name>Okunran</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="community_id">
+        <root>
+          <item>
+            <itextId>community_id-0</itextId>
+            <community>Demsa</community>
+            <name>101</name>
+          </item>
+          <item>
+            <itextId>community_id-1</itextId>
+            <community>Mbula</community>
+            <name>102</name>
+          </item>
+          <item>
+            <itextId>community_id-2</itextId>
+            <community>Daware</community>
+            <name>103</name>
+          </item>
+          <item>
+            <itextId>community_id-3</itextId>
+            <community>Karewa Moto</community>
+            <name>104</name>
+          </item>
+          <item>
+            <itextId>community_id-4</itextId>
+            <community>Karlahi Gogra</community>
+            <name>105</name>
+          </item>
+          <item>
+            <itextId>community_id-5</itextId>
+            <community>Kochel</community>
+            <name>106</name>
+          </item>
+          <item>
+            <itextId>community_id-6</itextId>
+            <community>Malabu</community>
+            <name>107</name>
+          </item>
+          <item>
+            <itextId>community_id-7</itextId>
+            <community>Muninga</community>
+            <name>108</name>
+          </item>
+          <item>
+            <itextId>community_id-8</itextId>
+            <community>Wuro Sam</community>
+            <name>109</name>
+          </item>
+          <item>
+            <itextId>community_id-9</itextId>
+            <community>Disol</community>
+            <name>110</name>
+          </item>
+          <item>
+            <itextId>community_id-10</itextId>
+            <community>Songti</community>
+            <name>111</name>
+          </item>
+          <item>
+            <itextId>community_id-11</itextId>
+            <community>Zaman Lafiya</community>
+            <name>112</name>
+          </item>
+          <item>
+            <itextId>community_id-12</itextId>
+            <community>Jamtari</community>
+            <name>113</name>
+          </item>
+          <item>
+            <itextId>community_id-13</itextId>
+            <community>Bodeno</community>
+            <name>114</name>
+          </item>
+          <item>
+            <itextId>community_id-14</itextId>
+            <community>Boshikiri</community>
+            <name>115</name>
+          </item>
+          <item>
+            <itextId>community_id-15</itextId>
+            <community>Mile Talatin</community>
+            <name>116</name>
+          </item>
+          <item>
+            <itextId>community_id-16</itextId>
+            <community>Puba</community>
+            <name>117</name>
+          </item>
+          <item>
+            <itextId>community_id-17</itextId>
+            <community>Shiwa</community>
+            <name>118</name>
+          </item>
+          <item>
+            <itextId>community_id-18</itextId>
+            <community>Pola</community>
+            <name>119</name>
+          </item>
+          <item>
+            <itextId>community_id-19</itextId>
+            <community>Bolere</community>
+            <name>120</name>
+          </item>
+          <item>
+            <itextId>community_id-20</itextId>
+            <community>Lafiya</community>
+            <name>121</name>
+          </item>
+          <item>
+            <itextId>community_id-21</itextId>
+            <community>Lumadu</community>
+            <name>122</name>
+          </item>
+          <item>
+            <itextId>community_id-22</itextId>
+            <community>Pakka</community>
+            <name>123</name>
+          </item>
+          <item>
+            <itextId>community_id-23</itextId>
+            <community>Ribadu</community>
+            <name>124</name>
+          </item>
+          <item>
+            <itextId>community_id-24</itextId>
+            <community>Maduguva</community>
+            <name>125</name>
+          </item>
+          <item>
+            <itextId>community_id-25</itextId>
+            <community>Mayo Bani</community>
+            <name>126</name>
+          </item>
+          <item>
+            <itextId>community_id-26</itextId>
+            <community>Muchalla</community>
+            <name>127</name>
+          </item>
+          <item>
+            <itextId>community_id-27</itextId>
+            <community>Imburu</community>
+            <name>128</name>
+          </item>
+          <item>
+            <itextId>community_id-28</itextId>
+            <community>Chibawuro</community>
+            <name>129</name>
+          </item>
+          <item>
+            <itextId>community_id-29</itextId>
+            <community>Handa</community>
+            <name>130</name>
+          </item>
+          <item>
+            <itextId>community_id-30</itextId>
+            <community>Laro</community>
+            <name>131</name>
+          </item>
+          <item>
+            <itextId>community_id-31</itextId>
+            <community>Murke</community>
+            <name>132</name>
+          </item>
+          <item>
+            <itextId>community_id-32</itextId>
+            <community>Kobalti Chitta/Lainde</community>
+            <name>133</name>
+          </item>
+          <item>
+            <itextId>community_id-33</itextId>
+            <community>Mayo Butali</community>
+            <name>134</name>
+          </item>
+          <item>
+            <itextId>community_id-34</itextId>
+            <community>Mayo Sangnare</community>
+            <name>135</name>
+          </item>
+          <item>
+            <itextId>community_id-35</itextId>
+            <community>Mayo Unurdu</community>
+            <name>136</name>
+          </item>
+          <item>
+            <itextId>community_id-36</itextId>
+            <community>Toungo</community>
+            <name>137</name>
+          </item>
+          <item>
+            <itextId>community_id-37</itextId>
+            <community>Agbobo</community>
+            <name>138</name>
+          </item>
+          <item>
+            <itextId>community_id-38</itextId>
+            <community>Osara Ii</community>
+            <name>139</name>
+          </item>
+          <item>
+            <itextId>community_id-39</itextId>
+            <community>Geregu</community>
+            <name>140</name>
+          </item>
+          <item>
+            <itextId>community_id-40</itextId>
+            <community>Aguyaya</community>
+            <name>141</name>
+          </item>
+          <item>
+            <itextId>community_id-41</itextId>
+            <community>Okaba</community>
+            <name>142</name>
+          </item>
+          <item>
+            <itextId>community_id-42</itextId>
+            <community>Duru</community>
+            <name>143</name>
+          </item>
+          <item>
+            <itextId>community_id-43</itextId>
+            <community>Gande</community>
+            <name>144</name>
+          </item>
+          <item>
+            <itextId>community_id-44</itextId>
+            <community>Kpanche</community>
+            <name>145</name>
+          </item>
+          <item>
+            <itextId>community_id-45</itextId>
+            <community>Ajonoja</community>
+            <name>146</name>
+          </item>
+          <item>
+            <itextId>community_id-46</itextId>
+            <community>Ochi-Ofago</community>
+            <name>147</name>
+          </item>
+          <item>
+            <itextId>community_id-47</itextId>
+            <community>Oganeaji</community>
+            <name>148</name>
+          </item>
+          <item>
+            <itextId>community_id-48</itextId>
+            <community>Ayah</community>
+            <name>149</name>
+          </item>
+          <item>
+            <itextId>community_id-49</itextId>
+            <community>Ekanyi</community>
+            <name>150</name>
+          </item>
+          <item>
+            <itextId>community_id-50</itextId>
+            <community>Iyele</community>
+            <name>151</name>
+          </item>
+          <item>
+            <itextId>community_id-51</itextId>
+            <community>Nwajala</community>
+            <name>152</name>
+          </item>
+          <item>
+            <itextId>community_id-52</itextId>
+            <community>Odeke</community>
+            <name>153</name>
+          </item>
+          <item>
+            <itextId>community_id-53</itextId>
+            <community>Inachalo</community>
+            <name>154</name>
+          </item>
+          <item>
+            <itextId>community_id-54</itextId>
+            <community>Alla Oggu</community>
+            <name>155</name>
+          </item>
+          <item>
+            <itextId>community_id-55</itextId>
+            <community>Efakwu-Od</community>
+            <name>156</name>
+          </item>
+          <item>
+            <itextId>community_id-56</itextId>
+            <community>Iluke</community>
+            <name>157</name>
+          </item>
+          <item>
+            <itextId>community_id-57</itextId>
+            <community>Akutupa</community>
+            <name>158</name>
+          </item>
+          <item>
+            <itextId>community_id-58</itextId>
+            <community>Odoape</community>
+            <name>159</name>
+          </item>
+          <item>
+            <itextId>community_id-59</itextId>
+            <community>Otafun</community>
+            <name>160</name>
+          </item>
+          <item>
+            <itextId>community_id-60</itextId>
+            <community>Adankolo</community>
+            <name>161</name>
+          </item>
+          <item>
+            <itextId>community_id-61</itextId>
+            <community>Agini</community>
+            <name>162</name>
+          </item>
+          <item>
+            <itextId>community_id-62</itextId>
+            <community>Chakaruku</community>
+            <name>163</name>
+          </item>
+          <item>
+            <itextId>community_id-63</itextId>
+            <community>Gerinya</community>
+            <name>164</name>
+          </item>
+          <item>
+            <itextId>community_id-64</itextId>
+            <community>Jingere/Zhono</community>
+            <name>165</name>
+          </item>
+          <item>
+            <itextId>community_id-65</itextId>
+            <community>Okeagi</community>
+            <name>166</name>
+          </item>
+          <item>
+            <itextId>community_id-66</itextId>
+            <community>Akpagidigbo</community>
+            <name>167</name>
+          </item>
+          <item>
+            <itextId>community_id-67</itextId>
+            <community>Akonegboro</community>
+            <name>168</name>
+          </item>
+          <item>
+            <itextId>community_id-68</itextId>
+            <community>Ogbugbu1</community>
+            <name>169</name>
+          </item>
+          <item>
+            <itextId>community_id-69</itextId>
+            <community>Echa</community>
+            <name>170</name>
+          </item>
+          <item>
+            <itextId>community_id-70</itextId>
+            <community>Igodo</community>
+            <name>171</name>
+          </item>
+          <item>
+            <itextId>community_id-71</itextId>
+            <community>Ogodu</community>
+            <name>172</name>
+          </item>
+          <item>
+            <itextId>community_id-72</itextId>
+            <community>Odogbe</community>
+            <name>173</name>
+          </item>
+          <item>
+            <itextId>community_id-73</itextId>
+            <community>Onari</community>
+            <name>174</name>
+          </item>
+          <item>
+            <itextId>community_id-74</itextId>
+            <community>Okunran</community>
+            <name>175</name>
+          </item>
+          <item>
+            <itextId>community_id-75</itextId>
+            <community>Okeso</community>
+            <name>176</name>
+          </item>
+          <item>
+            <itextId>community_id-76</itextId>
+            <community>Budo Aiki</community>
+            <name>177</name>
+          </item>
+          <item>
+            <itextId>community_id-77</itextId>
+            <community>Bukuro Bwen</community>
+            <name>178</name>
+          </item>
+          <item>
+            <itextId>community_id-78</itextId>
+            <community>Gbaraguru</community>
+            <name>179</name>
+          </item>
+          <item>
+            <itextId>community_id-79</itextId>
+            <community>Guma Suno</community>
+            <name>180</name>
+          </item>
+          <item>
+            <itextId>community_id-80</itextId>
+            <community>Ilesha</community>
+            <name>181</name>
+          </item>
+          <item>
+            <itextId>community_id-81</itextId>
+            <community>Moshi</community>
+            <name>182</name>
+          </item>
+          <item>
+            <itextId>community_id-82</itextId>
+            <community>Sheyen</community>
+            <name>183</name>
+          </item>
+          <item>
+            <itextId>community_id-83</itextId>
+            <community>Tewu</community>
+            <name>184</name>
+          </item>
+          <item>
+            <itextId>community_id-84</itextId>
+            <community>Yash./Gando S</community>
+            <name>185</name>
+          </item>
+          <item>
+            <itextId>community_id-85</itextId>
+            <community>Magabiko-Ndaningi</community>
+            <name>186</name>
+          </item>
+          <item>
+            <itextId>community_id-86</itextId>
+            <community>Shekwuti</community>
+            <name>187</name>
+          </item>
+          <item>
+            <itextId>community_id-87</itextId>
+            <community>Adigun</community>
+            <name>188</name>
+          </item>
+          <item>
+            <itextId>community_id-88</itextId>
+            <community>Agbeku</community>
+            <name>189</name>
+          </item>
+          <item>
+            <itextId>community_id-89</itextId>
+            <community>Amayo</community>
+            <name>190</name>
+          </item>
+          <item>
+            <itextId>community_id-90</itextId>
+            <community>Ibare</community>
+            <name>191</name>
+          </item>
+          <item>
+            <itextId>community_id-91</itextId>
+            <community>Osin Aremu</community>
+            <name>192</name>
+          </item>
+          <item>
+            <itextId>community_id-92</itextId>
+            <community>Iji</community>
+            <name>193</name>
+          </item>
+          <item>
+            <itextId>community_id-93</itextId>
+            <community>Ale Gongo</community>
+            <name>194</name>
+          </item>
+          <item>
+            <itextId>community_id-94</itextId>
+            <community>Eko Ado</community>
+            <name>195</name>
+          </item>
+          <item>
+            <itextId>community_id-95</itextId>
+            <community>Jebba/Gana</community>
+            <name>196</name>
+          </item>
+          <item>
+            <itextId>community_id-96</itextId>
+            <community>Aiyilekan</community>
+            <name>197</name>
+          </item>
+          <item>
+            <itextId>community_id-97</itextId>
+            <community>Bonni</community>
+            <name>198</name>
+          </item>
+          <item>
+            <itextId>community_id-98</itextId>
+            <community>Budo-Ode</community>
+            <name>199</name>
+          </item>
+          <item>
+            <itextId>community_id-99</itextId>
+            <community>Ayekale</community>
+            <name>200</name>
+          </item>
+          <item>
+            <itextId>community_id-100</itextId>
+            <community>Kpada</community>
+            <name>201</name>
+          </item>
+          <item>
+            <itextId>community_id-101</itextId>
+            <community>Okolushe-Egboro</community>
+            <name>202</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/c_region" required="true()" type="string"/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
+      <bind nodeset="/data/c_supervisor" required="true()" type="string"/>
+      <bind nodeset="/data/c_date" required="true()" type="date"/>
+      <bind nodeset="/data/c_health_facility" required="true()" type="string"/>
+      <bind nodeset="/data/c_type_health_facility" required="true()" type="string"/>
+      <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_admin_level" required="true()" type="string"/>
+      <bind nodeset="/data/c_river" required="true()" type="string"/>
+      <bind nodeset="/data/c_distance_community" required="true()" type="int"/>
+      <bind nodeset="/data/c_population" required="true()" type="int"/>
+      <bind nodeset="/data/c_hh_number" required="true()" type="int"/>
+      <bind nodeset="/data/c_receiving_ivm" required="true()" type="string"/>
+      <bind nodeset="/data/c_lengh_period_ivm" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_month_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="string"/>
+      <bind constraint=". &gt; 1970 and . &lt; 2023" jr:constraintMsg="jr:itext('/data/c_year_dist:jr:constraintMsg')" nodeset="/data/c_year_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="int"/>
+      <bind calculate="concat(B19,' ',B20)" nodeset="/data/c_last_dist" required="true()" type="string"/>
+      <bind nodeset="/data/c_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder_id">
+      <label ref="jr:itext('/data/c_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/c_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/c_region">
+      <label ref="jr:itext('/data/c_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_region/Adamawa:label')"/>
+        <value>Adamawa</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/Kogi:label')"/>
+        <value>Kogi</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/Kwara:label')"/>
+        <value>Kwara</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[region_list =  /data/c_region ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+      <itemset nodeset="instance('community')/root/item[district_list =  /data/c_district ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+      <itemset nodeset="instance('community_id')/root/item[community =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_supervisor">
+      <label ref="jr:itext('/data/c_supervisor:label')"/>
+    </input>
+    <input ref="/data/c_date">
+      <label ref="jr:itext('/data/c_date:label')"/>
+    </input>
+    <input ref="/data/c_health_facility">
+      <label ref="jr:itext('/data/c_health_facility:label')"/>
+    </input>
+    <input ref="/data/c_type_health_facility">
+      <label ref="jr:itext('/data/c_type_health_facility:label')"/>
+    </input>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <select1 ref="/data/c_admin_level">
+      <label ref="jr:itext('/data/c_admin_level:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_admin_level/Community/Village:label')"/>
+        <value>Community/Village</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_admin_level/Sub-Community/Village:label')"/>
+        <value>Sub-Community/Village</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_admin_level/Hamlet:label')"/>
+        <value>Hamlet</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_admin_level/IDP/Refugee camp:label')"/>
+        <value>IDP/Refugee camp</value>
+      </item>
+    </select1>
+    <input ref="/data/c_river">
+      <label ref="jr:itext('/data/c_river:label')"/>
+    </input>
+    <input ref="/data/c_distance_community">
+      <label ref="jr:itext('/data/c_distance_community:label')"/>
+    </input>
+    <input ref="/data/c_population">
+      <label ref="jr:itext('/data/c_population:label')"/>
+    </input>
+    <input ref="/data/c_hh_number">
+      <label ref="jr:itext('/data/c_hh_number:label')"/>
+    </input>
+    <select1 ref="/data/c_receiving_ivm">
+      <label ref="jr:itext('/data/c_receiving_ivm:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_receiving_ivm/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_receiving_ivm/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/c_lengh_period_ivm">
+      <label ref="jr:itext('/data/c_lengh_period_ivm:label')"/>
+    </input>
+    <select1 ref="/data/c_month_dist">
+      <label ref="jr:itext('/data/c_month_dist:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/January:label')"/>
+        <value>January</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/February:label')"/>
+        <value>February</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/March:label')"/>
+        <value>March</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/April:label')"/>
+        <value>April</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/May:label')"/>
+        <value>May</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/June:label')"/>
+        <value>June</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/July:label')"/>
+        <value>July</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/August:label')"/>
+        <value>August</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/September:label')"/>
+        <value>September</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/October:label')"/>
+        <value>October</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/November:label')"/>
+        <value>November</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_month_dist/December:label')"/>
+        <value>December</value>
+      </item>
+    </select1>
+    <input ref="/data/c_year_dist">
+      <label ref="jr:itext('/data/c_year_dist:label')"/>
+    </input>
+    <input ref="/data/c_notes">
+      <label ref="jr:itext('/data/c_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>

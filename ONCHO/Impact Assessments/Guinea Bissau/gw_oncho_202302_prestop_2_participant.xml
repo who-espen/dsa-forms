@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Fev 2023) ONCHO PreStop - 2. Participant Form V1.2</h:title>
+    <model >
+
+      <instance>
+        <data id="gw_oncho_202302_prestop_2_participant_v1_2">
+          <p_recorder_id/>
+          <p_region/>
+          <p_district/>
+          <p_cluster_name/>
+          <p_cluster_id/>
+          <p_cluster_name2/>
+          <p_cluster_id2/>
+          <p_date/>
+          <p_consent/>
+          <p_id_method/>
+          <p_serial_number1/>
+          <p_serial_number2/>
+          <p_code_id/>
+          <p_barcode_id/>
+          <p_sex/>
+          <p_age_yrs/>
+          <p_how_long_lived/>
+          <p_travel/>
+          <p_IVM_taken/>
+          <p_IVM_taken_last_12/>
+          <p_IVM_month/>
+          <p_ivm_place/>
+          <p_sample_collected/>
+          <p_end_survey_note/>
+          <p_AdditionalNotes/>
+          <p_start/>
+          <p_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="Portugese">
+          <text id="/data/p_recorder_id:jr:constraintMsg">
+            <value>Deve estar entre 10 e 99 incluídos</value>
+          </text>
+          <text id="/data/p_recorder_id:label">
+            <value>Introduzir o número do gravador</value>
+          </text>
+          <text id="/data/p_recorder_id:hint">
+            <value>Código de 2 dígitos atribuído a si</value>
+          </text>
+          <text id="/data/p_region:label">
+            <value>Seleccione a região</value>
+          </text>
+          <text id="/data/p_district:label">
+            <value>Seleccione o Distrito</value>
+          </text>
+          <text id="/data/p_cluster_name:label">
+            <value>Seleccione a comunidade</value>
+          </text>
+          <text id="/data/p_cluster_id:label">
+            <value>Seleccionar o ID da comunidade</value>
+          </text>
+          <text id="/data/p_cluster_name2:label">
+            <value>Seleccione a outra comunidade</value>
+          </text>
+          <text id="/data/p_cluster_id2:label">
+            <value>Seleccionar o outro ID da comunidade</value>
+          </text>
+          <text id="/data/p_date:label">
+            <value>Introduza a data</value>
+          </text>
+          <text id="/data/p_consent:label">
+            <value>O participante deu o seu consentimento?</value>
+          </text>
+          <text id="/data/p_consent/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/p_consent/Não:label">
+            <value>Não</value>
+          </text>
+          <text id="/data/p_id_method:label">
+            <value>Irá utilizar código de barras / Código QR</value>
+          </text>
+          <text id="/data/p_id_method/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/p_id_method/Não:label">
+            <value>Não</value>
+          </text>
+          <text id="/data/p_serial_number1:jr:constraintMsg">
+            <value>Deve ser um número com três dígitos. exemplo: 001</value>
+          </text>
+          <text id="/data/p_serial_number1:label">
+            <value>Por favor, introduza o número de série do participante</value>
+          </text>
+          <text id="/data/p_serial_number2:jr:constraintMsg">
+            <value>O código repetido deve ser o mesmo</value>
+          </text>
+          <text id="/data/p_serial_number2:label">
+            <value>Por favor, repita o número de série do participante</value>
+          </text>
+          <text id="/data/p_code_id:label">
+            <value>Registar o seguinte código de identificação único para o respondente numa lista separada e em cada teste(s) de diagnóstico administrado(s)</value>
+          </text>
+          <text id="/data/p_barcode_id:label">
+            <value>Por favor, digitalizar o código de barras</value>
+          </text>
+          <text id="/data/p_sex:label">
+            <value>Por favor seleccione o género</value>
+          </text>
+          <text id="/data/p_sex/Masculino:label">
+            <value>Masculino</value>
+          </text>
+          <text id="/data/p_sex/Feminino:label">
+            <value>Feminino</value>
+          </text>
+          <text id="/data/p_age_yrs:jr:constraintMsg">
+            <value>A idade deve estar entre os 5 e 9 anos</value>
+          </text>
+          <text id="/data/p_age_yrs:label">
+            <value>Introduzir a idade em anos</value>
+          </text>
+          <text id="/data/p_how_long_lived:jr:constraintMsg">
+            <value>O valor não pode ser maior do que a idade</value>
+          </text>
+          <text id="/data/p_how_long_lived:label">
+            <value>Quantos anos viveu o inquirido na zona?</value>
+          </text>
+          <text id="/data/p_travel:label">
+            <value>Viaja frequentemente longas distâncias (15 KM) a partir desta aldeia?</value>
+          </text>
+          <text id="/data/p_travel/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/p_travel/Não:label">
+            <value>Não</value>
+          </text>
+          <text id="/data/p_IVM_taken:label">
+            <value>Já alguma vez tomou Ivermectin?</value>
+          </text>
+          <text id="/data/p_IVM_taken/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/p_IVM_taken/Não:label">
+            <value>Não</value>
+          </text>
+          <text id="/data/p_IVM_taken_last_12:label">
+            <value>Se sim, tomou-o nos últimos 12 meses?</value>
+          </text>
+          <text id="/data/p_IVM_taken_last_12/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/p_IVM_taken_last_12/Não:label">
+            <value>Não</value>
+          </text>
+          <text id="/data/p_IVM_taken_last_12/Não sei:label">
+            <value>Não sei</value>
+          </text>
+          <text id="/data/p_IVM_month:label">
+            <value>Durante que mês recebeu Ivermectin</value>
+          </text>
+          <text id="/data/p_IVM_month/Janeiro:label">
+            <value>Janeiro</value>
+          </text>
+          <text id="/data/p_IVM_month/Fevereiro:label">
+            <value>Fevereiro</value>
+          </text>
+          <text id="/data/p_IVM_month/Marchar:label">
+            <value>Marchar</value>
+          </text>
+          <text id="/data/p_IVM_month/abril:label">
+            <value>abril</value>
+          </text>
+          <text id="/data/p_IVM_month/Poderia:label">
+            <value>Poderia</value>
+          </text>
+          <text id="/data/p_IVM_month/Junho:label">
+            <value>Junho</value>
+          </text>
+          <text id="/data/p_IVM_month/Julho:label">
+            <value>Julho</value>
+          </text>
+          <text id="/data/p_IVM_month/Agosto:label">
+            <value>Agosto</value>
+          </text>
+          <text id="/data/p_IVM_month/Setembro:label">
+            <value>Setembro</value>
+          </text>
+          <text id="/data/p_IVM_month/Outubro:label">
+            <value>Outubro</value>
+          </text>
+          <text id="/data/p_IVM_month/Novembro:label">
+            <value>Novembro</value>
+          </text>
+          <text id="/data/p_IVM_month/Dezembro:label">
+            <value>Dezembro</value>
+          </text>
+          <text id="/data/p_ivm_place:label">
+            <value>Se Sim, onde lhe foi administrado Ivermectin?</value>
+          </text>
+          <text id="/data/p_ivm_place/Nesta aldeia, como parte de uma campanha de tratamento em massa:label">
+            <value>Nesta aldeia, como parte de uma campanha de tratamento em massa</value>
+          </text>
+          <text id="/data/p_ivm_place/Nesta aldeia, clínica ou farmácia local:label">
+            <value>Nesta aldeia, clínica ou farmácia local</value>
+          </text>
+          <text id="/data/p_ivm_place/Noutra aldeia, como parte de uma campanha de tratamento em massa:label">
+            <value>Noutra aldeia, como parte de uma campanha de tratamento em massa</value>
+          </text>
+          <text id="/data/p_ivm_place/Noutra aldeia, clínica ou farmácia local:label">
+            <value>Noutra aldeia, clínica ou farmácia local</value>
+          </text>
+          <text id="/data/p_sample_collected:label">
+            <value>A amostra é recolhida</value>
+          </text>
+          <text id="/data/p_sample_collected/Sim:label">
+            <value>Sim</value>
+          </text>
+          <text id="/data/p_sample_collected/Não:label">
+            <value>Não</value>
+          </text>
+          <text id="/data/p_end_survey_note:label">
+            <value>Acaba de introduzir um valor que terminará o inquérito</value>
+          </text>
+          <text id="/data/p_AdditionalNotes:label">
+            <value>Notas Adicionais</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/p_recorder_id:jr:constraintMsg">
+            <value>Must be between 10 and 99 included</value>
+          </text>
+          <text id="/data/p_recorder_id:label">
+            <value>Enter the recorder number</value>
+          </text>
+          <text id="/data/p_recorder_id:hint">
+            <value>2-digit code assigned to you</value>
+          </text>
+          <text id="/data/p_region:label">
+            <value>Select the region</value>
+          </text>
+          <text id="/data/p_district:label">
+            <value>Select the district</value>
+          </text>
+          <text id="/data/p_cluster_name:label">
+            <value>Select the community</value>
+          </text>
+          <text id="/data/p_cluster_id:label">
+            <value>Select the community ID</value>
+          </text>
+          <text id="/data/p_cluster_name2:label">
+            <value>Select the other community</value>
+          </text>
+          <text id="/data/p_cluster_id2:label">
+            <value>Select the other community ID</value>
+          </text>
+          <text id="/data/p_date:label">
+            <value>Enter the date</value>
+          </text>
+          <text id="/data/p_consent:label">
+            <value>Has the participant given consent?</value>
+          </text>
+          <text id="/data/p_consent/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/p_consent/Não:label">
+            <value>No</value>
+          </text>
+          <text id="/data/p_id_method:label">
+            <value>Will you use Barcode / QR Code</value>
+          </text>
+          <text id="/data/p_id_method/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/p_id_method/Não:label">
+            <value>No</value>
+          </text>
+          <text id="/data/p_serial_number1:jr:constraintMsg">
+            <value>Must be a three-digit number. example: 001</value>
+          </text>
+          <text id="/data/p_serial_number1:label">
+            <value>Please, enter the participant serial number</value>
+          </text>
+          <text id="/data/p_serial_number2:jr:constraintMsg">
+            <value>The repeated code must be the same</value>
+          </text>
+          <text id="/data/p_serial_number2:label">
+            <value>Please, repeat the participant serial number</value>
+          </text>
+          <text id="/data/p_code_id:label">
+            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) adminstered</value>
+          </text>
+          <text id="/data/p_barcode_id:label">
+            <value>Please, scan the barcode</value>
+          </text>
+          <text id="/data/p_sex:label">
+            <value>Please select the gender</value>
+          </text>
+          <text id="/data/p_sex/Masculino:label">
+            <value>Male</value>
+          </text>
+          <text id="/data/p_sex/Feminino:label">
+            <value>Female</value>
+          </text>
+          <text id="/data/p_age_yrs:jr:constraintMsg">
+            <value>Age must be between 5 and 9 years old</value>
+          </text>
+          <text id="/data/p_age_yrs:label">
+            <value>Enter the age in years</value>
+          </text>
+          <text id="/data/p_how_long_lived:jr:constraintMsg">
+            <value>The value cannot be greater than the age</value>
+          </text>
+          <text id="/data/p_how_long_lived:label">
+            <value>How many years has the respondent lived in the area?</value>
+          </text>
+          <text id="/data/p_travel:label">
+            <value>Do you frequently travel long distances (15 KM) from this village?</value>
+          </text>
+          <text id="/data/p_travel/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/p_travel/Não:label">
+            <value>No</value>
+          </text>
+          <text id="/data/p_IVM_taken:label">
+            <value>Have you ever taken Ivermectin before?</value>
+          </text>
+          <text id="/data/p_IVM_taken/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/p_IVM_taken/Não:label">
+            <value>No</value>
+          </text>
+          <text id="/data/p_IVM_taken_last_12:label">
+            <value>If yes, have you had it in the past 12 months?</value>
+          </text>
+          <text id="/data/p_IVM_taken_last_12/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/p_IVM_taken_last_12/Não:label">
+            <value>No</value>
+          </text>
+          <text id="/data/p_IVM_taken_last_12/Não sei:label">
+            <value>Do not know</value>
+          </text>
+          <text id="/data/p_IVM_month:label">
+            <value>During which month did you receive Ivermectin</value>
+          </text>
+          <text id="/data/p_IVM_month/Janeiro:label">
+            <value>January</value>
+          </text>
+          <text id="/data/p_IVM_month/Fevereiro:label">
+            <value>February</value>
+          </text>
+          <text id="/data/p_IVM_month/Marchar:label">
+            <value>March</value>
+          </text>
+          <text id="/data/p_IVM_month/abril:label">
+            <value>April</value>
+          </text>
+          <text id="/data/p_IVM_month/Poderia:label">
+            <value>May</value>
+          </text>
+          <text id="/data/p_IVM_month/Junho:label">
+            <value>June</value>
+          </text>
+          <text id="/data/p_IVM_month/Julho:label">
+            <value>Jully</value>
+          </text>
+          <text id="/data/p_IVM_month/Agosto:label">
+            <value>August</value>
+          </text>
+          <text id="/data/p_IVM_month/Setembro:label">
+            <value>September</value>
+          </text>
+          <text id="/data/p_IVM_month/Outubro:label">
+            <value>October</value>
+          </text>
+          <text id="/data/p_IVM_month/Novembro:label">
+            <value>November</value>
+          </text>
+          <text id="/data/p_IVM_month/Dezembro:label">
+            <value>December</value>
+          </text>
+          <text id="/data/p_ivm_place:label">
+            <value>If Yes, where were you given Ivermectin?</value>
+          </text>
+          <text id="/data/p_ivm_place/Nesta aldeia, como parte de uma campanha de tratamento em massa:label">
+            <value>In this village, as part of a mass treatment campaign</value>
+          </text>
+          <text id="/data/p_ivm_place/Nesta aldeia, clínica ou farmácia local:label">
+            <value>In this village, local clinic or pharmacy</value>
+          </text>
+          <text id="/data/p_ivm_place/Noutra aldeia, como parte de uma campanha de tratamento em massa:label">
+            <value>In another village, as part of mass treatment campaign</value>
+          </text>
+          <text id="/data/p_ivm_place/Noutra aldeia, clínica ou farmácia local:label">
+            <value>In another village, local clinic or pharmacy</value>
+          </text>
+          <text id="/data/p_sample_collected:label">
+            <value>Are the sample collected</value>
+          </text>
+          <text id="/data/p_sample_collected/Sim:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/p_sample_collected/Não:label">
+            <value>No</value>
+          </text>
+          <text id="/data/p_end_survey_note:label">
+            <value>You have just entered a value that will end the survey</value>
+          </text>
+          <text id="/data/p_AdditionalNotes:label">
+            <value>Additional Notes</value>
+          </text>
+        </translation>
+      </itext>
+      <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/p_region" required="true()" type="string"  db_get="col_1"/>
+      <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
+      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_id" relevant=" /data/p_cluster_name != 'Other'" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_cluster_name2" relevant=" /data/p_cluster_name  = 'Other'" required="true()" type="string" db_get="col_5" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_id2" relevant=" /data/p_cluster_name  = 'Other'" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_cluster_name2"/>
+      <bind nodeset="/data/p_date" type="date"/>
+      <bind nodeset="/data/p_consent" required="true()" type="string"/>
+      <bind nodeset="/data/p_id_method" relevant=" /data/p_consent  = 'Sim'" type="string"/>
+      <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_serial_number1:jr:constraintMsg')" nodeset="/data/p_serial_number1" relevant=" /data/p_consent  = 'Sim' and  /data/p_id_method  = 'Não'" required="true()" type="string"/>
+      <bind constraint=". =  /data/p_serial_number1 " jr:constraintMsg="jr:itext('/data/p_serial_number2:jr:constraintMsg')" nodeset="/data/p_serial_number2" relevant=" /data/p_consent  = 'Sim' and  /data/p_id_method  = 'Não'" required="true()" type="string"/>
+      <bind calculate="if( /data/p_cluster_name != 'Other', concat( /data/p_recorder_id , '-',  /data/p_cluster_id , '-',  /data/p_serial_number1 ), concat( /data/p_recorder_id , '-',  /data/p_cluster_id2 , '-',  /data/p_serial_number1 ))" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Sim' and  /data/p_id_method  = 'Não'" required="true()" type="string"/>
+      <bind nodeset="/data/p_barcode_id" relevant=" /data/p_consent  = 'Sim' and  /data/p_id_method  = 'Sim'" required="true()" type="barcode"/>
+      <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
+      <bind nodeset="/data/p_travel" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/p_IVM_taken" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/p_IVM_taken_last_12" relevant=" /data/p_consent  = 'Sim' and  /data/p_IVM_taken  = 'Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/p_IVM_month" relevant=" /data/p_consent  = 'Sim' and  /data/p_IVM_taken_last_12  = 'Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/p_ivm_place" relevant=" /data/p_consent  = 'Sim' and  /data/p_IVM_taken_last_12  = 'Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/p_sample_collected" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
+      <bind nodeset="/data/p_end_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Não'" type="string"/>
+      <bind nodeset="/data/p_AdditionalNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/p_recorder_id">
+      <label ref="jr:itext('/data/p_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/p_recorder_id:hint')"/>
+    </input>
+    <input ref="/data/p_region">
+      <label ref="jr:itext('/data/p_region:label')"/>
+    </input>
+    <input ref="/data/p_district">
+      <label ref="jr:itext('/data/p_district:label')"/>
+    </input>
+    <input ref="/data/p_cluster_name">
+      <label ref="jr:itext('/data/p_cluster_name:label')"/>
+    </input>
+    <input ref="/data/p_cluster_id">
+      <label ref="jr:itext('/data/p_cluster_id:label')"/>
+    </input>
+    <input ref="/data/p_cluster_name2">
+      <label ref="jr:itext('/data/p_cluster_name2:label')"/>
+    </input>
+    <input ref="/data/p_cluster_id2">
+      <label ref="jr:itext('/data/p_cluster_id2:label')"/>
+    </input>
+    <input ref="/data/p_date">
+      <label ref="jr:itext('/data/p_date:label')"/>
+    </input>
+    <select1 ref="/data/p_consent">
+      <label ref="jr:itext('/data/p_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_consent/Sim:label')"/>
+        <value>Sim</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_consent/Não:label')"/>
+        <value>Não</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_id_method">
+      <label ref="jr:itext('/data/p_id_method:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_id_method/Sim:label')"/>
+        <value>Sim</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_id_method/Não:label')"/>
+        <value>Não</value>
+      </item>
+    </select1>
+    <input ref="/data/p_serial_number1">
+      <label ref="jr:itext('/data/p_serial_number1:label')"/>
+    </input>
+    <input ref="/data/p_serial_number2">
+      <label ref="jr:itext('/data/p_serial_number2:label')"/>
+    </input>
+    <input ref="/data/p_code_id">
+      <label ref="jr:itext('/data/p_code_id:label')"/>
+    </input>
+    <input ref="/data/p_barcode_id">
+      <label ref="jr:itext('/data/p_barcode_id:label')"/>
+    </input>
+    <select1 ref="/data/p_sex">
+      <label ref="jr:itext('/data/p_sex:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_sex/Masculino:label')"/>
+        <value>Masculino</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_sex/Feminino:label')"/>
+        <value>Feminino</value>
+      </item>
+    </select1>
+    <input ref="/data/p_age_yrs">
+      <label ref="jr:itext('/data/p_age_yrs:label')"/>
+    </input>
+    <input ref="/data/p_how_long_lived">
+      <label ref="jr:itext('/data/p_how_long_lived:label')"/>
+    </input>
+    <select1 ref="/data/p_travel">
+      <label ref="jr:itext('/data/p_travel:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_travel/Sim:label')"/>
+        <value>Sim</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_travel/Não:label')"/>
+        <value>Não</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_IVM_taken">
+      <label ref="jr:itext('/data/p_IVM_taken:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_taken/Sim:label')"/>
+        <value>Sim</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_taken/Não:label')"/>
+        <value>Não</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_IVM_taken_last_12">
+      <label ref="jr:itext('/data/p_IVM_taken_last_12:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_taken_last_12/Sim:label')"/>
+        <value>Sim</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_taken_last_12/Não:label')"/>
+        <value>Não</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_taken_last_12/Não sei:label')"/>
+        <value>Não sei</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_IVM_month">
+      <label ref="jr:itext('/data/p_IVM_month:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Janeiro:label')"/>
+        <value>Janeiro</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Fevereiro:label')"/>
+        <value>Fevereiro</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Marchar:label')"/>
+        <value>Marchar</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/abril:label')"/>
+        <value>abril</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Poderia:label')"/>
+        <value>Poderia</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Junho:label')"/>
+        <value>Junho</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Julho:label')"/>
+        <value>Julho</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Agosto:label')"/>
+        <value>Agosto</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Setembro:label')"/>
+        <value>Setembro</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Outubro:label')"/>
+        <value>Outubro</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Novembro:label')"/>
+        <value>Novembro</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_IVM_month/Dezembro:label')"/>
+        <value>Dezembro</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_ivm_place">
+      <label ref="jr:itext('/data/p_ivm_place:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_ivm_place/Nesta aldeia, como parte de uma campanha de tratamento em massa:label')"/>
+        <value>Nesta aldeia, como parte de uma campanha de tratamento em massa</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_ivm_place/Nesta aldeia, clínica ou farmácia local:label')"/>
+        <value>Nesta aldeia, clínica ou farmácia local</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_ivm_place/Noutra aldeia, como parte de uma campanha de tratamento em massa:label')"/>
+        <value>Noutra aldeia, como parte de uma campanha de tratamento em massa</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_ivm_place/Noutra aldeia, clínica ou farmácia local:label')"/>
+        <value>Noutra aldeia, clínica ou farmácia local</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_sample_collected">
+      <label ref="jr:itext('/data/p_sample_collected:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_sample_collected/Sim:label')"/>
+        <value>Sim</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_sample_collected/Não:label')"/>
+        <value>Não</value>
+      </item>
+    </select1>
+    <input ref="/data/p_end_survey_note">
+      <label ref="jr:itext('/data/p_end_survey_note:label')"/>
+    </input>
+    <input ref="/data/p_AdditionalNotes">
+      <label ref="jr:itext('/data/p_AdditionalNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>
