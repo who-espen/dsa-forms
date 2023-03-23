@@ -181,9 +181,9 @@
       <bind nodeset="/data/k_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/k_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/k_district"/>
       <bind nodeset="/data/k_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_subdistrict"/>
-      <bind constraint="(regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/k_district , 0, 3) = substr(., 0, 3) and  /data/k_district != 'KPENDJAL OUEST') or (if( /data/k_district  = 'KPENDJAL OUEST', if(substr(., 0, 3) = 'OUE', true(), false()), false()) and regex(., '^[A-Z]{3}[0-9]{4}$'))" jr:constraintMsg="jr:itext('/data/k_barcodeid:jr:constraintMsg')" nodeset="/data/k_barcodeid" type="barcode"/>
+      <bind jr:constraintMsg="jr:itext('/data/k_barcodeid:jr:constraintMsg')" nodeset="/data/k_barcodeid" type="barcode"/>
       <bind nodeset="/data/k_barcode_ok" required="true()" type="string"/>
-      <bind constraint="(regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/k_district , 0, 3) = substr(., 0, 3) and  /data/k_district != 'KPENDJAL OUEST') or (if( /data/k_district  = 'KPENDJAL OUEST', if(substr(., 0, 3) = 'OUE', true(), false()), false()) and regex(., '^[A-Z]{3}[0-9]{4}$'))" jr:constraintMsg="jr:itext('/data/k_manual_code_id:jr:constraintMsg')" nodeset="/data/k_manual_code_id" relevant=" /data/k_barcode_ok  = 'Non'" required="true()" type="string"/>
+      <bind jr:constraintMsg="jr:itext('/data/k_manual_code_id:jr:constraintMsg')" nodeset="/data/k_manual_code_id" relevant=" /data/k_barcode_ok  = 'Non'" required="true()" type="string"/>
       <bind nodeset="/data/k_sch_man_sa" required="true()" type="int"/>
       <bind nodeset="/data/k_sch_man_sb" required="true()" type="int"/>
       <bind nodeset="/data/k_ascaris_lumb_sa" required="true()" type="int"/>
