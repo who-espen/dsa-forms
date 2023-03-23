@@ -7,17 +7,16 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(October 2022) ONCHO stop TDM - 1. Formulaire Site</h:title>
-    <model odk:xforms-version="1.0.0">
+    <h:title>(Février 2023) ONCHO stop TDM - 1. Formulaire Site</h:title>
+    <model >
 
       <instance>
-        <data id="tg_oncho_stop_1_site_202209">
+        <data id="tg_oncho_stop_202304_1_site">
           <c_RecorderID/>
-          <c_gite/>
+          <c_region/>
           <c_district/>
-          <c_bassin_fluvial/>
-          <c_nom_riviere_fleuve/>
-          <c_nom_riviere_fleuve_id/>
+          <c_subdistrict/>
+          <c_site/>
           <c_GPS/>
           <c_date/>
           <c_ClusterNotes/>
@@ -40,29 +39,26 @@
           <text id="/data/c_RecorderID:hint">
             <value>Code à deux chiffres qui vous a été assigné</value>
           </text>
-          <text id="/data/c_gite:label">
-            <value>Sélectionner un gite</value>
+          <text id="/data/c_region:label">
+            <value>Sélectionner une Région</value>
           </text>
-          <text id="/data/c_gite/Doungue:label">
-            <value>Doungue</value>
+          <text id="/data/c_region/MARITIME:label">
+            <value>MARITIME</value>
           </text>
-          <text id="/data/c_gite/Tchanaga:label">
-            <value>Tchanaga</value>
+          <text id="/data/c_region/PLATEAUX EST:label">
+            <value>PLATEAUX EST</value>
           </text>
-          <text id="/data/c_gite/Tchountchounga:label">
-            <value>Tchountchounga</value>
+          <text id="/data/c_region/PLATEAUX OUEST:label">
+            <value>PLATEAUX OUEST</value>
           </text>
           <text id="/data/c_district:label">
             <value>Sélectionner un District</value>
           </text>
-          <text id="/data/c_bassin_fluvial:label">
-            <value>Sélectionner un bassin fluvial</value>
+          <text id="/data/c_subdistrict:label">
+            <value>Sélectionner une USP</value>
           </text>
-          <text id="/data/c_nom_riviere_fleuve:label">
-            <value>Sélectionner un nom de la rivière/fleuve</value>
-          </text>
-          <text id="/data/c_nom_riviere_fleuve_id:label">
-            <value>Sélectionner l'identifiant du fleuve</value>
+          <text id="/data/c_site:label">
+            <value>Sélectionner un site</value>
           </text>
           <text id="/data/c_GPS:label">
             <value>Capturer les données GPS</value>
@@ -76,45 +72,6 @@
           <text id="/data/c_ClusterNotes:label">
             <value>Notes additionnelles</value>
           </text>
-          <text id="gite-0">
-            <value>Doungue</value>
-          </text>
-          <text id="gite-1">
-            <value>Tchanaga</value>
-          </text>
-          <text id="gite-2">
-            <value>Tchountchounga</value>
-          </text>
-          <text id="district-0">
-            <value>Tandjouare</value>
-          </text>
-          <text id="district-1">
-            <value>Oti</value>
-          </text>
-          <text id="district-2">
-            <value>Oti Sud</value>
-          </text>
-          <text id="bassin_fluvial-0">
-            <value>Volta blanche</value>
-          </text>
-          <text id="bassin_fluvial-1">
-            <value>Oti</value>
-          </text>
-          <text id="bassin_fluvial-2">
-            <value>Oti</value>
-          </text>
-          <text id="nom_riviere_fleuve-0">
-            <value>Kologona</value>
-          </text>
-          <text id="nom_riviere_fleuve-1">
-            <value>Oti</value>
-          </text>
-          <text id="nom_riviere_fleuve_id-0">
-            <value>101</value>
-          </text>
-          <text id="nom_riviere_fleuve_id-1">
-            <value>102</value>
-          </text>
           <text id="yesNoDontKnow-0">
             <value>Oui</value>
           </text>
@@ -124,90 +81,1251 @@
           <text id="yesNoDontKnow-2">
             <value>Ne sais pas</value>
           </text>
+          <text id="region-0">
+            <value>MARITIME</value>
+          </text>
+          <text id="region-1">
+            <value>PLATEAUX EST</value>
+          </text>
+          <text id="region-2">
+            <value>PLATEAUX OUEST</value>
+          </text>
+          <text id="district-0">
+            <value>YOTO</value>
+          </text>
+          <text id="district-1">
+            <value>AMOU</value>
+          </text>
+          <text id="district-2">
+            <value>ANIÉ</value>
+          </text>
+          <text id="district-3">
+            <value>EST-MONO</value>
+          </text>
+          <text id="district-4">
+            <value>HAHO</value>
+          </text>
+          <text id="district-5">
+            <value>MOYEN MONO</value>
+          </text>
+          <text id="district-6">
+            <value>OGOU</value>
+          </text>
+          <text id="district-7">
+            <value>AGOU</value>
+          </text>
+          <text id="district-8">
+            <value>AKÉBOU</value>
+          </text>
+          <text id="district-9">
+            <value>DANYI</value>
+          </text>
+          <text id="district-10">
+            <value>KLOTO</value>
+          </text>
+          <text id="district-11">
+            <value>KPÉLÉ</value>
+          </text>
+          <text id="district-12">
+            <value>WAWA</value>
+          </text>
+          <text id="sub-district-0">
+            <value>AGOUDOUVOU</value>
+          </text>
+          <text id="sub-district-1">
+            <value>AKPLO</value>
+          </text>
+          <text id="sub-district-2">
+            <value>AOE GADJA</value>
+          </text>
+          <text id="sub-district-3">
+            <value>AOUSSOUKOPÉ</value>
+          </text>
+          <text id="sub-district-4">
+            <value>AVÉDZÉ</value>
+          </text>
+          <text id="sub-district-5">
+            <value>AVETONOU</value>
+          </text>
+          <text id="sub-district-6">
+            <value>GLOCOPÉ</value>
+          </text>
+          <text id="sub-district-7">
+            <value>KATI</value>
+          </text>
+          <text id="sub-district-8">
+            <value>KEBO-KPETA</value>
+          </text>
+          <text id="sub-district-9">
+            <value>KOLOGAN</value>
+          </text>
+          <text id="sub-district-10">
+            <value>NYITOE</value>
+          </text>
+          <text id="sub-district-11">
+            <value>NYITOÉ ZUKPÉ</value>
+          </text>
+          <text id="sub-district-12">
+            <value>WONOUGBA SÉWA</value>
+          </text>
+          <text id="sub-district-13">
+            <value>AYAGBA</value>
+          </text>
+          <text id="sub-district-14">
+            <value>BROUNFOU</value>
+          </text>
+          <text id="sub-district-15">
+            <value>DJON KOTORA</value>
+          </text>
+          <text id="sub-district-16">
+            <value>KAMINA (AKÉBOU)</value>
+          </text>
+          <text id="sub-district-17">
+            <value>KOUGNOHOU</value>
+          </text>
+          <text id="sub-district-18">
+            <value>SÉRÉGBÉNÉ</value>
+          </text>
+          <text id="sub-district-19">
+            <value>WODAGNI</value>
+          </text>
+          <text id="sub-district-20">
+            <value>YALLA</value>
+          </text>
+          <text id="sub-district-21">
+            <value>ADIVA</value>
+          </text>
+          <text id="sub-district-22">
+            <value>ADOGLI</value>
+          </text>
+          <text id="sub-district-23">
+            <value>AMOU OBLO</value>
+          </text>
+          <text id="sub-district-24">
+            <value>AVÉDJÉ</value>
+          </text>
+          <text id="sub-district-25">
+            <value>BASSÈ</value>
+          </text>
+          <text id="sub-district-26">
+            <value>CHP AMLAMÉ</value>
+          </text>
+          <text id="sub-district-27">
+            <value>GAMÉ</value>
+          </text>
+          <text id="sub-district-28">
+            <value>HIHÉATRO</value>
+          </text>
+          <text id="sub-district-29">
+            <value>IDAO</value>
+          </text>
+          <text id="sub-district-30">
+            <value>KPATÉGAN</value>
+          </text>
+          <text id="sub-district-31">
+            <value>PATATOUKOU</value>
+          </text>
+          <text id="sub-district-32">
+            <value>SODO</value>
+          </text>
+          <text id="sub-district-33">
+            <value>ADOGBÉNOU</value>
+          </text>
+          <text id="sub-district-34">
+            <value>AFOLÉ</value>
+          </text>
+          <text id="sub-district-35">
+            <value>AGODJOLOLO</value>
+          </text>
+          <text id="sub-district-36">
+            <value>AKABA</value>
+          </text>
+          <text id="sub-district-37">
+            <value>ATCHINÉDJI</value>
+          </text>
+          <text id="sub-district-38">
+            <value>CHP ANIÉ</value>
+          </text>
+          <text id="sub-district-39">
+            <value>GLITTO</value>
+          </text>
+          <text id="sub-district-40">
+            <value>PALLAKOKO</value>
+          </text>
+          <text id="sub-district-41">
+            <value>ATIGBA</value>
+          </text>
+          <text id="sub-district-42">
+            <value>BOGO</value>
+          </text>
+          <text id="sub-district-43">
+            <value>CHP APÉYÉMÉ</value>
+          </text>
+          <text id="sub-district-44">
+            <value>CMS ELAVANYO</value>
+          </text>
+          <text id="sub-district-45">
+            <value>DÉNOU</value>
+          </text>
+          <text id="sub-district-46">
+            <value>KOUDZRAGAN</value>
+          </text>
+          <text id="sub-district-47">
+            <value>KPETO</value>
+          </text>
+          <text id="sub-district-48">
+            <value>KPÉVÉ</value>
+          </text>
+          <text id="sub-district-49">
+            <value>N'DIGBE</value>
+          </text>
+          <text id="sub-district-50">
+            <value>SASSANOU</value>
+          </text>
+          <text id="sub-district-51">
+            <value>TSADOME</value>
+          </text>
+          <text id="sub-district-52">
+            <value>YIKPA</value>
+          </text>
+          <text id="sub-district-53">
+            <value>AFODJI</value>
+          </text>
+          <text id="sub-district-54">
+            <value>AKAKPO COPÉ</value>
+          </text>
+          <text id="sub-district-55">
+            <value>BADIN KOPÉ</value>
+          </text>
+          <text id="sub-district-56">
+            <value>ISSATI</value>
+          </text>
+          <text id="sub-district-57">
+            <value>KAMINA</value>
+          </text>
+          <text id="sub-district-58">
+            <value>KPESSI</value>
+          </text>
+          <text id="sub-district-59">
+            <value>MODOKOUTÈ</value>
+          </text>
+          <text id="sub-district-60">
+            <value>MORÉTAN</value>
+          </text>
+          <text id="sub-district-61">
+            <value>NYAMASSILA</value>
+          </text>
+          <text id="sub-district-62">
+            <value>OGOU KOLIDÈ</value>
+          </text>
+          <text id="sub-district-63">
+            <value>TCHÉKITA</value>
+          </text>
+          <text id="sub-district-64">
+            <value>YANDA</value>
+          </text>
+          <text id="sub-district-65">
+            <value>AGBATITOÉ</value>
+          </text>
+          <text id="sub-district-66">
+            <value>AKPAKPAKPÉ</value>
+          </text>
+          <text id="sub-district-67">
+            <value>AMAKPAPÉ</value>
+          </text>
+          <text id="sub-district-68">
+            <value>ASRAMA</value>
+          </text>
+          <text id="sub-district-69">
+            <value>ATCHAVÉ</value>
+          </text>
+          <text id="sub-district-70">
+            <value>HAHOMÉGBÉ</value>
+          </text>
+          <text id="sub-district-71">
+            <value>HUILEHOE</value>
+          </text>
+          <text id="sub-district-72">
+            <value>KAMÉ</value>
+          </text>
+          <text id="sub-district-73">
+            <value>KPÉGADJE</value>
+          </text>
+          <text id="sub-district-74">
+            <value>KPOVE</value>
+          </text>
+          <text id="sub-district-75">
+            <value>TÉTÉTOU</value>
+          </text>
+          <text id="sub-district-76">
+            <value>TSINIGAN</value>
+          </text>
+          <text id="sub-district-77">
+            <value>WAHALA</value>
+          </text>
+          <text id="sub-district-78">
+            <value>AGOME TOMEGBE</value>
+          </text>
+          <text id="sub-district-79">
+            <value>AGOMÈ-TOMÉGBÉ</value>
+          </text>
+          <text id="sub-district-80">
+            <value>AGOTIMÈ-KOPÉ</value>
+          </text>
+          <text id="sub-district-81">
+            <value>ANA MARIA</value>
+          </text>
+          <text id="sub-district-82">
+            <value>BABAKODZI</value>
+          </text>
+          <text id="sub-district-83">
+            <value>GBALAVE</value>
+          </text>
+          <text id="sub-district-84">
+            <value>KLO MAYONDI</value>
+          </text>
+          <text id="sub-district-85">
+            <value>KPADAPÉ</value>
+          </text>
+          <text id="sub-district-86">
+            <value>KPOGADJI</value>
+          </text>
+          <text id="sub-district-87">
+            <value>KUMA-APOTI</value>
+          </text>
+          <text id="sub-district-88">
+            <value>LAVIE</value>
+          </text>
+          <text id="sub-district-89">
+            <value>NTRE DAME DE LA MISÉRICORDE</value>
+          </text>
+          <text id="sub-district-90">
+            <value>POLYCLINIQUE DE KPALIMÉ</value>
+          </text>
+          <text id="sub-district-91">
+            <value>WOME</value>
+          </text>
+          <text id="sub-district-92">
+            <value>WOMÉ</value>
+          </text>
+          <text id="sub-district-93">
+            <value>AKATA AGAME</value>
+          </text>
+          <text id="sub-district-94">
+            <value>ASG ELÉMÉ</value>
+          </text>
+          <text id="sub-district-95">
+            <value>BODZE</value>
+          </text>
+          <text id="sub-district-96">
+            <value>CHP ADETA</value>
+          </text>
+          <text id="sub-district-97">
+            <value>GOUDEVE</value>
+          </text>
+          <text id="sub-district-98">
+            <value>KPEKPETA</value>
+          </text>
+          <text id="sub-district-99">
+            <value>KPELE AGAVE</value>
+          </text>
+          <text id="sub-district-100">
+            <value>KPÉLÉ ELÉ</value>
+          </text>
+          <text id="sub-district-101">
+            <value>MAMAKOPE</value>
+          </text>
+          <text id="sub-district-102">
+            <value>TUTU</value>
+          </text>
+          <text id="sub-district-103">
+            <value>ZIONOU</value>
+          </text>
+          <text id="sub-district-104">
+            <value>AHASSOMÈ</value>
+          </text>
+          <text id="sub-district-105">
+            <value>HP TOHOUN</value>
+          </text>
+          <text id="sub-district-106">
+            <value>KATIVOU</value>
+          </text>
+          <text id="sub-district-107">
+            <value>KATOME</value>
+          </text>
+          <text id="sub-district-108">
+            <value>KPÉKPLÉMÉ</value>
+          </text>
+          <text id="sub-district-109">
+            <value>SALIGBÉ</value>
+          </text>
+          <text id="sub-district-110">
+            <value>TADO</value>
+          </text>
+          <text id="sub-district-111">
+            <value>AGBONOU</value>
+          </text>
+          <text id="sub-district-112">
+            <value>AKPARÉ</value>
+          </text>
+          <text id="sub-district-113">
+            <value>ATCHAKOE CARREFOUR</value>
+          </text>
+          <text id="sub-district-114">
+            <value>AWAGOMÈ</value>
+          </text>
+          <text id="sub-district-115">
+            <value>BOCCO</value>
+          </text>
+          <text id="sub-district-116">
+            <value>DATCHA</value>
+          </text>
+          <text id="sub-district-117">
+            <value>GLÉI</value>
+          </text>
+          <text id="sub-district-118">
+            <value>HOMAGAN</value>
+          </text>
+          <text id="sub-district-119">
+            <value>KÈLÈKPÈ</value>
+          </text>
+          <text id="sub-district-120">
+            <value>OUNTIVOU</value>
+          </text>
+          <text id="sub-district-121">
+            <value>POLYCLINIQUE ATAKPAMÉ</value>
+          </text>
+          <text id="sub-district-122">
+            <value>AGBOKOPÉ</value>
+          </text>
+          <text id="sub-district-123">
+            <value>AKLOWA TOMÉBGÉ</value>
+          </text>
+          <text id="sub-district-124">
+            <value>BADOU DJINDJIN</value>
+          </text>
+          <text id="sub-district-125">
+            <value>CHP BADOU</value>
+          </text>
+          <text id="sub-district-126">
+            <value>DOUME</value>
+          </text>
+          <text id="sub-district-127">
+            <value>GOBÈ</value>
+          </text>
+          <text id="sub-district-128">
+            <value>IMOUSSA</value>
+          </text>
+          <text id="sub-district-129">
+            <value>KESSIBO ABRWANKOR</value>
+          </text>
+          <text id="sub-district-130">
+            <value>KISSIBO WAWA</value>
+          </text>
+          <text id="sub-district-131">
+            <value>KPATÈ BÉNA</value>
+          </text>
+          <text id="sub-district-132">
+            <value>TODOME</value>
+          </text>
+          <text id="sub-district-133">
+            <value>ZOGBÉGAN</value>
+          </text>
+          <text id="sub-district-134">
+            <value>GBOTOZÉVÉ</value>
+          </text>
+          <text id="sub-district-135">
+            <value>KOUVÉ</value>
+          </text>
+          <text id="village-0">
+            <value>ADIVA</value>
+          </text>
+          <text id="village-1">
+            <value>ABALO COPÉ</value>
+          </text>
+          <text id="village-2">
+            <value>KADJÈ COPÉ</value>
+          </text>
+          <text id="village-3">
+            <value>EBOUAKA</value>
+          </text>
+          <text id="village-4">
+            <value>AFODJI</value>
+          </text>
+          <text id="village-5">
+            <value>GUÉGUÉ</value>
+          </text>
+          <text id="village-6">
+            <value>IGBOEDIN</value>
+          </text>
+          <text id="village-7">
+            <value>AGBOTA</value>
+          </text>
+          <text id="village-8">
+            <value>IDJAFÈ</value>
+          </text>
+          <text id="village-9">
+            <value>KOUTCHORO</value>
+          </text>
+          <text id="village-10">
+            <value>WOUROUKOU</value>
+          </text>
+          <text id="village-11">
+            <value>AGBATI</value>
+          </text>
+          <text id="village-12">
+            <value>KÉMÉDISSO</value>
+          </text>
+          <text id="village-13">
+            <value>KAMINA AWOYO</value>
+          </text>
+          <text id="village-14">
+            <value>DJANGBASSOU</value>
+          </text>
+          <text id="village-15">
+            <value>AVETÉ - AGAME - TSIHI</value>
+          </text>
+          <text id="village-16">
+            <value>KAMÉTONOU</value>
+          </text>
+          <text id="village-17">
+            <value>AGOTIMÈ-KOPÉ</value>
+          </text>
+          <text id="village-18">
+            <value>LÉTSOUKOPÉ</value>
+          </text>
+          <text id="village-19">
+            <value>LETSUCOPÉ</value>
+          </text>
+          <text id="village-20">
+            <value>VAKPO</value>
+          </text>
+          <text id="village-21">
+            <value>AKÉMÉ</value>
+          </text>
+          <text id="village-22">
+            <value>GAMÈ</value>
+          </text>
+          <text id="village-23">
+            <value>ADAO</value>
+          </text>
+          <text id="village-24">
+            <value>ALABADÈ BAS</value>
+          </text>
+          <text id="village-25">
+            <value>ADAME</value>
+          </text>
+          <text id="village-26">
+            <value>DZOGBEPIME</value>
+          </text>
+          <text id="village-27">
+            <value>DZIGBODI</value>
+          </text>
+          <text id="village-28">
+            <value>ODOMI ABRA</value>
+          </text>
+          <text id="village-29">
+            <value>GOZA COPÉ</value>
+          </text>
+          <text id="village-30">
+            <value>GROKOPÉ</value>
+          </text>
+          <text id="village-31">
+            <value>KOKOU COPÉ</value>
+          </text>
+          <text id="village-32">
+            <value>KANYE</value>
+          </text>
+          <text id="village-33">
+            <value>ABONGO COPÉ</value>
+          </text>
+          <text id="village-34">
+            <value>KABLÉCOMÈ</value>
+          </text>
+          <text id="village-35">
+            <value>TCHIGUIRIEDOUFAO</value>
+          </text>
+          <text id="village-36">
+            <value>ZONGO AMOUGODO</value>
+          </text>
+          <text id="village-37">
+            <value>HANYIGBA DUGA</value>
+          </text>
+          <text id="village-38">
+            <value>KARBAU COPÉ</value>
+          </text>
+          <text id="village-39">
+            <value>HAVE</value>
+          </text>
+          <text id="village-40">
+            <value>DZEIBO</value>
+          </text>
+          <text id="village-41">
+            <value>ASRAMA</value>
+          </text>
+          <text id="village-42">
+            <value>GLIVÉ</value>
+          </text>
+          <text id="village-43">
+            <value>KPOGANDJI</value>
+          </text>
+          <text id="village-44">
+            <value>ATCHAVÉ</value>
+          </text>
+          <text id="village-45">
+            <value>AYORE</value>
+          </text>
+          <text id="village-46">
+            <value>ATIGBA</value>
+          </text>
+          <text id="village-47">
+            <value>KPATIKOPÉ</value>
+          </text>
+          <text id="village-48">
+            <value>OKAFOU</value>
+          </text>
+          <text id="village-49">
+            <value>TSOKPLÉ</value>
+          </text>
+          <text id="village-50">
+            <value>ANANIVI KONDJI</value>
+          </text>
+          <text id="village-51">
+            <value>AVETONOU</value>
+          </text>
+          <text id="village-52">
+            <value>TCHÈKÈLÈ</value>
+          </text>
+          <text id="village-53">
+            <value>AYAGBA</value>
+          </text>
+          <text id="village-54">
+            <value>GBOYÉYÉ</value>
+          </text>
+          <text id="village-55">
+            <value>NYIVÉ</value>
+          </text>
+          <text id="village-56">
+            <value>BASSAN</value>
+          </text>
+          <text id="village-57">
+            <value>KOKOLO</value>
+          </text>
+          <text id="village-58">
+            <value>ALABE</value>
+          </text>
+          <text id="village-59">
+            <value>ANANI KOPÉ</value>
+          </text>
+          <text id="village-60">
+            <value>DANYI-KONTA</value>
+          </text>
+          <text id="village-61">
+            <value>IGBOWOU AMOU</value>
+          </text>
+          <text id="village-62">
+            <value>FÉTIGBÉ</value>
+          </text>
+          <text id="village-63">
+            <value>LAWOUDA</value>
+          </text>
+          <text id="village-64">
+            <value>MÉDJÉ</value>
+          </text>
+          <text id="village-65">
+            <value>BOGO</value>
+          </text>
+          <text id="village-66">
+            <value>ADAMPÉ</value>
+          </text>
+          <text id="village-67">
+            <value>BEKRO -WAWASSI</value>
+          </text>
+          <text id="village-68">
+            <value>EWIWIR/SINDO</value>
+          </text>
+          <text id="village-69">
+            <value>GAPÉ</value>
+          </text>
+          <text id="village-70">
+            <value>KAMALO</value>
+          </text>
+          <text id="village-71">
+            <value>KOUROU</value>
+          </text>
+          <text id="village-72">
+            <value>ADETA</value>
+          </text>
+          <text id="village-73">
+            <value>ANAO</value>
+          </text>
+          <text id="village-74">
+            <value>BEME</value>
+          </text>
+          <text id="village-75">
+            <value>KONDA TODZI</value>
+          </text>
+          <text id="village-76">
+            <value>AWLADOUNOU</value>
+          </text>
+          <text id="village-77">
+            <value>KPÈTÈ</value>
+          </text>
+          <text id="village-78">
+            <value>ALAMASSOU</value>
+          </text>
+          <text id="village-79">
+            <value>ALÉ KOPÉ</value>
+          </text>
+          <text id="village-80">
+            <value>KAMALO KOPÉ</value>
+          </text>
+          <text id="village-81">
+            <value>KONIGBO</value>
+          </text>
+          <text id="village-82">
+            <value>KPÉHOUN II</value>
+          </text>
+          <text id="village-83">
+            <value>GBALADZE</value>
+          </text>
+          <text id="village-84">
+            <value>KETEME</value>
+          </text>
+          <text id="village-85">
+            <value>MEMPASSEM</value>
+          </text>
+          <text id="village-86">
+            <value>BADOU</value>
+          </text>
+          <text id="village-87">
+            <value>OUVLOUBE</value>
+          </text>
+          <text id="village-88">
+            <value>WETROPÉ</value>
+          </text>
+          <text id="village-89">
+            <value>AFI KOPÉ</value>
+          </text>
+          <text id="village-90">
+            <value>AMOU AKPÉKPÉ</value>
+          </text>
+          <text id="village-91">
+            <value>BOSSOPÉ</value>
+          </text>
+          <text id="village-92">
+            <value>DÉNOU</value>
+          </text>
+          <text id="village-93">
+            <value>TETEBE</value>
+          </text>
+          <text id="village-94">
+            <value>DJON ATIGOZA</value>
+          </text>
+          <text id="village-95">
+            <value>DJON ELAVAGNON</value>
+          </text>
+          <text id="village-96">
+            <value>TCHAKPALI</value>
+          </text>
+          <text id="village-97">
+            <value>VOUTÉ</value>
+          </text>
+          <text id="village-98">
+            <value>ADJASSIWAWOE</value>
+          </text>
+          <text id="village-99">
+            <value>GNAMASSILÈ</value>
+          </text>
+          <text id="village-100">
+            <value>KPÈTÈ MAVA</value>
+          </text>
+          <text id="village-101">
+            <value>OGOMÉ</value>
+          </text>
+          <text id="village-102">
+            <value>PIDINA</value>
+          </text>
+          <text id="village-103">
+            <value>TSADOME</value>
+          </text>
+          <text id="village-104">
+            <value>KPÈTOTSI</value>
+          </text>
+          <text id="village-105">
+            <value>LOGOVE</value>
+          </text>
+          <text id="village-106">
+            <value>LOGOVE</value>
+          </text>
+          <text id="village-107">
+            <value>ADJAMBOUROUGOU</value>
+          </text>
+          <text id="village-108">
+            <value>AGBOROU</value>
+          </text>
+          <text id="village-109">
+            <value>AMOUTCHOU</value>
+          </text>
+          <text id="village-110">
+            <value>BAGAOU</value>
+          </text>
+          <text id="village-111">
+            <value>AGBAKOTAN</value>
+          </text>
+          <text id="village-112">
+            <value>AWANOU</value>
+          </text>
+          <text id="village-113">
+            <value>DASSAGBA</value>
+          </text>
+          <text id="village-114">
+            <value>DÉTOÈ</value>
+          </text>
+          <text id="village-115">
+            <value>KOUFOTA</value>
+          </text>
+          <text id="village-116">
+            <value>KPAKPASSA</value>
+          </text>
+          <text id="village-117">
+            <value>LOVE</value>
+          </text>
+          <text id="village-118">
+            <value>DAFO</value>
+          </text>
+          <text id="village-119">
+            <value>EKÉTO ELAVAGNON</value>
+          </text>
+          <text id="village-120">
+            <value>ANOUM</value>
+          </text>
+          <text id="village-121">
+            <value>GODZO</value>
+          </text>
+          <text id="village-122">
+            <value>TSADOME (GOUDEVE)</value>
+          </text>
+          <text id="village-123">
+            <value>FAWOUKPÉ</value>
+          </text>
+          <text id="village-124">
+            <value>HAHONOU</value>
+          </text>
+          <text id="village-125">
+            <value>KPODJI KOPÉ</value>
+          </text>
+          <text id="village-126">
+            <value>LOUKPE</value>
+          </text>
+          <text id="village-127">
+            <value>DOUFIO</value>
+          </text>
+          <text id="village-128">
+            <value>ELAVAGNON</value>
+          </text>
+          <text id="village-129">
+            <value>AGOUNA DÉVÉ</value>
+          </text>
+          <text id="village-130">
+            <value>DATCHA</value>
+          </text>
+          <text id="village-131">
+            <value>HOMAGAN 4</value>
+          </text>
+          <text id="village-132">
+            <value>AGLAMASSOÉ</value>
+          </text>
+          <text id="village-133">
+            <value>DOUVIHOÉ</value>
+          </text>
+          <text id="village-134">
+            <value>HÉVÈ</value>
+          </text>
+          <text id="village-135">
+            <value>HOMÉTOWOUHOÉ</value>
+          </text>
+          <text id="village-136">
+            <value>WAGBA</value>
+          </text>
+          <text id="village-137">
+            <value>KOKPLI</value>
+          </text>
+          <text id="village-138">
+            <value>YAO COPÉ</value>
+          </text>
+          <text id="village-139">
+            <value>IMOUSSA</value>
+          </text>
+          <text id="village-140">
+            <value>IGBOMÉDJI</value>
+          </text>
+          <text id="village-141">
+            <value>KALMAME</value>
+          </text>
+          <text id="village-142">
+            <value>MODOUKOU</value>
+          </text>
+          <text id="village-143">
+            <value>AZONSOUSBLÉ</value>
+          </text>
+          <text id="village-144">
+            <value>AGANWO</value>
+          </text>
+          <text id="village-145">
+            <value>AGNIGBO</value>
+          </text>
+          <text id="village-146">
+            <value>KAMINA</value>
+          </text>
+          <text id="village-147">
+            <value>OKPO TEMB</value>
+          </text>
+          <text id="village-148">
+            <value>KAMINA CENTRE AKABOU</value>
+          </text>
+          <text id="village-149">
+            <value>EKPLA</value>
+          </text>
+          <text id="village-150">
+            <value>XÉVI KONDJI</value>
+          </text>
+          <text id="village-151">
+            <value>ZIONOU</value>
+          </text>
+          <text id="village-152">
+            <value>KATIVOU</value>
+          </text>
+          <text id="village-153">
+            <value>AGOGOMÈ</value>
+          </text>
+          <text id="village-154">
+            <value>AMÉDÉGBÉ</value>
+          </text>
+          <text id="village-155">
+            <value>KATAHOÉ</value>
+          </text>
+          <text id="village-156">
+            <value>KEBO-KPETA</value>
+          </text>
+          <text id="village-157">
+            <value>ILÉKOHAN</value>
+          </text>
+          <text id="village-158">
+            <value>KATORÉ</value>
+          </text>
+          <text id="village-159">
+            <value>OTSANANI/ADÉDAKOPÉ</value>
+          </text>
+          <text id="village-160">
+            <value>AKOLOKOUTSÉ</value>
+          </text>
+          <text id="village-161">
+            <value>KISSIBO WAWA</value>
+          </text>
+          <text id="village-162">
+            <value>KLO MAYONDI</value>
+          </text>
+          <text id="village-163">
+            <value>AGOKPLAMÈ</value>
+          </text>
+          <text id="village-164">
+            <value>KPOVÉNOU</value>
+          </text>
+          <text id="village-165">
+            <value>TOKPO</value>
+          </text>
+          <text id="village-166">
+            <value>KOUDZRAGAN</value>
+          </text>
+          <text id="village-167">
+            <value>KOUSOUNTOU</value>
+          </text>
+          <text id="village-168">
+            <value>ATIGOZA</value>
+          </text>
+          <text id="village-169">
+            <value>DAKAN</value>
+          </text>
+          <text id="village-170">
+            <value>KOUGNOHOU RIVERAIN</value>
+          </text>
+          <text id="village-171">
+            <value>VEH NYILE</value>
+          </text>
+          <text id="village-172">
+            <value>AFANGADJI1 (ECOLE+DODJRAME)</value>
+          </text>
+          <text id="village-173">
+            <value>AFANGADJI2 (VOKUDÉKÉ +DOGLOBO +GUÉROMÉ)</value>
+          </text>
+          <text id="village-174">
+            <value>AFANGADJI3 ( BOLOVI+ LOTOE)</value>
+          </text>
+          <text id="village-175">
+            <value>ASAPÉ</value>
+          </text>
+          <text id="village-176">
+            <value>ATRAN</value>
+          </text>
+          <text id="village-177">
+            <value>BANOU</value>
+          </text>
+          <text id="village-178">
+            <value>DÉDJI</value>
+          </text>
+          <text id="village-179">
+            <value>GBOLI</value>
+          </text>
+          <text id="village-180">
+            <value>LIVÉ</value>
+          </text>
+          <text id="village-181">
+            <value>NSROUKOPÉ</value>
+          </text>
+          <text id="village-182">
+            <value>AVÉXO</value>
+          </text>
+          <text id="village-183">
+            <value>NYIVÉ (KPADAPÉ)</value>
+          </text>
+          <text id="village-184">
+            <value>TOUGBLI</value>
+          </text>
+          <text id="village-185">
+            <value>BIBI</value>
+          </text>
+          <text id="village-186">
+            <value>ITIMOGO</value>
+          </text>
+          <text id="village-187">
+            <value>MAFLO DJOGBÉ</value>
+          </text>
+          <text id="village-188">
+            <value>MANGOASSI</value>
+          </text>
+          <text id="village-189">
+            <value>MÉNOU</value>
+          </text>
+          <text id="village-190">
+            <value>KPATÉGAN BAS</value>
+          </text>
+          <text id="village-191">
+            <value>AGODÉKÉ</value>
+          </text>
+          <text id="village-192">
+            <value>ZIDZOE</value>
+          </text>
+          <text id="village-193">
+            <value>KPÉKPLÉMÉ</value>
+          </text>
+          <text id="village-194">
+            <value>BABACOPE</value>
+          </text>
+          <text id="village-195">
+            <value>ELÉ</value>
+          </text>
+          <text id="village-196">
+            <value>EYÉKPADA</value>
+          </text>
+          <text id="village-197">
+            <value>KPETO</value>
+          </text>
+          <text id="village-198">
+            <value>AMOUTA AGAMÉ</value>
+          </text>
+          <text id="village-199">
+            <value>EVIME</value>
+          </text>
+          <text id="village-200">
+            <value>NOGO</value>
+          </text>
+          <text id="village-201">
+            <value>AVEDJI</value>
+          </text>
+          <text id="village-202">
+            <value>BALA</value>
+          </text>
+          <text id="village-203">
+            <value>APEDOME</value>
+          </text>
+          <text id="village-204">
+            <value>KPÉGLO</value>
+          </text>
+          <text id="village-205">
+            <value>MAMAKOPE</value>
+          </text>
+          <text id="village-206">
+            <value>ADJOGBA</value>
+          </text>
+          <text id="village-207">
+            <value>DEDJI</value>
+          </text>
+          <text id="village-208">
+            <value>N'DIGBE</value>
+          </text>
+          <text id="village-209">
+            <value>NOVISSIKOME</value>
+          </text>
+          <text id="village-210">
+            <value>ALÉMODJI</value>
+          </text>
+          <text id="village-211">
+            <value>NYITOE</value>
+          </text>
+          <text id="village-212">
+            <value>GLOKPO</value>
+          </text>
+          <text id="village-213">
+            <value>KPODJAHON</value>
+          </text>
+          <text id="village-214">
+            <value>OGOU KOLIDÈ 1</value>
+          </text>
+          <text id="village-215">
+            <value>ATOMÉ</value>
+          </text>
+          <text id="village-216">
+            <value>HÉTRÉ</value>
+          </text>
+          <text id="village-217">
+            <value>TOYIBO</value>
+          </text>
+          <text id="village-218">
+            <value>SALANGBA</value>
+          </text>
+          <text id="village-219">
+            <value>OKÉAKPA COLLINE</value>
+          </text>
+          <text id="village-220">
+            <value>AGOE KONDJI</value>
+          </text>
+          <text id="village-221">
+            <value>DZOGADZE AVUZEKOME</value>
+          </text>
+          <text id="village-222">
+            <value>KUSUNTU</value>
+          </text>
+          <text id="village-223">
+            <value>SAMKONDJI TOTSOANYI</value>
+          </text>
+          <text id="village-224">
+            <value>DÉKADÉ</value>
+          </text>
+          <text id="village-225">
+            <value>DOLOUMÈ</value>
+          </text>
+          <text id="village-226">
+            <value>KPOKÉMÉ</value>
+          </text>
+          <text id="village-227">
+            <value>ZASSA</value>
+          </text>
+          <text id="village-228">
+            <value>SASSANOU</value>
+          </text>
+          <text id="village-229">
+            <value>TINIPÉ</value>
+          </text>
+          <text id="village-230">
+            <value>AMEGBEADZRÉ</value>
+          </text>
+          <text id="village-231">
+            <value>WOUROUROU</value>
+          </text>
+          <text id="village-232">
+            <value>OLOUTOKOU</value>
+          </text>
+          <text id="village-233">
+            <value>AKLOTSI</value>
+          </text>
+          <text id="village-234">
+            <value>ALAGBAMÉ</value>
+          </text>
+          <text id="village-235">
+            <value>AOUTÉLÈ</value>
+          </text>
+          <text id="village-236">
+            <value>VODJÉMÈ</value>
+          </text>
+          <text id="village-237">
+            <value>ATOTOYI</value>
+          </text>
+          <text id="village-238">
+            <value>KODJODA</value>
+          </text>
+          <text id="village-239">
+            <value>WASSIROU</value>
+          </text>
+          <text id="village-240">
+            <value>AZAME</value>
+          </text>
+          <text id="village-241">
+            <value>HOÉVIMÉ</value>
+          </text>
+          <text id="village-242">
+            <value>KPODJI</value>
+          </text>
+          <text id="village-243">
+            <value>TÉTÉTOU</value>
+          </text>
+          <text id="village-244">
+            <value>OKAOU</value>
+          </text>
+          <text id="village-245">
+            <value>AMEGAPÉ</value>
+          </text>
+          <text id="village-246">
+            <value>ALATI MARCHÉ ET ECOLE</value>
+          </text>
+          <text id="village-247">
+            <value>ALATIKPOTA</value>
+          </text>
+          <text id="village-248">
+            <value>ABLÉVÉ</value>
+          </text>
+          <text id="village-249">
+            <value>GOTHA ADJA</value>
+          </text>
+          <text id="village-250">
+            <value>GOTHA KABYÈ</value>
+          </text>
+          <text id="village-251">
+            <value>KPAMBUIBI</value>
+          </text>
+          <text id="village-252">
+            <value>ADIKROM</value>
+          </text>
+          <text id="village-253">
+            <value>ZONGO AGLAMATO</value>
+          </text>
+          <text id="village-254">
+            <value>FIOMAKÉTODZI</value>
+          </text>
+          <text id="village-255">
+            <value>DÉVÉLÉBÉ</value>
+          </text>
+          <text id="village-256">
+            <value>FOTOYÉYÉ</value>
+          </text>
+          <text id="village-257">
+            <value>FASOW</value>
+          </text>
+          <text id="village-258">
+            <value>DAFO (YIKPA)</value>
+          </text>
+          <text id="village-259">
+            <value>AHATSE 1</value>
+          </text>
+          <text id="village-260">
+            <value>GUÉGBAKUI</value>
+          </text>
+          <text id="village-261">
+            <value>ZOGBÉGAN</value>
+          </text>
         </translation>
       </itext>
-      <instance id="gite">
-        <root>
-          <item>
-            <itextId>gite-0</itextId>
-            <name>Doungue</name>
-          </item>
-          <item>
-            <itextId>gite-1</itextId>
-            <name>Tchanaga</name>
-          </item>
-          <item>
-            <itextId>gite-2</itextId>
-            <name>Tchountchounga</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="district">
-        <root>
-          <item>
-            <itextId>district-0</itextId>
-            <gite>Doungue</gite>
-            <name>Tandjouare</name>
-          </item>
-          <item>
-            <itextId>district-1</itextId>
-            <gite>Tchanaga</gite>
-            <name>Oti</name>
-          </item>
-          <item>
-            <itextId>district-2</itextId>
-            <gite>Tchountchounga</gite>
-            <name>Oti Sud</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="bassin_fluvial">
-        <root>
-          <item>
-            <itextId>bassin_fluvial-0</itextId>
-            <district>Tandjouare</district>
-            <name>Volta blanche</name>
-          </item>
-          <item>
-            <itextId>bassin_fluvial-1</itextId>
-            <district>Oti</district>
-            <name>Oti</name>
-          </item>
-          <item>
-            <itextId>bassin_fluvial-2</itextId>
-            <district>Oti Sud</district>
-            <name>Oti</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="nom_riviere_fleuve">
-        <root>
-          <item>
-            <itextId>nom_riviere_fleuve-0</itextId>
-            <bassin_fluvial>Volta blanche</bassin_fluvial>
-            <name>Kologona</name>
-          </item>
-          <item>
-            <itextId>nom_riviere_fleuve-1</itextId>
-            <bassin_fluvial>Oti</bassin_fluvial>
-            <name>Oti</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="nom_riviere_fleuve_id">
-        <root>
-          <item>
-            <itextId>nom_riviere_fleuve_id-0</itextId>
-            <name>101</name>
-            <nom_riviere_fleuve>Kologona</nom_riviere_fleuve>
-          </item>
-          <item>
-            <itextId>nom_riviere_fleuve_id-1</itextId>
-            <name>102</name>
-            <nom_riviere_fleuve>Oti</nom_riviere_fleuve>
-          </item>
-        </root>
-      </instance>
+
       <instance id="yesNoDontKnow">
         <root>
           <item>
@@ -224,12 +1342,2094 @@
           </item>
         </root>
       </instance>
+      <instance id="region">
+        <root>
+          <item>
+            <itextId>region-0</itextId>
+            <name>MARITIME</name>
+          </item>
+          <item>
+            <itextId>region-1</itextId>
+            <name>PLATEAUX EST</name>
+          </item>
+          <item>
+            <itextId>region-2</itextId>
+            <name>PLATEAUX OUEST</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district">
+        <root>
+          <item>
+            <itextId>district-0</itextId>
+            <name>YOTO</name>
+            <region>MARITIME</region>
+          </item>
+          <item>
+            <itextId>district-1</itextId>
+            <name>AMOU</name>
+            <region>PLATEAUX EST</region>
+          </item>
+          <item>
+            <itextId>district-2</itextId>
+            <name>ANIÉ</name>
+            <region>PLATEAUX EST</region>
+          </item>
+          <item>
+            <itextId>district-3</itextId>
+            <name>EST-MONO</name>
+            <region>PLATEAUX EST</region>
+          </item>
+          <item>
+            <itextId>district-4</itextId>
+            <name>HAHO</name>
+            <region>PLATEAUX EST</region>
+          </item>
+          <item>
+            <itextId>district-5</itextId>
+            <name>MOYEN MONO</name>
+            <region>PLATEAUX EST</region>
+          </item>
+          <item>
+            <itextId>district-6</itextId>
+            <name>OGOU</name>
+            <region>PLATEAUX EST</region>
+          </item>
+          <item>
+            <itextId>district-7</itextId>
+            <name>AGOU</name>
+            <region>PLATEAUX OUEST</region>
+          </item>
+          <item>
+            <itextId>district-8</itextId>
+            <name>AKÉBOU</name>
+            <region>PLATEAUX OUEST</region>
+          </item>
+          <item>
+            <itextId>district-9</itextId>
+            <name>DANYI</name>
+            <region>PLATEAUX OUEST</region>
+          </item>
+          <item>
+            <itextId>district-10</itextId>
+            <name>KLOTO</name>
+            <region>PLATEAUX OUEST</region>
+          </item>
+          <item>
+            <itextId>district-11</itextId>
+            <name>KPÉLÉ</name>
+            <region>PLATEAUX OUEST</region>
+          </item>
+          <item>
+            <itextId>district-12</itextId>
+            <name>WAWA</name>
+            <region>PLATEAUX OUEST</region>
+          </item>
+        </root>
+      </instance>
+      <instance id="sub-district">
+        <root>
+          <item>
+            <itextId>sub-district-0</itextId>
+            <district>AGOU</district>
+            <name>AGOUDOUVOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-1</itextId>
+            <district>AGOU</district>
+            <name>AKPLO</name>
+          </item>
+          <item>
+            <itextId>sub-district-2</itextId>
+            <district>AGOU</district>
+            <name>AOE GADJA</name>
+          </item>
+          <item>
+            <itextId>sub-district-3</itextId>
+            <district>AGOU</district>
+            <name>AOUSSOUKOPÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-4</itextId>
+            <district>AGOU</district>
+            <name>AVÉDZÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-5</itextId>
+            <district>AGOU</district>
+            <name>AVETONOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-6</itextId>
+            <district>AGOU</district>
+            <name>GLOCOPÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-7</itextId>
+            <district>AGOU</district>
+            <name>KATI</name>
+          </item>
+          <item>
+            <itextId>sub-district-8</itextId>
+            <district>AGOU</district>
+            <name>KEBO-KPETA</name>
+          </item>
+          <item>
+            <itextId>sub-district-9</itextId>
+            <district>AGOU</district>
+            <name>KOLOGAN</name>
+          </item>
+          <item>
+            <itextId>sub-district-10</itextId>
+            <district>AGOU</district>
+            <name>NYITOE</name>
+          </item>
+          <item>
+            <itextId>sub-district-11</itextId>
+            <district>AGOU</district>
+            <name>NYITOÉ ZUKPÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-12</itextId>
+            <district>AGOU</district>
+            <name>WONOUGBA SÉWA</name>
+          </item>
+          <item>
+            <itextId>sub-district-13</itextId>
+            <district>AKÉBOU</district>
+            <name>AYAGBA</name>
+          </item>
+          <item>
+            <itextId>sub-district-14</itextId>
+            <district>AKÉBOU</district>
+            <name>BROUNFOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-15</itextId>
+            <district>AKÉBOU</district>
+            <name>DJON KOTORA</name>
+          </item>
+          <item>
+            <itextId>sub-district-16</itextId>
+            <district>AKÉBOU</district>
+            <name>KAMINA (AKÉBOU)</name>
+          </item>
+          <item>
+            <itextId>sub-district-17</itextId>
+            <district>AKÉBOU</district>
+            <name>KOUGNOHOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-18</itextId>
+            <district>AKÉBOU</district>
+            <name>SÉRÉGBÉNÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-19</itextId>
+            <district>AKÉBOU</district>
+            <name>WODAGNI</name>
+          </item>
+          <item>
+            <itextId>sub-district-20</itextId>
+            <district>AKÉBOU</district>
+            <name>YALLA</name>
+          </item>
+          <item>
+            <itextId>sub-district-21</itextId>
+            <district>AMOU</district>
+            <name>ADIVA</name>
+          </item>
+          <item>
+            <itextId>sub-district-22</itextId>
+            <district>AMOU</district>
+            <name>ADOGLI</name>
+          </item>
+          <item>
+            <itextId>sub-district-23</itextId>
+            <district>AMOU</district>
+            <name>AMOU OBLO</name>
+          </item>
+          <item>
+            <itextId>sub-district-24</itextId>
+            <district>AMOU</district>
+            <name>AVÉDJÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-25</itextId>
+            <district>AMOU</district>
+            <name>BASSÈ</name>
+          </item>
+          <item>
+            <itextId>sub-district-26</itextId>
+            <district>AMOU</district>
+            <name>CHP AMLAMÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-27</itextId>
+            <district>AMOU</district>
+            <name>GAMÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-28</itextId>
+            <district>AMOU</district>
+            <name>HIHÉATRO</name>
+          </item>
+          <item>
+            <itextId>sub-district-29</itextId>
+            <district>AMOU</district>
+            <name>IDAO</name>
+          </item>
+          <item>
+            <itextId>sub-district-30</itextId>
+            <district>AMOU</district>
+            <name>KPATÉGAN</name>
+          </item>
+          <item>
+            <itextId>sub-district-31</itextId>
+            <district>AMOU</district>
+            <name>PATATOUKOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-32</itextId>
+            <district>AMOU</district>
+            <name>SODO</name>
+          </item>
+          <item>
+            <itextId>sub-district-33</itextId>
+            <district>ANIÉ</district>
+            <name>ADOGBÉNOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-34</itextId>
+            <district>ANIÉ</district>
+            <name>AFOLÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-35</itextId>
+            <district>ANIÉ</district>
+            <name>AGODJOLOLO</name>
+          </item>
+          <item>
+            <itextId>sub-district-36</itextId>
+            <district>ANIÉ</district>
+            <name>AKABA</name>
+          </item>
+          <item>
+            <itextId>sub-district-37</itextId>
+            <district>ANIÉ</district>
+            <name>ATCHINÉDJI</name>
+          </item>
+          <item>
+            <itextId>sub-district-38</itextId>
+            <district>ANIÉ</district>
+            <name>CHP ANIÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-39</itextId>
+            <district>ANIÉ</district>
+            <name>GLITTO</name>
+          </item>
+          <item>
+            <itextId>sub-district-40</itextId>
+            <district>ANIÉ</district>
+            <name>PALLAKOKO</name>
+          </item>
+          <item>
+            <itextId>sub-district-41</itextId>
+            <district>DANYI</district>
+            <name>ATIGBA</name>
+          </item>
+          <item>
+            <itextId>sub-district-42</itextId>
+            <district>DANYI</district>
+            <name>BOGO</name>
+          </item>
+          <item>
+            <itextId>sub-district-43</itextId>
+            <district>DANYI</district>
+            <name>CHP APÉYÉMÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-44</itextId>
+            <district>DANYI</district>
+            <name>CMS ELAVANYO</name>
+          </item>
+          <item>
+            <itextId>sub-district-45</itextId>
+            <district>DANYI</district>
+            <name>DÉNOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-46</itextId>
+            <district>DANYI</district>
+            <name>KOUDZRAGAN</name>
+          </item>
+          <item>
+            <itextId>sub-district-47</itextId>
+            <district>DANYI</district>
+            <name>KPETO</name>
+          </item>
+          <item>
+            <itextId>sub-district-48</itextId>
+            <district>DANYI</district>
+            <name>KPÉVÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-49</itextId>
+            <district>DANYI</district>
+            <name>N'DIGBE</name>
+          </item>
+          <item>
+            <itextId>sub-district-50</itextId>
+            <district>DANYI</district>
+            <name>SASSANOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-51</itextId>
+            <district>DANYI</district>
+            <name>TSADOME</name>
+          </item>
+          <item>
+            <itextId>sub-district-52</itextId>
+            <district>DANYI</district>
+            <name>YIKPA</name>
+          </item>
+          <item>
+            <itextId>sub-district-53</itextId>
+            <district>EST-MONO</district>
+            <name>AFODJI</name>
+          </item>
+          <item>
+            <itextId>sub-district-54</itextId>
+            <district>EST-MONO</district>
+            <name>AKAKPO COPÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-55</itextId>
+            <district>EST-MONO</district>
+            <name>BADIN KOPÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-56</itextId>
+            <district>EST-MONO</district>
+            <name>ISSATI</name>
+          </item>
+          <item>
+            <itextId>sub-district-57</itextId>
+            <district>EST-MONO</district>
+            <name>KAMINA</name>
+          </item>
+          <item>
+            <itextId>sub-district-58</itextId>
+            <district>EST-MONO</district>
+            <name>KPESSI</name>
+          </item>
+          <item>
+            <itextId>sub-district-59</itextId>
+            <district>EST-MONO</district>
+            <name>MODOKOUTÈ</name>
+          </item>
+          <item>
+            <itextId>sub-district-60</itextId>
+            <district>EST-MONO</district>
+            <name>MORÉTAN</name>
+          </item>
+          <item>
+            <itextId>sub-district-61</itextId>
+            <district>EST-MONO</district>
+            <name>NYAMASSILA</name>
+          </item>
+          <item>
+            <itextId>sub-district-62</itextId>
+            <district>EST-MONO</district>
+            <name>OGOU KOLIDÈ</name>
+          </item>
+          <item>
+            <itextId>sub-district-63</itextId>
+            <district>EST-MONO</district>
+            <name>TCHÉKITA</name>
+          </item>
+          <item>
+            <itextId>sub-district-64</itextId>
+            <district>EST-MONO</district>
+            <name>YANDA</name>
+          </item>
+          <item>
+            <itextId>sub-district-65</itextId>
+            <district>HAHO</district>
+            <name>AGBATITOÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-66</itextId>
+            <district>HAHO</district>
+            <name>AKPAKPAKPÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-67</itextId>
+            <district>HAHO</district>
+            <name>AMAKPAPÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-68</itextId>
+            <district>HAHO</district>
+            <name>ASRAMA</name>
+          </item>
+          <item>
+            <itextId>sub-district-69</itextId>
+            <district>HAHO</district>
+            <name>ATCHAVÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-70</itextId>
+            <district>HAHO</district>
+            <name>HAHOMÉGBÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-71</itextId>
+            <district>HAHO</district>
+            <name>HUILEHOE</name>
+          </item>
+          <item>
+            <itextId>sub-district-72</itextId>
+            <district>HAHO</district>
+            <name>KAMÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-73</itextId>
+            <district>HAHO</district>
+            <name>KPÉGADJE</name>
+          </item>
+          <item>
+            <itextId>sub-district-74</itextId>
+            <district>HAHO</district>
+            <name>KPOVE</name>
+          </item>
+          <item>
+            <itextId>sub-district-75</itextId>
+            <district>HAHO</district>
+            <name>TÉTÉTOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-76</itextId>
+            <district>HAHO</district>
+            <name>TSINIGAN</name>
+          </item>
+          <item>
+            <itextId>sub-district-77</itextId>
+            <district>HAHO</district>
+            <name>WAHALA</name>
+          </item>
+          <item>
+            <itextId>sub-district-78</itextId>
+            <district>KLOTO</district>
+            <name>AGOME TOMEGBE</name>
+          </item>
+          <item>
+            <itextId>sub-district-79</itextId>
+            <district>KLOTO</district>
+            <name>AGOMÈ-TOMÉGBÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-80</itextId>
+            <district>KLOTO</district>
+            <name>AGOTIMÈ-KOPÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-81</itextId>
+            <district>KLOTO</district>
+            <name>ANA MARIA</name>
+          </item>
+          <item>
+            <itextId>sub-district-82</itextId>
+            <district>KLOTO</district>
+            <name>BABAKODZI</name>
+          </item>
+          <item>
+            <itextId>sub-district-83</itextId>
+            <district>KLOTO</district>
+            <name>GBALAVE</name>
+          </item>
+          <item>
+            <itextId>sub-district-84</itextId>
+            <district>KLOTO</district>
+            <name>KLO MAYONDI</name>
+          </item>
+          <item>
+            <itextId>sub-district-85</itextId>
+            <district>KLOTO</district>
+            <name>KPADAPÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-86</itextId>
+            <district>KLOTO</district>
+            <name>KPOGADJI</name>
+          </item>
+          <item>
+            <itextId>sub-district-87</itextId>
+            <district>KLOTO</district>
+            <name>KUMA-APOTI</name>
+          </item>
+          <item>
+            <itextId>sub-district-88</itextId>
+            <district>KLOTO</district>
+            <name>LAVIE</name>
+          </item>
+          <item>
+            <itextId>sub-district-89</itextId>
+            <district>KLOTO</district>
+            <name>NTRE DAME DE LA MISÉRICORDE</name>
+          </item>
+          <item>
+            <itextId>sub-district-90</itextId>
+            <district>KLOTO</district>
+            <name>POLYCLINIQUE DE KPALIMÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-91</itextId>
+            <district>KLOTO</district>
+            <name>WOME</name>
+          </item>
+          <item>
+            <itextId>sub-district-92</itextId>
+            <district>KLOTO</district>
+            <name>WOMÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-93</itextId>
+            <district>KPÉLÉ</district>
+            <name>AKATA AGAME</name>
+          </item>
+          <item>
+            <itextId>sub-district-94</itextId>
+            <district>KPÉLÉ</district>
+            <name>ASG ELÉMÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-95</itextId>
+            <district>KPÉLÉ</district>
+            <name>BODZE</name>
+          </item>
+          <item>
+            <itextId>sub-district-96</itextId>
+            <district>KPÉLÉ</district>
+            <name>CHP ADETA</name>
+          </item>
+          <item>
+            <itextId>sub-district-97</itextId>
+            <district>KPÉLÉ</district>
+            <name>GOUDEVE</name>
+          </item>
+          <item>
+            <itextId>sub-district-98</itextId>
+            <district>KPÉLÉ</district>
+            <name>KPEKPETA</name>
+          </item>
+          <item>
+            <itextId>sub-district-99</itextId>
+            <district>KPÉLÉ</district>
+            <name>KPELE AGAVE</name>
+          </item>
+          <item>
+            <itextId>sub-district-100</itextId>
+            <district>KPÉLÉ</district>
+            <name>KPÉLÉ ELÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-101</itextId>
+            <district>KPÉLÉ</district>
+            <name>MAMAKOPE</name>
+          </item>
+          <item>
+            <itextId>sub-district-102</itextId>
+            <district>KPÉLÉ</district>
+            <name>TUTU</name>
+          </item>
+          <item>
+            <itextId>sub-district-103</itextId>
+            <district>KPÉLÉ</district>
+            <name>ZIONOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-104</itextId>
+            <district>MOYEN MONO</district>
+            <name>AHASSOMÈ</name>
+          </item>
+          <item>
+            <itextId>sub-district-105</itextId>
+            <district>MOYEN MONO</district>
+            <name>HP TOHOUN</name>
+          </item>
+          <item>
+            <itextId>sub-district-106</itextId>
+            <district>MOYEN MONO</district>
+            <name>KATIVOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-107</itextId>
+            <district>MOYEN MONO</district>
+            <name>KATOME</name>
+          </item>
+          <item>
+            <itextId>sub-district-108</itextId>
+            <district>MOYEN MONO</district>
+            <name>KPÉKPLÉMÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-109</itextId>
+            <district>MOYEN MONO</district>
+            <name>SALIGBÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-110</itextId>
+            <district>MOYEN MONO</district>
+            <name>TADO</name>
+          </item>
+          <item>
+            <itextId>sub-district-111</itextId>
+            <district>OGOU</district>
+            <name>AGBONOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-112</itextId>
+            <district>OGOU</district>
+            <name>AKPARÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-113</itextId>
+            <district>OGOU</district>
+            <name>ATCHAKOE CARREFOUR</name>
+          </item>
+          <item>
+            <itextId>sub-district-114</itextId>
+            <district>OGOU</district>
+            <name>AWAGOMÈ</name>
+          </item>
+          <item>
+            <itextId>sub-district-115</itextId>
+            <district>OGOU</district>
+            <name>BOCCO</name>
+          </item>
+          <item>
+            <itextId>sub-district-116</itextId>
+            <district>OGOU</district>
+            <name>DATCHA</name>
+          </item>
+          <item>
+            <itextId>sub-district-117</itextId>
+            <district>OGOU</district>
+            <name>GLÉI</name>
+          </item>
+          <item>
+            <itextId>sub-district-118</itextId>
+            <district>OGOU</district>
+            <name>HOMAGAN</name>
+          </item>
+          <item>
+            <itextId>sub-district-119</itextId>
+            <district>OGOU</district>
+            <name>KÈLÈKPÈ</name>
+          </item>
+          <item>
+            <itextId>sub-district-120</itextId>
+            <district>OGOU</district>
+            <name>OUNTIVOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-121</itextId>
+            <district>OGOU</district>
+            <name>POLYCLINIQUE ATAKPAMÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-122</itextId>
+            <district>WAWA</district>
+            <name>AGBOKOPÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-123</itextId>
+            <district>WAWA</district>
+            <name>AKLOWA TOMÉBGÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-124</itextId>
+            <district>WAWA</district>
+            <name>BADOU DJINDJIN</name>
+          </item>
+          <item>
+            <itextId>sub-district-125</itextId>
+            <district>WAWA</district>
+            <name>CHP BADOU</name>
+          </item>
+          <item>
+            <itextId>sub-district-126</itextId>
+            <district>WAWA</district>
+            <name>DOUME</name>
+          </item>
+          <item>
+            <itextId>sub-district-127</itextId>
+            <district>WAWA</district>
+            <name>GOBÈ</name>
+          </item>
+          <item>
+            <itextId>sub-district-128</itextId>
+            <district>WAWA</district>
+            <name>IMOUSSA</name>
+          </item>
+          <item>
+            <itextId>sub-district-129</itextId>
+            <district>WAWA</district>
+            <name>KESSIBO ABRWANKOR</name>
+          </item>
+          <item>
+            <itextId>sub-district-130</itextId>
+            <district>WAWA</district>
+            <name>KISSIBO WAWA</name>
+          </item>
+          <item>
+            <itextId>sub-district-131</itextId>
+            <district>WAWA</district>
+            <name>KPATÈ BÉNA</name>
+          </item>
+          <item>
+            <itextId>sub-district-132</itextId>
+            <district>WAWA</district>
+            <name>TODOME</name>
+          </item>
+          <item>
+            <itextId>sub-district-133</itextId>
+            <district>WAWA</district>
+            <name>ZOGBÉGAN</name>
+          </item>
+          <item>
+            <itextId>sub-district-134</itextId>
+            <district>YOTO</district>
+            <name>GBOTOZÉVÉ</name>
+          </item>
+          <item>
+            <itextId>sub-district-135</itextId>
+            <district>YOTO</district>
+            <name>KOUVÉ</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="village">
+        <root>
+          <item>
+            <itextId>village-0</itextId>
+            <name>ADIVA</name>
+            <sub-district>ADIVA</sub-district>
+          </item>
+          <item>
+            <itextId>village-1</itextId>
+            <name>ABALO COPÉ</name>
+            <sub-district>ADOGBÉNOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-2</itextId>
+            <name>KADJÈ COPÉ</name>
+            <sub-district>ADOGBÉNOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-3</itextId>
+            <name>EBOUAKA</name>
+            <sub-district>ADOGLI</sub-district>
+          </item>
+          <item>
+            <itextId>village-4</itextId>
+            <name>AFODJI</name>
+            <sub-district>AFODJI</sub-district>
+          </item>
+          <item>
+            <itextId>village-5</itextId>
+            <name>GUÉGUÉ</name>
+            <sub-district>AFODJI</sub-district>
+          </item>
+          <item>
+            <itextId>village-6</itextId>
+            <name>IGBOEDIN</name>
+            <sub-district>AFODJI</sub-district>
+          </item>
+          <item>
+            <itextId>village-7</itextId>
+            <name>AGBOTA</name>
+            <sub-district>AFOLÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-8</itextId>
+            <name>IDJAFÈ</name>
+            <sub-district>AFOLÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-9</itextId>
+            <name>KOUTCHORO</name>
+            <sub-district>AFOLÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-10</itextId>
+            <name>WOUROUKOU</name>
+            <sub-district>AFOLÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-11</itextId>
+            <name>AGBATI</name>
+            <sub-district>AGBATITOÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-12</itextId>
+            <name>KÉMÉDISSO</name>
+            <sub-district>AGBOKOPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-13</itextId>
+            <name>KAMINA AWOYO</name>
+            <sub-district>AGBONOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-14</itextId>
+            <name>DJANGBASSOU</name>
+            <sub-district>AGODJOLOLO</sub-district>
+          </item>
+          <item>
+            <itextId>village-15</itextId>
+            <name>AVETÉ - AGAME - TSIHI</name>
+            <sub-district>AGOME TOMEGBE</sub-district>
+          </item>
+          <item>
+            <itextId>village-16</itextId>
+            <name>KAMÉTONOU</name>
+            <sub-district>AGOMÈ-TOMÉGBÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-17</itextId>
+            <name>AGOTIMÈ-KOPÉ</name>
+            <sub-district>AGOTIMÈ-KOPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-18</itextId>
+            <name>LÉTSOUKOPÉ</name>
+            <sub-district>AGOUDOUVOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-19</itextId>
+            <name>LETSUCOPÉ</name>
+            <sub-district>AGOUDOUVOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-20</itextId>
+            <name>VAKPO</name>
+            <sub-district>AGOUDOUVOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-21</itextId>
+            <name>AKÉMÉ</name>
+            <sub-district>AHASSOMÈ</sub-district>
+          </item>
+          <item>
+            <itextId>village-22</itextId>
+            <name>GAMÈ</name>
+            <sub-district>AHASSOMÈ</sub-district>
+          </item>
+          <item>
+            <itextId>village-23</itextId>
+            <name>ADAO</name>
+            <sub-district>AKABA</sub-district>
+          </item>
+          <item>
+            <itextId>village-24</itextId>
+            <name>ALABADÈ BAS</name>
+            <sub-district>AKAKPO COPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-25</itextId>
+            <name>ADAME</name>
+            <sub-district>AKATA AGAME</sub-district>
+          </item>
+          <item>
+            <itextId>village-26</itextId>
+            <name>DZOGBEPIME</name>
+            <sub-district>AKATA AGAME</sub-district>
+          </item>
+          <item>
+            <itextId>village-27</itextId>
+            <name>DZIGBODI</name>
+            <sub-district>AKLOWA TOMÉBGÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-28</itextId>
+            <name>ODOMI ABRA</name>
+            <sub-district>AKLOWA TOMÉBGÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-29</itextId>
+            <name>GOZA COPÉ</name>
+            <sub-district>AKPAKPAKPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-30</itextId>
+            <name>GROKOPÉ</name>
+            <sub-district>AKPARÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-31</itextId>
+            <name>KOKOU COPÉ</name>
+            <sub-district>AKPARÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-32</itextId>
+            <name>KANYE</name>
+            <sub-district>AKPLO</sub-district>
+          </item>
+          <item>
+            <itextId>village-33</itextId>
+            <name>ABONGO COPÉ</name>
+            <sub-district>AMAKPAPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-34</itextId>
+            <name>KABLÉCOMÈ</name>
+            <sub-district>AMOU OBLO</sub-district>
+          </item>
+          <item>
+            <itextId>village-35</itextId>
+            <name>TCHIGUIRIEDOUFAO</name>
+            <sub-district>AMOU OBLO</sub-district>
+          </item>
+          <item>
+            <itextId>village-36</itextId>
+            <name>ZONGO AMOUGODO</name>
+            <sub-district>AMOU OBLO</sub-district>
+          </item>
+          <item>
+            <itextId>village-37</itextId>
+            <name>HANYIGBA DUGA</name>
+            <sub-district>ANA MARIA</sub-district>
+          </item>
+          <item>
+            <itextId>village-38</itextId>
+            <name>KARBAU COPÉ</name>
+            <sub-district>AOE GADJA</sub-district>
+          </item>
+          <item>
+            <itextId>village-39</itextId>
+            <name>HAVE</name>
+            <sub-district>AOUSSOUKOPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-40</itextId>
+            <name>DZEIBO</name>
+            <sub-district>ASG ELÉMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-41</itextId>
+            <name>ASRAMA</name>
+            <sub-district>ASRAMA</sub-district>
+          </item>
+          <item>
+            <itextId>village-42</itextId>
+            <name>GLIVÉ</name>
+            <sub-district>ATCHAKOE CARREFOUR</sub-district>
+          </item>
+          <item>
+            <itextId>village-43</itextId>
+            <name>KPOGANDJI</name>
+            <sub-district>ATCHAKOE CARREFOUR</sub-district>
+          </item>
+          <item>
+            <itextId>village-44</itextId>
+            <name>ATCHAVÉ</name>
+            <sub-district>ATCHAVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-45</itextId>
+            <name>AYORE</name>
+            <sub-district>ATCHINÉDJI</sub-district>
+          </item>
+          <item>
+            <itextId>village-46</itextId>
+            <name>ATIGBA</name>
+            <sub-district>ATIGBA</sub-district>
+          </item>
+          <item>
+            <itextId>village-47</itextId>
+            <name>KPATIKOPÉ</name>
+            <sub-district>AVÉDJÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-48</itextId>
+            <name>OKAFOU</name>
+            <sub-district>AVÉDJÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-49</itextId>
+            <name>TSOKPLÉ</name>
+            <sub-district>AVÉDJÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-50</itextId>
+            <name>ANANIVI KONDJI</name>
+            <sub-district>AVÉDZÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-51</itextId>
+            <name>AVETONOU</name>
+            <sub-district>AVETONOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-52</itextId>
+            <name>TCHÈKÈLÈ</name>
+            <sub-district>AWAGOMÈ</sub-district>
+          </item>
+          <item>
+            <itextId>village-53</itextId>
+            <name>AYAGBA</name>
+            <sub-district>AYAGBA</sub-district>
+          </item>
+          <item>
+            <itextId>village-54</itextId>
+            <name>GBOYÉYÉ</name>
+            <sub-district>AYAGBA</sub-district>
+          </item>
+          <item>
+            <itextId>village-55</itextId>
+            <name>NYIVÉ</name>
+            <sub-district>BABAKODZI</sub-district>
+          </item>
+          <item>
+            <itextId>village-56</itextId>
+            <name>BASSAN</name>
+            <sub-district>BADIN KOPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-57</itextId>
+            <name>KOKOLO</name>
+            <sub-district>BADIN KOPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-58</itextId>
+            <name>ALABE</name>
+            <sub-district>BADOU DJINDJIN</sub-district>
+          </item>
+          <item>
+            <itextId>village-59</itextId>
+            <name>ANANI KOPÉ</name>
+            <sub-district>BADOU DJINDJIN</sub-district>
+          </item>
+          <item>
+            <itextId>village-60</itextId>
+            <name>DANYI-KONTA</name>
+            <sub-district>BADOU DJINDJIN</sub-district>
+          </item>
+          <item>
+            <itextId>village-61</itextId>
+            <name>IGBOWOU AMOU</name>
+            <sub-district>BASSÈ</sub-district>
+          </item>
+          <item>
+            <itextId>village-62</itextId>
+            <name>FÉTIGBÉ</name>
+            <sub-district>BOCCO</sub-district>
+          </item>
+          <item>
+            <itextId>village-63</itextId>
+            <name>LAWOUDA</name>
+            <sub-district>BODZE</sub-district>
+          </item>
+          <item>
+            <itextId>village-64</itextId>
+            <name>MÉDJÉ</name>
+            <sub-district>BODZE</sub-district>
+          </item>
+          <item>
+            <itextId>village-65</itextId>
+            <name>BOGO</name>
+            <sub-district>BOGO</sub-district>
+          </item>
+          <item>
+            <itextId>village-66</itextId>
+            <name>ADAMPÉ</name>
+            <sub-district>BROUNFOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-67</itextId>
+            <name>BEKRO -WAWASSI</name>
+            <sub-district>BROUNFOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-68</itextId>
+            <name>EWIWIR/SINDO</name>
+            <sub-district>BROUNFOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-69</itextId>
+            <name>GAPÉ</name>
+            <sub-district>BROUNFOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-70</itextId>
+            <name>KAMALO</name>
+            <sub-district>BROUNFOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-71</itextId>
+            <name>KOUROU</name>
+            <sub-district>BROUNFOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-72</itextId>
+            <name>ADETA</name>
+            <sub-district>CHP ADETA</sub-district>
+          </item>
+          <item>
+            <itextId>village-73</itextId>
+            <name>ANAO</name>
+            <sub-district>CHP ADETA</sub-district>
+          </item>
+          <item>
+            <itextId>village-74</itextId>
+            <name>BEME</name>
+            <sub-district>CHP ADETA</sub-district>
+          </item>
+          <item>
+            <itextId>village-75</itextId>
+            <name>KONDA TODZI</name>
+            <sub-district>CHP ADETA</sub-district>
+          </item>
+          <item>
+            <itextId>village-76</itextId>
+            <name>AWLADOUNOU</name>
+            <sub-district>CHP AMLAMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-77</itextId>
+            <name>KPÈTÈ</name>
+            <sub-district>CHP AMLAMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-78</itextId>
+            <name>ALAMASSOU</name>
+            <sub-district>CHP ANIÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-79</itextId>
+            <name>ALÉ KOPÉ</name>
+            <sub-district>CHP ANIÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-80</itextId>
+            <name>KAMALO KOPÉ</name>
+            <sub-district>CHP ANIÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-81</itextId>
+            <name>KONIGBO</name>
+            <sub-district>CHP ANIÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-82</itextId>
+            <name>KPÉHOUN II</name>
+            <sub-district>CHP ANIÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-83</itextId>
+            <name>GBALADZE</name>
+            <sub-district>CHP APÉYÉMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-84</itextId>
+            <name>KETEME</name>
+            <sub-district>CHP APÉYÉMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-85</itextId>
+            <name>MEMPASSEM</name>
+            <sub-district>CHP APÉYÉMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-86</itextId>
+            <name>BADOU</name>
+            <sub-district>CHP BADOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-87</itextId>
+            <name>OUVLOUBE</name>
+            <sub-district>CHP BADOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-88</itextId>
+            <name>WETROPÉ</name>
+            <sub-district>CMS ELAVANYO</sub-district>
+          </item>
+          <item>
+            <itextId>village-89</itextId>
+            <name>AFI KOPÉ</name>
+            <sub-district>DATCHA</sub-district>
+          </item>
+          <item>
+            <itextId>village-90</itextId>
+            <name>AMOU AKPÉKPÉ</name>
+            <sub-district>DATCHA</sub-district>
+          </item>
+          <item>
+            <itextId>village-91</itextId>
+            <name>BOSSOPÉ</name>
+            <sub-district>DÉNOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-92</itextId>
+            <name>DÉNOU</name>
+            <sub-district>DÉNOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-93</itextId>
+            <name>TETEBE</name>
+            <sub-district>DÉNOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-94</itextId>
+            <name>DJON ATIGOZA</name>
+            <sub-district>DJON KOTORA</sub-district>
+          </item>
+          <item>
+            <itextId>village-95</itextId>
+            <name>DJON ELAVAGNON</name>
+            <sub-district>DJON KOTORA</sub-district>
+          </item>
+          <item>
+            <itextId>village-96</itextId>
+            <name>TCHAKPALI</name>
+            <sub-district>DJON KOTORA</sub-district>
+          </item>
+          <item>
+            <itextId>village-97</itextId>
+            <name>VOUTÉ</name>
+            <sub-district>DOUME</sub-district>
+          </item>
+          <item>
+            <itextId>village-98</itextId>
+            <name>ADJASSIWAWOE</name>
+            <sub-district>GAMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-99</itextId>
+            <name>GNAMASSILÈ</name>
+            <sub-district>GAMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-100</itextId>
+            <name>KPÈTÈ MAVA</name>
+            <sub-district>GAMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-101</itextId>
+            <name>OGOMÉ</name>
+            <sub-district>GAMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-102</itextId>
+            <name>PIDINA</name>
+            <sub-district>GAMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-103</itextId>
+            <name>TSADOME</name>
+            <sub-district>GBALAVE</sub-district>
+          </item>
+          <item>
+            <itextId>village-104</itextId>
+            <name>KPÈTOTSI</name>
+            <sub-district>GBOTOZÉVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-105</itextId>
+            <name>LOGOVE</name>
+            <sub-district>GBOTOZÉVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-106</itextId>
+            <name>LOGOVE</name>
+            <sub-district>GBOTOZÉVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-107</itextId>
+            <name>ADJAMBOUROUGOU</name>
+            <sub-district>GLÉI</sub-district>
+          </item>
+          <item>
+            <itextId>village-108</itextId>
+            <name>AGBOROU</name>
+            <sub-district>GLÉI</sub-district>
+          </item>
+          <item>
+            <itextId>village-109</itextId>
+            <name>AMOUTCHOU</name>
+            <sub-district>GLÉI</sub-district>
+          </item>
+          <item>
+            <itextId>village-110</itextId>
+            <name>BAGAOU</name>
+            <sub-district>GLÉI</sub-district>
+          </item>
+          <item>
+            <itextId>village-111</itextId>
+            <name>AGBAKOTAN</name>
+            <sub-district>GLITTO</sub-district>
+          </item>
+          <item>
+            <itextId>village-112</itextId>
+            <name>AWANOU</name>
+            <sub-district>GLITTO</sub-district>
+          </item>
+          <item>
+            <itextId>village-113</itextId>
+            <name>DASSAGBA</name>
+            <sub-district>GLITTO</sub-district>
+          </item>
+          <item>
+            <itextId>village-114</itextId>
+            <name>DÉTOÈ</name>
+            <sub-district>GLITTO</sub-district>
+          </item>
+          <item>
+            <itextId>village-115</itextId>
+            <name>KOUFOTA</name>
+            <sub-district>GLITTO</sub-district>
+          </item>
+          <item>
+            <itextId>village-116</itextId>
+            <name>KPAKPASSA</name>
+            <sub-district>GLITTO</sub-district>
+          </item>
+          <item>
+            <itextId>village-117</itextId>
+            <name>LOVE</name>
+            <sub-district>GLITTO</sub-district>
+          </item>
+          <item>
+            <itextId>village-118</itextId>
+            <name>DAFO</name>
+            <sub-district>GLOCOPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-119</itextId>
+            <name>EKÉTO ELAVAGNON</name>
+            <sub-district>GOBÈ</sub-district>
+          </item>
+          <item>
+            <itextId>village-120</itextId>
+            <name>ANOUM</name>
+            <sub-district>GOUDEVE</sub-district>
+          </item>
+          <item>
+            <itextId>village-121</itextId>
+            <name>GODZO</name>
+            <sub-district>GOUDEVE</sub-district>
+          </item>
+          <item>
+            <itextId>village-122</itextId>
+            <name>TSADOME (GOUDEVE)</name>
+            <sub-district>GOUDEVE</sub-district>
+          </item>
+          <item>
+            <itextId>village-123</itextId>
+            <name>FAWOUKPÉ</name>
+            <sub-district>HAHOMÉGBÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-124</itextId>
+            <name>HAHONOU</name>
+            <sub-district>HAHOMÉGBÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-125</itextId>
+            <name>KPODJI KOPÉ</name>
+            <sub-district>HAHOMÉGBÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-126</itextId>
+            <name>LOUKPE</name>
+            <sub-district>HAHOMÉGBÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-127</itextId>
+            <name>DOUFIO</name>
+            <sub-district>HIHÉATRO</sub-district>
+          </item>
+          <item>
+            <itextId>village-128</itextId>
+            <name>ELAVAGNON</name>
+            <sub-district>HIHÉATRO</sub-district>
+          </item>
+          <item>
+            <itextId>village-129</itextId>
+            <name>AGOUNA DÉVÉ</name>
+            <sub-district>HOMAGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-130</itextId>
+            <name>DATCHA</name>
+            <sub-district>HOMAGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-131</itextId>
+            <name>HOMAGAN 4</name>
+            <sub-district>HOMAGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-132</itextId>
+            <name>AGLAMASSOÉ</name>
+            <sub-district>HP TOHOUN</sub-district>
+          </item>
+          <item>
+            <itextId>village-133</itextId>
+            <name>DOUVIHOÉ</name>
+            <sub-district>HP TOHOUN</sub-district>
+          </item>
+          <item>
+            <itextId>village-134</itextId>
+            <name>HÉVÈ</name>
+            <sub-district>HP TOHOUN</sub-district>
+          </item>
+          <item>
+            <itextId>village-135</itextId>
+            <name>HOMÉTOWOUHOÉ</name>
+            <sub-district>HP TOHOUN</sub-district>
+          </item>
+          <item>
+            <itextId>village-136</itextId>
+            <name>WAGBA</name>
+            <sub-district>HP TOHOUN</sub-district>
+          </item>
+          <item>
+            <itextId>village-137</itextId>
+            <name>KOKPLI</name>
+            <sub-district>HUILEHOE</sub-district>
+          </item>
+          <item>
+            <itextId>village-138</itextId>
+            <name>YAO COPÉ</name>
+            <sub-district>IDAO</sub-district>
+          </item>
+          <item>
+            <itextId>village-139</itextId>
+            <name>IMOUSSA</name>
+            <sub-district>IMOUSSA</sub-district>
+          </item>
+          <item>
+            <itextId>village-140</itextId>
+            <name>IGBOMÉDJI</name>
+            <sub-district>ISSATI</sub-district>
+          </item>
+          <item>
+            <itextId>village-141</itextId>
+            <name>KALMAME</name>
+            <sub-district>ISSATI</sub-district>
+          </item>
+          <item>
+            <itextId>village-142</itextId>
+            <name>MODOUKOU</name>
+            <sub-district>ISSATI</sub-district>
+          </item>
+          <item>
+            <itextId>village-143</itextId>
+            <name>AZONSOUSBLÉ</name>
+            <sub-district>KAMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-144</itextId>
+            <name>AGANWO</name>
+            <sub-district>KAMINA</sub-district>
+          </item>
+          <item>
+            <itextId>village-145</itextId>
+            <name>AGNIGBO</name>
+            <sub-district>KAMINA</sub-district>
+          </item>
+          <item>
+            <itextId>village-146</itextId>
+            <name>KAMINA</name>
+            <sub-district>KAMINA</sub-district>
+          </item>
+          <item>
+            <itextId>village-147</itextId>
+            <name>OKPO TEMB</name>
+            <sub-district>KAMINA</sub-district>
+          </item>
+          <item>
+            <itextId>village-148</itextId>
+            <name>KAMINA CENTRE AKABOU</name>
+            <sub-district>KAMINA (AKÉBOU)</sub-district>
+          </item>
+          <item>
+            <itextId>village-149</itextId>
+            <name>EKPLA</name>
+            <sub-district>KATI</sub-district>
+          </item>
+          <item>
+            <itextId>village-150</itextId>
+            <name>XÉVI KONDJI</name>
+            <sub-district>KATI</sub-district>
+          </item>
+          <item>
+            <itextId>village-151</itextId>
+            <name>ZIONOU</name>
+            <sub-district>KATI</sub-district>
+          </item>
+          <item>
+            <itextId>village-152</itextId>
+            <name>KATIVOU</name>
+            <sub-district>KATIVOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-153</itextId>
+            <name>AGOGOMÈ</name>
+            <sub-district>KATOME</sub-district>
+          </item>
+          <item>
+            <itextId>village-154</itextId>
+            <name>AMÉDÉGBÉ</name>
+            <sub-district>KATOME</sub-district>
+          </item>
+          <item>
+            <itextId>village-155</itextId>
+            <name>KATAHOÉ</name>
+            <sub-district>KATOME</sub-district>
+          </item>
+          <item>
+            <itextId>village-156</itextId>
+            <name>KEBO-KPETA</name>
+            <sub-district>KEBO-KPETA</sub-district>
+          </item>
+          <item>
+            <itextId>village-157</itextId>
+            <name>ILÉKOHAN</name>
+            <sub-district>KÈLÈKPÈ</sub-district>
+          </item>
+          <item>
+            <itextId>village-158</itextId>
+            <name>KATORÉ</name>
+            <sub-district>KÈLÈKPÈ</sub-district>
+          </item>
+          <item>
+            <itextId>village-159</itextId>
+            <name>OTSANANI/ADÉDAKOPÉ</name>
+            <sub-district>KÈLÈKPÈ</sub-district>
+          </item>
+          <item>
+            <itextId>village-160</itextId>
+            <name>AKOLOKOUTSÉ</name>
+            <sub-district>KESSIBO ABRWANKOR</sub-district>
+          </item>
+          <item>
+            <itextId>village-161</itextId>
+            <name>KISSIBO WAWA</name>
+            <sub-district>KISSIBO WAWA</sub-district>
+          </item>
+          <item>
+            <itextId>village-162</itextId>
+            <name>KLO MAYONDI</name>
+            <sub-district>KLO MAYONDI</sub-district>
+          </item>
+          <item>
+            <itextId>village-163</itextId>
+            <name>AGOKPLAMÈ</name>
+            <sub-district>KOLOGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-164</itextId>
+            <name>KPOVÉNOU</name>
+            <sub-district>KOLOGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-165</itextId>
+            <name>TOKPO</name>
+            <sub-district>KOLOGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-166</itextId>
+            <name>KOUDZRAGAN</name>
+            <sub-district>KOUDZRAGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-167</itextId>
+            <name>KOUSOUNTOU</name>
+            <sub-district>KOUDZRAGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-168</itextId>
+            <name>ATIGOZA</name>
+            <sub-district>KOUGNOHOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-169</itextId>
+            <name>DAKAN</name>
+            <sub-district>KOUGNOHOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-170</itextId>
+            <name>KOUGNOHOU RIVERAIN</name>
+            <sub-district>KOUGNOHOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-171</itextId>
+            <name>VEH NYILE</name>
+            <sub-district>KOUGNOHOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-172</itextId>
+            <name>AFANGADJI1 (ECOLE+DODJRAME)</name>
+            <sub-district>KOUVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-173</itextId>
+            <name>AFANGADJI2 (VOKUDÉKÉ +DOGLOBO +GUÉROMÉ)</name>
+            <sub-district>KOUVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-174</itextId>
+            <name>AFANGADJI3 ( BOLOVI+ LOTOE)</name>
+            <sub-district>KOUVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-175</itextId>
+            <name>ASAPÉ</name>
+            <sub-district>KOUVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-176</itextId>
+            <name>ATRAN</name>
+            <sub-district>KOUVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-177</itextId>
+            <name>BANOU</name>
+            <sub-district>KOUVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-178</itextId>
+            <name>DÉDJI</name>
+            <sub-district>KOUVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-179</itextId>
+            <name>GBOLI</name>
+            <sub-district>KOUVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-180</itextId>
+            <name>LIVÉ</name>
+            <sub-district>KOUVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-181</itextId>
+            <name>NSROUKOPÉ</name>
+            <sub-district>KOUVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-182</itextId>
+            <name>AVÉXO</name>
+            <sub-district>KPADAPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-183</itextId>
+            <name>NYIVÉ (KPADAPÉ)</name>
+            <sub-district>KPADAPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-184</itextId>
+            <name>TOUGBLI</name>
+            <sub-district>KPADAPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-185</itextId>
+            <name>BIBI</name>
+            <sub-district>KPATÈ BÉNA</sub-district>
+          </item>
+          <item>
+            <itextId>village-186</itextId>
+            <name>ITIMOGO</name>
+            <sub-district>KPATÈ BÉNA</sub-district>
+          </item>
+          <item>
+            <itextId>village-187</itextId>
+            <name>MAFLO DJOGBÉ</name>
+            <sub-district>KPATÈ BÉNA</sub-district>
+          </item>
+          <item>
+            <itextId>village-188</itextId>
+            <name>MANGOASSI</name>
+            <sub-district>KPATÈ BÉNA</sub-district>
+          </item>
+          <item>
+            <itextId>village-189</itextId>
+            <name>MÉNOU</name>
+            <sub-district>KPATÈ BÉNA</sub-district>
+          </item>
+          <item>
+            <itextId>village-190</itextId>
+            <name>KPATÉGAN BAS</name>
+            <sub-district>KPATÉGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-191</itextId>
+            <name>AGODÉKÉ</name>
+            <sub-district>KPÉGADJE</sub-district>
+          </item>
+          <item>
+            <itextId>village-192</itextId>
+            <name>ZIDZOE</name>
+            <sub-district>KPEKPETA</sub-district>
+          </item>
+          <item>
+            <itextId>village-193</itextId>
+            <name>KPÉKPLÉMÉ</name>
+            <sub-district>KPÉKPLÉMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-194</itextId>
+            <name>BABACOPE</name>
+            <sub-district>KPELE AGAVE</sub-district>
+          </item>
+          <item>
+            <itextId>village-195</itextId>
+            <name>ELÉ</name>
+            <sub-district>KPÉLÉ ELÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-196</itextId>
+            <name>EYÉKPADA</name>
+            <sub-district>KPESSI</sub-district>
+          </item>
+          <item>
+            <itextId>village-197</itextId>
+            <name>KPETO</name>
+            <sub-district>KPETO</sub-district>
+          </item>
+          <item>
+            <itextId>village-198</itextId>
+            <name>AMOUTA AGAMÉ</name>
+            <sub-district>KPÉVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-199</itextId>
+            <name>EVIME</name>
+            <sub-district>KPÉVÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-200</itextId>
+            <name>NOGO</name>
+            <sub-district>KPOGADJI</sub-district>
+          </item>
+          <item>
+            <itextId>village-201</itextId>
+            <name>AVEDJI</name>
+            <sub-district>KPOVE</sub-district>
+          </item>
+          <item>
+            <itextId>village-202</itextId>
+            <name>BALA</name>
+            <sub-district>KUMA-APOTI</sub-district>
+          </item>
+          <item>
+            <itextId>village-203</itextId>
+            <name>APEDOME</name>
+            <sub-district>LAVIE</sub-district>
+          </item>
+          <item>
+            <itextId>village-204</itextId>
+            <name>KPÉGLO</name>
+            <sub-district>MAMAKOPE</sub-district>
+          </item>
+          <item>
+            <itextId>village-205</itextId>
+            <name>MAMAKOPE</name>
+            <sub-district>MAMAKOPE</sub-district>
+          </item>
+          <item>
+            <itextId>village-206</itextId>
+            <name>ADJOGBA</name>
+            <sub-district>MODOKOUTÈ</sub-district>
+          </item>
+          <item>
+            <itextId>village-207</itextId>
+            <name>DEDJI</name>
+            <sub-district>MORÉTAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-208</itextId>
+            <name>N'DIGBE</name>
+            <sub-district>N'DIGBE</sub-district>
+          </item>
+          <item>
+            <itextId>village-209</itextId>
+            <name>NOVISSIKOME</name>
+            <sub-district>NTRE DAME DE LA MISÉRICORDE</sub-district>
+          </item>
+          <item>
+            <itextId>village-210</itextId>
+            <name>ALÉMODJI</name>
+            <sub-district>NYAMASSILA</sub-district>
+          </item>
+          <item>
+            <itextId>village-211</itextId>
+            <name>NYITOE</name>
+            <sub-district>NYITOE</sub-district>
+          </item>
+          <item>
+            <itextId>village-212</itextId>
+            <name>GLOKPO</name>
+            <sub-district>NYITOÉ ZUKPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-213</itextId>
+            <name>KPODJAHON</name>
+            <sub-district>NYITOÉ ZUKPÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-214</itextId>
+            <name>OGOU KOLIDÈ 1</name>
+            <sub-district>OGOU KOLIDÈ</sub-district>
+          </item>
+          <item>
+            <itextId>village-215</itextId>
+            <name>ATOMÉ</name>
+            <sub-district>OUNTIVOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-216</itextId>
+            <name>HÉTRÉ</name>
+            <sub-district>OUNTIVOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-217</itextId>
+            <name>TOYIBO</name>
+            <sub-district>PALLAKOKO</sub-district>
+          </item>
+          <item>
+            <itextId>village-218</itextId>
+            <name>SALANGBA</name>
+            <sub-district>PATATOUKOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-219</itextId>
+            <name>OKÉAKPA COLLINE</name>
+            <sub-district>POLYCLINIQUE ATAKPAMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-220</itextId>
+            <name>AGOE KONDJI</name>
+            <sub-district>POLYCLINIQUE DE KPALIMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-221</itextId>
+            <name>DZOGADZE AVUZEKOME</name>
+            <sub-district>POLYCLINIQUE DE KPALIMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-222</itextId>
+            <name>KUSUNTU</name>
+            <sub-district>POLYCLINIQUE DE KPALIMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-223</itextId>
+            <name>SAMKONDJI TOTSOANYI</name>
+            <sub-district>POLYCLINIQUE DE KPALIMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-224</itextId>
+            <name>DÉKADÉ</name>
+            <sub-district>SALIGBÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-225</itextId>
+            <name>DOLOUMÈ</name>
+            <sub-district>SALIGBÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-226</itextId>
+            <name>KPOKÉMÉ</name>
+            <sub-district>SALIGBÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-227</itextId>
+            <name>ZASSA</name>
+            <sub-district>SALIGBÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-228</itextId>
+            <name>SASSANOU</name>
+            <sub-district>SASSANOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-229</itextId>
+            <name>TINIPÉ</name>
+            <sub-district>SASSANOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-230</itextId>
+            <name>AMEGBEADZRÉ</name>
+            <sub-district>SÉRÉGBÉNÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-231</itextId>
+            <name>WOUROUROU</name>
+            <sub-district>SÉRÉGBÉNÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-232</itextId>
+            <name>OLOUTOKOU</name>
+            <sub-district>SODO</sub-district>
+          </item>
+          <item>
+            <itextId>village-233</itextId>
+            <name>AKLOTSI</name>
+            <sub-district>TADO</sub-district>
+          </item>
+          <item>
+            <itextId>village-234</itextId>
+            <name>ALAGBAMÉ</name>
+            <sub-district>TADO</sub-district>
+          </item>
+          <item>
+            <itextId>village-235</itextId>
+            <name>AOUTÉLÈ</name>
+            <sub-district>TADO</sub-district>
+          </item>
+          <item>
+            <itextId>village-236</itextId>
+            <name>VODJÉMÈ</name>
+            <sub-district>TADO</sub-district>
+          </item>
+          <item>
+            <itextId>village-237</itextId>
+            <name>ATOTOYI</name>
+            <sub-district>TCHÉKITA</sub-district>
+          </item>
+          <item>
+            <itextId>village-238</itextId>
+            <name>KODJODA</name>
+            <sub-district>TCHÉKITA</sub-district>
+          </item>
+          <item>
+            <itextId>village-239</itextId>
+            <name>WASSIROU</name>
+            <sub-district>TCHÉKITA</sub-district>
+          </item>
+          <item>
+            <itextId>village-240</itextId>
+            <name>AZAME</name>
+            <sub-district>TÉTÉTOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-241</itextId>
+            <name>HOÉVIMÉ</name>
+            <sub-district>TÉTÉTOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-242</itextId>
+            <name>KPODJI</name>
+            <sub-district>TÉTÉTOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-243</itextId>
+            <name>TÉTÉTOU</name>
+            <sub-district>TÉTÉTOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-244</itextId>
+            <name>OKAOU</name>
+            <sub-district>TODOME</sub-district>
+          </item>
+          <item>
+            <itextId>village-245</itextId>
+            <name>AMEGAPÉ</name>
+            <sub-district>TSADOME</sub-district>
+          </item>
+          <item>
+            <itextId>village-246</itextId>
+            <name>ALATI MARCHÉ ET ECOLE</name>
+            <sub-district>TSINIGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-247</itextId>
+            <name>ALATIKPOTA</name>
+            <sub-district>TSINIGAN</sub-district>
+          </item>
+          <item>
+            <itextId>village-248</itextId>
+            <name>ABLÉVÉ</name>
+            <sub-district>TUTU</sub-district>
+          </item>
+          <item>
+            <itextId>village-249</itextId>
+            <name>GOTHA ADJA</name>
+            <sub-district>WAHALA</sub-district>
+          </item>
+          <item>
+            <itextId>village-250</itextId>
+            <name>GOTHA KABYÈ</name>
+            <sub-district>WAHALA</sub-district>
+          </item>
+          <item>
+            <itextId>village-251</itextId>
+            <name>KPAMBUIBI</name>
+            <sub-district>WAHALA</sub-district>
+          </item>
+          <item>
+            <itextId>village-252</itextId>
+            <name>ADIKROM</name>
+            <sub-district>WODAGNI</sub-district>
+          </item>
+          <item>
+            <itextId>village-253</itextId>
+            <name>ZONGO AGLAMATO</name>
+            <sub-district>WOME</sub-district>
+          </item>
+          <item>
+            <itextId>village-254</itextId>
+            <name>FIOMAKÉTODZI</name>
+            <sub-district>WOMÉ</sub-district>
+          </item>
+          <item>
+            <itextId>village-255</itextId>
+            <name>DÉVÉLÉBÉ</name>
+            <sub-district>WONOUGBA SÉWA</sub-district>
+          </item>
+          <item>
+            <itextId>village-256</itextId>
+            <name>FOTOYÉYÉ</name>
+            <sub-district>YALLA</sub-district>
+          </item>
+          <item>
+            <itextId>village-257</itextId>
+            <name>FASOW</name>
+            <sub-district>YANDA</sub-district>
+          </item>
+          <item>
+            <itextId>village-258</itextId>
+            <name>DAFO (YIKPA)</name>
+            <sub-district>YIKPA</sub-district>
+          </item>
+          <item>
+            <itextId>village-259</itextId>
+            <name>AHATSE 1</name>
+            <sub-district>ZIONOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-260</itextId>
+            <name>GUÉGBAKUI</name>
+            <sub-district>ZIONOU</sub-district>
+          </item>
+          <item>
+            <itextId>village-261</itextId>
+            <name>ZOGBÉGAN</name>
+            <sub-district>ZOGBÉGAN</sub-district>
+          </item>
+        </root>
+      </instance>
       <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_RecorderID:jr:constraintMsg')" nodeset="/data/c_RecorderID" required="true()" type="int"/>
-      <bind nodeset="/data/c_gite" required="true()" type="string" db_add_col_1="."/>
-      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="/data/c_gite" db_add_col_2="."/>
-      <bind nodeset="/data/c_bassin_fluvial" required="true()" type="string" db_add_col_2="/data/c_district" db_add_col_3="."/>
-      <bind nodeset="/data/c_nom_riviere_fleuve" required="true()" type="string" db_add_col_3="/data/c_bassin_fluvial" db_add_col_4="."/>
-      <bind nodeset="/data/c_nom_riviere_fleuve_id" required="true()" type="string" db_add_col_4="/data/c_nom_riviere_fleuve" db_add_col_5="."/>
+      <bind nodeset="/data/c_region" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="/data/c_region" db_add_col_2="."/>
+      <bind nodeset="/data/c_subdistrict" required="true()" type="string" db_add_col_2="/data/c_district" db_add_col_3="."/>
+      <bind nodeset="/data/c_site" required="true()" type="string" db_add_col_3="/data/c_subdistrict" db_add_col_4="."/>
       <bind nodeset="/data/c_GPS" required="true()" type="geopoint"/>
       <bind nodeset="/data/c_date" required="true()" type="date"/>
       <bind nodeset="/data/c_ClusterNotes" type="string"/>
@@ -243,45 +3443,38 @@
       <label ref="jr:itext('/data/c_RecorderID:label')"/>
       <hint ref="jr:itext('/data/c_RecorderID:hint')"/>
     </input>
-    <select1 ref="/data/c_gite">
-      <label ref="jr:itext('/data/c_gite:label')"/>
+    <select1 ref="/data/c_region">
+      <label ref="jr:itext('/data/c_region:label')"/>
       <item>
-        <label ref="jr:itext('/data/c_gite/Doungue:label')"/>
-        <value>Doungue</value>
+        <label ref="jr:itext('/data/c_region/MARITIME:label')"/>
+        <value>MARITIME</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/c_gite/Tchanaga:label')"/>
-        <value>Tchanaga</value>
+        <label ref="jr:itext('/data/c_region/PLATEAUX EST:label')"/>
+        <value>PLATEAUX EST</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/c_gite/Tchountchounga:label')"/>
-        <value>Tchountchounga</value>
+        <label ref="jr:itext('/data/c_region/PLATEAUX OUEST:label')"/>
+        <value>PLATEAUX OUEST</value>
       </item>
     </select1>
     <select1 ref="/data/c_district">
       <label ref="jr:itext('/data/c_district:label')"/>
-      <itemset nodeset="instance('district')/root/item[ /data/c_gite  = gite]">
+      <itemset nodeset="instance('district')/root/item[ /data/c_region  = region]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <select1 ref="/data/c_bassin_fluvial">
-      <label ref="jr:itext('/data/c_bassin_fluvial:label')"/>
-      <itemset nodeset="instance('bassin_fluvial')/root/item[ /data/c_district  = district]">
+    <select1 ref="/data/c_subdistrict">
+      <label ref="jr:itext('/data/c_subdistrict:label')"/>
+      <itemset nodeset="instance('sub-district')/root/item[ /data/c_district  = district]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <select1 ref="/data/c_nom_riviere_fleuve">
-      <label ref="jr:itext('/data/c_nom_riviere_fleuve:label')"/>
-      <itemset nodeset="instance('nom_riviere_fleuve')/root/item[ /data/c_bassin_fluvial  = bassin_fluvial]">
-        <value ref="name"/>
-        <label ref="jr:itext(itextId)"/>
-      </itemset>
-    </select1>
-    <select1 ref="/data/c_nom_riviere_fleuve_id">
-      <label ref="jr:itext('/data/c_nom_riviere_fleuve_id:label')"/>
-      <itemset nodeset="instance('nom_riviere_fleuve_id')/root/item[ /data/c_nom_riviere_fleuve  = nom_riviere_fleuve]">
+    <select1 ref="/data/c_site">
+      <label ref="jr:itext('/data/c_site:label')"/>
+      <itemset nodeset="instance('village')/root/item[ /data/c_subdistrict  = sub-district]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>

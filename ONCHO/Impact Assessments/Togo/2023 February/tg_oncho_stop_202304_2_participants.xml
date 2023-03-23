@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -7,22 +7,22 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(October 2022) ONCHO stop TDM - 2. Formulaire Participants V2</h:title>
-    <model odk:xforms-version="1.0.0">
+    <h:title>(Février 2023) ONCHO stop TDM - 2. Formulaire Participants</h:title>
+    <model >
 
       <instance>
-        <data id="tg_oncho_stop_2_participants_202204">
+        <data id="tg_oncho_stop_202304_2_participants">
           <p_RecorderID/>
-          <p_gite/>
+          <p_region/>
           <p_district/>
-          <p_bassin_fluvial/>
-          <p_nom_riviere_fleuve/>
-          <p_nom_riviere_fleuve_id/>
+          <p_subdistrict/>
+          <p_site/>
           <p_Consent/>
           <p_live_to_village/>
           <p_code_id/>
           <p_Sex/>
           <p_AgeYrs/>
+          <p_5_ans_dans_village/>
           <p_contact_tuteur/>
           <p_prelevement/>
           <p_text_end_note/>
@@ -46,20 +46,17 @@
           <text id="/data/p_RecorderID:hint">
             <value>Code à deux chiffres qui vous a été assigné</value>
           </text>
-          <text id="/data/p_gite:label">
-            <value>Sélectionner un gite</value>
+          <text id="/data/p_region:label">
+            <value>Sélectionner un région</value>
           </text>
           <text id="/data/p_district:label">
-            <value>Sélectionner un District</value>
+            <value>Sélectionner un district</value>
           </text>
-          <text id="/data/p_bassin_fluvial:label">
-            <value>Sélectionner un bassin fluvial</value>
+          <text id="/data/p_subdistrict:label">
+            <value>Sélectionner l'USP</value>
           </text>
-          <text id="/data/p_nom_riviere_fleuve:label">
-            <value>Sélectionner un nom de la rivière/fleuve</value>
-          </text>
-          <text id="/data/p_nom_riviere_fleuve_id:label">
-            <value>Sélectionner l'identifiant du fleuve</value>
+          <text id="/data/p_site:label">
+            <value>Sélectionner un site</value>
           </text>
           <text id="/data/p_Consent:label">
             <value>Le répondant a-t-il donnée son consentement?</value>
@@ -82,9 +79,6 @@
           <text id="/data/p_live_to_village/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/p_code_id:jr:constraintMsg">
-            <value>Le format du QR code est incorrect. Ex s'un format correct : SA 00001 22</value>
-          </text>
           <text id="/data/p_code_id:label">
             <value>Scanner l'identification (Identifiant) du Participant</value>
           </text>
@@ -105,6 +99,15 @@
           </text>
           <text id="/data/p_AgeYrs:hint">
             <value>L'âge doit être entre 5 et 9 ans</value>
+          </text>
+          <text id="/data/p_5_ans_dans_village:label">
+            <value>L'enfant vit-il dans ce village depuis au moins 5 ans ?</value>
+          </text>
+          <text id="/data/p_5_ans_dans_village/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_5_ans_dans_village/Non:label">
+            <value>Non</value>
           </text>
           <text id="/data/p_contact_tuteur:jr:constraintMsg">
             <value>Le format du numéro est incrorrect</value>
@@ -129,17 +132,18 @@
           </text>
         </translation>
       </itext>
+
       <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/p_RecorderID:jr:constraintMsg')" nodeset="/data/p_RecorderID" required="true()" type="int"/>
-      <bind nodeset="/data/p_gite" type="string" db_get="col_1"/>
-      <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_gite"/>
-      <bind nodeset="/data/p_bassin_fluvial" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
-      <bind nodeset="/data/p_nom_riviere_fleuve" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_bassin_fluvial"/>
-      <bind nodeset="/data/p_nom_riviere_fleuve_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_nom_riviere_fleuve"/>
+      <bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
+      <bind nodeset="/data/p_subdistrict" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_subdistrict"/>
       <bind nodeset="/data/p_Consent" required="true()" type="string"/>
       <bind nodeset="/data/p_live_to_village" relevant=" /data/p_Consent  = 'Oui'" type="string"/>
-      <bind constraint="regex(., '^SA [0-9]{5} [0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_code_id:jr:constraintMsg')" nodeset="/data/p_code_id" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="barcode"/>
+      <bind nodeset="/data/p_code_id" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="barcode"/>
       <bind nodeset="/data/p_Sex" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="string"/>
       <bind constraint=". &gt;=5 and .&lt;=9" jr:constraintMsg="jr:itext('/data/p_AgeYrs:jr:constraintMsg')" nodeset="/data/p_AgeYrs" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/p_5_ans_dans_village" required="true()" type="string"/>
       <bind constraint="regex(., '^[0-9]{8}$')" jr:constraintMsg="jr:itext('/data/p_contact_tuteur:jr:constraintMsg')" nodeset="/data/p_contact_tuteur" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" type="string"/>
       <bind nodeset="/data/p_prelevement" relevant=" /data/p_Consent  = 'Oui' and  /data/p_live_to_village  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/p_text_end_note" readonly="true()" relevant=" /data/p_Consent  = 'Non' or  /data/p_live_to_village  = 'Non '" type="string"/>
@@ -154,20 +158,17 @@
       <label ref="jr:itext('/data/p_RecorderID:label')"/>
       <hint ref="jr:itext('/data/p_RecorderID:hint')"/>
     </input>
-    <input ref="/data/p_gite">
-      <label ref="jr:itext('/data/p_gite:label')"/>
+    <input ref="/data/p_region">
+      <label ref="jr:itext('/data/p_region:label')"/>
     </input>
     <input ref="/data/p_district">
       <label ref="jr:itext('/data/p_district:label')"/>
     </input>
-    <input ref="/data/p_bassin_fluvial">
-      <label ref="jr:itext('/data/p_bassin_fluvial:label')"/>
+    <input ref="/data/p_subdistrict">
+      <label ref="jr:itext('/data/p_subdistrict:label')"/>
     </input>
-    <input ref="/data/p_nom_riviere_fleuve">
-      <label ref="jr:itext('/data/p_nom_riviere_fleuve:label')"/>
-    </input>
-    <input ref="/data/p_nom_riviere_fleuve_id">
-      <label ref="jr:itext('/data/p_nom_riviere_fleuve_id:label')"/>
+    <input ref="/data/p_site">
+      <label ref="jr:itext('/data/p_site:label')"/>
     </input>
     <select1 ref="/data/p_Consent">
       <label ref="jr:itext('/data/p_Consent:label')"/>
@@ -210,6 +211,17 @@
       <label ref="jr:itext('/data/p_AgeYrs:label')"/>
       <hint ref="jr:itext('/data/p_AgeYrs:hint')"/>
     </input>
+    <select1 ref="/data/p_5_ans_dans_village">
+      <label ref="jr:itext('/data/p_5_ans_dans_village:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_5_ans_dans_village/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_5_ans_dans_village/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
     <input ref="/data/p_contact_tuteur">
       <label ref="jr:itext('/data/p_contact_tuteur:label')"/>
     </input>
