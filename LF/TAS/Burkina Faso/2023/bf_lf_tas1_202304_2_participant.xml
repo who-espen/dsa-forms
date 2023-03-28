@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Avril 2023) Burkina Faso TAS FL - 2. Formulaire Enrôlement V2.1</h:title>
+    <h:title>(Avril 2023) Burkina Faso TAS FL - 2. Formulaire Enrôlement V2.2</h:title>
     <model >
 
       <instance>
-        <data id="bf_lf_tas1_202304_2_participant_v2_1">
+        <data id="bf_lf_tas1_202304_2_participant_v2_2">
           <p_code_operateur/>
           <p_ue/>
           <p_ds/>
@@ -105,16 +105,28 @@
             <value>Veullez répéter le code manuel</value>
           </text>
           <text id="/data/p_age:jr:constraintMsg">
-            <value>6 ou 7 ans</value>
+            <value>L'âge doit être compris entre 5 et 10 ans</value>
           </text>
           <text id="/data/p_age:label">
             <value>Age de l'enfant</value>
+          </text>
+          <text id="/data/p_age/5:label">
+            <value>5 ans</value>
           </text>
           <text id="/data/p_age/6:label">
             <value>6 ans</value>
           </text>
           <text id="/data/p_age/7:label">
             <value>7 ans</value>
+          </text>
+          <text id="/data/p_age/8:label">
+            <value>8 ans</value>
+          </text>
+          <text id="/data/p_age/9:label">
+            <value>9 ans</value>
+          </text>
+          <text id="/data/p_age/10:label">
+            <value>10 ans</value>
           </text>
           <text id="/data/p_sexe:label">
             <value>Sexe de l'enfant</value>
@@ -152,7 +164,7 @@
       <bind nodeset="/data/p_barcodeID1" relevant=" /data/p_id_methode  = &quot;Scanner&quot;" required="true()" type="barcode"/>
       <bind constraint="regex(.,'^[A-Z]{2}[0-9]{7}$')" jr:constraintMsg="jr:itext('/data/p_barcodeID2:jr:constraintMsg')" nodeset="/data/p_barcodeID2" relevant=" /data/p_id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
       <bind constraint=". =  /data/p_barcodeID2 " jr:constraintMsg="jr:itext('/data/p_barcodeID2_bis:jr:constraintMsg')" nodeset="/data/p_barcodeID2_bis" relevant=" /data/p_id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
-      <bind constraint=". &gt;=6 and . &lt;=7" jr:constraintMsg="jr:itext('/data/p_age:jr:constraintMsg')" nodeset="/data/p_age" required="true()" type="string"/>
+      <bind constraint=". &gt;=5 and . &lt;=10" jr:constraintMsg="jr:itext('/data/p_age:jr:constraintMsg')" nodeset="/data/p_age" required="true()" type="string"/>
       <bind nodeset="/data/p_sexe" required="true()" type="string"/>
       <bind nodeset="/data/p_scolarise" required="true()" type="string"/>
       <bind nodeset="/data/p_commentaire" type="string"/>
@@ -233,12 +245,28 @@
     <select1 ref="/data/p_age">
       <label ref="jr:itext('/data/p_age:label')"/>
       <item>
+        <label ref="jr:itext('/data/p_age/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
         <label ref="jr:itext('/data/p_age/6:label')"/>
         <value>6</value>
       </item>
       <item>
         <label ref="jr:itext('/data/p_age/7:label')"/>
         <value>7</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_age/8:label')"/>
+        <value>8</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_age/9:label')"/>
+        <value>9</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_age/10:label')"/>
+        <value>10</value>
       </item>
     </select1>
     <select1 ref="/data/p_sexe">
