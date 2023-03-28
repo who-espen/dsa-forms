@@ -16,8 +16,10 @@
           <d_ue/>
           <d_ds/>
           <d_commune/>
+          <d_nom_CSPS/>
           <d_site/>
           <d_code_site/>
+          <d_participant_preleve/>
           <d_id_methode/>
           <d_barcodeID1/>
           <d_barcodeID2/>
@@ -75,11 +77,26 @@
           <text id="/data/d_commune:label">
             <value>Sélectionnez la commune</value>
           </text>
+          <text id="/data/d_nom_CSPS:label">
+            <value>Sélectionnez le nom du CSPS</value>
+          </text>
           <text id="/data/d_site:label">
             <value>Sélectionnez l'école</value>
           </text>
           <text id="/data/d_code_site:label">
             <value>Sélectionnez le code de l'école</value>
+          </text>
+          <text id="/data/d_participant_preleve:label">
+            <value>Le participant a-t-il été prélevé ?</value>
+          </text>
+          <text id="/data/d_participant_preleve/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/d_participant_preleve/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/d_participant_preleve/Refus:label">
+            <value>Refus</value>
           </text>
           <text id="/data/d_id_methode:label">
             <value>4. Type d'identification</value>
@@ -128,9 +145,6 @@
           </text>
           <text id="/data/d_resultat_fts1/3_Invalide:label">
             <value>3 Invalide</value>
-          </text>
-          <text id="/data/d_resultat_fts1/4_Refus:label">
-            <value>4 Refus</value>
           </text>
           <text id="/data/d_fts1_invalid_description:label">
             <value>7.b. Description d'invalidation de test 1</value>
@@ -185,9 +199,6 @@
           </text>
           <text id="/data/d_resultat_fts2/3_Invalide:label">
             <value>3 Invalide</value>
-          </text>
-          <text id="/data/d_resultat_fts2/4_Refus:label">
-            <value>4 Refus</value>
           </text>
           <text id="/data/d_fts2_invalid_description:label">
             <value>8.b. Description d'invalidation de test 2</value>
@@ -291,14 +302,20 @@
           <text id="resultat_list-2">
             <value>3 Invalide</value>
           </text>
-          <text id="resultat_list-3">
-            <value>4 Refus</value>
-          </text>
           <text id="yes_no-0">
             <value>Oui</value>
           </text>
           <text id="yes_no-1">
             <value>Non</value>
+          </text>
+          <text id="yes_no_r-0">
+            <value>Oui</value>
+          </text>
+          <text id="yes_no_r-1">
+            <value>Non</value>
+          </text>
+          <text id="yes_no_r-2">
+            <value>Refus</value>
           </text>
           <text id="nb_bandelette_list-0">
             <value>1</value>
@@ -385,283 +402,289 @@
             <value>PISSY</value>
           </text>
           <text id="csps_list-8">
-            <value>TANVI NAKAMTENGA</value>
+            <value>SINSINGUENE</value>
           </text>
           <text id="csps_list-9">
-            <value>BOUDTENGA</value>
+            <value>TANSABLOGO</value>
           </text>
           <text id="csps_list-10">
-            <value>CM SAABA</value>
+            <value>TANVI NAKAMTENGA</value>
           </text>
           <text id="csps_list-11">
-            <value>GAMPÉLA</value>
+            <value>BOUDTENGA</value>
           </text>
           <text id="csps_list-12">
-            <value>GONSE</value>
+            <value>CM SAABA</value>
           </text>
           <text id="csps_list-13">
-            <value>GONSÉ</value>
+            <value>GAMPÉLA</value>
           </text>
           <text id="csps_list-14">
-            <value>KOALA</value>
+            <value>GONSE</value>
           </text>
           <text id="csps_list-15">
-            <value>MANEGSOMBO</value>
+            <value>KOALA</value>
           </text>
           <text id="csps_list-16">
-            <value>NIONGWARBIN</value>
+            <value>MANEGSOMBO</value>
           </text>
           <text id="csps_list-17">
-            <value>TA 28</value>
+            <value>NIOKO 1</value>
           </text>
           <text id="csps_list-18">
-            <value>TANGHIN</value>
+            <value>NIONGWARBIN</value>
           </text>
           <text id="csps_list-19">
-            <value>TANLARGHIN</value>
+            <value>TA 28</value>
           </text>
           <text id="csps_list-20">
+            <value>TANGHIN</value>
+          </text>
+          <text id="csps_list-21">
+            <value>TANLARGHIN</value>
+          </text>
+          <text id="csps_list-22">
             <value>TANSOBINTENGA</value>
           </text>
           <text id="village_list-0">
-            <value>ABDOUL DRAME BOL OF</value>
-          </text>
-          <text id="village_list-1">
-            <value>BARK BIIGA</value>
-          </text>
-          <text id="village_list-2">
-            <value>BEOG-NEERE</value>
-          </text>
-          <text id="village_list-3">
-            <value>BOUSSOUMA</value>
-          </text>
-          <text id="village_list-4">
-            <value>GUIGUEMTENGA</value>
-          </text>
-          <text id="village_list-5">
-            <value>JEDIDIA</value>
-          </text>
-          <text id="village_list-6">
-            <value>KAKANGHIN</value>
-          </text>
-          <text id="village_list-7">
-            <value>KIEDPALOGHO KOUBA</value>
-          </text>
-          <text id="village_list-8">
-            <value>MIFTAHOU ELILM</value>
-          </text>
-          <text id="village_list-9">
-            <value>NABA ZAANA</value>
-          </text>
-          <text id="village_list-10">
-            <value>NAGBANGRE C</value>
-          </text>
-          <text id="village_list-11">
-            <value>NAPAGBTENG-GOUNGHIN B</value>
-          </text>
-          <text id="village_list-12">
-            <value>PEELE</value>
-          </text>
-          <text id="village_list-13">
-            <value>PIKIEKO 2</value>
-          </text>
-          <text id="village_list-14">
-            <value>POEDOGO</value>
-          </text>
-          <text id="village_list-15">
-            <value>SOIBIRINA</value>
-          </text>
-          <text id="village_list-16">
-            <value>TANVI-NAKAMTENGA B</value>
-          </text>
-          <text id="village_list-17">
-            <value>WAMTENGA</value>
-          </text>
-          <text id="village_list-18">
-            <value>WEDBILA</value>
-          </text>
-          <text id="village_list-19">
-            <value>AMITIE</value>
-          </text>
-          <text id="village_list-20">
-            <value>AVISO</value>
-          </text>
-          <text id="village_list-21">
-            <value>BADNOGO 1</value>
-          </text>
-          <text id="village_list-22">
             <value>BOUDTENGA</value>
           </text>
-          <text id="village_list-23">
+          <text id="village_list-1">
+            <value>NAGBANGRE C</value>
+          </text>
+          <text id="village_list-2">
+            <value>WEDBILA</value>
+          </text>
+          <text id="village_list-3">
+            <value>AMITIE</value>
+          </text>
+          <text id="village_list-4">
             <value>DAROUL KITABE</value>
           </text>
-          <text id="village_list-24">
-            <value>DAROUL TARBYA</value>
-          </text>
-          <text id="village_list-25">
+          <text id="village_list-5">
             <value>EDEN</value>
           </text>
-          <text id="village_list-26">
-            <value>GAMPELA B</value>
-          </text>
-          <text id="village_list-27">
-            <value>GONSE A</value>
-          </text>
-          <text id="village_list-28">
-            <value>GOOGHIN</value>
-          </text>
-          <text id="village_list-29">
+          <text id="village_list-6">
             <value>GUESS MOGHO</value>
           </text>
-          <text id="village_list-30">
-            <value>KOMKAGA</value>
-          </text>
-          <text id="village_list-31">
-            <value>KOUANDA</value>
-          </text>
-          <text id="village_list-32">
-            <value>SELOGHIN</value>
-          </text>
-          <text id="village_list-33">
-            <value>SONG-TAABA EVANGELIQUE</value>
-          </text>
-          <text id="village_list-34">
-            <value>TANGHIN A</value>
-          </text>
-          <text id="village_list-35">
-            <value>TANLARGIN B</value>
-          </text>
-          <text id="village_list-36">
+          <text id="village_list-7">
             <value>TINGUISSOM</value>
           </text>
-          <text id="village_list-37">
-            <value>WAPASSI</value>
-          </text>
-          <text id="village_list-38">
+          <text id="village_list-8">
             <value>WEND POUSSOUM TALGO</value>
           </text>
-          <text id="village_list-39">
+          <text id="village_list-9">
+            <value>BOUSSOUMA</value>
+          </text>
+          <text id="village_list-10">
+            <value>KAKANGHIN</value>
+          </text>
+          <text id="village_list-11">
+            <value>SOIBIRINA</value>
+          </text>
+          <text id="village_list-12">
+            <value>GAMPELA B</value>
+          </text>
+          <text id="village_list-13">
+            <value>BADNOGO 1</value>
+          </text>
+          <text id="village_list-14">
+            <value>GONSE A</value>
+          </text>
+          <text id="village_list-15">
+            <value>BARK BIIGA</value>
+          </text>
+          <text id="village_list-16">
+            <value>BEOG-NEERE</value>
+          </text>
+          <text id="village_list-17">
+            <value>GUIGUEMTENGA</value>
+          </text>
+          <text id="village_list-18">
+            <value>JEDIDIA</value>
+          </text>
+          <text id="village_list-19">
+            <value>KIEDPALOGHO KOUBA</value>
+          </text>
+          <text id="village_list-20">
+            <value>KOMKAGA</value>
+          </text>
+          <text id="village_list-21">
+            <value>KOUANDA</value>
+          </text>
+          <text id="village_list-22">
+            <value>NABA ZAANA</value>
+          </text>
+          <text id="village_list-23">
+            <value>POEDOGO</value>
+          </text>
+          <text id="village_list-24">
+            <value>NAPAGBTENG-GOUNGHIN B</value>
+          </text>
+          <text id="village_list-25">
+            <value>EDEN NIOKO 1</value>
+          </text>
+          <text id="village_list-26">
             <value>WENDINSO</value>
           </text>
+          <text id="village_list-27">
+            <value>PEELE</value>
+          </text>
+          <text id="village_list-28">
+            <value>PIKIEKO 2</value>
+          </text>
+          <text id="village_list-29">
+            <value>WAMTENGA</value>
+          </text>
+          <text id="village_list-30">
+            <value>TAOSINE DINE KATAPISSI</value>
+          </text>
+          <text id="village_list-31">
+            <value>SONG-TAABA EVANGELIQUE</value>
+          </text>
+          <text id="village_list-32">
+            <value>TANGHIN A</value>
+          </text>
+          <text id="village_list-33">
+            <value>DAROUL TARBYA</value>
+          </text>
+          <text id="village_list-34">
+            <value>GOOGHIN</value>
+          </text>
+          <text id="village_list-35">
+            <value>SELOGHIN</value>
+          </text>
+          <text id="village_list-36">
+            <value>TANLARGIN B</value>
+          </text>
+          <text id="village_list-37">
+            <value>MIFTAHOU ELILM</value>
+          </text>
+          <text id="village_list-38">
+            <value>WAPASSI</value>
+          </text>
+          <text id="village_list-39">
+            <value>TANVI-NAKAMTENGA B</value>
+          </text>
           <text id="code_list-0">
-            <value>101</value>
+            <value>1250</value>
           </text>
           <text id="code_list-1">
-            <value>102</value>
+            <value>1260</value>
           </text>
           <text id="code_list-2">
-            <value>103</value>
+            <value>1279</value>
           </text>
           <text id="code_list-3">
-            <value>104</value>
+            <value>4018</value>
           </text>
           <text id="code_list-4">
-            <value>105</value>
+            <value>1259</value>
           </text>
           <text id="code_list-5">
-            <value>106</value>
+            <value>8065</value>
           </text>
           <text id="code_list-6">
-            <value>107</value>
+            <value>1221479</value>
           </text>
           <text id="code_list-7">
-            <value>108</value>
+            <value>19977</value>
           </text>
           <text id="code_list-8">
-            <value>109</value>
+            <value>15251</value>
           </text>
           <text id="code_list-9">
-            <value>110</value>
+            <value>1251</value>
           </text>
           <text id="code_list-10">
-            <value>111</value>
+            <value>17464</value>
           </text>
           <text id="code_list-11">
-            <value>112</value>
+            <value>19423</value>
           </text>
           <text id="code_list-12">
-            <value>113</value>
+            <value>1327766</value>
           </text>
           <text id="code_list-13">
-            <value>114</value>
+            <value>1322374</value>
           </text>
           <text id="code_list-14">
-            <value>115</value>
+            <value>4040</value>
           </text>
           <text id="code_list-15">
-            <value>116</value>
+            <value>1322278</value>
           </text>
           <text id="code_list-16">
-            <value>117</value>
+            <value>1322352</value>
           </text>
           <text id="code_list-17">
-            <value>118</value>
+            <value>14226</value>
           </text>
           <text id="code_list-18">
-            <value>119</value>
+            <value>1247</value>
           </text>
           <text id="code_list-19">
-            <value>120</value>
+            <value>1325094</value>
           </text>
           <text id="code_list-20">
-            <value>121</value>
+            <value>18861</value>
           </text>
           <text id="code_list-21">
-            <value>122</value>
+            <value>15278</value>
           </text>
           <text id="code_list-22">
-            <value>123</value>
+            <value>1326896</value>
           </text>
           <text id="code_list-23">
-            <value>124</value>
+            <value>1326946</value>
           </text>
           <text id="code_list-24">
-            <value>125</value>
+            <value>1326995</value>
           </text>
           <text id="code_list-25">
-            <value>126</value>
+            <value>1323946</value>
           </text>
           <text id="code_list-26">
-            <value>127</value>
+            <value>15276</value>
           </text>
           <text id="code_list-27">
-            <value>128</value>
+            <value>1327885</value>
           </text>
           <text id="code_list-28">
-            <value>129</value>
+            <value>1327903</value>
           </text>
           <text id="code_list-29">
-            <value>130</value>
+            <value>1327920</value>
           </text>
           <text id="code_list-30">
-            <value>131</value>
+            <value>8084</value>
           </text>
           <text id="code_list-31">
-            <value>132</value>
+            <value>1329412</value>
           </text>
           <text id="code_list-32">
-            <value>133</value>
+            <value>1329309</value>
           </text>
           <text id="code_list-33">
-            <value>134</value>
+            <value>1325160</value>
           </text>
           <text id="code_list-34">
-            <value>135</value>
+            <value>9692</value>
           </text>
           <text id="code_list-35">
-            <value>136</value>
+            <value>21012</value>
           </text>
           <text id="code_list-36">
-            <value>137</value>
+            <value>1323967</value>
           </text>
           <text id="code_list-37">
-            <value>138</value>
+            <value>1325159</value>
           </text>
           <text id="code_list-38">
-            <value>139</value>
+            <value>1327772</value>
           </text>
           <text id="code_list-39">
-            <value>140</value>
+            <value>1323974</value>
           </text>
         </translation>
       </itext>
@@ -712,21 +735,33 @@
             <itextId>resultat_list-2</itextId>
             <name>3_Invalide</name>
           </item>
-          <item>
-            <itextId>resultat_list-3</itextId>
-            <name>4_Refus</name>
-          </item>
         </root>
       </instance>
       <instance id="yes_no">
         <root>
           <item>
             <itextId>yes_no-0</itextId>
-            <name>Yes</name>
+            <name>Oui</name>
           </item>
           <item>
             <itextId>yes_no-1</itextId>
-            <name>No</name>
+            <name>Non</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no_r">
+        <root>
+          <item>
+            <itextId>yes_no_r-0</itextId>
+            <name>Oui</name>
+          </item>
+          <item>
+            <itextId>yes_no_r-1</itextId>
+            <name>Non</name>
+          </item>
+          <item>
+            <itextId>yes_no_r-2</itextId>
+            <name>Refus</name>
           </item>
         </root>
       </instance>
@@ -886,65 +921,75 @@
           <item>
             <itextId>csps_list-8</itextId>
             <commune_list>KOUBRI</commune_list>
-            <name>TANVI NAKAMTENGA</name>
+            <name>SINSINGUENE</name>
           </item>
           <item>
             <itextId>csps_list-9</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>BOUDTENGA</name>
+            <commune_list>KOUBRI</commune_list>
+            <name>TANSABLOGO</name>
           </item>
           <item>
             <itextId>csps_list-10</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>CM SAABA</name>
+            <commune_list>KOUBRI</commune_list>
+            <name>TANVI NAKAMTENGA</name>
           </item>
           <item>
             <itextId>csps_list-11</itextId>
             <commune_list>SAABA</commune_list>
-            <name>GAMPÉLA</name>
+            <name>BOUDTENGA</name>
           </item>
           <item>
             <itextId>csps_list-12</itextId>
             <commune_list>SAABA</commune_list>
-            <name>GONSE</name>
+            <name>CM SAABA</name>
           </item>
           <item>
             <itextId>csps_list-13</itextId>
             <commune_list>SAABA</commune_list>
-            <name>GONSÉ</name>
+            <name>GAMPÉLA</name>
           </item>
           <item>
             <itextId>csps_list-14</itextId>
             <commune_list>SAABA</commune_list>
-            <name>KOALA</name>
+            <name>GONSE</name>
           </item>
           <item>
             <itextId>csps_list-15</itextId>
             <commune_list>SAABA</commune_list>
-            <name>MANEGSOMBO</name>
+            <name>KOALA</name>
           </item>
           <item>
             <itextId>csps_list-16</itextId>
             <commune_list>SAABA</commune_list>
-            <name>NIONGWARBIN</name>
+            <name>MANEGSOMBO</name>
           </item>
           <item>
             <itextId>csps_list-17</itextId>
             <commune_list>SAABA</commune_list>
-            <name>TA 28</name>
+            <name>NIOKO 1</name>
           </item>
           <item>
             <itextId>csps_list-18</itextId>
             <commune_list>SAABA</commune_list>
-            <name>TANGHIN</name>
+            <name>NIONGWARBIN</name>
           </item>
           <item>
             <itextId>csps_list-19</itextId>
             <commune_list>SAABA</commune_list>
-            <name>TANLARGHIN</name>
+            <name>TA 28</name>
           </item>
           <item>
             <itextId>csps_list-20</itextId>
+            <commune_list>SAABA</commune_list>
+            <name>TANGHIN</name>
+          </item>
+          <item>
+            <itextId>csps_list-21</itextId>
+            <commune_list>SAABA</commune_list>
+            <name>TANLARGHIN</name>
+          </item>
+          <item>
+            <itextId>csps_list-22</itextId>
             <commune_list>SAABA</commune_list>
             <name>TANSOBINTENGA</name>
           </item>
@@ -954,203 +999,203 @@
         <root>
           <item>
             <itextId>village_list-0</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>ABDOUL DRAME BOL OF</name>
-          </item>
-          <item>
-            <itextId>village_list-1</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>BARK BIIGA</name>
-          </item>
-          <item>
-            <itextId>village_list-2</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>BEOG-NEERE</name>
-          </item>
-          <item>
-            <itextId>village_list-3</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>BOUSSOUMA</name>
-          </item>
-          <item>
-            <itextId>village_list-4</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>GUIGUEMTENGA</name>
-          </item>
-          <item>
-            <itextId>village_list-5</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>JEDIDIA</name>
-          </item>
-          <item>
-            <itextId>village_list-6</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>KAKANGHIN</name>
-          </item>
-          <item>
-            <itextId>village_list-7</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>KIEDPALOGHO KOUBA</name>
-          </item>
-          <item>
-            <itextId>village_list-8</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>MIFTAHOU ELILM</name>
-          </item>
-          <item>
-            <itextId>village_list-9</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>NABA ZAANA</name>
-          </item>
-          <item>
-            <itextId>village_list-10</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>NAGBANGRE C</name>
-          </item>
-          <item>
-            <itextId>village_list-11</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>NAPAGBTENG-GOUNGHIN B</name>
-          </item>
-          <item>
-            <itextId>village_list-12</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>PEELE</name>
-          </item>
-          <item>
-            <itextId>village_list-13</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>PIKIEKO 2</name>
-          </item>
-          <item>
-            <itextId>village_list-14</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>POEDOGO</name>
-          </item>
-          <item>
-            <itextId>village_list-15</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>SOIBIRINA</name>
-          </item>
-          <item>
-            <itextId>village_list-16</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>TANVI-NAKAMTENGA B</name>
-          </item>
-          <item>
-            <itextId>village_list-17</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>WAMTENGA</name>
-          </item>
-          <item>
-            <itextId>village_list-18</itextId>
-            <commune_list>KOUBRI</commune_list>
-            <name>WEDBILA</name>
-          </item>
-          <item>
-            <itextId>village_list-19</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>AMITIE</name>
-          </item>
-          <item>
-            <itextId>village_list-20</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>AVISO</name>
-          </item>
-          <item>
-            <itextId>village_list-21</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>BADNOGO 1</name>
-          </item>
-          <item>
-            <itextId>village_list-22</itextId>
-            <commune_list>SAABA</commune_list>
+            <csps_list>BOUDTENGA</csps_list>
             <name>BOUDTENGA</name>
           </item>
           <item>
-            <itextId>village_list-23</itextId>
-            <commune_list>SAABA</commune_list>
+            <itextId>village_list-1</itextId>
+            <csps_list>CM KOUBRI</csps_list>
+            <name>NAGBANGRE C</name>
+          </item>
+          <item>
+            <itextId>village_list-2</itextId>
+            <csps_list>CM KOUBRI</csps_list>
+            <name>WEDBILA</name>
+          </item>
+          <item>
+            <itextId>village_list-3</itextId>
+            <csps_list>CM SAABA</csps_list>
+            <name>AMITIE</name>
+          </item>
+          <item>
+            <itextId>village_list-4</itextId>
+            <csps_list>CM SAABA</csps_list>
             <name>DAROUL KITABE</name>
           </item>
           <item>
-            <itextId>village_list-24</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>DAROUL TARBYA</name>
-          </item>
-          <item>
-            <itextId>village_list-25</itextId>
-            <commune_list>SAABA</commune_list>
+            <itextId>village_list-5</itextId>
+            <csps_list>CM SAABA</csps_list>
             <name>EDEN</name>
           </item>
           <item>
-            <itextId>village_list-26</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>GAMPELA B</name>
-          </item>
-          <item>
-            <itextId>village_list-27</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>GONSE A</name>
-          </item>
-          <item>
-            <itextId>village_list-28</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>GOOGHIN</name>
-          </item>
-          <item>
-            <itextId>village_list-29</itextId>
-            <commune_list>SAABA</commune_list>
+            <itextId>village_list-6</itextId>
+            <csps_list>CM SAABA</csps_list>
             <name>GUESS MOGHO</name>
           </item>
           <item>
-            <itextId>village_list-30</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>KOMKAGA</name>
-          </item>
-          <item>
-            <itextId>village_list-31</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>KOUANDA</name>
-          </item>
-          <item>
-            <itextId>village_list-32</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>SELOGHIN</name>
-          </item>
-          <item>
-            <itextId>village_list-33</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>SONG-TAABA EVANGELIQUE</name>
-          </item>
-          <item>
-            <itextId>village_list-34</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>TANGHIN A</name>
-          </item>
-          <item>
-            <itextId>village_list-35</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>TANLARGIN B</name>
-          </item>
-          <item>
-            <itextId>village_list-36</itextId>
-            <commune_list>SAABA</commune_list>
+            <itextId>village_list-7</itextId>
+            <csps_list>CM SAABA</csps_list>
             <name>TINGUISSOM</name>
           </item>
           <item>
-            <itextId>village_list-37</itextId>
-            <commune_list>SAABA</commune_list>
-            <name>WAPASSI</name>
-          </item>
-          <item>
-            <itextId>village_list-38</itextId>
-            <commune_list>SAABA</commune_list>
+            <itextId>village_list-8</itextId>
+            <csps_list>CM SAABA</csps_list>
             <name>WEND POUSSOUM TALGO</name>
           </item>
           <item>
-            <itextId>village_list-39</itextId>
-            <commune_list>SAABA</commune_list>
+            <itextId>village_list-9</itextId>
+            <csps_list>DIDRI</csps_list>
+            <name>BOUSSOUMA</name>
+          </item>
+          <item>
+            <itextId>village_list-10</itextId>
+            <csps_list>DIDRI</csps_list>
+            <name>KAKANGHIN</name>
+          </item>
+          <item>
+            <itextId>village_list-11</itextId>
+            <csps_list>DIDRI</csps_list>
+            <name>SOIBIRINA</name>
+          </item>
+          <item>
+            <itextId>village_list-12</itextId>
+            <csps_list>GAMPÉLA</csps_list>
+            <name>GAMPELA B</name>
+          </item>
+          <item>
+            <itextId>village_list-13</itextId>
+            <csps_list>GONSE</csps_list>
+            <name>BADNOGO 1</name>
+          </item>
+          <item>
+            <itextId>village_list-14</itextId>
+            <csps_list>GONSE</csps_list>
+            <name>GONSE A</name>
+          </item>
+          <item>
+            <itextId>village_list-15</itextId>
+            <csps_list>GUIGUEMTENGA</csps_list>
+            <name>BARK BIIGA</name>
+          </item>
+          <item>
+            <itextId>village_list-16</itextId>
+            <csps_list>GUIGUEMTENGA</csps_list>
+            <name>BEOG-NEERE</name>
+          </item>
+          <item>
+            <itextId>village_list-17</itextId>
+            <csps_list>GUIGUEMTENGA</csps_list>
+            <name>GUIGUEMTENGA</name>
+          </item>
+          <item>
+            <itextId>village_list-18</itextId>
+            <csps_list>GUIGUEMTENGA</csps_list>
+            <name>JEDIDIA</name>
+          </item>
+          <item>
+            <itextId>village_list-19</itextId>
+            <csps_list>GUIGUEMTENGA</csps_list>
+            <name>KIEDPALOGHO KOUBA</name>
+          </item>
+          <item>
+            <itextId>village_list-20</itextId>
+            <csps_list>KOALA</csps_list>
+            <name>KOMKAGA</name>
+          </item>
+          <item>
+            <itextId>village_list-21</itextId>
+            <csps_list>MANEGSOMBO</csps_list>
+            <name>KOUANDA</name>
+          </item>
+          <item>
+            <itextId>village_list-22</itextId>
+            <csps_list>MONASTÈRE</csps_list>
+            <name>NABA ZAANA</name>
+          </item>
+          <item>
+            <itextId>village_list-23</itextId>
+            <csps_list>MONASTÈRE</csps_list>
+            <name>POEDOGO</name>
+          </item>
+          <item>
+            <itextId>village_list-24</itextId>
+            <csps_list>NAPAGTENGA G</csps_list>
+            <name>NAPAGBTENG-GOUNGHIN B</name>
+          </item>
+          <item>
+            <itextId>village_list-25</itextId>
+            <csps_list>NIOKO 1</csps_list>
+            <name>EDEN NIOKO 1</name>
+          </item>
+          <item>
+            <itextId>village_list-26</itextId>
+            <csps_list>NIONGWARBIN</csps_list>
             <name>WENDINSO</name>
+          </item>
+          <item>
+            <itextId>village_list-27</itextId>
+            <csps_list>PÉLÉ</csps_list>
+            <name>PEELE</name>
+          </item>
+          <item>
+            <itextId>village_list-28</itextId>
+            <csps_list>PIKIÉKO</csps_list>
+            <name>PIKIEKO 2</name>
+          </item>
+          <item>
+            <itextId>village_list-29</itextId>
+            <csps_list>PISSY</csps_list>
+            <name>WAMTENGA</name>
+          </item>
+          <item>
+            <itextId>village_list-30</itextId>
+            <csps_list>SINSINGUENE</csps_list>
+            <name>TAOSINE DINE KATAPISSI</name>
+          </item>
+          <item>
+            <itextId>village_list-31</itextId>
+            <csps_list>TA 28</csps_list>
+            <name>SONG-TAABA EVANGELIQUE</name>
+          </item>
+          <item>
+            <itextId>village_list-32</itextId>
+            <csps_list>TANGHIN</csps_list>
+            <name>TANGHIN A</name>
+          </item>
+          <item>
+            <itextId>village_list-33</itextId>
+            <csps_list>TANLARGHIN</csps_list>
+            <name>DAROUL TARBYA</name>
+          </item>
+          <item>
+            <itextId>village_list-34</itextId>
+            <csps_list>TANLARGHIN</csps_list>
+            <name>GOOGHIN</name>
+          </item>
+          <item>
+            <itextId>village_list-35</itextId>
+            <csps_list>TANLARGHIN</csps_list>
+            <name>SELOGHIN</name>
+          </item>
+          <item>
+            <itextId>village_list-36</itextId>
+            <csps_list>TANLARGHIN</csps_list>
+            <name>TANLARGIN B</name>
+          </item>
+          <item>
+            <itextId>village_list-37</itextId>
+            <csps_list>TANSABLOGO</csps_list>
+            <name>MIFTAHOU ELILM</name>
+          </item>
+          <item>
+            <itextId>village_list-38</itextId>
+            <csps_list>TANSOBINTENGA</csps_list>
+            <name>WAPASSI</name>
+          </item>
+          <item>
+            <itextId>village_list-39</itextId>
+            <csps_list>TANVI NAKAMTENGA</csps_list>
+            <name>TANVI-NAKAMTENGA B</name>
           </item>
         </root>
       </instance>
@@ -1158,203 +1203,203 @@
         <root>
           <item>
             <itextId>code_list-0</itextId>
-            <name>101</name>
-            <village_list>ABDOUL DRAME BOL OF</village_list>
-          </item>
-          <item>
-            <itextId>code_list-1</itextId>
-            <name>102</name>
-            <village_list>BARK BIIGA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-2</itextId>
-            <name>103</name>
-            <village_list>BEOG-NEERE</village_list>
-          </item>
-          <item>
-            <itextId>code_list-3</itextId>
-            <name>104</name>
-            <village_list>BOUSSOUMA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-4</itextId>
-            <name>105</name>
-            <village_list>GUIGUEMTENGA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-5</itextId>
-            <name>106</name>
-            <village_list>JEDIDIA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-6</itextId>
-            <name>107</name>
-            <village_list>KAKANGHIN</village_list>
-          </item>
-          <item>
-            <itextId>code_list-7</itextId>
-            <name>108</name>
-            <village_list>KIEDPALOGHO KOUBA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-8</itextId>
-            <name>109</name>
-            <village_list>MIFTAHOU ELILM</village_list>
-          </item>
-          <item>
-            <itextId>code_list-9</itextId>
-            <name>110</name>
-            <village_list>NABA ZAANA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-10</itextId>
-            <name>111</name>
-            <village_list>NAGBANGRE C</village_list>
-          </item>
-          <item>
-            <itextId>code_list-11</itextId>
-            <name>112</name>
-            <village_list>NAPAGBTENG-GOUNGHIN B</village_list>
-          </item>
-          <item>
-            <itextId>code_list-12</itextId>
-            <name>113</name>
-            <village_list>PEELE</village_list>
-          </item>
-          <item>
-            <itextId>code_list-13</itextId>
-            <name>114</name>
-            <village_list>PIKIEKO 2</village_list>
-          </item>
-          <item>
-            <itextId>code_list-14</itextId>
-            <name>115</name>
-            <village_list>POEDOGO</village_list>
-          </item>
-          <item>
-            <itextId>code_list-15</itextId>
-            <name>116</name>
-            <village_list>SOIBIRINA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-16</itextId>
-            <name>117</name>
-            <village_list>TANVI-NAKAMTENGA B</village_list>
-          </item>
-          <item>
-            <itextId>code_list-17</itextId>
-            <name>118</name>
-            <village_list>WAMTENGA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-18</itextId>
-            <name>119</name>
-            <village_list>WEDBILA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-19</itextId>
-            <name>120</name>
-            <village_list>AMITIE</village_list>
-          </item>
-          <item>
-            <itextId>code_list-20</itextId>
-            <name>121</name>
-            <village_list>AVISO</village_list>
-          </item>
-          <item>
-            <itextId>code_list-21</itextId>
-            <name>122</name>
-            <village_list>BADNOGO 1</village_list>
-          </item>
-          <item>
-            <itextId>code_list-22</itextId>
-            <name>123</name>
-            <village_list>BOUDTENGA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-23</itextId>
-            <name>124</name>
-            <village_list>DAROUL KITABE</village_list>
-          </item>
-          <item>
-            <itextId>code_list-24</itextId>
-            <name>125</name>
-            <village_list>DAROUL TARBYA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-25</itextId>
-            <name>126</name>
-            <village_list>EDEN</village_list>
-          </item>
-          <item>
-            <itextId>code_list-26</itextId>
-            <name>127</name>
-            <village_list>GAMPELA B</village_list>
-          </item>
-          <item>
-            <itextId>code_list-27</itextId>
-            <name>128</name>
+            <name>1250</name>
             <village_list>GONSE A</village_list>
           </item>
           <item>
-            <itextId>code_list-28</itextId>
-            <name>129</name>
-            <village_list>GOOGHIN</village_list>
-          </item>
-          <item>
-            <itextId>code_list-29</itextId>
-            <name>130</name>
-            <village_list>GUESS MOGHO</village_list>
-          </item>
-          <item>
-            <itextId>code_list-30</itextId>
-            <name>131</name>
-            <village_list>KOMKAGA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-31</itextId>
-            <name>132</name>
-            <village_list>KOUANDA</village_list>
-          </item>
-          <item>
-            <itextId>code_list-32</itextId>
-            <name>133</name>
-            <village_list>SELOGHIN</village_list>
-          </item>
-          <item>
-            <itextId>code_list-33</itextId>
-            <name>134</name>
-            <village_list>SONG-TAABA EVANGELIQUE</village_list>
-          </item>
-          <item>
-            <itextId>code_list-34</itextId>
-            <name>135</name>
+            <itextId>code_list-1</itextId>
+            <name>1260</name>
             <village_list>TANGHIN A</village_list>
           </item>
           <item>
-            <itextId>code_list-35</itextId>
-            <name>136</name>
-            <village_list>TANLARGIN B</village_list>
+            <itextId>code_list-2</itextId>
+            <name>1279</name>
+            <village_list>PEELE</village_list>
           </item>
           <item>
-            <itextId>code_list-36</itextId>
-            <name>137</name>
-            <village_list>TINGUISSOM</village_list>
+            <itextId>code_list-3</itextId>
+            <name>4018</name>
+            <village_list>BADNOGO 1</village_list>
           </item>
           <item>
-            <itextId>code_list-37</itextId>
-            <name>138</name>
-            <village_list>WAPASSI</village_list>
+            <itextId>code_list-4</itextId>
+            <name>1259</name>
+            <village_list>SELOGHIN</village_list>
           </item>
           <item>
-            <itextId>code_list-38</itextId>
-            <name>139</name>
+            <itextId>code_list-5</itextId>
+            <name>8065</name>
+            <village_list>KOUANDA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-6</itextId>
+            <name>1221479</name>
+            <village_list>PIKIEKO 2</village_list>
+          </item>
+          <item>
+            <itextId>code_list-7</itextId>
+            <name>19977</name>
+            <village_list>TANVI-NAKAMTENGA B</village_list>
+          </item>
+          <item>
+            <itextId>code_list-8</itextId>
+            <name>15251</name>
+            <village_list>WENDINSO</village_list>
+          </item>
+          <item>
+            <itextId>code_list-9</itextId>
+            <name>1251</name>
+            <village_list>KOMKAGA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-10</itextId>
+            <name>17464</name>
+            <village_list>DAROUL KITABE</village_list>
+          </item>
+          <item>
+            <itextId>code_list-11</itextId>
+            <name>19423</name>
+            <village_list>WEDBILA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-12</itextId>
+            <name>1327766</name>
+            <village_list>GAMPELA B</village_list>
+          </item>
+          <item>
+            <itextId>code_list-13</itextId>
+            <name>1322374</name>
+            <village_list>POEDOGO</village_list>
+          </item>
+          <item>
+            <itextId>code_list-14</itextId>
+            <name>4040</name>
+            <village_list>KIEDPALOGHO KOUBA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-15</itextId>
+            <name>1322278</name>
             <village_list>WEND POUSSOUM TALGO</village_list>
           </item>
           <item>
+            <itextId>code_list-16</itextId>
+            <name>1322352</name>
+            <village_list>BARK BIIGA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-17</itextId>
+            <name>14226</name>
+            <village_list>GUIGUEMTENGA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-18</itextId>
+            <name>1247</name>
+            <village_list>BOUDTENGA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-19</itextId>
+            <name>1325094</name>
+            <village_list>EDEN</village_list>
+          </item>
+          <item>
+            <itextId>code_list-20</itextId>
+            <name>18861</name>
+            <village_list>BOUSSOUMA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-21</itextId>
+            <name>15278</name>
+            <village_list>WAMTENGA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-22</itextId>
+            <name>1326896</name>
+            <village_list>AMITIE</village_list>
+          </item>
+          <item>
+            <itextId>code_list-23</itextId>
+            <name>1326946</name>
+            <village_list>DAROUL TARBYA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-24</itextId>
+            <name>1326995</name>
+            <village_list>JEDIDIA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-25</itextId>
+            <name>1323946</name>
+            <village_list>NAGBANGRE C</village_list>
+          </item>
+          <item>
+            <itextId>code_list-26</itextId>
+            <name>15276</name>
+            <village_list>NABA ZAANA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-27</itextId>
+            <name>1327885</name>
+            <village_list>GUESS MOGHO</village_list>
+          </item>
+          <item>
+            <itextId>code_list-28</itextId>
+            <name>1327903</name>
+            <village_list>TANLARGIN B</village_list>
+          </item>
+          <item>
+            <itextId>code_list-29</itextId>
+            <name>1327920</name>
+            <village_list>TINGUISSOM</village_list>
+          </item>
+          <item>
+            <itextId>code_list-30</itextId>
+            <name>8084</name>
+            <village_list>KAKANGHIN</village_list>
+          </item>
+          <item>
+            <itextId>code_list-31</itextId>
+            <name>1329412</name>
+            <village_list>GOOGHIN</village_list>
+          </item>
+          <item>
+            <itextId>code_list-32</itextId>
+            <name>1329309</name>
+            <village_list>BEOG-NEERE</village_list>
+          </item>
+          <item>
+            <itextId>code_list-33</itextId>
+            <name>1325160</name>
+            <village_list>NAPAGBTENG-GOUNGHIN B</village_list>
+          </item>
+          <item>
+            <itextId>code_list-34</itextId>
+            <name>9692</name>
+            <village_list>WAPASSI</village_list>
+          </item>
+          <item>
+            <itextId>code_list-35</itextId>
+            <name>21012</name>
+            <village_list>SOIBIRINA</village_list>
+          </item>
+          <item>
+            <itextId>code_list-36</itextId>
+            <name>1323967</name>
+            <village_list>EDEN NIOKO 1</village_list>
+          </item>
+          <item>
+            <itextId>code_list-37</itextId>
+            <name>1325159</name>
+            <village_list>MIFTAHOU ELILM</village_list>
+          </item>
+          <item>
+            <itextId>code_list-38</itextId>
+            <name>1327772</name>
+            <village_list>TAOSINE DINE KATAPISSI</village_list>
+          </item>
+          <item>
             <itextId>code_list-39</itextId>
-            <name>140</name>
-            <village_list>WENDINSO</village_list>
+            <name>1323974</name>
+            <village_list>SONG-TAABA EVANGELIQUE</village_list>
           </item>
         </root>
       </instance>
@@ -1362,27 +1407,29 @@
       <bind nodeset="/data/d_ue" required="true()" type="string"/>
       <bind nodeset="/data/d_ds" required="true()" type="string"/>
       <bind nodeset="/data/d_commune" required="true()" type="string"/>
+      <bind nodeset="/data/d_nom_CSPS" required="true()" type="string"/>
       <bind nodeset="/data/d_site" required="true()" type="string"/>
       <bind nodeset="/data/d_code_site" required="true()" type="string"/>
-      <bind nodeset="/data/d_id_methode" required="true()" type="string"/>
-      <bind nodeset="/data/d_barcodeID1" relevant=" /data/d_id_methode  = 'Scanner'" required="true()" type="barcode"/>
-      <bind constraint="regex(.,'^[A-Z]{2}[0-9]{7}$')" jr:constraintMsg="jr:itext('/data/d_barcodeID2:jr:constraintMsg')" nodeset="/data/d_barcodeID2" relevant=" /data/d_id_methode  = 'Manuel'" required="true()" type="string"/>
-      <bind constraint=". =  /data/d_barcodeID2 " nodeset="/data/d_barcodeID2_bis" relevant=" /data/d_id_methode  = 'Manuel'" required="true()" type="string"/>
-      <bind constraint=".&gt;=1 and .&lt;=2" nodeset="/data/d_nb_bandelette" required="true()" type="string"/>
-      <bind nodeset="/data/d_lot_fts1" required="true()" type="string"/>
-      <bind nodeset="/data/d_resultat_fts1" required="true()" type="string"/>
-      <bind constraint="true()" nodeset="/data/d_fts1_invalid_description" relevant=" /data/d_resultat_fts1  = '3_Invalide'" required="true()" type="string"/>
-      <bind constraint="true()" nodeset="/data/d_autre_expliquer_fts1" relevant=" /data/d_fts1_invalid_description ='G_Autre_expliquer'" required="true()" type="string"/>
-      <bind nodeset="/data/d_photo1" orx:max-pixels="2000" relevant=" /data/d_resultat_fts1  = '1_Positif' or  /data/d_resultat_fts1  = '3_Invalide'" required="true()" type="binary"/>
-      <bind nodeset="/data/d_lot_fts2" relevant=" /data/d_nb_bandelette  &gt; 1" required="true()" type="string"/>
-      <bind nodeset="/data/d_resultat_fts2" relevant=" /data/d_nb_bandelette  &gt; 1" required="true()" type="string"/>
-      <bind constraint="true()" nodeset="/data/d_fts2_invalid_description" relevant=" /data/d_resultat_fts2  = '3_Invalide'" required="true()" type="string"/>
-      <bind constraint="true()" nodeset="/data/d_autre_expliquer_fts2" relevant=" /data/d_fts2_invalid_description ='G_Autre_expliquer'" required="true()" type="string"/>
-      <bind nodeset="/data/d_photo2" orx:max-pixels="2000" relevant=" /data/d_resultat_fts2  = '1_Positif' or  /data/d_resultat_fts2  = '3_Invalide'" required="true()" type="binary"/>
-      <bind constraint=". &gt;= 0 and . &lt;= 7" jr:constraintMsg="jr:itext('/data/d_duree_sejour:jr:constraintMsg')" nodeset="/data/d_duree_sejour" relevant="( /data/d_resultat_fts1  = '1_Positif' or  /data/d_resultat_fts2  = '1_Positif')" type="int"/>
-      <bind constraint=". &gt;= 6 and .&lt; 12" jr:constraintMsg="jr:itext('/data/d_duree_sejour_mois:jr:constraintMsg')" nodeset="/data/d_duree_sejour_mois" relevant="( /data/d_duree_sejour  = 0) and ( /data/d_resultat_fts1  = '1_Positif' or  /data/d_resultat_fts2  = '1_Positif')" type="int"/>
-      <bind nodeset="/data/d_defis_operationnels" required="true()" type="string"/>
-      <bind nodeset="/data/d_defis_operationnels_autre" relevant=" /data/d_defis_operationnels ='S_Autre (expliquer)'" required="true()" type="string"/>
+      <bind nodeset="/data/d_participant_preleve" required="true()" type="string"/>
+      <bind nodeset="/data/d_id_methode" relevant=" /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/d_barcodeID1" relevant=" /data/d_id_methode  = 'Scanner' and  /data/d_participant_preleve  = 'Oui'" required="true()" type="barcode"/>
+      <bind constraint="regex(.,'^[A-Z]{2}[0-9]{7}$')" jr:constraintMsg="jr:itext('/data/d_barcodeID2:jr:constraintMsg')" nodeset="/data/d_barcodeID2" relevant=" /data/d_id_methode  = 'Manuel' and  /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind constraint=". =  /data/d_barcodeID2 " nodeset="/data/d_barcodeID2_bis" relevant=" /data/d_id_methode  = 'Manuel' and  /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind constraint=".&gt;=1 and .&lt;=2" nodeset="/data/d_nb_bandelette" relevant=" /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/d_lot_fts1" relevant=" /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/d_resultat_fts1" relevant=" /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind constraint="true()" nodeset="/data/d_fts1_invalid_description" relevant=" /data/d_resultat_fts1  = '3_Invalide' and  /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind constraint="true()" nodeset="/data/d_autre_expliquer_fts1" relevant=" /data/d_fts1_invalid_description ='G_Autre_expliquer' and  /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/d_photo1" orx:max-pixels="2000" relevant=" /data/d_resultat_fts1  = '1_Positif' or  /data/d_resultat_fts1  = '3_Invalide' and  /data/d_participant_preleve  = 'Oui'" required="true()" type="binary"/>
+      <bind nodeset="/data/d_lot_fts2" relevant=" /data/d_nb_bandelette  &gt; 1 and  /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/d_resultat_fts2" relevant=" /data/d_nb_bandelette  &gt; 1 and  /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind constraint="true()" nodeset="/data/d_fts2_invalid_description" relevant=" /data/d_resultat_fts2  = '3_Invalide' and  /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind constraint="true()" nodeset="/data/d_autre_expliquer_fts2" relevant=" /data/d_fts2_invalid_description ='G_Autre_expliquer' and  /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/d_photo2" orx:max-pixels="2000" relevant=" /data/d_resultat_fts2  = '1_Positif' or  /data/d_resultat_fts2  = '3_Invalide' and  /data/d_participant_preleve  = 'Oui'" required="true()" type="binary"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 7" jr:constraintMsg="jr:itext('/data/d_duree_sejour:jr:constraintMsg')" nodeset="/data/d_duree_sejour" relevant="( /data/d_resultat_fts1  = '1_Positif' or  /data/d_resultat_fts2  = '1_Positif') and  /data/d_participant_preleve  = 'Oui'" type="int"/>
+      <bind constraint=". &gt;= 6 and .&lt; 12" jr:constraintMsg="jr:itext('/data/d_duree_sejour_mois:jr:constraintMsg')" nodeset="/data/d_duree_sejour_mois" relevant="( /data/d_duree_sejour  = 0) and ( /data/d_resultat_fts1  = '1_Positif' or  /data/d_resultat_fts2  = '1_Positif') and  /data/d_participant_preleve  = 'Oui'" type="int"/>
+      <bind nodeset="/data/d_defis_operationnels" relevant=" /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/d_defis_operationnels_autre" relevant=" /data/d_defis_operationnels ='S_Autre (expliquer)' and  /data/d_participant_preleve  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/d_observations" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_debut_enreg" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_fin_enreg" type="dateTime"/>
@@ -1430,9 +1477,16 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <select1 ref="/data/d_nom_CSPS">
+      <label ref="jr:itext('/data/d_nom_CSPS:label')"/>
+      <itemset nodeset="instance('csps_list')/root/item[commune_list =  /data/d_commune ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
     <select1 ref="/data/d_site">
       <label ref="jr:itext('/data/d_site:label')"/>
-      <itemset nodeset="instance('village_list')/root/item[commune_list =  /data/d_commune ]">
+      <itemset nodeset="instance('village_list')/root/item[csps_list =  /data/d_nom_CSPS ]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
@@ -1443,6 +1497,21 @@
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
+    </select1>
+    <select1 ref="/data/d_participant_preleve">
+      <label ref="jr:itext('/data/d_participant_preleve:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_participant_preleve/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_participant_preleve/Non:label')"/>
+        <value>Non</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_participant_preleve/Refus:label')"/>
+        <value>Refus</value>
+      </item>
     </select1>
     <select1 ref="/data/d_id_methode">
       <label ref="jr:itext('/data/d_id_methode:label')"/>
@@ -1495,10 +1564,6 @@
       <item>
         <label ref="jr:itext('/data/d_resultat_fts1/3_Invalide:label')"/>
         <value>3_Invalide</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_resultat_fts1/4_Refus:label')"/>
-        <value>4_Refus</value>
       </item>
     </select1>
     <select1 ref="/data/d_fts1_invalid_description">
@@ -1560,10 +1625,6 @@
       <item>
         <label ref="jr:itext('/data/d_resultat_fts2/3_Invalide:label')"/>
         <value>3_Invalide</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_resultat_fts2/4_Refus:label')"/>
-        <value>4_Refus</value>
       </item>
     </select1>
     <select1 ref="/data/d_fts2_invalid_description">

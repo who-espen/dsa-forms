@@ -7,15 +7,16 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Avril 2023) Burkina Faso TAS FL - 2. Formulaire Enrôlement V2</h:title>
+    <h:title>(Avril 2023) Burkina Faso TAS FL - 2. Formulaire Enrôlement V2.1</h:title>
     <model >
 
       <instance>
-        <data id="bf_lf_tas1_202304_2_participant_v2">
+        <data id="bf_lf_tas1_202304_2_participant_v2_1">
           <p_code_operateur/>
           <p_ue/>
           <p_ds/>
           <p_commune/>
+          <p_nom_CSPS/>
           <p_site/>
           <p_code_site/>
           <p_classe/>
@@ -60,6 +61,9 @@
           </text>
           <text id="/data/p_commune:label">
             <value>Sélectionnez la commune</value>
+          </text>
+          <text id="/data/p_nom_CSPS:label">
+            <value>Sélectionnez le nom du CSPS</value>
           </text>
           <text id="/data/p_site:label">
             <value>Sélectionnez l'école</value>
@@ -140,8 +144,9 @@
       <bind nodeset="/data/p_ue" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_ds" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_ue"/>
       <bind nodeset="/data/p_commune" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_ds"/>
-      <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_commune"/>
-      <bind nodeset="/data/p_code_site" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_site"/>
+      <bind nodeset="/data/p_nom_CSPS" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_commune"/>
+      <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_nom_CSPS"/>
+      <bind nodeset="/data/p_code_site" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_site"/>
       <bind nodeset="/data/p_classe" required="true()" type="string"/>
       <bind nodeset="/data/p_id_methode" required="true()" type="string"/>
       <bind nodeset="/data/p_barcodeID1" relevant=" /data/p_id_methode  = &quot;Scanner&quot;" required="true()" type="barcode"/>
@@ -184,6 +189,9 @@
     </input>
     <input ref="/data/p_commune">
       <label ref="jr:itext('/data/p_commune:label')"/>
+    </input>
+    <input ref="/data/p_nom_CSPS">
+      <label ref="jr:itext('/data/p_nom_CSPS:label')"/>
     </input>
     <input ref="/data/p_site">
       <label ref="jr:itext('/data/p_site:label')"/>
