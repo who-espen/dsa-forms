@@ -70,9 +70,6 @@
           <text id="/data/p_consent/A.refuse:label">
             <value>2. A refusé</value>
           </text>
-          <text id="/data/p_barcodeid:jr:constraintMsg">
-            <value>Veuillez scanner le QR code du bon district. Les trois premières lettres du SR code doivent correspondre aux trois premières lettres du nom du district. Par exemple: TCH0001 for TCHAOUDJO.</value>
-          </text>
           <text id="/data/p_barcodeid:label">
             <value>Veuillez scanner le QR Code</value>
           </text>
@@ -84,9 +81,6 @@
           </text>
           <text id="/data/p_barcode_ok/Non:label">
             <value>Non</value>
-          </text>
-          <text id="/data/p_manual_code_id:jr:constraintMsg">
-            <value>Veuillez saisir le code de l'autocollant du QR code. Le format est les trois premières lettres du district suivie de quatre chiffres. Par exemple: TCH0001 pour TCHAOUDJO</value>
           </text>
           <text id="/data/p_manual_code_id:label">
             <value>Saisez le code QR manuellement</value>
@@ -178,9 +172,9 @@
       <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_usp"/>
       <bind nodeset="/data/p_consent_note" readonly="true()" type="string"/>
       <bind nodeset="/data/p_consent" required="true()" type="string"/>
-      <bind constraint="(regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/p_district , 0, 3) = substr(., 0, 3) and  /data/p_district != 'KPENDJAL OUEST') or (if( /data/p_district  = 'KPENDJAL OUEST', if(substr(., 0, 3) = 'OUE', true(), false()), false()) and regex(., '^[A-Z]{3}[0-9]{4}$'))" jr:constraintMsg="jr:itext('/data/p_barcodeid:jr:constraintMsg')" nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'A.donne'" type="barcode"/>
+      <bind nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'A.donne'" type="barcode"/>
       <bind nodeset="/data/p_barcode_ok" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
-      <bind constraint="(regex(., '^[A-Z]{3}[0-9]{4}$') and substr( /data/p_district , 0, 3) = substr(., 0, 3) and  /data/p_district != 'KPENDJAL OUEST') or (if( /data/p_district  = 'KPENDJAL OUEST', if(substr(., 0, 3) = 'OUE', true(), false()), false()) and regex(., '^[A-Z]{3}[0-9]{4}$'))" jr:constraintMsg="jr:itext('/data/p_manual_code_id:jr:constraintMsg')" nodeset="/data/p_manual_code_id" relevant=" /data/p_consent  = 'A.donne' and  /data/p_barcode_ok  = 'Non'" required="true()" type="string"/>
+      <bind nodeset="/data/p_manual_code_id" relevant=" /data/p_consent  = 'A.donne' and  /data/p_barcode_ok  = 'Non'" required="true()" type="string"/>
       <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="int"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
       <bind nodeset="/data/p_collected_stool" relevant=" /data/p_consent  = 'A.donne' and ( /data/p_usp  = 'AGBATITOE' or  /data/p_usp  = 'AGOTIME ADAME' or  /data/p_usp  = 'AKPAKPAKPE' or  /data/p_usp  = 'ALEHERIDE' or  /data/p_usp  = 'AOU MONO' or  /data/p_usp  = 'ASSAHOUN FIAGBE' or  /data/p_usp  = 'AVASSIKPE' or  /data/p_usp  = 'AVEDZE' or  /data/p_usp  = 'AVETONOU' or  /data/p_usp  = 'BATOUME' or  /data/p_usp  = 'BROUNFOU' or  /data/p_usp  = 'CMS HANKELI' or  /data/p_usp  = 'DALIA' or  /data/p_usp  = 'DIMORI' or  /data/p_usp  = 'HOPITAL SAINT GOTHARD DE DEDOME' or  /data/p_usp  = 'HUILEHOE' or  /data/p_usp  = 'KADAMBARA' or  /data/p_usp  = 'KASSENA' or  /data/p_usp  = 'KATI' or  /data/p_usp  = 'KLABE APEGAME' or  /data/p_usp  = 'KLOEGNAME' or  /data/p_usp  = 'KLONOU' or  /data/p_usp  = 'KOUNDOUM' or  /data/p_usp  = 'KPAZA' or  /data/p_usp  = 'LAMA TESSI' or  /data/p_usp  = 'OGA' or  /data/p_usp  = 'PATATOUKOU' or  /data/p_usp  = 'SAGBADAI' or  /data/p_usp  = 'SANDA AFOHOU' or  /data/p_usp  = 'SANDA KAGBANDA' or  /data/p_usp  = 'TAWOREDA' or  /data/p_usp  = 'TCHALO' or  /data/p_usp  = 'TCHATCHAMINADE' or  /data/p_usp  = 'TETETOU')" required="true()" type="string"/>
