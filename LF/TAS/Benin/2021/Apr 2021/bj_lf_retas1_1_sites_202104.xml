@@ -1,0 +1,2167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>1. Benin - Re TAS1 FL Formulaire Site (Avril 2021) V3</h:title>
+    <model >
+
+      <instance>
+        <data id="bj_lf_retas1_1_sites_202104_v3" version="202104522">
+          <c_recorder/>
+          <c_eu_name/>
+          <c_commune/>
+          <c_cluster_name/>
+          <c_cluster_id/>
+          <c_cluster_leader_name/>
+          <c_cluster_leader_contact/>
+          <c_consent/>
+          <c_population/>
+          <c_present/>
+          <c_absent/>
+          <c_gps/>
+          <p_ending_survey_note/>
+          <c_ClusterNotes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui a été attribué à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/c_eu_name:label">
+            <value>Sélectionner l'unité d'évaluation (UE)</value>
+          </text>
+          <text id="/data/c_eu_name/COVE:label">
+            <value>COVE</value>
+          </text>
+          <text id="/data/c_eu_name/OUINHI:label">
+            <value>OUINHI</value>
+          </text>
+          <text id="/data/c_commune:label">
+            <value>Sélectionner la commune</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Sélectionner le nom de l'école</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 99 et 1000</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Sélectionner le code de l'école</value>
+          </text>
+          <text id="/data/c_cluster_id:hint">
+            <value>Le code a trois chiffre associé à chaque école</value>
+          </text>
+          <text id="/data/c_cluster_leader_name:label">
+            <value>Nom du directeur d'école</value>
+          </text>
+          <text id="/data/c_cluster_leader_contact:label">
+            <value>Contact du directeur d'école</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>L'école (à travers le directeur et l'APE) consent-elle à participer à cette enquête ?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Selon les groupes d'âge ciblés (élèves de CI et CP), à peu près combien de participants éligibles sont inscrits dans cette école ?</value>
+          </text>
+          <text id="/data/c_present:jr:constraintMsg">
+            <value>Le nombre des présents ne doit pas dépasser le total d'élèves</value>
+          </text>
+          <text id="/data/c_present:label">
+            <value>Selon les groupes d'âge ciblés (élèves de CI et CP), combien de participants admissibles sont présents dans cette école ?</value>
+          </text>
+          <text id="/data/c_absent:jr:constraintMsg">
+            <value>Le nombre d'absents ne doit pas dépasser le total d'élèves</value>
+          </text>
+          <text id="/data/c_absent:label">
+            <value>Selon les groupes d'âge ciblés (élèves de CI et CP), combien de participants admissibles sont absents dans cette école ?</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Prener vos coordonnées GPS :</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>Les coordonnées GPS sont plus faciles à collecter à l'extérieur. Délai d'attente de 2 min</value>
+          </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Informations supplémentaires</value>
+          </text>
+          <text id="eu_list-0">
+            <value>COVE</value>
+          </text>
+          <text id="eu_list-1">
+            <value>OUINHI</value>
+          </text>
+          <text id="commune_list-0">
+            <value>COVE</value>
+          </text>
+          <text id="commune_list-1">
+            <value>ZA-KPOTA</value>
+          </text>
+          <text id="commune_list-2">
+            <value>OUINHI</value>
+          </text>
+          <text id="commune_list-3">
+            <value>ZAGNANADO</value>
+          </text>
+          <text id="site_list-0">
+            <value>AHITO</value>
+          </text>
+          <text id="site_list-1">
+            <value>CATHOLIQUE SAINT AUGUSTIN</value>
+          </text>
+          <text id="site_list-2">
+            <value>COVE/C</value>
+          </text>
+          <text id="site_list-3">
+            <value>DOVI COGBE</value>
+          </text>
+          <text id="site_list-4">
+            <value>EYRAM</value>
+          </text>
+          <text id="site_list-5">
+            <value>GOUNLI/A</value>
+          </text>
+          <text id="site_list-6">
+            <value>HOUNSO/C</value>
+          </text>
+          <text id="site_list-7">
+            <value>LA REFERENCE (ADOGBE)</value>
+          </text>
+          <text id="site_list-8">
+            <value>LES GRANDES AMES</value>
+          </text>
+          <text id="site_list-9">
+            <value>SOLI/A</value>
+          </text>
+          <text id="site_list-10">
+            <value>TOKPLEGBE/B</value>
+          </text>
+          <text id="site_list-11">
+            <value>ZOGBA/A</value>
+          </text>
+          <text id="site_list-12">
+            <value>ZOGBA/B</value>
+          </text>
+          <text id="site_list-13">
+            <value>Adjido A</value>
+          </text>
+          <text id="site_list-14">
+            <value>ADJOKAN / C</value>
+          </text>
+          <text id="site_list-15">
+            <value>ADJOKAN HOUAWO / B</value>
+          </text>
+          <text id="site_list-16">
+            <value>AFFOSSOWAGBA</value>
+          </text>
+          <text id="site_list-17">
+            <value>ALLOHOUN OUNKANME / B</value>
+          </text>
+          <text id="site_list-18">
+            <value>DJOYITIN / A</value>
+          </text>
+          <text id="site_list-19">
+            <value>DRAME TANDJI</value>
+          </text>
+          <text id="site_list-20">
+            <value>FOLLY</value>
+          </text>
+          <text id="site_list-21">
+            <value>HOUNGOME</value>
+          </text>
+          <text id="site_list-22">
+            <value>KOGUEDE / B</value>
+          </text>
+          <text id="site_list-23">
+            <value>KPAKPAME / B</value>
+          </text>
+          <text id="site_list-24">
+            <value>KPOZOUN / A</value>
+          </text>
+          <text id="site_list-25">
+            <value>KPOZOUN / B</value>
+          </text>
+          <text id="site_list-26">
+            <value>KPOZOUN / C</value>
+          </text>
+          <text id="site_list-27">
+            <value>LA PERSEVERANCE</value>
+          </text>
+          <text id="site_list-28">
+            <value>LA REFERENCE (ZEKO)</value>
+          </text>
+          <text id="site_list-29">
+            <value>LE SUCCES D'ADJIDO</value>
+          </text>
+          <text id="site_list-30">
+            <value>SAINTE THERESE DE L'ENFANT JESUS</value>
+          </text>
+          <text id="site_list-31">
+            <value>SOWEKPA</value>
+          </text>
+          <text id="site_list-32">
+            <value>TANGBEKPA</value>
+          </text>
+          <text id="site_list-33">
+            <value>ZA AGONDOKPOE / A</value>
+          </text>
+          <text id="site_list-34">
+            <value>ZA DRAME / A</value>
+          </text>
+          <text id="site_list-35">
+            <value>ZA KPOTA / A</value>
+          </text>
+          <text id="site_list-36">
+            <value>ZA KPOTA CENTRE / B</value>
+          </text>
+          <text id="site_list-37">
+            <value>ZA TANTA / B</value>
+          </text>
+          <text id="site_list-38">
+            <value>ZEKO / B</value>
+          </text>
+          <text id="site_list-39">
+            <value>ZEKO QUARTIER</value>
+          </text>
+          <text id="site_list-40">
+            <value>ADAGBODJI</value>
+          </text>
+          <text id="site_list-41">
+            <value>AHICON</value>
+          </text>
+          <text id="site_list-42">
+            <value>AIZE / B</value>
+          </text>
+          <text id="site_list-43">
+            <value>DOLIVI</value>
+          </text>
+          <text id="site_list-44">
+            <value>EPP Dasso B</value>
+          </text>
+          <text id="site_list-45">
+            <value>GNANLI ZOUNGUE / C</value>
+          </text>
+          <text id="site_list-46">
+            <value>HOLLI</value>
+          </text>
+          <text id="site_list-47">
+            <value>LE PROGRES</value>
+          </text>
+          <text id="site_list-48">
+            <value>MAFOUNGBON</value>
+          </text>
+          <text id="site_list-49">
+            <value>MIDJANNAGAN</value>
+          </text>
+          <text id="site_list-50">
+            <value>MONZOUNGOUDO</value>
+          </text>
+          <text id="site_list-51">
+            <value>ODJA ODAN</value>
+          </text>
+          <text id="site_list-52">
+            <value>OUOKON AHLAN</value>
+          </text>
+          <text id="site_list-53">
+            <value>OZOKPODI</value>
+          </text>
+          <text id="site_list-54">
+            <value>TEZOUNME</value>
+          </text>
+          <text id="site_list-55">
+            <value>ADADJAGON</value>
+          </text>
+          <text id="site_list-56">
+            <value>AGBLADOHO</value>
+          </text>
+          <text id="site_list-57">
+            <value>AGONGBODJI / B</value>
+          </text>
+          <text id="site_list-58">
+            <value>AGONVE</value>
+          </text>
+          <text id="site_list-59">
+            <value>AHLAN</value>
+          </text>
+          <text id="site_list-60">
+            <value>AKOHAGON</value>
+          </text>
+          <text id="site_list-61">
+            <value>AZAKPA</value>
+          </text>
+          <text id="site_list-62">
+            <value>BOCONONGON</value>
+          </text>
+          <text id="site_list-63">
+            <value>BODEDJI</value>
+          </text>
+          <text id="site_list-64">
+            <value>DOGA ZOUNGOUDO / B</value>
+          </text>
+          <text id="site_list-65">
+            <value>DON / A</value>
+          </text>
+          <text id="site_list-66">
+            <value>DON / B</value>
+          </text>
+          <text id="site_list-67">
+            <value>DOVI DOVE / A</value>
+          </text>
+          <text id="site_list-68">
+            <value>DOVI ZOUNOU</value>
+          </text>
+          <text id="site_list-69">
+            <value>EPP Aissin
+Dangbehoue</value>
+          </text>
+          <text id="site_list-70">
+            <value>GOBLIDJI</value>
+          </text>
+          <text id="site_list-71">
+            <value>HELOUTEDJI</value>
+          </text>
+          <text id="site_list-72">
+            <value>IGBO OLA</value>
+          </text>
+          <text id="site_list-73">
+            <value>KPOTO</value>
+          </text>
+          <text id="site_list-74">
+            <value>LA JEUNESSE AMBITION</value>
+          </text>
+          <text id="site_list-75">
+            <value>MASSAGBO</value>
+          </text>
+          <text id="site_list-76">
+            <value>WOKPA</value>
+          </text>
+          <text id="site_list-77">
+            <value>WOMETO GLONZOUME</value>
+          </text>
+          <text id="site_list-78">
+            <value>ZAGNANADO CENTRE</value>
+          </text>
+          <text id="site_list-79">
+            <value>ZOBLAGADA</value>
+          </text>
+          <text id="site_ids-0">
+            <value>100</value>
+          </text>
+          <text id="site_ids-1">
+            <value>101</value>
+          </text>
+          <text id="site_ids-2">
+            <value>102</value>
+          </text>
+          <text id="site_ids-3">
+            <value>103</value>
+          </text>
+          <text id="site_ids-4">
+            <value>104</value>
+          </text>
+          <text id="site_ids-5">
+            <value>105</value>
+          </text>
+          <text id="site_ids-6">
+            <value>106</value>
+          </text>
+          <text id="site_ids-7">
+            <value>107</value>
+          </text>
+          <text id="site_ids-8">
+            <value>108</value>
+          </text>
+          <text id="site_ids-9">
+            <value>109</value>
+          </text>
+          <text id="site_ids-10">
+            <value>110</value>
+          </text>
+          <text id="site_ids-11">
+            <value>111</value>
+          </text>
+          <text id="site_ids-12">
+            <value>112</value>
+          </text>
+          <text id="site_ids-13">
+            <value>113</value>
+          </text>
+          <text id="site_ids-14">
+            <value>114</value>
+          </text>
+          <text id="site_ids-15">
+            <value>115</value>
+          </text>
+          <text id="site_ids-16">
+            <value>116</value>
+          </text>
+          <text id="site_ids-17">
+            <value>117</value>
+          </text>
+          <text id="site_ids-18">
+            <value>118</value>
+          </text>
+          <text id="site_ids-19">
+            <value>119</value>
+          </text>
+          <text id="site_ids-20">
+            <value>120</value>
+          </text>
+          <text id="site_ids-21">
+            <value>121</value>
+          </text>
+          <text id="site_ids-22">
+            <value>122</value>
+          </text>
+          <text id="site_ids-23">
+            <value>123</value>
+          </text>
+          <text id="site_ids-24">
+            <value>124</value>
+          </text>
+          <text id="site_ids-25">
+            <value>125</value>
+          </text>
+          <text id="site_ids-26">
+            <value>126</value>
+          </text>
+          <text id="site_ids-27">
+            <value>127</value>
+          </text>
+          <text id="site_ids-28">
+            <value>128</value>
+          </text>
+          <text id="site_ids-29">
+            <value>129</value>
+          </text>
+          <text id="site_ids-30">
+            <value>130</value>
+          </text>
+          <text id="site_ids-31">
+            <value>131</value>
+          </text>
+          <text id="site_ids-32">
+            <value>132</value>
+          </text>
+          <text id="site_ids-33">
+            <value>133</value>
+          </text>
+          <text id="site_ids-34">
+            <value>134</value>
+          </text>
+          <text id="site_ids-35">
+            <value>135</value>
+          </text>
+          <text id="site_ids-36">
+            <value>136</value>
+          </text>
+          <text id="site_ids-37">
+            <value>137</value>
+          </text>
+          <text id="site_ids-38">
+            <value>138</value>
+          </text>
+          <text id="site_ids-39">
+            <value>139</value>
+          </text>
+          <text id="site_ids-40">
+            <value>140</value>
+          </text>
+          <text id="site_ids-41">
+            <value>141</value>
+          </text>
+          <text id="site_ids-42">
+            <value>142</value>
+          </text>
+          <text id="site_ids-43">
+            <value>143</value>
+          </text>
+          <text id="site_ids-44">
+            <value>144</value>
+          </text>
+          <text id="site_ids-45">
+            <value>145</value>
+          </text>
+          <text id="site_ids-46">
+            <value>146</value>
+          </text>
+          <text id="site_ids-47">
+            <value>147</value>
+          </text>
+          <text id="site_ids-48">
+            <value>148</value>
+          </text>
+          <text id="site_ids-49">
+            <value>149</value>
+          </text>
+          <text id="site_ids-50">
+            <value>150</value>
+          </text>
+          <text id="site_ids-51">
+            <value>151</value>
+          </text>
+          <text id="site_ids-52">
+            <value>152</value>
+          </text>
+          <text id="site_ids-53">
+            <value>153</value>
+          </text>
+          <text id="site_ids-54">
+            <value>154</value>
+          </text>
+          <text id="site_ids-55">
+            <value>155</value>
+          </text>
+          <text id="site_ids-56">
+            <value>156</value>
+          </text>
+          <text id="site_ids-57">
+            <value>157</value>
+          </text>
+          <text id="site_ids-58">
+            <value>158</value>
+          </text>
+          <text id="site_ids-59">
+            <value>159</value>
+          </text>
+          <text id="site_ids-60">
+            <value>160</value>
+          </text>
+          <text id="site_ids-61">
+            <value>161</value>
+          </text>
+          <text id="site_ids-62">
+            <value>162</value>
+          </text>
+          <text id="site_ids-63">
+            <value>163</value>
+          </text>
+          <text id="site_ids-64">
+            <value>164</value>
+          </text>
+          <text id="site_ids-65">
+            <value>165</value>
+          </text>
+          <text id="site_ids-66">
+            <value>166</value>
+          </text>
+          <text id="site_ids-67">
+            <value>167</value>
+          </text>
+          <text id="site_ids-68">
+            <value>168</value>
+          </text>
+          <text id="site_ids-69">
+            <value>169</value>
+          </text>
+          <text id="site_ids-70">
+            <value>170</value>
+          </text>
+          <text id="site_ids-71">
+            <value>171</value>
+          </text>
+          <text id="site_ids-72">
+            <value>172</value>
+          </text>
+          <text id="site_ids-73">
+            <value>173</value>
+          </text>
+          <text id="site_ids-74">
+            <value>174</value>
+          </text>
+          <text id="site_ids-75">
+            <value>175</value>
+          </text>
+          <text id="site_ids-76">
+            <value>176</value>
+          </text>
+          <text id="site_ids-77">
+            <value>177</value>
+          </text>
+          <text id="site_ids-78">
+            <value>178</value>
+          </text>
+          <text id="site_ids-79">
+            <value>179</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Oui</value>
+          </text>
+          <text id="yes_no-1">
+            <value>Non</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>-</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>-</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>The code must be a two-digit number between 9 and 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Enter Recorder ID</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
+          </text>
+          <text id="/data/c_eu_name:label">
+            <value>Select the evaluation unit (EU)</value>
+          </text>
+          <text id="/data/c_eu_name/COVE:label">
+            <value>COVE</value>
+          </text>
+          <text id="/data/c_eu_name/OUINHI:label">
+            <value>OUINHI</value>
+          </text>
+          <text id="/data/c_commune:label">
+            <value>Select the commune</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Select the school Name</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>The code must be a two-digit number between 99 and 1000</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Select the cluster ID</value>
+          </text>
+          <text id="/data/c_cluster_id:hint">
+            <value>The three-digit code associated with each school</value>
+          </text>
+          <text id="/data/c_cluster_leader_name:label">
+            <value>Name of Head Teacher</value>
+          </text>
+          <text id="/data/c_cluster_leader_contact:label">
+            <value>Contact of Head Teacher</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>Does the school or community consent to participating in this survey?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/c_population:label">
+            <value>Depending on the age groups targeted, approximately how many eligible participants are enrolled in this school or live in this village?</value>
+          </text>
+          <text id="/data/c_present:jr:constraintMsg">
+            <value>The number of presents must not exceed the total of pupils</value>
+          </text>
+          <text id="/data/c_present:label">
+            <value>Depending on the age groups targeted, how many eligible participants are present in this school or community?</value>
+          </text>
+          <text id="/data/c_absent:jr:constraintMsg">
+            <value>The number of absents must not exceed the total of pupils</value>
+          </text>
+          <text id="/data/c_absent:label">
+            <value>Depending on the age groups targeted, how many eligible participants are absent in this school or community?</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Record your location:</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>GPS coordinates are easier to collect outside. 2 min timeout</value>
+          </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>You just entered a value that will end the survey</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Additional notes to add?</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="eu_list-0">
+            <value>COVE</value>
+          </text>
+          <text id="eu_list-1">
+            <value>OUINHI</value>
+          </text>
+          <text id="commune_list-0">
+            <value>COVE</value>
+          </text>
+          <text id="commune_list-1">
+            <value>ZA-KPOTA</value>
+          </text>
+          <text id="commune_list-2">
+            <value>OUINHI</value>
+          </text>
+          <text id="commune_list-3">
+            <value>ZAGNANADO</value>
+          </text>
+          <text id="site_list-0">
+            <value>AHITO</value>
+          </text>
+          <text id="site_list-1">
+            <value>CATHOLIQUE SAINT AUGUSTIN</value>
+          </text>
+          <text id="site_list-2">
+            <value>COVE/C</value>
+          </text>
+          <text id="site_list-3">
+            <value>DOVI COGBE</value>
+          </text>
+          <text id="site_list-4">
+            <value>EYRAM</value>
+          </text>
+          <text id="site_list-5">
+            <value>GOUNLI/A</value>
+          </text>
+          <text id="site_list-6">
+            <value>HOUNSO/C</value>
+          </text>
+          <text id="site_list-7">
+            <value>LA REFERENCE (ADOGBE)</value>
+          </text>
+          <text id="site_list-8">
+            <value>LES GRANDES AMES</value>
+          </text>
+          <text id="site_list-9">
+            <value>SOLI/A</value>
+          </text>
+          <text id="site_list-10">
+            <value>TOKPLEGBE/B</value>
+          </text>
+          <text id="site_list-11">
+            <value>ZOGBA/A</value>
+          </text>
+          <text id="site_list-12">
+            <value>ZOGBA/B</value>
+          </text>
+          <text id="site_list-13">
+            <value>Adjido A</value>
+          </text>
+          <text id="site_list-14">
+            <value>ADJOKAN / C</value>
+          </text>
+          <text id="site_list-15">
+            <value>ADJOKAN HOUAWO / B</value>
+          </text>
+          <text id="site_list-16">
+            <value>AFFOSSOWAGBA</value>
+          </text>
+          <text id="site_list-17">
+            <value>ALLOHOUN OUNKANME / B</value>
+          </text>
+          <text id="site_list-18">
+            <value>DJOYITIN / A</value>
+          </text>
+          <text id="site_list-19">
+            <value>DRAME TANDJI</value>
+          </text>
+          <text id="site_list-20">
+            <value>FOLLY</value>
+          </text>
+          <text id="site_list-21">
+            <value>HOUNGOME</value>
+          </text>
+          <text id="site_list-22">
+            <value>KOGUEDE / B</value>
+          </text>
+          <text id="site_list-23">
+            <value>KPAKPAME / B</value>
+          </text>
+          <text id="site_list-24">
+            <value>KPOZOUN / A</value>
+          </text>
+          <text id="site_list-25">
+            <value>KPOZOUN / B</value>
+          </text>
+          <text id="site_list-26">
+            <value>KPOZOUN / C</value>
+          </text>
+          <text id="site_list-27">
+            <value>LA PERSEVERANCE</value>
+          </text>
+          <text id="site_list-28">
+            <value>LA REFERENCE (ZEKO)</value>
+          </text>
+          <text id="site_list-29">
+            <value>LE SUCCES D'ADJIDO</value>
+          </text>
+          <text id="site_list-30">
+            <value>SAINTE THERESE DE L'ENFANT JESUS</value>
+          </text>
+          <text id="site_list-31">
+            <value>SOWEKPA</value>
+          </text>
+          <text id="site_list-32">
+            <value>TANGBEKPA</value>
+          </text>
+          <text id="site_list-33">
+            <value>ZA AGONDOKPOE / A</value>
+          </text>
+          <text id="site_list-34">
+            <value>ZA DRAME / A</value>
+          </text>
+          <text id="site_list-35">
+            <value>ZA KPOTA / A</value>
+          </text>
+          <text id="site_list-36">
+            <value>ZA KPOTA CENTRE / B</value>
+          </text>
+          <text id="site_list-37">
+            <value>ZA TANTA / B</value>
+          </text>
+          <text id="site_list-38">
+            <value>ZEKO / B</value>
+          </text>
+          <text id="site_list-39">
+            <value>ZEKO QUARTIER</value>
+          </text>
+          <text id="site_list-40">
+            <value>ADAGBODJI</value>
+          </text>
+          <text id="site_list-41">
+            <value>AHICON</value>
+          </text>
+          <text id="site_list-42">
+            <value>AIZE / B</value>
+          </text>
+          <text id="site_list-43">
+            <value>DOLIVI</value>
+          </text>
+          <text id="site_list-44">
+            <value>EPP Dasso B</value>
+          </text>
+          <text id="site_list-45">
+            <value>GNANLI ZOUNGUE / C</value>
+          </text>
+          <text id="site_list-46">
+            <value>HOLLI</value>
+          </text>
+          <text id="site_list-47">
+            <value>LE PROGRES</value>
+          </text>
+          <text id="site_list-48">
+            <value>MAFOUNGBON</value>
+          </text>
+          <text id="site_list-49">
+            <value>MIDJANNAGAN</value>
+          </text>
+          <text id="site_list-50">
+            <value>MONZOUNGOUDO</value>
+          </text>
+          <text id="site_list-51">
+            <value>ODJA ODAN</value>
+          </text>
+          <text id="site_list-52">
+            <value>OUOKON AHLAN</value>
+          </text>
+          <text id="site_list-53">
+            <value>OZOKPODI</value>
+          </text>
+          <text id="site_list-54">
+            <value>TEZOUNME</value>
+          </text>
+          <text id="site_list-55">
+            <value>ADADJAGON</value>
+          </text>
+          <text id="site_list-56">
+            <value>AGBLADOHO</value>
+          </text>
+          <text id="site_list-57">
+            <value>AGONGBODJI / B</value>
+          </text>
+          <text id="site_list-58">
+            <value>AGONVE</value>
+          </text>
+          <text id="site_list-59">
+            <value>AHLAN</value>
+          </text>
+          <text id="site_list-60">
+            <value>AKOHAGON</value>
+          </text>
+          <text id="site_list-61">
+            <value>AZAKPA</value>
+          </text>
+          <text id="site_list-62">
+            <value>BOCONONGON</value>
+          </text>
+          <text id="site_list-63">
+            <value>BODEDJI</value>
+          </text>
+          <text id="site_list-64">
+            <value>DOGA ZOUNGOUDO / B</value>
+          </text>
+          <text id="site_list-65">
+            <value>DON / A</value>
+          </text>
+          <text id="site_list-66">
+            <value>DON / B</value>
+          </text>
+          <text id="site_list-67">
+            <value>DOVI DOVE / A</value>
+          </text>
+          <text id="site_list-68">
+            <value>DOVI ZOUNOU</value>
+          </text>
+          <text id="site_list-69">
+            <value>EPP Aissin
+Dangbehoue</value>
+          </text>
+          <text id="site_list-70">
+            <value>GOBLIDJI</value>
+          </text>
+          <text id="site_list-71">
+            <value>HELOUTEDJI</value>
+          </text>
+          <text id="site_list-72">
+            <value>IGBO OLA</value>
+          </text>
+          <text id="site_list-73">
+            <value>KPOTO</value>
+          </text>
+          <text id="site_list-74">
+            <value>LA JEUNESSE AMBITION</value>
+          </text>
+          <text id="site_list-75">
+            <value>MASSAGBO</value>
+          </text>
+          <text id="site_list-76">
+            <value>WOKPA</value>
+          </text>
+          <text id="site_list-77">
+            <value>WOMETO GLONZOUME</value>
+          </text>
+          <text id="site_list-78">
+            <value>ZAGNANADO CENTRE</value>
+          </text>
+          <text id="site_list-79">
+            <value>ZOBLAGADA</value>
+          </text>
+          <text id="site_ids-0">
+            <value>100</value>
+          </text>
+          <text id="site_ids-1">
+            <value>101</value>
+          </text>
+          <text id="site_ids-2">
+            <value>102</value>
+          </text>
+          <text id="site_ids-3">
+            <value>103</value>
+          </text>
+          <text id="site_ids-4">
+            <value>104</value>
+          </text>
+          <text id="site_ids-5">
+            <value>105</value>
+          </text>
+          <text id="site_ids-6">
+            <value>106</value>
+          </text>
+          <text id="site_ids-7">
+            <value>107</value>
+          </text>
+          <text id="site_ids-8">
+            <value>108</value>
+          </text>
+          <text id="site_ids-9">
+            <value>109</value>
+          </text>
+          <text id="site_ids-10">
+            <value>110</value>
+          </text>
+          <text id="site_ids-11">
+            <value>111</value>
+          </text>
+          <text id="site_ids-12">
+            <value>112</value>
+          </text>
+          <text id="site_ids-13">
+            <value>113</value>
+          </text>
+          <text id="site_ids-14">
+            <value>114</value>
+          </text>
+          <text id="site_ids-15">
+            <value>115</value>
+          </text>
+          <text id="site_ids-16">
+            <value>116</value>
+          </text>
+          <text id="site_ids-17">
+            <value>117</value>
+          </text>
+          <text id="site_ids-18">
+            <value>118</value>
+          </text>
+          <text id="site_ids-19">
+            <value>119</value>
+          </text>
+          <text id="site_ids-20">
+            <value>120</value>
+          </text>
+          <text id="site_ids-21">
+            <value>121</value>
+          </text>
+          <text id="site_ids-22">
+            <value>122</value>
+          </text>
+          <text id="site_ids-23">
+            <value>123</value>
+          </text>
+          <text id="site_ids-24">
+            <value>124</value>
+          </text>
+          <text id="site_ids-25">
+            <value>125</value>
+          </text>
+          <text id="site_ids-26">
+            <value>126</value>
+          </text>
+          <text id="site_ids-27">
+            <value>127</value>
+          </text>
+          <text id="site_ids-28">
+            <value>128</value>
+          </text>
+          <text id="site_ids-29">
+            <value>129</value>
+          </text>
+          <text id="site_ids-30">
+            <value>130</value>
+          </text>
+          <text id="site_ids-31">
+            <value>131</value>
+          </text>
+          <text id="site_ids-32">
+            <value>132</value>
+          </text>
+          <text id="site_ids-33">
+            <value>133</value>
+          </text>
+          <text id="site_ids-34">
+            <value>134</value>
+          </text>
+          <text id="site_ids-35">
+            <value>135</value>
+          </text>
+          <text id="site_ids-36">
+            <value>136</value>
+          </text>
+          <text id="site_ids-37">
+            <value>137</value>
+          </text>
+          <text id="site_ids-38">
+            <value>138</value>
+          </text>
+          <text id="site_ids-39">
+            <value>139</value>
+          </text>
+          <text id="site_ids-40">
+            <value>140</value>
+          </text>
+          <text id="site_ids-41">
+            <value>141</value>
+          </text>
+          <text id="site_ids-42">
+            <value>142</value>
+          </text>
+          <text id="site_ids-43">
+            <value>143</value>
+          </text>
+          <text id="site_ids-44">
+            <value>144</value>
+          </text>
+          <text id="site_ids-45">
+            <value>145</value>
+          </text>
+          <text id="site_ids-46">
+            <value>146</value>
+          </text>
+          <text id="site_ids-47">
+            <value>147</value>
+          </text>
+          <text id="site_ids-48">
+            <value>148</value>
+          </text>
+          <text id="site_ids-49">
+            <value>149</value>
+          </text>
+          <text id="site_ids-50">
+            <value>150</value>
+          </text>
+          <text id="site_ids-51">
+            <value>151</value>
+          </text>
+          <text id="site_ids-52">
+            <value>152</value>
+          </text>
+          <text id="site_ids-53">
+            <value>153</value>
+          </text>
+          <text id="site_ids-54">
+            <value>154</value>
+          </text>
+          <text id="site_ids-55">
+            <value>155</value>
+          </text>
+          <text id="site_ids-56">
+            <value>156</value>
+          </text>
+          <text id="site_ids-57">
+            <value>157</value>
+          </text>
+          <text id="site_ids-58">
+            <value>158</value>
+          </text>
+          <text id="site_ids-59">
+            <value>159</value>
+          </text>
+          <text id="site_ids-60">
+            <value>160</value>
+          </text>
+          <text id="site_ids-61">
+            <value>161</value>
+          </text>
+          <text id="site_ids-62">
+            <value>162</value>
+          </text>
+          <text id="site_ids-63">
+            <value>163</value>
+          </text>
+          <text id="site_ids-64">
+            <value>164</value>
+          </text>
+          <text id="site_ids-65">
+            <value>165</value>
+          </text>
+          <text id="site_ids-66">
+            <value>166</value>
+          </text>
+          <text id="site_ids-67">
+            <value>167</value>
+          </text>
+          <text id="site_ids-68">
+            <value>168</value>
+          </text>
+          <text id="site_ids-69">
+            <value>169</value>
+          </text>
+          <text id="site_ids-70">
+            <value>170</value>
+          </text>
+          <text id="site_ids-71">
+            <value>171</value>
+          </text>
+          <text id="site_ids-72">
+            <value>172</value>
+          </text>
+          <text id="site_ids-73">
+            <value>173</value>
+          </text>
+          <text id="site_ids-74">
+            <value>174</value>
+          </text>
+          <text id="site_ids-75">
+            <value>175</value>
+          </text>
+          <text id="site_ids-76">
+            <value>176</value>
+          </text>
+          <text id="site_ids-77">
+            <value>177</value>
+          </text>
+          <text id="site_ids-78">
+            <value>178</value>
+          </text>
+          <text id="site_ids-79">
+            <value>179</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="yes_no-1">
+            <value>No</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="eu_list">
+        <root>
+          <item>
+            <itextId>eu_list-0</itextId>
+            <name>COVE</name>
+          </item>
+          <item>
+            <itextId>eu_list-1</itextId>
+            <name>OUINHI</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="commune_list">
+        <root>
+          <item>
+            <itextId>commune_list-0</itextId>
+            <eu_list>COVE</eu_list>
+            <name>COVE</name>
+          </item>
+          <item>
+            <itextId>commune_list-1</itextId>
+            <eu_list>COVE</eu_list>
+            <name>ZA-KPOTA</name>
+          </item>
+          <item>
+            <itextId>commune_list-2</itextId>
+            <eu_list>OUINHI</eu_list>
+            <name>OUINHI</name>
+          </item>
+          <item>
+            <itextId>commune_list-3</itextId>
+            <eu_list>OUINHI</eu_list>
+            <name>ZAGNANADO</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_list">
+        <root>
+          <item>
+            <itextId>site_list-0</itextId>
+            <commune_list>COVE</commune_list>
+            <name>AHITO</name>
+          </item>
+          <item>
+            <itextId>site_list-1</itextId>
+            <commune_list>COVE</commune_list>
+            <name>CATHOLIQUE SAINT AUGUSTIN</name>
+          </item>
+          <item>
+            <itextId>site_list-2</itextId>
+            <commune_list>COVE</commune_list>
+            <name>COVE/C</name>
+          </item>
+          <item>
+            <itextId>site_list-3</itextId>
+            <commune_list>COVE</commune_list>
+            <name>DOVI COGBE</name>
+          </item>
+          <item>
+            <itextId>site_list-4</itextId>
+            <commune_list>COVE</commune_list>
+            <name>EYRAM</name>
+          </item>
+          <item>
+            <itextId>site_list-5</itextId>
+            <commune_list>COVE</commune_list>
+            <name>GOUNLI/A</name>
+          </item>
+          <item>
+            <itextId>site_list-6</itextId>
+            <commune_list>COVE</commune_list>
+            <name>HOUNSO/C</name>
+          </item>
+          <item>
+            <itextId>site_list-7</itextId>
+            <commune_list>COVE</commune_list>
+            <name>LA REFERENCE (ADOGBE)</name>
+          </item>
+          <item>
+            <itextId>site_list-8</itextId>
+            <commune_list>COVE</commune_list>
+            <name>LES GRANDES AMES</name>
+          </item>
+          <item>
+            <itextId>site_list-9</itextId>
+            <commune_list>COVE</commune_list>
+            <name>SOLI/A</name>
+          </item>
+          <item>
+            <itextId>site_list-10</itextId>
+            <commune_list>COVE</commune_list>
+            <name>TOKPLEGBE/B</name>
+          </item>
+          <item>
+            <itextId>site_list-11</itextId>
+            <commune_list>COVE</commune_list>
+            <name>ZOGBA/A</name>
+          </item>
+          <item>
+            <itextId>site_list-12</itextId>
+            <commune_list>COVE</commune_list>
+            <name>ZOGBA/B</name>
+          </item>
+          <item>
+            <itextId>site_list-13</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>Adjido A</name>
+          </item>
+          <item>
+            <itextId>site_list-14</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>ADJOKAN / C</name>
+          </item>
+          <item>
+            <itextId>site_list-15</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>ADJOKAN HOUAWO / B</name>
+          </item>
+          <item>
+            <itextId>site_list-16</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>AFFOSSOWAGBA</name>
+          </item>
+          <item>
+            <itextId>site_list-17</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>ALLOHOUN OUNKANME / B</name>
+          </item>
+          <item>
+            <itextId>site_list-18</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>DJOYITIN / A</name>
+          </item>
+          <item>
+            <itextId>site_list-19</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>DRAME TANDJI</name>
+          </item>
+          <item>
+            <itextId>site_list-20</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>FOLLY</name>
+          </item>
+          <item>
+            <itextId>site_list-21</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>HOUNGOME</name>
+          </item>
+          <item>
+            <itextId>site_list-22</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>KOGUEDE / B</name>
+          </item>
+          <item>
+            <itextId>site_list-23</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>KPAKPAME / B</name>
+          </item>
+          <item>
+            <itextId>site_list-24</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>KPOZOUN / A</name>
+          </item>
+          <item>
+            <itextId>site_list-25</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>KPOZOUN / B</name>
+          </item>
+          <item>
+            <itextId>site_list-26</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>KPOZOUN / C</name>
+          </item>
+          <item>
+            <itextId>site_list-27</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>LA PERSEVERANCE</name>
+          </item>
+          <item>
+            <itextId>site_list-28</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>LA REFERENCE (ZEKO)</name>
+          </item>
+          <item>
+            <itextId>site_list-29</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>LE SUCCES D'ADJIDO</name>
+          </item>
+          <item>
+            <itextId>site_list-30</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>SAINTE THERESE DE L'ENFANT JESUS</name>
+          </item>
+          <item>
+            <itextId>site_list-31</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>SOWEKPA</name>
+          </item>
+          <item>
+            <itextId>site_list-32</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>TANGBEKPA</name>
+          </item>
+          <item>
+            <itextId>site_list-33</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>ZA AGONDOKPOE / A</name>
+          </item>
+          <item>
+            <itextId>site_list-34</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>ZA DRAME / A</name>
+          </item>
+          <item>
+            <itextId>site_list-35</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>ZA KPOTA / A</name>
+          </item>
+          <item>
+            <itextId>site_list-36</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>ZA KPOTA CENTRE / B</name>
+          </item>
+          <item>
+            <itextId>site_list-37</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>ZA TANTA / B</name>
+          </item>
+          <item>
+            <itextId>site_list-38</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>ZEKO / B</name>
+          </item>
+          <item>
+            <itextId>site_list-39</itextId>
+            <commune_list>ZA-KPOTA</commune_list>
+            <name>ZEKO QUARTIER</name>
+          </item>
+          <item>
+            <itextId>site_list-40</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>ADAGBODJI</name>
+          </item>
+          <item>
+            <itextId>site_list-41</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>AHICON</name>
+          </item>
+          <item>
+            <itextId>site_list-42</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>AIZE / B</name>
+          </item>
+          <item>
+            <itextId>site_list-43</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>DOLIVI</name>
+          </item>
+          <item>
+            <itextId>site_list-44</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>EPP Dasso B</name>
+          </item>
+          <item>
+            <itextId>site_list-45</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>GNANLI ZOUNGUE / C</name>
+          </item>
+          <item>
+            <itextId>site_list-46</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>HOLLI</name>
+          </item>
+          <item>
+            <itextId>site_list-47</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>LE PROGRES</name>
+          </item>
+          <item>
+            <itextId>site_list-48</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>MAFOUNGBON</name>
+          </item>
+          <item>
+            <itextId>site_list-49</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>MIDJANNAGAN</name>
+          </item>
+          <item>
+            <itextId>site_list-50</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>MONZOUNGOUDO</name>
+          </item>
+          <item>
+            <itextId>site_list-51</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>ODJA ODAN</name>
+          </item>
+          <item>
+            <itextId>site_list-52</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>OUOKON AHLAN</name>
+          </item>
+          <item>
+            <itextId>site_list-53</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>OZOKPODI</name>
+          </item>
+          <item>
+            <itextId>site_list-54</itextId>
+            <commune_list>OUINHI</commune_list>
+            <name>TEZOUNME</name>
+          </item>
+          <item>
+            <itextId>site_list-55</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>ADADJAGON</name>
+          </item>
+          <item>
+            <itextId>site_list-56</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>AGBLADOHO</name>
+          </item>
+          <item>
+            <itextId>site_list-57</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>AGONGBODJI / B</name>
+          </item>
+          <item>
+            <itextId>site_list-58</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>AGONVE</name>
+          </item>
+          <item>
+            <itextId>site_list-59</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>AHLAN</name>
+          </item>
+          <item>
+            <itextId>site_list-60</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>AKOHAGON</name>
+          </item>
+          <item>
+            <itextId>site_list-61</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>AZAKPA</name>
+          </item>
+          <item>
+            <itextId>site_list-62</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>BOCONONGON</name>
+          </item>
+          <item>
+            <itextId>site_list-63</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>BODEDJI</name>
+          </item>
+          <item>
+            <itextId>site_list-64</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>DOGA ZOUNGOUDO / B</name>
+          </item>
+          <item>
+            <itextId>site_list-65</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>DON / A</name>
+          </item>
+          <item>
+            <itextId>site_list-66</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>DON / B</name>
+          </item>
+          <item>
+            <itextId>site_list-67</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>DOVI DOVE / A</name>
+          </item>
+          <item>
+            <itextId>site_list-68</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>DOVI ZOUNOU</name>
+          </item>
+          <item>
+            <itextId>site_list-69</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>EPP Aissin
+Dangbehoue</name>
+          </item>
+          <item>
+            <itextId>site_list-70</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>GOBLIDJI</name>
+          </item>
+          <item>
+            <itextId>site_list-71</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>HELOUTEDJI</name>
+          </item>
+          <item>
+            <itextId>site_list-72</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>IGBO OLA</name>
+          </item>
+          <item>
+            <itextId>site_list-73</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>KPOTO</name>
+          </item>
+          <item>
+            <itextId>site_list-74</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>LA JEUNESSE AMBITION</name>
+          </item>
+          <item>
+            <itextId>site_list-75</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>MASSAGBO</name>
+          </item>
+          <item>
+            <itextId>site_list-76</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>WOKPA</name>
+          </item>
+          <item>
+            <itextId>site_list-77</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>WOMETO GLONZOUME</name>
+          </item>
+          <item>
+            <itextId>site_list-78</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>ZAGNANADO CENTRE</name>
+          </item>
+          <item>
+            <itextId>site_list-79</itextId>
+            <commune_list>ZAGNANADO</commune_list>
+            <name>ZOBLAGADA</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_ids">
+        <root>
+          <item>
+            <itextId>site_ids-0</itextId>
+            <name>100</name>
+            <site_list>EYRAM</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-1</itextId>
+            <name>101</name>
+            <site_list>LA REFERENCE (ADOGBE)</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-2</itextId>
+            <name>102</name>
+            <site_list>AHITO</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-3</itextId>
+            <name>103</name>
+            <site_list>GOUNLI/A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-4</itextId>
+            <name>104</name>
+            <site_list>HOUNSO/C</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-5</itextId>
+            <name>105</name>
+            <site_list>LES GRANDES AMES</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-6</itextId>
+            <name>106</name>
+            <site_list>SOLI/A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-7</itextId>
+            <name>107</name>
+            <site_list>ZOGBA/A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-8</itextId>
+            <name>108</name>
+            <site_list>ADJOKAN / C</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-9</itextId>
+            <name>109</name>
+            <site_list>ADJOKAN HOUAWO / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-10</itextId>
+            <name>110</name>
+            <site_list>SOWEKPA</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-11</itextId>
+            <name>111</name>
+            <site_list>FOLLY</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-12</itextId>
+            <name>112</name>
+            <site_list>KOGUEDE / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-13</itextId>
+            <name>113</name>
+            <site_list>AFFOSSOWAGBA</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-14</itextId>
+            <name>114</name>
+            <site_list>KPAKPAME / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-15</itextId>
+            <name>115</name>
+            <site_list>ZA DRAME / A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-16</itextId>
+            <name>116</name>
+            <site_list>KPOZOUN / C</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-17</itextId>
+            <name>117</name>
+            <site_list>KPOZOUN / A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-18</itextId>
+            <name>118</name>
+            <site_list>Adjido A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-19</itextId>
+            <name>119</name>
+            <site_list>LE SUCCES D'ADJIDO</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-20</itextId>
+            <name>120</name>
+            <site_list>SAINTE THERESE DE L'ENFANT JESUS</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-21</itextId>
+            <name>121</name>
+            <site_list>ZA KPOTA / A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-22</itextId>
+            <name>122</name>
+            <site_list>ZA KPOTA CENTRE / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-23</itextId>
+            <name>123</name>
+            <site_list>LA PERSEVERANCE</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-24</itextId>
+            <name>124</name>
+            <site_list>ZA AGONDOKPOE / A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-25</itextId>
+            <name>125</name>
+            <site_list>ZA TANTA / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-26</itextId>
+            <name>126</name>
+            <site_list>LA REFERENCE (ZEKO)</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-27</itextId>
+            <name>127</name>
+            <site_list>TANGBEKPA</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-28</itextId>
+            <name>128</name>
+            <site_list>ZEKO / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-29</itextId>
+            <name>129</name>
+            <site_list>ZEKO QUARTIER</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-30</itextId>
+            <name>130</name>
+            <site_list>EPP Dasso B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-31</itextId>
+            <name>131</name>
+            <site_list>AHICON</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-32</itextId>
+            <name>132</name>
+            <site_list>HOLLI</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-33</itextId>
+            <name>133</name>
+            <site_list>LE PROGRES</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-34</itextId>
+            <name>134</name>
+            <site_list>MAFOUNGBON</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-35</itextId>
+            <name>135</name>
+            <site_list>MONZOUNGOUDO</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-36</itextId>
+            <name>136</name>
+            <site_list>ODJA ODAN</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-37</itextId>
+            <name>137</name>
+            <site_list>OUOKON AHLAN</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-38</itextId>
+            <name>138</name>
+            <site_list>ADAGBODJI</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-39</itextId>
+            <name>139</name>
+            <site_list>AIZE / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-40</itextId>
+            <name>140</name>
+            <site_list>DOLIVI</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-41</itextId>
+            <name>141</name>
+            <site_list>OZOKPODI</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-42</itextId>
+            <name>142</name>
+            <site_list>TEZOUNME</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-43</itextId>
+            <name>143</name>
+            <site_list>EPP Aissin
+Dangbehoue</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-44</itextId>
+            <name>144</name>
+            <site_list>AGBLADOHO</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-45</itextId>
+            <name>145</name>
+            <site_list>AKOHAGON</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-46</itextId>
+            <name>146</name>
+            <site_list>BOCONONGON</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-47</itextId>
+            <name>147</name>
+            <site_list>BODEDJI</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-48</itextId>
+            <name>148</name>
+            <site_list>HELOUTEDJI</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-49</itextId>
+            <name>149</name>
+            <site_list>MASSAGBO</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-50</itextId>
+            <name>150</name>
+            <site_list>ZOBLAGADA</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-51</itextId>
+            <name>151</name>
+            <site_list>DON / A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-52</itextId>
+            <name>152</name>
+            <site_list>DON / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-53</itextId>
+            <name>153</name>
+            <site_list>GOBLIDJI</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-54</itextId>
+            <name>154</name>
+            <site_list>DOVI DOVE / A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-55</itextId>
+            <name>155</name>
+            <site_list>AZAKPA</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-56</itextId>
+            <name>156</name>
+            <site_list>IGBO OLA</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-57</itextId>
+            <name>157</name>
+            <site_list>WOMETO GLONZOUME</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-58</itextId>
+            <name>158</name>
+            <site_list>LA JEUNESSE AMBITION</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-59</itextId>
+            <name>159</name>
+            <site_list>ZAGNANADO CENTRE</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-60</itextId>
+            <name>160</name>
+            <site_list>COVE/C</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-61</itextId>
+            <name>161</name>
+            <site_list>DOVI COGBE</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-62</itextId>
+            <name>162</name>
+            <site_list>TOKPLEGBE/B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-63</itextId>
+            <name>163</name>
+            <site_list>CATHOLIQUE SAINT AUGUSTIN</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-64</itextId>
+            <name>164</name>
+            <site_list>ZOGBA/B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-65</itextId>
+            <name>165</name>
+            <site_list>HOUNGOME</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-66</itextId>
+            <name>166</name>
+            <site_list>DRAME TANDJI</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-67</itextId>
+            <name>167</name>
+            <site_list>DJOYITIN / A</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-68</itextId>
+            <name>168</name>
+            <site_list>KPOZOUN / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-69</itextId>
+            <name>169</name>
+            <site_list>ALLOHOUN OUNKANME / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-70</itextId>
+            <name>170</name>
+            <site_list>GNANLI ZOUNGUE / C</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-71</itextId>
+            <name>171</name>
+            <site_list>MIDJANNAGAN</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-72</itextId>
+            <name>172</name>
+            <site_list>WOKPA</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-73</itextId>
+            <name>173</name>
+            <site_list>ADADJAGON</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-74</itextId>
+            <name>174</name>
+            <site_list>DOVI ZOUNOU</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-75</itextId>
+            <name>175</name>
+            <site_list>AGONGBODJI / B</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-76</itextId>
+            <name>176</name>
+            <site_list>AGONVE</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-77</itextId>
+            <name>177</name>
+            <site_list>AHLAN</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-78</itextId>
+            <name>178</name>
+            <site_list>KPOTO</site_list>
+          </item>
+          <item>
+            <itextId>site_ids-79</itextId>
+            <name>179</name>
+            <site_list>DOGA ZOUNGOUDO / B</site_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/c_recorder:jr:constraintMsg')" nodeset="/data/c_recorder" required="true()" type="int"/>
+      <bind nodeset="/data/c_eu_name" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_commune" required="true()" type="string" db_add_col_1="/data/c_eu_name" db_add_col_2="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_commune" db_add_col_3="."/>
+      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
+      <bind nodeset="/data/c_cluster_leader_name" required="true()" type="string"/>
+      <bind nodeset="/data/c_cluster_leader_contact" required="true()" type="int"/>
+      <bind nodeset="/data/c_consent" required="true()" type="string"/>
+      <bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_present:jr:constraintMsg')" nodeset="/data/c_present" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_absent:jr:constraintMsg')" nodeset="/data/c_absent" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'No'" type="string"/>
+      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder">
+      <label ref="jr:itext('/data/c_recorder:label')"/>
+      <hint ref="jr:itext('/data/c_recorder:hint')"/>
+    </input>
+    <select1 ref="/data/c_eu_name">
+      <label ref="jr:itext('/data/c_eu_name:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/COVE:label')"/>
+        <value>COVE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu_name/OUINHI:label')"/>
+        <value>OUINHI</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_commune">
+      <label ref="jr:itext('/data/c_commune:label')"/>
+      <itemset nodeset="instance('commune_list')/root/item[eu_list =  /data/c_eu_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+      <itemset nodeset="instance('site_list')/root/item[commune_list =  /data/c_commune ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+      <hint ref="jr:itext('/data/c_cluster_id:hint')"/>
+      <itemset nodeset="instance('site_ids')/root/item[site_list =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_cluster_leader_name">
+      <label ref="jr:itext('/data/c_cluster_leader_name:label')"/>
+    </input>
+    <input ref="/data/c_cluster_leader_contact">
+      <label ref="jr:itext('/data/c_cluster_leader_contact:label')"/>
+    </input>
+    <select1 ref="/data/c_consent">
+      <label ref="jr:itext('/data/c_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_consent/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_consent/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/c_population">
+      <label ref="jr:itext('/data/c_population:label')"/>
+    </input>
+    <input ref="/data/c_present">
+      <label ref="jr:itext('/data/c_present:label')"/>
+    </input>
+    <input ref="/data/c_absent">
+      <label ref="jr:itext('/data/c_absent:label')"/>
+    </input>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <input ref="/data/p_ending_survey_note">
+      <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
+    </input>
+    <input ref="/data/c_ClusterNotes">
+      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>
