@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Avril) - 3. Formulaire FTS Résultat</h:title>
+    <h:title>(2023 Avril) - 3. Formulaire FTS Résultat V1</h:title>
     <model >
 
       <instance>
-        <data id="bj_lf_tas3_202304_3_fts_result" version="20210412">
+        <data id="bj_lf_tas3_202304_3_fts_result_v1" version="20210412">
           <d_recorderID/>
           <d_eu_name/>
           <d_commune/>
@@ -39,7 +39,6 @@
           <d_display_result3/>
           <d_final_result/>
           <d_display_final_result/>
-          <d_positive_why_no_tx/>
           <notes_part/>
           <d_start/>
           <d_end/>
@@ -246,9 +245,6 @@
             <value>This participant's final result is: <output value=" /data/d_final_result "/>
             </value>
           </text>
-          <text id="/data/d_positive_why_no_tx:label">
-            <value>Please specify the plan to treat this participant or explain why treatment is not possible.</value>
-          </text>
           <text id="/data/notes_part:label">
             <value>Additional Notes on form</value>
           </text>
@@ -449,9 +445,6 @@
             <value>Le résultat final de ce participant est: <output value=" /data/d_final_result "/>
             </value>
           </text>
-          <text id="/data/d_positive_why_no_tx:label">
-            <value>Veuillez préciser le plan de traitement de ce participant ou expliquer pourquoi le traitement n'est pas possible.</value>
-          </text>
           <text id="/data/notes_part:label">
             <value>Notes additionnelles</value>
           </text>
@@ -523,7 +516,6 @@ or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="str
  )
 )" nodeset="/data/d_final_result" relevant=" /data/d_result1 != 'Negative'" type="string"/>
       <bind nodeset="/data/d_display_final_result" readonly="true()" relevant=" /data/d_result1 != 'Negative'" type="string"/>
-      <bind nodeset="/data/d_positive_why_no_tx" relevant=" /data/d_final_result  = 'Positif'" type="string"/>
       <bind nodeset="/data/notes_part" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
@@ -729,9 +721,6 @@ or ( /data/d_result1  = 'Invalide' and  /data/d_result2  = 'Positif')" type="str
     </input>
     <input ref="/data/d_display_final_result">
       <label ref="jr:itext('/data/d_display_final_result:label')"/>
-    </input>
-    <input ref="/data/d_positive_why_no_tx">
-      <label ref="jr:itext('/data/d_positive_why_no_tx:label')"/>
     </input>
     <input ref="/data/notes_part">
       <label ref="jr:itext('/data/notes_part:label')"/>
