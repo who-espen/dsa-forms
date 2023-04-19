@@ -7,23 +7,25 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Avril) - 4. SCH/STH - Urine Filtration</h:title>
+    <h:title>(2023 Avril) - 4. SCH/STH - Urine Filtration V1</h:title>
     <model >
 
       <instance>
-        <data id="bj_sch_sth_impact_202304_4_urine_filtration">
+        <data id="bj_sch_sth_impact_202304_4_urine_filtration_v1">
           <u_recorder/>
           <u_district/>
           <u_subdistrict/>
           <u_site_name/>
           <u_site_code/>
-          <espen_code_id/>
+          <u_espen_code_id/>
+          <u_urine_filtrer/>
           <u_urine_vol/>
           <u_urine_vol_sup/>
           <u_sh_egp_10ml/>
           <u_sh_egp_10ml_sup/>
-          <k_sch_man/>
-          <k_sch_man_sup/>
+          <u_sch_man_a/>
+          <u_sch_man_b/>
+          <u_sch_man_sup/>
           <u_remarks/>
           <u_start/>
           <u_end/>
@@ -56,14 +58,23 @@
           <text id="/data/u_site_code:label">
             <value>Sélectionner le code de l'école</value>
           </text>
-          <text id="/data/espen_code_id:jr:constraintMsg">
+          <text id="/data/u_espen_code_id:jr:constraintMsg">
             <value>Veuillez entrer le code du participant. Exemple 123-01</value>
           </text>
-          <text id="/data/espen_code_id:label">
+          <text id="/data/u_espen_code_id:label">
             <value>Code d'identification du répondant (Veuillez Saisir le code du participant tel qu'il a été généré dans le formulaire 2)</value>
           </text>
-          <text id="/data/espen_code_id:hint">
+          <text id="/data/u_espen_code_id:hint">
             <value>Exemple: 123-01. Il s'agit du code de l'école suivi d'un tiret puis du numéro d'ordre du participant sur deux chiffres.</value>
+          </text>
+          <text id="/data/u_urine_filtrer:label">
+            <value>Confirmer que l'urine a été conservé pour filtration et que les résultats finaux insérés seront le nombre d'œufs ?</value>
+          </text>
+          <text id="/data/u_urine_filtrer/Confirmé:label">
+            <value>Confirmé</value>
+          </text>
+          <text id="/data/u_urine_filtrer/Pas confirmé:label">
+            <value>Pas confirmé</value>
           </text>
           <text id="/data/u_urine_vol:jr:constraintMsg">
             <value>Le volume doit être limité à 10ml</value>
@@ -83,10 +94,13 @@
           <text id="/data/u_sh_egp_10ml_sup:label">
             <value>Nombre d'œufs de Schistosoma haematobium par 10 ml - Superviseur</value>
           </text>
-          <text id="/data/k_sch_man:label">
-            <value>Nombre d'œufs de Schistosoma mansoni</value>
+          <text id="/data/u_sch_man_a:label">
+            <value>Nombre d'œufs de Schistosoma mansoni - Lame A</value>
           </text>
-          <text id="/data/k_sch_man_sup:label">
+          <text id="/data/u_sch_man_b:label">
+            <value>Nombre d'œufs de Schistosoma mansoni - Lame B</value>
+          </text>
+          <text id="/data/u_sch_man_sup:label">
             <value>Nombre d'œufs de Schistosoma mansoni - Superviseur</value>
           </text>
           <text id="/data/u_remarks:label">
@@ -101,12 +115,14 @@
 			<bind nodeset="/data/u_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_subdistrict"/>
 			<bind nodeset="/data/u_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_site_name"/>
 			<bind constraint="regex(.,'^[0-9]{3}-[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/espen_code_id:jr:constraintMsg')" nodeset="/data/espen_code_id" required="true()" type="string"/>
+      <bind nodeset="/data/u_urine_filtrer" required="true()" type="string"/>
       <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" type="int"/>
       <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol_sup:jr:constraintMsg')" nodeset="/data/u_urine_vol_sup" type="int"/>
       <bind nodeset="/data/u_sh_egp_10ml" required="true()" type="int"/>
       <bind nodeset="/data/u_sh_egp_10ml_sup" required="true()" type="int"/>
-      <bind nodeset="/data/k_sch_man" type="int"/>
-      <bind nodeset="/data/k_sch_man_sup" type="int"/>
+      <bind nodeset="/data/u_sch_man_a" type="int"/>
+      <bind nodeset="/data/u_sch_man_b" type="int"/>
+      <bind nodeset="/data/u_sch_man_sup" type="int"/>
       <bind nodeset="/data/u_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
@@ -130,10 +146,21 @@
     <input ref="/data/u_site_code">
       <label ref="jr:itext('/data/u_site_code:label')"/>
     </input>
-    <input ref="/data/espen_code_id">
-      <label ref="jr:itext('/data/espen_code_id:label')"/>
-      <hint ref="jr:itext('/data/espen_code_id:hint')"/>
+    <input ref="/data/u_espen_code_id">
+      <label ref="jr:itext('/data/u_espen_code_id:label')"/>
+      <hint ref="jr:itext('/data/u_espen_code_id:hint')"/>
     </input>
+    <select1 ref="/data/u_urine_filtrer">
+      <label ref="jr:itext('/data/u_urine_filtrer:label')"/>
+      <item>
+        <label ref="jr:itext('/data/u_urine_filtrer/Confirmé:label')"/>
+        <value>Confirmé</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/u_urine_filtrer/Pas confirmé:label')"/>
+        <value>Pas confirmé</value>
+      </item>
+    </select1>
     <input ref="/data/u_urine_vol">
       <label ref="jr:itext('/data/u_urine_vol:label')"/>
     </input>
@@ -146,11 +173,14 @@
     <input ref="/data/u_sh_egp_10ml_sup">
       <label ref="jr:itext('/data/u_sh_egp_10ml_sup:label')"/>
     </input>
-    <input ref="/data/k_sch_man">
-      <label ref="jr:itext('/data/k_sch_man:label')"/>
+    <input ref="/data/u_sch_man_a">
+      <label ref="jr:itext('/data/u_sch_man_a:label')"/>
     </input>
-    <input ref="/data/k_sch_man_sup">
-      <label ref="jr:itext('/data/k_sch_man_sup:label')"/>
+    <input ref="/data/u_sch_man_b">
+      <label ref="jr:itext('/data/u_sch_man_b:label')"/>
+    </input>
+    <input ref="/data/u_sch_man_sup">
+      <label ref="jr:itext('/data/u_sch_man_sup:label')"/>
     </input>
     <input ref="/data/u_remarks">
       <label ref="jr:itext('/data/u_remarks:label')"/>
