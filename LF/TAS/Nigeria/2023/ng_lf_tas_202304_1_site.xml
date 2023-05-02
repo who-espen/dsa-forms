@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2023 Avr) Nigeria - 1. TAS1 LF Site Form</h:title>
+    <model >
+
+      <instance>
+        <data id="ng_lf_tas_202304_1_site">
+          <c_recorder/>
+          <c_eu/>
+          <c_district/>
+          <c_cluster_name/>
+          <c_cluster_id/>
+          <c_cluster_leader/>
+          <c_consent/>
+          <c_gps/>
+          <c_ending_survey_note/>
+          <c_ClusterNotes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/c_recorder:jr:constraintMsg">
+            <value>The code must be a two-digit number between 9 and 100</value>
+          </text>
+          <text id="/data/c_recorder:label">
+            <value>Enter Recorder ID</value>
+          </text>
+          <text id="/data/c_recorder:hint">
+            <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
+          </text>
+          <text id="/data/c_eu:label">
+            <value>Select your EU</value>
+          </text>
+          <text id="/data/c_eu/ABUA/ODUAL:label">
+            <value>ABUA/ODUAL</value>
+          </text>
+          <text id="/data/c_eu/AHOADA WEST:label">
+            <value>AHOADA WEST</value>
+          </text>
+          <text id="/data/c_eu/EMOHUA:label">
+            <value>EMOHUA</value>
+          </text>
+          <text id="/data/c_eu/EMUOHA:label">
+            <value>EMUOHA</value>
+          </text>
+          <text id="/data/c_eu/ETCHE:label">
+            <value>ETCHE</value>
+          </text>
+          <text id="/data/c_eu/IKWERE:label">
+            <value>IKWERE</value>
+          </text>
+          <text id="/data/c_eu/KHANA:label">
+            <value>KHANA</value>
+          </text>
+          <text id="/data/c_eu/OGBA/EGBMA/NDONI:label">
+            <value>OGBA/EGBMA/NDONI</value>
+          </text>
+          <text id="/data/c_eu/OYIGBO:label">
+            <value>OYIGBO</value>
+          </text>
+          <text id="/data/c_eu/TAI:label">
+            <value>TAI</value>
+          </text>
+          <text id="/data/c_district:label">
+            <value>Select your LGA</value>
+          </text>
+          <text id="/data/c_cluster_name:label">
+            <value>Select the school</value>
+          </text>
+          <text id="/data/c_cluster_id:jr:constraintMsg">
+            <value>The code must be a three-digit number</value>
+          </text>
+          <text id="/data/c_cluster_id:label">
+            <value>Enter the school ID</value>
+          </text>
+          <text id="/data/c_cluster_leader:label">
+            <value>Name of Village Leader or Head Teacher</value>
+          </text>
+          <text id="/data/c_consent:label">
+            <value>Does the school leader or community leader consent to participating in this survey?</value>
+          </text>
+          <text id="/data/c_consent/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/c_consent/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/c_gps:label">
+            <value>Record your location:</value>
+          </text>
+          <text id="/data/c_gps:hint">
+            <value>GPS coordinates are easier to collect outside. 2 min timeout</value>
+          </text>
+          <text id="/data/c_ending_survey_note:label">
+            <value>You just entered a value that will end the survey</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Additional notes to add?</value>
+          </text>
+          <text id="/data/c_start:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="/data/c_end:label">
+            <value>date and time the recorder starts to fill the form</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="yes_no-1">
+            <value>No</value>
+          </text>
+          <text id="eu-0">
+            <value>ABUA/ODUAL</value>
+          </text>
+          <text id="eu-1">
+            <value>AHOADA WEST</value>
+          </text>
+          <text id="eu-2">
+            <value>EMOHUA</value>
+          </text>
+          <text id="eu-3">
+            <value>EMUOHA</value>
+          </text>
+          <text id="eu-4">
+            <value>ETCHE</value>
+          </text>
+          <text id="eu-5">
+            <value>IKWERE</value>
+          </text>
+          <text id="eu-6">
+            <value>KHANA</value>
+          </text>
+          <text id="eu-7">
+            <value>OGBA/EGBMA/NDONI</value>
+          </text>
+          <text id="eu-8">
+            <value>OYIGBO</value>
+          </text>
+          <text id="eu-9">
+            <value>TAI</value>
+          </text>
+          <text id="district-0">
+            <value>ABUA/ODUAL</value>
+          </text>
+          <text id="district-1">
+            <value>AHOADA WEST</value>
+          </text>
+          <text id="district-2">
+            <value>EMOHUA</value>
+          </text>
+          <text id="district-3">
+            <value>EMUOHA</value>
+          </text>
+          <text id="district-4">
+            <value>ETCHE</value>
+          </text>
+          <text id="district-5">
+            <value>IKWERE</value>
+          </text>
+          <text id="district-6">
+            <value>KHANA</value>
+          </text>
+          <text id="district-7">
+            <value>OGBA/EGBMA/NDONI</value>
+          </text>
+          <text id="district-8">
+            <value>OYIGBO</value>
+          </text>
+          <text id="district-9">
+            <value>TAI</value>
+          </text>
+          <text id="school-0">
+            <value>ADADA</value>
+          </text>
+          <text id="school-1">
+            <value>EGBEMA</value>
+          </text>
+          <text id="school-2">
+            <value>IDU</value>
+          </text>
+          <text id="school-3">
+            <value>IKODU</value>
+          </text>
+          <text id="school-4">
+            <value>AKPABU</value>
+          </text>
+          <text id="school-5">
+            <value>OBITIE</value>
+          </text>
+          <text id="school-6">
+            <value>OGIDA</value>
+          </text>
+          <text id="school-7">
+            <value>OPIORO</value>
+          </text>
+          <text id="school-8">
+            <value>OWAZA</value>
+          </text>
+          <text id="school-9">
+            <value>UMUATURU</value>
+          </text>
+          <text id="school-10">
+            <value>UMUECHE</value>
+          </text>
+          <text id="school-11">
+            <value>UMUADULAM</value>
+          </text>
+          <text id="school-12">
+            <value>LUWA</value>
+          </text>
+          <text id="school-13">
+            <value>ISUKWA</value>
+          </text>
+          <text id="school-14">
+            <value>NDONI</value>
+          </text>
+          <text id="school-15">
+            <value>UJU</value>
+          </text>
+          <text id="school-16">
+            <value>OBETE</value>
+          </text>
+          <text id="school-17">
+            <value>UEKEN</value>
+          </text>
+          <text id="school_id-0">
+            <value>101</value>
+          </text>
+          <text id="school_id-1">
+            <value>102</value>
+          </text>
+          <text id="school_id-2">
+            <value>103</value>
+          </text>
+          <text id="school_id-3">
+            <value>104</value>
+          </text>
+          <text id="school_id-4">
+            <value>105</value>
+          </text>
+          <text id="school_id-5">
+            <value>106</value>
+          </text>
+          <text id="school_id-6">
+            <value>107</value>
+          </text>
+          <text id="school_id-7">
+            <value>108</value>
+          </text>
+          <text id="school_id-8">
+            <value>109</value>
+          </text>
+          <text id="school_id-9">
+            <value>110</value>
+          </text>
+          <text id="school_id-10">
+            <value>111</value>
+          </text>
+          <text id="school_id-11">
+            <value>112</value>
+          </text>
+          <text id="school_id-12">
+            <value>113</value>
+          </text>
+          <text id="school_id-13">
+            <value>114</value>
+          </text>
+          <text id="school_id-14">
+            <value>115</value>
+          </text>
+          <text id="school_id-15">
+            <value>116</value>
+          </text>
+          <text id="school_id-16">
+            <value>117</value>
+          </text>
+          <text id="school_id-17">
+            <value>118</value>
+          </text>
+        </translation>
+      </itext>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="eu">
+        <root>
+          <item>
+            <itextId>eu-0</itextId>
+            <name>ABUA/ODUAL</name>
+          </item>
+          <item>
+            <itextId>eu-1</itextId>
+            <name>AHOADA WEST</name>
+          </item>
+          <item>
+            <itextId>eu-2</itextId>
+            <name>EMOHUA</name>
+          </item>
+          <item>
+            <itextId>eu-3</itextId>
+            <name>EMUOHA</name>
+          </item>
+          <item>
+            <itextId>eu-4</itextId>
+            <name>ETCHE</name>
+          </item>
+          <item>
+            <itextId>eu-5</itextId>
+            <name>IKWERE</name>
+          </item>
+          <item>
+            <itextId>eu-6</itextId>
+            <name>KHANA</name>
+          </item>
+          <item>
+            <itextId>eu-7</itextId>
+            <name>OGBA/EGBMA/NDONI</name>
+          </item>
+          <item>
+            <itextId>eu-8</itextId>
+            <name>OYIGBO</name>
+          </item>
+          <item>
+            <itextId>eu-9</itextId>
+            <name>TAI</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district">
+        <root>
+          <item>
+            <itextId>district-0</itextId>
+            <eu>ABUA/ODUAL</eu>
+            <name>ABUA/ODUAL</name>
+          </item>
+          <item>
+            <itextId>district-1</itextId>
+            <eu>AHOADA WEST</eu>
+            <name>AHOADA WEST</name>
+          </item>
+          <item>
+            <itextId>district-2</itextId>
+            <eu>EMOHUA</eu>
+            <name>EMOHUA</name>
+          </item>
+          <item>
+            <itextId>district-3</itextId>
+            <eu>EMUOHA</eu>
+            <name>EMUOHA</name>
+          </item>
+          <item>
+            <itextId>district-4</itextId>
+            <eu>ETCHE</eu>
+            <name>ETCHE</name>
+          </item>
+          <item>
+            <itextId>district-5</itextId>
+            <eu>IKWERE</eu>
+            <name>IKWERE</name>
+          </item>
+          <item>
+            <itextId>district-6</itextId>
+            <eu>KHANA</eu>
+            <name>KHANA</name>
+          </item>
+          <item>
+            <itextId>district-7</itextId>
+            <eu>OGBA/EGBMA/NDONI</eu>
+            <name>OGBA/EGBMA/NDONI</name>
+          </item>
+          <item>
+            <itextId>district-8</itextId>
+            <eu>OYIGBO</eu>
+            <name>OYIGBO</name>
+          </item>
+          <item>
+            <itextId>district-9</itextId>
+            <eu>TAI</eu>
+            <name>TAI</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="school">
+        <root>
+          <item>
+            <itextId>school-0</itextId>
+            <district>ABUA/ODUAL</district>
+            <name>ADADA</name>
+          </item>
+          <item>
+            <itextId>school-1</itextId>
+            <district>AHOADA WEST</district>
+            <name>EGBEMA</name>
+          </item>
+          <item>
+            <itextId>school-2</itextId>
+            <district>AHOADA WEST</district>
+            <name>IDU</name>
+          </item>
+          <item>
+            <itextId>school-3</itextId>
+            <district>AHOADA WEST</district>
+            <name>IKODU</name>
+          </item>
+          <item>
+            <itextId>school-4</itextId>
+            <district>EMOHUA</district>
+            <name>AKPABU</name>
+          </item>
+          <item>
+            <itextId>school-5</itextId>
+            <district>EMUOHA</district>
+            <name>OBITIE</name>
+          </item>
+          <item>
+            <itextId>school-6</itextId>
+            <district>ETCHE</district>
+            <name>OGIDA</name>
+          </item>
+          <item>
+            <itextId>school-7</itextId>
+            <district>ETCHE</district>
+            <name>OPIORO</name>
+          </item>
+          <item>
+            <itextId>school-8</itextId>
+            <district>ETCHE</district>
+            <name>OWAZA</name>
+          </item>
+          <item>
+            <itextId>school-9</itextId>
+            <district>ETCHE</district>
+            <name>UMUATURU</name>
+          </item>
+          <item>
+            <itextId>school-10</itextId>
+            <district>ETCHE</district>
+            <name>UMUECHE</name>
+          </item>
+          <item>
+            <itextId>school-11</itextId>
+            <district>IKWERE</district>
+            <name>UMUADULAM</name>
+          </item>
+          <item>
+            <itextId>school-12</itextId>
+            <district>KHANA</district>
+            <name>LUWA</name>
+          </item>
+          <item>
+            <itextId>school-13</itextId>
+            <district>OGBA/EGBMA/NDONI</district>
+            <name>ISUKWA</name>
+          </item>
+          <item>
+            <itextId>school-14</itextId>
+            <district>OGBA/EGBMA/NDONI</district>
+            <name>NDONI</name>
+          </item>
+          <item>
+            <itextId>school-15</itextId>
+            <district>OGBA/EGBMA/NDONI</district>
+            <name>UJU</name>
+          </item>
+          <item>
+            <itextId>school-16</itextId>
+            <district>OYIGBO</district>
+            <name>OBETE</name>
+          </item>
+          <item>
+            <itextId>school-17</itextId>
+            <district>TAI</district>
+            <name>UEKEN</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="school_id">
+        <root>
+          <item>
+            <itextId>school_id-0</itextId>
+            <name>101</name>
+            <school>ADADA</school>
+          </item>
+          <item>
+            <itextId>school_id-1</itextId>
+            <name>102</name>
+            <school>EGBEMA</school>
+          </item>
+          <item>
+            <itextId>school_id-2</itextId>
+            <name>103</name>
+            <school>IDU</school>
+          </item>
+          <item>
+            <itextId>school_id-3</itextId>
+            <name>104</name>
+            <school>NDONI</school>
+          </item>
+          <item>
+            <itextId>school_id-4</itextId>
+            <name>105</name>
+            <school>ISUKWA</school>
+          </item>
+          <item>
+            <itextId>school_id-5</itextId>
+            <name>106</name>
+            <school>UJU</school>
+          </item>
+          <item>
+            <itextId>school_id-6</itextId>
+            <name>107</name>
+            <school>OBITIE</school>
+          </item>
+          <item>
+            <itextId>school_id-7</itextId>
+            <name>108</name>
+            <school>OGIDA</school>
+          </item>
+          <item>
+            <itextId>school_id-8</itextId>
+            <name>109</name>
+            <school>UEKEN</school>
+          </item>
+          <item>
+            <itextId>school_id-9</itextId>
+            <name>110</name>
+            <school>UMUECHE</school>
+          </item>
+          <item>
+            <itextId>school_id-10</itextId>
+            <name>111</name>
+            <school>IKODU</school>
+          </item>
+          <item>
+            <itextId>school_id-11</itextId>
+            <name>112</name>
+            <school>AKPABU</school>
+          </item>
+          <item>
+            <itextId>school_id-12</itextId>
+            <name>113</name>
+            <school>OPIORO</school>
+          </item>
+          <item>
+            <itextId>school_id-13</itextId>
+            <name>114</name>
+            <school>OBETE</school>
+          </item>
+          <item>
+            <itextId>school_id-14</itextId>
+            <name>115</name>
+            <school>UMUATURU</school>
+          </item>
+          <item>
+            <itextId>school_id-15</itextId>
+            <name>116</name>
+            <school>OWAZA</school>
+          </item>
+          <item>
+            <itextId>school_id-16</itextId>
+            <name>117</name>
+            <school>UMUADULAM</school>
+          </item>
+          <item>
+            <itextId>school_id-17</itextId>
+            <name>118</name>
+            <school>LUWA</school>
+          </item>
+        </root>
+      </instance>
+      <bind constraint=". &gt; 9 and . &lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder:jr:constraintMsg')" nodeset="/data/c_recorder" required="true()" type="int"/>
+      <bind nodeset="/data/c_eu" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="/data/c_eu" db_add_col_2="."/>
+      <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_2="/data/c_district" db_add_col_3="."/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
+      <bind nodeset="/data/c_cluster_leader" required="true()" type="string"/>
+      <bind nodeset="/data/c_consent" required="true()" type="string"/>
+      <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'No'" type="string"/>
+      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_recorder">
+      <label ref="jr:itext('/data/c_recorder:label')"/>
+      <hint ref="jr:itext('/data/c_recorder:hint')"/>
+    </input>
+    <select1 ref="/data/c_eu">
+      <label ref="jr:itext('/data/c_eu:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_eu/ABUA/ODUAL:label')"/>
+        <value>ABUA/ODUAL</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu/AHOADA WEST:label')"/>
+        <value>AHOADA WEST</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu/EMOHUA:label')"/>
+        <value>EMOHUA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu/EMUOHA:label')"/>
+        <value>EMUOHA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu/ETCHE:label')"/>
+        <value>ETCHE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu/IKWERE:label')"/>
+        <value>IKWERE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu/KHANA:label')"/>
+        <value>KHANA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu/OGBA/EGBMA/NDONI:label')"/>
+        <value>OGBA/EGBMA/NDONI</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu/OYIGBO:label')"/>
+        <value>OYIGBO</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_eu/TAI:label')"/>
+        <value>TAI</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_district">
+      <label ref="jr:itext('/data/c_district:label')"/>
+      <itemset nodeset="instance('district')/root/item[eu =  /data/c_eu ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+      <itemset nodeset="instance('school')/root/item[district =  /data/c_district ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+      <itemset nodeset="instance('school_id')/root/item[school =  /data/c_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_cluster_leader">
+      <label ref="jr:itext('/data/c_cluster_leader:label')"/>
+    </input>
+    <select1 ref="/data/c_consent">
+      <label ref="jr:itext('/data/c_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_consent/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_consent/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/c_gps">
+      <label ref="jr:itext('/data/c_gps:label')"/>
+      <hint ref="jr:itext('/data/c_gps:hint')"/>
+    </input>
+    <input ref="/data/c_ending_survey_note">
+      <label ref="jr:itext('/data/c_ending_survey_note:label')"/>
+    </input>
+    <input ref="/data/c_ClusterNotes">
+      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>
