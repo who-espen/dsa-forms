@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Mai 2023) impact schisto - 4. Formulaire Results _Urines</h:title>
-    <model odk:xforms-version="1.0.0">
+    <h:title>(BF - Mai 2023) impact schisto - 4. Formulaire Results _Urines V1.1</h:title>
+    <model >
 
       <instance>
-        <data id="bf_202305_sch_impact_assessment_4_resultat_urines">
+        <data id="bf_202305_sch_impact_assessment_4_resultat_urines_v1_1">
           <u_recorder/>
           <u_drshp/>
           <u_district/>
@@ -26,7 +26,6 @@
           <u_Graduation/>
           <u_Echantillionpositif/>
           <u_OeufsA/>
-          <u_OeufsB/>
           <u_commentaires/>
           <u_start/>
           <u_end/>
@@ -165,10 +164,7 @@
             <value>Non</value>
           </text>
           <text id="/data/u_OeufsA:label">
-            <value>Nombre d'œufs pour la lame A (œufs/10ml)</value>
-          </text>
-          <text id="/data/u_OeufsB:label">
-            <value>Nombre d'œufs pour la lame B (œufs/10ml)</value>
+            <value>Nombre d'œufs pour la lame (œufs/10ml)</value>
           </text>
           <text id="/data/u_commentaires:label">
             <value>Commentaires</value>
@@ -970,7 +966,6 @@
       <bind nodeset="/data/u_Graduation" relevant=" /data/u_Echantilliontraite  = '1_oui'" required="true()" type="string"/>
       <bind nodeset="/data/u_Echantillionpositif" relevant=" /data/u_Echantilliontraite  = '1_oui'" required="true()" type="string"/>
       <bind nodeset="/data/u_OeufsA" relevant=" /data/u_Echantillionpositif  = '1_oui'" required="true()" type="int"/>
-      <bind nodeset="/data/u_OeufsB" relevant=" /data/u_Echantillionpositif  = '1_oui'" required="true()" type="int"/>
       <bind nodeset="/data/u_commentaires" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
@@ -1131,9 +1126,6 @@
     </select1>
     <input ref="/data/u_OeufsA">
       <label ref="jr:itext('/data/u_OeufsA:label')"/>
-    </input>
-    <input ref="/data/u_OeufsB">
-      <label ref="jr:itext('/data/u_OeufsB:label')"/>
     </input>
     <input ref="/data/u_commentaires">
       <label ref="jr:itext('/data/u_commentaires:label')"/>
