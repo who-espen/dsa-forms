@@ -1,0 +1,919 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2023 June) - 6. RDT OV16 Form</h:title>
+    <model odk:xforms-version="1.0.0">
+
+      <instance>
+        <data id="ng_oncho_stop_6_rdtov16_202206">
+          <d_recorder_id/>
+          <d_region/>
+          <d_District/>
+          <d_Cluster_Name/>
+          <d_cluster_id/>
+          <d_LabOV162ndTest/>
+          <d_lotnumber/>
+          <d_serial_number1/>
+          <d_serial_number2/>
+          <d_code_id/>
+          <d_LabOV16/>
+          <d_LabOV16Invalid/>
+          <d_LabOV16Invalid_other/>
+          <d_Notes/>
+          <d_StartTime/>
+          <d_EndTime/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/d_recorder_id:jr:constraintMsg">
+            <value>The code must be a two-digit number between 9 and 99</value>
+          </text>
+          <text id="/data/d_recorder_id:label">
+            <value>Enter the recorder ID</value>
+          </text>
+          <text id="/data/d_recorder_id:hint">
+            <value>Two-digit code assigned to you</value>
+          </text>
+          <text id="/data/d_region:label">
+            <value>Select a department</value>
+          </text>
+          <text id="/data/d_region/CROSS RIVER:label">
+            <value>CROSS RIVER</value>
+          </text>
+          <text id="/data/d_District:label">
+            <value>Select a commune</value>
+          </text>
+          <text id="/data/d_Cluster_Name:label">
+            <value>Enter cluster name</value>
+          </text>
+          <text id="/data/d_cluster_id:label">
+            <value>Enter cluster ID</value>
+          </text>
+          <text id="/data/d_LabOV162ndTest:label">
+            <value>Is this a second OV16 test</value>
+          </text>
+          <text id="/data/d_LabOV162ndTest/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/d_LabOV162ndTest/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/d_lotnumber:label">
+            <value>Enter RDT batch number</value>
+          </text>
+          <text id="/data/d_serial_number1:jr:constraintMsg">
+            <value>Must be a three-digit number. example: 001</value>
+          </text>
+          <text id="/data/d_serial_number1:label">
+            <value>Please, enter the participant serial number</value>
+          </text>
+          <text id="/data/d_serial_number2:jr:constraintMsg">
+            <value>The repeated code must be the same</value>
+          </text>
+          <text id="/data/d_serial_number2:label">
+            <value>Please, repeat the participant serial number</value>
+          </text>
+          <text id="/data/d_code_id:label">
+            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) adminstered</value>
+          </text>
+          <text id="/data/d_LabOV16:label">
+            <value>RDT OV16 test result</value>
+          </text>
+          <text id="/data/d_LabOV16/Positive:label">
+            <value>Positive</value>
+          </text>
+          <text id="/data/d_LabOV16/Negative:label">
+            <value>Negative</value>
+          </text>
+          <text id="/data/d_LabOV16/Invalid:label">
+            <value>Invalid (including test errors and insufficient blood)</value>
+          </text>
+          <text id="/data/d_LabOV16/Refused:label">
+            <value>Refused (withdrawal of consent)</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid:label">
+            <value>Invalid Result Details</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/No.control.lines:label">
+            <value>No control lines</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Broken/partial.control.line:label">
+            <value>Broken/partial control line</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Difficulty.with.sample.absorption:label">
+            <value>Difficulty with sample absorption</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Difficulty.with.sample.migration:label">
+            <value>Difficulty with sample migration</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Trace.of.blood.remains:label">
+            <value>Trace of blood remains</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Insufficient.blood.volume.due.to.pipette:label">
+            <value>Insufficient blood volume due to pipette</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid/Other:label">
+            <value>Other (please explain)</value>
+          </text>
+          <text id="/data/d_LabOV16Invalid_other:label">
+            <value>Invalid Result Details</value>
+          </text>
+          <text id="/data/d_Notes:label">
+            <value>Additional Notes</value>
+          </text>
+          <text id="yesNoDontKnow-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesNoDontKnow-1">
+            <value>No</value>
+          </text>
+          <text id="yesNoDontKnow-2">
+            <value>Don't know</value>
+          </text>
+          <text id="yesNo-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesNo-1">
+            <value>No</value>
+          </text>
+          <text id="p_IDMethod-0">
+            <value>Scanner</value>
+          </text>
+          <text id="p_IDMethod-1">
+            <value>Automatic Generation</value>
+          </text>
+          <text id="results-0">
+            <value>Positive</value>
+          </text>
+          <text id="results-1">
+            <value>Negative</value>
+          </text>
+          <text id="results-2">
+            <value>Invalid (including test errors and insufficient blood)</value>
+          </text>
+          <text id="results-3">
+            <value>Refused (withdrawal of consent)</value>
+          </text>
+          <text id="why_invalid-0">
+            <value>No control lines</value>
+          </text>
+          <text id="why_invalid-1">
+            <value>Broken/partial control line</value>
+          </text>
+          <text id="why_invalid-2">
+            <value>Difficulty with sample absorption</value>
+          </text>
+          <text id="why_invalid-3">
+            <value>Difficulty with sample migration</value>
+          </text>
+          <text id="why_invalid-4">
+            <value>Trace of blood remains</value>
+          </text>
+          <text id="why_invalid-5">
+            <value>Insufficient blood volume due to pipette</value>
+          </text>
+          <text id="why_invalid-6">
+            <value>Other (please explain)</value>
+          </text>
+          <text id="region_list-0">
+            <value>CROSS RIVER</value>
+          </text>
+          <text id="district_list-0">
+            <value>AKAMKPA</value>
+          </text>
+          <text id="district_list-1">
+            <value>BEKWARRA</value>
+          </text>
+          <text id="district_list-2">
+            <value>BIASE</value>
+          </text>
+          <text id="district_list-3">
+            <value>BOKI</value>
+          </text>
+          <text id="district_list-4">
+            <value>ETUNG</value>
+          </text>
+          <text id="district_list-5">
+            <value>IKOM</value>
+          </text>
+          <text id="district_list-6">
+            <value>OBANLIKU</value>
+          </text>
+          <text id="district_list-7">
+            <value>OBIANLIKU</value>
+          </text>
+          <text id="district_list-8">
+            <value>OBUBRA</value>
+          </text>
+          <text id="district_list-9">
+            <value>OBUDU</value>
+          </text>
+          <text id="district_list-10">
+            <value>YAKURR</value>
+          </text>
+          <text id="district_list-11">
+            <value>YALA</value>
+          </text>
+          <text id="community-0">
+            <value>AKING</value>
+          </text>
+          <text id="community-1">
+            <value>AKWA IBAMI</value>
+          </text>
+          <text id="community-2">
+            <value>EKANG</value>
+          </text>
+          <text id="community-3">
+            <value>EKONG</value>
+          </text>
+          <text id="community-4">
+            <value>MFAMOSING</value>
+          </text>
+          <text id="community-5">
+            <value>OBAN</value>
+          </text>
+          <text id="community-6">
+            <value>AFRIKE</value>
+          </text>
+          <text id="community-7">
+            <value>AKPARAVUNI</value>
+          </text>
+          <text id="community-8">
+            <value>BANSAN</value>
+          </text>
+          <text id="community-9">
+            <value>DANARE</value>
+          </text>
+          <text id="community-10">
+            <value>OKWA</value>
+          </text>
+          <text id="community-11">
+            <value>ABIA</value>
+          </text>
+          <text id="community-12">
+            <value>EKURI EYENGYEG</value>
+          </text>
+          <text id="community-13">
+            <value>ETARA</value>
+          </text>
+          <text id="community-14">
+            <value>ABARAGBA</value>
+          </text>
+          <text id="community-15">
+            <value>BASSINGE</value>
+          </text>
+          <text id="community-16">
+            <value>BAYALUGA</value>
+          </text>
+          <text id="community-17">
+            <value>BUANCHOR</value>
+          </text>
+          <text id="community-18">
+            <value>KIGOL</value>
+          </text>
+          <text id="community-19">
+            <value>OLD IKWETE</value>
+          </text>
+          <text id="community-20">
+            <value>EDONDON</value>
+          </text>
+          <text id="community-21">
+            <value>BEBI</value>
+          </text>
+          <text id="community-22">
+            <value>AGOI IBAMI</value>
+          </text>
+          <text id="community-23">
+            <value>OTUKPO</value>
+          </text>
+          <text id="community_id-0">
+            <value>101</value>
+          </text>
+          <text id="community_id-1">
+            <value>102</value>
+          </text>
+          <text id="community_id-2">
+            <value>103</value>
+          </text>
+          <text id="community_id-3">
+            <value>104</value>
+          </text>
+          <text id="community_id-4">
+            <value>105</value>
+          </text>
+          <text id="community_id-5">
+            <value>106</value>
+          </text>
+          <text id="community_id-6">
+            <value>107</value>
+          </text>
+          <text id="community_id-7">
+            <value>108</value>
+          </text>
+          <text id="community_id-8">
+            <value>109</value>
+          </text>
+          <text id="community_id-9">
+            <value>110</value>
+          </text>
+          <text id="community_id-10">
+            <value>111</value>
+          </text>
+          <text id="community_id-11">
+            <value>112</value>
+          </text>
+          <text id="community_id-12">
+            <value>113</value>
+          </text>
+          <text id="community_id-13">
+            <value>114</value>
+          </text>
+          <text id="community_id-14">
+            <value>115</value>
+          </text>
+          <text id="community_id-15">
+            <value>116</value>
+          </text>
+          <text id="community_id-16">
+            <value>117</value>
+          </text>
+          <text id="community_id-17">
+            <value>118</value>
+          </text>
+          <text id="community_id-18">
+            <value>119</value>
+          </text>
+          <text id="community_id-19">
+            <value>120</value>
+          </text>
+          <text id="community_id-20">
+            <value>121</value>
+          </text>
+          <text id="community_id-21">
+            <value>122</value>
+          </text>
+          <text id="community_id-22">
+            <value>123</value>
+          </text>
+          <text id="community_id-23">
+            <value>124</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="yesNoDontKnow">
+        <root>
+          <item>
+            <itextId>yesNoDontKnow-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-1</itextId>
+            <name>No</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-2</itextId>
+            <name>Don't know</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yesNo">
+        <root>
+          <item>
+            <itextId>yesNo-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesNo-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="p_IDMethod">
+        <root>
+          <item>
+            <itextId>p_IDMethod-0</itextId>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <itextId>p_IDMethod-1</itextId>
+            <name>ID_generation</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="results">
+        <root>
+          <item>
+            <itextId>results-0</itextId>
+            <name>Positive</name>
+          </item>
+          <item>
+            <itextId>results-1</itextId>
+            <name>Negative</name>
+          </item>
+          <item>
+            <itextId>results-2</itextId>
+            <name>Invalid</name>
+          </item>
+          <item>
+            <itextId>results-3</itextId>
+            <name>Refused</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="why_invalid">
+        <root>
+          <item>
+            <itextId>why_invalid-0</itextId>
+            <name>No.control.lines</name>
+          </item>
+          <item>
+            <itextId>why_invalid-1</itextId>
+            <name>Broken/partial.control.line</name>
+          </item>
+          <item>
+            <itextId>why_invalid-2</itextId>
+            <name>Difficulty.with.sample.absorption</name>
+          </item>
+          <item>
+            <itextId>why_invalid-3</itextId>
+            <name>Difficulty.with.sample.migration</name>
+          </item>
+          <item>
+            <itextId>why_invalid-4</itextId>
+            <name>Trace.of.blood.remains</name>
+          </item>
+          <item>
+            <itextId>why_invalid-5</itextId>
+            <name>Insufficient.blood.volume.due.to.pipette</name>
+          </item>
+          <item>
+            <itextId>why_invalid-6</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <itextId>region_list-0</itextId>
+            <name>CROSS RIVER</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>AKAMKPA</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>BEKWARRA</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>BIASE</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-3</itextId>
+            <name>BOKI</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-4</itextId>
+            <name>ETUNG</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-5</itextId>
+            <name>IKOM</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-6</itextId>
+            <name>OBANLIKU</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-7</itextId>
+            <name>OBIANLIKU</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-8</itextId>
+            <name>OBUBRA</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-9</itextId>
+            <name>OBUDU</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-10</itextId>
+            <name>YAKURR</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+          <item>
+            <itextId>district_list-11</itextId>
+            <name>YALA</name>
+            <region_list>CROSS RIVER</region_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="community">
+        <root>
+          <item>
+            <itextId>community-0</itextId>
+            <district_list>AKAMKPA</district_list>
+            <name>AKING</name>
+          </item>
+          <item>
+            <itextId>community-1</itextId>
+            <district_list>AKAMKPA</district_list>
+            <name>AKWA IBAMI</name>
+          </item>
+          <item>
+            <itextId>community-2</itextId>
+            <district_list>AKAMKPA</district_list>
+            <name>EKANG</name>
+          </item>
+          <item>
+            <itextId>community-3</itextId>
+            <district_list>AKAMKPA</district_list>
+            <name>EKONG</name>
+          </item>
+          <item>
+            <itextId>community-4</itextId>
+            <district_list>AKAMKPA</district_list>
+            <name>MFAMOSING</name>
+          </item>
+          <item>
+            <itextId>community-5</itextId>
+            <district_list>AKAMKPA</district_list>
+            <name>OBAN</name>
+          </item>
+          <item>
+            <itextId>community-6</itextId>
+            <district_list>BEKWARRA</district_list>
+            <name>AFRIKE</name>
+          </item>
+          <item>
+            <itextId>community-7</itextId>
+            <district_list>BIASE</district_list>
+            <name>AKPARAVUNI</name>
+          </item>
+          <item>
+            <itextId>community-8</itextId>
+            <district_list>BOKI</district_list>
+            <name>BANSAN</name>
+          </item>
+          <item>
+            <itextId>community-9</itextId>
+            <district_list>BOKI</district_list>
+            <name>DANARE</name>
+          </item>
+          <item>
+            <itextId>community-10</itextId>
+            <district_list>BOKI</district_list>
+            <name>OKWA</name>
+          </item>
+          <item>
+            <itextId>community-11</itextId>
+            <district_list>ETUNG</district_list>
+            <name>ABIA</name>
+          </item>
+          <item>
+            <itextId>community-12</itextId>
+            <district_list>ETUNG</district_list>
+            <name>EKURI EYENGYEG</name>
+          </item>
+          <item>
+            <itextId>community-13</itextId>
+            <district_list>ETUNG</district_list>
+            <name>ETARA</name>
+          </item>
+          <item>
+            <itextId>community-14</itextId>
+            <district_list>IKOM</district_list>
+            <name>ABARAGBA</name>
+          </item>
+          <item>
+            <itextId>community-15</itextId>
+            <district_list>OBANLIKU</district_list>
+            <name>BASSINGE</name>
+          </item>
+          <item>
+            <itextId>community-16</itextId>
+            <district_list>OBANLIKU</district_list>
+            <name>BAYALUGA</name>
+          </item>
+          <item>
+            <itextId>community-17</itextId>
+            <district_list>OBANLIKU</district_list>
+            <name>BUANCHOR</name>
+          </item>
+          <item>
+            <itextId>community-18</itextId>
+            <district_list>OBIANLIKU</district_list>
+            <name>KIGOL</name>
+          </item>
+          <item>
+            <itextId>community-19</itextId>
+            <district_list>OBIANLIKU</district_list>
+            <name>OLD IKWETE</name>
+          </item>
+          <item>
+            <itextId>community-20</itextId>
+            <district_list>OBUBRA</district_list>
+            <name>EDONDON</name>
+          </item>
+          <item>
+            <itextId>community-21</itextId>
+            <district_list>OBUDU</district_list>
+            <name>BEBI</name>
+          </item>
+          <item>
+            <itextId>community-22</itextId>
+            <district_list>YAKURR</district_list>
+            <name>AGOI IBAMI</name>
+          </item>
+          <item>
+            <itextId>community-23</itextId>
+            <district_list>YALA</district_list>
+            <name>OTUKPO</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="community_id">
+        <root>
+          <item>
+            <itextId>community_id-0</itextId>
+            <community>AKING</community>
+            <name>101</name>
+          </item>
+          <item>
+            <itextId>community_id-1</itextId>
+            <community>AKWA IBAMI</community>
+            <name>102</name>
+          </item>
+          <item>
+            <itextId>community_id-2</itextId>
+            <community>EKANG</community>
+            <name>103</name>
+          </item>
+          <item>
+            <itextId>community_id-3</itextId>
+            <community>EKONG</community>
+            <name>104</name>
+          </item>
+          <item>
+            <itextId>community_id-4</itextId>
+            <community>MFAMOSING</community>
+            <name>105</name>
+          </item>
+          <item>
+            <itextId>community_id-5</itextId>
+            <community>OBAN</community>
+            <name>106</name>
+          </item>
+          <item>
+            <itextId>community_id-6</itextId>
+            <community>AFRIKE</community>
+            <name>107</name>
+          </item>
+          <item>
+            <itextId>community_id-7</itextId>
+            <community>AKPARAVUNI</community>
+            <name>108</name>
+          </item>
+          <item>
+            <itextId>community_id-8</itextId>
+            <community>BANSAN</community>
+            <name>109</name>
+          </item>
+          <item>
+            <itextId>community_id-9</itextId>
+            <community>DANARE</community>
+            <name>110</name>
+          </item>
+          <item>
+            <itextId>community_id-10</itextId>
+            <community>OKWA</community>
+            <name>111</name>
+          </item>
+          <item>
+            <itextId>community_id-11</itextId>
+            <community>ABIA</community>
+            <name>112</name>
+          </item>
+          <item>
+            <itextId>community_id-12</itextId>
+            <community>EKURI EYENGYEG</community>
+            <name>113</name>
+          </item>
+          <item>
+            <itextId>community_id-13</itextId>
+            <community>ETARA</community>
+            <name>114</name>
+          </item>
+          <item>
+            <itextId>community_id-14</itextId>
+            <community>ABARAGBA</community>
+            <name>115</name>
+          </item>
+          <item>
+            <itextId>community_id-15</itextId>
+            <community>BASSINGE</community>
+            <name>116</name>
+          </item>
+          <item>
+            <itextId>community_id-16</itextId>
+            <community>BAYALUGA</community>
+            <name>117</name>
+          </item>
+          <item>
+            <itextId>community_id-17</itextId>
+            <community>BUANCHOR</community>
+            <name>118</name>
+          </item>
+          <item>
+            <itextId>community_id-18</itextId>
+            <community>KIGOL</community>
+            <name>119</name>
+          </item>
+          <item>
+            <itextId>community_id-19</itextId>
+            <community>OLD IKWETE</community>
+            <name>120</name>
+          </item>
+          <item>
+            <itextId>community_id-20</itextId>
+            <community>EDONDON</community>
+            <name>121</name>
+          </item>
+          <item>
+            <itextId>community_id-21</itextId>
+            <community>BEBI</community>
+            <name>122</name>
+          </item>
+          <item>
+            <itextId>community_id-22</itextId>
+            <community>AGOI IBAMI</community>
+            <name>123</name>
+          </item>
+          <item>
+            <itextId>community_id-23</itextId>
+            <community>OTUKPO</community>
+            <name>124</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/d_recorder_id:jr:constraintMsg')" nodeset="/data/d_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/d_region" required="true()" type="string"/>
+      <bind nodeset="/data/d_District" required="true()" type="string"/>
+      <bind nodeset="/data/d_Cluster_Name" required="true()" type="string"/>
+      <bind nodeset="/data/d_cluster_id" required="true()" type="string"/>
+      <bind nodeset="/data/d_LabOV162ndTest" required="true()" type="string"/>
+      <bind nodeset="/data/d_lotnumber" required="true()" type="string"/>
+      <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_serial_number1:jr:constraintMsg')" nodeset="/data/d_serial_number1" required="true()" type="string"/>
+      <bind constraint=". =  /data/d_serial_number1 " jr:constraintMsg="jr:itext('/data/d_serial_number2:jr:constraintMsg')" nodeset="/data/d_serial_number2" required="true()" type="string"/>
+      <bind calculate="concat( /data/d_recorder_id , '-',  /data/d_cluster_id , '-',  /data/d_serial_number1 )" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/data/d_LabOV16" required="true()" type="string"/>
+      <bind nodeset="/data/d_LabOV16Invalid" relevant=" /data/d_LabOV16  = 'Invalid'" required="true()" type="string"/>
+      <bind nodeset="/data/d_LabOV16Invalid_other" relevant=" /data/d_LabOV16Invalid  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/d_Notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_StartTime" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_EndTime" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/d_recorder_id">
+      <label ref="jr:itext('/data/d_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/d_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/d_region">
+      <label ref="jr:itext('/data/d_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_region/CROSS RIVER:label')"/>
+        <value>CROSS RIVER</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_District">
+      <label ref="jr:itext('/data/d_District:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[ /data/d_region  = region_list]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_Cluster_Name">
+      <label ref="jr:itext('/data/d_Cluster_Name:label')"/>
+      <itemset nodeset="instance('community')/root/item[ /data/d_District  = district_list]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_cluster_id">
+      <label ref="jr:itext('/data/d_cluster_id:label')"/>
+      <itemset nodeset="instance('community_id')/root/item[ /data/d_Cluster_Name  = community]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_LabOV162ndTest">
+      <label ref="jr:itext('/data/d_LabOV162ndTest:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV162ndTest/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV162ndTest/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/d_lotnumber">
+      <label ref="jr:itext('/data/d_lotnumber:label')"/>
+    </input>
+    <input ref="/data/d_serial_number1">
+      <label ref="jr:itext('/data/d_serial_number1:label')"/>
+    </input>
+    <input ref="/data/d_serial_number2">
+      <label ref="jr:itext('/data/d_serial_number2:label')"/>
+    </input>
+    <input ref="/data/d_code_id">
+      <label ref="jr:itext('/data/d_code_id:label')"/>
+    </input>
+    <select1 ref="/data/d_LabOV16">
+      <label ref="jr:itext('/data/d_LabOV16:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16/Positive:label')"/>
+        <value>Positive</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16/Negative:label')"/>
+        <value>Negative</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16/Invalid:label')"/>
+        <value>Invalid</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16/Refused:label')"/>
+        <value>Refused</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_LabOV16Invalid">
+      <label ref="jr:itext('/data/d_LabOV16Invalid:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/No.control.lines:label')"/>
+        <value>No.control.lines</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Broken/partial.control.line:label')"/>
+        <value>Broken/partial.control.line</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Difficulty.with.sample.absorption:label')"/>
+        <value>Difficulty.with.sample.absorption</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Difficulty.with.sample.migration:label')"/>
+        <value>Difficulty.with.sample.migration</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Trace.of.blood.remains:label')"/>
+        <value>Trace.of.blood.remains</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Insufficient.blood.volume.due.to.pipette:label')"/>
+        <value>Insufficient.blood.volume.due.to.pipette</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_LabOV16Invalid/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/d_LabOV16Invalid_other">
+      <label ref="jr:itext('/data/d_LabOV16Invalid_other:label')"/>
+    </input>
+    <input ref="/data/d_Notes">
+      <label ref="jr:itext('/data/d_Notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
