@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2023 Juin) ONCHO Stop TDM - 1. Formulaire Site</h:title>
+    <model >
+
+      <instance>
+        <data id="bj_oncho_stop_1_202306_site" version="20201130">
+          <c_RecorderID/>
+          <c_region/>
+          <c_District/>
+          <c_Cluster_Name/>
+          <c_cluster_type/>
+          <c_GPS/>
+          <c_VillagePop/>
+          <c_ClusterNotes/>
+          <c_StartTime/>
+          <c_EndTime/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/c_RecorderID:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 99</value>
+          </text>
+          <text id="/data/c_RecorderID:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/c_RecorderID:hint">
+            <value>Code à deux chiffres qui vous a été assigné</value>
+          </text>
+          <text id="/data/c_region:label">
+            <value>Sélectionner un département</value>
+          </text>
+          <text id="/data/c_region/BANTE:label">
+            <value>BANTE</value>
+          </text>
+          <text id="/data/c_region/BASSILA:label">
+            <value>BASSILA</value>
+          </text>
+          <text id="/data/c_region/SAVE:label">
+            <value>SAVE</value>
+          </text>
+          <text id="/data/c_region/TCHAOUROU:label">
+            <value>TCHAOUROU</value>
+          </text>
+          <text id="/data/c_region/OUAKE:label">
+            <value>OUAKE</value>
+          </text>
+          <text id="/data/c_District:label">
+            <value>Sélectionner une commune</value>
+          </text>
+          <text id="/data/c_Cluster_Name:label">
+            <value>Entrer le nom du grappe</value>
+          </text>
+          <text id="/data/c_cluster_type:label">
+            <value>Type de grappe</value>
+          </text>
+          <text id="/data/c_cluster_type/1ere ligne:label">
+            <value>1ère ligne</value>
+          </text>
+          <text id="/data/c_cluster_type/2eme ligne:label">
+            <value>2ème ligne</value>
+          </text>
+          <text id="/data/c_cluster_type/3eme ligne:label">
+            <value>3ème ligne</value>
+          </text>
+          <text id="/data/c_GPS:label">
+            <value>Capturer les données GPS</value>
+          </text>
+          <text id="/data/c_GPS:hint">
+            <value>Fonctionne mieux à l'extérieure des bâtiments</value>
+          </text>
+          <text id="/data/c_VillagePop:label">
+            <value>Entrer la population total du village</value>
+          </text>
+          <text id="/data/c_VillagePop:hint">
+            <value>Vous pouvez obtenir ces informations dans le registre communautaire d'AMM</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Notes additionnelles</value>
+          </text>
+          <text id="village_type-0">
+            <value>1ère ligne</value>
+          </text>
+          <text id="village_type-1">
+            <value>2ème ligne</value>
+          </text>
+          <text id="village_type-2">
+            <value>3ème ligne</value>
+          </text>
+          <text id="region_list-0">
+            <value>BANTE</value>
+          </text>
+          <text id="region_list-1">
+            <value>BASSILA</value>
+          </text>
+          <text id="region_list-2">
+            <value>SAVE</value>
+          </text>
+          <text id="region_list-3">
+            <value>TCHAOUROU</value>
+          </text>
+          <text id="region_list-4">
+            <value>OUAKE</value>
+          </text>
+          <text id="district_list-0">
+            <value>PIRA</value>
+          </text>
+          <text id="district_list-1">
+            <value>BASSILA</value>
+          </text>
+          <text id="district_list-2">
+            <value>PENESOULOU</value>
+          </text>
+          <text id="district_list-3">
+            <value>BESSÈ</value>
+          </text>
+          <text id="district_list-4">
+            <value>KABOUA</value>
+          </text>
+          <text id="district_list-5">
+            <value>OKPARA</value>
+          </text>
+          <text id="district_list-6">
+            <value>BETEROU</value>
+          </text>
+          <text id="district_list-7">
+            <value>KIKA</value>
+          </text>
+          <text id="district_list-8">
+            <value>TCHALENGA</value>
+          </text>
+          <text id="village_list-0">
+            <value>ADON KABOURÉ</value>
+          </text>
+          <text id="village_list-1">
+            <value>AKOUTA OSSE</value>
+          </text>
+          <text id="village_list-2">
+            <value>ARIGBOKOTO</value>
+          </text>
+          <text id="village_list-3">
+            <value>ADJIMON</value>
+          </text>
+          <text id="village_list-4">
+            <value>ASSION</value>
+          </text>
+          <text id="village_list-5">
+            <value>DOGUE</value>
+          </text>
+          <text id="village_list-6">
+            <value>IGBOMAKRO</value>
+          </text>
+          <text id="village_list-7">
+            <value>KIKELE</value>
+          </text>
+          <text id="village_list-8">
+            <value>ODOKOUDJÈ</value>
+          </text>
+          <text id="village_list-9">
+            <value>ENGARADEBOU</value>
+          </text>
+          <text id="village_list-10">
+            <value>SALMANGA</value>
+          </text>
+          <text id="village_list-11">
+            <value>BESSE OWODÉ</value>
+          </text>
+          <text id="village_list-12">
+            <value>DJABATA</value>
+          </text>
+          <text id="village_list-13">
+            <value>IGBODJA</value>
+          </text>
+          <text id="village_list-14">
+            <value>OKPA</value>
+          </text>
+          <text id="village_list-15">
+            <value>BAKO</value>
+          </text>
+          <text id="village_list-16">
+            <value>OKÉOWO</value>
+          </text>
+          <text id="village_list-17">
+            <value>BETEROU</value>
+          </text>
+          <text id="village_list-18">
+            <value>OUBEROU</value>
+          </text>
+          <text id="village_list-19">
+            <value>SINAOU</value>
+          </text>
+          <text id="village_list-20">
+            <value>WARI MARO</value>
+          </text>
+          <text id="village_list-21">
+            <value>KIKA</value>
+          </text>
+          <text id="village_list-22">
+            <value>KOKOBE</value>
+          </text>
+          <text id="village_list-23">
+            <value>KPASSA</value>
+          </text>
+          <text id="village_list-24">
+            <value>TEROU</value>
+          </text>
+          <text id="village_list-25">
+            <value>GBONGBONTOUTA</value>
+          </text>
+          <text id="village_list-26">
+            <value>KAWADO</value>
+          </text>
+          <text id="village_list-27">
+            <value>PITAOUDÈ</value>
+          </text>
+          <text id="yesNoDontKnow-0">
+            <value>Oui</value>
+          </text>
+          <text id="yesNoDontKnow-1">
+            <value>Non</value>
+          </text>
+          <text id="yesNoDontKnow-2">
+            <value>Ne sais pas</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="village_type">
+        <root>
+          <item>
+            <itextId>village_type-0</itextId>
+            <name>1ere ligne</name>
+          </item>
+          <item>
+            <itextId>village_type-1</itextId>
+            <name>2eme ligne</name>
+          </item>
+          <item>
+            <itextId>village_type-2</itextId>
+            <name>3eme ligne</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <itextId>region_list-0</itextId>
+            <name>BANTE</name>
+          </item>
+          <item>
+            <itextId>region_list-1</itextId>
+            <name>BASSILA</name>
+          </item>
+          <item>
+            <itextId>region_list-2</itextId>
+            <name>SAVE</name>
+          </item>
+          <item>
+            <itextId>region_list-3</itextId>
+            <name>TCHAOUROU</name>
+          </item>
+          <item>
+            <itextId>region_list-4</itextId>
+            <name>OUAKE</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>PIRA</name>
+            <region_list>BANTE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>BASSILA</name>
+            <region_list>BASSILA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>PENESOULOU</name>
+            <region_list>BASSILA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-3</itextId>
+            <name>BESSÈ</name>
+            <region_list>SAVE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-4</itextId>
+            <name>KABOUA</name>
+            <region_list>SAVE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-5</itextId>
+            <name>OKPARA</name>
+            <region_list>SAVE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-6</itextId>
+            <name>BETEROU</name>
+            <region_list>TCHAOUROU</region_list>
+          </item>
+          <item>
+            <itextId>district_list-7</itextId>
+            <name>KIKA</name>
+            <region_list>TCHAOUROU</region_list>
+          </item>
+          <item>
+            <itextId>district_list-8</itextId>
+            <name>TCHALENGA</name>
+            <region_list>OUAKE</region_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="village_list">
+        <root>
+          <item>
+            <itextId>village_list-0</itextId>
+            <district_list>PIRA</district_list>
+            <name>ADON KABOURÉ</name>
+          </item>
+          <item>
+            <itextId>village_list-1</itextId>
+            <district_list>PIRA</district_list>
+            <name>AKOUTA OSSE</name>
+          </item>
+          <item>
+            <itextId>village_list-2</itextId>
+            <district_list>PIRA</district_list>
+            <name>ARIGBOKOTO</name>
+          </item>
+          <item>
+            <itextId>village_list-3</itextId>
+            <district_list>BASSILA</district_list>
+            <name>ADJIMON</name>
+          </item>
+          <item>
+            <itextId>village_list-4</itextId>
+            <district_list>BASSILA</district_list>
+            <name>ASSION</name>
+          </item>
+          <item>
+            <itextId>village_list-5</itextId>
+            <district_list>BASSILA</district_list>
+            <name>DOGUE</name>
+          </item>
+          <item>
+            <itextId>village_list-6</itextId>
+            <district_list>BASSILA</district_list>
+            <name>IGBOMAKRO</name>
+          </item>
+          <item>
+            <itextId>village_list-7</itextId>
+            <district_list>BASSILA</district_list>
+            <name>KIKELE</name>
+          </item>
+          <item>
+            <itextId>village_list-8</itextId>
+            <district_list>BASSILA</district_list>
+            <name>ODOKOUDJÈ</name>
+          </item>
+          <item>
+            <itextId>village_list-9</itextId>
+            <district_list>PENESOULOU</district_list>
+            <name>ENGARADEBOU</name>
+          </item>
+          <item>
+            <itextId>village_list-10</itextId>
+            <district_list>PENESOULOU</district_list>
+            <name>SALMANGA</name>
+          </item>
+          <item>
+            <itextId>village_list-11</itextId>
+            <district_list>BESSÈ</district_list>
+            <name>BESSE OWODÉ</name>
+          </item>
+          <item>
+            <itextId>village_list-12</itextId>
+            <district_list>BESSÈ</district_list>
+            <name>DJABATA</name>
+          </item>
+          <item>
+            <itextId>village_list-13</itextId>
+            <district_list>BESSÈ</district_list>
+            <name>IGBODJA</name>
+          </item>
+          <item>
+            <itextId>village_list-14</itextId>
+            <district_list>BESSÈ</district_list>
+            <name>OKPA</name>
+          </item>
+          <item>
+            <itextId>village_list-15</itextId>
+            <district_list>KABOUA</district_list>
+            <name>BAKO</name>
+          </item>
+          <item>
+            <itextId>village_list-16</itextId>
+            <district_list>OKPARA</district_list>
+            <name>OKÉOWO</name>
+          </item>
+          <item>
+            <itextId>village_list-17</itextId>
+            <district_list>BETEROU</district_list>
+            <name>BETEROU</name>
+          </item>
+          <item>
+            <itextId>village_list-18</itextId>
+            <district_list>BETEROU</district_list>
+            <name>OUBEROU</name>
+          </item>
+          <item>
+            <itextId>village_list-19</itextId>
+            <district_list>BETEROU</district_list>
+            <name>SINAOU</name>
+          </item>
+          <item>
+            <itextId>village_list-20</itextId>
+            <district_list>BETEROU</district_list>
+            <name>WARI MARO</name>
+          </item>
+          <item>
+            <itextId>village_list-21</itextId>
+            <district_list>KIKA</district_list>
+            <name>KIKA</name>
+          </item>
+          <item>
+            <itextId>village_list-22</itextId>
+            <district_list>KIKA</district_list>
+            <name>KOKOBE</name>
+          </item>
+          <item>
+            <itextId>village_list-23</itextId>
+            <district_list>KIKA</district_list>
+            <name>KPASSA</name>
+          </item>
+          <item>
+            <itextId>village_list-24</itextId>
+            <district_list>KIKA</district_list>
+            <name>TEROU</name>
+          </item>
+          <item>
+            <itextId>village_list-25</itextId>
+            <district_list>TCHALENGA</district_list>
+            <name>GBONGBONTOUTA</name>
+          </item>
+          <item>
+            <itextId>village_list-26</itextId>
+            <district_list>TCHALENGA</district_list>
+            <name>KAWADO</name>
+          </item>
+          <item>
+            <itextId>village_list-27</itextId>
+            <district_list>TCHALENGA</district_list>
+            <name>PITAOUDÈ</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yesNoDontKnow">
+        <root>
+          <item>
+            <itextId>yesNoDontKnow-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-1</itextId>
+            <name>No</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-2</itextId>
+            <name>Don't know</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_RecorderID:jr:constraintMsg')" nodeset="/data/c_RecorderID" required="true()" type="int"/>
+      <bind nodeset="/data/c_region" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_District" required="true()" type="string" db_add_col_1="/data/c_region" db_add_col_2="."/>
+      <bind nodeset="/data/c_Cluster_Name" required="true()" type="string" db_add_col_2="/data/c_District" db_add_col_3="."/>
+      <bind nodeset="/data/c_cluster_type" type="string"/>
+      <bind nodeset="/data/c_GPS" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_VillagePop" type="int"/>
+      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_StartTime" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_EndTime" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_RecorderID">
+      <label ref="jr:itext('/data/c_RecorderID:label')"/>
+      <hint ref="jr:itext('/data/c_RecorderID:hint')"/>
+    </input>
+    <select1 ref="/data/c_region">
+      <label ref="jr:itext('/data/c_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_region/BANTE:label')"/>
+        <value>BANTE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/BASSILA:label')"/>
+        <value>BASSILA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/SAVE:label')"/>
+        <value>SAVE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/TCHAOUROU:label')"/>
+        <value>TCHAOUROU</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/OUAKE:label')"/>
+        <value>OUAKE</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_District">
+      <label ref="jr:itext('/data/c_District:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[ /data/c_region  = region_list]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_Cluster_Name">
+      <label ref="jr:itext('/data/c_Cluster_Name:label')"/>
+      <itemset nodeset="instance('village_list')/root/item[ /data/c_District  = district_list]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_cluster_type">
+      <label ref="jr:itext('/data/c_cluster_type:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_cluster_type/1ere ligne:label')"/>
+        <value>1ere ligne</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_cluster_type/2eme ligne:label')"/>
+        <value>2eme ligne</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_cluster_type/3eme ligne:label')"/>
+        <value>3eme ligne</value>
+      </item>
+    </select1>
+    <input ref="/data/c_GPS">
+      <label ref="jr:itext('/data/c_GPS:label')"/>
+      <hint ref="jr:itext('/data/c_GPS:hint')"/>
+    </input>
+    <input ref="/data/c_VillagePop">
+      <label ref="jr:itext('/data/c_VillagePop:label')"/>
+      <hint ref="jr:itext('/data/c_VillagePop:hint')"/>
+    </input>
+    <input ref="/data/c_ClusterNotes">
+      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>
