@@ -7,8 +7,28 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Juin) ONCHO Stop TDM - 3. Résultats de laboratoire</h:title>
+    <h:title>(2023 Juin) ONCHO Stop TDM - 3. Résultats de laboratoire V1.2</h:title>
     <model >
+
+      <instance>
+        <data id="bj_oncho_stop_3_202306_diag_v1_2" version="20201130">
+          <d_RecorderID/>
+          <d_District/>
+          <d_Cluster_Name/>
+          <d_id_type/>
+          <d_manual_id/>
+          <d_barecode_id/>
+          <d_control/>
+          <d_ov16_result/>
+          <d_ClusterNotes/>
+          <d_StartTime/>
+          <d_EndTime/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
       <itext>
         <translation default="true()" lang="French">
           <text id="/data/d_RecorderID:jr:constraintMsg">
@@ -52,6 +72,18 @@
           </text>
           <text id="/data/d_Cluster_Name:label">
             <value>Entrer le nom du grappe</value>
+          </text>
+          <text id="/data/d_id_type:label">
+            <value>Type d'identification</value>
+          </text>
+          <text id="/data/d_id_type/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/d_id_type/Manuel:label">
+            <value>Manuel</value>
+          </text>
+          <text id="/data/d_manual_id:label">
+            <value>Numéro d'identification du test</value>
           </text>
           <text id="/data/d_barecode_id:label">
             <value>Numéro d'identification du test</value>
@@ -103,6 +135,12 @@
           </text>
           <text id="results-2">
             <value>Indéterminé</value>
+          </text>
+          <text id="id_type-0">
+            <value>Scanner</value>
+          </text>
+          <text id="id_type-1">
+            <value>Manuel</value>
           </text>
           <text id="region_list-0">
             <value>BANTE</value>
@@ -241,22 +279,7 @@
           </text>
         </translation>
       </itext>
-      <instance>
-        <data id="bj_oncho_stop_3_202306_diag" version="20201130">
-          <d_RecorderID/>
-          <d_District/>
-          <d_Cluster_Name/>
-          <d_barecode_id/>
-          <d_control/>
-          <d_ov16_result/>
-          <d_ClusterNotes/>
-          <d_StartTime/>
-          <d_EndTime/>
-          <meta>
-            <instanceID/>
-          </meta>
-        </data>
-      </instance>
+
       <instance id="village_type">
         <root>
           <item>
@@ -298,6 +321,18 @@
           <item>
             <itextId>results-2</itextId>
             <name>Indéterminé</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="id_type">
+        <root>
+          <item>
+            <itextId>id_type-0</itextId>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <itextId>id_type-1</itextId>
+            <name>Manuel</name>
           </item>
         </root>
       </instance>
@@ -537,7 +572,9 @@
       <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/d_RecorderID:jr:constraintMsg')" nodeset="/data/d_RecorderID" required="true()" type="int"/>
       <bind nodeset="/data/d_District" required="true()" type="string"/>
       <bind nodeset="/data/d_Cluster_Name" required="true()" type="string"/>
-      <bind nodeset="/data/d_barecode_id" required="true()" type="barcode"/>
+      <bind nodeset="/data/d_id_type" required="true()" type="string"/>
+      <bind nodeset="/data/d_manual_id" relevant=" /data/d_id_type  = 'Manuel'" required="true()" type="string"/>
+      <bind nodeset="/data/d_barecode_id" relevant=" /data/d_id_type  = 'Scanner'" required="true()" type="barcode"/>
       <bind nodeset="/data/d_control" required="true()" type="string"/>
       <bind nodeset="/data/d_ov16_result" required="true()" type="string"/>
       <bind nodeset="/data/d_ClusterNotes" type="string"/>
@@ -597,6 +634,20 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <select1 ref="/data/d_id_type">
+      <label ref="jr:itext('/data/d_id_type:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_id_type/Scanner:label')"/>
+        <value>Scanner</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_id_type/Manuel:label')"/>
+        <value>Manuel</value>
+      </item>
+    </select1>
+    <input ref="/data/d_manual_id">
+      <label ref="jr:itext('/data/d_manual_id:label')"/>
+    </input>
     <input ref="/data/d_barecode_id">
       <label ref="jr:itext('/data/d_barecode_id:label')"/>
     </input>
