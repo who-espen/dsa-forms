@@ -7,19 +7,34 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Juillet) ONCHO Stop TDM - 1. Formulaire Site V2</h:title>
+    <h:title>(2023 Juillet) ONCHO Stop TDM - 5. Résultats de nouveau réactifs</h:title>
     <model >
 
       <instance>
-        <data id="bj_oncho_stop_1_202306_site_v2" version="20201130">
-          <c_RecorderID/>
-          <c_region/>
-          <c_District/>
-          <c_Cluster_Name/>
-          <c_GPS/>
-          <c_ClusterNotes/>
-          <c_StartTime/>
-          <c_EndTime/>
+        <data id="bj_oncho_stop_5_202306_new_reacti" version="20201130">
+          <n_RecorderID/>
+          <n_region/>
+          <n_District/>
+          <n_Cluster_Name/>
+          <n_id_type/>
+          <n_barecode_id/>
+          <n_manual_id/>
+          <n_manual_id2/>
+          <n_type_test/>
+          <n_result_ddtd/>
+          <n_result_not_clear_reason/>
+          <n_result_not_clear_reason_other/>
+          <n_result_gadx/>
+          <n_line/>
+          <n_gadx_invalid_reason/>
+          <n_gadx_invalid_reason_other/>
+          <n_result_dbs/>
+          <n_dbs_invalid_reason/>
+          <n_dbs_invalid_reason_other/>
+          <n_photo/>
+          <n_notes/>
+          <n_StartTime/>
+          <n_EndTime/>
           <meta>
             <instanceID/>
           </meta>
@@ -28,47 +43,197 @@
 
       <itext>
         <translation default="true()" lang="French">
-          <text id="/data/c_RecorderID:jr:constraintMsg">
+          <text id="/data/n_RecorderID:jr:constraintMsg">
             <value>Le code doit être un nombre à deux chiffres entre 9 et 99</value>
           </text>
-          <text id="/data/c_RecorderID:label">
-            <value>Entrer l'identifiant de l'enregistreur</value>
+          <text id="/data/n_RecorderID:label">
+            <value>R19. Entrer l'identifiant de l'enregistreur</value>
           </text>
-          <text id="/data/c_RecorderID:hint">
+          <text id="/data/n_RecorderID:hint">
             <value>Code à deux chiffres qui vous a été assigné</value>
           </text>
-          <text id="/data/c_region:label">
+          <text id="/data/n_region:label">
             <value>Sélectionner une commune</value>
           </text>
-          <text id="/data/c_region/BANTE:label">
+          <text id="/data/n_region/BANTE:label">
             <value>BANTE</value>
           </text>
-          <text id="/data/c_region/BASSILA:label">
+          <text id="/data/n_region/BASSILA:label">
             <value>BASSILA</value>
           </text>
-          <text id="/data/c_region/OUAKE:label">
+          <text id="/data/n_region/OUAKE:label">
             <value>OUAKE</value>
           </text>
-          <text id="/data/c_region/SAVE:label">
+          <text id="/data/n_region/SAVE:label">
             <value>SAVE</value>
           </text>
-          <text id="/data/c_region/TCHAOUROU:label">
+          <text id="/data/n_region/TCHAOUROU:label">
             <value>TCHAOUROU</value>
           </text>
-          <text id="/data/c_District:label">
+          <text id="/data/n_District:label">
             <value>Sélectionner un arrondissement</value>
           </text>
-          <text id="/data/c_Cluster_Name:label">
+          <text id="/data/n_Cluster_Name:label">
             <value>Entrer le nom du village</value>
           </text>
-          <text id="/data/c_GPS:label">
-            <value>Capturer les données GPS</value>
+          <text id="/data/n_id_type:label">
+            <value>R3. Type d'identification</value>
           </text>
-          <text id="/data/c_GPS:hint">
-            <value>Fonctionne mieux à l'extérieure des bâtiments</value>
+          <text id="/data/n_id_type/Scanner:label">
+            <value>Scanner</value>
           </text>
-          <text id="/data/c_ClusterNotes:label">
-            <value>Notes additionnelles</value>
+          <text id="/data/n_id_type/Manuel:label">
+            <value>Manuel</value>
+          </text>
+          <text id="/data/n_barecode_id:label">
+            <value>R4. Numéro d'identification du test</value>
+          </text>
+          <text id="/data/n_manual_id:label">
+            <value>R5. Numéro d'identification du test</value>
+          </text>
+          <text id="/data/n_manual_id2:jr:constraintMsg">
+            <value>Le code répéter doit être le même</value>
+          </text>
+          <text id="/data/n_manual_id2:label">
+            <value>R6. Répéter le numéro d'identification du test</value>
+          </text>
+          <text id="/data/n_type_test:label">
+            <value>R7. Sélectionner le type de test</value>
+          </text>
+          <text id="/data/n_type_test/DDTD:label">
+            <value>DDTD</value>
+          </text>
+          <text id="/data/n_type_test/GADx:label">
+            <value>GADx</value>
+          </text>
+          <text id="/data/n_type_test/DBS sur SD Bioline:label">
+            <value>DBS sur SD Bioline</value>
+          </text>
+          <text id="/data/n_result_ddtd:label">
+            <value>R8. Résultat du test DDTD</value>
+          </text>
+          <text id="/data/n_result_ddtd/Positif T1 uniquement:label">
+            <value>Positif T1 uniquement</value>
+          </text>
+          <text id="/data/n_result_ddtd/Positif T2 uniquement:label">
+            <value>Positif T2 uniquement</value>
+          </text>
+          <text id="/data/n_result_ddtd/Positif T1 et T2 tous les deux:label">
+            <value>Positif T1 et T2 tous les deux</value>
+          </text>
+          <text id="/data/n_result_ddtd/Négatif:label">
+            <value>Négatif</value>
+          </text>
+          <text id="/data/n_result_ddtd/Invalide:label">
+            <value>Invalide</value>
+          </text>
+          <text id="/data/n_result_ddtd/Manque de clarté:label">
+            <value>Manque de clarté</value>
+          </text>
+          <text id="/data/n_result_not_clear_reason:label">
+            <value>R9. Si le résultat de la DDTD n'est pas valide ou n'est pas clair, quelle en est la raison</value>
+          </text>
+          <text id="/data/n_result_not_clear_reason/Absence de ligne de contrôle:label">
+            <value>Absence de ligne de contrôle</value>
+          </text>
+          <text id="/data/n_result_not_clear_reason/Difficulté d.absorption de l.échantillon:label">
+            <value>Difficulté d'absorption de l'échantillon</value>
+          </text>
+          <text id="/data/n_result_not_clear_reason/Le sang n.a pas coulé:label">
+            <value>Le sang n'a pas coulé</value>
+          </text>
+          <text id="/data/n_result_not_clear_reason/Volume de sang insuffisant:label">
+            <value>Volume de sang insuffisant</value>
+          </text>
+          <text id="/data/n_result_not_clear_reason/Other:label">
+            <value>Autre</value>
+          </text>
+          <text id="/data/n_result_not_clear_reason_other:label">
+            <value>R10. Si autre, précisez la raison</value>
+          </text>
+          <text id="/data/n_result_gadx:label">
+            <value>R11. Résultat du test GADx</value>
+          </text>
+          <text id="/data/n_result_gadx/Positif:label">
+            <value>Positif</value>
+          </text>
+          <text id="/data/n_result_gadx/Négatif:label">
+            <value>Négatif</value>
+          </text>
+          <text id="/data/n_result_gadx/Invalide:label">
+            <value>Invalide</value>
+          </text>
+          <text id="/data/n_result_gadx/Manque de clarté:label">
+            <value>Manque de clarté</value>
+          </text>
+          <text id="/data/n_line:jr:constraintMsg">
+            <value>Numérique (saisie de 2 chiffres ; valeurs limitées de 00 à 10)</value>
+          </text>
+          <text id="/data/n_line:label">
+            <value>R12. Intensité de la ligne d'essai</value>
+          </text>
+          <text id="/data/n_gadx_invalid_reason:label">
+            <value>R13. Si le résultat de GADx n'est pas valide ou n'est pas clair, quelle en est la raison ?</value>
+          </text>
+          <text id="/data/n_gadx_invalid_reason/Absence de ligne de contrôle:label">
+            <value>Absence de ligne de contrôle</value>
+          </text>
+          <text id="/data/n_gadx_invalid_reason/Difficulté d.absorption de l.échantillon:label">
+            <value>Difficulté d'absorption de l'échantillon</value>
+          </text>
+          <text id="/data/n_gadx_invalid_reason/Le sang n.a pas coulé:label">
+            <value>Le sang n'a pas coulé</value>
+          </text>
+          <text id="/data/n_gadx_invalid_reason/Volume de sang insuffisant:label">
+            <value>Volume de sang insuffisant</value>
+          </text>
+          <text id="/data/n_gadx_invalid_reason/Other:label">
+            <value>Autre</value>
+          </text>
+          <text id="/data/n_gadx_invalid_reason_other:label">
+            <value>R14. Si autre, préciser la raison</value>
+          </text>
+          <text id="/data/n_result_dbs:label">
+            <value>R15. Résultat du test DBS sur SD Bioline</value>
+          </text>
+          <text id="/data/n_result_dbs/Positif:label">
+            <value>Positif</value>
+          </text>
+          <text id="/data/n_result_dbs/Négatif:label">
+            <value>Négatif</value>
+          </text>
+          <text id="/data/n_result_dbs/Invalide:label">
+            <value>Invalide</value>
+          </text>
+          <text id="/data/n_result_dbs/Manque de clarté:label">
+            <value>Manque de clarté</value>
+          </text>
+          <text id="/data/n_dbs_invalid_reason:label">
+            <value>R16. Si le résultat du DBS sur SD Bioline n'est pas valide ou n'est pas clair, quelle en est la raison ?</value>
+          </text>
+          <text id="/data/n_dbs_invalid_reason/Absence de ligne de contrôle:label">
+            <value>Absence de ligne de contrôle</value>
+          </text>
+          <text id="/data/n_dbs_invalid_reason/Difficulté d.absorption de l.échantillon:label">
+            <value>Difficulté d'absorption de l'échantillon</value>
+          </text>
+          <text id="/data/n_dbs_invalid_reason/Le sang n.a pas coulé:label">
+            <value>Le sang n'a pas coulé</value>
+          </text>
+          <text id="/data/n_dbs_invalid_reason/Volume de sang insuffisant:label">
+            <value>Volume de sang insuffisant</value>
+          </text>
+          <text id="/data/n_dbs_invalid_reason/Other:label">
+            <value>Autre</value>
+          </text>
+          <text id="/data/n_dbs_invalid_reason_other:label">
+            <value>R17. Si autre, précisez la raison</value>
+          </text>
+          <text id="/data/n_photo:label">
+            <value>R.18 Assurez-vous que la cassette de test est proche de l'appareil photo, qu'elle est entièrement dans le cadre et qu'un seul code-barres est visible par l'appareil photo. Prenez une photo.</value>
+          </text>
+          <text id="/data/n_notes:label">
+            <value>R20. Notes complémentaires</value>
           </text>
           <text id="village_type-0">
             <value>1ère ligne</value>
@@ -79,14 +244,86 @@
           <text id="village_type-2">
             <value>3ème ligne</value>
           </text>
-          <text id="yesNoDontKnow-0">
+          <text id="yes_no-0">
             <value>Oui</value>
           </text>
-          <text id="yesNoDontKnow-1">
+          <text id="yes_no-1">
             <value>Non</value>
           </text>
-          <text id="yesNoDontKnow-2">
-            <value>Ne sais pas</value>
+          <text id="id_type-0">
+            <value>Scanner</value>
+          </text>
+          <text id="id_type-1">
+            <value>Manuel</value>
+          </text>
+          <text id="type_test-0">
+            <value>DDTD</value>
+          </text>
+          <text id="type_test-1">
+            <value>GADx</value>
+          </text>
+          <text id="type_test-2">
+            <value>DBS sur SD Bioline</value>
+          </text>
+          <text id="results_ddtd-0">
+            <value>Positif T1 uniquement</value>
+          </text>
+          <text id="results_ddtd-1">
+            <value>Positif T2 uniquement</value>
+          </text>
+          <text id="results_ddtd-2">
+            <value>Positif T1 et T2 tous les deux</value>
+          </text>
+          <text id="results_ddtd-3">
+            <value>Négatif</value>
+          </text>
+          <text id="results_ddtd-4">
+            <value>Invalide</value>
+          </text>
+          <text id="results_ddtd-5">
+            <value>Manque de clarté</value>
+          </text>
+          <text id="dd_d_not_clear_reason-0">
+            <value>Absence de ligne de contrôle</value>
+          </text>
+          <text id="dd_d_not_clear_reason-1">
+            <value>Difficulté d'absorption de l'échantillon</value>
+          </text>
+          <text id="dd_d_not_clear_reason-2">
+            <value>Le sang n'a pas coulé</value>
+          </text>
+          <text id="dd_d_not_clear_reason-3">
+            <value>Volume de sang insuffisant</value>
+          </text>
+          <text id="dd_d_not_clear_reason-4">
+            <value>Autre</value>
+          </text>
+          <text id="gadx_results-0">
+            <value>Positif</value>
+          </text>
+          <text id="gadx_results-1">
+            <value>Négatif</value>
+          </text>
+          <text id="gadx_results-2">
+            <value>Invalide</value>
+          </text>
+          <text id="gadx_results-3">
+            <value>Manque de clarté</value>
+          </text>
+          <text id="gadx_invalid-0">
+            <value>Absence de ligne de contrôle</value>
+          </text>
+          <text id="gadx_invalid-1">
+            <value>Difficulté d'absorption de l'échantillon</value>
+          </text>
+          <text id="gadx_invalid-2">
+            <value>Le sang n'a pas coulé</value>
+          </text>
+          <text id="gadx_invalid-3">
+            <value>Volume de sang insuffisant</value>
+          </text>
+          <text id="gadx_invalid-4">
+            <value>Autre</value>
           </text>
           <text id="region_list-0">
             <value>BANTE</value>
@@ -1143,6 +1380,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="village_type">
         <root>
           <item>
@@ -1159,19 +1397,139 @@
           </item>
         </root>
       </instance>
-      <instance id="yesNoDontKnow">
+      <instance id="yes_no">
         <root>
           <item>
-            <itextId>yesNoDontKnow-0</itextId>
-            <name>Yes</name>
+            <itextId>yes_no-0</itextId>
+            <name>Oui</name>
           </item>
           <item>
-            <itextId>yesNoDontKnow-1</itextId>
-            <name>No</name>
+            <itextId>yes_no-1</itextId>
+            <name>Non</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="id_type">
+        <root>
+          <item>
+            <itextId>id_type-0</itextId>
+            <name>Scanner</name>
           </item>
           <item>
-            <itextId>yesNoDontKnow-2</itextId>
-            <name>Don't know</name>
+            <itextId>id_type-1</itextId>
+            <name>Manuel</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="type_test">
+        <root>
+          <item>
+            <itextId>type_test-0</itextId>
+            <name>DDTD</name>
+          </item>
+          <item>
+            <itextId>type_test-1</itextId>
+            <name>GADx</name>
+          </item>
+          <item>
+            <itextId>type_test-2</itextId>
+            <name>DBS sur SD Bioline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="results_ddtd">
+        <root>
+          <item>
+            <itextId>results_ddtd-0</itextId>
+            <name>Positif T1 uniquement</name>
+          </item>
+          <item>
+            <itextId>results_ddtd-1</itextId>
+            <name>Positif T2 uniquement</name>
+          </item>
+          <item>
+            <itextId>results_ddtd-2</itextId>
+            <name>Positif T1 et T2 tous les deux</name>
+          </item>
+          <item>
+            <itextId>results_ddtd-3</itextId>
+            <name>Négatif</name>
+          </item>
+          <item>
+            <itextId>results_ddtd-4</itextId>
+            <name>Invalide</name>
+          </item>
+          <item>
+            <itextId>results_ddtd-5</itextId>
+            <name>Manque de clarté</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="dd_d_not_clear_reason">
+        <root>
+          <item>
+            <itextId>dd_d_not_clear_reason-0</itextId>
+            <name>Absence de ligne de contrôle</name>
+          </item>
+          <item>
+            <itextId>dd_d_not_clear_reason-1</itextId>
+            <name>Difficulté d.absorption de l.échantillon</name>
+          </item>
+          <item>
+            <itextId>dd_d_not_clear_reason-2</itextId>
+            <name>Le sang n.a pas coulé</name>
+          </item>
+          <item>
+            <itextId>dd_d_not_clear_reason-3</itextId>
+            <name>Volume de sang insuffisant</name>
+          </item>
+          <item>
+            <itextId>dd_d_not_clear_reason-4</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="gadx_results">
+        <root>
+          <item>
+            <itextId>gadx_results-0</itextId>
+            <name>Positif</name>
+          </item>
+          <item>
+            <itextId>gadx_results-1</itextId>
+            <name>Négatif</name>
+          </item>
+          <item>
+            <itextId>gadx_results-2</itextId>
+            <name>Invalide</name>
+          </item>
+          <item>
+            <itextId>gadx_results-3</itextId>
+            <name>Manque de clarté</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="gadx_invalid">
+        <root>
+          <item>
+            <itextId>gadx_invalid-0</itextId>
+            <name>Absence de ligne de contrôle</name>
+          </item>
+          <item>
+            <itextId>gadx_invalid-1</itextId>
+            <name>Difficulté d.absorption de l.échantillon</name>
+          </item>
+          <item>
+            <itextId>gadx_invalid-2</itextId>
+            <name>Le sang n.a pas coulé</name>
+          </item>
+          <item>
+            <itextId>gadx_invalid-3</itextId>
+            <name>Volume de sang insuffisant</name>
+          </item>
+          <item>
+            <itextId>gadx_invalid-4</itextId>
+            <name>Other</name>
           </item>
         </root>
       </instance>
@@ -2937,65 +3295,260 @@
           </item>
         </root>
       </instance>
-      <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_RecorderID:jr:constraintMsg')" nodeset="/data/c_RecorderID" required="true()" type="int"/>
-      <bind nodeset="/data/c_region" required="true()" type="string" db_add_col_1="."/>
-      <bind nodeset="/data/c_District" required="true()" type="string" db_add_col_1="/data/c_region" db_add_col_2="."/>
-      <bind nodeset="/data/c_Cluster_Name" required="true()" type="string" db_add_col_2="/data/c_District" db_add_col_3="."/>
-      <bind nodeset="/data/c_GPS" required="true()" type="geopoint"/>
-      <bind nodeset="/data/c_ClusterNotes" type="string"/>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_StartTime" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_EndTime" type="dateTime"/>
+      <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/n_RecorderID:jr:constraintMsg')" nodeset="/data/n_RecorderID" required="true()" type="int"/>
+      <bind nodeset="/data/n_region" required="true()" type="string"/>
+      <bind nodeset="/data/n_District" required="true()" type="string"/>
+      <bind nodeset="/data/n_Cluster_Name" required="true()" type="string"/>
+      <bind nodeset="/data/n_id_type" required="true()" type="string"/>
+      <bind nodeset="/data/n_barecode_id" relevant=" /data/n_id_type  = 'Scanner'" required="true()" type="barcode"/>
+      <bind nodeset="/data/n_manual_id" relevant=" /data/n_id_type  = 'Manuel'" required="true()" type="string"/>
+      <bind constraint=". =  /data/n_manual_id " jr:constraintMsg="jr:itext('/data/n_manual_id2:jr:constraintMsg')" nodeset="/data/n_manual_id2" relevant=" /data/n_id_type  = 'Manuel'" required="true()" type="string"/>
+      <bind nodeset="/data/n_type_test" required="true()" type="string"/>
+      <bind nodeset="/data/n_result_ddtd" relevant=" /data/n_type_test  = 'DDTD'" required="true()" type="string"/>
+      <bind nodeset="/data/n_result_not_clear_reason" relevant=" /data/n_result_ddtd  = 'Invalide' or  /data/n_result_ddtd  = 'Manque de clarté'" required="true()" type="string"/>
+      <bind nodeset="/data/n_result_not_clear_reason_other" relevant=" /data/n_result_not_clear_reason  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/n_result_gadx" relevant=" /data/n_type_test  = 'GADx'" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/n_line:jr:constraintMsg')" nodeset="/data/n_line" relevant=" /data/n_type_test  = 'GADx'" required="true()" type="string"/>
+      <bind nodeset="/data/n_gadx_invalid_reason" relevant=" /data/n_result_gadx  = 'Invalide' or  /data/n_result_gadx  = 'Manque de clarté'" required="true()" type="string"/>
+      <bind nodeset="/data/n_gadx_invalid_reason_other" relevant=" /data/n_gadx_invalid_reason  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/n_result_dbs" relevant=" /data/n_type_test  = 'DBS sur SD Bioline'" required="true()" type="string"/>
+      <bind nodeset="/data/n_dbs_invalid_reason" relevant=" /data/n_result_dbs  = 'Invalide' or  /data/n_result_dbs  = 'Manque de clarté'" required="true()" type="string"/>
+      <bind nodeset="/data/n_dbs_invalid_reason_other" relevant=" /data/n_dbs_invalid_reason  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/n_photo" required="true()" type="binary"/>
+      <bind nodeset="/data/n_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/n_StartTime" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/n_EndTime" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body>
-    <input ref="/data/c_RecorderID">
-      <label ref="jr:itext('/data/c_RecorderID:label')"/>
-      <hint ref="jr:itext('/data/c_RecorderID:hint')"/>
+    <input ref="/data/n_RecorderID">
+      <label ref="jr:itext('/data/n_RecorderID:label')"/>
+      <hint ref="jr:itext('/data/n_RecorderID:hint')"/>
     </input>
-    <select1 ref="/data/c_region">
-      <label ref="jr:itext('/data/c_region:label')"/>
+    <select1 ref="/data/n_region">
+      <label ref="jr:itext('/data/n_region:label')"/>
       <item>
-        <label ref="jr:itext('/data/c_region/BANTE:label')"/>
+        <label ref="jr:itext('/data/n_region/BANTE:label')"/>
         <value>BANTE</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/c_region/BASSILA:label')"/>
+        <label ref="jr:itext('/data/n_region/BASSILA:label')"/>
         <value>BASSILA</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/c_region/OUAKE:label')"/>
+        <label ref="jr:itext('/data/n_region/OUAKE:label')"/>
         <value>OUAKE</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/c_region/SAVE:label')"/>
+        <label ref="jr:itext('/data/n_region/SAVE:label')"/>
         <value>SAVE</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/c_region/TCHAOUROU:label')"/>
+        <label ref="jr:itext('/data/n_region/TCHAOUROU:label')"/>
         <value>TCHAOUROU</value>
       </item>
     </select1>
-    <select1 ref="/data/c_District">
-      <label ref="jr:itext('/data/c_District:label')"/>
-      <itemset nodeset="instance('district_list')/root/item[ /data/c_region  = region_list]">
+    <select1 ref="/data/n_District">
+      <label ref="jr:itext('/data/n_District:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[ /data/n_region  = region_list]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <select1 ref="/data/c_Cluster_Name">
-      <label ref="jr:itext('/data/c_Cluster_Name:label')"/>
-      <itemset nodeset="instance('village_list')/root/item[ /data/c_District  = district_list]">
+    <select1 ref="/data/n_Cluster_Name">
+      <label ref="jr:itext('/data/n_Cluster_Name:label')"/>
+      <itemset nodeset="instance('village_list')/root/item[ /data/n_District  = district_list]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <input ref="/data/c_GPS">
-      <label ref="jr:itext('/data/c_GPS:label')"/>
-      <hint ref="jr:itext('/data/c_GPS:hint')"/>
+    <select1 ref="/data/n_id_type">
+      <label ref="jr:itext('/data/n_id_type:label')"/>
+      <item>
+        <label ref="jr:itext('/data/n_id_type/Scanner:label')"/>
+        <value>Scanner</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_id_type/Manuel:label')"/>
+        <value>Manuel</value>
+      </item>
+    </select1>
+    <input ref="/data/n_barecode_id">
+      <label ref="jr:itext('/data/n_barecode_id:label')"/>
     </input>
-    <input ref="/data/c_ClusterNotes">
-      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    <input ref="/data/n_manual_id">
+      <label ref="jr:itext('/data/n_manual_id:label')"/>
+    </input>
+    <input ref="/data/n_manual_id2">
+      <label ref="jr:itext('/data/n_manual_id2:label')"/>
+    </input>
+    <select1 ref="/data/n_type_test">
+      <label ref="jr:itext('/data/n_type_test:label')"/>
+      <item>
+        <label ref="jr:itext('/data/n_type_test/DDTD:label')"/>
+        <value>DDTD</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_type_test/GADx:label')"/>
+        <value>GADx</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_type_test/DBS sur SD Bioline:label')"/>
+        <value>DBS sur SD Bioline</value>
+      </item>
+    </select1>
+    <select1 ref="/data/n_result_ddtd">
+      <label ref="jr:itext('/data/n_result_ddtd:label')"/>
+      <item>
+        <label ref="jr:itext('/data/n_result_ddtd/Positif T1 uniquement:label')"/>
+        <value>Positif T1 uniquement</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_ddtd/Positif T2 uniquement:label')"/>
+        <value>Positif T2 uniquement</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_ddtd/Positif T1 et T2 tous les deux:label')"/>
+        <value>Positif T1 et T2 tous les deux</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_ddtd/Négatif:label')"/>
+        <value>Négatif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_ddtd/Invalide:label')"/>
+        <value>Invalide</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_ddtd/Manque de clarté:label')"/>
+        <value>Manque de clarté</value>
+      </item>
+    </select1>
+    <select1 ref="/data/n_result_not_clear_reason">
+      <label ref="jr:itext('/data/n_result_not_clear_reason:label')"/>
+      <item>
+        <label ref="jr:itext('/data/n_result_not_clear_reason/Absence de ligne de contrôle:label')"/>
+        <value>Absence de ligne de contrôle</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_not_clear_reason/Difficulté d.absorption de l.échantillon:label')"/>
+        <value>Difficulté d.absorption de l.échantillon</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_not_clear_reason/Le sang n.a pas coulé:label')"/>
+        <value>Le sang n.a pas coulé</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_not_clear_reason/Volume de sang insuffisant:label')"/>
+        <value>Volume de sang insuffisant</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_not_clear_reason/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/n_result_not_clear_reason_other">
+      <label ref="jr:itext('/data/n_result_not_clear_reason_other:label')"/>
+    </input>
+    <select1 ref="/data/n_result_gadx">
+      <label ref="jr:itext('/data/n_result_gadx:label')"/>
+      <item>
+        <label ref="jr:itext('/data/n_result_gadx/Positif:label')"/>
+        <value>Positif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_gadx/Négatif:label')"/>
+        <value>Négatif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_gadx/Invalide:label')"/>
+        <value>Invalide</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_gadx/Manque de clarté:label')"/>
+        <value>Manque de clarté</value>
+      </item>
+    </select1>
+    <input ref="/data/n_line">
+      <label ref="jr:itext('/data/n_line:label')"/>
+    </input>
+    <select1 ref="/data/n_gadx_invalid_reason">
+      <label ref="jr:itext('/data/n_gadx_invalid_reason:label')"/>
+      <item>
+        <label ref="jr:itext('/data/n_gadx_invalid_reason/Absence de ligne de contrôle:label')"/>
+        <value>Absence de ligne de contrôle</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_gadx_invalid_reason/Difficulté d.absorption de l.échantillon:label')"/>
+        <value>Difficulté d.absorption de l.échantillon</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_gadx_invalid_reason/Le sang n.a pas coulé:label')"/>
+        <value>Le sang n.a pas coulé</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_gadx_invalid_reason/Volume de sang insuffisant:label')"/>
+        <value>Volume de sang insuffisant</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_gadx_invalid_reason/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/n_gadx_invalid_reason_other">
+      <label ref="jr:itext('/data/n_gadx_invalid_reason_other:label')"/>
+    </input>
+    <select1 ref="/data/n_result_dbs">
+      <label ref="jr:itext('/data/n_result_dbs:label')"/>
+      <item>
+        <label ref="jr:itext('/data/n_result_dbs/Positif:label')"/>
+        <value>Positif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_dbs/Négatif:label')"/>
+        <value>Négatif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_dbs/Invalide:label')"/>
+        <value>Invalide</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_result_dbs/Manque de clarté:label')"/>
+        <value>Manque de clarté</value>
+      </item>
+    </select1>
+    <select1 ref="/data/n_dbs_invalid_reason">
+      <label ref="jr:itext('/data/n_dbs_invalid_reason:label')"/>
+      <item>
+        <label ref="jr:itext('/data/n_dbs_invalid_reason/Absence de ligne de contrôle:label')"/>
+        <value>Absence de ligne de contrôle</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_dbs_invalid_reason/Difficulté d.absorption de l.échantillon:label')"/>
+        <value>Difficulté d.absorption de l.échantillon</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_dbs_invalid_reason/Le sang n.a pas coulé:label')"/>
+        <value>Le sang n.a pas coulé</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_dbs_invalid_reason/Volume de sang insuffisant:label')"/>
+        <value>Volume de sang insuffisant</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/n_dbs_invalid_reason/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/n_dbs_invalid_reason_other">
+      <label ref="jr:itext('/data/n_dbs_invalid_reason_other:label')"/>
+    </input>
+    <upload mediatype="image/*" ref="/data/n_photo">
+      <label ref="jr:itext('/data/n_photo:label')"/>
+    </upload>
+    <input ref="/data/n_notes">
+      <label ref="jr:itext('/data/n_notes:label')"/>
     </input>
   </h:body>
 </h:html>
