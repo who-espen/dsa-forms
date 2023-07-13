@@ -7,24 +7,21 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 July) - 10. (Bauchi) RDT OV16 Form</h:title>
+    <h:title>(2023 July) - 10. (Bauchi) ELISA Form</h:title>
     <model >
 
       <instance>
-        <data id="ng_oncho_stop_10_rdtov16_202206_bauchy">
+        <data id="ng_oncho_stop_10_elisa_202206_bauchy">
           <d_recorder_id/>
           <d_region/>
           <d_District/>
           <d_Cluster_Name/>
           <d_cluster_id/>
-          <d_LabOV162ndTest/>
-          <d_lotnumber/>
           <d_serial_number1/>
           <d_serial_number2/>
           <d_code_id/>
-          <d_LabOV16/>
-          <d_LabOV16Invalid/>
-          <d_LabOV16Invalid_other/>
+          <d_elisa_value_od/>
+          <d_elisa_result/>
           <d_Notes/>
           <d_StartTime/>
           <d_EndTime/>
@@ -60,18 +57,6 @@
           <text id="/data/d_cluster_id:label">
             <value>Enter cluster ID</value>
           </text>
-          <text id="/data/d_LabOV162ndTest:label">
-            <value>Is this a second OV16 test</value>
-          </text>
-          <text id="/data/d_LabOV162ndTest/Yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/d_LabOV162ndTest/No:label">
-            <value>No</value>
-          </text>
-          <text id="/data/d_lotnumber:label">
-            <value>Enter RDT batch number</value>
-          </text>
           <text id="/data/d_serial_number1:jr:constraintMsg">
             <value>Must be a three-digit number. example: 001</value>
           </text>
@@ -87,47 +72,20 @@
           <text id="/data/d_code_id:label">
             <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) adminstered</value>
           </text>
-          <text id="/data/d_LabOV16:label">
-            <value>RDT OV16 test result</value>
+          <text id="/data/d_elisa_value_od:label">
+            <value>ELISA - Value OD</value>
           </text>
-          <text id="/data/d_LabOV16/Positive:label">
+          <text id="/data/d_elisa_result:label">
+            <value>ELISA - Final decision</value>
+          </text>
+          <text id="/data/d_elisa_result/Positive:label">
             <value>Positive</value>
           </text>
-          <text id="/data/d_LabOV16/Negative:label">
+          <text id="/data/d_elisa_result/Negative:label">
             <value>Negative</value>
           </text>
-          <text id="/data/d_LabOV16/Invalid:label">
-            <value>Invalid (including test errors and insufficient blood)</value>
-          </text>
-          <text id="/data/d_LabOV16/Refused:label">
-            <value>Refused (withdrawal of consent)</value>
-          </text>
-          <text id="/data/d_LabOV16Invalid:label">
-            <value>Invalid Result Details</value>
-          </text>
-          <text id="/data/d_LabOV16Invalid/No.control.lines:label">
-            <value>No control lines</value>
-          </text>
-          <text id="/data/d_LabOV16Invalid/Broken/partial.control.line:label">
-            <value>Broken/partial control line</value>
-          </text>
-          <text id="/data/d_LabOV16Invalid/Difficulty.with.sample.absorption:label">
-            <value>Difficulty with sample absorption</value>
-          </text>
-          <text id="/data/d_LabOV16Invalid/Difficulty.with.sample.migration:label">
-            <value>Difficulty with sample migration</value>
-          </text>
-          <text id="/data/d_LabOV16Invalid/Trace.of.blood.remains:label">
-            <value>Trace of blood remains</value>
-          </text>
-          <text id="/data/d_LabOV16Invalid/Insufficient.blood.volume.due.to.pipette:label">
-            <value>Insufficient blood volume due to pipette</value>
-          </text>
-          <text id="/data/d_LabOV16Invalid/Other:label">
-            <value>Other (please explain)</value>
-          </text>
-          <text id="/data/d_LabOV16Invalid_other:label">
-            <value>Invalid Result Details</value>
+          <text id="/data/d_elisa_result/Invalid:label">
+            <value>Invalid</value>
           </text>
           <text id="/data/d_Notes:label">
             <value>Additional Notes</value>
@@ -185,6 +143,15 @@
           </text>
           <text id="why_invalid-6">
             <value>Other (please explain)</value>
+          </text>
+          <text id="result_elisa-0">
+            <value>Positive</value>
+          </text>
+          <text id="result_elisa-1">
+            <value>Negative</value>
+          </text>
+          <text id="result_elisa-2">
+            <value>Invalid</value>
           </text>
           <text id="region_list-0">
             <value>BAUCHI</value>
@@ -545,6 +512,22 @@
           <item>
             <itextId>why_invalid-6</itextId>
             <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="result_elisa">
+        <root>
+          <item>
+            <itextId>result_elisa-0</itextId>
+            <name>Positive</name>
+          </item>
+          <item>
+            <itextId>result_elisa-1</itextId>
+            <name>Negative</name>
+          </item>
+          <item>
+            <itextId>result_elisa-2</itextId>
+            <name>Invalid</name>
           </item>
         </root>
       </instance>
@@ -1013,14 +996,11 @@
       <bind nodeset="/data/d_District" required="true()" type="string"/>
       <bind nodeset="/data/d_Cluster_Name" required="true()" type="string"/>
       <bind nodeset="/data/d_cluster_id" required="true()" type="string"/>
-      <bind nodeset="/data/d_LabOV162ndTest" required="true()" type="string"/>
-      <bind nodeset="/data/d_lotnumber" required="true()" type="string"/>
       <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_serial_number1:jr:constraintMsg')" nodeset="/data/d_serial_number1" required="true()" type="string"/>
       <bind constraint=". =  /data/d_serial_number1 " jr:constraintMsg="jr:itext('/data/d_serial_number2:jr:constraintMsg')" nodeset="/data/d_serial_number2" required="true()" type="string"/>
       <bind calculate="concat( /data/d_recorder_id , '-',  /data/d_cluster_id , '-',  /data/d_serial_number1 )" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/data/d_LabOV16" required="true()" type="string"/>
-      <bind nodeset="/data/d_LabOV16Invalid" relevant=" /data/d_LabOV16  = 'Invalid'" required="true()" type="string"/>
-      <bind nodeset="/data/d_LabOV16Invalid_other" relevant=" /data/d_LabOV16Invalid  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/d_elisa_value_od" type="decimal"/>
+      <bind nodeset="/data/d_elisa_result" type="string"/>
       <bind nodeset="/data/d_Notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_StartTime" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_EndTime" type="dateTime"/>
@@ -1060,20 +1040,6 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <select1 ref="/data/d_LabOV162ndTest">
-      <label ref="jr:itext('/data/d_LabOV162ndTest:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_LabOV162ndTest/Yes:label')"/>
-        <value>Yes</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_LabOV162ndTest/No:label')"/>
-        <value>No</value>
-      </item>
-    </select1>
-    <input ref="/data/d_lotnumber">
-      <label ref="jr:itext('/data/d_lotnumber:label')"/>
-    </input>
     <input ref="/data/d_serial_number1">
       <label ref="jr:itext('/data/d_serial_number1:label')"/>
     </input>
@@ -1083,59 +1049,24 @@
     <input ref="/data/d_code_id">
       <label ref="jr:itext('/data/d_code_id:label')"/>
     </input>
-    <select1 ref="/data/d_LabOV16">
-      <label ref="jr:itext('/data/d_LabOV16:label')"/>
+    <input ref="/data/d_elisa_value_od">
+      <label ref="jr:itext('/data/d_elisa_value_od:label')"/>
+    </input>
+    <select1 ref="/data/d_elisa_result">
+      <label ref="jr:itext('/data/d_elisa_result:label')"/>
       <item>
-        <label ref="jr:itext('/data/d_LabOV16/Positive:label')"/>
+        <label ref="jr:itext('/data/d_elisa_result/Positive:label')"/>
         <value>Positive</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_LabOV16/Negative:label')"/>
+        <label ref="jr:itext('/data/d_elisa_result/Negative:label')"/>
         <value>Negative</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_LabOV16/Invalid:label')"/>
+        <label ref="jr:itext('/data/d_elisa_result/Invalid:label')"/>
         <value>Invalid</value>
       </item>
-      <item>
-        <label ref="jr:itext('/data/d_LabOV16/Refused:label')"/>
-        <value>Refused</value>
-      </item>
     </select1>
-    <select1 ref="/data/d_LabOV16Invalid">
-      <label ref="jr:itext('/data/d_LabOV16Invalid:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_LabOV16Invalid/No.control.lines:label')"/>
-        <value>No.control.lines</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_LabOV16Invalid/Broken/partial.control.line:label')"/>
-        <value>Broken/partial.control.line</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_LabOV16Invalid/Difficulty.with.sample.absorption:label')"/>
-        <value>Difficulty.with.sample.absorption</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_LabOV16Invalid/Difficulty.with.sample.migration:label')"/>
-        <value>Difficulty.with.sample.migration</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_LabOV16Invalid/Trace.of.blood.remains:label')"/>
-        <value>Trace.of.blood.remains</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_LabOV16Invalid/Insufficient.blood.volume.due.to.pipette:label')"/>
-        <value>Insufficient.blood.volume.due.to.pipette</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_LabOV16Invalid/Other:label')"/>
-        <value>Other</value>
-      </item>
-    </select1>
-    <input ref="/data/d_LabOV16Invalid_other">
-      <label ref="jr:itext('/data/d_LabOV16Invalid_other:label')"/>
-    </input>
     <input ref="/data/d_Notes">
       <label ref="jr:itext('/data/d_Notes:label')"/>
     </input>
