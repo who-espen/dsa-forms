@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Juillet) ONCHO Stop TDM - 3. Résultats de laboratoire V2</h:title>
+    <h:title>(2023 Juillet) ONCHO Stop TDM - 3. Résultats de laboratoire V2.2</h:title>
     <model >
 
       <instance>
-        <data id="bj_oncho_stop_3_202306_diag_v2" version="20201130">
+        <data id="bj_oncho_stop_3_202306_diag_v2_2" version="20201130">
           <d_RecorderID/>
           <d_region/>
           <d_District/>
@@ -21,8 +21,10 @@
           <d_manual_id2/>
           <d_barecode_id/>
           <d_control_1/>
+          <d_est_invalide_1>Oui</d_est_invalide_1>
           <d_ov16_result_1/>
           <d_control_2/>
+          <d_est_invalide_2>Oui</d_est_invalide_2>
           <d_ov16_result_2/>
           <d_elisa_value_od/>
           <d_elisa_result/>
@@ -102,6 +104,9 @@
           <text id="/data/d_control_1/Non:label">
             <value>Non</value>
           </text>
+          <text id="/data/d_est_invalide_1:label">
+            <value>Le résultat est invalide parce que la contrôle est non visible</value>
+          </text>
           <text id="/data/d_ov16_result_1:label">
             <value>Résultat OV16 du test 1</value>
           </text>
@@ -122,6 +127,9 @@
           </text>
           <text id="/data/d_control_2/Non:label">
             <value>Non</value>
+          </text>
+          <text id="/data/d_est_invalide_2:label">
+            <value>Le résultat est invalide parce que la contrôle est non visible</value>
           </text>
           <text id="/data/d_ov16_result_2:label">
             <value>Résultat OV16 du test 2</value>
@@ -3106,13 +3114,15 @@
       <bind constraint=". =  /data/d_manual_id " jr:constraintMsg="jr:itext('/data/d_manual_id2:jr:constraintMsg')" nodeset="/data/d_manual_id2" relevant=" /data/d_id_type  = 'Manuel'" required="true()" type="string"/>
       <bind nodeset="/data/d_barecode_id" relevant=" /data/d_id_type  = 'Scanner'" required="true()" type="barcode"/>
       <bind nodeset="/data/d_control_1" required="true()" type="string"/>
-      <bind nodeset="/data/d_ov16_result_1" required="true()" type="string"/>
-      <bind nodeset="/data/d_control_2" relevant=" /data/d_ov16_result_1  = 'Indéterminé'" required="true()" type="string"/>
-      <bind nodeset="/data/d_ov16_result_2" relevant=" /data/d_ov16_result_1  = 'Indéterminé'" required="true()" type="string"/>
-      <bind nodeset="/data/d_elisa_value_od" relevant=" /data/d_ov16_result_1 != 'Indéterminé' and  /data/d_ov16_result_2 != 'Indéterminé'" type="decimal"/>
-      <bind nodeset="/data/d_elisa_result" relevant=" /data/d_ov16_result_1 != 'Indéterminé' and  /data/d_ov16_result_2 != 'Indéterminé'" type="string"/>
-      <bind nodeset="/data/d_elisa_value_od_2" relevant=" /data/d_ov16_result_1 != 'Indéterminé' and  /data/d_ov16_result_2 != 'Indéterminé' and  /data/d_elisa_result  = 'Indéterminé'" type="decimal"/>
-      <bind nodeset="/data/d_elisa_result_2" relevant=" /data/d_ov16_result_1 != 'Indéterminé' and  /data/d_ov16_result_2 != 'Indéterminé' and  /data/d_elisa_result  = 'Indéterminé'" type="string"/>
+      <bind nodeset="/data/d_est_invalide_1" readonly="true()" relevant=" /data/d_control_1  = 'Non'" type="string"/>
+      <bind nodeset="/data/d_ov16_result_1" relevant=" /data/d_control_1  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/d_control_2" relevant=" /data/d_ov16_result_1  = 'Indéterminé' or  /data/d_control_1  = 'Non'" required="true()" type="string"/>
+      <bind nodeset="/data/d_est_invalide_2" readonly="true()" relevant=" /data/d_control_2  = 'Non'" type="string"/>
+      <bind nodeset="/data/d_ov16_result_2" relevant=" /data/d_control_2  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/d_elisa_value_od" relevant="( /data/d_ov16_result_1 != 'Indéterminé' or  /data/d_ov16_result_2 != 'Indéterminé' ) and (  /data/d_control_1  = 'Oui' or  /data/d_control_2  = 'Oui')" type="decimal"/>
+      <bind nodeset="/data/d_elisa_result" relevant="( /data/d_ov16_result_1 != 'Indéterminé' or  /data/d_ov16_result_2 != 'Indéterminé' ) and (  /data/d_control_1  = 'Oui' or  /data/d_control_2  = 'Oui')" type="string"/>
+      <bind nodeset="/data/d_elisa_value_od_2" relevant=" /data/d_elisa_result  = 'Indéterminé'" type="decimal"/>
+      <bind nodeset="/data/d_elisa_result_2" relevant=" /data/d_elisa_result  = 'Indéterminé'" type="string"/>
       <bind nodeset="/data/d_ClusterNotes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_StartTime" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_EndTime" type="dateTime"/>
@@ -3192,6 +3202,9 @@
         <value>Non</value>
       </item>
     </select1>
+    <input ref="/data/d_est_invalide_1">
+      <label ref="jr:itext('/data/d_est_invalide_1:label')"/>
+    </input>
     <select1 ref="/data/d_ov16_result_1">
       <label ref="jr:itext('/data/d_ov16_result_1:label')"/>
       <item>
@@ -3218,6 +3231,9 @@
         <value>Non</value>
       </item>
     </select1>
+    <input ref="/data/d_est_invalide_2">
+      <label ref="jr:itext('/data/d_est_invalide_2:label')"/>
+    </input>
     <select1 ref="/data/d_ov16_result_2">
       <label ref="jr:itext('/data/d_ov16_result_2:label')"/>
       <item>
