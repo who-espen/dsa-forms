@@ -7,7 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Juillet) ONCHO pre Stop - 3. Résultats de laboratoire V2.2</h:title>
+    <h:title>(2023 Juillet) ONCHO pre Stop - 3. Résultats de laboratoire</h:title>
     <model >
 
       <instance>
@@ -20,12 +20,6 @@
           <d_manual_id/>
           <d_manual_id2/>
           <d_barecode_id/>
-          <d_control_1/>
-          <d_est_invalide_1>Oui</d_est_invalide_1>
-          <d_ov16_result_1/>
-          <d_control_2/>
-          <d_est_invalide_2>Oui</d_est_invalide_2>
-          <d_ov16_result_2/>
           <d_elisa_value_od/>
           <d_elisa_result/>
           <d_elisa_value_od_2/>
@@ -97,54 +91,6 @@
           </text>
           <text id="/data/d_barecode_id:label">
             <value>Numéro d'identification du test</value>
-          </text>
-          <text id="/data/d_control_1:label">
-            <value>Ligne de contrôle positive visible du test 1</value>
-          </text>
-          <text id="/data/d_control_1/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/d_control_1/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/d_est_invalide_1:label">
-            <value>Le résultat est invalide parce que la contrôle est non visible</value>
-          </text>
-          <text id="/data/d_ov16_result_1:label">
-            <value>Résultat OV16 du test 1</value>
-          </text>
-          <text id="/data/d_ov16_result_1/Positif:label">
-            <value>Positif</value>
-          </text>
-          <text id="/data/d_ov16_result_1/Négatif:label">
-            <value>Négatif</value>
-          </text>
-          <text id="/data/d_ov16_result_1/Indéterminé:label">
-            <value>Indéterminé</value>
-          </text>
-          <text id="/data/d_control_2:label">
-            <value>Ligne de contrôle positive visible du test 2</value>
-          </text>
-          <text id="/data/d_control_2/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/d_control_2/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/d_est_invalide_2:label">
-            <value>Le résultat est invalide parce que la contrôle est non visible</value>
-          </text>
-          <text id="/data/d_ov16_result_2:label">
-            <value>Résultat OV16 du test 2</value>
-          </text>
-          <text id="/data/d_ov16_result_2/Positif:label">
-            <value>Positif</value>
-          </text>
-          <text id="/data/d_ov16_result_2/Négatif:label">
-            <value>Négatif</value>
-          </text>
-          <text id="/data/d_ov16_result_2/Indéterminé:label">
-            <value>Indéterminé</value>
           </text>
           <text id="/data/d_elisa_value_od:label">
             <value>ELISA - Valeur OD</value>
@@ -555,14 +501,8 @@
       <bind nodeset="/data/d_manual_id" relevant=" /data/d_id_type  = 'Manuel'" required="true()" type="string"/>
       <bind constraint=". =  /data/d_manual_id " jr:constraintMsg="jr:itext('/data/d_manual_id2:jr:constraintMsg')" nodeset="/data/d_manual_id2" relevant=" /data/d_id_type  = 'Manuel'" required="true()" type="string"/>
       <bind nodeset="/data/d_barecode_id" relevant=" /data/d_id_type  = 'Scanner'" required="true()" type="barcode"/>
-      <bind nodeset="/data/d_control_1" required="true()" type="string"/>
-      <bind nodeset="/data/d_est_invalide_1" readonly="true()" relevant=" /data/d_control_1  = 'Non'" type="string"/>
-      <bind nodeset="/data/d_ov16_result_1" relevant=" /data/d_control_1  = 'Oui'" required="true()" type="string"/>
-      <bind nodeset="/data/d_control_2" relevant=" /data/d_ov16_result_1  = 'Indéterminé' or  /data/d_control_1  = 'Non'" required="true()" type="string"/>
-      <bind nodeset="/data/d_est_invalide_2" readonly="true()" relevant=" /data/d_control_2  = 'Non'" type="string"/>
-      <bind nodeset="/data/d_ov16_result_2" relevant=" /data/d_control_2  = 'Oui'" required="true()" type="string"/>
-      <bind nodeset="/data/d_elisa_value_od" relevant="( /data/d_ov16_result_1 != 'Indéterminé' or  /data/d_ov16_result_2 != 'Indéterminé' ) and (  /data/d_control_1  = 'Oui' or  /data/d_control_2  = 'Oui')" type="decimal"/>
-      <bind nodeset="/data/d_elisa_result" relevant="( /data/d_ov16_result_1 != 'Indéterminé' or  /data/d_ov16_result_2 != 'Indéterminé' ) and (  /data/d_control_1  = 'Oui' or  /data/d_control_2  = 'Oui')" type="string"/>
+      <bind nodeset="/data/d_elisa_value_od" type="decimal"/>
+      <bind nodeset="/data/d_elisa_result" type="string"/>
       <bind nodeset="/data/d_elisa_value_od_2" relevant=" /data/d_elisa_result  = 'Indéterminé'" type="decimal"/>
       <bind nodeset="/data/d_elisa_result_2" relevant=" /data/d_elisa_result  = 'Indéterminé'" type="string"/>
       <bind nodeset="/data/d_ClusterNotes" type="string"/>
@@ -637,64 +577,6 @@
     <input ref="/data/d_barecode_id">
       <label ref="jr:itext('/data/d_barecode_id:label')"/>
     </input>
-    <select1 ref="/data/d_control_1">
-      <label ref="jr:itext('/data/d_control_1:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_control_1/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_control_1/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <input ref="/data/d_est_invalide_1">
-      <label ref="jr:itext('/data/d_est_invalide_1:label')"/>
-    </input>
-    <select1 ref="/data/d_ov16_result_1">
-      <label ref="jr:itext('/data/d_ov16_result_1:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_ov16_result_1/Positif:label')"/>
-        <value>Positif</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_ov16_result_1/Négatif:label')"/>
-        <value>Négatif</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_ov16_result_1/Indéterminé:label')"/>
-        <value>Indéterminé</value>
-      </item>
-    </select1>
-    <select1 ref="/data/d_control_2">
-      <label ref="jr:itext('/data/d_control_2:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_control_2/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_control_2/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <input ref="/data/d_est_invalide_2">
-      <label ref="jr:itext('/data/d_est_invalide_2:label')"/>
-    </input>
-    <select1 ref="/data/d_ov16_result_2">
-      <label ref="jr:itext('/data/d_ov16_result_2:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_ov16_result_2/Positif:label')"/>
-        <value>Positif</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_ov16_result_2/Négatif:label')"/>
-        <value>Négatif</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_ov16_result_2/Indéterminé:label')"/>
-        <value>Indéterminé</value>
-      </item>
-    </select1>
     <input ref="/data/d_elisa_value_od">
       <label ref="jr:itext('/data/d_elisa_value_od:label')"/>
     </input>
