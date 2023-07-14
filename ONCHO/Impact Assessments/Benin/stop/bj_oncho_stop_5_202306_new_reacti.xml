@@ -3308,7 +3308,7 @@
       <bind nodeset="/data/n_result_not_clear_reason" relevant=" /data/n_result_ddtd  = 'Invalide' or  /data/n_result_ddtd  = 'Manque de clarté'" required="true()" type="string"/>
       <bind nodeset="/data/n_result_not_clear_reason_other" relevant=" /data/n_result_not_clear_reason  = 'Other'" required="true()" type="string"/>
       <bind nodeset="/data/n_result_gadx" relevant=" /data/n_type_test  = 'GADx'" required="true()" type="string"/>
-      <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/n_line:jr:constraintMsg')" nodeset="/data/n_line" relevant=" /data/n_type_test  = 'GADx'" required="true()" type="string"/>
+      <bind constraint="regex(.,'^(0?[1-9]|00|10)$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/n_line:jr:constraintMsg')" nodeset="/data/n_line" relevant=" /data/n_type_test  = 'GADx'" required="true()" type="string"/>
       <bind nodeset="/data/n_gadx_invalid_reason" relevant=" /data/n_result_gadx  = 'Invalide' or  /data/n_result_gadx  = 'Manque de clarté'" required="true()" type="string"/>
       <bind nodeset="/data/n_gadx_invalid_reason_other" relevant=" /data/n_gadx_invalid_reason  = 'Other'" required="true()" type="string"/>
       <bind nodeset="/data/n_result_dbs" relevant=" /data/n_type_test  = 'DBS sur SD Bioline'" required="true()" type="string"/>

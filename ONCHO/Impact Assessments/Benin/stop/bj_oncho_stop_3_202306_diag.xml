@@ -26,6 +26,8 @@
           <d_ov16_result_2/>
           <d_elisa_value_od/>
           <d_elisa_result/>
+          <d_elisa_value_od_2/>
+          <d_elisa_result_2/>
           <d_ClusterNotes/>
           <d_StartTime/>
           <d_EndTime/>
@@ -146,6 +148,21 @@
             <value>Négatif</value>
           </text>
           <text id="/data/d_elisa_result/Indéterminé:label">
+            <value>Indéterminé</value>
+          </text>
+          <text id="/data/d_elisa_value_od_2:label">
+            <value>ELISA - Valeur OD (test2)</value>
+          </text>
+          <text id="/data/d_elisa_result_2:label">
+            <value>ELISA - Décision final (test2)</value>
+          </text>
+          <text id="/data/d_elisa_result_2/Positif:label">
+            <value>Positif</value>
+          </text>
+          <text id="/data/d_elisa_result_2/Négatif:label">
+            <value>Négatif</value>
+          </text>
+          <text id="/data/d_elisa_result_2/Indéterminé:label">
             <value>Indéterminé</value>
           </text>
           <text id="/data/d_ClusterNotes:label">
@@ -3094,6 +3111,8 @@
       <bind nodeset="/data/d_ov16_result_2" relevant=" /data/d_ov16_result_1  = 'Indéterminé'" required="true()" type="string"/>
       <bind nodeset="/data/d_elisa_value_od" relevant=" /data/d_ov16_result_1 != 'Indéterminé' and  /data/d_ov16_result_2 != 'Indéterminé'" type="decimal"/>
       <bind nodeset="/data/d_elisa_result" relevant=" /data/d_ov16_result_1 != 'Indéterminé' and  /data/d_ov16_result_2 != 'Indéterminé'" type="string"/>
+      <bind nodeset="/data/d_elisa_value_od_2" relevant=" /data/d_ov16_result_1 != 'Indéterminé' and  /data/d_ov16_result_2 != 'Indéterminé' and  /data/d_elisa_result  = 'Indéterminé'" type="decimal"/>
+      <bind nodeset="/data/d_elisa_result_2" relevant=" /data/d_ov16_result_1 != 'Indéterminé' and  /data/d_ov16_result_2 != 'Indéterminé' and  /data/d_elisa_result  = 'Indéterminé'" type="string"/>
       <bind nodeset="/data/d_ClusterNotes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_StartTime" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_EndTime" type="dateTime"/>
@@ -3229,6 +3248,24 @@
       </item>
       <item>
         <label ref="jr:itext('/data/d_elisa_result/Indéterminé:label')"/>
+        <value>Indéterminé</value>
+      </item>
+    </select1>
+    <input ref="/data/d_elisa_value_od_2">
+      <label ref="jr:itext('/data/d_elisa_value_od_2:label')"/>
+    </input>
+    <select1 ref="/data/d_elisa_result_2">
+      <label ref="jr:itext('/data/d_elisa_result_2:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_elisa_result_2/Positif:label')"/>
+        <value>Positif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_elisa_result_2/Négatif:label')"/>
+        <value>Négatif</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_elisa_result_2/Indéterminé:label')"/>
         <value>Indéterminé</value>
       </item>
     </select1>
