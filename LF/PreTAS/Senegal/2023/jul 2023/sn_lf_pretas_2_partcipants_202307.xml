@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Juillet 2022) 2. Pre-TAS FL Formulaire Participants V1</h:title>
-    <model odk:xforms-version="1.0.0">
+    <h:title>(Juillet 2023) 2. Pre-TAS FL Formulaire Participants</h:title>
+    <model >
 
       <instance>
-        <data id="sn_lf_pretas_2_partcipants_202207_v1">
+        <data id="sn_lf_pretas_2_partcipants_202307">
           <p_recorderID/>
           <p_district/>
           <p_cluster_name/>
@@ -27,7 +27,6 @@
           <c_end/>
           <meta>
             <instanceID/>
-            <randomnum/>
           </meta>
         </data>
       </instance>
@@ -120,7 +119,6 @@
           <text id="/data/p_consent/Non:label">
             <value>Non</value>
           </text>
-
           <text id="/data/p_sex:label">
             <value>Sexe du participant</value>
           </text>
@@ -162,14 +160,13 @@
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind constraint=". &gt; 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
-      <bind calculate="concat(/data/p_cluster_id ,'-',/data/meta/randomnum)" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string" db_add_col_3="/data/p_cluster_id" db_add_col_4="."/>
+      <bind nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Non'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-      <bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),3,7), '-', substr(random(),10,13))"/>
-     </model>
+    </model>
   </h:head>
   <h:body>
     <input ref="/data/p_recorderID">
@@ -196,7 +193,6 @@
         <value>Non</value>
       </item>
     </select1>
-
     <select1 ref="/data/p_sex">
       <label ref="jr:itext('/data/p_sex:label')"/>
       <item>

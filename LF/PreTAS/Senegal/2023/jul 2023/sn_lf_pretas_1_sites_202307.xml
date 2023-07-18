@@ -7,16 +7,17 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Juillet 2022) 1. Pre-TAS FL - Formulaire Site V1</h:title>
+    <h:title>(Juillet 2023) 1. Pre-TAS FL - Formulaire Site</h:title>
     <model >
 
       <instance>
-        <data id="sn_lf_pretas_1_sites_202207_v1">
+        <data id="sn_lf_pretas_1_sites_202307">
           <c_recorder/>
           <c_region/>
           <c_district/>
           <c_cluster_name/>
           <c_cluster_id/>
+          <c_site_type/>
           <c_cluster_leader_name/>
           <c_consent/>
           <c_population/>
@@ -46,20 +47,8 @@
           <text id="/data/c_region:label">
             <value>Select your region</value>
           </text>
-          <text id="/data/c_region/KAOLACK:label">
-            <value>KAOLACK</value>
-          </text>
-          <text id="/data/c_region/KEDOUGOU:label">
-            <value>KEDOUGOU</value>
-          </text>
           <text id="/data/c_region/LOUGA:label">
             <value>LOUGA</value>
-          </text>
-          <text id="/data/c_region/THIES:label">
-            <value>THIES</value>
-          </text>
-          <text id="/data/c_region/ZIGUINCHOR:label">
-            <value>ZIGUINCHOR</value>
           </text>
           <text id="/data/c_district:label">
             <value>Select your district</value>
@@ -72,6 +61,9 @@
           </text>
           <text id="/data/c_cluster_id:label">
             <value>Select the site ID</value>
+          </text>
+          <text id="/data/c_site_type:label">
+            <value>Site Type</value>
           </text>
           <text id="/data/c_cluster_leader_name:label">
             <value>Name of Village Leader or Head Teacher</value>
@@ -116,82 +108,25 @@
             <value>No</value>
           </text>
           <text id="region_list-0">
-            <value>KAOLACK</value>
-          </text>
-          <text id="region_list-1">
-            <value>KEDOUGOU</value>
-          </text>
-          <text id="region_list-2">
             <value>LOUGA</value>
           </text>
-          <text id="region_list-3">
-            <value>THIES</value>
-          </text>
-          <text id="region_list-4">
-            <value>ZIGUINCHOR</value>
-          </text>
           <text id="district_list-0">
-            <value>DIOULOULOU</value>
+            <value>COKI</value>
           </text>
           <text id="district_list-1">
-            <value>KAOLACK</value>
-          </text>
-          <text id="district_list-2">
-            <value>KEDOUGOU</value>
-          </text>
-          <text id="district_list-3">
-            <value>KEUR MOMAR SARR</value>
-          </text>
-          <text id="district_list-4">
-            <value>KHOMBOLE</value>
-          </text>
-          <text id="district_list-5">
-            <value>LINGUERE</value>
-          </text>
-          <text id="district_list-6">
-            <value>SALEMATA</value>
+            <value>LOUGA</value>
           </text>
           <text id="site_list-0">
-            <value>SC DIAGALY</value>
+            <value>KELLE NDIAYE</value>
           </text>
           <text id="site_list-1">
-            <value>SC DIOKOUL</value>
+            <value>KEUR BAKAR</value>
           </text>
           <text id="site_list-2">
-            <value>SC DOMBONDIR</value>
+            <value>PETE OURACK</value>
           </text>
           <text id="site_list-3">
-            <value>SC KEUR MOMAR SARR</value>
-          </text>
-          <text id="site_list-4">
-            <value>SC LEBAR</value>
-          </text>
-          <text id="site_list-5">
-            <value>SC NDIAKHOU</value>
-          </text>
-          <text id="site_list-6">
-            <value>SC OUNDOUFERE</value>
-          </text>
-          <text id="site_list-7">
-            <value>SC SOUKOUTA</value>
-          </text>
-          <text id="site_list-8">
-            <value>SS AFIA DANDE MAYO</value>
-          </text>
-          <text id="site_list-9">
-            <value>SS BARKEDJI</value>
-          </text>
-          <text id="site_list-10">
-            <value>SS KHALAMBASSE</value>
-          </text>
-          <text id="site_list-11">
-            <value>SS KOBA</value>
-          </text>
-          <text id="site_list-12">
-            <value>SS NGADE KHAYE</value>
-          </text>
-          <text id="site_list-13">
-            <value>SS THIATNGOL</value>
+            <value>TANIME</value>
           </text>
           <text id="code_site_list-0">
             <value>101</value>
@@ -204,36 +139,6 @@
           </text>
           <text id="code_site_list-3">
             <value>104</value>
-          </text>
-          <text id="code_site_list-4">
-            <value>105</value>
-          </text>
-          <text id="code_site_list-5">
-            <value>106</value>
-          </text>
-          <text id="code_site_list-6">
-            <value>107</value>
-          </text>
-          <text id="code_site_list-7">
-            <value>108</value>
-          </text>
-          <text id="code_site_list-8">
-            <value>109</value>
-          </text>
-          <text id="code_site_list-9">
-            <value>110</value>
-          </text>
-          <text id="code_site_list-10">
-            <value>111</value>
-          </text>
-          <text id="code_site_list-11">
-            <value>112</value>
-          </text>
-          <text id="code_site_list-12">
-            <value>113</value>
-          </text>
-          <text id="code_site_list-13">
-            <value>114</value>
           </text>
         </translation>
         <translation default="true()" lang="French">
@@ -249,20 +154,8 @@
           <text id="/data/c_region:label">
             <value>Sélectionner la région</value>
           </text>
-          <text id="/data/c_region/KAOLACK:label">
-            <value>KAOLACK</value>
-          </text>
-          <text id="/data/c_region/KEDOUGOU:label">
-            <value>KEDOUGOU</value>
-          </text>
           <text id="/data/c_region/LOUGA:label">
             <value>LOUGA</value>
-          </text>
-          <text id="/data/c_region/THIES:label">
-            <value>THIES</value>
-          </text>
-          <text id="/data/c_region/ZIGUINCHOR:label">
-            <value>ZIGUINCHOR</value>
           </text>
           <text id="/data/c_district:label">
             <value>Sélectionner le district</value>
@@ -275,6 +168,9 @@
           </text>
           <text id="/data/c_cluster_id:label">
             <value>Sélectionner le code du site</value>
+          </text>
+          <text id="/data/c_site_type:label">
+            <value>Type de site</value>
           </text>
           <text id="/data/c_cluster_leader_name:label">
             <value>Nom du chef de village ou du chef d'établissement</value>
@@ -313,82 +209,25 @@
             <value>Non</value>
           </text>
           <text id="region_list-0">
-            <value>KAOLACK</value>
-          </text>
-          <text id="region_list-1">
-            <value>KEDOUGOU</value>
-          </text>
-          <text id="region_list-2">
             <value>LOUGA</value>
           </text>
-          <text id="region_list-3">
-            <value>THIES</value>
-          </text>
-          <text id="region_list-4">
-            <value>ZIGUINCHOR</value>
-          </text>
           <text id="district_list-0">
-            <value>DIOULOULOU</value>
+            <value>COKI</value>
           </text>
           <text id="district_list-1">
-            <value>KAOLACK</value>
-          </text>
-          <text id="district_list-2">
-            <value>KEDOUGOU</value>
-          </text>
-          <text id="district_list-3">
-            <value>KEUR MOMAR SARR</value>
-          </text>
-          <text id="district_list-4">
-            <value>KHOMBOLE</value>
-          </text>
-          <text id="district_list-5">
-            <value>LINGUERE</value>
-          </text>
-          <text id="district_list-6">
-            <value>SALEMATA</value>
+            <value>LOUGA</value>
           </text>
           <text id="site_list-0">
-            <value>SC DIAGALY</value>
+            <value>KELLE NDIAYE</value>
           </text>
           <text id="site_list-1">
-            <value>SC DIOKOUL</value>
+            <value>KEUR BAKAR</value>
           </text>
           <text id="site_list-2">
-            <value>SC DOMBONDIR</value>
+            <value>PETE OURACK</value>
           </text>
           <text id="site_list-3">
-            <value>SC KEUR MOMAR SARR</value>
-          </text>
-          <text id="site_list-4">
-            <value>SC LEBAR</value>
-          </text>
-          <text id="site_list-5">
-            <value>SC NDIAKHOU</value>
-          </text>
-          <text id="site_list-6">
-            <value>SC OUNDOUFERE</value>
-          </text>
-          <text id="site_list-7">
-            <value>SC SOUKOUTA</value>
-          </text>
-          <text id="site_list-8">
-            <value>SS AFIA DANDE MAYO</value>
-          </text>
-          <text id="site_list-9">
-            <value>SS BARKEDJI</value>
-          </text>
-          <text id="site_list-10">
-            <value>SS KHALAMBASSE</value>
-          </text>
-          <text id="site_list-11">
-            <value>SS KOBA</value>
-          </text>
-          <text id="site_list-12">
-            <value>SS NGADE KHAYE</value>
-          </text>
-          <text id="site_list-13">
-            <value>SS THIATNGOL</value>
+            <value>TANIME</value>
           </text>
           <text id="code_site_list-0">
             <value>101</value>
@@ -401,36 +240,6 @@
           </text>
           <text id="code_site_list-3">
             <value>104</value>
-          </text>
-          <text id="code_site_list-4">
-            <value>105</value>
-          </text>
-          <text id="code_site_list-5">
-            <value>106</value>
-          </text>
-          <text id="code_site_list-6">
-            <value>107</value>
-          </text>
-          <text id="code_site_list-7">
-            <value>108</value>
-          </text>
-          <text id="code_site_list-8">
-            <value>109</value>
-          </text>
-          <text id="code_site_list-9">
-            <value>110</value>
-          </text>
-          <text id="code_site_list-10">
-            <value>111</value>
-          </text>
-          <text id="code_site_list-11">
-            <value>112</value>
-          </text>
-          <text id="code_site_list-12">
-            <value>113</value>
-          </text>
-          <text id="code_site_list-13">
-            <value>114</value>
           </text>
           <text id="/data/c_start:label">
             <value>-</value>
@@ -457,23 +266,7 @@
         <root>
           <item>
             <itextId>region_list-0</itextId>
-            <name>KAOLACK</name>
-          </item>
-          <item>
-            <itextId>region_list-1</itextId>
-            <name>KEDOUGOU</name>
-          </item>
-          <item>
-            <itextId>region_list-2</itextId>
             <name>LOUGA</name>
-          </item>
-          <item>
-            <itextId>region_list-3</itextId>
-            <name>THIES</name>
-          </item>
-          <item>
-            <itextId>region_list-4</itextId>
-            <name>ZIGUINCHOR</name>
           </item>
         </root>
       </instance>
@@ -481,38 +274,13 @@
         <root>
           <item>
             <itextId>district_list-0</itextId>
-            <name>DIOULOULOU</name>
-            <region_list>ZIGUINCHOR</region_list>
+            <name>COKI</name>
+            <region_list>LOUGA</region_list>
           </item>
           <item>
             <itextId>district_list-1</itextId>
-            <name>KAOLACK</name>
-            <region_list>KAOLACK</region_list>
-          </item>
-          <item>
-            <itextId>district_list-2</itextId>
-            <name>KEDOUGOU</name>
-            <region_list>KEDOUGOU</region_list>
-          </item>
-          <item>
-            <itextId>district_list-3</itextId>
-            <name>KEUR MOMAR SARR</name>
+            <name>LOUGA</name>
             <region_list>LOUGA</region_list>
-          </item>
-          <item>
-            <itextId>district_list-4</itextId>
-            <name>KHOMBOLE</name>
-            <region_list>THIES</region_list>
-          </item>
-          <item>
-            <itextId>district_list-5</itextId>
-            <name>LINGUERE</name>
-            <region_list>LOUGA</region_list>
-          </item>
-          <item>
-            <itextId>district_list-6</itextId>
-            <name>SALEMATA</name>
-            <region_list>KEDOUGOU</region_list>
           </item>
         </root>
       </instance>
@@ -520,73 +288,23 @@
         <root>
           <item>
             <itextId>site_list-0</itextId>
-            <district_list>LINGUERE</district_list>
-            <name>SC DIAGALY</name>
+            <district_list>LOUGA</district_list>
+            <name>KELLE NDIAYE</name>
           </item>
           <item>
             <itextId>site_list-1</itextId>
-            <district_list>KAOLACK</district_list>
-            <name>SC DIOKOUL</name>
+            <district_list>COKI</district_list>
+            <name>KEUR BAKAR</name>
           </item>
           <item>
             <itextId>site_list-2</itextId>
-            <district_list>DIOULOULOU</district_list>
-            <name>SC DOMBONDIR</name>
+            <district_list>COKI</district_list>
+            <name>PETE OURACK</name>
           </item>
           <item>
             <itextId>site_list-3</itextId>
-            <district_list>KEUR MOMAR SARR</district_list>
-            <name>SC KEUR MOMAR SARR</name>
-          </item>
-          <item>
-            <itextId>site_list-4</itextId>
-            <district_list>SALEMATA</district_list>
-            <name>SC LEBAR</name>
-          </item>
-          <item>
-            <itextId>site_list-5</itextId>
-            <district_list>KHOMBOLE</district_list>
-            <name>SC NDIAKHOU</name>
-          </item>
-          <item>
-            <itextId>site_list-6</itextId>
-            <district_list>SALEMATA</district_list>
-            <name>SC OUNDOUFERE</name>
-          </item>
-          <item>
-            <itextId>site_list-7</itextId>
-            <district_list>KEDOUGOU</district_list>
-            <name>SC SOUKOUTA</name>
-          </item>
-          <item>
-            <itextId>site_list-8</itextId>
-            <district_list>KEDOUGOU</district_list>
-            <name>SS AFIA DANDE MAYO</name>
-          </item>
-          <item>
-            <itextId>site_list-9</itextId>
-            <district_list>LINGUERE</district_list>
-            <name>SS BARKEDJI</name>
-          </item>
-          <item>
-            <itextId>site_list-10</itextId>
-            <district_list>KAOLACK</district_list>
-            <name>SS KHALAMBASSE</name>
-          </item>
-          <item>
-            <itextId>site_list-11</itextId>
-            <district_list>DIOULOULOU</district_list>
-            <name>SS KOBA</name>
-          </item>
-          <item>
-            <itextId>site_list-12</itextId>
-            <district_list>KHOMBOLE</district_list>
-            <name>SS NGADE KHAYE</name>
-          </item>
-          <item>
-            <itextId>site_list-13</itextId>
-            <district_list>KEUR MOMAR SARR</district_list>
-            <name>SS THIATNGOL</name>
+            <district_list>LOUGA</district_list>
+            <name>TANIME</name>
           </item>
         </root>
       </instance>
@@ -595,72 +313,22 @@
           <item>
             <itextId>code_site_list-0</itextId>
             <name>101</name>
-            <site_list>SS KHALAMBASSE</site_list>
+            <site_list>KELLE NDIAYE</site_list>
           </item>
           <item>
             <itextId>code_site_list-1</itextId>
             <name>102</name>
-            <site_list>SC DIOKOUL</site_list>
+            <site_list>TANIME</site_list>
           </item>
           <item>
             <itextId>code_site_list-2</itextId>
             <name>103</name>
-            <site_list>SS AFIA DANDE MAYO</site_list>
+            <site_list>KEUR BAKAR</site_list>
           </item>
           <item>
             <itextId>code_site_list-3</itextId>
             <name>104</name>
-            <site_list>SC SOUKOUTA</site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-4</itextId>
-            <name>105</name>
-            <site_list>SC OUNDOUFERE</site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-5</itextId>
-            <name>106</name>
-            <site_list>SC LEBAR</site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-6</itextId>
-            <name>107</name>
-            <site_list>SS BARKEDJI</site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-7</itextId>
-            <name>108</name>
-            <site_list>SC DIAGALY</site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-8</itextId>
-            <name>109</name>
-            <site_list>SS THIATNGOL</site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-9</itextId>
-            <name>110</name>
-            <site_list>SC KEUR MOMAR SARR</site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-10</itextId>
-            <name>111</name>
-            <site_list>SS NGADE KHAYE</site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-11</itextId>
-            <name>112</name>
-            <site_list>SC NDIAKHOU</site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-12</itextId>
-            <name>113</name>
-            <site_list>SS KOBA</site_list>
-          </item>
-          <item>
-            <itextId>code_site_list-13</itextId>
-            <name>114</name>
-            <site_list>SC DOMBONDIR</site_list>
+            <site_list>PETE OURACK</site_list>
           </item>
         </root>
       </instance>
@@ -669,6 +337,7 @@
       <bind nodeset="/data/c_district" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/c_cluster_name" required="true()" type="string" db_add_col_1="/data/c_district" db_add_col_2="."/>
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="string" db_add_col_2="/data/c_cluster_name" db_add_col_3="."/>
+      <bind nodeset="/data/c_site_type" readonly="true()" type="string"/>
       <bind nodeset="/data/c_cluster_leader_name" required="true()" type="string"/>
       <bind nodeset="/data/c_consent" required="true()" type="string"/>
       <bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Oui'" required="false()" type="int"/>
@@ -689,24 +358,8 @@
     <select1 ref="/data/c_region">
       <label ref="jr:itext('/data/c_region:label')"/>
       <item>
-        <label ref="jr:itext('/data/c_region/KAOLACK:label')"/>
-        <value>KAOLACK</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/c_region/KEDOUGOU:label')"/>
-        <value>KEDOUGOU</value>
-      </item>
-      <item>
         <label ref="jr:itext('/data/c_region/LOUGA:label')"/>
         <value>LOUGA</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/c_region/THIES:label')"/>
-        <value>THIES</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/c_region/ZIGUINCHOR:label')"/>
-        <value>ZIGUINCHOR</value>
       </item>
     </select1>
     <select1 ref="/data/c_district">
@@ -730,6 +383,9 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <input ref="/data/c_site_type">
+      <label ref="jr:itext('/data/c_site_type:label')"/>
+    </input>
     <input ref="/data/c_cluster_leader_name">
       <label ref="jr:itext('/data/c_cluster_leader_name:label')"/>
     </input>
