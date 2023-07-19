@@ -23,7 +23,6 @@
           <p_IDMethod/>
           <p_BarcodeID/>
           <p_GenerateID/>
-          <p_code_id/>
           <p_ending_survey_note/>
           <p_notes/>
           <c_start/>
@@ -100,9 +99,6 @@
           <text id="/data/p_GenerateID:label">
             <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
           </text>
-          <text id="/data/p_code_id:label">
-            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
-          </text>
           <text id="/data/p_ending_survey_note:label">
             <value>You just entered a value that will end the survey</value>
           </text>
@@ -174,9 +170,6 @@
           <text id="/data/p_GenerateID:label">
             <value>Veuiller enregistrer le code d'identification unique du participant qui apparait sur une liste séparée et sur chaque test de diagnostic administré</value>
           </text>
-          <text id="/data/p_code_id:label">
-            <value>Veuiller enregistrer le code d'identification unique du participant qui apparait sur une liste séparée et sur chaque test de diagnostic administré</value>
-          </text>
           <text id="/data/p_ending_survey_note:label">
             <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
           </text>
@@ -194,10 +187,9 @@
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind constraint=". &gt; 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
-      <bind nodeset="/data/p_IDMethod" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/p_BarcodeID" relevant=" /data/p_IDMethod  = 'Scanner' and  /data/p_consent  = 'Yes'" required="true()" type="barcode"/>
-      <bind calculate="concat( /data/p_cluster_id ,'-',/data/meta/randomnum)" nodeset="/data/p_GenerateID" readonly="true()" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Yes'" required="true()" type="string" db_add_col_4="/data/p_cluster_id" db_add_col_5="."/>
-      <bind nodeset="/data/p_code_id" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_IDMethod" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_BarcodeID" relevant=" /data/p_IDMethod  = 'Scanner' and  /data/p_consent  = 'Oui'" required="true()" type="barcode"/>
+      <bind calculate="concat( /data/p_cluster_id ,'-',/data/meta/randomnum)" nodeset="/data/p_GenerateID" readonly="true()" relevant=" /data/p_IDMethod  = 'ID_generation' and  /data/p_consent  = 'Oui'" required="true()" type="string" db_add_col_4="/data/p_cluster_id" db_add_col_5="."/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Non'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
@@ -264,9 +256,6 @@
     </input>
     <input ref="/data/p_GenerateID">
       <label ref="jr:itext('/data/p_GenerateID:label')"/>
-    </input>
-    <input ref="/data/p_code_id">
-      <label ref="jr:itext('/data/p_code_id:label')"/>
     </input>
     <input ref="/data/p_ending_survey_note">
       <label ref="jr:itext('/data/p_ending_survey_note:label')"/>

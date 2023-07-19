@@ -16,7 +16,9 @@
           <d_district/>
           <d_cluster_name/>
           <d_cluster_id/>
-          <d_code_id/>
+          <d_IDType/>
+          <d_BarcodeID/>
+          <d_generatedid/>
           <d_lotnumber1/>
           <d_result1/>
           <d_why_invalid1/>
@@ -60,11 +62,20 @@
           <text id="/data/d_cluster_id:label">
             <value>Select your site code</value>
           </text>
-          <text id="/data/d_code_id:jr:constraintMsg">
-            <value>The format should be 123-1234-567</value>
+          <text id="/data/d_IDType:label">
+            <value>Does a bar code need to be scanned on the diagnostic test?</value>
           </text>
-          <text id="/data/d_code_id:label">
-            <value>Enter unique ID from the diagnostic test</value>
+          <text id="/data/d_IDType/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/d_IDType/Generation automatique:label">
+            <value>Automatic ID generation</value>
+          </text>
+          <text id="/data/d_BarcodeID:label">
+            <value>Scan barcode now</value>
+          </text>
+          <text id="/data/d_generatedid:label">
+            <value>Enter the second part and the third part of the generated code (must must have the format 1234-567 only with numbers and dashes)</value>
           </text>
           <text id="/data/d_lotnumber1:jr:constraintMsg">
             <value>The lot number must contain 6 digits</value>
@@ -196,11 +207,20 @@
           <text id="/data/d_cluster_id:label">
             <value>Sélectionner le code du site</value>
           </text>
-          <text id="/data/d_code_id:jr:constraintMsg">
-            <value>Le format doit être 123-1234-567</value>
+          <text id="/data/d_IDType:label">
+            <value>Avez-vous besoin de scanner le code barre sur le test diagnostique</value>
           </text>
-          <text id="/data/d_code_id:label">
-            <value>Entrer le code d'identification unique du test de diagnostic</value>
+          <text id="/data/d_IDType/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/d_IDType/Generation automatique:label">
+            <value>Génération automatique</value>
+          </text>
+          <text id="/data/d_BarcodeID:label">
+            <value>Scanner le code-barres maintenant</value>
+          </text>
+          <text id="/data/d_generatedid:label">
+            <value>Entrer la deuxième partie et la troisième partie du code généré (doit doit avoir le format 123-1234-567 uniquement avec des nombres et des tirets)</value>
           </text>
           <text id="/data/d_lotnumber1:jr:constraintMsg">
             <value>Le numéro du lot doit contenir 6 chiffre</value>
@@ -319,7 +339,9 @@
       <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_district"/>
       <bind nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_cluster_name"/>
-      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_code_id:jr:constraintMsg')" nodeset="/data/d_code_id" required="true()" type="string"  db_get="col_4" db_filter_by_col_3="/data/d_cluster_id"/>
+      <bind nodeset="/data/d_IDType" required="true()" type="string"/>
+      <bind nodeset="/data/d_BarcodeID" relevant=" /data/d_IDType  = &quot;Scanner&quot;" required="true()" type="barcode"/>
+      <bind nodeset="/data/d_generatedid" relevant=" /data/d_IDType  = &quot;Generation automatique&quot;" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_cluster_id"/>
       <bind constraint="regex(.,'^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_lotnumber1:jr:constraintMsg')" nodeset="/data/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/d_result1" required="true()" type="string"/>
       <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalid'" required="true()" type="string"/>
@@ -364,8 +386,22 @@
     <input ref="/data/d_cluster_id">
       <label ref="jr:itext('/data/d_cluster_id:label')"/>
     </input>
-    <input ref="/data/d_code_id">
-      <label ref="jr:itext('/data/d_code_id:label')"/>
+    <select1 ref="/data/d_IDType">
+      <label ref="jr:itext('/data/d_IDType:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_IDType/Scanner:label')"/>
+        <value>Scanner</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_IDType/Generation automatique:label')"/>
+        <value>Generation automatique</value>
+      </item>
+    </select1>
+    <input ref="/data/d_BarcodeID">
+      <label ref="jr:itext('/data/d_BarcodeID:label')"/>
+    </input>
+    <input ref="/data/d_generatedid">
+      <label ref="jr:itext('/data/d_generatedid:label')"/>
     </input>
     <input ref="/data/d_lotnumber1">
       <label ref="jr:itext('/data/d_lotnumber1:label')"/>
