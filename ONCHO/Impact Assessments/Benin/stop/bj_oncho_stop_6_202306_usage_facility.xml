@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Juillet) ONCHO Stop TDM - 6. Questionnaire sur la facilité d'utilisation</h:title>
+    <h:title>(2023 Juillet) ONCHO Stop TDM - 6. Questionnaire sur la facilité d'utilisation V2</h:title>
     <model >
 
       <instance>
-        <data id="bj_oncho_stop_6_202306_usage_facility">
+        <data id="bj_oncho_stop_6_202306_usage_facility_v2">
           <u_role/>
           <u_test_type/>
           <u_number_test/>
@@ -48,7 +48,6 @@
           <u_ligne_control_lecture_heure_recommande/>
           <u_arriere_plan_claire/>
           <u_interpretation_facile/>
-          <u_id_enum/>
           <u_notes/>
           <u_start/>
           <u_end/>
@@ -576,9 +575,6 @@
           <text id="/data/u_interpretation_facile/Tout à fait d.accord:label">
             <value>Tout à fait d'accord</value>
           </text>
-          <text id="/data/u_id_enum:label">
-            <value>E32. ID de l'énumérateur</value>
-          </text>
           <text id="/data/u_notes:label">
             <value>E33. Commentaires supplémentaires</value>
           </text>
@@ -621,7 +617,6 @@
       <bind nodeset="/data/u_ligne_control_lecture_heure_recommande" required="true()" type="string"/>
       <bind nodeset="/data/u_arriere_plan_claire" required="true()" type="string"/>
       <bind nodeset="/data/u_interpretation_facile" required="true()" type="string"/>
-      <bind nodeset="/data/u_id_enum" type="string"/>
       <bind nodeset="/data/u_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
@@ -1281,9 +1276,6 @@
         <value>Tout à fait d.accord</value>
       </item>
     </select1>
-    <input ref="/data/u_id_enum">
-      <label ref="jr:itext('/data/u_id_enum:label')"/>
-    </input>
     <input ref="/data/u_notes">
       <label ref="jr:itext('/data/u_notes:label')"/>
     </input>
