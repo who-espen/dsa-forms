@@ -87,11 +87,11 @@
           <text id="/data/w_site_name/BOUNTOUN:label">
             <value>BOUNTOUN</value>
           </text>
-          <text id="/data/w_site_name/L'ISLAM:label">
-            <value>L'ISLAM</value>
-          </text>
           <text id="/data/w_site_code/190:label">
             <value>190</value>
+          </text>
+          <text id="/data/w_site_name/LISLAM:label">
+            <value>LISLAM</value>
           </text>
           <text id="/data/w_site_code/166:label">
             <value>166</value>
@@ -1182,8 +1182,8 @@
           <text id="static_instance-school_code_list-111">
             <value>212</value>
           </text>
-          <text id="static_instance-school_code_list-110">
-            <value>211</value>
+          <text id="/data/w_place_water_point/A moins d.un KM:label">
+            <value>A moins d'un KM</value>
           </text>
           <text id="static_instance-school_list-54">
             <value>MASSA MASSA</value>
@@ -1381,7 +1381,7 @@
             <value>157</value>
           </text>
           <text id="static_instance-school_list-30">
-            <value>L'ISLAM</value>
+            <value>LISLAM</value>
           </text>
           <text id="/data/w_soap:label">
             <value>9.d. Observateur : y a-t-il du savon</value>
@@ -1611,9 +1611,6 @@
           <text id="/data/w_subdistrict/SAENSOUTOU:label">
             <value>SAENSOUTOU</value>
           </text>
-          <text id="/data/w_place_water_point/A moins d'un KM:label">
-            <value>A moins d'un KM</value>
-          </text>
           <text id="/data/w_toilet_type:label">
             <value>9.a. Quelle est la nature des toilettes ?</value>
           </text>
@@ -1694,6 +1691,9 @@
           </text>
           <text id="/data/w_site_name/MADINA COURA BOUGOUDA:label">
             <value>MADINA COURA BOUGOUDA</value>
+          </text>
+          <text id="static_instance-school_code_list-110">
+            <value>211</value>
           </text>
           <text id="/data/w_source_type2/Puits sans couvercle:label">
             <value>Puits sans couvercle</value>
@@ -2715,7 +2715,7 @@
           </item>
           <item>
             <itextId>static_instance-school_code_list-30</itextId>
-            <school_list>L'ISLAM</school_list>
+            <school_list>LISLAM</school_list>
             <name>131</name>
           </item>
           <item>
@@ -3337,7 +3337,7 @@
         <root>
           <item>
             <itextId>static_instance-dist_eau-0</itextId>
-            <name>A moins d'un KM</name>
+            <name>A moins d.un KM</name>
           </item>
           <item>
             <itextId>static_instance-dist_eau-1</itextId>
@@ -3524,7 +3524,7 @@
           <item>
             <itextId>static_instance-school_list-30</itextId>
             <subdistrict_list>CS SAKAL</subdistrict_list>
-            <name>L'ISLAM</name>
+            <name>LISLAM</name>
           </item>
           <item>
             <itextId>static_instance-school_list-31</itextId>
@@ -4535,7 +4535,7 @@
           </item>
         </root>
       </instance>
-      
+
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/w_recorder:jr:constraintMsg')" nodeset="/data/w_recorder" required="true()" type="string"/>
       <bind nodeset="/data/w_district" required="true()" type="select1" db_add_col_1="."/>
       <bind nodeset="/data/w_subdistrict" required="true()" type="select1" db_add_col_1="/data/w_district" db_add_col_2="."/>
@@ -4872,8 +4872,8 @@
     <select1 ref="/data/w_place_water_point">
       <label ref="jr:itext('/data/w_place_water_point:label')"/>
       <item>
-        <label ref="jr:itext('/data/w_place_water_point/A moins d'un KM:label')"/>
-        <value>A moins d'un KM</value>
+        <label ref="jr:itext('/data/w_place_water_point/A moins d.un KM:label')"/>
+        <value>A moins d.un KM</value>
       </item>
       <item>
         <label ref="jr:itext('/data/w_place_water_point/Entre 1 et 5 KM:label')"/>
