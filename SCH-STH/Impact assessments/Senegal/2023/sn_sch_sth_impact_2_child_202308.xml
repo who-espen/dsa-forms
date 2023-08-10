@@ -181,7 +181,7 @@
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorder:jr:constraintMsg')" nodeset="/data/p_recorder" required="true()" type="string"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
-      <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_subdistrict"/>
       <bind nodeset="/data/p_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_site"/>
       <bind nodeset="/data/p_consent_note" readonly="true()" type="string"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
