@@ -7,17 +7,19 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Août 2023) - 3. SCH/STH - Resultats v3</h:title>
+    <h:title>(Août 2023) - 3. SCH/STH - Resultats V2</h:title>
     <model>
 
       <instance>
-        <data id="sn_sch_sth_impact_3_Resultats_202308">
+        <data id="sn_sch_sth_impact_3_Resultats_202308_v2">
           <r_recorder/>
           <r_district/>
           <r_subdistrict/>
           <r_site_name/>
           <r_site_code/>
+          <r_type_code/>
           <r_barcodeid/>
+          <r_generated_id/>
           <r_note1/>
           <r_grading/>
           <r_note2/>
@@ -659,6 +661,9 @@
           <text id="/data/r_site_code/187:label">
             <value>187</value>
           </text>
+          <text id="/data/r_type_code/Génération Automatique:label">
+            <value>Génération Automatique</value>
+          </text>
           <text id="/data/r_site_name/DIAMINAR LOYÉNE:label">
             <value>DIAMINAR LOYÉNE</value>
           </text>
@@ -1106,6 +1111,9 @@
           <text id="/data/r_site_code/242:label">
             <value>242</value>
           </text>
+          <text id="/data/r_type_code/Saisie Manuel:label">
+            <value>Saisie Manuel</value>
+          </text>
           <text id="/data/r_site_name/MOURAN:label">
             <value>MOURAN</value>
           </text>
@@ -1129,6 +1137,12 @@
           </text>
           <text id="/data/r_site_code/203:label">
             <value>203</value>
+          </text>
+          <text id="static_instance-type_code-1">
+            <value>Saisie Manuel</value>
+          </text>
+          <text id="static_instance-type_code-0">
+            <value>Génération Automatique</value>
           </text>
           <text id="/data/r_hookworm_sb:label">
             <value>10.b. Ankylostome nombre d'œufs lame B</value>
@@ -1890,7 +1904,7 @@
             <value>198</value>
           </text>
           <text id="/data/r_barcodeid:label">
-            <value>6. Code unique de l'enfant: Veuillez entrer le code tel que généré par le formulaire 2.</value>
+            <value>6.a. Code unique de l'enfant: Veuillez entrer le code tel que généré par le formulaire 2.</value>
           </text>
           <text id="/data/r_site_code/107:label">
             <value>107</value>
@@ -1988,6 +2002,9 @@
           <text id="static_instance-school_list-11">
             <value>MBARET BANTE</value>
           </text>
+          <text id="/data/r_generated_id:label">
+            <value>6.b. Code manuel</value>
+          </text>
           <text id="/data/r_site_code/116:label">
             <value>116</value>
           </text>
@@ -2065,6 +2082,9 @@
           </text>
           <text id="/data/r_site_code/126:label">
             <value>126</value>
+          </text>
+          <text id="/data/r_type_code:label">
+            <value>6. Comment allez vous entrer le code ?</value>
           </text>
           <text id="/data/r_site_code/179:label">
             <value>179</value>
@@ -4088,12 +4108,27 @@
           </item>
         </root>
       </instance>
+      <instance id="type_code">
+        <root>
+          <item>
+            <itextId>static_instance-type_code-0</itextId>
+            <name>Génération Automatique</name>
+          </item>
+          <item>
+            <itextId>static_instance-type_code-1</itextId>
+            <name>Saisie Manuel</name>
+          </item>
+        </root>
+      </instance>
+
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/r_recorder:jr:constraintMsg')" nodeset="/data/r_recorder" required="true()" type="string"/>
       <bind nodeset="/data/r_district" required="true()" type="select1"/>
       <bind nodeset="/data/r_subdistrict" required="true()" type="select1"/>
       <bind nodeset="/data/r_site_name" required="true()" type="select1"/>
       <bind nodeset="/data/r_site_code" required="true()" type="select1"/>
-      <bind jr:constraintMsg="jr:itext('/data/r_barcodeid:jr:constraintMsg')" nodeset="/data/r_barcodeid" required="true()" type="string"/>
+      <bind nodeset="/data/r_type_code" required="true()" type="select1"/>
+      <bind jr:constraintMsg="jr:itext('/data/r_barcodeid:jr:constraintMsg')" nodeset="/data/r_barcodeid" relevant=" /data/r_type_code  = 'Génération Automatique'" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/r_site_code"/>
+      <bind nodeset="/data/r_generated_id" relevant=" /data/r_type_code  = 'Saisie Manuel'" required="true()" type="string"/>
       <bind nodeset="/data/r_note1" readonly="true()" type="string"/>
       <bind nodeset="/data/r_grading" required="true()" type="select1"/>
       <bind nodeset="/data/r_note2" readonly="true()" type="string"/>
@@ -4169,9 +4204,23 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <select1 ref="/data/r_type_code">
+      <label ref="jr:itext('/data/r_type_code:label')"/>
+      <item>
+        <label ref="jr:itext('/data/r_type_code/Génération Automatique:label')"/>
+        <value>Génération Automatique</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/r_type_code/Saisie Manuel:label')"/>
+        <value>Saisie Manuel</value>
+      </item>
+    </select1>
     <input ref="/data/r_barcodeid">
       <label ref="jr:itext('/data/r_barcodeid:label')"/>
       <hint ref="jr:itext('/data/r_barcodeid:hint')"/>
+    </input>
+    <input ref="/data/r_generated_id">
+      <label ref="jr:itext('/data/r_generated_id:label')"/>
     </input>
     <input ref="/data/r_note1">
       <label ref="jr:itext('/data/r_note1:label')"/>

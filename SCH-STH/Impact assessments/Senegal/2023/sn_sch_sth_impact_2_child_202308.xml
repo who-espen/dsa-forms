@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Août 2023) - 2. SCH/STH – Participant</h:title>
+    <h:title>(Août 2023) - 2. SCH/STH – Participant V2</h:title>
     <model>
 
       <instance>
-        <data id="sn_sch_sth_impact_2_child_202308">
+        <data id="sn_sch_sth_impact_2_child_202308_v2">
           <p_recorder/>
           <p_district/>
           <p_subdistrict/>
@@ -50,7 +50,7 @@
             <value>Bonjour ! Je suis ici au nom du ministère de la Santé. Nous menons une enquête pour déterminer la présence de schistosomiase (SCH) et des géo-helminthiases (STH) dans votre école. Je vais vous poser quelques questions sur le mode et le mécanisme de transmission et apprécierais également de prélever des échantillons de selles et d'urine auprès de vous. Si vous souhaitez participer à l'enquête, dites-le-moi et je noterai vos réponses et vous fournirai des récipients de selles et d'urine. Si vous êtes d'accord, l'enquête ne prendra que quelques minutes. Participer à l'enquête scolaire vous sera directement bénéfique car en cas de diagnostic de vers, vous recevrez immédiatement des médicaments vermifuges. Votre communauté et votre école en bénéficieront également directement, car les résultats de cette enquête aideront le ministère de la Santé à mettre en œuvre des activités de déparasitage pour les enfants âgés de 5 à 14 ans, si les résultats de laboratoire révèlent la nécessité d'interventions. Vous pouvez refuser sans pénalité. Souhaitez-vous participer à notre enquête ?</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>L'âge doit être compris entre 8 et 14 ans</value>
+            <value>L'âge doit être compris entre 5 et 14 ans</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
             <value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête</value>
@@ -128,7 +128,7 @@
             <value>2. Sélectionnez le district</value>
           </text>
           <text id="/data/p_pisse_sang_maintenant:label">
-            <value>14. Est-ce que présentement vous pissez du sang ?</value>
+            <value>15. Est-ce que présentement vous pissez du sang ?</value>
           </text>
           <text id="/data/p_residence/Dans un village situé à plus de 10 km:label">
             <value>Dans un village situé à plus de 10 km</value>
@@ -177,7 +177,6 @@
           </text>
         </translation>
       </itext>
-
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorder:jr:constraintMsg')" nodeset="/data/p_recorder" required="true()" type="string"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
@@ -186,7 +185,7 @@
       <bind nodeset="/data/p_consent_note" readonly="true()" type="string"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
       <bind nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string" readonly="true()" calculate="concat( /data/p_site_code ,'-',/data/meta/randomnum)" db_add_col_4="/data/p_site_code" db_add_col_5="."/>
-      <bind constraint=". &gt;= 8 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="int"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_residence" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_annes_vecu_village:jr:constraintMsg')" nodeset="/data/p_annes_vecu_village" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="int"/>
