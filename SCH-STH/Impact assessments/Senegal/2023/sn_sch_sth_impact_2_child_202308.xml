@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Août 2023) - 2. SCH/STH – Participant V3</h:title>
+    <h:title>(Août 2023) - 2. SCH/STH – Participant V3.1</h:title>
     <model>
 
       <instance>
-        <data id="sn_sch_sth_impact_2_child_202308_v3">
+        <data id="sn_sch_sth_impact_2_child_202308_v3_1">
           <p_recorder/>
           <p_district/>
           <p_subdistrict/>
@@ -44,12 +44,14 @@
             <p_ending_survey_note/>
             <p_remarks/>
             <p_note_thanks/>
+          <meta>
+						<randomnum/>
+          </meta>
           </part>
           <p_start/>
           <p_end/>
           <meta>
             <instanceID/>
-						<randomnum/>
           </meta>
         </data>
       </instance>
@@ -338,7 +340,7 @@
       <bind nodeset="/data/p_place_defecate" relevant=" /data/p_toilet  = 'Non'" required="true()" type="select"/>
       <bind nodeset="/data/part/p_consent_note" readonly="true()" type="string"/>
       <bind nodeset="/data/part/p_consent" required="true()" type="select1"/>
-      <bind nodeset="/data/part/p_barcodeid" relevant=" ../p_consent  = 'A.donne'" required="true()" type="string" readonly="true()" calculate="concat( /data/p_site_code ,'-',/data/meta/randomnum)" db_add_col_4="/data/p_site_code" db_add_col_5="."/>
+      <bind nodeset="/data/part/p_barcodeid" relevant=" ../p_consent  = 'A.donne'" required="true()" type="string" readonly="true()" calculate="concat( /data/p_site_code ,'-',/data/part/meta/randomnum)" db_add_col_4="/data/p_site_code" db_add_col_5="."/>
       <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/part/p_age_yrs:jr:constraintMsg')" nodeset="/data/part/p_age_yrs" relevant=" ../p_consent  = 'A.donne'" required="true()" type="int"/>
       <bind nodeset="/data/part/p_sex" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/part/p_residence" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
@@ -354,7 +356,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-			<bind nodeset="/data/meta/randomnum" type="string" calculate="concat(substr(random(),2,6), '-', substr(random(),10,14))"/>
+			<bind nodeset="/data/part/meta/randomnum" type="string" calculate="concat(substr(random(),2,6), '-', substr(random(),10,14))"/>
     </model>
   </h:head>
   <h:body>
