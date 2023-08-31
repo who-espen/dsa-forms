@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Août 2023) - 2. SCH/STH – Participant V3.1</h:title>
+    <h:title>(Août 2023) - 2. SCH/STH – Participant V3.2</h:title>
     <model>
 
       <instance>
-        <data id="sn_sch_sth_impact_2_child_202308_v3_1">
+        <data id="sn_sch_sth_impact_2_child_202308_v3_2">
           <p_recorder/>
           <p_district/>
           <p_subdistrict/>
@@ -29,6 +29,7 @@
           <p_sanitiser_2/>
           <p_place_defecate/>
           <part jr:template="">
+            <p_add_child/>
             <p_consent_note/>
             <p_consent/>
             <p_barcodeid/>
@@ -76,6 +77,9 @@
           <text id="/data/p_soap:label">
             <value>9.d. Observateur : y a-t-il du savon</value>
           </text>
+          <text id="/data/part/p_add_child:label">
+            <value>Voulez-vous vraiment enregistrer un nouvel enfant?</value>
+          </text>
           <text id="/data/p_place_defecate/Dans.la.nature:label">
             <value>Dans la nature</value>
           </text>
@@ -108,6 +112,9 @@
           </text>
           <text id="/data/part/p_annes_vecu_village:jr:constraintMsg">
             <value>L'année ne doit pas déppasé l'age de l'enfant</value>
+          </text>
+          <text id="/data/part/p_add_child/Non:label">
+            <value>Non</value>
           </text>
           <text id="/data/p_place_defecate/Au.bord.des.eaux.de.surface.(rivière,.marre,.fleuve,.etc):label">
             <value>Au bord des eaux de surface (rivière, marre, fleuve...)</value>
@@ -229,6 +236,9 @@
           <text id="/data/p_sanitiser_2:label">
             <value>9.g.Quel(s) sont les désinfectant(s) disponible(s) ?</value>
           </text>
+          <text id="/data/part/p_add_child/Oui:label">
+            <value>Oui</value>
+          </text>
           <text id="/data/p_flies_access_faeces/Non:label">
             <value>Non</value>
           </text>
@@ -338,21 +348,22 @@
       <bind nodeset="/data/p_soap_2" relevant=" /data/p_toilet  = 'Oui' and  /data/p_washing_hand_2  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/p_sanitiser_2" relevant=" /data/p_toilet  = 'Oui' and  /data/p_soap_2  = 'Non'" required="true()" type="select1"/>
       <bind nodeset="/data/p_place_defecate" relevant=" /data/p_toilet  = 'Non'" required="true()" type="select"/>
-      <bind nodeset="/data/part/p_consent_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/part/p_consent" required="true()" type="select1"/>
-      <bind nodeset="/data/part/p_barcodeid" relevant=" ../p_consent  = 'A.donne'" required="true()" type="string" readonly="true()" calculate="concat( /data/p_site_code ,'-',/data/part/meta/randomnum)" db_add_col_4="/data/p_site_code" db_add_col_5="."/>
-      <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/part/p_age_yrs:jr:constraintMsg')" nodeset="/data/part/p_age_yrs" relevant=" ../p_consent  = 'A.donne'" required="true()" type="int"/>
-      <bind nodeset="/data/part/p_sex" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/part/p_residence" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind constraint=". &lt;=  ../p_age_yrs " jr:constraintMsg="jr:itext('/data/part/p_annes_vecu_village:jr:constraintMsg')" nodeset="/data/part/p_annes_vecu_village" relevant=" ../p_consent  = 'A.donne'" required="true()" type="int"/>
-      <bind nodeset="/data/part/p_mares_deau" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/part/p_connait_bilh" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/part/p_manif_bilh" relevant=" ../p_consent  = 'A.donne' and  ../p_connait_bilh  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/part/p_pisse_sang_1_fois" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/part/p_pisse_sang_maintenant" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/part/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'A.refuse'" type="string"/>
+      <bind nodeset="/data/part/p_add_child" required="true()" type="select1"/>
+      <bind nodeset="/data/part/p_consent_note" readonly="true()" relevant=" ../p_add_child  = 'Oui'" type="string"/>
+      <bind nodeset="/data/part/p_consent" relevant=" ../p_add_child  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/part/p_barcodeid" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="string" readonly="true()" calculate="concat( /data/p_site_code ,'-',/data/part/meta/randomnum)" db_add_col_4="/data/p_site_code" db_add_col_5="."/>
+      <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/part/p_age_yrs:jr:constraintMsg')" nodeset="/data/part/p_age_yrs" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/part/p_sex" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/part/p_residence" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
+      <bind constraint=". &lt;=  ../p_age_yrs " jr:constraintMsg="jr:itext('/data/part/p_annes_vecu_village:jr:constraintMsg')" nodeset="/data/part/p_annes_vecu_village" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/part/p_mares_deau" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/part/p_connait_bilh" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/part/p_manif_bilh" relevant=" ../p_consent  = 'A.donne' and  ../p_connait_bilh  = 'Oui' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/part/p_pisse_sang_1_fois" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/part/p_pisse_sang_maintenant" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/part/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'A.refuse' and  ../p_add_child  = 'Oui'" type="string"/>
       <bind nodeset="/data/part/p_remarks" type="string"/>
-      <bind nodeset="/data/part/p_note_thanks" readonly="true()" relevant=" ../p_consent  = 'A.donne'" type="string"/>
+      <bind nodeset="/data/part/p_note_thanks" readonly="true()" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
@@ -540,6 +551,17 @@
     <group ref="/data/part">
       <label></label>
       <repeat nodeset="/data/part">
+        <select1 ref="/data/part/p_add_child">
+          <label ref="jr:itext('/data/part/p_add_child:label')"/>
+          <item>
+            <label ref="jr:itext('/data/part/p_add_child/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/part/p_add_child/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
         <input ref="/data/part/p_consent_note">
           <label ref="jr:itext('/data/part/p_consent_note:label')"/>
         </input>
