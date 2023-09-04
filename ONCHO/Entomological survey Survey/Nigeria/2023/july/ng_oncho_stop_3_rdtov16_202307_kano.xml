@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2023 July) - 3. (Kano) ELISA Form</h:title>
+    <model >
+
+      <instance>
+        <data id="ng_oncho_stop_3_rdtov16_202307_kano">
+          <d_recorder_id/>
+          <d_region/>
+          <d_District/>
+          <d_Cluster_Name/>
+          <d_cluster_id/>
+          <d_serial_number1/>
+          <d_serial_number2/>
+          <d_code_id/>
+          <d_elisa_value_od/>
+          <d_elisa_result/>
+          <d_Notes/>
+          <d_StartTime/>
+          <d_EndTime/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/d_recorder_id:jr:constraintMsg">
+            <value>The code must be a two-digit number between 9 and 99</value>
+          </text>
+          <text id="/data/d_recorder_id:label">
+            <value>Enter the recorder ID</value>
+          </text>
+          <text id="/data/d_recorder_id:hint">
+            <value>Two-digit code assigned to you</value>
+          </text>
+          <text id="/data/d_region:label">
+            <value>Select a department</value>
+          </text>
+          <text id="/data/d_region/KANO:label">
+            <value>KANO</value>
+          </text>
+          <text id="/data/d_District:label">
+            <value>Select a commune</value>
+          </text>
+          <text id="/data/d_Cluster_Name:label">
+            <value>Enter cluster name</value>
+          </text>
+          <text id="/data/d_cluster_id:label">
+            <value>Enter cluster ID</value>
+          </text>
+          <text id="/data/d_serial_number1:jr:constraintMsg">
+            <value>Must be a three-digit number. example: 001</value>
+          </text>
+          <text id="/data/d_serial_number1:label">
+            <value>Please, enter the participant serial number</value>
+          </text>
+          <text id="/data/d_serial_number2:jr:constraintMsg">
+            <value>The repeated code must be the same</value>
+          </text>
+          <text id="/data/d_serial_number2:label">
+            <value>Please, repeat the participant serial number</value>
+          </text>
+          <text id="/data/d_code_id:label">
+            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) adminstered</value>
+          </text>
+          <text id="/data/d_elisa_value_od:label">
+            <value>ELISA - Value OD</value>
+          </text>
+          <text id="/data/d_elisa_result:label">
+            <value>ELISA - Final decision</value>
+          </text>
+          <text id="/data/d_elisa_result/Positive:label">
+            <value>Positive</value>
+          </text>
+          <text id="/data/d_elisa_result/Negative:label">
+            <value>Negative</value>
+          </text>
+          <text id="/data/d_elisa_result/Invalid:label">
+            <value>Invalid</value>
+          </text>
+          <text id="/data/d_Notes:label">
+            <value>Additional Notes</value>
+          </text>
+          <text id="yesNoDontKnow-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesNoDontKnow-1">
+            <value>No</value>
+          </text>
+          <text id="yesNoDontKnow-2">
+            <value>Don't know</value>
+          </text>
+          <text id="yesNo-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesNo-1">
+            <value>No</value>
+          </text>
+          <text id="p_IDMethod-0">
+            <value>Scanner</value>
+          </text>
+          <text id="p_IDMethod-1">
+            <value>Automatic Generation</value>
+          </text>
+          <text id="results-0">
+            <value>Positive</value>
+          </text>
+          <text id="results-1">
+            <value>Negative</value>
+          </text>
+          <text id="results-2">
+            <value>Invalid (including test errors and insufficient blood)</value>
+          </text>
+          <text id="results-3">
+            <value>Refused (withdrawal of consent)</value>
+          </text>
+          <text id="why_invalid-0">
+            <value>No control lines</value>
+          </text>
+          <text id="why_invalid-1">
+            <value>Broken/partial control line</value>
+          </text>
+          <text id="why_invalid-2">
+            <value>Difficulty with sample absorption</value>
+          </text>
+          <text id="why_invalid-3">
+            <value>Difficulty with sample migration</value>
+          </text>
+          <text id="why_invalid-4">
+            <value>Trace of blood remains</value>
+          </text>
+          <text id="why_invalid-5">
+            <value>Insufficient blood volume due to pipette</value>
+          </text>
+          <text id="why_invalid-6">
+            <value>Other (please explain)</value>
+          </text>
+          <text id="result_elisa-0">
+            <value>Positive</value>
+          </text>
+          <text id="result_elisa-1">
+            <value>Negative</value>
+          </text>
+          <text id="result_elisa-2">
+            <value>Invalid</value>
+          </text>
+          <text id="region_list-0">
+            <value>KANO</value>
+          </text>
+          <text id="district_list-0">
+            <value>AJINGI</value>
+          </text>
+          <text id="district_list-1">
+            <value>ALBASU</value>
+          </text>
+          <text id="district_list-2">
+            <value>BEBEJI</value>
+          </text>
+          <text id="district_list-3">
+            <value>BICHI</value>
+          </text>
+          <text id="district_list-4">
+            <value>DAMBATTA</value>
+          </text>
+          <text id="district_list-5">
+            <value>DAWAKIN KUDU</value>
+          </text>
+          <text id="district_list-6">
+            <value>DOGUWA</value>
+          </text>
+          <text id="district_list-7">
+            <value>GABASAWA</value>
+          </text>
+          <text id="district_list-8">
+            <value>GAYA</value>
+          </text>
+          <text id="district_list-9">
+            <value>KABIYA</value>
+          </text>
+          <text id="district_list-10">
+            <value>KARAYE</value>
+          </text>
+          <text id="district_list-11">
+            <value>KURA</value>
+          </text>
+          <text id="district_list-12">
+            <value>MAKODA</value>
+          </text>
+          <text id="district_list-13">
+            <value>ROGO</value>
+          </text>
+          <text id="district_list-14">
+            <value>SHANONO</value>
+          </text>
+          <text id="district_list-15">
+            <value>SUMAILA</value>
+          </text>
+          <text id="district_list-16">
+            <value>TAKAI</value>
+          </text>
+          <text id="district_list-17">
+            <value>TSANYAWA</value>
+          </text>
+          <text id="district_list-18">
+            <value>TUDUN WADA</value>
+          </text>
+          <text id="district_list-19">
+            <value>TUNDUN WADA</value>
+          </text>
+          <text id="district_list-20">
+            <value>UNGONGO</value>
+          </text>
+          <text id="community-0">
+            <value>AJINGI</value>
+          </text>
+          <text id="community-1">
+            <value>SAYASAYA</value>
+          </text>
+          <text id="community-2">
+            <value>DAMAYU</value>
+          </text>
+          <text id="community-3">
+            <value>GARGAI</value>
+          </text>
+          <text id="community-4">
+            <value>KUKI</value>
+          </text>
+          <text id="community-5">
+            <value>TARAU</value>
+          </text>
+          <text id="community-6">
+            <value>KYALLI</value>
+          </text>
+          <text id="community-7">
+            <value>GWADAMA GARI</value>
+          </text>
+          <text id="community-8">
+            <value>ZOGARAWA</value>
+          </text>
+          <text id="community-9">
+            <value>DOGON - KAWO</value>
+          </text>
+          <text id="community-10">
+            <value>RAGADA</value>
+          </text>
+          <text id="community-11">
+            <value>RIRIWAI</value>
+          </text>
+          <text id="community-12">
+            <value>SABUWAR KAURA</value>
+          </text>
+          <text id="community-13">
+            <value>YARYASA</value>
+          </text>
+          <text id="community-14">
+            <value>JODA</value>
+          </text>
+          <text id="community-15">
+            <value>MAGAMA</value>
+          </text>
+          <text id="community-16">
+            <value>UNGUWAR GANINKI</value>
+          </text>
+          <text id="community-17">
+            <value>ZAMBUR</value>
+          </text>
+          <text id="community-18">
+            <value>DURBA</value>
+          </text>
+          <text id="community-19">
+            <value>KURUGU</value>
+          </text>
+          <text id="community-20">
+            <value>UNGUWAN WUSAMA</value>
+          </text>
+          <text id="community-21">
+            <value>AZOREN WAJE</value>
+          </text>
+          <text id="community-22">
+            <value>GAMADAN</value>
+          </text>
+          <text id="community-23">
+            <value>KWUHA</value>
+          </text>
+          <text id="community-24">
+            <value>UNGWAN BARAU</value>
+          </text>
+          <text id="community-25">
+            <value>DANKWADE</value>
+          </text>
+          <text id="community-26">
+            <value>FARADACHI</value>
+          </text>
+          <text id="community-27">
+            <value>FARIN DUTSE</value>
+          </text>
+          <text id="community-28">
+            <value>MASSU</value>
+          </text>
+          <text id="community-29">
+            <value>MASU</value>
+          </text>
+          <text id="community-30">
+            <value>BAGWARO</value>
+          </text>
+          <text id="community-31">
+            <value>KOGO</value>
+          </text>
+          <text id="community-32">
+            <value>YAMUSAWA</value>
+          </text>
+          <text id="community-33">
+            <value>KWARDAGWALLE</value>
+          </text>
+          <text id="community-34">
+            <value>RUGURUGU</value>
+          </text>
+          <text id="community-35">
+            <value>GAZOBI</value>
+          </text>
+          <text id="community-36">
+            <value>YADA KUNYA</value>
+          </text>
+          <text id="community_id-0">
+            <value>301</value>
+          </text>
+          <text id="community_id-1">
+            <value>302</value>
+          </text>
+          <text id="community_id-2">
+            <value>303</value>
+          </text>
+          <text id="community_id-3">
+            <value>304</value>
+          </text>
+          <text id="community_id-4">
+            <value>305</value>
+          </text>
+          <text id="community_id-5">
+            <value>306</value>
+          </text>
+          <text id="community_id-6">
+            <value>307</value>
+          </text>
+          <text id="community_id-7">
+            <value>308</value>
+          </text>
+          <text id="community_id-8">
+            <value>309</value>
+          </text>
+          <text id="community_id-9">
+            <value>310</value>
+          </text>
+          <text id="community_id-10">
+            <value>311</value>
+          </text>
+          <text id="community_id-11">
+            <value>312</value>
+          </text>
+          <text id="community_id-12">
+            <value>313</value>
+          </text>
+          <text id="community_id-13">
+            <value>314</value>
+          </text>
+          <text id="community_id-14">
+            <value>315</value>
+          </text>
+          <text id="community_id-15">
+            <value>316</value>
+          </text>
+          <text id="community_id-16">
+            <value>317</value>
+          </text>
+          <text id="community_id-17">
+            <value>318</value>
+          </text>
+          <text id="community_id-18">
+            <value>319</value>
+          </text>
+          <text id="community_id-19">
+            <value>320</value>
+          </text>
+          <text id="community_id-20">
+            <value>321</value>
+          </text>
+          <text id="community_id-21">
+            <value>322</value>
+          </text>
+          <text id="community_id-22">
+            <value>323</value>
+          </text>
+          <text id="community_id-23">
+            <value>324</value>
+          </text>
+          <text id="community_id-24">
+            <value>325</value>
+          </text>
+          <text id="community_id-25">
+            <value>326</value>
+          </text>
+          <text id="community_id-26">
+            <value>327</value>
+          </text>
+          <text id="community_id-27">
+            <value>328</value>
+          </text>
+          <text id="community_id-28">
+            <value>329</value>
+          </text>
+          <text id="community_id-29">
+            <value>330</value>
+          </text>
+          <text id="community_id-30">
+            <value>331</value>
+          </text>
+          <text id="community_id-31">
+            <value>332</value>
+          </text>
+          <text id="community_id-32">
+            <value>333</value>
+          </text>
+          <text id="community_id-33">
+            <value>334</value>
+          </text>
+          <text id="community_id-34">
+            <value>335</value>
+          </text>
+          <text id="community_id-35">
+            <value>336</value>
+          </text>
+          <text id="community_id-36">
+            <value>337</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="yesNoDontKnow">
+        <root>
+          <item>
+            <itextId>yesNoDontKnow-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-1</itextId>
+            <name>No</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-2</itextId>
+            <name>Don't know</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yesNo">
+        <root>
+          <item>
+            <itextId>yesNo-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesNo-1</itextId>
+            <name>No</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="p_IDMethod">
+        <root>
+          <item>
+            <itextId>p_IDMethod-0</itextId>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <itextId>p_IDMethod-1</itextId>
+            <name>ID_generation</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="results">
+        <root>
+          <item>
+            <itextId>results-0</itextId>
+            <name>Positive</name>
+          </item>
+          <item>
+            <itextId>results-1</itextId>
+            <name>Negative</name>
+          </item>
+          <item>
+            <itextId>results-2</itextId>
+            <name>Invalid</name>
+          </item>
+          <item>
+            <itextId>results-3</itextId>
+            <name>Refused</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="why_invalid">
+        <root>
+          <item>
+            <itextId>why_invalid-0</itextId>
+            <name>No.control.lines</name>
+          </item>
+          <item>
+            <itextId>why_invalid-1</itextId>
+            <name>Broken/partial.control.line</name>
+          </item>
+          <item>
+            <itextId>why_invalid-2</itextId>
+            <name>Difficulty.with.sample.absorption</name>
+          </item>
+          <item>
+            <itextId>why_invalid-3</itextId>
+            <name>Difficulty.with.sample.migration</name>
+          </item>
+          <item>
+            <itextId>why_invalid-4</itextId>
+            <name>Trace.of.blood.remains</name>
+          </item>
+          <item>
+            <itextId>why_invalid-5</itextId>
+            <name>Insufficient.blood.volume.due.to.pipette</name>
+          </item>
+          <item>
+            <itextId>why_invalid-6</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="result_elisa">
+        <root>
+          <item>
+            <itextId>result_elisa-0</itextId>
+            <name>Positive</name>
+          </item>
+          <item>
+            <itextId>result_elisa-1</itextId>
+            <name>Negative</name>
+          </item>
+          <item>
+            <itextId>result_elisa-2</itextId>
+            <name>Invalid</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <itextId>region_list-0</itextId>
+            <name>KANO</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>AJINGI</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>ALBASU</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>BEBEJI</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-3</itextId>
+            <name>BICHI</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-4</itextId>
+            <name>DAMBATTA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-5</itextId>
+            <name>DAWAKIN KUDU</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-6</itextId>
+            <name>DOGUWA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-7</itextId>
+            <name>GABASAWA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-8</itextId>
+            <name>GAYA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-9</itextId>
+            <name>KABIYA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-10</itextId>
+            <name>KARAYE</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-11</itextId>
+            <name>KURA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-12</itextId>
+            <name>MAKODA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-13</itextId>
+            <name>ROGO</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-14</itextId>
+            <name>SHANONO</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-15</itextId>
+            <name>SUMAILA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-16</itextId>
+            <name>TAKAI</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-17</itextId>
+            <name>TSANYAWA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-18</itextId>
+            <name>TUDUN WADA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-19</itextId>
+            <name>TUNDUN WADA</name>
+            <region_list>KANO</region_list>
+          </item>
+          <item>
+            <itextId>district_list-20</itextId>
+            <name>UNGONGO</name>
+            <region_list>KANO</region_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="community">
+        <root>
+          <item>
+            <itextId>community-0</itextId>
+            <district_list>AJINGI</district_list>
+            <name>AJINGI</name>
+          </item>
+          <item>
+            <itextId>community-1</itextId>
+            <district_list>ALBASU</district_list>
+            <name>SAYASAYA</name>
+          </item>
+          <item>
+            <itextId>community-2</itextId>
+            <district_list>BEBEJI</district_list>
+            <name>DAMAYU</name>
+          </item>
+          <item>
+            <itextId>community-3</itextId>
+            <district_list>BEBEJI</district_list>
+            <name>GARGAI</name>
+          </item>
+          <item>
+            <itextId>community-4</itextId>
+            <district_list>BEBEJI</district_list>
+            <name>KUKI</name>
+          </item>
+          <item>
+            <itextId>community-5</itextId>
+            <district_list>BEBEJI</district_list>
+            <name>TARAU</name>
+          </item>
+          <item>
+            <itextId>community-6</itextId>
+            <district_list>BICHI</district_list>
+            <name>KYALLI</name>
+          </item>
+          <item>
+            <itextId>community-7</itextId>
+            <district_list>DAMBATTA</district_list>
+            <name>GWADAMA GARI</name>
+          </item>
+          <item>
+            <itextId>community-8</itextId>
+            <district_list>DAWAKIN KUDU</district_list>
+            <name>ZOGARAWA</name>
+          </item>
+          <item>
+            <itextId>community-9</itextId>
+            <district_list>DOGUWA</district_list>
+            <name>DOGON - KAWO</name>
+          </item>
+          <item>
+            <itextId>community-10</itextId>
+            <district_list>DOGUWA</district_list>
+            <name>RAGADA</name>
+          </item>
+          <item>
+            <itextId>community-11</itextId>
+            <district_list>DOGUWA</district_list>
+            <name>RIRIWAI</name>
+          </item>
+          <item>
+            <itextId>community-12</itextId>
+            <district_list>DOGUWA</district_list>
+            <name>SABUWAR KAURA</name>
+          </item>
+          <item>
+            <itextId>community-13</itextId>
+            <district_list>DOGUWA</district_list>
+            <name>YARYASA</name>
+          </item>
+          <item>
+            <itextId>community-14</itextId>
+            <district_list>GABASAWA</district_list>
+            <name>JODA</name>
+          </item>
+          <item>
+            <itextId>community-15</itextId>
+            <district_list>GABASAWA</district_list>
+            <name>MAGAMA</name>
+          </item>
+          <item>
+            <itextId>community-16</itextId>
+            <district_list>GAYA</district_list>
+            <name>UNGUWAR GANINKI</name>
+          </item>
+          <item>
+            <itextId>community-17</itextId>
+            <district_list>GAYA</district_list>
+            <name>ZAMBUR</name>
+          </item>
+          <item>
+            <itextId>community-18</itextId>
+            <district_list>KABIYA</district_list>
+            <name>DURBA</name>
+          </item>
+          <item>
+            <itextId>community-19</itextId>
+            <district_list>KARAYE</district_list>
+            <name>KURUGU</name>
+          </item>
+          <item>
+            <itextId>community-20</itextId>
+            <district_list>KARAYE</district_list>
+            <name>UNGUWAN WUSAMA</name>
+          </item>
+          <item>
+            <itextId>community-21</itextId>
+            <district_list>KURA</district_list>
+            <name>AZOREN WAJE</name>
+          </item>
+          <item>
+            <itextId>community-22</itextId>
+            <district_list>KURA</district_list>
+            <name>GAMADAN</name>
+          </item>
+          <item>
+            <itextId>community-23</itextId>
+            <district_list>MAKODA</district_list>
+            <name>KWUHA</name>
+          </item>
+          <item>
+            <itextId>community-24</itextId>
+            <district_list>ROGO</district_list>
+            <name>UNGWAN BARAU</name>
+          </item>
+          <item>
+            <itextId>community-25</itextId>
+            <district_list>SHANONO</district_list>
+            <name>DANKWADE</name>
+          </item>
+          <item>
+            <itextId>community-26</itextId>
+            <district_list>SUMAILA</district_list>
+            <name>FARADACHI</name>
+          </item>
+          <item>
+            <itextId>community-27</itextId>
+            <district_list>SUMAILA</district_list>
+            <name>FARIN DUTSE</name>
+          </item>
+          <item>
+            <itextId>community-28</itextId>
+            <district_list>SUMAILA</district_list>
+            <name>MASSU</name>
+          </item>
+          <item>
+            <itextId>community-29</itextId>
+            <district_list>SUMAILA</district_list>
+            <name>MASU</name>
+          </item>
+          <item>
+            <itextId>community-30</itextId>
+            <district_list>TAKAI</district_list>
+            <name>BAGWARO</name>
+          </item>
+          <item>
+            <itextId>community-31</itextId>
+            <district_list>TAKAI</district_list>
+            <name>KOGO</name>
+          </item>
+          <item>
+            <itextId>community-32</itextId>
+            <district_list>TAKAI</district_list>
+            <name>YAMUSAWA</name>
+          </item>
+          <item>
+            <itextId>community-33</itextId>
+            <district_list>TSANYAWA</district_list>
+            <name>KWARDAGWALLE</name>
+          </item>
+          <item>
+            <itextId>community-34</itextId>
+            <district_list>TUDUN WADA</district_list>
+            <name>RUGURUGU</name>
+          </item>
+          <item>
+            <itextId>community-35</itextId>
+            <district_list>TUNDUN WADA</district_list>
+            <name>GAZOBI</name>
+          </item>
+          <item>
+            <itextId>community-36</itextId>
+            <district_list>UNGONGO</district_list>
+            <name>YADA KUNYA</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="community_id">
+        <root>
+          <item>
+            <itextId>community_id-0</itextId>
+            <community>AJINGI</community>
+            <name>301</name>
+          </item>
+          <item>
+            <itextId>community_id-1</itextId>
+            <community>SAYASAYA</community>
+            <name>302</name>
+          </item>
+          <item>
+            <itextId>community_id-2</itextId>
+            <community>DAMAYU</community>
+            <name>303</name>
+          </item>
+          <item>
+            <itextId>community_id-3</itextId>
+            <community>GARGAI</community>
+            <name>304</name>
+          </item>
+          <item>
+            <itextId>community_id-4</itextId>
+            <community>TARAU</community>
+            <name>305</name>
+          </item>
+          <item>
+            <itextId>community_id-5</itextId>
+            <community>ZOGARAWA</community>
+            <name>306</name>
+          </item>
+          <item>
+            <itextId>community_id-6</itextId>
+            <community>DOGON - KAWO</community>
+            <name>307</name>
+          </item>
+          <item>
+            <itextId>community_id-7</itextId>
+            <community>RAGADA</community>
+            <name>308</name>
+          </item>
+          <item>
+            <itextId>community_id-8</itextId>
+            <community>RIRIWAI</community>
+            <name>309</name>
+          </item>
+          <item>
+            <itextId>community_id-9</itextId>
+            <community>YARYASA</community>
+            <name>310</name>
+          </item>
+          <item>
+            <itextId>community_id-10</itextId>
+            <community>JODA</community>
+            <name>311</name>
+          </item>
+          <item>
+            <itextId>community_id-11</itextId>
+            <community>MAGAMA</community>
+            <name>312</name>
+          </item>
+          <item>
+            <itextId>community_id-12</itextId>
+            <community>UNGUWAR GANINKI</community>
+            <name>313</name>
+          </item>
+          <item>
+            <itextId>community_id-13</itextId>
+            <community>ZAMBUR</community>
+            <name>314</name>
+          </item>
+          <item>
+            <itextId>community_id-14</itextId>
+            <community>DURBA</community>
+            <name>315</name>
+          </item>
+          <item>
+            <itextId>community_id-15</itextId>
+            <community>UNGUWAN WUSAMA</community>
+            <name>316</name>
+          </item>
+          <item>
+            <itextId>community_id-16</itextId>
+            <community>AZOREN WAJE</community>
+            <name>317</name>
+          </item>
+          <item>
+            <itextId>community_id-17</itextId>
+            <community>GAMADAN</community>
+            <name>318</name>
+          </item>
+          <item>
+            <itextId>community_id-18</itextId>
+            <community>KWUHA</community>
+            <name>319</name>
+          </item>
+          <item>
+            <itextId>community_id-19</itextId>
+            <community>DANKWADE</community>
+            <name>320</name>
+          </item>
+          <item>
+            <itextId>community_id-20</itextId>
+            <community>FARIN DUTSE</community>
+            <name>321</name>
+          </item>
+          <item>
+            <itextId>community_id-21</itextId>
+            <community>MASSU</community>
+            <name>322</name>
+          </item>
+          <item>
+            <itextId>community_id-22</itextId>
+            <community>BAGWARO</community>
+            <name>323</name>
+          </item>
+          <item>
+            <itextId>community_id-23</itextId>
+            <community>KOGO</community>
+            <name>324</name>
+          </item>
+          <item>
+            <itextId>community_id-24</itextId>
+            <community>RUGURUGU</community>
+            <name>325</name>
+          </item>
+          <item>
+            <itextId>community_id-25</itextId>
+            <community>GAZOBI</community>
+            <name>326</name>
+          </item>
+          <item>
+            <itextId>community_id-26</itextId>
+            <community>YADA KUNYA</community>
+            <name>327</name>
+          </item>
+          <item>
+            <itextId>community_id-27</itextId>
+            <community>KURUGU</community>
+            <name>328</name>
+          </item>
+          <item>
+            <itextId>community_id-28</itextId>
+            <community>UNGWAN BARAU</community>
+            <name>329</name>
+          </item>
+          <item>
+            <itextId>community_id-29</itextId>
+            <community>GWADAMA GARI</community>
+            <name>330</name>
+          </item>
+          <item>
+            <itextId>community_id-30</itextId>
+            <community>KUKI</community>
+            <name>331</name>
+          </item>
+          <item>
+            <itextId>community_id-31</itextId>
+            <community>MASU</community>
+            <name>332</name>
+          </item>
+          <item>
+            <itextId>community_id-32</itextId>
+            <community>SABUWAR KAURA</community>
+            <name>333</name>
+          </item>
+          <item>
+            <itextId>community_id-33</itextId>
+            <community>KYALLI</community>
+            <name>334</name>
+          </item>
+          <item>
+            <itextId>community_id-34</itextId>
+            <community>KWARDAGWALLE</community>
+            <name>335</name>
+          </item>
+          <item>
+            <itextId>community_id-35</itextId>
+            <community>FARADACHI</community>
+            <name>336</name>
+          </item>
+          <item>
+            <itextId>community_id-36</itextId>
+            <community>YAMUSAWA</community>
+            <name>337</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/d_recorder_id:jr:constraintMsg')" nodeset="/data/d_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/d_region" required="true()" type="string"/>
+      <bind nodeset="/data/d_District" required="true()" type="string"/>
+      <bind nodeset="/data/d_Cluster_Name" required="true()" type="string"/>
+      <bind nodeset="/data/d_cluster_id" required="true()" type="string"/>
+      <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_serial_number1:jr:constraintMsg')" nodeset="/data/d_serial_number1" required="true()" type="string"/>
+      <bind constraint=". =  /data/d_serial_number1 " jr:constraintMsg="jr:itext('/data/d_serial_number2:jr:constraintMsg')" nodeset="/data/d_serial_number2" required="true()" type="string"/>
+      <bind calculate="concat( /data/d_recorder_id , '-',  /data/d_cluster_id , '-',  /data/d_serial_number1 )" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/data/d_elisa_value_od" type="decimal"/>
+      <bind nodeset="/data/d_elisa_result" type="string"/>
+      <bind nodeset="/data/d_Notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_StartTime" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_EndTime" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/d_recorder_id">
+      <label ref="jr:itext('/data/d_recorder_id:label')"/>
+      <hint ref="jr:itext('/data/d_recorder_id:hint')"/>
+    </input>
+    <select1 ref="/data/d_region">
+      <label ref="jr:itext('/data/d_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_region/KANO:label')"/>
+        <value>KANO</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_District">
+      <label ref="jr:itext('/data/d_District:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[ /data/d_region  = region_list]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_Cluster_Name">
+      <label ref="jr:itext('/data/d_Cluster_Name:label')"/>
+      <itemset nodeset="instance('community')/root/item[ /data/d_District  = district_list]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_cluster_id">
+      <label ref="jr:itext('/data/d_cluster_id:label')"/>
+      <itemset nodeset="instance('community_id')/root/item[ /data/d_Cluster_Name  = community]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/d_serial_number1">
+      <label ref="jr:itext('/data/d_serial_number1:label')"/>
+    </input>
+    <input ref="/data/d_serial_number2">
+      <label ref="jr:itext('/data/d_serial_number2:label')"/>
+    </input>
+    <input ref="/data/d_code_id">
+      <label ref="jr:itext('/data/d_code_id:label')"/>
+    </input>
+    <input ref="/data/d_elisa_value_od">
+      <label ref="jr:itext('/data/d_elisa_value_od:label')"/>
+    </input>
+    <select1 ref="/data/d_elisa_result">
+      <label ref="jr:itext('/data/d_elisa_result:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_elisa_result/Positive:label')"/>
+        <value>Positive</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_elisa_result/Negative:label')"/>
+        <value>Negative</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_elisa_result/Invalid:label')"/>
+        <value>Invalid</value>
+      </item>
+    </select1>
+    <input ref="/data/d_Notes">
+      <label ref="jr:itext('/data/d_Notes:label')"/>
+    </input>
+  </h:body>
+</h:html>

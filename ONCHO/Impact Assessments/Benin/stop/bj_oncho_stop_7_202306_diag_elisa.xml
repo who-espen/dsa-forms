@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Juillet) ONCHO Stop TDM - 3. Résultats de laboratoire TDR</h:title>
+    <h:title>(2023 Juillet) ONCHO Stop TDM - 7. Résultats de laboratoire ELISA</h:title>
     <model >
 
       <instance>
-        <data id="bj_oncho_stop_3_202306_diag_v3" version="20201130">
+        <data id="bj_oncho_stop_7_202306_diag_elisa" version="20201130">
           <d_RecorderID/>
           <d_region/>
           <d_District/>
@@ -20,12 +20,10 @@
           <d_manual_id/>
           <d_manual_id2/>
           <d_barecode_id/>
-          <d_control_1/>
-          <d_est_invalide_1>Oui</d_est_invalide_1>
-          <d_ov16_result_1/>
-          <d_control_2/>
-          <d_est_invalide_2>Oui</d_est_invalide_2>
-          <d_ov16_result_2/>
+          <d_elisa_value_od/>
+          <d_elisa_result/>
+          <d_elisa_value_od_2/>
+          <d_elisa_result_2/>
           <d_ClusterNotes/>
           <d_StartTime/>
           <d_EndTime/>
@@ -91,52 +89,34 @@
           <text id="/data/d_barecode_id:label">
             <value>Numéro d'identification du test</value>
           </text>
-          <text id="/data/d_control_1:label">
-            <value>Ligne de contrôle positive visible du test 1</value>
+          <text id="/data/d_elisa_value_od:label">
+            <value>ELISA - Valeur OD</value>
           </text>
-          <text id="/data/d_control_1/Oui:label">
-            <value>Oui</value>
+          <text id="/data/d_elisa_result:label">
+            <value>ELISA - Décision final</value>
           </text>
-          <text id="/data/d_control_1/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/d_est_invalide_1:label">
-            <value>Le résultat est invalide parce que la contrôle est non visible</value>
-          </text>
-          <text id="/data/d_ov16_result_1:label">
-            <value>Résultat OV16 du test 1</value>
-          </text>
-          <text id="/data/d_ov16_result_1/Positif:label">
+          <text id="/data/d_elisa_result/Positif:label">
             <value>Positif</value>
           </text>
-          <text id="/data/d_ov16_result_1/Négatif:label">
+          <text id="/data/d_elisa_result/Négatif:label">
             <value>Négatif</value>
           </text>
-          <text id="/data/d_ov16_result_1/Indéterminé:label">
+          <text id="/data/d_elisa_result/Indéterminé:label">
             <value>Indéterminé</value>
           </text>
-          <text id="/data/d_control_2:label">
-            <value>Ligne de contrôle positive visible du test 2</value>
+          <text id="/data/d_elisa_value_od_2:label">
+            <value>ELISA - Valeur OD (test2)</value>
           </text>
-          <text id="/data/d_control_2/Oui:label">
-            <value>Oui</value>
+          <text id="/data/d_elisa_result_2:label">
+            <value>ELISA - Décision final (test2)</value>
           </text>
-          <text id="/data/d_control_2/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/d_est_invalide_2:label">
-            <value>Le résultat est invalide parce que la contrôle est non visible</value>
-          </text>
-          <text id="/data/d_ov16_result_2:label">
-            <value>Résultat OV16 du test 2</value>
-          </text>
-          <text id="/data/d_ov16_result_2/Positif:label">
+          <text id="/data/d_elisa_result_2/Positif:label">
             <value>Positif</value>
           </text>
-          <text id="/data/d_ov16_result_2/Négatif:label">
+          <text id="/data/d_elisa_result_2/Négatif:label">
             <value>Négatif</value>
           </text>
-          <text id="/data/d_ov16_result_2/Indéterminé:label">
+          <text id="/data/d_elisa_result_2/Indéterminé:label">
             <value>Indéterminé</value>
           </text>
           <text id="/data/d_ClusterNotes:label">
@@ -1023,12 +1003,10 @@
       <bind nodeset="/data/d_manual_id" relevant=" /data/d_id_type  = 'Manuel'" required="true()" type="string"/>
       <bind constraint=". =  /data/d_manual_id " jr:constraintMsg="jr:itext('/data/d_manual_id2:jr:constraintMsg')" nodeset="/data/d_manual_id2" relevant=" /data/d_id_type  = 'Manuel'" required="true()" type="string"/>
       <bind nodeset="/data/d_barecode_id" relevant=" /data/d_id_type  = 'Scanner'" required="true()" type="barcode"/>
-      <bind nodeset="/data/d_control_1" required="true()" type="string"/>
-      <bind nodeset="/data/d_est_invalide_1" readonly="true()" relevant=" /data/d_control_1  = 'Non'" type="string"/>
-      <bind nodeset="/data/d_ov16_result_1" relevant=" /data/d_control_1  = 'Oui'" required="true()" type="string"/>
-      <bind nodeset="/data/d_control_2" relevant=" /data/d_ov16_result_1  = 'Indéterminé' or  /data/d_control_1  = 'Non'" required="true()" type="string"/>
-      <bind nodeset="/data/d_est_invalide_2" readonly="true()" relevant=" /data/d_control_2  = 'Non'" type="string"/>
-      <bind nodeset="/data/d_ov16_result_2" relevant=" /data/d_control_2  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/d_elisa_value_od" required="true()" type="decimal"/>
+      <bind nodeset="/data/d_elisa_result" required="true()" type="string"/>
+      <bind nodeset="/data/d_elisa_value_od_2" relevant=" /data/d_elisa_result  = 'Indéterminé'" required="true()" type="decimal"/>
+      <bind nodeset="/data/d_elisa_result_2" relevant=" /data/d_elisa_result  = 'Indéterminé'" required="true()" type="string"/>
       <bind nodeset="/data/d_ClusterNotes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_StartTime" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_EndTime" type="dateTime"/>
@@ -1097,61 +1075,39 @@
     <input ref="/data/d_barecode_id">
       <label ref="jr:itext('/data/d_barecode_id:label')"/>
     </input>
-    <select1 ref="/data/d_control_1">
-      <label ref="jr:itext('/data/d_control_1:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_control_1/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_control_1/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <input ref="/data/d_est_invalide_1">
-      <label ref="jr:itext('/data/d_est_invalide_1:label')"/>
+    <input ref="/data/d_elisa_value_od">
+      <label ref="jr:itext('/data/d_elisa_value_od:label')"/>
     </input>
-    <select1 ref="/data/d_ov16_result_1">
-      <label ref="jr:itext('/data/d_ov16_result_1:label')"/>
+    <select1 ref="/data/d_elisa_result">
+      <label ref="jr:itext('/data/d_elisa_result:label')"/>
       <item>
-        <label ref="jr:itext('/data/d_ov16_result_1/Positif:label')"/>
+        <label ref="jr:itext('/data/d_elisa_result/Positif:label')"/>
         <value>Positif</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_ov16_result_1/Négatif:label')"/>
+        <label ref="jr:itext('/data/d_elisa_result/Négatif:label')"/>
         <value>Négatif</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_ov16_result_1/Indéterminé:label')"/>
+        <label ref="jr:itext('/data/d_elisa_result/Indéterminé:label')"/>
         <value>Indéterminé</value>
       </item>
     </select1>
-    <select1 ref="/data/d_control_2">
-      <label ref="jr:itext('/data/d_control_2:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_control_2/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_control_2/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <input ref="/data/d_est_invalide_2">
-      <label ref="jr:itext('/data/d_est_invalide_2:label')"/>
+    <input ref="/data/d_elisa_value_od_2">
+      <label ref="jr:itext('/data/d_elisa_value_od_2:label')"/>
     </input>
-    <select1 ref="/data/d_ov16_result_2">
-      <label ref="jr:itext('/data/d_ov16_result_2:label')"/>
+    <select1 ref="/data/d_elisa_result_2">
+      <label ref="jr:itext('/data/d_elisa_result_2:label')"/>
       <item>
-        <label ref="jr:itext('/data/d_ov16_result_2/Positif:label')"/>
+        <label ref="jr:itext('/data/d_elisa_result_2/Positif:label')"/>
         <value>Positif</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_ov16_result_2/Négatif:label')"/>
+        <label ref="jr:itext('/data/d_elisa_result_2/Négatif:label')"/>
         <value>Négatif</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/d_ov16_result_2/Indéterminé:label')"/>
+        <label ref="jr:itext('/data/d_elisa_result_2/Indéterminé:label')"/>
         <value>Indéterminé</value>
       </item>
     </select1>

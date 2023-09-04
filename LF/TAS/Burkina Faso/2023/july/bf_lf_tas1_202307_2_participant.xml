@@ -7,26 +7,28 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Avril 2023) Burkina Faso TAS FL - 2. Formulaire Enrôlement V2.2</h:title>
+    <h:title>(Juillet 2023) Burkina Faso TAS FL - 2. Formulaire Enrôlement V4</h:title>
     <model >
 
       <instance>
-        <data id="bf_lf_tas1_202304_2_participant_v2_2">
+        <data id="bf_lf_tas1_202306_2_participant_v4">
           <p_code_operateur/>
           <p_ue/>
           <p_ds/>
           <p_commune/>
           <p_nom_CSPS/>
           <p_site/>
-          <p_code_site/>
+          <p_numero_ordre_grappe/>
           <p_classe/>
           <p_id_methode/>
           <p_barcodeID1/>
           <p_barcodeID2/>
           <p_barcodeID2_bis/>
+          <p_num_menage/>
           <p_age/>
           <p_sexe/>
           <p_scolarise/>
+          <p_recu_avm_alb/>
           <p_commentaire/>
           <p_debut_enreg/>
           <p_fin_enreg/>
@@ -53,6 +55,12 @@
           <text id="/data/p_code_operateur/04:label">
             <value>04</value>
           </text>
+          <text id="/data/p_code_operateur/05:label">
+            <value>05</value>
+          </text>
+          <text id="/data/p_code_operateur/06:label">
+            <value>06</value>
+          </text>
           <text id="/data/p_ue:label">
             <value>Sélectionnez l'UE</value>
           </text>
@@ -66,10 +74,10 @@
             <value>Sélectionnez le nom du CSPS</value>
           </text>
           <text id="/data/p_site:label">
-            <value>Sélectionnez l'école</value>
+            <value>Sélectionnez la grappe</value>
           </text>
-          <text id="/data/p_code_site:label">
-            <value>Sélectionnez le code de l'école</value>
+          <text id="/data/p_numero_ordre_grappe:label">
+            <value>Sélectionnez le numéro de la grappe</value>
           </text>
           <text id="/data/p_classe:label">
             <value>Séléctionner la classe</value>
@@ -84,10 +92,10 @@
             <value>Type d'identification</value>
           </text>
           <text id="/data/p_id_methode/Scanner:label">
-            <value>Scanner</value>
+            <value>1. Scanner</value>
           </text>
           <text id="/data/p_id_methode/Manuel:label">
-            <value>Manuel</value>
+            <value>2. Manuel</value>
           </text>
           <text id="/data/p_barcodeID1:label">
             <value>Veillez scanner le code à barre</value>
@@ -104,29 +112,23 @@
           <text id="/data/p_barcodeID2_bis:label">
             <value>Veullez répéter le code manuel</value>
           </text>
+          <text id="/data/p_num_menage:jr:constraintMsg">
+            <value>Le format du code est composé d'une lettres majuscules suivies de 3 chiffres, Exemple: M001</value>
+          </text>
+          <text id="/data/p_num_menage:label">
+            <value>Numéro ménage</value>
+          </text>
           <text id="/data/p_age:jr:constraintMsg">
-            <value>L'âge doit être compris entre 5 et 10 ans</value>
+            <value>L'âge doit être compris entre 6 et 7 ans</value>
           </text>
           <text id="/data/p_age:label">
             <value>Age de l'enfant</value>
-          </text>
-          <text id="/data/p_age/5:label">
-            <value>5 ans</value>
           </text>
           <text id="/data/p_age/6:label">
             <value>6 ans</value>
           </text>
           <text id="/data/p_age/7:label">
             <value>7 ans</value>
-          </text>
-          <text id="/data/p_age/8:label">
-            <value>8 ans</value>
-          </text>
-          <text id="/data/p_age/9:label">
-            <value>9 ans</value>
-          </text>
-          <text id="/data/p_age/10:label">
-            <value>10 ans</value>
           </text>
           <text id="/data/p_sexe:label">
             <value>Sexe de l'enfant</value>
@@ -146,6 +148,15 @@
           <text id="/data/p_scolarise/Non:label">
             <value>Non</value>
           </text>
+          <text id="/data/p_recu_avm_alb:label">
+            <value>Déjà traité par l'Ivermectinet et l'Albendazole</value>
+          </text>
+          <text id="/data/p_recu_avm_alb/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_recu_avm_alb/Non:label">
+            <value>Non</value>
+          </text>
           <text id="/data/p_commentaire:label">
             <value>Commentaires</value>
           </text>
@@ -158,15 +169,17 @@
       <bind nodeset="/data/p_commune" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_ds"/>
       <bind nodeset="/data/p_nom_CSPS" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_commune"/>
       <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_nom_CSPS"/>
-      <bind nodeset="/data/p_code_site" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_site"/>
+      <bind nodeset="/data/p_numero_ordre_grappe" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_site"/>
       <bind nodeset="/data/p_classe" required="true()" type="string"/>
       <bind nodeset="/data/p_id_methode" required="true()" type="string"/>
       <bind nodeset="/data/p_barcodeID1" relevant=" /data/p_id_methode  = &quot;Scanner&quot;" required="true()" type="barcode"/>
       <bind constraint="regex(.,'^[A-Z]{2}[0-9]{7}$')" jr:constraintMsg="jr:itext('/data/p_barcodeID2:jr:constraintMsg')" nodeset="/data/p_barcodeID2" relevant=" /data/p_id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
       <bind constraint=". =  /data/p_barcodeID2 " jr:constraintMsg="jr:itext('/data/p_barcodeID2_bis:jr:constraintMsg')" nodeset="/data/p_barcodeID2_bis" relevant=" /data/p_id_methode  = &quot;Manuel&quot;" required="true()" type="string"/>
-      <bind constraint=". &gt;=5 and . &lt;=10" jr:constraintMsg="jr:itext('/data/p_age:jr:constraintMsg')" nodeset="/data/p_age" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[A-Z]{1}[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_num_menage:jr:constraintMsg')" nodeset="/data/p_num_menage" required="true()" type="string"/>
+      <bind constraint=". &gt;=6 and . &lt;=7" jr:constraintMsg="jr:itext('/data/p_age:jr:constraintMsg')" nodeset="/data/p_age" required="true()" type="string"/>
       <bind nodeset="/data/p_sexe" required="true()" type="string"/>
       <bind nodeset="/data/p_scolarise" required="true()" type="string"/>
+      <bind nodeset="/data/p_recu_avm_alb" required="true()" type="string"/>
       <bind nodeset="/data/p_commentaire" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_debut_enreg" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_fin_enreg" type="dateTime"/>
@@ -192,6 +205,14 @@
         <label ref="jr:itext('/data/p_code_operateur/04:label')"/>
         <value>04</value>
       </item>
+      <item>
+        <label ref="jr:itext('/data/p_code_operateur/05:label')"/>
+        <value>05</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_code_operateur/06:label')"/>
+        <value>06</value>
+      </item>
     </select1>
     <input ref="/data/p_ue">
       <label ref="jr:itext('/data/p_ue:label')"/>
@@ -208,8 +229,8 @@
     <input ref="/data/p_site">
       <label ref="jr:itext('/data/p_site:label')"/>
     </input>
-    <input ref="/data/p_code_site">
-      <label ref="jr:itext('/data/p_code_site:label')"/>
+    <input ref="/data/p_numero_ordre_grappe">
+      <label ref="jr:itext('/data/p_numero_ordre_grappe:label')"/>
     </input>
     <select1 ref="/data/p_classe">
       <label ref="jr:itext('/data/p_classe:label')"/>
@@ -242,12 +263,11 @@
     <input ref="/data/p_barcodeID2_bis">
       <label ref="jr:itext('/data/p_barcodeID2_bis:label')"/>
     </input>
+    <input ref="/data/p_num_menage">
+      <label ref="jr:itext('/data/p_num_menage:label')"/>
+    </input>
     <select1 ref="/data/p_age">
       <label ref="jr:itext('/data/p_age:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_age/5:label')"/>
-        <value>5</value>
-      </item>
       <item>
         <label ref="jr:itext('/data/p_age/6:label')"/>
         <value>6</value>
@@ -255,18 +275,6 @@
       <item>
         <label ref="jr:itext('/data/p_age/7:label')"/>
         <value>7</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_age/8:label')"/>
-        <value>8</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_age/9:label')"/>
-        <value>9</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_age/10:label')"/>
-        <value>10</value>
       </item>
     </select1>
     <select1 ref="/data/p_sexe">
@@ -288,6 +296,17 @@
       </item>
       <item>
         <label ref="jr:itext('/data/p_scolarise/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_recu_avm_alb">
+      <label ref="jr:itext('/data/p_recu_avm_alb:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_recu_avm_alb/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_recu_avm_alb/Non:label')"/>
         <value>Non</value>
       </item>
     </select1>
