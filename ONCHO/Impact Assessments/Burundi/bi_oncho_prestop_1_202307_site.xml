@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2023 Juillet) ONCHO pre Stop - 1. Formulaire Site V3</h:title>
+    <model >
+
+      <instance>
+        <data id="bi_oncho_prestop_1_202307_site_v3">
+          <c_date/>
+          <c_RecorderID/>
+          <c_chef_equipe/>
+          <c_region/>
+          <c_District/>
+          <c_commune/>
+          <c_centre_sante/>
+          <c_Cluster_Name/>
+          <c_GPS/>
+          <c_ClusterNotes/>
+          <c_StartTime/>
+          <c_EndTime/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/c_date:label">
+            <value>Date de l'enquête</value>
+          </text>
+          <text id="/data/c_RecorderID:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 99</value>
+          </text>
+          <text id="/data/c_RecorderID:label">
+            <value>Code enquêteur</value>
+          </text>
+          <text id="/data/c_RecorderID:hint">
+            <value>Code à deux chiffres qui vous a été assigné</value>
+          </text>
+          <text id="/data/c_chef_equipe:label">
+            <value>Nom et Prénom du chef d'quipe</value>
+          </text>
+          <text id="/data/c_region:label">
+            <value>Sélectionner une province</value>
+          </text>
+          <text id="/data/c_region/BUBANZA:label">
+            <value>BUBANZA</value>
+          </text>
+          <text id="/data/c_region/BURURI:label">
+            <value>BURURI</value>
+          </text>
+          <text id="/data/c_region/CIBITOKE:label">
+            <value>CIBITOKE</value>
+          </text>
+          <text id="/data/c_region/RUMONGE:label">
+            <value>RUMONGE</value>
+          </text>
+          <text id="/data/c_region/RUTANA:label">
+            <value>RUTANA</value>
+          </text>
+          <text id="/data/c_District:label">
+            <value>Sélectionner un district</value>
+          </text>
+          <text id="/data/c_commune:label">
+            <value>Sélectionner une commune</value>
+          </text>
+          <text id="/data/c_centre_sante:label">
+            <value>Sélectionner un centre de santé</value>
+          </text>
+          <text id="/data/c_Cluster_Name:label">
+            <value>Entrer le nom du village/Colline</value>
+          </text>
+          <text id="/data/c_GPS:label">
+            <value>Capturer les données GPS</value>
+          </text>
+          <text id="/data/c_GPS:hint">
+            <value>Fonctionne mieux à l'extérieure des bâtiments</value>
+          </text>
+          <text id="/data/c_ClusterNotes:label">
+            <value>Notes additionnelles</value>
+          </text>
+          <text id="village_type-0">
+            <value>1ère ligne</value>
+          </text>
+          <text id="village_type-1">
+            <value>2ème ligne</value>
+          </text>
+          <text id="village_type-2">
+            <value>3ème ligne</value>
+          </text>
+          <text id="yesNoDontKnow-0">
+            <value>Oui</value>
+          </text>
+          <text id="yesNoDontKnow-1">
+            <value>Non</value>
+          </text>
+          <text id="yesNoDontKnow-2">
+            <value>Ne sais pas</value>
+          </text>
+          <text id="region_list-0">
+            <value>BUBANZA</value>
+          </text>
+          <text id="region_list-1">
+            <value>BURURI</value>
+          </text>
+          <text id="region_list-2">
+            <value>CIBITOKE</value>
+          </text>
+          <text id="region_list-3">
+            <value>RUMONGE</value>
+          </text>
+          <text id="region_list-4">
+            <value>RUTANA</value>
+          </text>
+          <text id="district_list-0">
+            <value>BUBANZA</value>
+          </text>
+          <text id="district_list-1">
+            <value>BUKINANYANA</value>
+          </text>
+          <text id="district_list-2">
+            <value>BURURI</value>
+          </text>
+          <text id="district_list-3">
+            <value>GIHOFI</value>
+          </text>
+          <text id="district_list-4">
+            <value>MABAYI</value>
+          </text>
+          <text id="district_list-5">
+            <value>MPANDA</value>
+          </text>
+          <text id="district_list-6">
+            <value>RUMONGE</value>
+          </text>
+          <text id="district_list-7">
+            <value>RUTANA</value>
+          </text>
+          <text id="district_list-8">
+            <value>RUTOVU</value>
+          </text>
+          <text id="commune-0">
+            <value>BUBANZA</value>
+          </text>
+          <text id="commune-1">
+            <value>BUKEMBA</value>
+          </text>
+          <text id="commune-2">
+            <value>BURURI</value>
+          </text>
+          <text id="commune-3">
+            <value>BUYENGERO</value>
+          </text>
+          <text id="commune-4">
+            <value>GIHARO</value>
+          </text>
+          <text id="commune-5">
+            <value>GITANGA (GIHOFI)</value>
+          </text>
+          <text id="commune-6">
+            <value>GITANGA (RUTANA)</value>
+          </text>
+          <text id="commune-7">
+            <value>MUGINA</value>
+          </text>
+          <text id="commune-8">
+            <value>MURWI</value>
+          </text>
+          <text id="commune-9">
+            <value>RUGAZI</value>
+          </text>
+          <text id="commune-10">
+            <value>RUMONGE</value>
+          </text>
+          <text id="commune-11">
+            <value>RUTANA</value>
+          </text>
+          <text id="commune-12">
+            <value>SONGA</value>
+          </text>
+          <text id="centre_sante-0">
+            <value>BUKEMBA</value>
+          </text>
+          <text id="centre_sante-1">
+            <value>GASANDA</value>
+          </text>
+          <text id="centre_sante-2">
+            <value>GITANGA</value>
+          </text>
+          <text id="centre_sante-3">
+            <value>KINAMA</value>
+          </text>
+          <text id="centre_sante-4">
+            <value>KIRENGANE</value>
+          </text>
+          <text id="centre_sante-5">
+            <value>KIVUMVU</value>
+          </text>
+          <text id="centre_sante-6">
+            <value>MUHEKA</value>
+          </text>
+          <text id="centre_sante-7">
+            <value>MUSENO</value>
+          </text>
+          <text id="centre_sante-8">
+            <value>MUZYE</value>
+          </text>
+          <text id="centre_sante-9">
+            <value>NYABUGIMBU</value>
+          </text>
+          <text id="centre_sante-10">
+            <value>NYAGASAKA</value>
+          </text>
+          <text id="centre_sante-11">
+            <value>NYAKUGUMA</value>
+          </text>
+          <text id="centre_sante-12">
+            <value>RONGERO</value>
+          </text>
+          <text id="centre_sante-13">
+            <value>RUZIBA</value>
+          </text>
+          <text id="village_list-0">
+            <value>BUTAVUKA</value>
+          </text>
+          <text id="village_list-1">
+            <value>GITANGA</value>
+          </text>
+          <text id="village_list-2">
+            <value>KINAMA</value>
+          </text>
+          <text id="village_list-3">
+            <value>KIVOMA</value>
+          </text>
+          <text id="village_list-4">
+            <value>KIVUMVU</value>
+          </text>
+          <text id="village_list-5">
+            <value>MARUMPU</value>
+          </text>
+          <text id="village_list-6">
+            <value>MUHEKA</value>
+          </text>
+          <text id="village_list-7">
+            <value>MURAMA RUGWE</value>
+          </text>
+          <text id="village_list-8">
+            <value>MUSENO</value>
+          </text>
+          <text id="village_list-9">
+            <value>MUZYE</value>
+          </text>
+          <text id="village_list-10">
+            <value>NYAGASAKA</value>
+          </text>
+          <text id="village_list-11">
+            <value>RONGERO</value>
+          </text>
+          <text id="village_list-12">
+            <value>RUKANDA</value>
+          </text>
+          <text id="village_list-13">
+            <value>RUZIBA</value>
+          </text>
+          <text id="village_list-14">
+            <value>SEBEYI</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="village_type">
+        <root>
+          <item>
+            <itextId>village_type-0</itextId>
+            <name>1ere ligne</name>
+          </item>
+          <item>
+            <itextId>village_type-1</itextId>
+            <name>2eme ligne</name>
+          </item>
+          <item>
+            <itextId>village_type-2</itextId>
+            <name>3eme ligne</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yesNoDontKnow">
+        <root>
+          <item>
+            <itextId>yesNoDontKnow-0</itextId>
+            <name>Yes</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-1</itextId>
+            <name>No</name>
+          </item>
+          <item>
+            <itextId>yesNoDontKnow-2</itextId>
+            <name>Don't know</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <itextId>region_list-0</itextId>
+            <name>BUBANZA</name>
+          </item>
+          <item>
+            <itextId>region_list-1</itextId>
+            <name>BURURI</name>
+          </item>
+          <item>
+            <itextId>region_list-2</itextId>
+            <name>CIBITOKE</name>
+          </item>
+          <item>
+            <itextId>region_list-3</itextId>
+            <name>RUMONGE</name>
+          </item>
+          <item>
+            <itextId>region_list-4</itextId>
+            <name>RUTANA</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>BUBANZA</name>
+            <region_list>BUBANZA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>BUKINANYANA</name>
+            <region_list>CIBITOKE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>BURURI</name>
+            <region_list>BURURI</region_list>
+          </item>
+          <item>
+            <itextId>district_list-3</itextId>
+            <name>GIHOFI</name>
+            <region_list>RUTANA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-4</itextId>
+            <name>MABAYI</name>
+            <region_list>CIBITOKE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-5</itextId>
+            <name>MPANDA</name>
+            <region_list>BUBANZA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-6</itextId>
+            <name>RUMONGE</name>
+            <region_list>RUMONGE</region_list>
+          </item>
+          <item>
+            <itextId>district_list-7</itextId>
+            <name>RUTANA</name>
+            <region_list>RUTANA</region_list>
+          </item>
+          <item>
+            <itextId>district_list-8</itextId>
+            <name>RUTOVU</name>
+            <region_list>BURURI</region_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="commune">
+        <root>
+          <item>
+            <itextId>commune-0</itextId>
+            <district_list>BUBANZA</district_list>
+            <name>BUBANZA</name>
+          </item>
+          <item>
+            <itextId>commune-1</itextId>
+            <district_list>GIHOFI</district_list>
+            <name>BUKEMBA</name>
+          </item>
+          <item>
+            <itextId>commune-2</itextId>
+            <district_list>BURURI</district_list>
+            <name>BURURI</name>
+          </item>
+          <item>
+            <itextId>commune-3</itextId>
+            <district_list>RUMONGE</district_list>
+            <name>BUYENGERO</name>
+          </item>
+          <item>
+            <itextId>commune-4</itextId>
+            <district_list>GIHOFI</district_list>
+            <name>GIHARO</name>
+          </item>
+          <item>
+            <itextId>commune-5</itextId>
+            <district_list>GIHOFI</district_list>
+            <name>GITANGA (GIHOFI)</name>
+          </item>
+          <item>
+            <itextId>commune-6</itextId>
+            <district_list>RUTANA</district_list>
+            <name>GITANGA (RUTANA)</name>
+          </item>
+          <item>
+            <itextId>commune-7</itextId>
+            <district_list>MABAYI</district_list>
+            <name>MUGINA</name>
+          </item>
+          <item>
+            <itextId>commune-8</itextId>
+            <district_list>BUKINANYANA</district_list>
+            <name>MURWI</name>
+          </item>
+          <item>
+            <itextId>commune-9</itextId>
+            <district_list>MPANDA</district_list>
+            <name>RUGAZI</name>
+          </item>
+          <item>
+            <itextId>commune-10</itextId>
+            <district_list>RUMONGE</district_list>
+            <name>RUMONGE</name>
+          </item>
+          <item>
+            <itextId>commune-11</itextId>
+            <district_list>RUTANA</district_list>
+            <name>RUTANA</name>
+          </item>
+          <item>
+            <itextId>commune-12</itextId>
+            <district_list>RUTOVU</district_list>
+            <name>SONGA</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="centre_sante">
+        <root>
+          <item>
+            <itextId>centre_sante-0</itextId>
+            <commune>BUKEMBA</commune>
+            <name>BUKEMBA</name>
+          </item>
+          <item>
+            <itextId>centre_sante-1</itextId>
+            <commune>BURURI</commune>
+            <name>GASANDA</name>
+          </item>
+          <item>
+            <itextId>centre_sante-2</itextId>
+            <commune>BUBANZA</commune>
+            <name>GITANGA</name>
+          </item>
+          <item>
+            <itextId>centre_sante-3</itextId>
+            <commune>BUYENGERO</commune>
+            <name>KINAMA</name>
+          </item>
+          <item>
+            <itextId>centre_sante-4</itextId>
+            <commune>RUGAZI</commune>
+            <name>KIRENGANE</name>
+          </item>
+          <item>
+            <itextId>centre_sante-5</itextId>
+            <commune>MURWI</commune>
+            <name>KIVUMVU</name>
+          </item>
+          <item>
+            <itextId>centre_sante-6</itextId>
+            <commune>SONGA</commune>
+            <name>MUHEKA</name>
+          </item>
+          <item>
+            <itextId>centre_sante-7</itextId>
+            <commune>GITANGA (RUTANA)</commune>
+            <name>MUSENO</name>
+          </item>
+          <item>
+            <itextId>centre_sante-8</itextId>
+            <commune>GIHARO</commune>
+            <name>MUZYE</name>
+          </item>
+          <item>
+            <itextId>centre_sante-9</itextId>
+            <commune>MUGINA</commune>
+            <name>NYABUGIMBU</name>
+          </item>
+          <item>
+            <itextId>centre_sante-10</itextId>
+            <commune>RUMONGE</commune>
+            <name>NYAGASAKA</name>
+          </item>
+          <item>
+            <itextId>centre_sante-11</itextId>
+            <commune>GITANGA (GIHOFI)</commune>
+            <name>NYAKUGUMA</name>
+          </item>
+          <item>
+            <itextId>centre_sante-12</itextId>
+            <commune>RUTANA</commune>
+            <name>RONGERO</name>
+          </item>
+          <item>
+            <itextId>centre_sante-13</itextId>
+            <commune>MUGINA</commune>
+            <name>RUZIBA</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="village_list">
+        <root>
+          <item>
+            <itextId>village_list-0</itextId>
+            <centre_sante>KIRENGANE</centre_sante>
+            <name>BUTAVUKA</name>
+          </item>
+          <item>
+            <itextId>village_list-1</itextId>
+            <centre_sante>GITANGA</centre_sante>
+            <name>GITANGA</name>
+          </item>
+          <item>
+            <itextId>village_list-2</itextId>
+            <centre_sante>KINAMA</centre_sante>
+            <name>KINAMA</name>
+          </item>
+          <item>
+            <itextId>village_list-3</itextId>
+            <centre_sante>NYAKUGUMA</centre_sante>
+            <name>KIVOMA</name>
+          </item>
+          <item>
+            <itextId>village_list-4</itextId>
+            <centre_sante>KIVUMVU</centre_sante>
+            <name>KIVUMVU</name>
+          </item>
+          <item>
+            <itextId>village_list-5</itextId>
+            <centre_sante>NYABUGIMBU</centre_sante>
+            <name>MARUMPU</name>
+          </item>
+          <item>
+            <itextId>village_list-6</itextId>
+            <centre_sante>MUHEKA</centre_sante>
+            <name>MUHEKA</name>
+          </item>
+          <item>
+            <itextId>village_list-7</itextId>
+            <centre_sante>BUKEMBA</centre_sante>
+            <name>MURAMA RUGWE</name>
+          </item>
+          <item>
+            <itextId>village_list-8</itextId>
+            <centre_sante>MUSENO</centre_sante>
+            <name>MUSENO</name>
+          </item>
+          <item>
+            <itextId>village_list-9</itextId>
+            <centre_sante>MUZYE</centre_sante>
+            <name>MUZYE</name>
+          </item>
+          <item>
+            <itextId>village_list-10</itextId>
+            <centre_sante>NYAGASAKA</centre_sante>
+            <name>NYAGASAKA</name>
+          </item>
+          <item>
+            <itextId>village_list-11</itextId>
+            <centre_sante>RONGERO</centre_sante>
+            <name>RONGERO</name>
+          </item>
+          <item>
+            <itextId>village_list-12</itextId>
+            <centre_sante>GASANDA</centre_sante>
+            <name>RUKANDA</name>
+          </item>
+          <item>
+            <itextId>village_list-13</itextId>
+            <centre_sante>RUZIBA</centre_sante>
+            <name>RUZIBA</name>
+          </item>
+          <item>
+            <itextId>village_list-14</itextId>
+            <centre_sante>KINAMA</centre_sante>
+            <name>SEBEYI</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/c_date" required="true()" type="date"/>
+      <bind constraint="regex(.,'^[0-9]{2}$') and . &gt; 9 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/c_RecorderID:jr:constraintMsg')" nodeset="/data/c_RecorderID" required="true()" type="int"/>
+      <bind nodeset="/data/c_chef_equipe" required="true()" type="string"/>
+      <bind nodeset="/data/c_region" required="true()" type="string" db_add_col_1="."/>
+      <bind nodeset="/data/c_District" required="true()" type="string" db_add_col_1="/data/c_region" db_add_col_2="."/>
+      <bind nodeset="/data/c_commune" required="true()" type="string" db_add_col_2="/data/c_District" db_add_col_3="."/>
+      <bind nodeset="/data/c_centre_sante" required="true()" type="string" db_add_col_3="/data/c_commune" db_add_col_4="."/>
+      <bind nodeset="/data/c_Cluster_Name" required="true()" type="string" db_add_col_4="/data/c_centre_sante" db_add_col_5="."/>
+      <bind nodeset="/data/c_GPS" required="true()" type="geopoint"/>
+      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_StartTime" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_EndTime" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/c_date">
+      <label ref="jr:itext('/data/c_date:label')"/>
+    </input>
+    <input ref="/data/c_RecorderID">
+      <label ref="jr:itext('/data/c_RecorderID:label')"/>
+      <hint ref="jr:itext('/data/c_RecorderID:hint')"/>
+    </input>
+    <input ref="/data/c_chef_equipe">
+      <label ref="jr:itext('/data/c_chef_equipe:label')"/>
+    </input>
+    <select1 ref="/data/c_region">
+      <label ref="jr:itext('/data/c_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_region/BUBANZA:label')"/>
+        <value>BUBANZA</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/BURURI:label')"/>
+        <value>BURURI</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/CIBITOKE:label')"/>
+        <value>CIBITOKE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/RUMONGE:label')"/>
+        <value>RUMONGE</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_region/RUTANA:label')"/>
+        <value>RUTANA</value>
+      </item>
+    </select1>
+    <select1 ref="/data/c_District">
+      <label ref="jr:itext('/data/c_District:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[ /data/c_region  = region_list]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_commune">
+      <label ref="jr:itext('/data/c_commune:label')"/>
+      <itemset nodeset="instance('commune')/root/item[ /data/c_District  = district_list]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_centre_sante">
+      <label ref="jr:itext('/data/c_centre_sante:label')"/>
+      <itemset nodeset="instance('centre_sante')/root/item[ /data/c_commune  = commune]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/c_Cluster_Name">
+      <label ref="jr:itext('/data/c_Cluster_Name:label')"/>
+      <itemset nodeset="instance('village_list')/root/item[ /data/c_centre_sante  = centre_sante]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/data/c_GPS">
+      <label ref="jr:itext('/data/c_GPS:label')"/>
+      <hint ref="jr:itext('/data/c_GPS:hint')"/>
+    </input>
+    <input ref="/data/c_ClusterNotes">
+      <label ref="jr:itext('/data/c_ClusterNotes:label')"/>
+    </input>
+  </h:body>
+</h:html>
