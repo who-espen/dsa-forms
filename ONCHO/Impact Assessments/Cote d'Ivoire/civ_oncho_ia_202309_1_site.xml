@@ -487,9 +487,6 @@
           <text id="/data/s_site/DEWAKE VILLAGE:label">
             <value>DEWAKE VILLAGE</value>
           </text>
-          <text id="/data/s_site/M'BORLA DIOULASSO:label">
-            <value>M'BORLA DIOULASSO</value>
-          </text>
           <text id="/data/s_site_id2/117:label">
             <value>BEREDA (117)</value>
           </text>
@@ -624,6 +621,9 @@
           </text>
           <text id="/data/s_tdm/annee/2005:label">
             <value>2005</value>
+          </text>
+          <text id="/data/s_site/M.BORLA DIOULASSO:label">
+            <value>M'BORLA DIOULASSO</value>
           </text>
           <text id="/data/s_health_facility/TORTIYA:label">
             <value>TORTIYA</value>
@@ -1341,7 +1341,7 @@
           <item>
             <itextId>static_instance-site_id-5</itextId>
             <name>106</name>
-            <site>M'BORLA DIOULASSO</site>
+            <site>M.BORLA DIOULASSO</site>
           </item>
           <item>
             <itextId>static_instance-site_id-6</itextId>
@@ -1578,8 +1578,8 @@
           </item>
           <item>
             <itextId>static_instance-site-4</itextId>
-            <health_facility>CSR M'BORLA DIOULASSO</health_facility>
-            <name>M'BORLA DIOULASSO</name>
+            <health_facility>CSR M.BORLA DIOULASSO</health_facility>
+            <name>M.BORLA DIOULASSO</name>
           </item>
           <item>
             <itextId>static_instance-site-5</itextId>
@@ -1929,7 +1929,7 @@
             <itextId>static_instance-site_id2-5</itextId>
             <name>106</name>
             <health_facility>CSR M.BORLA DIOULASSO</health_facility>
-            <site>M'BORLA DIOULASSO</site>
+            <site>M.BORLA DIOULASSO</site>
           </item>
           <item>
             <itextId>static_instance-site_id2-6</itextId>
@@ -2082,7 +2082,7 @@
       <bind nodeset="/data/s_site" required="true()" type="select1" db_add_col_3="/data/s_health_facility" db_add_col_4="."/>
       <bind nodeset="/data/s_site_id" relevant="not(selected( /data/s_site , 'Autre'))" required="true()" type="select1" db_add_col_4="/data/s_site" db_add_col_5="."/>
       <bind nodeset="/data/s_site2" relevant="selected( /data/s_site , 'Autre')" required="true()" type="string" db_add_col_3="/data/s_health_facility" db_add_col_6="."/>
-      <bind nodeset="/data/s_site_id2" relevant="selected( /data/s_site , 'Autre')" required="true()" type="select1" db_add_col_6="/data/s_site_id" db_add_col_7="."/>
+      <bind nodeset="/data/s_site_id2" relevant="selected( /data/s_site , 'Autre')" required="true()" type="select1" db_add_col_6="/data/s_site2" db_add_col_7="."/>
       <bind nodeset="/data/s_population" required="true()" type="int"/>
       <bind nodeset="/data/s_simulie" required="true()" type="select1"/>
       <bind nodeset="/data/s_village_pratique_tdm" required="true()" type="select1"/>
