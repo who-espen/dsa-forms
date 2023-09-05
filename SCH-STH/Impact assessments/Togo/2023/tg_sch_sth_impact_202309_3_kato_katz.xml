@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Avril) - 3. SCH/STH - Kato Katz</h:title>
-    <model >
+    <h:title>(2023 Sept) - 3. SCH/STH - Kato Katz</h:title>
+    <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_3_kato_katz_202110">
+        <data id="tg_sch_sth_impact_202309_3_kato_katz">
           <k_Recorder/>
           <k_district/>
           <k_usp/>
@@ -43,17 +43,23 @@
           <text id="/data/k_Recorder:jr:constraintMsg">
             <value>Doit contenir 2 à 4 caractère alphanumérique</value>
           </text>
+          <text id="/data/k_barcode_ok/Non:label">
+            <value>Non</value>
+          </text>
           <text id="/data/k_Recorder:label">
             <value>Sélectionner l'enquêteur</value>
-          </text>
-          <text id="/data/k_district:label">
-            <value>Sélectionner le district</value>
           </text>
           <text id="/data/k_usp:label">
             <value>Sélectionner le sous-district (USP)</value>
           </text>
-          <text id="/data/k_site_name:label">
-            <value>Sélectionner le nom du village</value>
+          <text id="/data/k_sch_man_sa:label">
+            <value>Schistosoma mansoni (oeufs) - Slide A</value>
+          </text>
+          <text id="/data/k_barcode_ok/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/k_hookworm_sa:label">
+            <value>Ankylostome - Slide A</value>
           </text>
           <text id="/data/k_barcodeid:label">
             <value>Veuillez scanner le QR Code</value>
@@ -61,47 +67,41 @@
           <text id="/data/k_barcode_ok:label">
             <value>Le code QR a-t-il été correctement scanné</value>
           </text>
-          <text id="/data/k_barcode_ok/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/k_barcode_ok/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/k_manual_code_id:label">
-            <value>Saisez le code QR manuellement</value>
-          </text>
-          <text id="/data/k_sch_man_sa:label">
-            <value>Schistosoma mansoni (oeufs) - Slide A</value>
-          </text>
-          <text id="/data/k_sch_man_sb:label">
-            <value>Schistosoma mansoni (oeufs) - Slide B</value>
-          </text>
-          <text id="/data/k_ascaris_lumb_sa:label">
-            <value>Ascaris lumbricoides (œufs) - Slide A</value>
-          </text>
-          <text id="/data/k_ascaris_lumb_sb:label">
-            <value>Ascaris lumbricoides (œufs) - Slide B</value>
-          </text>
-          <text id="/data/k_hookworm_sa:label">
-            <value>Ankylostome - Slide A</value>
+          <text id="/data/k_site_name:label">
+            <value>Sélectionner le nom du village</value>
           </text>
           <text id="/data/k_hookworm_sb:label">
             <value>Ankylostome - Slide B</value>
           </text>
-          <text id="/data/k_trichuris_sa:label">
-            <value>Trichocéphale trichura - Slide A</value>
+          <text id="/data/k_remarks:label">
+            <value>Notes additionnelles</value>
           </text>
-          <text id="/data/k_trichuris_sb:label">
-            <value>Trichocéphale trichura - Slide B</value>
+          <text id="/data/k_ascaris_lumb_sb:label">
+            <value>Ascaris lumbricoides (œufs) - Slide B</value>
           </text>
-          <text id="/data/k_sch_hae_sa:label">
-            <value>Schistosoma haematobium – Slide A</value>
+          <text id="/data/k_sch_man_sb:label">
+            <value>Schistosoma mansoni (oeufs) - Slide B</value>
           </text>
           <text id="/data/k_sch_hae_sb:label">
             <value>Schistosoma haematobium – Slide B</value>
           </text>
-          <text id="/data/k_remarks:label">
-            <value>Notes additionnelles</value>
+          <text id="/data/k_ascaris_lumb_sa:label">
+            <value>Ascaris lumbricoides (œufs) - Slide A</value>
+          </text>
+          <text id="/data/k_trichuris_sb:label">
+            <value>Trichocéphale trichura - Slide B</value>
+          </text>
+          <text id="/data/k_district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/k_manual_code_id:label">
+            <value>Saisez le code QR manuellement</value>
+          </text>
+          <text id="/data/k_sch_hae_sa:label">
+            <value>Schistosoma haematobium – Slide A</value>
+          </text>
+          <text id="/data/k_trichuris_sa:label">
+            <value>Trichocéphale trichura - Slide A</value>
           </text>
         </translation>
       </itext>
@@ -111,7 +111,7 @@
       <bind nodeset="/data/k_usp" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/k_district"/>
       <bind nodeset="/data/k_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_usp"/>
       <bind nodeset="/data/k_barcodeid" type="barcode"/>
-      <bind nodeset="/data/k_barcode_ok" required="true()" type="string"/>
+      <bind nodeset="/data/k_barcode_ok" required="true()" type="select1"/>
       <bind nodeset="/data/k_manual_code_id" relevant=" /data/k_barcode_ok  = 'Non'" required="true()" type="string"/>
       <bind nodeset="/data/k_sch_man_sa" required="true()" type="int"/>
       <bind nodeset="/data/k_sch_man_sb" required="true()" type="int"/>
