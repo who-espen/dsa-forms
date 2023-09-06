@@ -19,7 +19,8 @@
           <d_village_1ere_ligne/>
           <d_site/>
           <d_site_id/>
-          <d_barcodeid/>
+          <d_numero/>
+          <d_code_id/>
           <d_results/>
           <d_notes/>
           <d_start/>
@@ -80,6 +81,9 @@
           <text id="/data/d_district/BLOLEQUIN:label">
             <value>BLOLEQUIN</value>
           </text>
+          <text id="/data/d_numero:label">
+            <value>8.a. Entrer le numéro du participant</value>
+          </text>
           <text id="/data/d_village_1ere_ligne/BOROTOU-KORO:label">
             <value>BOROTOU-KORO</value>
           </text>
@@ -91,6 +95,9 @@
           </text>
           <text id="static_instance-oui_non-1">
             <value>Non</value>
+          </text>
+          <text id="/data/d_numero:jr:constraintMsg">
+            <value>Le code doit être un nombre à trois chiffres entre 001 et 100</value>
           </text>
           <text id="/data/d_district/KORO:label">
             <value>KORO</value>
@@ -209,9 +216,6 @@
           <text id="static_instance-site-18">
             <value>TENEDIERI</value>
           </text>
-          <text id="/data/d_village_1ere_ligne/M'BORLA DIOULASSO:label">
-            <value>M'BORLA DIOULASSO</value>
-          </text>
           <text id="/data/d_recorder_id:hint">
             <value>Code à deux chiffres qui vous a été assigné</value>
           </text>
@@ -230,8 +234,8 @@
           <text id="static_instance-site-12">
             <value>BONTOU</value>
           </text>
-          <text id="static_instance-site-15">
-            <value>VIALLADOUGOU</value>
+          <text id="/data/d_code_id:label">
+            <value>8.b. Code du test</value>
           </text>
           <text id="static_instance-site-14">
             <value>NIAMOUTOU</value>
@@ -262,9 +266,6 @@
           </text>
           <text id="static_instance-results-0">
             <value>Positive</value>
-          </text>
-          <text id="/data/d_barcodeid:label">
-            <value>8. Code du participant</value>
           </text>
           <text id="/data/d_site_id/15:label">
             <value>15</value>
@@ -521,6 +522,9 @@
           <text id="/data/d_region/HAMBOL:label">
             <value>HAMBOL</value>
           </text>
+          <text id="/data/d_village_1ere_ligne/M.BORLA DIOULASSO:label">
+            <value>M'BORLA DIOULASSO</value>
+          </text>
           <text id="/data/d_results:label">
             <value>9. Résultats du test</value>
           </text>
@@ -601,6 +605,9 @@
           </text>
           <text id="/data/d_village_1ere_ligne/TENEDIERI:label">
             <value>TENEDIERI</value>
+          </text>
+          <text id="static_instance-site-15">
+            <value>VIALLADOUGOU</value>
           </text>
           <text id="/data/d_village_1ere_ligne/BONTOU:label">
             <value>BONTOU</value>
@@ -834,7 +841,7 @@
           </item>
           <item>
             <itextId>static_instance-site-4</itextId>
-            <name>M'BORLA DIOULASSO</name>
+            <name>M.BORLA DIOULASSO</name>
             <district>DABAKALA</district>
           </item>
           <item>
@@ -1090,7 +1097,8 @@
       <bind nodeset="/data/d_village_1ere_ligne" required="true()" type="select1"/>
       <bind nodeset="/data/d_site" required="true()" type="string"/>
       <bind nodeset="/data/d_site_id" required="true()" type="select1"/>
-      <bind nodeset="/data/d_barcodeid" required="true()" type="string"/>
+      <bind constraint="regex(.,'^(0[1-9][0-9]|100|0[0-9][1-9])$')" jr:constraintMsg="jr:itext('/data/d_numero:jr:constraintMsg')" nodeset="/data/d_numero" required="true()" type="string"/>
+      <bind calculate="concat('0_',  /data/d_district_id , '_',  /data/d_site_id , '_',  /data/d_numero )" nodeset="/data/d_code_id" type="string"/>
       <bind nodeset="/data/d_results" required="true()" type="select1"/>
       <bind nodeset="/data/d_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
@@ -1253,8 +1261,11 @@
         <value>20</value>
       </item>
     </select1>
-    <input ref="/data/d_barcodeid">
-      <label ref="jr:itext('/data/d_barcodeid:label')"/>
+    <input ref="/data/d_numero">
+      <label ref="jr:itext('/data/d_numero:label')"/>
+    </input>
+    <input accuracyThreshold="yes" ref="/data/d_code_id">
+      <label ref="jr:itext('/data/d_code_id:label')"/>
     </input>
     <select1 ref="/data/d_results">
       <label ref="jr:itext('/data/d_results:label')"/>

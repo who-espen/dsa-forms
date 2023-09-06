@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) ONCHO Pre Stop - 2. Participants V2</h:title>
+    <h:title>(Sept 2023) ONCHO Pre Stop - 2. Participants V2.1</h:title>
     <model>
 
       <instance>
-        <data id="civ_oncho_ia_202309_2_participant_v2">
+        <data id="civ_oncho_ia_202309_2_participant_v2_1">
           <p_recorder_id/>
           <p_region/>
           <p_district/>
@@ -20,7 +20,8 @@
           <p_site/>
           <p_site_id/>
           <p_consent/>
-          <p_barcodeid/>
+          <p_numero/>
+          <p_code_id/>
           <p_nom_parrent/>
           <p_profession_parent/>
           <p_sexe/>
@@ -43,6 +44,9 @@
         <translation default="true()" lang="French">
           <text id="/data/p_district_id:label">
             <value>4. Sélectionner le code du district</value>
+          </text>
+          <text id="/data/p_numero:label">
+            <value>9.a. Entrer le numéro du participant</value>
           </text>
           <text id="/data/p_site:label">
             <value>6. Sélectionner le site d'enquête</value>
@@ -68,9 +72,6 @@
           <text id="/data/p_born_in_village:label">
             <value>14. Etes-vous né dans ce village</value>
           </text>
-          <text id="/data/p_barcodeid:label">
-            <value>9. Code du participant</value>
-          </text>
           <text id="/data/p_sexe:label">
             <value>12. Quel est le sexe de cette personne ?</value>
           </text>
@@ -82,6 +83,9 @@
           </text>
           <text id="/data/p_bite_per_black_flies:label">
             <value>16. Avez-vous déjà été piqué par les simulies</value>
+          </text>
+          <text id="/data/p_numero:jr:constraintMsg">
+            <value>Le code doit être un nombre à trois chiffres entre 001 et 100</value>
           </text>
           <text id="/data/p_region:label">
             <value>2. Sélectionner une région</value>
@@ -125,6 +129,9 @@
           <text id="/data/p_profession_parent:label">
             <value>11. Profession du parrent</value>
           </text>
+          <text id="/data/p_age/9:label">
+            <value>9</value>
+          </text>
           <text id="/data/p_nb_tablet:label">
             <value>18. Combien de comprimes as-tu déjà pris</value>
           </text>
@@ -134,8 +141,8 @@
           <text id="/data/p_consent/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/p_age/9:label">
-            <value>9</value>
+          <text id="/data/p_code_id:label">
+            <value>9.b. Code du participant</value>
           </text>
           <text id="/data/p_live_outside_village/Oui:label">
             <value>Oui</value>
@@ -166,7 +173,8 @@
       <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_village_1ere_ligne"/>
       <bind nodeset="/data/p_site_id" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_site"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
-      <bind nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind constraint="regex(.,'^(0[1-9][0-9]|100|0[0-9][1-9])$')" jr:constraintMsg="jr:itext('/data/p_numero:jr:constraintMsg')" nodeset="/data/p_numero" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind calculate="concat('0_',  /data/p_district_id , '_',  /data/p_site_id , '_',  /data/p_numero )" nodeset="/data/p_code_id" readonly="true()" type="string"/>
       <bind nodeset="/data/p_nom_parrent" relevant=" /data/p_consent  = 'Oui'" type="string"/>
       <bind nodeset="/data/p_profession_parent" relevant=" /data/p_consent  = 'Oui'" type="string"/>
       <bind nodeset="/data/p_sexe" relevant=" /data/p_consent  = 'Oui'" required="true()" type="select1"/>
@@ -216,8 +224,11 @@
         <value>Non</value>
       </item>
     </select1>
-    <input ref="/data/p_barcodeid">
-      <label ref="jr:itext('/data/p_barcodeid:label')"/>
+    <input ref="/data/p_numero">
+      <label ref="jr:itext('/data/p_numero:label')"/>
+    </input>
+    <input ref="/data/p_code_id">
+      <label ref="jr:itext('/data/p_code_id:label')"/>
     </input>
     <input ref="/data/p_nom_parrent">
       <label ref="jr:itext('/data/p_nom_parrent:label')"/>
