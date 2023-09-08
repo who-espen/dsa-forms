@@ -7,16 +7,15 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) ONCHO Pre Stop - 2. Participants V3</h:title>
+    <h:title>(Sept 2023) ONCHO Pre Stop - 2. Participants V3.1</h:title>
     <model>
 
       <instance>
-        <data id="civ_oncho_ia_202309_2_participant_v3">
+        <data id="civ_oncho_ia_202309_2_participant_v3_1">
           <p_recorder_id/>
           <p_region/>
           <p_district/>
           <p_district_id/>
-          <p_village_1ere_ligne/>
           <p_site/>
           <p_site_id/>
           <p_consent/>
@@ -66,8 +65,8 @@
           <text id="/data/p_live_outside_village:label">
             <value>15. Avez-vous déjà vécu en dehors de ce village durant ses 9 dernières années</value>
           </text>
-          <text id="/data/p_village_1ere_ligne:label">
-            <value>5. Sélectionner un village de 1ère ligne le plus proche</value>
+          <text id="/data/p_age/9:label">
+            <value>9</value>
           </text>
           <text id="/data/p_born_in_village:label">
             <value>14. Etes-vous né dans ce village</value>
@@ -129,9 +128,6 @@
           <text id="/data/p_profession_parent:label">
             <value>11. Profession du parrent</value>
           </text>
-          <text id="/data/p_age/9:label">
-            <value>9</value>
-          </text>
           <text id="/data/p_nb_tablet:label">
             <value>18. Combien de comprimes as-tu déjà pris</value>
           </text>
@@ -169,7 +165,7 @@
       <bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
       <bind nodeset="/data/p_district_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
-      <bind nodeset="/data/p_village_1ere_ligne" type="string"/>
+
       <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_district_id"/>
       <bind nodeset="/data/p_site_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_site"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
@@ -203,9 +199,6 @@
     </input>
     <input ref="/data/p_district_id">
       <label ref="jr:itext('/data/p_district_id:label')"/>
-    </input>
-    <input ref="/data/p_village_1ere_ligne">
-      <label ref="jr:itext('/data/p_village_1ere_ligne:label')"/>
     </input>
     <input ref="/data/p_site">
       <label ref="jr:itext('/data/p_site:label')"/>
