@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) ONCHO Pre Stop - 2. Participants V2.1</h:title>
+    <h:title>(Sept 2023) ONCHO Pre Stop - 2. Participants V3</h:title>
     <model>
 
       <instance>
-        <data id="civ_oncho_ia_202309_2_participant_v2_1">
+        <data id="civ_oncho_ia_202309_2_participant_v3">
           <p_recorder_id/>
           <p_region/>
           <p_district/>
@@ -169,9 +169,9 @@
       <bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
       <bind nodeset="/data/p_district_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
-      <bind nodeset="/data/p_village_1ere_ligne" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_district_id"/>
-      <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_village_1ere_ligne"/>
-      <bind nodeset="/data/p_site_id" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_site"/>
+      <bind nodeset="/data/p_village_1ere_ligne" type="string"/>
+      <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_district_id"/>
+      <bind nodeset="/data/p_site_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_site"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
       <bind constraint="regex(.,'^(0[1-9][0-9]|100|0[0-9][1-9])$')" jr:constraintMsg="jr:itext('/data/p_numero:jr:constraintMsg')" nodeset="/data/p_numero" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind calculate="concat('0_',  /data/p_district_id , '_',  /data/p_site_id , '_',  /data/p_numero )" nodeset="/data/p_code_id" readonly="true()" type="string"/>

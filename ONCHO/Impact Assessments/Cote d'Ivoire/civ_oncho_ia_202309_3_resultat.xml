@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) ONCHO Pre Stop - 3. Résultat V2</h:title>
+    <h:title>(Sept 2023) ONCHO Pre Stop - 3. Résultat V3</h:title>
     <model>
 
       <instance>
-        <data id="civ_oncho_ia_202309_3_resultat_v2">
+        <data id="civ_oncho_ia_202309_3_resultat_v3">
           <d_recorder_id/>
           <d_region/>
           <d_district/>
@@ -399,14 +399,17 @@
           <text id="static_instance-si_danosum-0">
             <value>Jeune</value>
           </text>
-          <text id="static_instance-si_danosum-1">
-            <value>Agé</value>
+          <text id="static_instance-district-13">
+            <value>OUANGOLODOUGOU</value>
           </text>
           <text id="/data/d_region/KABADOUGOU:label">
             <value>KABADOUGOU</value>
           </text>
           <text id="/data/d_village_1ere_ligne/NABEKAHA:label">
             <value>NABEKAHA</value>
+          </text>
+          <text id="/data/d_district/TOUBA:label">
+            <value>TOUBA</value>
           </text>
           <text id="static_instance-site-21">
             <value>LALERABA</value>
@@ -502,10 +505,10 @@
             <value>TABOU</value>
           </text>
           <text id="static_instance-district-11">
-            <value>KONG</value>
+            <value>TOUBA</value>
           </text>
           <text id="static_instance-district-12">
-            <value>OUANGOLODOUGOU</value>
+            <value>KONG</value>
           </text>
           <text id="/data/d_district/BOUAFLE:label">
             <value>BOUAFLE</value>
@@ -518,6 +521,9 @@
           </text>
           <text id="/data/d_district/TABOU:label">
             <value>TABOU</value>
+          </text>
+          <text id="static_instance-si_danosum-1">
+            <value>Agé</value>
           </text>
           <text id="/data/d_region/HAMBOL:label">
             <value>HAMBOL</value>
@@ -677,11 +683,16 @@
           </item>
           <item>
             <itextId>static_instance-district-11</itextId>
+            <region>BAFING</region>
+            <name>TOUBA</name>
+          </item>
+          <item>
+            <itextId>static_instance-district-12</itextId>
             <region>TCHOLOGO</region>
             <name>KONG</name>
           </item>
           <item>
-            <itextId>static_instance-district-12</itextId>
+            <itextId>static_instance-district-13</itextId>
             <region>TCHOLOGO</region>
             <name>OUANGOLODOUGOU</name>
           </item>
@@ -1094,7 +1105,7 @@
       <bind nodeset="/data/d_region" required="true()" type="select1"/>
       <bind nodeset="/data/d_district" required="true()" type="select1"/>
       <bind nodeset="/data/d_district_id" required="true()" type="select1"/>
-      <bind nodeset="/data/d_village_1ere_ligne" required="true()" type="select1"/>
+      <bind nodeset="/data/d_village_1ere_ligne" type="select1"/>
       <bind nodeset="/data/d_site" required="true()" type="string"/>
       <bind nodeset="/data/d_site_id" required="true()" type="select1"/>
       <bind constraint="regex(.,'^(0[1-9][0-9]|100|0[0-9][1-9])$')" jr:constraintMsg="jr:itext('/data/d_numero:jr:constraintMsg')" nodeset="/data/d_numero" required="true()" type="string"/>

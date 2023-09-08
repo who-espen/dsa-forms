@@ -7,17 +7,18 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) ONCHO Pre Stop - 1. Site V2</h:title>
+    <h:title>(Sept 2023) ONCHO Pre Stop - 1. Site V3</h:title>
     <model>
 
       <instance>
-        <data id="civ_oncho_ia_202309_1_site_v2">
+        <data id="civ_oncho_ia_202309_1_site_v3">
           <s_recorder_id/>
           <s_region/>
           <s_district/>
           <s_district_id/>
           <s_village_1ere_ligne/>
           <s_site/>
+          <s_site_dist_village/>
           <s_site_id/>
           <s_population/>
           <s_simulie/>
@@ -43,7 +44,7 @@
             <value>DABAKALA</value>
           </text>
           <text id="/data/s_site:label">
-            <value>6. Entrer le nom du site d'enquête</value>
+            <value>6.a. Entrer le nom du site d'enquête</value>
           </text>
           <text id="/data/s_site_id/09:label">
             <value>09</value>
@@ -114,6 +115,9 @@
           <text id="static_instance-annee-23">
             <value>2023</value>
           </text>
+          <text id="/data/s_site_dist_village:label">
+            <value>6.b. À quelle distance du gîte se situe le village à enquêter</value>
+          </text>
           <text id="static_instance-annee-8">
             <value>2008</value>
           </text>
@@ -174,8 +178,8 @@
           <text id="/data/s_tdm/annee/2002:label">
             <value>2002</value>
           </text>
-          <text id="static_instance-annee-16">
-            <value>2016</value>
+          <text id="static_instance-site-23">
+            <value>GBAROKE</value>
           </text>
           <text id="static_instance-site_id-11">
             <value>12</value>
@@ -243,6 +247,9 @@
           <text id="/data/s_tdm/annee/2021:label">
             <value>2021</value>
           </text>
+          <text id="/data/s_site_dist_village/5-10 km:label">
+            <value>5-10 km</value>
+          </text>
           <text id="/data/s_village_1ere_ligne/M.BORLA DIOULASSO:label">
             <value>M'BORLA DIOULASSO</value>
           </text>
@@ -273,14 +280,20 @@
           <text id="/data/s_tdm/annee/2004:label">
             <value>2004</value>
           </text>
+          <text id="/data/s_site_dist_village/10-15km:label">
+            <value>10-15km</value>
+          </text>
           <text id="/data/s_tdm/annee/2005:label">
             <value>2005</value>
           </text>
           <text id="static_instance-site-2">
             <value>DAKOUDO</value>
           </text>
-          <text id="/data/s_village_pratique_tdm/Non:label">
-            <value>Non</value>
+          <text id="static_instance-distance_site-0">
+            <value>0-5 km</value>
+          </text>
+          <text id="/data/s_district/TOUBA:label">
+            <value>TOUBA</value>
           </text>
           <text id="/data/s_village_1ere_ligne/SOKOROGO:label">
             <value>SOKOROGO</value>
@@ -411,6 +424,9 @@
           <text id="/data/s_site_id/14:label">
             <value>14</value>
           </text>
+          <text id="static_instance-site_id-9">
+            <value>10</value>
+          </text>
           <text id="/data/s_village_1ere_ligne/GBELEBAN:label">
             <value>GBELEBAN</value>
           </text>
@@ -453,6 +469,9 @@
           <text id="/data/s_district/BOUNA:label">
             <value>BOUNA</value>
           </text>
+          <text id="static_instance-annee-16">
+            <value>2016</value>
+          </text>
           <text id="/data/s_tdm/mois/Janvier:label">
             <value>Janvier</value>
           </text>
@@ -486,6 +505,9 @@
           <text id="static_instance-district-9">
             <value>KORHOGO 1</value>
           </text>
+          <text id="static_instance-distance_site-1">
+            <value>5-10 km</value>
+          </text>
           <text id="static_instance-district-2">
             <value>BOUNA</value>
           </text>
@@ -513,8 +535,8 @@
           <text id="/data/s_tdm/annee:label">
             <value>11.b. Année TDM</value>
           </text>
-          <text id="static_instance-site_id-9">
-            <value>10</value>
+          <text id="static_instance-district-13">
+            <value>OUANGOLODOUGOU</value>
           </text>
           <text id="static_instance-site-0">
             <value>ZINON</value>
@@ -524,6 +546,9 @@
           </text>
           <text id="/data/s_site_id/20:label">
             <value>20</value>
+          </text>
+          <text id="/data/s_site_dist_village/Plus de 15 km:label">
+            <value>Plus de 15 km</value>
           </text>
           <text id="/data/s_site_id/19:label">
             <value>19</value>
@@ -637,10 +662,10 @@
             <value>BEMAVOGO</value>
           </text>
           <text id="static_instance-district-11">
-            <value>KONG</value>
+            <value>TOUBA</value>
           </text>
           <text id="static_instance-district-12">
-            <value>OUANGOLODOUGOU</value>
+            <value>KONG</value>
           </text>
           <text id="/data/s_tdm/mois/Avril:label">
             <value>Avril</value>
@@ -699,8 +724,8 @@
           <text id="/data/s_site_id/11:label">
             <value>11</value>
           </text>
-          <text id="static_instance-site-23">
-            <value>GBAROKE</value>
+          <text id="/data/s_site_dist_village/0-5 km:label">
+            <value>0-5 km</value>
           </text>
           <text id="/data/s_simulie/Oui:label">
             <value>Oui</value>
@@ -717,8 +742,14 @@
           <text id="static_instance-annee-5">
             <value>2005</value>
           </text>
+          <text id="static_instance-distance_site-2">
+            <value>10-15km</value>
+          </text>
           <text id="/data/s_tdm/mois/Février:label">
             <value>Février</value>
+          </text>
+          <text id="static_instance-distance_site-3">
+            <value>Plus de 15 km</value>
           </text>
           <text id="/data/s_village_1ere_ligne/GBAROKE:label">
             <value>GBAROKE</value>
@@ -752,6 +783,9 @@
           </text>
           <text id="/data/s_district:label">
             <value>3. Sélectionner un district</value>
+          </text>
+          <text id="/data/s_village_pratique_tdm/Non:label">
+            <value>Non</value>
           </text>
           <text id="static_instance-annee-3">
             <value>2003</value>
@@ -951,11 +985,16 @@
           </item>
           <item>
             <itextId>static_instance-district-11</itextId>
+            <region>BAFING</region>
+            <name>TOUBA</name>
+          </item>
+          <item>
+            <itextId>static_instance-district-12</itextId>
             <region>TCHOLOGO</region>
             <name>KONG</name>
           </item>
           <item>
-            <itextId>static_instance-district-12</itextId>
+            <itextId>static_instance-district-13</itextId>
             <region>TCHOLOGO</region>
             <name>OUANGOLODOUGOU</name>
           </item>
@@ -1292,6 +1331,26 @@
           </item>
         </root>
       </instance>
+      <instance id="distance_site">
+        <root>
+          <item>
+            <itextId>static_instance-distance_site-0</itextId>
+            <name>0-5 km</name>
+          </item>
+          <item>
+            <itextId>static_instance-distance_site-1</itextId>
+            <name>5-10 km</name>
+          </item>
+          <item>
+            <itextId>static_instance-distance_site-2</itextId>
+            <name>10-15km</name>
+          </item>
+          <item>
+            <itextId>static_instance-distance_site-3</itextId>
+            <name>Plus de 15 km</name>
+          </item>
+        </root>
+      </instance>
       <instance id="annee">
         <root>
           <item>
@@ -1424,9 +1483,10 @@
       <bind nodeset="/data/s_region" required="true()" type="select1" db_add_col_1="."/>
       <bind nodeset="/data/s_district" required="true()" type="select1" db_add_col_1="/data/s_region" db_add_col_2="."/>
       <bind nodeset="/data/s_district_id" required="true()" type="select1" db_add_col_2="/data/s_district" db_add_col_3="."/>
-      <bind nodeset="/data/s_village_1ere_ligne" required="true()" type="select1" db_add_col_3="/data/s_district_id" db_add_col_4="."/>
-      <bind nodeset="/data/s_site" required="true()" type="string" db_add_col_4="/data/s_village_1ere_ligne" db_add_col_5="."/>
-      <bind nodeset="/data/s_site_id" required="true()" type="select1" db_add_col_5="/data/s_site" db_add_col_6="."/>
+      <bind nodeset="/data/s_village_1ere_ligne" type="select1"/>
+      <bind nodeset="/data/s_site" required="true()" type="string" db_add_col_3="/data/s_district_id" db_add_col_4="."/>
+      <bind nodeset="/data/s_site_dist_village" required="true()" type="select1"/>
+      <bind nodeset="/data/s_site_id" required="true()" type="select1" db_add_col_4="/data/s_site" db_add_col_5="."/>
       <bind nodeset="/data/s_population" required="true()" type="int"/>
       <bind nodeset="/data/s_simulie" required="true()" type="select1"/>
       <bind nodeset="/data/s_village_pratique_tdm" required="true()" type="select1"/>
@@ -1513,6 +1573,25 @@
     <input ref="/data/s_site">
       <label ref="jr:itext('/data/s_site:label')"/>
     </input>
+    <select1 ref="/data/s_site_dist_village">
+      <label ref="jr:itext('/data/s_site_dist_village:label')"/>
+      <item>
+        <label ref="jr:itext('/data/s_site_dist_village/0-5 km:label')"/>
+        <value>0-5 km</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_site_dist_village/5-10 km:label')"/>
+        <value>5-10 km</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_site_dist_village/10-15km:label')"/>
+        <value>10-15km</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/s_site_dist_village/Plus de 15 km:label')"/>
+        <value>Plus de 15 km</value>
+      </item>
+    </select1>
     <select1 ref="/data/s_site_id">
       <label ref="jr:itext('/data/s_site_id:label')"/>
       <item>
