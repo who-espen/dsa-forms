@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<h:head>
+		<h:title>(Septembre 2022) BFA Cov ONCHO - 1.Formulaire Village V2</h:title>
+		<model >
+			<itext>
+				<translation default="true()" lang="French">
+					<text id="/data/code_equipe:label">
+						<value>Code Equipe</value>
+					</text>
+					<text id="/data/code_equipe:hint">
+						<value>Entrez le code équipe</value>
+					</text>
+					<text id="/data/code_equipe/1:label">
+						<value>1</value>
+					</text>
+					<text id="/data/code_equipe/2:label">
+						<value>2</value>
+					</text>
+					<text id="/data/code_equipe/3:label">
+						<value>3</value>
+					</text>
+					<text id="/data/code_equipe/4:label">
+						<value>4</value>
+					</text>
+					<text id="/data/code_equipe/5:label">
+						<value>5</value>
+					</text>
+					<text id="/data/district:label">
+						<value>District sanitaire</value>
+					</text>
+					<text id="/data/district:hint">
+						<value>Selectionnez le district</value>
+					</text>
+					<text id="/data/district/DANO:label">
+						<value>DANO</value>
+					</text>
+					<text id="/data/cat:label">
+						<value>Plage</value>
+					</text>
+					<text id="/data/cat:hint">
+						<value>Sélectionnez la plage</value>
+					</text>
+					<text id="/data/csps:label">
+						<value>CSPS</value>
+					</text>
+					<text id="/data/csps:hint">
+						<value>Selectionnez le CSPS</value>
+					</text>
+					<text id="/data/grappe:label">
+						<value>Nom de la grappe:</value>
+					</text>
+					<text id="/data/grappe:hint">
+						<value>Selectionnez la grappe</value>
+					</text>
+					<text id="/data/csps_autre:label">
+						<value>Nom du CSPS:</value>
+					</text>
+					<text id="/data/grappe_autre:label">
+						<value>Tapez le nom de la grappe:</value>
+					</text>
+					<text id="/data/num_grappe:jr:constraintMsg">
+						<value>Le numéro doit être entre 1 et 30</value>
+					</text>
+					<text id="/data/num_grappe:label">
+						<value>Veuillez entrer le numéro de la grappe</value>
+					</text>
+					<text id="/data/gps:label">
+						<value>GPS</value>
+					</text>
+					<text id="/data/gps:hint">
+						<value>Fonctionne mieux hors des batiments</value>
+					</text>
+					<text id="/data/notes:label">
+						<value>Notes</value>
+					</text>
+					<text id="equipe_list-0">
+						<value>1</value>
+					</text>
+					<text id="equipe_list-1">
+						<value>2</value>
+					</text>
+					<text id="equipe_list-2">
+						<value>3</value>
+					</text>
+					<text id="equipe_list-3">
+						<value>4</value>
+					</text>
+					<text id="equipe_list-4">
+						<value>5</value>
+					</text>
+					<text id="district_list-0">
+						<value>DANO</value>
+					</text>
+					<text id="category_list-0">
+						<value>CSPS [B-D]</value>
+					</text>
+					<text id="category_list-1">
+						<value>CSPS [G-K]</value>
+					</text>
+					<text id="category_list-2">
+						<value>CSPS [N-P]</value>
+					</text>
+					<text id="category_list-3">
+						<value>CSPS [S-Z]</value>
+					</text>
+					<text id="category_list-4">
+						<value>Autres CSPS</value>
+					</text>
+					<text id="csps_list-0">
+						<value>Badoné</value>
+					</text>
+					<text id="csps_list-1">
+						<value>Bisserké</value>
+					</text>
+					<text id="csps_list-2">
+						<value>Bontioli</value>
+					</text>
+					<text id="csps_list-3">
+						<value>Bouni</value>
+					</text>
+					<text id="csps_list-4">
+						<value>Dahorè</value>
+					</text>
+					<text id="csps_list-5">
+						<value>Djikologo</value>
+					</text>
+					<text id="csps_list-6">
+						<value>Gourpouo</value>
+					</text>
+					<text id="csps_list-7">
+						<value>Guéguéré</value>
+					</text>
+					<text id="csps_list-8">
+						<value>Kokolibou</value>
+					</text>
+					<text id="csps_list-9">
+						<value>Kolkol</value>
+					</text>
+					<text id="csps_list-10">
+						<value>Kpopéri</value>
+					</text>
+					<text id="csps_list-11">
+						<value>Nakar -G</value>
+					</text>
+					<text id="csps_list-12">
+						<value>Namarè</value>
+					</text>
+					<text id="csps_list-13">
+						<value>Orpoune</value>
+					</text>
+					<text id="csps_list-14">
+						<value>Pontièba</value>
+					</text>
+					<text id="csps_list-15">
+						<value>Pouleba</value>
+					</text>
+					<text id="csps_list-16">
+						<value>Salétéon</value>
+					</text>
+					<text id="csps_list-17">
+						<value>Ténoulé</value>
+					</text>
+					<text id="csps_list-18">
+						<value>Tovor</value>
+					</text>
+					<text id="csps_list-19">
+						<value>Yabogane</value>
+					</text>
+					<text id="csps_list-20">
+						<value>Zambo</value>
+					</text>
+					<text id="grappe_list-0">
+						<value>Bisserké</value>
+					</text>
+					<text id="grappe_list-1">
+						<value>Bobragogo</value>
+					</text>
+					<text id="grappe_list-2">
+						<value>Bontioli Camatéon</value>
+					</text>
+					<text id="grappe_list-3">
+						<value>Boulmontéon</value>
+					</text>
+					<text id="grappe_list-4">
+						<value>Bouni</value>
+					</text>
+					<text id="grappe_list-5">
+						<value>Dahorè Kayiré</value>
+					</text>
+					<text id="grappe_list-6">
+						<value>Dianvour</value>
+					</text>
+					<text id="grappe_list-7">
+						<value>Dioumon</value>
+					</text>
+					<text id="grappe_list-8">
+						<value>Fitingué Dagara</value>
+					</text>
+					<text id="grappe_list-9">
+						<value>Kokolibou</value>
+					</text>
+					<text id="grappe_list-10">
+						<value>Korégnon</value>
+					</text>
+					<text id="grappe_list-11">
+						<value>Korompéri</value>
+					</text>
+					<text id="grappe_list-12">
+						<value>Kpopéri</value>
+					</text>
+					<text id="grappe_list-13">
+						<value>Malédobor</value>
+					</text>
+					<text id="grappe_list-14">
+						<value>Moulourou</value>
+					</text>
+					<text id="grappe_list-15">
+						<value>Nablegane</value>
+					</text>
+					<text id="grappe_list-16">
+						<value>Nakar</value>
+					</text>
+					<text id="grappe_list-17">
+						<value>Napalè</value>
+					</text>
+					<text id="grappe_list-18">
+						<value>Naro</value>
+					</text>
+					<text id="grappe_list-19">
+						<value>Orpoune Centre</value>
+					</text>
+					<text id="grappe_list-20">
+						<value>Pontièba (Dakoulgane)</value>
+					</text>
+					<text id="grappe_list-21">
+						<value>Salétéon</value>
+					</text>
+					<text id="grappe_list-22">
+						<value>Tampla V1</value>
+					</text>
+					<text id="grappe_list-23">
+						<value>Tansien</value>
+					</text>
+					<text id="grappe_list-24">
+						<value>Ténoulé</value>
+					</text>
+					<text id="grappe_list-25">
+						<value>Tovor</value>
+					</text>
+					<text id="grappe_list-26">
+						<value>Vourégane</value>
+					</text>
+					<text id="grappe_list-27">
+						<value>Walala</value>
+					</text>
+					<text id="grappe_list-28">
+						<value>Zintéo</value>
+					</text>
+					<text id="grappe_list-29">
+						<value>Zouolo</value>
+					</text>
+				</translation>
+			</itext>
+			<instance>
+				<data id="bf_oncho_cov_1_village_202209_V2" version="20220912">
+					<code_equipe/>
+					<district/>
+					<cat/>
+					<csps/>
+					<grappe/>
+					<csps_autre/>
+					<grappe_autre/>
+					<num_grappe/>
+					<gps/>
+					<notes/>
+					<start/>
+					<end/>
+					<meta>
+						<instanceID/>
+					</meta>
+				</data>
+			</instance>
+			<instance id="equipe_list">
+				<root>
+					<item>
+						<itextId>equipe_list-0</itextId>
+						<name>1</name>
+					</item>
+					<item>
+						<itextId>equipe_list-1</itextId>
+						<name>2</name>
+					</item>
+					<item>
+						<itextId>equipe_list-2</itextId>
+						<name>3</name>
+					</item>
+					<item>
+						<itextId>equipe_list-3</itextId>
+						<name>4</name>
+					</item>
+					<item>
+						<itextId>equipe_list-4</itextId>
+						<name>5</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="district_list">
+				<root>
+					<item>
+						<itextId>district_list-0</itextId>
+						<name>DANO</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="category_list">
+				<root>
+					<item>
+						<itextId>category_list-0</itextId>
+						<district_list>DANO</district_list>
+						<name>CSPS [B-D]</name>
+					</item>
+					<item>
+						<itextId>category_list-1</itextId>
+						<district_list>DANO</district_list>
+						<name>CSPS [G-K]</name>
+					</item>
+					<item>
+						<itextId>category_list-2</itextId>
+						<district_list>DANO</district_list>
+						<name>CSPS [N-P]</name>
+					</item>
+					<item>
+						<itextId>category_list-3</itextId>
+						<district_list>DANO</district_list>
+						<name>CSPS [S-Z]</name>
+					</item>
+					<item>
+						<itextId>category_list-4</itextId>
+						<district_list>DANO</district_list>
+						<name>Autres</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="csps_list">
+				<root>
+					<item>
+						<itextId>csps_list-0</itextId>
+						<category_list>CSPS [B-D]</category_list>
+						<name>Badoné</name>
+					</item>
+					<item>
+						<itextId>csps_list-1</itextId>
+						<category_list>CSPS [B-D]</category_list>
+						<name>Bisserké</name>
+					</item>
+					<item>
+						<itextId>csps_list-2</itextId>
+						<category_list>CSPS [B-D]</category_list>
+						<name>Bontioli</name>
+					</item>
+					<item>
+						<itextId>csps_list-3</itextId>
+						<category_list>CSPS [B-D]</category_list>
+						<name>Bouni</name>
+					</item>
+					<item>
+						<itextId>csps_list-4</itextId>
+						<category_list>CSPS [B-D]</category_list>
+						<name>Dahorè</name>
+					</item>
+					<item>
+						<itextId>csps_list-5</itextId>
+						<category_list>CSPS [B-D]</category_list>
+						<name>Djikologo</name>
+					</item>
+					<item>
+						<itextId>csps_list-6</itextId>
+						<category_list>CSPS [G-K]</category_list>
+						<name>Gourpouo</name>
+					</item>
+					<item>
+						<itextId>csps_list-7</itextId>
+						<category_list>CSPS [G-K]</category_list>
+						<name>Guéguéré</name>
+					</item>
+					<item>
+						<itextId>csps_list-8</itextId>
+						<category_list>CSPS [G-K]</category_list>
+						<name>Kokolibou</name>
+					</item>
+					<item>
+						<itextId>csps_list-9</itextId>
+						<category_list>CSPS [G-K]</category_list>
+						<name>Kolkol</name>
+					</item>
+					<item>
+						<itextId>csps_list-10</itextId>
+						<category_list>CSPS [G-K]</category_list>
+						<name>Kpopéri</name>
+					</item>
+					<item>
+						<itextId>csps_list-11</itextId>
+						<category_list>CSPS [N-P]</category_list>
+						<name>Nakar -G</name>
+					</item>
+					<item>
+						<itextId>csps_list-12</itextId>
+						<category_list>CSPS [N-P]</category_list>
+						<name>Namarè</name>
+					</item>
+					<item>
+						<itextId>csps_list-13</itextId>
+						<category_list>CSPS [N-P]</category_list>
+						<name>Orpoune</name>
+					</item>
+					<item>
+						<itextId>csps_list-14</itextId>
+						<category_list>CSPS [N-P]</category_list>
+						<name>Pontièba</name>
+					</item>
+					<item>
+						<itextId>csps_list-15</itextId>
+						<category_list>CSPS [N-P]</category_list>
+						<name>Pouleba</name>
+					</item>
+					<item>
+						<itextId>csps_list-16</itextId>
+						<category_list>CSPS [S-Z]</category_list>
+						<name>Salétéon</name>
+					</item>
+					<item>
+						<itextId>csps_list-17</itextId>
+						<category_list>CSPS [S-Z]</category_list>
+						<name>Ténoulé</name>
+					</item>
+					<item>
+						<itextId>csps_list-18</itextId>
+						<category_list>CSPS [S-Z]</category_list>
+						<name>Tovor</name>
+					</item>
+					<item>
+						<itextId>csps_list-19</itextId>
+						<category_list>CSPS [S-Z]</category_list>
+						<name>Yabogane</name>
+					</item>
+					<item>
+						<itextId>csps_list-20</itextId>
+						<category_list>CSPS [S-Z]</category_list>
+						<name>Zambo</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="grappe_list">
+				<root>
+					<item>
+						<itextId>grappe_list-0</itextId>
+						<csps_list>Bisserké</csps_list>
+						<name>Bisserké</name>
+					</item>
+					<item>
+						<itextId>grappe_list-1</itextId>
+						<csps_list>Bontioli</csps_list>
+						<name>Bobragogo</name>
+					</item>
+					<item>
+						<itextId>grappe_list-2</itextId>
+						<csps_list>Bontioli</csps_list>
+						<name>Bontioli Camatéon</name>
+					</item>
+					<item>
+						<itextId>grappe_list-3</itextId>
+						<csps_list>Gourpouo</csps_list>
+						<name>Boulmontéon</name>
+					</item>
+					<item>
+						<itextId>grappe_list-4</itextId>
+						<csps_list>Bouni</csps_list>
+						<name>Bouni</name>
+					</item>
+					<item>
+						<itextId>grappe_list-5</itextId>
+						<csps_list>Dahorè</csps_list>
+						<name>Dahorè Kayiré</name>
+					</item>
+					<item>
+						<itextId>grappe_list-6</itextId>
+						<csps_list>Bisserké</csps_list>
+						<name>Dianvour</name>
+					</item>
+					<item>
+						<itextId>grappe_list-7</itextId>
+						<csps_list>Badoné</csps_list>
+						<name>Dioumon</name>
+					</item>
+					<item>
+						<itextId>grappe_list-8</itextId>
+						<csps_list>Yabogane</csps_list>
+						<name>Fitingué Dagara</name>
+					</item>
+					<item>
+						<itextId>grappe_list-9</itextId>
+						<csps_list>Kokolibou</csps_list>
+						<name>Kokolibou</name>
+					</item>
+					<item>
+						<itextId>grappe_list-10</itextId>
+						<csps_list>Bouni</csps_list>
+						<name>Korégnon</name>
+					</item>
+					<item>
+						<itextId>grappe_list-11</itextId>
+						<csps_list>Zambo</csps_list>
+						<name>Korompéri</name>
+					</item>
+					<item>
+						<itextId>grappe_list-12</itextId>
+						<csps_list>Kpopéri</csps_list>
+						<name>Kpopéri</name>
+					</item>
+					<item>
+						<itextId>grappe_list-13</itextId>
+						<csps_list>Zambo</csps_list>
+						<name>Malédobor</name>
+					</item>
+					<item>
+						<itextId>grappe_list-14</itextId>
+						<csps_list>Dahorè</csps_list>
+						<name>Moulourou</name>
+					</item>
+					<item>
+						<itextId>grappe_list-15</itextId>
+						<csps_list>Ténoulé</csps_list>
+						<name>Nablegane</name>
+					</item>
+					<item>
+						<itextId>grappe_list-16</itextId>
+						<csps_list>Nakar -G</csps_list>
+						<name>Nakar</name>
+					</item>
+					<item>
+						<itextId>grappe_list-17</itextId>
+						<csps_list>Namarè</csps_list>
+						<name>Napalè</name>
+					</item>
+					<item>
+						<itextId>grappe_list-18</itextId>
+						<csps_list>Nakar -G</csps_list>
+						<name>Naro</name>
+					</item>
+					<item>
+						<itextId>grappe_list-19</itextId>
+						<csps_list>Orpoune</csps_list>
+						<name>Orpoune Centre</name>
+					</item>
+					<item>
+						<itextId>grappe_list-20</itextId>
+						<csps_list>Pontièba</csps_list>
+						<name>Pontièba (Dakoulgane)</name>
+					</item>
+					<item>
+						<itextId>grappe_list-21</itextId>
+						<csps_list>Salétéon</csps_list>
+						<name>Salétéon</name>
+					</item>
+					<item>
+						<itextId>grappe_list-22</itextId>
+						<csps_list>Djikologo</csps_list>
+						<name>Tampla V1</name>
+					</item>
+					<item>
+						<itextId>grappe_list-23</itextId>
+						<csps_list>Kpopéri</csps_list>
+						<name>Tansien</name>
+					</item>
+					<item>
+						<itextId>grappe_list-24</itextId>
+						<csps_list>Ténoulé</csps_list>
+						<name>Ténoulé</name>
+					</item>
+					<item>
+						<itextId>grappe_list-25</itextId>
+						<csps_list>Tovor</csps_list>
+						<name>Tovor</name>
+					</item>
+					<item>
+						<itextId>grappe_list-26</itextId>
+						<csps_list>Guéguéré</csps_list>
+						<name>Vourégane</name>
+					</item>
+					<item>
+						<itextId>grappe_list-27</itextId>
+						<csps_list>Kolkol</csps_list>
+						<name>Walala</name>
+					</item>
+					<item>
+						<itextId>grappe_list-28</itextId>
+						<csps_list>Pouleba</csps_list>
+						<name>Zintéo</name>
+					</item>
+					<item>
+						<itextId>grappe_list-29</itextId>
+						<csps_list>Zambo</csps_list>
+						<name>Zouolo</name>
+					</item>
+				</root>
+			</instance>
+			<bind nodeset="/data/code_equipe" required="true()" type="string"/>
+			<bind nodeset="/data/district" required="true()" type="string" db_add_col_5="."/>
+			<bind nodeset="/data/cat" required="true()" type="string" />
+			<bind nodeset="/data/csps" relevant=" /data/cat  != 'Autres'" required="true()" type="string" db_add_col_5="/data/district" db_add_col_6="."/>
+			<bind nodeset="/data/grappe" relevant=" /data/cat  != 'Autres'" required="true()" type="string" db_add_col_6="/data/csps" db_add_col_7="."/>
+			<bind nodeset="/data/csps_autre" relevant=" /data/cat  = 'Autres'" required="true()" type="string" db_add_col_6="."/>
+			<bind nodeset="/data/grappe_autre" relevant=" /data/cat  = 'Autres'" required="true()" type="string" db_add_col_7="."/>
+			<bind constraint=". &gt;= 1 and . &lt;= 30" jr:constraintMsg="jr:itext('/data/num_grappe:jr:constraintMsg')" nodeset="/data/num_grappe" db_add_col_8="." required="true()" type="int"/>
+			<bind nodeset="/data/gps" required="true()" type="geopoint"/>
+			<bind nodeset="/data/notes" type="string"/>
+			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
+			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
+			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+		</model>
+	</h:head>
+	<h:body>
+		<select1 ref="/data/code_equipe">
+			<label ref="jr:itext('/data/code_equipe:label')"/>
+			<hint ref="jr:itext('/data/code_equipe:hint')"/>
+			<item>
+				<label ref="jr:itext('/data/code_equipe/1:label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/code_equipe/2:label')"/>
+				<value>2</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/code_equipe/3:label')"/>
+				<value>3</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/code_equipe/4:label')"/>
+				<value>4</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/code_equipe/5:label')"/>
+				<value>5</value>
+			</item>
+		</select1>
+		<select1 ref="/data/district">
+			<label ref="jr:itext('/data/district:label')"/>
+			<hint ref="jr:itext('/data/district:hint')"/>
+			<item>
+				<label ref="jr:itext('/data/district/DANO:label')"/>
+				<value>DANO</value>
+			</item>
+		</select1>
+		<select1 ref="/data/cat">
+			<label ref="jr:itext('/data/cat:label')"/>
+			<hint ref="jr:itext('/data/cat:hint')"/>
+			<itemset nodeset="instance('category_list')/root/item[district_list =  /data/district ]">
+				<value ref="name"/>
+				<label ref="jr:itext(itextId)"/>
+			</itemset>
+		</select1>
+		<select1 ref="/data/csps">
+			<label ref="jr:itext('/data/csps:label')"/>
+			<hint ref="jr:itext('/data/csps:hint')"/>
+			<itemset nodeset="instance('csps_list')/root/item[category_list =  /data/cat ]">
+				<value ref="name"/>
+				<label ref="jr:itext(itextId)"/>
+			</itemset>
+		</select1>
+		<select1 ref="/data/grappe">
+			<label ref="jr:itext('/data/grappe:label')"/>
+			<hint ref="jr:itext('/data/grappe:hint')"/>
+			<itemset nodeset="instance('grappe_list')/root/item[csps_list =  /data/csps ]">
+				<value ref="name"/>
+				<label ref="jr:itext(itextId)"/>
+			</itemset>
+		</select1>
+		<input ref="/data/csps_autre">
+			<label ref="jr:itext('/data/csps_autre:label')"/>
+		</input>
+		<input ref="/data/grappe_autre">
+			<label ref="jr:itext('/data/grappe_autre:label')"/>
+		</input>
+		<input ref="/data/num_grappe">
+			<label ref="jr:itext('/data/num_grappe:label')"/>
+		</input>
+		<input ref="/data/gps">
+			<label ref="jr:itext('/data/gps:label')"/>
+			<hint ref="jr:itext('/data/gps:hint')"/>
+		</input>
+		<input ref="/data/notes">
+			<label ref="jr:itext('/data/notes:label')"/>
+		</input>
+	</h:body>
+</h:html>
