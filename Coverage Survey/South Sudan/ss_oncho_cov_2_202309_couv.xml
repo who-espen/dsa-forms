@@ -7,7 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) BFA Cov ONCHO - 2.Formulaire Couverture</h:title>
+    <h:title>(Sept 2023) SSD Cov ONCHO - 2.Formulaire Couverture</h:title>
     <model>
 
       <instance>
@@ -94,11 +94,8 @@
           <text id="/data/p_know_mda_happen/Unaware.of.MDA:label">
             <value>7=Unaware of MDA</value>
           </text>
-          <text id="/data/p_education_level/Don't know:label">
+          <text id="/data/p_education_level/Do not know:label">
             <value>Don't know</value>
-          </text>
-          <text id="/data/p_climbing_step/Yes-A lot:label">
-            <value>3=Yes-A lot</value>
           </text>
           <text id="/data/p_hearing_aid/Yes-A lot:label">
             <value>3=Yes-A lot</value>
@@ -138,6 +135,9 @@
           </text>
           <text id="/data/p_swallow_ivm_in_front:label">
             <value>16.Did you swallow the MECTIZAN in front of the person who gave them to you?</value>
+          </text>
+          <text id="/data/p_climbing_step/Yes-A lot:label">
+            <value>3=Yes-A lot</value>
           </text>
           <text id="/data/p_heard_trachoma/Do not know:label">
             <value>Don't know</value>
@@ -798,7 +798,7 @@
       <bind nodeset="/data/p_payam" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_county"/>
       <bind nodeset="/data/p_boma" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_payam"/>
       <bind nodeset="/data/p_village" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_boma"/>
-      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/p_village_id:jr:constraintMsg')" nodeset="/data/p_village_id" required="true()" type="int" db_get="col_5" db_filter_by_col_4="/data/p_village"/>
+      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/p_village_id:jr:constraintMsg')" nodeset="/data/p_village_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_village"/>
       <bind constraint="regex(., '^(0*[1-9][0-9]{0,2}|999)$')" jr:constraintMsg="jr:itext('/data/p_hh_id:jr:constraintMsg')" nodeset="/data/p_hh_id" required="true()" type="string"/>
       <bind nodeset="/data/p_introduction_text" readonly="true()" required="false()" type="string"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
@@ -988,8 +988,8 @@
         <value>Tertiary</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_education_level/Don't know:label')"/>
-        <value>Don't know</value>
+        <label ref="jr:itext('/data/p_education_level/Do not know:label')"/>
+        <value>Do not know</value>
       </item>
       <item>
         <label ref="jr:itext('/data/p_education_level/Not applicable:label')"/>
