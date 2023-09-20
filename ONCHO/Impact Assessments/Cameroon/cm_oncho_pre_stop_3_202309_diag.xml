@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) ONCHO - 3.Formulaire Résutat &amp; Morbidité V1</h:title>
+    <h:title>(Sept 2023) ONCHO - 3.Formulaire Résutat &amp; Morbidité V1.2</h:title>
     <model>
 
       <instance>
-        <data id="cm_oncho_pre_stop_3_202309_diag_v1_1">
+        <data id="cm_oncho_pre_stop_3_202309_diag_v1_2">
           <d_recorder_id/>
           <d_region/>
           <d_district/>
@@ -22,13 +22,13 @@
           <d_num_ordre/>
           <d_num_final/>
           <generated_note_name_11/>
-          <d_tdr_ov16/>
           <d_dbs/>
           <generated_note_name_14/>
           <d_nodule/>
           <d_nombre_nodules/>
           <d_localisation_nodules/>
           <d_gale/>
+          <d_prurit/>
           <d_autre_morbidite/>
           <d_notes/>
           <d_start/>
@@ -199,6 +199,9 @@
           </text>
           <text id="/data/d_village_id/157:label">
             <value>157</value>
+          </text>
+          <text id="/data/d_prurit/Non:label">
+            <value>Non</value>
           </text>
           <text id="/data/d_village/NYAMANGA:label">
             <value>NYAMANGA</value>
@@ -715,9 +718,6 @@
           </text>
           <text id="/data/d_village/KUMBE-BAL:label">
             <value>KUMBE-BAL</value>
-          </text>
-          <text id="/data/d_tdr_ov16/Négatif:label">
-            <value>Négatif</value>
           </text>
           <text id="/data/d_village_id/410:label">
             <value>410</value>
@@ -1748,6 +1748,9 @@
           <text id="/data/d_village_id/103:label">
             <value>103</value>
           </text>
+          <text id="/data/d_prurit:label">
+            <value>Prurit</value>
+          </text>
           <text id="/data/d_village/MANENGOLE:label">
             <value>MANENGOLE</value>
           </text>
@@ -2747,9 +2750,6 @@
           <text id="/data/d_village_id/305:label">
             <value>305</value>
           </text>
-          <text id="/data/d_tdr_ov16/Positif:label">
-            <value>Positif</value>
-          </text>
           <text id="/data/d_village/SASSE:label">
             <value>SASSE</value>
           </text>
@@ -3184,9 +3184,6 @@
           </text>
           <text id="/data/d_village_id/231:label">
             <value>231</value>
-          </text>
-          <text id="static_instance-village_id-140">
-            <value>241</value>
           </text>
           <text id="/data/d_gale/Non:label">
             <value>Non</value>
@@ -3641,9 +3638,6 @@
           <text id="/data/d_village_id/362:label">
             <value>362</value>
           </text>
-          <text id="/data/d_tdr_ov16:label">
-            <value>TDR Ov16</value>
-          </text>
           <text id="/data/d_village_id/271:label">
             <value>271</value>
           </text>
@@ -3950,8 +3944,8 @@
           <text id="static_instance-village_id-141">
             <value>242</value>
           </text>
-          <text id="/data/d_tdr_ov16/Invalide:label">
-            <value>Invalide</value>
+          <text id="static_instance-village_id-140">
+            <value>241</value>
           </text>
           <text id="static_instance-village_id-143">
             <value>244</value>
@@ -4436,6 +4430,9 @@
           <text id="/data/d_village/EYANG NCHANG:label">
             <value>EYANG NCHANG</value>
           </text>
+          <text id="/data/d_prurit/Oui:label">
+            <value>Oui</value>
+          </text>
           <text id="/data/d_village_id/160:label">
             <value>160</value>
           </text>
@@ -4774,6 +4771,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="village_id">
         <root>
           <item>
@@ -8681,13 +8679,13 @@
       <bind nodeset="/data/d_num_ordre" required="true()" type="string"/>
       <bind nodeset="/data/d_num_final" required="true()" type="string"/>
       <bind nodeset="/data/generated_note_name_11" readonly="true()" type="string"/>
-      <bind nodeset="/data/d_tdr_ov16" required="true()" type="select1"/>
       <bind nodeset="/data/d_dbs" required="true()" type="select1"/>
       <bind nodeset="/data/generated_note_name_14" readonly="true()" type="string"/>
       <bind nodeset="/data/d_nodule" required="true()" type="select1"/>
       <bind nodeset="/data/d_nombre_nodules" required="true()" type="int"/>
       <bind nodeset="/data/d_localisation_nodules" required="true()" type="string"/>
       <bind nodeset="/data/d_gale" required="true()" type="select1"/>
+      <bind nodeset="/data/d_prurit" required="true()" type="select1"/>
       <bind nodeset="/data/d_autre_morbidite" type="string"/>
       <bind nodeset="/data/d_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
@@ -8766,21 +8764,6 @@
     <input ref="/data/generated_note_name_11">
       <label ref="jr:itext('/data/generated_note_name_11:label')"/>
     </input>
-    <select1 ref="/data/d_tdr_ov16">
-      <label ref="jr:itext('/data/d_tdr_ov16:label')"/>
-      <item>
-        <label ref="jr:itext('/data/d_tdr_ov16/Positif:label')"/>
-        <value>Positif</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_tdr_ov16/Négatif:label')"/>
-        <value>Négatif</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/d_tdr_ov16/Invalide:label')"/>
-        <value>Invalide</value>
-      </item>
-    </select1>
     <select1 ref="/data/d_dbs">
       <label ref="jr:itext('/data/d_dbs:label')"/>
       <item>
@@ -8820,6 +8803,17 @@
       </item>
       <item>
         <label ref="jr:itext('/data/d_gale/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_prurit">
+      <label ref="jr:itext('/data/d_prurit:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_prurit/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_prurit/Non:label')"/>
         <value>Non</value>
       </item>
     </select1>
