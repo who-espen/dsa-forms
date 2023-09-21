@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) SSD Cov ONCHO - 2.Formulaire Couverture</h:title>
+    <h:title>(Sept 2023) SSD Cov ONCHO - 2.Formulaire Couverture V2</h:title>
     <model>
 
       <instance>
-        <data id="bf_oncho_cov_2_202309_couverture">
+        <data id="bf_oncho_cov_2_202309_couverture_v2">
           <p_recorder_id/>
           <p_county/>
           <p_payam/>
@@ -19,9 +19,10 @@
           <p_village/>
           <p_village_id/>
           <p_hh_id/>
+          <p_endelicity/>
           <p_introduction_text/>
           <p_consent/>
-          <generated_note_name_11/>
+          <generated_note_name_12/>
           <p_index/>
           <p_code_id/>
           <p_age_yrs/>
@@ -32,7 +33,6 @@
           <p_education_level/>
           <p_how_long_lived/>
           <p_pregnant_breastfeeding/>
-          <p_responding/>
           <generated_note_name_23/>
           <p_heard_oncho/>
           <p_were_in_village/>
@@ -148,14 +148,14 @@
           <text id="/data/p_heard_lf:label">
             <value>20. Have you ever heard of lymphatic filariasis disease?</value>
           </text>
+          <text id="/data/p_endelicity/Lymphatic.Filariasis:label">
+            <value>Lymphatic Filariasis</value>
+          </text>
           <text id="/data/p_were_in_village:label">
             <value>12. Were you in the village between Time A &amp; Time B?</value>
           </text>
           <text id="/data/p_village_id:label">
             <value>Village ID</value>
-          </text>
-          <text id="/data/p_hearing_aid:label">
-            <value>Hearing, even if using a hearing aid?</value>
           </text>
           <text id="/data/p_reason_not_received_dk/ill:label">
             <value>5 = ill</value>
@@ -196,8 +196,8 @@
           <text id="/data/p_recorder_id:hint">
             <value>Two digit code assigned to you</value>
           </text>
-          <text id="/data/p_why_swallow_ivm/NA:label">
-            <value>5=NA</value>
+          <text id="/data/p_why_swallow_ivm/Pregnant:label">
+            <value>2=Pregnant</value>
           </text>
           <text id="/data/p_pregnant_breastfeeding/Pregnant:label">
             <value>1= Pregnant</value>
@@ -206,7 +206,7 @@
             <value>97=Other (specify)</value>
           </text>
           <text id="/data/p_why_swallow_ivm:label">
-            <value>17. Why did you swallow the MECTIZAN?</value>
+            <value>17. Why didn't you swallow the MECTIZAN?</value>
           </text>
           <text id="/data/p_reason_not_received_alb/underage:label">
             <value>6 = underage</value>
@@ -220,13 +220,13 @@
           <text id="/data/p_seeing_glass/Yes-A lot:label">
             <value>3=Yes-A lot</value>
           </text>
-          <text id="/data/p_self_washing/Unable:label">
-            <value>4=Unable</value>
-          </text>
           <text id="/data/p_know_mda_happen_trachoma/Neighbor/friend:label">
             <value>2=Neighbor/friend</value>
           </text>
           <text id="/data/p_know_mda_happen/Community.leader:label">
+            <value>6=Community leader</value>
+          </text>
+          <text id="/data/p_know_mda_happen_trachoma/Community.leader:label">
             <value>6=Community leader</value>
           </text>
           <text id="/data/p_side_effect_details/mild (did not interfere with daily activities):label">
@@ -244,6 +244,9 @@
           <text id="/data/p_reason_not_received_ivm/Other:label">
             <value>7 = other (specify)</value>
           </text>
+          <text id="/data/p_climbing_step/Do not know:label">
+            <value>5=Don't know</value>
+          </text>
           <text id="/data/p_remembering/Yes-Some:label">
             <value>2=Yes-Some</value>
           </text>
@@ -258,9 +261,6 @@
           </text>
           <text id="/data/p_swallow_dk/Yes:label">
             <value>Yes</value>
-          </text>
-          <text id="/data/p_swallow_alb/NA:label">
-            <value>NA</value>
           </text>
           <text id="/data/p_relationship_hhh/Spouse:label">
             <value>2=Spouse</value>
@@ -307,20 +307,17 @@
           <text id="/data/p_know_mda_happen_trachoma/Do.not.know:label">
             <value>99=Don't know</value>
           </text>
-          <text id="/data/p_know_mda_happen/Other:label">
-            <value>97=Other (Specify)</value>
+          <text id="/data/p_why_swallow_ivm/Breasthfeeding:label">
+            <value>3=Breathfeeding</value>
           </text>
-          <text id="/data/p_education_level:label">
-            <value>7. Level of education attained</value>
+          <text id="/data/p_endelicity:label">
+            <value>Select the endemicity of the area</value>
           </text>
           <text id="/data/p_hh_id:jr:constraintMsg">
             <value>Must be three digit code. Example 001</value>
           </text>
           <text id="/data/p_swallow_ivm/No:label">
             <value>No</value>
-          </text>
-          <text id="/data/p_why_swallow_ivm/Afraid of getting the disease:label">
-            <value>2=Afraid of getting the disease</value>
           </text>
           <text id="/data/p_received_dk:label">
             <value>X2. Did someone give you Zithromax (ZTH) and tetracycline eye ointment (TEO) between Time A &amp; Time B?</value>
@@ -334,8 +331,8 @@
           <text id="/data/p_were_in_village_trachoma:label">
             <value>X1. Were you in the village between Time A &amp; Time B?</value>
           </text>
-          <text id="/data/p_why_swallow_ivm/To be healthy:label">
-            <value>1=To be healthy</value>
+          <text id="/data/p_hearing_aid:label">
+            <value>Hearing, even if using a hearing aid?</value>
           </text>
           <text id="/data/p_heard_oncho:hint">
             <value>Refer the disease using the local languages they are known for ease of understanding of the respondent</value>
@@ -382,9 +379,6 @@
           <text id="/data/p_reason_not_received_dk/breastfeeding:label">
             <value>4 = breastfeeding</value>
           </text>
-          <text id="/data/generated_note_name_11:label">
-            <value>DEMOGRAPHIC INFORMATION</value>
-          </text>
           <text id="/data/p_heard_oncho:label">
             <value>11. Have you ever heard of Onchocerciasis disease?</value>
           </text>
@@ -402,6 +396,9 @@
           </text>
           <text id="/data/p_were_in_village_trachoma/No:label">
             <value>No</value>
+          </text>
+          <text id="/data/generated_note_name_12:label">
+            <value>DEMOGRAPHIC INFORMATION</value>
           </text>
           <text id="/data/p_heard_lf/No:label">
             <value>No</value>
@@ -436,11 +433,11 @@
           <text id="/data/p_seeing_glass/No:label">
             <value>1=No</value>
           </text>
-          <text id="/data/p_why_swallow_ivm/Someone told me to:label">
-            <value>3=Someone told me to</value>
+          <text id="/data/p_self_washing/Unable:label">
+            <value>4=Unable</value>
           </text>
-          <text id="/data/p_swallow_ivm:hint">
-            <value>Show the tablet to the respondent</value>
+          <text id="/data/p_reason_not_received_ivm/medicines got finished:label">
+            <value>3 = medicines got finished</value>
           </text>
           <text id="/data/p_swallow_alb_in_front/NA:label">
             <value>NA</value>
@@ -493,6 +490,9 @@
           <text id="/data/p_reason_not_received_dk/Absent:label">
             <value>1=Absent</value>
           </text>
+          <text id="/data/p_were_in_village:hint">
+            <value>Correct month will be provided and please enumerator refer to the date provided.</value>
+          </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
             <value>Please enter a valide age</value>
           </text>
@@ -511,17 +511,14 @@
           <text id="/data/p_communicating/Yes-A lot:label">
             <value>3=Yes-A lot</value>
           </text>
-          <text id="/data/p_climbing_step/Do not know:label">
-            <value>5=Don't know</value>
+          <text id="/data/p_why_swallow_ivm/Refused:label">
+            <value>4=Refused</value>
           </text>
           <text id="/data/p_heard_lf/Yes:label">
             <value>Yes</value>
           </text>
           <text id="/data/p_reason_not_received_alb/medicines got finished:label">
             <value>3 = medicines got finished</value>
-          </text>
-          <text id="/data/p_responding:label">
-            <value>10. Person responding?</value>
           </text>
           <text id="/data/p_swallow_alb:label">
             <value>23. Did you swallow the Albendazole?</value>
@@ -541,6 +538,9 @@
           <text id="/data/p_reason_not_received_alb/CDD did not come to my house.:label">
             <value>2 = CDD did not come to my house.</value>
           </text>
+          <text id="/data/p_endelicity/Trachoma:label">
+            <value>Trachoma</value>
+          </text>
           <text id="/data/p_seeing_glass/Do not know:label">
             <value>5=Don't know</value>
           </text>
@@ -552,6 +552,9 @@
           </text>
           <text id="/data/p_heard_trachoma:hint">
             <value>Refer the disease using the local languages they are known for ease of understanding of the respondent</value>
+          </text>
+          <text id="/data/p_endelicity/Onchocerciasis:label">
+            <value>Onchocerciasis</value>
           </text>
           <text id="/data/p_know_mda_happen_trachoma/Family.member:label">
             <value>1=Family member</value>
@@ -580,11 +583,8 @@
           <text id="/data/p_self_washing/Do not know:label">
             <value>5=Don't know</value>
           </text>
-          <text id="/data/p_why_swallow_ivm/Everyone else is taking it:label">
-            <value>4=Everyone else is taking it</value>
-          </text>
-          <text id="/data/p_know_mda_happen/Neighbor/friend:label">
-            <value>2=Neighbor/friend</value>
+          <text id="/data/p_swallow_alb/NA:label">
+            <value>NA</value>
           </text>
           <text id="/data/p_received_alb/Do not know:label">
             <value>Don't know</value>
@@ -592,8 +592,8 @@
           <text id="/data/p_know_mda_happen_trachoma/Other:label">
             <value>97=Other (Specify)</value>
           </text>
-          <text id="/data/p_responding/Themselves:label">
-            <value>1=Themselves</value>
+          <text id="/data/p_know_mda_happen/Neighbor/friend:label">
+            <value>2=Neighbor/friend</value>
           </text>
           <text id="/data/p_swallow_ivm/Yes:label">
             <value>Yes</value>
@@ -618,9 +618,6 @@
           </text>
           <text id="/data/p_swallow_dk/NA:label">
             <value>NA</value>
-          </text>
-          <text id="/data/p_responding/Someone on behalf as underage:label">
-            <value>3=Someone on behalf as underage</value>
           </text>
           <text id="/data/p_remembering/Yes-A lot:label">
             <value>3=Yes-A lot</value>
@@ -682,6 +679,9 @@
           <text id="/data/p_improve_mda_communication_trachoma:label">
             <value>X8. Do you have any suggestions to improve the communication around the MDA?</value>
           </text>
+          <text id="/data/p_why_swallow_ivm/Sick:label">
+            <value>1=Sick</value>
+          </text>
           <text id="/data/p_swallow_alb_in_front/Yes:label">
             <value>Yes</value>
           </text>
@@ -706,8 +706,8 @@
           <text id="/data/p_relationship_hhh/Child:label">
             <value>3=Child</value>
           </text>
-          <text id="/data/p_know_mda_happen_trachoma/Community.leader:label">
-            <value>6=Community leader</value>
+          <text id="/data/p_know_mda_happen/Other:label">
+            <value>97=Other (Specify)</value>
           </text>
           <text id="/data/p_consent:label">
             <value>Would you like to take part in our survey?</value>
@@ -721,6 +721,9 @@
           <text id="/data/p_reason_not_received_alb/Absent:label">
             <value>1=Absent</value>
           </text>
+          <text id="/data/p_education_level:label">
+            <value>7. Level of education attained</value>
+          </text>
           <text id="/data/p_remembering/No:label">
             <value>1=No</value>
           </text>
@@ -733,17 +736,14 @@
           <text id="/data/p_were_in_village_trachoma/Yes:label">
             <value>Yes</value>
           </text>
-          <text id="/data/p_reason_not_received_ivm/medicines got finished:label">
-            <value>3 = medicines got finished</value>
+          <text id="/data/p_swallow_ivm:hint">
+            <value>Show the tablet to the respondent</value>
           </text>
           <text id="/data/p_education_level/Not applicable:label">
             <value>Not applicable</value>
           </text>
           <text id="/data/p_boma:label">
             <value>Boma</value>
-          </text>
-          <text id="/data/p_responding/Someone on behalf as absent:label">
-            <value>2=Someone on behalf as absent</value>
           </text>
           <text id="/data/p_pregnant_breastfeeding/None of the above:label">
             <value>3= None of the above</value>
@@ -800,9 +800,10 @@
       <bind nodeset="/data/p_village" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_boma"/>
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/p_village_id:jr:constraintMsg')" nodeset="/data/p_village_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_village"/>
       <bind constraint="regex(., '^(0*[1-9][0-9]{0,2}|999)$')" jr:constraintMsg="jr:itext('/data/p_hh_id:jr:constraintMsg')" nodeset="/data/p_hh_id" required="true()" type="string"/>
+      <bind nodeset="/data/p_endelicity" required="true()" type="select"/>
       <bind nodeset="/data/p_introduction_text" readonly="true()" required="false()" type="string"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
-      <bind nodeset="/data/generated_note_name_11" readonly="true()" relevant=" /data/p_consent  = 'Yes'" type="string"/>
+      <bind nodeset="/data/generated_note_name_12" readonly="true()" relevant=" /data/p_consent  = 'Yes'" type="string"/>
       <bind nodeset="/data/p_index" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind calculate="concat( /data/p_recorder_id , '_',  /data/p_village_id , '_',  /data/p_hh_id , '_',  /data/p_index )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind constraint=". &gt;= 0 and . &lt; 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
@@ -813,47 +814,46 @@
       <bind nodeset="/data/p_education_level" relevant=" /data/p_consent  = 'Yes' and  /data/p_age_yrs &gt;= 5" required="true()" type="select1"/>
       <bind nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
       <bind nodeset="/data/p_pregnant_breastfeeding" relevant=" /data/p_consent  = 'Yes' and  /data/p_age_yrs &gt;= 15 and  /data/p_sex  = 'F'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_responding" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
       <bind nodeset="/data/generated_note_name_23" readonly="true()" relevant=" /data/p_consent  = 'Yes'" type="string"/>
-      <bind nodeset="/data/p_heard_oncho" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
+      <bind nodeset="/data/p_heard_oncho" relevant=" /data/p_consent  = 'Yes' and selected( /data/p_endelicity , 'Onchocerciasis')" required="true()" type="select1"/>
       <bind nodeset="/data/p_were_in_village" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_received_ivm" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_reason_not_received_ivm" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_received_ivm  = 'No'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_reason_not_received_ivm_other" relevant=" /data/p_reason_not_received_ivm  = 'Other'" required="true()" type="string"/>
-      <bind nodeset="/data/p_swallow_ivm" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_swallow_ivm_in_front" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_swallow_ivm  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_why_swallow_ivm" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_swallow_ivm  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_why_swallow_ivm_other" relevant=" /data/p_why_swallow_ivm  = 'Other'" required="true()" type="string"/>
-      <bind nodeset="/data/p_side_efftect" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_swallow_ivm  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_side_effect_details" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes'" required="true()" type="select1"/>
+      <bind nodeset="/data/p_received_ivm" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and selected( /data/p_endelicity , 'Onchocerciasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_reason_not_received_ivm" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_received_ivm  = 'No' and selected( /data/p_endelicity , 'Onchocerciasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_reason_not_received_ivm_other" relevant=" /data/p_reason_not_received_ivm  = 'Other' and selected( /data/p_endelicity , 'Onchocerciasis')" required="true()" type="string"/>
+      <bind nodeset="/data/p_swallow_ivm" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and selected( /data/p_endelicity , 'Onchocerciasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_swallow_ivm_in_front" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_swallow_ivm  = 'Yes' and selected( /data/p_endelicity , 'Onchocerciasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_why_swallow_ivm" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_swallow_ivm  = 'No' and selected( /data/p_endelicity , 'Onchocerciasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_why_swallow_ivm_other" relevant=" /data/p_why_swallow_ivm  = 'Other' and selected( /data/p_endelicity , 'Onchocerciasis')" required="true()" type="string"/>
+      <bind nodeset="/data/p_side_efftect" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_swallow_ivm  = 'Yes' and selected( /data/p_endelicity , 'Onchocerciasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_side_effect_details" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_swallow_ivm  = 'Yes' and selected( /data/p_endelicity , 'Onchocerciasis')" required="true()" type="select1"/>
       <bind nodeset="/data/generated_note_name_35" readonly="true()" relevant=" /data/p_consent  = 'Yes'" type="string"/>
-      <bind nodeset="/data/p_heard_lf" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_received_alb" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_reason_not_received_alb" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_received_alb  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_reason_not_received_alb_other" relevant=" /data/p_reason_not_received_alb  = 'Other'" required="true()" type="string"/>
-      <bind nodeset="/data/p_swallow_alb" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_received_alb  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_swallow_alb_in_front" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_received_alb  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_know_mda_happen" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes'" required="true()" type="select"/>
-      <bind nodeset="/data/p_improve_mda" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/p_improve_mda_communication" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/p_heard_lf" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and selected( /data/p_endelicity , 'Lymphatic.Filariasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_received_alb" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and selected( /data/p_endelicity , 'Lymphatic.Filariasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_reason_not_received_alb" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_received_alb  = 'Yes' and selected( /data/p_endelicity , 'Lymphatic.Filariasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_reason_not_received_alb_other" relevant=" /data/p_reason_not_received_alb  = 'Other' and selected( /data/p_endelicity , 'Lymphatic.Filariasis')" required="true()" type="string"/>
+      <bind nodeset="/data/p_swallow_alb" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_received_alb  = 'Yes' and selected( /data/p_endelicity , 'Lymphatic.Filariasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_swallow_alb_in_front" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and  /data/p_received_alb  = 'Yes' and selected( /data/p_endelicity , 'Lymphatic.Filariasis')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_know_mda_happen" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and selected( /data/p_endelicity , 'Lymphatic.Filariasis')" required="true()" type="select"/>
+      <bind nodeset="/data/p_improve_mda" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village  = 'Yes' and selected( /data/p_endelicity , 'Lymphatic.Filariasis')" required="true()" type="string"/>
+      <bind nodeset="/data/p_improve_mda_communication" relevant=" /data/p_consent  = 'Yes' and selected( /data/p_endelicity , 'Lymphatic.Filariasis')" required="true()" type="string"/>
       <bind nodeset="/data/generated_note_name_45" readonly="true()" relevant=" /data/p_consent  = 'Yes'" type="string"/>
-      <bind nodeset="/data/p_heard_trachoma" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_were_in_village_trachoma" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_received_dk" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_reason_not_received_dk" relevant=" /data/p_consent  = 'Yes' and  /data/p_received_dk  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_reason_not_received_dk_other" relevant=" /data/p_reason_not_received_dk  = 'Other'" required="true()" type="string"/>
-      <bind nodeset="/data/p_swallow_dk" relevant=" /data/p_consent  = 'Yes' and  /data/p_received_dk  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_swallow_dk_in_front" relevant=" /data/p_consent  = 'Yes' and  /data/p_received_dk  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_know_mda_happen_trachoma" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select"/>
-      <bind nodeset="/data/p_improve_mda_trachoma" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/p_improve_mda_communication_trachoma" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/p_heard_trachoma" relevant=" /data/p_consent  = 'Yes' and selected( /data/p_endelicity , 'Trachoma')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_were_in_village_trachoma" relevant=" /data/p_consent  = 'Yes' and selected( /data/p_endelicity , 'Trachoma')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_received_dk" relevant=" /data/p_consent  = 'Yes' and  /data/p_were_in_village_trachoma  = 'Yes' and selected( /data/p_endelicity , 'Trachoma')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_reason_not_received_dk" relevant=" /data/p_consent  = 'Yes' and  /data/p_received_dk  = 'Yes' and selected( /data/p_endelicity , 'Trachoma')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_reason_not_received_dk_other" relevant=" /data/p_reason_not_received_dk  = 'Other' and selected( /data/p_endelicity , 'Trachoma')" required="true()" type="string"/>
+      <bind nodeset="/data/p_swallow_dk" relevant=" /data/p_consent  = 'Yes' and  /data/p_received_dk  = 'Yes' and selected( /data/p_endelicity , 'Trachoma')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_swallow_dk_in_front" relevant=" /data/p_consent  = 'Yes' and  /data/p_received_dk  = 'Yes' and selected( /data/p_endelicity , 'Trachoma')" required="true()" type="select1"/>
+      <bind nodeset="/data/p_know_mda_happen_trachoma" relevant=" /data/p_consent  = 'Yes' and selected( /data/p_endelicity , 'Trachoma')" required="true()" type="select"/>
+      <bind nodeset="/data/p_improve_mda_trachoma" relevant=" /data/p_consent  = 'Yes' and selected( /data/p_endelicity , 'Trachoma')" required="true()" type="string"/>
+      <bind nodeset="/data/p_improve_mda_communication_trachoma" relevant=" /data/p_consent  = 'Yes' and selected( /data/p_endelicity , 'Trachoma')" required="true()" type="string"/>
       <bind nodeset="/data/generated_note_name_56" readonly="true()" relevant=" /data/p_consent  = 'Yes'" type="string"/>
-      <bind nodeset="/data/p_seeing_glass" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_hearing_aid" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_climbing_step" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_remembering" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_self_washing" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_communicating" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
+      <bind nodeset="/data/p_seeing_glass" relevant=" /data/p_consent  = 'Yes' and  /data/p_age_yrs &gt;= 5" required="true()" type="select1"/>
+      <bind nodeset="/data/p_hearing_aid" relevant=" /data/p_consent  = 'Yes' and  /data/p_age_yrs &gt;= 5" required="true()" type="select1"/>
+      <bind nodeset="/data/p_climbing_step" relevant=" /data/p_consent  = 'Yes' and  /data/p_age_yrs &gt;= 5" required="true()" type="select1"/>
+      <bind nodeset="/data/p_remembering" relevant=" /data/p_consent  = 'Yes' and  /data/p_age_yrs &gt;= 5" required="true()" type="select1"/>
+      <bind nodeset="/data/p_self_washing" relevant=" /data/p_consent  = 'Yes' and  /data/p_age_yrs &gt;= 5" required="true()" type="select1"/>
+      <bind nodeset="/data/p_communicating" relevant=" /data/p_consent  = 'Yes' and  /data/p_age_yrs &gt;= 5" required="true()" type="select1"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" type="string"/>
       <bind nodeset="/data/notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/debut_edition" type="dateTime"/>
@@ -884,6 +884,21 @@
     <input ref="/data/p_hh_id">
       <label ref="jr:itext('/data/p_hh_id:label')"/>
     </input>
+    <select ref="/data/p_endelicity">
+      <label ref="jr:itext('/data/p_endelicity:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_endelicity/Lymphatic.Filariasis:label')"/>
+        <value>Lymphatic.Filariasis</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_endelicity/Onchocerciasis:label')"/>
+        <value>Onchocerciasis</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_endelicity/Trachoma:label')"/>
+        <value>Trachoma</value>
+      </item>
+    </select>
     <input ref="/data/p_introduction_text">
       <label ref="jr:itext('/data/p_introduction_text:label')"/>
     </input>
@@ -899,8 +914,8 @@
         <value>No</value>
       </item>
     </select1>
-    <input ref="/data/generated_note_name_11">
-      <label ref="jr:itext('/data/generated_note_name_11:label')"/>
+    <input ref="/data/generated_note_name_12">
+      <label ref="jr:itext('/data/generated_note_name_12:label')"/>
     </input>
     <input ref="/data/p_index">
       <label ref="jr:itext('/data/p_index:label')"/>
@@ -1027,21 +1042,6 @@
         <value>Not Applicable</value>
       </item>
     </select1>
-    <select1 ref="/data/p_responding">
-      <label ref="jr:itext('/data/p_responding:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_responding/Themselves:label')"/>
-        <value>Themselves</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_responding/Someone on behalf as absent:label')"/>
-        <value>Someone on behalf as absent</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_responding/Someone on behalf as underage:label')"/>
-        <value>Someone on behalf as underage</value>
-      </item>
-    </select1>
     <input ref="/data/generated_note_name_23">
       <label ref="jr:itext('/data/generated_note_name_23:label')"/>
     </input>
@@ -1063,6 +1063,7 @@
     </select1>
     <select1 ref="/data/p_were_in_village">
       <label ref="jr:itext('/data/p_were_in_village:label')"/>
+      <hint ref="jr:itext('/data/p_were_in_village:hint')"/>
       <item>
         <label ref="jr:itext('/data/p_were_in_village/Yes:label')"/>
         <value>Yes</value>
@@ -1164,24 +1165,20 @@
     <select1 ref="/data/p_why_swallow_ivm">
       <label ref="jr:itext('/data/p_why_swallow_ivm:label')"/>
       <item>
-        <label ref="jr:itext('/data/p_why_swallow_ivm/To be healthy:label')"/>
-        <value>To be healthy</value>
+        <label ref="jr:itext('/data/p_why_swallow_ivm/Sick:label')"/>
+        <value>Sick</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_why_swallow_ivm/Afraid of getting the disease:label')"/>
-        <value>Afraid of getting the disease</value>
+        <label ref="jr:itext('/data/p_why_swallow_ivm/Pregnant:label')"/>
+        <value>Pregnant</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_why_swallow_ivm/Someone told me to:label')"/>
-        <value>Someone told me to</value>
+        <label ref="jr:itext('/data/p_why_swallow_ivm/Breasthfeeding:label')"/>
+        <value>Breasthfeeding</value>
       </item>
       <item>
-        <label ref="jr:itext('/data/p_why_swallow_ivm/Everyone else is taking it:label')"/>
-        <value>Everyone else is taking it</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_why_swallow_ivm/NA:label')"/>
-        <value>NA</value>
+        <label ref="jr:itext('/data/p_why_swallow_ivm/Refused:label')"/>
+        <value>Refused</value>
       </item>
       <item>
         <label ref="jr:itext('/data/p_why_swallow_ivm/Other:label')"/>
