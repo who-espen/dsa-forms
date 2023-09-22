@@ -61,8 +61,8 @@
           <text id="/data/p_recorder/DOUMONGUE Tibanguebé:label">
             <value>DOUMONGUE Tibanguebé</value>
           </text>
-          <text id="/data/p_recorder/NDATO Kossi:label">
-            <value>NDATO Kossi</value>
+          <text id="/data/p_sex/Feminin:label">
+            <value>Féminin</value>
           </text>
           <text id="/data/p_recorder/SOH Atafembou:label">
             <value>SOH Atafembou</value>
@@ -91,8 +91,8 @@
           <text id="/data/p_collected_stool:hint">
             <value>Nous ne voulons pas rentrer s'ils ne donnent pas d'échantillon car nous ne pouvons pas garantir qu'il n'y aura pas d'échange d'échantillons.</value>
           </text>
-          <text id="/data/p_sex/Feminin:label">
-            <value>Féminin</value>
+          <text id="/data/p_urine_conserve/Oui:label">
+            <value>Oui</value>
           </text>
           <text id="/data/p_recorder/ABDOU-KERIM Agueregna:label">
             <value>ABDOU-KERIM Agueregna</value>
@@ -117,9 +117,6 @@
           </text>
           <text id="/data/p_recorder/ADABRA Hélène:label">
             <value>ADABRA Hélène</value>
-          </text>
-          <text id="/data/p_urine_conserve/Oui:label">
-            <value>Oui</value>
           </text>
           <text id="/data/p_usp:label">
             <value>Sélectionner le sous-district (USP)</value>
@@ -190,11 +187,8 @@
           <text id="/data/p_consent/A.refuse:label">
             <value>2. A refusé</value>
           </text>
-          <text id="/data/p_recorder:jr:constraintMsg">
-            <value>Doit contenir 2 à 4 caractère alphanumérique</value>
-          </text>
-          <text id="/data/p_consent/A.donne:label">
-            <value>1. A donné</value>
+          <text id="/data/p_consent:hint">
+            <value>La réponse "Non" mettra fin à l'enquête</value>
           </text>
           <text id="/data/p_recorder/LOGO Kokou:label">
             <value>LOGO Kokou</value>
@@ -226,14 +220,17 @@
           <text id="/data/p_recorder/BADJASSEM Gloria Diyane:label">
             <value>BADJASSEM Gloria Diyane</value>
           </text>
+          <text id="/data/p_recorder/NDATO Kossi:label">
+            <value>NDATO Kossi</value>
+          </text>
           <text id="/data/p_urine_conserve:label">
             <value>Cette urine est-elle conservée pour la filtration de l'urine?</value>
           </text>
           <text id="/data/p_recorder/DJAMAH Prosper:label">
             <value>DJAMAH Prosper</value>
           </text>
-          <text id="/data/p_consent:hint">
-            <value>La réponse "Non" mettra fin à l'enquête</value>
+          <text id="/data/p_consent/A.donne:label">
+            <value>1. A donné</value>
           </text>
           <text id="/data/p_recorder/NOUSSOUGNON Kokou:label">
             <value>NOUSSOUGNON Kokou</value>
@@ -271,7 +268,7 @@
         </translation>
       </itext>
 
-      <bind constraint="regex(.,'^[a-zA-Z]{2,4}$')" jr:constraintMsg="jr:itext('/data/p_recorder:jr:constraintMsg')" nodeset="/data/p_recorder" required="true()" type="select1"/>
+      <bind nodeset="/data/p_recorder" required="true()" type="select1"/>
       <bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
       <bind nodeset="/data/p_usp" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>

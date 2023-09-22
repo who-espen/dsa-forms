@@ -417,9 +417,6 @@
           <text id="/data/w_usp_group/HEZOUDE:label">
             <value>HEZOUDE</value>
           </text>
-          <text id="/data/w_recorder/NDATO Kossi:label">
-            <value>NDATO Kossi</value>
-          </text>
           <text id="/data/w_site_name/GLEKOPE:label">
             <value>GLEKOPE</value>
           </text>
@@ -2652,9 +2649,6 @@
           <text id="/data/w_recorder/KOKAN Faïzat:label">
             <value>KOKAN Faïzat</value>
           </text>
-          <text id="/data/w_recorder:jr:constraintMsg">
-            <value>Doit contenir 2 à 4 caractère alphanumérique</value>
-          </text>
           <text id="/data/w_usp_group/KETOGNA KOPE:label">
             <value>KETOGNA KOPE</value>
           </text>
@@ -3996,6 +3990,9 @@
           <text id="/data/w_recorder/MONTANT Minyo Ega Sossa:label">
             <value>MONTANT Minyo Ega Sossa</value>
           </text>
+          <text id="/data/w_recorder/NDATO Kossi:label">
+            <value>NDATO Kossi</value>
+          </text>
           <text id="static_instance-usp_group-134">
             <value>SADA</value>
           </text>
@@ -5180,6 +5177,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="toilet_type">
         <root>
           <item>
@@ -9406,7 +9404,7 @@
           </item>
         </root>
       </instance>
-      <bind constraint="regex(.,'^[a-zA-Z]{2,4}$')" jr:constraintMsg="jr:itext('/data/w_recorder:jr:constraintMsg')" nodeset="/data/w_recorder" required="true()" type="select1"/>
+      <bind nodeset="/data/w_recorder" required="true()" type="select1"/>
       <bind nodeset="/data/w_region" required="true()" type="select1" db_add_col_1="."/>
       <bind nodeset="/data/w_district" required="true()" type="select1" db_add_col_1="/data/w_region" db_add_col_2="."/>
       <bind nodeset="/data/w_usp_group" required="true()" type="select1"/>

@@ -130,9 +130,6 @@
           <text id="/data/k_Recorder/GNANLABA Pyabalo:label">
             <value>GNANLABA Pyabalo</value>
           </text>
-          <text id="/data/k_Recorder:jr:constraintMsg">
-            <value>Doit contenir 2 à 4 caractère alphanumérique</value>
-          </text>
           <text id="/data/k_Recorder/KOKAN Faïzat:label">
             <value>KOKAN Faïzat</value>
           </text>
@@ -148,8 +145,8 @@
           <text id="/data/k_region:label">
             <value>Sélectionner la région</value>
           </text>
-          <text id="/data/k_remarks:label">
-            <value>Notes additionnelles</value>
+          <text id="/data/k_Recorder/NDATO Kossi:label">
+            <value>NDATO Kossi</value>
           </text>
           <text id="/data/k_Recorder/SOLI Lontassam:label">
             <value>SOLI Lontassam</value>
@@ -220,8 +217,8 @@
           <text id="/data/k_sch_hae_sa:label">
             <value>Schistosoma haematobium – Slide A</value>
           </text>
-          <text id="/data/k_Recorder/NDATO Kossi:label">
-            <value>NDATO Kossi</value>
+          <text id="/data/k_remarks:label">
+            <value>Notes additionnelles</value>
           </text>
           <text id="/data/k_Recorder/BADJASSEM Gloria Diyane:label">
             <value>BADJASSEM Gloria Diyane</value>
@@ -229,12 +226,12 @@
         </translation>
       </itext>
 
-      <bind constraint="regex(.,'^[a-zA-Z]{2,4}$')" jr:constraintMsg="jr:itext('/data/k_Recorder:jr:constraintMsg')" nodeset="/data/k_Recorder" required="true()" type="select1"/>
+      <bind nodeset="/data/k_Recorder" required="true()" type="select1"/>
       <bind nodeset="/data/k_region" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/k_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/k_region"/>
       <bind nodeset="/data/k_usp" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_district"/>
       <bind nodeset="/data/k_site_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/k_usp"/>
-      <bind nodeset="/data/k_barcodeid" type="string"  db_get="col_5" db_filter_by_col_4="/data/k_site_name"/>
+      <bind nodeset="/data/k_barcodeid" type="string" db_get="col_5" db_filter_by_col_4="/data/k_site_name"/>
       <bind constraint=". =  /data/k_barcodeid " jr:constraintMsg="jr:itext('/data/k_barcodeid2:jr:constraintMsg')" nodeset="/data/k_barcodeid2" required="true()" type="barcode"/>
       <bind nodeset="/data/k_sch_man_sa" required="true()" type="int"/>
       <bind nodeset="/data/k_sch_man_sb" required="true()" type="int"/>

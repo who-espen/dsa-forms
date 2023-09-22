@@ -33,9 +33,6 @@
 
       <itext>
         <translation default="true()" lang="French">
-          <text id="/data/u_recorder:jr:constraintMsg">
-            <value>Doit contenir 2 à 4 caractère alphanumérique</value>
-          </text>
           <text id="/data/u_sh_egp_10ml:label">
             <value>Nombre d'œufs (S. Haematobium) par 10 ml</value>
           </text>
@@ -92,9 +89,6 @@
           </text>
           <text id="/data/u_recorder/EKAHOHO Yaovi:label">
             <value>EKAHOHO Yaovi</value>
-          </text>
-          <text id="/data/u_recorder/NDATO Kossi:label">
-            <value>NDATO Kossi</value>
           </text>
           <text id="/data/u_recorder/AKOBI  Komi:label">
             <value>AKOBI  Komi</value>
@@ -156,6 +150,9 @@
           <text id="/data/u_usp:label">
             <value>Sélectionner le sous-district (USP)</value>
           </text>
+          <text id="/data/u_recorder/NDATO Kossi:label">
+            <value>NDATO Kossi</value>
+          </text>
           <text id="/data/u_district:label">
             <value>Sélectionner le district</value>
           </text>
@@ -186,12 +183,12 @@
         </translation>
       </itext>
 
-      <bind constraint="regex(.,'^[a-zA-Z]{2,4}$')" jr:constraintMsg="jr:itext('/data/u_recorder:jr:constraintMsg')" nodeset="/data/u_recorder" required="true()" type="select1"/>
+      <bind nodeset="/data/u_recorder" required="true()" type="select1"/>
       <bind nodeset="/data/u_region" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/u_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_region"/>
       <bind nodeset="/data/u_usp" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_district"/>
       <bind nodeset="/data/u_site_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_usp"/>
-      <bind nodeset="/data/u_barcodeid" type="string"/>
+      <bind nodeset="/data/u_barcodeid" type="string" db_get="col_5" db_filter_by_col_4="/data/u_site_name"/>
       <bind constraint=". =  /data/u_barcodeid " jr:constraintMsg="jr:itext('/data/u_barcodeid2:jr:constraintMsg')" nodeset="/data/u_barcodeid2" required="true()" type="barcode"/>
       <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" type="int"/>
       <bind nodeset="/data/u_sh_egp_10ml" required="true()" type="int"/>
