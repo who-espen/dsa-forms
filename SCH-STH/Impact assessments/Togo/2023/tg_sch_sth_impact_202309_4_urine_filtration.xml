@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Sept) - 4. SCH/STH - Urine Filtration V2</h:title>
+    <h:title>(2023 Sept) - 4. SCH/STH - Urine Filtration V2.1</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_202309_4_urine_filtration_v2">
+        <data id="tg_sch_sth_impact_202309_4_urine_filtration_v2_1">
           <u_recorder/>
           <u_region/>
           <u_district/>
@@ -20,7 +20,8 @@
           <u_barcodeid/>
           <u_barcodeid2/>
           <u_urine_vol/>
-          <u_sh_egp_10ml/>
+          <u_sh_egg/>
+          <u_sh_egg_per_10ml/>
           <k_sch_man/>
           <u_remarks/>
           <u_start/>
@@ -33,17 +34,14 @@
 
       <itext>
         <translation default="true()" lang="French">
-          <text id="/data/u_sh_egp_10ml:label">
-            <value>Nombre d'œufs (S. Haematobium) par 10 ml</value>
+          <text id="/data/u_remarks:label">
+            <value>Notes additionnelles</value>
           </text>
           <text id="/data/u_recorder/BADJASSEM Gloria Diyane:label">
             <value>BADJASSEM Gloria Diyane</value>
           </text>
           <text id="/data/u_barcodeid2:label">
             <value>Veuillez scanner le QR Code à nouveau</value>
-          </text>
-          <text id="/data/u_remarks:label">
-            <value>Notes additionnelles</value>
           </text>
           <text id="/data/u_recorder/KOKAN Faïzat:label">
             <value>KOKAN Faïzat</value>
@@ -102,6 +100,9 @@
           <text id="/data/k_sch_man:label">
             <value>Nombre d'œufs (S. Mansoni) par 10 ml</value>
           </text>
+          <text id="/data/u_sh_egg:label">
+            <value>Nombre d'œufs (S. Haematobium)</value>
+          </text>
           <text id="/data/u_recorder/ADABRA Hélène:label">
             <value>ADABRA Hélène</value>
           </text>
@@ -128,6 +129,9 @@
           </text>
           <text id="/data/u_recorder/NOUSSOUGNON Kokou:label">
             <value>NOUSSOUGNON Kokou</value>
+          </text>
+          <text id="/data/u_sh_egg_per_10ml:label">
+            <value>Nombre d'œufs (S. Haematobium) par 10 ml</value>
           </text>
           <text id="/data/u_recorder/TCHAGBELE Wanikougnon:label">
             <value>TCHAGBELE Wanikougnon</value>
@@ -190,8 +194,9 @@
       <bind nodeset="/data/u_site_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_usp"/>
       <bind nodeset="/data/u_barcodeid" type="string" db_get="col_5" db_filter_by_col_4="/data/u_site_name"/>
       <bind constraint=". =  /data/u_barcodeid " jr:constraintMsg="jr:itext('/data/u_barcodeid2:jr:constraintMsg')" nodeset="/data/u_barcodeid2" required="true()" type="barcode"/>
-      <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" type="int"/>
-      <bind nodeset="/data/u_sh_egp_10ml" required="true()" type="int"/>
+      <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" required="true()" type="int"/>
+      <bind nodeset="/data/u_sh_egg" required="true()" type="int"/>
+      <bind calculate="round( 10 *  /data/u_sh_egg  div  /data/u_urine_vol, 0  )" nodeset="/data/u_sh_egg_per_10ml" readonly="true()" type="string"/>
       <bind nodeset="/data/k_sch_man" type="int"/>
       <bind nodeset="/data/u_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
@@ -368,8 +373,11 @@
     <input ref="/data/u_urine_vol">
       <label ref="jr:itext('/data/u_urine_vol:label')"/>
     </input>
-    <input ref="/data/u_sh_egp_10ml">
-      <label ref="jr:itext('/data/u_sh_egp_10ml:label')"/>
+    <input ref="/data/u_sh_egg">
+      <label ref="jr:itext('/data/u_sh_egg:label')"/>
+    </input>
+    <input ref="/data/u_sh_egg_per_10ml">
+      <label ref="jr:itext('/data/u_sh_egg_per_10ml:label')"/>
     </input>
     <input ref="/data/k_sch_man">
       <label ref="jr:itext('/data/k_sch_man:label')"/>
