@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) ONCHO - 2.Formulaire Couverture V1.1</h:title>
+    <h:title>(Sept 2023) ONCHO - 2.Formulaire Couverture V1.2</h:title>
     <model>
 
       <instance>
-        <data id="cm_oncho_pre_stop_2_202309_couverture_v1_1">
+        <data id="cm_oncho_pre_stop_2_202309_couverture_v1_2">
           <p_recorder_id/>
           <p_region/>
           <p_district/>
@@ -40,6 +40,9 @@
 
       <itext>
         <translation default="true()" lang="French">
+          <text id="/data/p_anne_ivm/0:label">
+            <value>0</value>
+          </text>
           <text id="/data/p_num_ordre:label">
             <value>N° d'ordre dans village/école</value>
           </text>
@@ -173,8 +176,8 @@
       <bind nodeset="/data/p_village_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_village"/>
       <bind nodeset="/data/p_ecole" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_village_id"/>
       <bind nodeset="/data/p_ecole_id" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_ecole"/>
-      <bind nodeset="/data/p_num_ordre" required="true()" type="string"/>
-      <bind nodeset="/data/p_num_final" required="true()" type="string"/>
+      <bind nodeset="/data/p_num_ordre" required="true()" type="int"/>
+      <bind calculate="concat( /data/p_recorder_id , '_',  /data/p_ecole_id , '_',  /data/p_num_ordre )" nodeset="/data/p_num_final" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/p_sexe" required="true()" type="select1"/>
       <bind nodeset="/data/p_age" required="true()" type="select1"/>
       <bind constraint=". &lt;=  /data/p_age " jr:constraintMsg="jr:itext('/data/p_annees_vecu_village:jr:constraintMsg')" nodeset="/data/p_annees_vecu_village" required="true()" type="select1"/>
@@ -283,6 +286,10 @@
     <select1 ref="/data/p_anne_ivm">
       <label ref="jr:itext('/data/p_anne_ivm:label')"/>
       <hint ref="jr:itext('/data/p_anne_ivm:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/p_anne_ivm/0:label')"/>
+        <value>0</value>
+      </item>
       <item>
         <label ref="jr:itext('/data/p_anne_ivm/2017:label')"/>
         <value>2017</value>

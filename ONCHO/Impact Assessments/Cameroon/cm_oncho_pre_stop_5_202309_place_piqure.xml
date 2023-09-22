@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Sept 2023) ONCHO - 5 Place des piqûres</h:title>
+    <model>
+
+      <instance>
+        <data id="cm_oncho_pre_stop_5_202309_place_piqure">
+          <v_recorder_id/>
+          <v_region/>
+          <v_district/>
+          <v_village/>
+          <v_village_id/>
+          <v_ecole/>
+          <v_ecole_id/>
+          <v_gps/>
+          <v_photo_site/>
+          <v_photo_site2/>
+          <v_photo_site3/>
+          <v_notes/>
+          <v_start/>
+          <v_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/v_ecole_id:label">
+            <value>Code Ecole</value>
+          </text>
+          <text id="/data/v_photo_site3:hint">
+            <value>Optionel</value>
+          </text>
+          <text id="/data/v_village_id:label">
+            <value>Code Village</value>
+          </text>
+          <text id="/data/v_notes:label">
+            <value>Additional notes</value>
+          </text>
+          <text id="/data/v_ecole:label">
+            <value>Ecole</value>
+          </text>
+          <text id="/data/v_photo_site2:label">
+            <value>Prener une deuxième photo</value>
+          </text>
+          <text id="/data/v_photo_site:label">
+            <value>Prener la photo du lieux où il y a le plus de piqûre</value>
+          </text>
+          <text id="/data/v_district:label">
+            <value>District</value>
+          </text>
+          <text id="/data/v_village:label">
+            <value>Village</value>
+          </text>
+          <text id="/data/v_region:label">
+            <value>Région</value>
+          </text>
+          <text id="/data/v_recorder_id:label">
+            <value>Code Opérateur/Equipe</value>
+          </text>
+          <text id="/data/v_gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/data/v_photo_site3:label">
+            <value>Prener une troisième photo</value>
+          </text>
+          <text id="/data/v_photo_site2:hint">
+            <value>Optionel</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/v_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/v_region" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/v_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/v_region"/>
+      <bind nodeset="/data/v_village" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/v_district"/>
+      <bind nodeset="/data/v_village_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/v_village"/>
+      <bind nodeset="/data/v_ecole" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/v_village_id"/>
+      <bind nodeset="/data/v_ecole_id" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/v_ecole"/>
+      <bind nodeset="/data/v_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/v_photo_site" required="true()" type="binary"/>
+      <bind nodeset="/data/v_photo_site2" type="binary"/>
+      <bind nodeset="/data/v_photo_site3" type="binary"/>
+      <bind nodeset="/data/v_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/v_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/v_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/v_recorder_id">
+      <label ref="jr:itext('/data/v_recorder_id:label')"/>
+    </input>
+    <input ref="/data/v_region">
+      <label ref="jr:itext('/data/v_region:label')"/>
+    </input>
+    <input ref="/data/v_district">
+      <label ref="jr:itext('/data/v_district:label')"/>
+    </input>
+    <input ref="/data/v_village">
+      <label ref="jr:itext('/data/v_village:label')"/>
+    </input>
+    <input ref="/data/v_village_id">
+      <label ref="jr:itext('/data/v_village_id:label')"/>
+    </input>
+    <input ref="/data/v_ecole">
+      <label ref="jr:itext('/data/v_ecole:label')"/>
+    </input>
+    <input ref="/data/v_ecole_id">
+      <label ref="jr:itext('/data/v_ecole_id:label')"/>
+    </input>
+    <input ref="/data/v_gps">
+      <label ref="jr:itext('/data/v_gps:label')"/>
+    </input>
+    <upload mediatype="image/*" ref="/data/v_photo_site">
+      <label ref="jr:itext('/data/v_photo_site:label')"/>
+    </upload>
+    <upload mediatype="image/*" ref="/data/v_photo_site2">
+      <label ref="jr:itext('/data/v_photo_site2:label')"/>
+      <hint ref="jr:itext('/data/v_photo_site2:hint')"/>
+    </upload>
+    <upload mediatype="image/*" ref="/data/v_photo_site3">
+      <label ref="jr:itext('/data/v_photo_site3:label')"/>
+      <hint ref="jr:itext('/data/v_photo_site3:hint')"/>
+    </upload>
+    <input ref="/data/v_notes">
+      <label ref="jr:itext('/data/v_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
