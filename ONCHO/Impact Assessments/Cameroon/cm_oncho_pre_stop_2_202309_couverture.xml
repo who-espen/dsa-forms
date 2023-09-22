@@ -177,7 +177,7 @@
       <bind nodeset="/data/p_ecole" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_village_id"/>
       <bind nodeset="/data/p_ecole_id" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_ecole"/>
       <bind nodeset="/data/p_num_ordre" required="true()" type="int"/>
-      <bind calculate="concat( /data/p_recorder_id , '_',  /data/p_ecole_id , '_',  /data/p_num_ordre )" nodeset="/data/p_num_final" readonly="true()" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_ecole_id , '_',  /data/p_num_ordre )" nodeset="/data/p_num_final" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/p_sexe" required="true()" type="select1"/>
       <bind nodeset="/data/p_age" required="true()" type="select1"/>
       <bind constraint=". &lt;=  /data/p_age " jr:constraintMsg="jr:itext('/data/p_annees_vecu_village:jr:constraintMsg')" nodeset="/data/p_annees_vecu_village" required="true()" type="select1"/>

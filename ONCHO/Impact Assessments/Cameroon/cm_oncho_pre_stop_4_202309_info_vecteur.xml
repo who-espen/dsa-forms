@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) ONCHO - 4. Info vecteur V1.2</h:title>
+    <h:title>(Sept 2023) ONCHO - 4. Info vecteur V1.3.</h:title>
     <model>
 
       <instance>
-        <data id="cm_oncho_pre_stop_4_202309_info_vecteur_v1_2">
+        <data id="cm_oncho_pre_stop_4_202309_info_vecteur_v1_&quot;">
           <v_recorder_id/>
           <v_region/>
           <v_district/>
@@ -22,6 +22,7 @@
           <generated_note_name_9/>
           <v_simulies/>
           <v_intensite/>
+          <v_riviere/>
           <v_presence_gite_larvaire/>
           <v_notes/>
           <v_start/>
@@ -292,6 +293,9 @@
           <text id="/data/v_village/OLUNNAO:label">
             <value>OLUNNAO</value>
           </text>
+          <text id="static_instance-village-131">
+            <value>MAYO GALKE</value>
+          </text>
           <text id="/data/v_village_id/262:label">
             <value>262</value>
           </text>
@@ -387,6 +391,9 @@
           </text>
           <text id="/data/v_village/M.LAYE:label">
             <value>M'LAYE</value>
+          </text>
+          <text id="/data/v_riviere:label">
+            <value>Y a-t-il une rivière, un cours d'eau dans ou près du village</value>
           </text>
           <text id="/data/v_village_id/170:label">
             <value>170</value>
@@ -535,8 +542,8 @@
           <text id="static_instance-village-132">
             <value>TABOUN</value>
           </text>
-          <text id="/data/v_village/BAFIA:label">
-            <value>BAFIA</value>
+          <text id="/data/v_riviere/Non:label">
+            <value>Non</value>
           </text>
           <text id="static_instance-village-130">
             <value>GANDI</value>
@@ -1739,7 +1746,7 @@
             <value>POLI</value>
           </text>
           <text id="/data/v_intensite:label">
-            <value>Y a-t-il une rivière, un cours d'eau dans ou près du village</value>
+            <value>Quelle est l'intensité des piqûres</value>
           </text>
           <text id="/data/v_village/JIKIJEM:label">
             <value>JIKIJEM</value>
@@ -2394,6 +2401,9 @@
           </text>
           <text id="/data/v_district/NKAMBE:label">
             <value>NKAMBE</value>
+          </text>
+          <text id="/data/v_riviere/Oui:label">
+            <value>Oui</value>
           </text>
           <text id="/data/v_village/ABUH:label">
             <value>ABUH</value>
@@ -3061,8 +3071,8 @@
           <text id="/data/v_village/NGOH HILL:label">
             <value>NGOH HILL</value>
           </text>
-          <text id="static_instance-village-131">
-            <value>MAYO GALKE</value>
+          <text id="/data/v_village/BAFIA:label">
+            <value>BAFIA</value>
           </text>
           <text id="/data/v_village_id/148:label">
             <value>148</value>
@@ -8639,15 +8649,16 @@
         </root>
       </instance>
       <bind nodeset="/data/v_recorder_id" required="true()" type="int"/>
-      <bind nodeset="/data/v_region" required="true()" type="select1" db_get="col_1"/>
-      <bind nodeset="/data/v_district" required="true()" type="select1" db_get="col_2" db_filter_by_col_1="/data/v_region"/>
-      <bind nodeset="/data/v_village" required="true()" type="select1" db_get="col_3" db_filter_by_col_2="/data/v_district"/>
-      <bind nodeset="/data/v_village_id" required="true()" type="select1" db_get="col_4" db_filter_by_col_3="/data/v_village"/>
-      <bind nodeset="/data/v_ecole" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/v_village_id"/>
-      <bind nodeset="/data/v_ecole_id" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/v_ecole"/>
+      <bind nodeset="/data/v_region" required="true()" type="select1"/>
+      <bind nodeset="/data/v_district" required="true()" type="select1"/>
+      <bind nodeset="/data/v_village" required="true()" type="select1"/>
+      <bind nodeset="/data/v_village_id" required="true()" type="select1"/>
+      <bind nodeset="/data/v_ecole" required="true()" type="string"/>
+      <bind nodeset="/data/v_ecole_id" required="true()" type="string"/>
       <bind nodeset="/data/generated_note_name_9" readonly="true()" type="string"/>
       <bind nodeset="/data/v_simulies" type="select1"/>
       <bind nodeset="/data/v_intensite" relevant=" /data/v_simulies  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/v_riviere" type="select1"/>
       <bind nodeset="/data/v_presence_gite_larvaire" type="select1"/>
       <bind nodeset="/data/v_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/v_start" type="dateTime"/>
@@ -8744,6 +8755,17 @@
       <item>
         <label ref="jr:itext('/data/v_intensite/Insupportable:label')"/>
         <value>Insupportable</value>
+      </item>
+    </select1>
+    <select1 ref="/data/v_riviere">
+      <label ref="jr:itext('/data/v_riviere:label')"/>
+      <item>
+        <label ref="jr:itext('/data/v_riviere/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_riviere/Non:label')"/>
+        <value>Non</value>
       </item>
     </select1>
     <select1 ref="/data/v_presence_gite_larvaire">

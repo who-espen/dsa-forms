@@ -133,7 +133,7 @@
       <bind nodeset="/data/d_ecole" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_village_id"/>
       <bind nodeset="/data/d_ecole_id" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/d_ecole"/>
       <bind nodeset="/data/d_num_ordre" required="true()" type="int"/>
-      <bind calculate="concat( /data/d_recorder_id , '_',  /data/d_ecole_id , '_',  /data/d_num_ordre )" nodeset="/data/d_num_final" readonly="true()" required="true()" type="string"/>
+      <bind calculate="concat( /data/d_ecole_id , '_',  /data/d_num_ordre )" nodeset="/data/d_num_final" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/generated_note_name_11" readonly="true()" type="string"/>
       <bind nodeset="/data/d_dbs" required="true()" type="select1"/>
       <bind nodeset="/data/generated_note_name_14" readonly="true()" type="string"/>
