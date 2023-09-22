@@ -7,18 +7,18 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Sept) - 3. SCH/STH - Kato Katz</h:title>
+    <h:title>(2023 Sept) - 3. SCH/STH - Kato Katz V2</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_202309_3_kato_katz">
+        <data id="tg_sch_sth_impact_202309_3_kato_katz_v2">
           <k_Recorder/>
+          <k_region/>
           <k_district/>
           <k_usp/>
           <k_site_name/>
           <k_barcodeid/>
-          <k_barcode_ok/>
-          <k_manual_code_id/>
+          <k_barcodeid2/>
           <k_sch_man_sa/>
           <k_sch_man_sb/>
           <k_ascaris_lumb_sa/>
@@ -43,8 +43,8 @@
           <text id="/data/k_Recorder:jr:constraintMsg">
             <value>Doit contenir 2 à 4 caractère alphanumérique</value>
           </text>
-          <text id="/data/k_barcode_ok/Non:label">
-            <value>Non</value>
+          <text id="/data/k_region:label">
+            <value>Sélectionner la région</value>
           </text>
           <text id="/data/k_Recorder:label">
             <value>Sélectionner l'enquêteur</value>
@@ -55,17 +55,17 @@
           <text id="/data/k_sch_man_sa:label">
             <value>Schistosoma mansoni (oeufs) - Slide A</value>
           </text>
-          <text id="/data/k_barcode_ok/Oui:label">
-            <value>Oui</value>
+          <text id="/data/k_sch_man_sb:label">
+            <value>Schistosoma mansoni (oeufs) - Slide B</value>
+          </text>
+          <text id="/data/k_remarks:label">
+            <value>Notes additionnelles</value>
           </text>
           <text id="/data/k_hookworm_sa:label">
             <value>Ankylostome - Slide A</value>
           </text>
           <text id="/data/k_barcodeid:label">
-            <value>Veuillez scanner le QR Code</value>
-          </text>
-          <text id="/data/k_barcode_ok:label">
-            <value>Le code QR a-t-il été correctement scanné</value>
+            <value>Veuillez sélectionner le QR code le l'enfant enregistré</value>
           </text>
           <text id="/data/k_site_name:label">
             <value>Sélectionner le nom du village</value>
@@ -73,17 +73,17 @@
           <text id="/data/k_hookworm_sb:label">
             <value>Ankylostome - Slide B</value>
           </text>
-          <text id="/data/k_remarks:label">
-            <value>Notes additionnelles</value>
+          <text id="/data/k_sch_hae_sa:label">
+            <value>Schistosoma haematobium – Slide A</value>
           </text>
           <text id="/data/k_ascaris_lumb_sb:label">
             <value>Ascaris lumbricoides (œufs) - Slide B</value>
           </text>
-          <text id="/data/k_sch_man_sb:label">
-            <value>Schistosoma mansoni (oeufs) - Slide B</value>
-          </text>
           <text id="/data/k_sch_hae_sb:label">
             <value>Schistosoma haematobium – Slide B</value>
+          </text>
+          <text id="/data/k_trichuris_sa:label">
+            <value>Trichocéphale trichura - Slide A</value>
           </text>
           <text id="/data/k_ascaris_lumb_sa:label">
             <value>Ascaris lumbricoides (œufs) - Slide A</value>
@@ -94,25 +94,22 @@
           <text id="/data/k_district:label">
             <value>Sélectionner le district</value>
           </text>
-          <text id="/data/k_manual_code_id:label">
-            <value>Saisez le code QR manuellement</value>
+          <text id="/data/k_barcodeid2:jr:constraintMsg">
+            <value>Le QR code doit être le même que le QR code sélectioné.</value>
           </text>
-          <text id="/data/k_sch_hae_sa:label">
-            <value>Schistosoma haematobium – Slide A</value>
-          </text>
-          <text id="/data/k_trichuris_sa:label">
-            <value>Trichocéphale trichura - Slide A</value>
+          <text id="/data/k_barcodeid2:label">
+            <value>Veuillez scanner le QR Code à nouveau</value>
           </text>
         </translation>
       </itext>
 
       <bind constraint="regex(.,'^[a-zA-Z]{2,4}$')" jr:constraintMsg="jr:itext('/data/k_Recorder:jr:constraintMsg')" nodeset="/data/k_Recorder" required="true()" type="string"/>
-      <bind nodeset="/data/k_district" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/k_usp" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/k_district"/>
-      <bind nodeset="/data/k_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_usp"/>
-      <bind nodeset="/data/k_barcodeid" type="barcode"/>
-      <bind nodeset="/data/k_barcode_ok" required="true()" type="select1"/>
-      <bind nodeset="/data/k_manual_code_id" relevant=" /data/k_barcode_ok  = 'Non'" required="true()" type="string"/>
+      <bind nodeset="/data/k_region" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/k_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/k_region"/>
+      <bind nodeset="/data/k_usp" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_district"/>
+      <bind nodeset="/data/k_site_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/k_usp"/>
+      <bind nodeset="/data/k_barcodeid" type="string"/>
+      <bind constraint=". =  /data/k_barcodeid " jr:constraintMsg="jr:itext('/data/k_barcodeid2:jr:constraintMsg')" nodeset="/data/k_barcodeid2" required="true()" type="barcode"/>
       <bind nodeset="/data/k_sch_man_sa" required="true()" type="int"/>
       <bind nodeset="/data/k_sch_man_sb" required="true()" type="int"/>
       <bind nodeset="/data/k_ascaris_lumb_sa" required="true()" type="int"/>
@@ -133,6 +130,9 @@
     <input ref="/data/k_Recorder">
       <label ref="jr:itext('/data/k_Recorder:label')"/>
     </input>
+    <input ref="/data/k_region">
+      <label ref="jr:itext('/data/k_region:label')"/>
+    </input>
     <input ref="/data/k_district">
       <label ref="jr:itext('/data/k_district:label')"/>
     </input>
@@ -145,19 +145,8 @@
     <input ref="/data/k_barcodeid">
       <label ref="jr:itext('/data/k_barcodeid:label')"/>
     </input>
-    <select1 ref="/data/k_barcode_ok">
-      <label ref="jr:itext('/data/k_barcode_ok:label')"/>
-      <item>
-        <label ref="jr:itext('/data/k_barcode_ok/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/k_barcode_ok/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <input ref="/data/k_manual_code_id">
-      <label ref="jr:itext('/data/k_manual_code_id:label')"/>
+    <input ref="/data/k_barcodeid2">
+      <label ref="jr:itext('/data/k_barcodeid2:label')"/>
     </input>
     <input ref="/data/k_sch_man_sa">
       <label ref="jr:itext('/data/k_sch_man_sa:label')"/>

@@ -7,18 +7,18 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Sept) - 4. SCH/STH - Urine Filtration</h:title>
+    <h:title>(2023 Sept) - 4. SCH/STH - Urine Filtration V2</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_202309_4_urine_filtration">
+        <data id="tg_sch_sth_impact_202309_4_urine_filtration_v2">
           <u_recorder/>
+          <u_region/>
           <u_district/>
           <u_usp/>
           <u_site_name/>
           <u_barcodeid/>
-          <u_barcode_ok/>
-          <u_manual_code_id/>
+          <u_barcodeid2/>
           <u_urine_vol/>
           <u_sh_egp_10ml/>
           <k_sch_man/>
@@ -36,17 +36,11 @@
           <text id="/data/u_recorder:jr:constraintMsg">
             <value>Doit contenir 2 à 4 caractère alphanumérique</value>
           </text>
-          <text id="/data/u_barcode_ok/Oui:label">
-            <value>Oui</value>
+          <text id="/data/u_region:label">
+            <value>Sélectionner la région</value>
           </text>
-          <text id="/data/k_sch_man:label">
-            <value>Schistosoma mansoni (oeufs)</value>
-          </text>
-          <text id="/data/u_sh_egp_10ml:label">
-            <value>Nombre d'œufs par 10 ml</value>
-          </text>
-          <text id="/data/u_barcode_ok:label">
-            <value>Le code QR a-t-il été correctement scanné</value>
+          <text id="/data/u_barcodeid2:jr:constraintMsg">
+            <value>Le QR code doit être le même que le QR code sélectioné.</value>
           </text>
           <text id="/data/u_recorder:label">
             <value>Sélectionner l'enquêteur</value>
@@ -60,11 +54,14 @@
           <text id="/data/u_district:label">
             <value>Sélectionner le district</value>
           </text>
-          <text id="/data/u_barcode_ok/Non:label">
-            <value>Non</value>
+          <text id="/data/u_sh_egp_10ml:label">
+            <value>Nombre d'œufs (S. Haematobium) par 10 ml</value>
+          </text>
+          <text id="/data/u_barcodeid2:label">
+            <value>Veuillez scanner le QR Code à nouveau</value>
           </text>
           <text id="/data/u_barcodeid:label">
-            <value>Veuillez scanner le QR Code</value>
+            <value>Veuillez sélectionner le QR code le l'enfant enregistré</value>
           </text>
           <text id="/data/u_site_name:label">
             <value>Sélectionner le nom du village</value>
@@ -72,8 +69,8 @@
           <text id="/data/u_usp:label">
             <value>Sélectionner le sous-district (USP)</value>
           </text>
-          <text id="/data/u_manual_code_id:label">
-            <value>Saisez le code QR manuellement</value>
+          <text id="/data/k_sch_man:label">
+            <value>Nombre d'œufs (S. Mansoni) par 10 ml</value>
           </text>
           <text id="/data/u_urine_vol:label">
             <value>Volume d'urine : Consigner les millilitres (ml) d'urine prélevés sur la personne</value>
@@ -82,12 +79,12 @@
       </itext>
 
       <bind constraint="regex(.,'^[a-zA-Z]{2,4}$')" jr:constraintMsg="jr:itext('/data/u_recorder:jr:constraintMsg')" nodeset="/data/u_recorder" required="true()" type="string"/>
-      <bind nodeset="/data/u_district" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/u_usp" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_district"/>
-      <bind nodeset="/data/u_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_usp"/>
-      <bind nodeset="/data/u_barcodeid" type="barcode"/>
-      <bind nodeset="/data/u_barcode_ok" required="true()" type="select1"/>
-      <bind nodeset="/data/u_manual_code_id" relevant=" /data/u_barcode_ok  = 'Non'" required="true()" type="string"/>
+      <bind nodeset="/data/u_region" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/u_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_region"/>
+      <bind nodeset="/data/u_usp" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_district"/>
+      <bind nodeset="/data/u_site_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_usp"/>
+      <bind nodeset="/data/u_barcodeid" type="string"/>
+      <bind constraint=". =  /data/u_barcodeid " jr:constraintMsg="jr:itext('/data/u_barcodeid2:jr:constraintMsg')" nodeset="/data/u_barcodeid2" required="true()" type="barcode"/>
       <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" type="int"/>
       <bind nodeset="/data/u_sh_egp_10ml" required="true()" type="int"/>
       <bind nodeset="/data/k_sch_man" type="int"/>
@@ -101,6 +98,9 @@
     <input ref="/data/u_recorder">
       <label ref="jr:itext('/data/u_recorder:label')"/>
     </input>
+    <input ref="/data/u_region">
+      <label ref="jr:itext('/data/u_region:label')"/>
+    </input>
     <input ref="/data/u_district">
       <label ref="jr:itext('/data/u_district:label')"/>
     </input>
@@ -113,19 +113,8 @@
     <input ref="/data/u_barcodeid">
       <label ref="jr:itext('/data/u_barcodeid:label')"/>
     </input>
-    <select1 ref="/data/u_barcode_ok">
-      <label ref="jr:itext('/data/u_barcode_ok:label')"/>
-      <item>
-        <label ref="jr:itext('/data/u_barcode_ok/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_barcode_ok/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <input ref="/data/u_manual_code_id">
-      <label ref="jr:itext('/data/u_manual_code_id:label')"/>
+    <input ref="/data/u_barcodeid2">
+      <label ref="jr:itext('/data/u_barcodeid2:label')"/>
     </input>
     <input ref="/data/u_urine_vol">
       <label ref="jr:itext('/data/u_urine_vol:label')"/>

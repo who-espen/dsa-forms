@@ -7,20 +7,20 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Sept) - 2. SCH/STH – Enrôlement</h:title>
+    <h:title>(2023 Sept) - 2. SCH/STH – Enrôlement V2</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_202309_2_child">
+        <data id="tg_sch_sth_impact_202309_2_child_v2">
           <p_recorder/>
+          <p_region/>
           <p_district/>
           <p_usp/>
           <p_site/>
           <p_consent_note/>
           <p_consent/>
           <p_barcodeid/>
-          <p_barcode_ok/>
-          <p_manual_code_id/>
+          <p_barcodeid2/>
           <p_age_yrs/>
           <p_sex/>
           <p_collected_stool/>
@@ -55,14 +55,14 @@
           <text id="/data/p_collected_urine/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/p_grading/Negatif:label">
-            <value>Négatif</value>
+          <text id="/data/p_region:label">
+            <value>Sélectionner la région</value>
           </text>
           <text id="/data/p_sample_note:label">
             <value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête. Veuillez collecter les échantillons de selle et d'urine du participant.</value>
           </text>
-          <text id="/data/p_collected_stool:hint">
-            <value>Nous ne voulons pas rentrer s'ils ne donnent pas d'échantillon car nous ne pouvons pas garantir qu'il n'y aura pas d'échange d'échantillons.</value>
+          <text id="/data/p_grading/Negatif:label">
+            <value>Négatif</value>
           </text>
           <text id="/data/p_urine_conserve/Oui:label">
             <value>Oui</value>
@@ -76,8 +76,8 @@
           <text id="/data/p_grading/Trace.non.hemolysee:label">
             <value>Trace non hémolysée</value>
           </text>
-          <text id="/data/p_barcode_ok:label">
-            <value>Le code QR a-t-il été correctement scanné</value>
+          <text id="/data/p_barcodeid2:label">
+            <value>Veuillez scanner le QR Code à nouveau</value>
           </text>
           <text id="/data/p_grading/+:label">
             <value>+</value>
@@ -87,6 +87,9 @@
           </text>
           <text id="/data/p_collected_urine/Oui:label">
             <value>Oui</value>
+          </text>
+          <text id="/data/p_barcodeid2:jr:constraintMsg">
+            <value>Les deux QR code scanné doivent être les mêmes</value>
           </text>
           <text id="/data/p_grading/Trace.hemolysee:label">
             <value>Trace hémolysée</value>
@@ -102,6 +105,9 @@
           </text>
           <text id="/data/p_collected_stool/Non:label">
             <value>Non</value>
+          </text>
+          <text id="/data/p_barcodeid:jr:constraintMsg">
+            <value>Le format du QR Code est incorect ou vous utiliser le QR Code d'un autre district</value>
           </text>
           <text id="/data/p_urine_conserve/Non:label">
             <value>Non</value>
@@ -142,23 +148,14 @@
           <text id="/data/p_collected_urine:label">
             <value>Un échantillon d'urine de cet enfant a-t-il été prélevé ?</value>
           </text>
-          <text id="/data/p_urine_conserve:jr:constraintMsg">
-            <value>L'urine ne doit pas être conservée si le résultat du test Hemastix est positif</value>
-          </text>
           <text id="/data/p_district:label">
             <value>Sélectionner le district</value>
           </text>
-          <text id="/data/p_manual_code_id:label">
-            <value>Saisez le code QR manuellement</value>
-          </text>
-          <text id="/data/p_barcode_ok/Non:label">
-            <value>Non</value>
+          <text id="/data/p_collected_stool:hint">
+            <value>Nous ne voulons pas rentrer s'ils ne donnent pas d'échantillon car nous ne pouvons pas garantir qu'il n'y aura pas d'échange d'échantillons.</value>
           </text>
           <text id="/data/p_recorder:label">
             <value>Sélectionner l'enquêteur</value>
-          </text>
-          <text id="/data/p_barcode_ok/Oui:label">
-            <value>Oui</value>
           </text>
           <text id="/data/p_grading:label">
             <value>Graduation de la microhématurie</value>
@@ -167,20 +164,20 @@
       </itext>
 
       <bind constraint="regex(.,'^[a-zA-Z]{2,4}$')" jr:constraintMsg="jr:itext('/data/p_recorder:jr:constraintMsg')" nodeset="/data/p_recorder" required="true()" type="string"/>
-      <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/p_usp" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
-      <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_usp"/>
+      <bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
+      <bind nodeset="/data/p_usp" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_usp"/>
       <bind nodeset="/data/p_consent_note" readonly="true()" type="string"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
-      <bind nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'A.donne'" type="barcode"/>
-      <bind nodeset="/data/p_barcode_ok" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_manual_code_id" relevant=" /data/p_consent  = 'A.donne' and  /data/p_barcode_ok  = 'Non'" required="true()" type="string"/>
+      <bind constraint="regex(.,'^(MO.?|SOT|TCH|TCH|BAS|AGO|AKE|AMO|DAN|HAH|KLO|KPE|MOY|WAW)_\d{4}$') and (substr( /data/p_district , 0, 3) = substr(., 0, 3) or substr( /data/p_district , 0, 3) = 'MO')" jr:constraintMsg="jr:itext('/data/p_barcodeid:jr:constraintMsg')" nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'A.donne'" type="barcode"/>
+      <bind constraint=". =  /data/p_barcodeid " jr:constraintMsg="jr:itext('/data/p_barcodeid2:jr:constraintMsg')" nodeset="/data/p_barcodeid2" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="barcode"/>
       <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="int"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_collected_stool" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_collected_urine" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_grading" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui'" type="select1"/>
-      <bind constraint="if(( /data/p_grading ='Trace.hemolysee' or  /data/p_grading ='+' or  /data/p_grading ='++' or  /data/p_grading ='+++' ) and . = 'Non', false(), true()) and if( /data/p_grading ='Trace.non.hemolysee' and . = 'Oui', false(), true())" jr:constraintMsg="jr:itext('/data/p_urine_conserve:jr:constraintMsg')" nodeset="/data/p_urine_conserve" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_grading != 'Negatif'" type="select1"/>
+      <bind nodeset="/data/p_urine_conserve" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_grading != 'Negatif'" type="select1"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'A.refuse'" type="string"/>
       <bind nodeset="/data/p_sample_note" readonly="true()" relevant=" /data/p_collected_stool  = 'Non' and  /data/p_collected_urine  = 'Non'" type="string"/>
       <bind nodeset="/data/p_remarks" type="string"/>
@@ -192,6 +189,9 @@
   <h:body>
     <input ref="/data/p_recorder">
       <label ref="jr:itext('/data/p_recorder:label')"/>
+    </input>
+    <input ref="/data/p_region">
+      <label ref="jr:itext('/data/p_region:label')"/>
     </input>
     <input ref="/data/p_district">
       <label ref="jr:itext('/data/p_district:label')"/>
@@ -220,19 +220,8 @@
     <input ref="/data/p_barcodeid">
       <label ref="jr:itext('/data/p_barcodeid:label')"/>
     </input>
-    <select1 ref="/data/p_barcode_ok">
-      <label ref="jr:itext('/data/p_barcode_ok:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_barcode_ok/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_barcode_ok/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <input ref="/data/p_manual_code_id">
-      <label ref="jr:itext('/data/p_manual_code_id:label')"/>
+    <input ref="/data/p_barcodeid2">
+      <label ref="jr:itext('/data/p_barcodeid2:label')"/>
     </input>
     <input ref="/data/p_age_yrs">
       <label ref="jr:itext('/data/p_age_yrs:label')"/>
