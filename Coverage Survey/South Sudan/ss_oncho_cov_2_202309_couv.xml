@@ -7,17 +7,16 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) SSD Cov ONCHO - 2.Formulaire Couverture V2</h:title>
+    <h:title>(Sept 2023) SSD Cov ONCHO - 2.Formulaire Couverture V3</h:title>
     <model>
 
       <instance>
-        <data id="bf_oncho_cov_2_202309_couverture_v2">
+        <data id="bf_oncho_cov_2_202309_couverture_v3">
           <p_recorder_id/>
           <p_county/>
           <p_payam/>
           <p_boma/>
           <p_village/>
-          <p_village_id/>
           <p_hh_id/>
           <p_endelicity/>
           <p_introduction_text/>
@@ -153,9 +152,6 @@
           </text>
           <text id="/data/p_were_in_village:label">
             <value>12. Were you in the village between Time A &amp; Time B?</value>
-          </text>
-          <text id="/data/p_village_id:label">
-            <value>Village ID</value>
           </text>
           <text id="/data/p_reason_not_received_dk/ill:label">
             <value>5 = ill</value>
@@ -712,9 +708,6 @@
           <text id="/data/p_consent:label">
             <value>Would you like to take part in our survey?</value>
           </text>
-          <text id="/data/p_village_id:jr:constraintMsg">
-            <value>Must be between 99 and 1000</value>
-          </text>
           <text id="/data/p_reason_not_received_dk/underage:label">
             <value>6 = underage</value>
           </text>
@@ -794,18 +787,17 @@
       </itext>
 
       <bind constraint=". &gt; 9 and . &lt; 100" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
-      <bind nodeset="/data/p_county" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/p_payam" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_county"/>
-      <bind nodeset="/data/p_boma" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_payam"/>
-      <bind nodeset="/data/p_village" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_boma"/>
-      <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/p_village_id:jr:constraintMsg')" nodeset="/data/p_village_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_village"/>
+      <bind nodeset="/data/p_county" required="true()" type="string" db_get="col_2"/>
+      <bind nodeset="/data/p_payam" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_county"/>
+      <bind nodeset="/data/p_boma" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_payam"/>
+      <bind nodeset="/data/p_village" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_boma"/>
       <bind constraint="regex(., '^(0*[1-9][0-9]{0,2}|999)$')" jr:constraintMsg="jr:itext('/data/p_hh_id:jr:constraintMsg')" nodeset="/data/p_hh_id" required="true()" type="string"/>
       <bind nodeset="/data/p_endelicity" required="true()" type="select"/>
       <bind nodeset="/data/p_introduction_text" readonly="true()" required="false()" type="string"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
       <bind nodeset="/data/generated_note_name_12" readonly="true()" relevant=" /data/p_consent  = 'Yes'" type="string"/>
       <bind nodeset="/data/p_index" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
-      <bind calculate="concat( /data/p_recorder_id , '_',  /data/p_village_id , '_',  /data/p_hh_id , '_',  /data/p_index )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_recorder_id, '_',  /data/p_hh_id , '_',  /data/p_index )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind constraint=". &gt;= 0 and . &lt; 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
       <bind nodeset="/data/p_person_responding" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
@@ -877,9 +869,6 @@
     </input>
     <input ref="/data/p_village">
       <label ref="jr:itext('/data/p_village:label')"/>
-    </input>
-    <input ref="/data/p_village_id">
-      <label ref="jr:itext('/data/p_village_id:label')"/>
     </input>
     <input ref="/data/p_hh_id">
       <label ref="jr:itext('/data/p_hh_id:label')"/>
