@@ -7,16 +7,18 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) ONCHO - 2.Formulaire Couverture V1.2</h:title>
+    <h:title>(Sept 2023) ONCHO - 2.Formulaire Couverture V2</h:title>
     <model>
 
       <instance>
-        <data id="cm_oncho_pre_stop_2_202309_couverture_v1_2">
+        <data id="cm_oncho_pre_stop_2_202309_couverture_v2">
           <p_recorder_id/>
           <p_region/>
           <p_district/>
           <p_village/>
+          <p_village2/>
           <p_village_id/>
+          <p_village_id2/>
           <p_ecole/>
           <p_ecole_id/>
           <p_num_ordre/>
@@ -49,8 +51,8 @@
           <text id="/data/p_nb_traitement_ivm:label">
             <value>Nombre traitements reçus pendant les 5 dernières années :</value>
           </text>
-          <text id="/data/p_annees_vecu_village/5:label">
-            <value>5 ans</value>
+          <text id="/data/p_village2:label">
+            <value>Sélectionner le nom du village de remplassement</value>
           </text>
           <text id="/data/p_age/8:label">
             <value>8 ans</value>
@@ -70,14 +72,17 @@
           <text id="/data/p_district:label">
             <value>District</value>
           </text>
-          <text id="/data/p_anne_ivm:label">
-            <value>Dernière année de traitement à l'IVM</value>
+          <text id="/data/p_village_id2:hint">
+            <value>Se renseigner chez le superviseur avant de sélectionner</value>
           </text>
           <text id="/data/p_anne_ivm/2023:label">
             <value>2023</value>
           </text>
           <text id="/data/p_annees_vecu_village/7:label">
             <value>7 ans</value>
+          </text>
+          <text id="/data/p_village_id2:label">
+            <value>Code du village remplassé</value>
           </text>
           <text id="/data/p_raison_non_traitement:label">
             <value>Si jamais traité ou traité de temps à autre, énoncer les raisons de non compliance</value>
@@ -99,6 +104,9 @@
           </text>
           <text id="/data/p_village:label">
             <value>Village</value>
+          </text>
+          <text id="/data/p_anne_ivm:label">
+            <value>Dernière année de traitement à l'IVM</value>
           </text>
           <text id="/data/p_age/9:label">
             <value>9 ans</value>
@@ -135,6 +143,9 @@
           </text>
           <text id="/data/p_sexe/Masculin:label">
             <value>Masculin</value>
+          </text>
+          <text id="/data/p_annees_vecu_village/5:label">
+            <value>5 ans</value>
           </text>
           <text id="/data/p_age:label">
             <value>Age en année</value>
@@ -173,9 +184,11 @@
       <bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
       <bind nodeset="/data/p_village" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
-      <bind nodeset="/data/p_village_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_village"/>
-      <bind nodeset="/data/p_ecole" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_village_id"/>
-      <bind nodeset="/data/p_ecole_id" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/p_ecole"/>
+      <bind nodeset="/data/p_village2" relevant=" /data/p_village  = 'Autre'" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_village_id" relevant=" /data/p_village != 'Autre'" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/p_village"/>
+      <bind nodeset="/data/p_village_id2" relevant=" /data/p_village  = 'Autre'" required="true()" type="string" db_get="col_6" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_ecole" required="true()" type="string"/>
+      <bind nodeset="/data/p_ecole_id" required="true()" type="string"/>
       <bind nodeset="/data/p_num_ordre" required="true()" type="int"/>
       <bind calculate="concat( /data/p_ecole_id , '_',  /data/p_num_ordre )" nodeset="/data/p_num_final" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/p_sexe" required="true()" type="select1"/>
@@ -205,8 +218,15 @@
     <input ref="/data/p_village">
       <label ref="jr:itext('/data/p_village:label')"/>
     </input>
+    <input ref="/data/p_village2">
+      <label ref="jr:itext('/data/p_village2:label')"/>
+    </input>
     <input ref="/data/p_village_id">
       <label ref="jr:itext('/data/p_village_id:label')"/>
+    </input>
+    <input ref="/data/p_village_id2">
+      <label ref="jr:itext('/data/p_village_id2:label')"/>
+      <hint ref="jr:itext('/data/p_village_id2:hint')"/>
     </input>
     <input ref="/data/p_ecole">
       <label ref="jr:itext('/data/p_ecole:label')"/>
