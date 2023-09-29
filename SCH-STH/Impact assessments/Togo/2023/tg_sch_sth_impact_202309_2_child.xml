@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Sept) - 2. SCH/STH – Enrôlement V2</h:title>
+    <h:title>(2023 Sept) - 2. SCH/STH – Enrôlement V2.1</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_202309_2_child_v2">
+        <data id="tg_sch_sth_impact_202309_2_child_v2_1">
           <p_recorder/>
           <p_region/>
           <p_district/>
@@ -282,7 +282,7 @@
       <bind nodeset="/data/p_collected_stool" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_collected_urine" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_grading" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui'" type="select1"/>
-      <bind nodeset="/data/p_urine_conserve" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_grading != 'Negatif'" type="select1"/>
+      <bind nodeset="/data/p_urine_conserve" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_grading != 'Negatif'" type="select1" db_add_col_5="/data/p_barcodeid" db_add_col_6="."/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'A.refuse'" type="string"/>
       <bind nodeset="/data/p_sample_note" readonly="true()" relevant=" /data/p_collected_stool  = 'Non' and  /data/p_collected_urine  = 'Non'" type="string"/>
       <bind nodeset="/data/p_remarks" type="string"/>

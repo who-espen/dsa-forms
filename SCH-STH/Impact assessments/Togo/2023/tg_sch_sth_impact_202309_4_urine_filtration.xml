@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Sept) - 4. SCH/STH - Urine Filtration V2.1</h:title>
+    <h:title>(2023 Sept) - 4. SCH/STH - Urine Filtration V2.2</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_202309_4_urine_filtration_v2_1">
+        <data id="tg_sch_sth_impact_202309_4_urine_filtration_v2_2">
           <u_recorder/>
           <u_region/>
           <u_district/>
@@ -19,10 +19,12 @@
           <u_site_name/>
           <u_barcodeid/>
           <u_barcodeid2/>
+          <u_urine_conserve>Non</u_urine_conserve>
           <u_urine_vol/>
           <u_sh_egg/>
           <u_sh_egg_per_10ml/>
-          <k_sch_man/>
+          <u_sch_man/>
+          <u_end_note/>
           <u_remarks/>
           <u_start/>
           <u_end/>
@@ -70,6 +72,9 @@
           <text id="/data/u_recorder/GBOGBATSE Komi Mensa:label">
             <value>GBOGBATSE Komi Mensa</value>
           </text>
+          <text id="/data/u_end_note:label">
+            <value>L'urine de l'enfant n'a pas été consevé. Vous ne pouvez pas enregistré ces résultats.</value>
+          </text>
           <text id="/data/u_recorder/MONTANT Minyo Ega Sossa:label">
             <value>MONTANT Minyo Ega Sossa</value>
           </text>
@@ -97,9 +102,6 @@
           <text id="/data/u_recorder/KUTOATI Abla:label">
             <value>KUTOATI Abla</value>
           </text>
-          <text id="/data/k_sch_man:label">
-            <value>Nombre d'œufs (S. Mansoni) par 10 ml</value>
-          </text>
           <text id="/data/u_sh_egg:label">
             <value>Nombre d'œufs (S. Haematobium)</value>
           </text>
@@ -111,6 +113,9 @@
           </text>
           <text id="/data/u_recorder/DOUMONGUE Tibanguebé:label">
             <value>DOUMONGUE Tibanguebé</value>
+          </text>
+          <text id="/data/u_sch_man:label">
+            <value>Nombre d'œufs (S. Mansoni) par 10 ml</value>
           </text>
           <text id="/data/u_recorder/AFANOU Kokou M:label">
             <value>AFANOU Kokou M</value>
@@ -141,6 +146,9 @@
           </text>
           <text id="/data/u_site_name:label">
             <value>Sélectionner le nom du village</value>
+          </text>
+          <text id="/data/u_urine_conserve:label">
+            <value>Urine conservé pour cette enfant</value>
           </text>
           <text id="/data/u_recorder/SOLI Lontassam:label">
             <value>SOLI Lontassam</value>
@@ -192,12 +200,14 @@
       <bind nodeset="/data/u_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_region"/>
       <bind nodeset="/data/u_usp" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_district"/>
       <bind nodeset="/data/u_site_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_usp"/>
-      <bind nodeset="/data/u_barcodeid" type="string" db_get="col_5" db_filter_by_col_4="/data/u_site_name"/>
+      <bind nodeset="/data/u_barcodeid" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/u_site_name"/>
       <bind constraint=". =  /data/u_barcodeid " jr:constraintMsg="jr:itext('/data/u_barcodeid2:jr:constraintMsg')" nodeset="/data/u_barcodeid2" required="true()" type="barcode"/>
-      <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" required="true()" type="int"/>
-      <bind nodeset="/data/u_sh_egg" required="true()" type="int"/>
-      <bind calculate="round( 10 *  /data/u_sh_egg  div  /data/u_urine_vol, 0  )" nodeset="/data/u_sh_egg_per_10ml" readonly="true()" type="string"/>
-      <bind nodeset="/data/k_sch_man" type="int"/>
+      <bind nodeset="/data/u_urine_conserve" readonly="true()" required="true()" type="string"/>
+      <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" relevant=" /data/u_urine_conserve  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/u_sh_egg" relevant=" /data/u_urine_conserve  = 'Oui'" required="true()" type="int"/>
+      <bind calculate="round( 10 *  /data/u_sh_egg  div  /data/u_urine_vol  )" nodeset="/data/u_sh_egg_per_10ml" readonly="true()" relevant=" /data/u_urine_conserve  = 'Oui'" type="string" db_get="col_6" db_filter_by_col_5="/data/u_barcodeid"/>
+      <bind nodeset="/data/u_sch_man" relevant=" /data/u_urine_conserve  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/u_end_note" readonly="true()" relevant=" /data/u_urine_conserve  = 'Non'" type="string"/>
       <bind nodeset="/data/u_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
@@ -370,6 +380,9 @@
     <input ref="/data/u_barcodeid2">
       <label ref="jr:itext('/data/u_barcodeid2:label')"/>
     </input>
+    <input ref="/data/u_urine_conserve">
+      <label ref="jr:itext('/data/u_urine_conserve:label')"/>
+    </input>
     <input ref="/data/u_urine_vol">
       <label ref="jr:itext('/data/u_urine_vol:label')"/>
     </input>
@@ -379,8 +392,11 @@
     <input ref="/data/u_sh_egg_per_10ml">
       <label ref="jr:itext('/data/u_sh_egg_per_10ml:label')"/>
     </input>
-    <input ref="/data/k_sch_man">
-      <label ref="jr:itext('/data/k_sch_man:label')"/>
+    <input ref="/data/u_sch_man">
+      <label ref="jr:itext('/data/u_sch_man:label')"/>
+    </input>
+    <input ref="/data/u_end_note">
+      <label ref="jr:itext('/data/u_end_note:label')"/>
     </input>
     <input ref="/data/u_remarks">
       <label ref="jr:itext('/data/u_remarks:label')"/>
