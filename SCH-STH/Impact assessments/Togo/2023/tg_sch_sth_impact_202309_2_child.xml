@@ -26,8 +26,8 @@
           <p_collected_urine/>
           <p_grading/>
           <p_control/>
-          <p_grading2/>
           <p_urine_conserve/>
+          <p_grading2/>
           <p_ending_survey_note/>
           <p_sample_note/>
           <p_remarks/>
@@ -301,6 +301,7 @@
           </text>
         </translation>
       </itext>
+
       <bind nodeset="/data/p_recorder" required="true()" type="select1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_usp" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
@@ -315,8 +316,8 @@
       <bind nodeset="/data/p_collected_urine" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_grading" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui'" type="select1"/>
       <bind nodeset="/data/p_control" required="true()" type="select1"/>
-      <bind nodeset="/data/p_grading2" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_control  = 'Oui'" required="true()" type="select1"/>
       <bind constraint="if(( /data/p_grading  = '+' or  /data/p_grading  = '++' or  /data/p_grading  = '+++' or  /data/p_grading  = 'Trace.hemolysee'), . = 'Oui', true())" jr:constraintMsg="jr:itext('/data/p_urine_conserve:jr:constraintMsg')" nodeset="/data/p_urine_conserve" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_grading != 'Negatif'" required="true()" type="select1" db_add_col_4="/data/p_barcodeid" db_add_col_5="."/>
+      <bind nodeset="/data/p_grading2" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_control  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'A.refuse'" type="string"/>
       <bind nodeset="/data/p_sample_note" readonly="true()" relevant=" /data/p_collected_stool  = 'Non' and  /data/p_collected_urine  = 'Non'" type="string"/>
       <bind nodeset="/data/p_remarks" type="string"/>
@@ -578,6 +579,18 @@
         <value>Non</value>
       </item>
     </select1>
+    <select1 ref="/data/p_urine_conserve">
+      <label ref="jr:itext('/data/p_urine_conserve:label')"/>
+      <hint ref="jr:itext('/data/p_urine_conserve:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/p_urine_conserve/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_urine_conserve/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
     <select1 ref="/data/p_grading2">
       <label ref="jr:itext('/data/p_grading2:label')"/>
       <item>
@@ -603,18 +616,6 @@
       <item>
         <label ref="jr:itext('/data/p_grading2/+++:label')"/>
         <value>+++</value>
-      </item>
-    </select1>
-    <select1 ref="/data/p_urine_conserve">
-      <label ref="jr:itext('/data/p_urine_conserve:label')"/>
-      <hint ref="jr:itext('/data/p_urine_conserve:hint')"/>
-      <item>
-        <label ref="jr:itext('/data/p_urine_conserve/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_urine_conserve/Non:label')"/>
-        <value>Non</value>
       </item>
     </select1>
     <input ref="/data/p_ending_survey_note">
