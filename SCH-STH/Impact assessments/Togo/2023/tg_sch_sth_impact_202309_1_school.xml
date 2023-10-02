@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Sept) - 1. SCH/STH – Ecole/Localité V2</h:title>
+    <h:title>(2023 Sept) - 1. SCH/STH – Ecole/Localité V3</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_202309_1_school_v2">
+        <data id="tg_sch_sth_impact_202309_1_school_v3">
           <w_recorder/>
           <w_region/>
           <w_district/>
@@ -3253,7 +3253,7 @@
             <value>TSADOME</value>
           </text>
           <text id="/data/w_source_exist:label">
-            <value>Y a-t-il une source d'eau potable dans l'école?</value>
+            <value>Y a-t-il une source d'eau potable accéssible?</value>
           </text>
           <text id="/data/w_usp_group/BON-SECOURS:label">
             <value>BON-SECOURS</value>
@@ -9405,11 +9405,11 @@
         </root>
       </instance>
       <bind nodeset="/data/w_recorder" required="true()" type="select1"/>
-      <bind nodeset="/data/w_region" required="true()" type="select1" db_add_col_1="."/>
-      <bind nodeset="/data/w_district" required="true()" type="select1" db_add_col_1="/data/w_region" db_add_col_2="."/>
+      <bind nodeset="/data/w_region" required="true()" type="select1"/>
+      <bind nodeset="/data/w_district" required="true()" type="select1" db_add_col_1="."/>
       <bind nodeset="/data/w_usp_group" required="true()" type="select1"/>
-      <bind nodeset="/data/w_usp" required="true()" type="select1" db_add_col_2="/data/w_district" db_add_col_3="."/>
-      <bind nodeset="/data/w_site_name" required="true()" type="select1" db_add_col_3="/data/w_usp" db_add_col_4="."/>
+      <bind nodeset="/data/w_usp" required="true()" type="select1" db_add_col_1="/data/w_district" db_add_col_2="."/>
+      <bind nodeset="/data/w_site_name" required="true()" type="select1" db_add_col_2="/data/w_usp" db_add_col_3="."/>
       <bind nodeset="/data/w_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/w_source_exist" required="true()" type="select1"/>
       <bind nodeset="/data/w_source_drinkable" relevant=" /data/w_source_exist  = 'Oui'" required="true()" type="select1"/>
