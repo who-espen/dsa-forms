@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Aug 2022) 6. TAS1 FL - Resultado FTS (Phase 2) V2</h:title>
+    <model >
+
+      <instance>
+        <data id="gw_lf_tas1_3_fts_result_202206_phase2_v2">
+          <d_recorderID/>
+          <d_region/>
+          <d_district/>
+          <d_cluster_name/>
+          <d_cluster_id/>
+          <d_IDType/>
+          <d_BarcodeID/>
+          <d_generatedid/>
+          <d_lotnumber1/>
+          <d_result1/>
+          <d_why_invalid1/>
+          <d_why_invalid_other1/>
+          <d_display_result1/>
+          <d_need_second_test/>
+          <d_lotnumber2/>
+          <d_result2/>
+          <d_why_invalid2/>
+          <d_why_invalid_other2/>
+          <d_display_result2/>
+          <d_final_result/>
+          <d_display_final_result/>
+          <d_Positivo_why_no_tx/>
+          <notes_part/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="Portuguese">
+          <text id="/data/d_recorderID:jr:constraintMsg">
+            <value>O código deve ser um número de dois algarismos entre 9 e 100</value>
+          </text>
+          <text id="/data/d_recorderID:label">
+            <value>Insira o ID do inqueridor</value>
+          </text>
+          <text id="/data/d_recorderID:hint">
+            <value>Se você for o único registrador/inqueridor na sua equipa, isso pode ser chamado de "ID de equipa" ID do inqueridor é o código de 2 dígitos fornecido a você ou à sua equipa</value>
+          </text>
+          <text id="/data/d_region:label">
+            <value>Selecione a região</value>
+          </text>
+          <text id="/data/d_region/Bafata:label">
+            <value>Bafata</value>
+          </text>
+          <text id="/data/d_district:label">
+            <value>Selecione o distrito</value>
+          </text>
+          <text id="/data/d_cluster_name:label">
+            <value>Selecione o local</value>
+          </text>
+          <text id="/data/d_cluster_id:label">
+            <value>Selecione o código do site</value>
+          </text>
+          <text id="/data/d_IDType:label">
+            <value>Como será gerada a identificação única do indivíduo?</value>
+          </text>
+          <text id="/data/d_IDType/Scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/d_IDType/ID_generation:label">
+            <value>Geração automática</value>
+          </text>
+          <text id="/data/d_BarcodeID:label">
+            <value>Digitalize agora o código de barras</value>
+          </text>
+          <text id="/data/d_generatedid:jr:constraintMsg">
+            <value>O formato deve ser 1234-1234-567 Apenas a segunda e terceira partes do código</value>
+          </text>
+          <text id="/data/d_generatedid:label">
+            <value>Introduza a segunda parte e a terceira parte do código gerado (deve ter o formato 1234-1234-567 apenas com números e travessões)</value>
+          </text>
+          <text id="/data/d_generatedid:hint">
+            <value>Por exemplo, se o código gerado foi 1234-1234-567, a segunda e terceira partes do código é 1234-1234-567</value>
+          </text>
+          <text id="/data/d_lotnumber1:jr:constraintMsg">
+            <value>O lote deve ser um número de seis algarismos</value>
+          </text>
+          <text id="/data/d_lotnumber1:label">
+            <value>Por favor, insira o lote 1 do FTS</value>
+          </text>
+          <text id="/data/d_result1:label">
+            <value>FTS - Teste 1</value>
+          </text>
+          <text id="/data/d_result1:hint">
+            <value>"Inválido" inclui erros de teste e sangue insuficiente</value>
+          </text>
+          <text id="/data/d_result1/Positivo:label">
+            <value>Positivo</value>
+          </text>
+          <text id="/data/d_result1/Negativo:label">
+            <value>Negativo</value>
+          </text>
+          <text id="/data/d_result1/Invalido:label">
+            <value>Inválido</value>
+          </text>
+          <text id="/data/d_why_invalid1:label">
+            <value>Justifique o teste inválido</value>
+          </text>
+          <text id="/data/d_why_invalid1/Sem.linha.de.controlo/acompanhamento:label">
+            <value>Sem linha de controlo/acompanhamento</value>
+          </text>
+          <text id="/data/d_why_invalid1/Linha.de.controlo.descontínuo/parcial:label">
+            <value>Linha de controlo descontínuo/parcial</value>
+          </text>
+          <text id="/data/d_why_invalid1/Dificuldade.na.absorção.da.amostra:label">
+            <value>Dificuldade na absorção da amostra</value>
+          </text>
+          <text id="/data/d_why_invalid1/Dificuldade.com.a.migração.de.amostras:label">
+            <value>Dificuldade com a migração de amostras</value>
+          </text>
+          <text id="/data/d_why_invalid1/O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras):label">
+            <value>O vestígio de sangue persiste (sangue deixado em linhas de tiras/obscuras)</value>
+          </text>
+          <text id="/data/d_why_invalid1/Volume.de.sangue.insuficiente.devido.à.pipetagem:label">
+            <value>Volume de sangue insuficiente devido à pipetagem</value>
+          </text>
+          <text id="/data/d_why_invalid1/Other:label">
+            <value>Outro (explicar)</value>
+          </text>
+          <text id="/data/d_why_invalid_other1:label">
+            <value>Dê 'Outro' motivo para teste inválido</value>
+          </text>
+          <text id="/data/d_need_second_test:label">
+            <value>O primeiro resultado do teste para este participante é <output value=" /data/d_display_result1 "/>
+ Este resultado requer um segundo teste Continuar este questionário para introduzir o segundo resultado do teste do participante</value>
+          </text>
+          <text id="/data/d_lotnumber2:jr:constraintMsg">
+            <value>O lote deve ser um número de seis algarismos</value>
+          </text>
+          <text id="/data/d_lotnumber2:label">
+            <value>Por favor, insira o lote número 2 do FTS</value>
+          </text>
+          <text id="/data/d_result2:label">
+            <value>FTS - Teste 2</value>
+          </text>
+          <text id="/data/d_result2:hint">
+            <value>Invalido comprend des erreurs de test et un sang insuffisant</value>
+          </text>
+          <text id="/data/d_result2/Positivo:label">
+            <value>Positivo</value>
+          </text>
+          <text id="/data/d_result2/Negativo:label">
+            <value>Negativo</value>
+          </text>
+          <text id="/data/d_result2/Invalido:label">
+            <value>Inválido</value>
+          </text>
+          <text id="/data/d_why_invalid2:label">
+            <value>Justifique o teste inválido</value>
+          </text>
+          <text id="/data/d_why_invalid2/Sem.linha.de.controlo/acompanhamento:label">
+            <value>Sem linha de controlo/acompanhamento</value>
+          </text>
+          <text id="/data/d_why_invalid2/Linha.de.controlo.descontínuo/parcial:label">
+            <value>Linha de controlo descontínuo/parcial</value>
+          </text>
+          <text id="/data/d_why_invalid2/Dificuldade.na.absorção.da.amostra:label">
+            <value>Dificuldade na absorção da amostra</value>
+          </text>
+          <text id="/data/d_why_invalid2/Dificuldade.com.a.migração.de.amostras:label">
+            <value>Dificuldade com a migração de amostras</value>
+          </text>
+          <text id="/data/d_why_invalid2/O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras):label">
+            <value>O vestígio de sangue persiste (sangue deixado em linhas de tiras/obscuras)</value>
+          </text>
+          <text id="/data/d_why_invalid2/Volume.de.sangue.insuficiente.devido.à.pipetagem:label">
+            <value>Volume de sangue insuficiente devido à pipetagem</value>
+          </text>
+          <text id="/data/d_why_invalid2/Other:label">
+            <value>Outro (explicar)</value>
+          </text>
+          <text id="/data/d_why_invalid_other2:label">
+            <value>Dê 'Outro' motivo para teste inválido</value>
+          </text>
+          <text id="/data/d_display_final_result:label">
+            <value>O resultado final deste participante é: <output value=" /data/d_final_result "/>
+            </value>
+          </text>
+          <text id="/data/d_Positivo_why_no_tx:label">
+            <value>Especifique o plano de tratamento deste participante ou explique porque o tratamento não é possível.</value>
+          </text>
+          <text id="/data/notes_part:label">
+            <value>Notas adicionais no formulário</value>
+          </text>
+          <text id="yes_no-0">
+            <value>Sim</value>
+          </text>
+          <text id="yes_no-1">
+            <value>Não</value>
+          </text>
+          <text id="id_list-0">
+            <value>Scanner</value>
+          </text>
+          <text id="id_list-1">
+            <value>Geração automática</value>
+          </text>
+          <text id="results_list-0">
+            <value>Positivo</value>
+          </text>
+          <text id="results_list-1">
+            <value>Negativo</value>
+          </text>
+          <text id="results_list-2">
+            <value>Inválido</value>
+          </text>
+          <text id="why_invalid-0">
+            <value>Sem linha de controlo/acompanhamento</value>
+          </text>
+          <text id="why_invalid-1">
+            <value>Linha de controlo descontínuo/parcial</value>
+          </text>
+          <text id="why_invalid-2">
+            <value>Dificuldade na absorção da amostra</value>
+          </text>
+          <text id="why_invalid-3">
+            <value>Dificuldade com a migração de amostras</value>
+          </text>
+          <text id="why_invalid-4">
+            <value>O vestígio de sangue persiste (sangue deixado em linhas de tiras/obscuras)</value>
+          </text>
+          <text id="why_invalid-5">
+            <value>Volume de sangue insuficiente devido à pipetagem</value>
+          </text>
+          <text id="why_invalid-6">
+            <value>Outro (explicar)</value>
+          </text>
+          <text id="region_list-0">
+            <value>Bafata</value>
+          </text>
+          <text id="district_list-0">
+            <value>Bafata</value>
+          </text>
+          <text id="district_list-1">
+            <value>Bambadinca</value>
+          </text>
+          <text id="district_list-2">
+            <value>Cambadju</value>
+          </text>
+          <text id="district_list-3">
+            <value>Cosse</value>
+          </text>
+          <text id="district_list-4">
+            <value>Ga-Ture</value>
+          </text>
+          <text id="district_list-5">
+            <value>Geba</value>
+          </text>
+          <text id="district_list-6">
+            <value>Sare Bacar</value>
+          </text>
+          <text id="district_list-7">
+            <value>Pitche</value>
+          </text>
+          <text id="site_list-0">
+            <value>Cidade de Bafata Bairro 4</value>
+          </text>
+          <text id="site_list-1">
+            <value>Cidade de Bafata Bairro Djida</value>
+          </text>
+          <text id="site_list-2">
+            <value>Cidade de Bafata Bairro Iussi</value>
+          </text>
+          <text id="site_list-3">
+            <value>Cumuda</value>
+          </text>
+          <text id="site_list-4">
+            <value>Embalocunda</value>
+          </text>
+          <text id="site_list-5">
+            <value>Madina Samba Fatabe</value>
+          </text>
+          <text id="site_list-6">
+            <value>Sintchã Agostinho</value>
+          </text>
+          <text id="site_list-7">
+            <value>Sintchã Bonco</value>
+          </text>
+          <text id="site_list-8">
+            <value>Sintchã Malam Baio</value>
+          </text>
+          <text id="site_list-9">
+            <value>Sintchã Umaro</value>
+          </text>
+          <text id="site_list-10">
+            <value>Cidade de Bambadinca Bairro 3</value>
+          </text>
+          <text id="site_list-11">
+            <value>Cidade de Bambadinca Bairro Nema</value>
+          </text>
+          <text id="site_list-12">
+            <value>Demba Taco</value>
+          </text>
+          <text id="site_list-13">
+            <value>Maricanhe</value>
+          </text>
+          <text id="site_list-14">
+            <value>Sintchã Assete</value>
+          </text>
+          <text id="site_list-15">
+            <value>Sintchã Bamba</value>
+          </text>
+          <text id="site_list-16">
+            <value>Sintchã Tchonde</value>
+          </text>
+          <text id="site_list-17">
+            <value>Sintchã Maunde Nhada</value>
+          </text>
+          <text id="site_list-18">
+            <value>Sintchã Quedjau</value>
+          </text>
+          <text id="site_list-19">
+            <value>Sintchã Samadu Bobo</value>
+          </text>
+          <text id="site_list-20">
+            <value>Sintchã Samba Tedi</value>
+          </text>
+          <text id="site_list-21">
+            <value>Campate</value>
+          </text>
+          <text id="site_list-22">
+            <value>Cooperativa Pancia</value>
+          </text>
+          <text id="site_list-23">
+            <value>Sintchã Soto</value>
+          </text>
+          <text id="site_list-24">
+            <value>Pitche</value>
+          </text>
+          <text id="site_list-25">
+            <value>Panalicha</value>
+          </text>
+          <text id="site_list-26">
+            <value>Sabigam Fula</value>
+          </text>
+          <text id="site_list-27">
+            <value>Sabigam Mandinga</value>
+          </text>
+          <text id="site_code-0">
+            <value>1001</value>
+          </text>
+          <text id="site_code-1">
+            <value>1002</value>
+          </text>
+          <text id="site_code-2">
+            <value>1003</value>
+          </text>
+          <text id="site_code-3">
+            <value>1004</value>
+          </text>
+          <text id="site_code-4">
+            <value>1005</value>
+          </text>
+          <text id="site_code-5">
+            <value>1006</value>
+          </text>
+          <text id="site_code-6">
+            <value>1007</value>
+          </text>
+          <text id="site_code-7">
+            <value>1008</value>
+          </text>
+          <text id="site_code-8">
+            <value>1009</value>
+          </text>
+          <text id="site_code-9">
+            <value>1010</value>
+          </text>
+          <text id="site_code-10">
+            <value>1011</value>
+          </text>
+          <text id="site_code-11">
+            <value>1012</value>
+          </text>
+          <text id="site_code-12">
+            <value>1013</value>
+          </text>
+          <text id="site_code-13">
+            <value>1014</value>
+          </text>
+          <text id="site_code-14">
+            <value>1015</value>
+          </text>
+          <text id="site_code-15">
+            <value>1016</value>
+          </text>
+          <text id="site_code-16">
+            <value>1017</value>
+          </text>
+          <text id="site_code-17">
+            <value>1018</value>
+          </text>
+          <text id="site_code-18">
+            <value>1019</value>
+          </text>
+          <text id="site_code-19">
+            <value>1020</value>
+          </text>
+          <text id="site_code-20">
+            <value>1021</value>
+          </text>
+          <text id="site_code-21">
+            <value>1022</value>
+          </text>
+          <text id="site_code-22">
+            <value>1023</value>
+          </text>
+          <text id="site_code-23">
+            <value>1024</value>
+          </text>
+          <text id="site_code-24">
+            <value>1025</value>
+          </text>
+          <text id="site_code-25">
+            <value>1026</value>
+          </text>
+          <text id="site_code-26">
+            <value>1027</value>
+          </text>
+          <text id="site_code-27">
+            <value>1028</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>Sim</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>Nao</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="id_list">
+        <root>
+          <item>
+            <itextId>id_list-0</itextId>
+            <name>Scanner</name>
+          </item>
+          <item>
+            <itextId>id_list-1</itextId>
+            <name>ID_generation</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="results_list">
+        <root>
+          <item>
+            <itextId>results_list-0</itextId>
+            <name>Positivo</name>
+          </item>
+          <item>
+            <itextId>results_list-1</itextId>
+            <name>Negativo</name>
+          </item>
+          <item>
+            <itextId>results_list-2</itextId>
+            <name>Invalido</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="why_invalid">
+        <root>
+          <item>
+            <itextId>why_invalid-0</itextId>
+            <name>Sem.linha.de.controlo/acompanhamento</name>
+          </item>
+          <item>
+            <itextId>why_invalid-1</itextId>
+            <name>Linha.de.controlo.descontínuo/parcial</name>
+          </item>
+          <item>
+            <itextId>why_invalid-2</itextId>
+            <name>Dificuldade.na.absorção.da.amostra</name>
+          </item>
+          <item>
+            <itextId>why_invalid-3</itextId>
+            <name>Dificuldade.com.a.migração.de.amostras</name>
+          </item>
+          <item>
+            <itextId>why_invalid-4</itextId>
+            <name>O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras)</name>
+          </item>
+          <item>
+            <itextId>why_invalid-5</itextId>
+            <name>Volume.de.sangue.insuficiente.devido.à.pipetagem</name>
+          </item>
+          <item>
+            <itextId>why_invalid-6</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="region_list">
+        <root>
+          <item>
+            <itextId>region_list-0</itextId>
+            <name>Bafata</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="district_list">
+        <root>
+          <item>
+            <itextId>district_list-0</itextId>
+            <name>Bafata</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-1</itextId>
+            <name>Bambadinca</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-2</itextId>
+            <name>Cambadju</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-3</itextId>
+            <name>Cosse</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-4</itextId>
+            <name>Ga-Ture</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-5</itextId>
+            <name>Geba</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-6</itextId>
+            <name>Sare Bacar</name>
+            <region_list>Bafata</region_list>
+          </item>
+          <item>
+            <itextId>district_list-7</itextId>
+            <name>Pitche</name>
+            <region_list>Gabu</region_list>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_list">
+        <root>
+          <item>
+            <itextId>site_list-0</itextId>
+            <district_list>Bafata</district_list>
+            <name>Cidade de Bafata Bairro 4</name>
+          </item>
+          <item>
+            <itextId>site_list-1</itextId>
+            <district_list>Bafata</district_list>
+            <name>Cidade de Bafata Bairro Djida</name>
+          </item>
+          <item>
+            <itextId>site_list-2</itextId>
+            <district_list>Bafata</district_list>
+            <name>Cidade de Bafata Bairro Iussi</name>
+          </item>
+          <item>
+            <itextId>site_list-3</itextId>
+            <district_list>Bafata</district_list>
+            <name>Cumuda</name>
+          </item>
+          <item>
+            <itextId>site_list-4</itextId>
+            <district_list>Bafata</district_list>
+            <name>Embalocunda</name>
+          </item>
+          <item>
+            <itextId>site_list-5</itextId>
+            <district_list>Bafata</district_list>
+            <name>Madina Samba Fatabe</name>
+          </item>
+          <item>
+            <itextId>site_list-6</itextId>
+            <district_list>Bafata</district_list>
+            <name>Sintchã Agostinho</name>
+          </item>
+          <item>
+            <itextId>site_list-7</itextId>
+            <district_list>Bafata</district_list>
+            <name>Sintchã Bonco</name>
+          </item>
+          <item>
+            <itextId>site_list-8</itextId>
+            <district_list>Bafata</district_list>
+            <name>Sintchã Malam Baio</name>
+          </item>
+          <item>
+            <itextId>site_list-9</itextId>
+            <district_list>Bafata</district_list>
+            <name>Sintchã Umaro</name>
+          </item>
+          <item>
+            <itextId>site_list-10</itextId>
+            <district_list>Bambadinca</district_list>
+            <name>Cidade de Bambadinca Bairro 3</name>
+          </item>
+          <item>
+            <itextId>site_list-11</itextId>
+            <district_list>Bambadinca</district_list>
+            <name>Cidade de Bambadinca Bairro Nema</name>
+          </item>
+          <item>
+            <itextId>site_list-12</itextId>
+            <district_list>Bambadinca</district_list>
+            <name>Demba Taco</name>
+          </item>
+          <item>
+            <itextId>site_list-13</itextId>
+            <district_list>Bambadinca</district_list>
+            <name>Maricanhe</name>
+          </item>
+          <item>
+            <itextId>site_list-14</itextId>
+            <district_list>Bambadinca</district_list>
+            <name>Sintchã Assete</name>
+          </item>
+          <item>
+            <itextId>site_list-15</itextId>
+            <district_list>Bambadinca</district_list>
+            <name>Sintchã Bamba</name>
+          </item>
+          <item>
+            <itextId>site_list-16</itextId>
+            <district_list>Bambadinca</district_list>
+            <name>Sintchã Tchonde</name>
+          </item>
+          <item>
+            <itextId>site_list-17</itextId>
+            <district_list>Cambadju</district_list>
+            <name>Sintchã Maunde Nhada</name>
+          </item>
+          <item>
+            <itextId>site_list-18</itextId>
+            <district_list>Cambadju</district_list>
+            <name>Sintchã Quedjau</name>
+          </item>
+          <item>
+            <itextId>site_list-19</itextId>
+            <district_list>Cambadju</district_list>
+            <name>Sintchã Samadu Bobo</name>
+          </item>
+          <item>
+            <itextId>site_list-20</itextId>
+            <district_list>Cambadju</district_list>
+            <name>Sintchã Samba Tedi</name>
+          </item>
+          <item>
+            <itextId>site_list-21</itextId>
+            <district_list>Cosse</district_list>
+            <name>Campate</name>
+          </item>
+          <item>
+            <itextId>site_list-22</itextId>
+            <district_list>Ga-Ture</district_list>
+            <name>Cooperativa Pancia</name>
+          </item>
+          <item>
+            <itextId>site_list-23</itextId>
+            <district_list>Geba</district_list>
+            <name>Sintchã Soto</name>
+          </item>
+          <item>
+            <itextId>site_list-24</itextId>
+            <district_list>Pitche</district_list>
+            <name>Pitche</name>
+          </item>
+          <item>
+            <itextId>site_list-25</itextId>
+            <district_list>Sare Bacar</district_list>
+            <name>Panalicha</name>
+          </item>
+          <item>
+            <itextId>site_list-26</itextId>
+            <district_list>Sare Bacar</district_list>
+            <name>Sabigam Fula</name>
+          </item>
+          <item>
+            <itextId>site_list-27</itextId>
+            <district_list>Sare Bacar</district_list>
+            <name>Sabigam Mandinga</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="site_code">
+        <root>
+          <item>
+            <itextId>site_code-0</itextId>
+            <name>1001</name>
+            <site_list>Cidade de Bafata Bairro Iussi</site_list>
+          </item>
+          <item>
+            <itextId>site_code-1</itextId>
+            <name>1002</name>
+            <site_list>Campate</site_list>
+          </item>
+          <item>
+            <itextId>site_code-2</itextId>
+            <name>1003</name>
+            <site_list>Embalocunda</site_list>
+          </item>
+          <item>
+            <itextId>site_code-3</itextId>
+            <name>1004</name>
+            <site_list>Sintchã Umaro</site_list>
+          </item>
+          <item>
+            <itextId>site_code-4</itextId>
+            <name>1005</name>
+            <site_list>Sintchã Agostinho</site_list>
+          </item>
+          <item>
+            <itextId>site_code-5</itextId>
+            <name>1006</name>
+            <site_list>Sintchã Bonco</site_list>
+          </item>
+          <item>
+            <itextId>site_code-6</itextId>
+            <name>1007</name>
+            <site_list>Sintchã Malam Baio</site_list>
+          </item>
+          <item>
+            <itextId>site_code-7</itextId>
+            <name>1008</name>
+            <site_list>Sintchã Maunde Nhada</site_list>
+          </item>
+          <item>
+            <itextId>site_code-8</itextId>
+            <name>1009</name>
+            <site_list>Sintchã Quedjau</site_list>
+          </item>
+          <item>
+            <itextId>site_code-9</itextId>
+            <name>1010</name>
+            <site_list>Sintchã Samadu Bobo</site_list>
+          </item>
+          <item>
+            <itextId>site_code-10</itextId>
+            <name>1011</name>
+            <site_list>Sintchã Samba Tedi</site_list>
+          </item>
+          <item>
+            <itextId>site_code-11</itextId>
+            <name>1012</name>
+            <site_list>Cooperativa Pancia</site_list>
+          </item>
+          <item>
+            <itextId>site_code-12</itextId>
+            <name>1013</name>
+            <site_list>Demba Taco</site_list>
+          </item>
+          <item>
+            <itextId>site_code-13</itextId>
+            <name>1014</name>
+            <site_list>Maricanhe</site_list>
+          </item>
+          <item>
+            <itextId>site_code-14</itextId>
+            <name>1015</name>
+            <site_list>Sintchã Assete</site_list>
+          </item>
+          <item>
+            <itextId>site_code-15</itextId>
+            <name>1016</name>
+            <site_list>Sintchã Bamba</site_list>
+          </item>
+          <item>
+            <itextId>site_code-16</itextId>
+            <name>1017</name>
+            <site_list>Sintchã Soto</site_list>
+          </item>
+          <item>
+            <itextId>site_code-17</itextId>
+            <name>1018</name>
+            <site_list>Sintchã Tchonde</site_list>
+          </item>
+          <item>
+            <itextId>site_code-18</itextId>
+            <name>1019</name>
+            <site_list>Cumuda</site_list>
+          </item>
+          <item>
+            <itextId>site_code-19</itextId>
+            <name>1020</name>
+            <site_list>Cidade de Bafata Bairro Djida</site_list>
+          </item>
+          <item>
+            <itextId>site_code-20</itextId>
+            <name>1021</name>
+            <site_list>Madina Samba Fatabe</site_list>
+          </item>
+          <item>
+            <itextId>site_code-21</itextId>
+            <name>1022</name>
+            <site_list>Panalicha</site_list>
+          </item>
+          <item>
+            <itextId>site_code-22</itextId>
+            <name>1023</name>
+            <site_list>Sabigam Fula</site_list>
+          </item>
+          <item>
+            <itextId>site_code-23</itextId>
+            <name>1024</name>
+            <site_list>Sabigam Mandinga</site_list>
+          </item>
+          <item>
+            <itextId>site_code-24</itextId>
+            <name>1025</name>
+            <site_list>Cidade de Bafata Bairro 4</site_list>
+          </item>
+          <item>
+            <itextId>site_code-25</itextId>
+            <name>1026</name>
+            <site_list>Cidade de Bambadinca Bairro Nema</site_list>
+          </item>
+          <item>
+            <itextId>site_code-26</itextId>
+            <name>1027</name>
+            <site_list>Cidade de Bambadinca Bairro 3</site_list>
+          </item>
+          <item>
+            <itextId>site_code-27</itextId>
+            <name>1028</name>
+            <site_list>Pitche</site_list>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/d_recorderID:jr:constraintMsg')" nodeset="/data/d_recorderID" required="true()" type="int"/>
+      <bind nodeset="/data/d_region" type="string"/>
+      <bind nodeset="/data/d_district" required="true()" type="string"/>
+      <bind nodeset="/data/d_cluster_name" required="true()" type="string"/>
+      <bind nodeset="/data/d_cluster_id" required="true()" type="string"/>
+      <bind nodeset="/data/d_IDType" required="true()" type="string"/>
+      <bind nodeset="/data/d_BarcodeID" relevant=" /data/d_IDType  = &quot;Scanner&quot;" required="true()" type="barcode"/>
+      <bind constraint="regex(.,'^[0-9]{4}-[0-9]{4}-[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/d_generatedid:jr:constraintMsg')" nodeset="/data/d_generatedid" relevant=" /data/d_IDType  = &quot;ID_generation&quot;" required="true()" type="string"/>
+      <bind constraint="regex(.,'^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_lotnumber1:jr:constraintMsg')" nodeset="/data/d_lotnumber1" required="true()" type="string"/>
+      <bind nodeset="/data/d_result1" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalid'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid_other1" relevant="selected( /data/d_why_invalid1 ,'Other')" required="true()" type="string"/>
+      <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result1" required="true()" type="string"/>
+      <bind nodeset="/data/d_need_second_test" readonly="true()" relevant=" /data/d_result1 != 'Negativo'" type="string"/>
+      <bind constraint="regex(.,'^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_lotnumber2:jr:constraintMsg')" nodeset="/data/d_lotnumber2" relevant=" /data/d_result1 != 'Negativo'" required="true()" type="string"/>
+      <bind nodeset="/data/d_result2" relevant=" /data/d_result1 != 'Negativo'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid2" relevant=" /data/d_result2  = 'Invalid'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid_other2" relevant="selected( /data/d_why_invalid2 ,'Other')" required="true()" type="string"/>
+      <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result2" relevant=" /data/d_result1 != 'Negativo'" type="string"/>
+      <bind calculate="if( /data/d_result1 =&quot;Positivo&quot; and  /data/d_result2 =&quot;Positivo&quot;, &quot;Positivo&quot;,
+ if( /data/d_result1 =&quot;Positivo&quot; and  /data/d_result2 =&quot;Negativo&quot;, &quot;Indeterminate&quot;,
+ if( /data/d_result1 =&quot;Positivo&quot; and  /data/d_result2 =&quot;Invalid&quot;, &quot;Positivo&quot;,
+ if( /data/d_result1 =&quot;Invalid&quot; and  /data/d_result2 =&quot;Positivo&quot;, &quot;Positivo&quot;,
+ if( /data/d_result1 =&quot;Invalid&quot; and  /data/d_result2 =&quot;Invalid&quot;, &quot;Indeterminate&quot;,
+ if( /data/d_result1 =&quot;Invalid&quot; and  /data/d_result2 =&quot;Negativo&quot;, &quot;Negativo&quot;, &quot;Negativo&quot;)
+ )
+ )
+ )
+ )
+)" nodeset="/data/d_final_result" type="string"/>
+      <bind nodeset="/data/d_display_final_result" readonly="true()" type="string"/>
+      <bind nodeset="/data/d_Positivo_why_no_tx" relevant=" /data/d_final_result  = 'Positivo'" type="string"/>
+      <bind nodeset="/data/notes_part" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/d_recorderID">
+      <label ref="jr:itext('/data/d_recorderID:label')"/>
+      <hint ref="jr:itext('/data/d_recorderID:hint')"/>
+    </input>
+    <select1 ref="/data/d_region">
+      <label ref="jr:itext('/data/d_region:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_region/Bafata:label')"/>
+        <value>Bafata</value>
+      </item>
+    </select1>
+    <select1 ref="/data/d_district">
+      <label ref="jr:itext('/data/d_district:label')"/>
+      <itemset nodeset="instance('district_list')/root/item[region_list =  /data/d_region ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_cluster_name">
+      <label ref="jr:itext('/data/d_cluster_name:label')"/>
+      <itemset nodeset="instance('site_list')/root/item[district_list =  /data/d_district ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_cluster_id">
+      <label ref="jr:itext('/data/d_cluster_id:label')"/>
+      <itemset nodeset="instance('site_code')/root/item[site_list =  /data/d_cluster_name ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/data/d_IDType">
+      <label ref="jr:itext('/data/d_IDType:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_IDType/Scanner:label')"/>
+        <value>Scanner</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_IDType/ID_generation:label')"/>
+        <value>ID_generation</value>
+      </item>
+    </select1>
+    <input ref="/data/d_BarcodeID">
+      <label ref="jr:itext('/data/d_BarcodeID:label')"/>
+    </input>
+    <input ref="/data/d_generatedid">
+      <label ref="jr:itext('/data/d_generatedid:label')"/>
+      <hint ref="jr:itext('/data/d_generatedid:hint')"/>
+    </input>
+    <input ref="/data/d_lotnumber1">
+      <label ref="jr:itext('/data/d_lotnumber1:label')"/>
+    </input>
+    <select1 ref="/data/d_result1">
+      <label ref="jr:itext('/data/d_result1:label')"/>
+      <hint ref="jr:itext('/data/d_result1:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/d_result1/Positivo:label')"/>
+        <value>Positivo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_result1/Negativo:label')"/>
+        <value>Negativo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_result1/Invalido:label')"/>
+        <value>Invalido</value>
+      </item>
+    </select1>
+    <select ref="/data/d_why_invalid1">
+      <label ref="jr:itext('/data/d_why_invalid1:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid1/Sem.linha.de.controlo/acompanhamento:label')"/>
+        <value>Sem.linha.de.controlo/acompanhamento</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid1/Linha.de.controlo.descontínuo/parcial:label')"/>
+        <value>Linha.de.controlo.descontínuo/parcial</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid1/Dificuldade.na.absorção.da.amostra:label')"/>
+        <value>Dificuldade.na.absorção.da.amostra</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid1/Dificuldade.com.a.migração.de.amostras:label')"/>
+        <value>Dificuldade.com.a.migração.de.amostras</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid1/O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras):label')"/>
+        <value>O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid1/Volume.de.sangue.insuficiente.devido.à.pipetagem:label')"/>
+        <value>Volume.de.sangue.insuficiente.devido.à.pipetagem</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid1/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/d_why_invalid_other1">
+      <label ref="jr:itext('/data/d_why_invalid_other1:label')"/>
+    </input>
+    <input ref="/data/d_need_second_test">
+      <label ref="jr:itext('/data/d_need_second_test:label')"/>
+    </input>
+    <input ref="/data/d_lotnumber2">
+      <label ref="jr:itext('/data/d_lotnumber2:label')"/>
+    </input>
+    <select1 ref="/data/d_result2">
+      <label ref="jr:itext('/data/d_result2:label')"/>
+      <hint ref="jr:itext('/data/d_result2:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/d_result2/Positivo:label')"/>
+        <value>Positivo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_result2/Negativo:label')"/>
+        <value>Negativo</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_result2/Invalido:label')"/>
+        <value>Invalido</value>
+      </item>
+    </select1>
+    <select ref="/data/d_why_invalid2">
+      <label ref="jr:itext('/data/d_why_invalid2:label')"/>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid2/Sem.linha.de.controlo/acompanhamento:label')"/>
+        <value>Sem.linha.de.controlo/acompanhamento</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid2/Linha.de.controlo.descontínuo/parcial:label')"/>
+        <value>Linha.de.controlo.descontínuo/parcial</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid2/Dificuldade.na.absorção.da.amostra:label')"/>
+        <value>Dificuldade.na.absorção.da.amostra</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid2/Dificuldade.com.a.migração.de.amostras:label')"/>
+        <value>Dificuldade.com.a.migração.de.amostras</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid2/O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras):label')"/>
+        <value>O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid2/Volume.de.sangue.insuficiente.devido.à.pipetagem:label')"/>
+        <value>Volume.de.sangue.insuficiente.devido.à.pipetagem</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/d_why_invalid2/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/d_why_invalid_other2">
+      <label ref="jr:itext('/data/d_why_invalid_other2:label')"/>
+    </input>
+    <input ref="/data/d_display_final_result">
+      <label ref="jr:itext('/data/d_display_final_result:label')"/>
+    </input>
+    <input ref="/data/d_Positivo_why_no_tx">
+      <label ref="jr:itext('/data/d_Positivo_why_no_tx:label')"/>
+    </input>
+    <input ref="/data/notes_part">
+      <label ref="jr:itext('/data/notes_part:label')"/>
+    </input>
+  </h:body>
+</h:html>
