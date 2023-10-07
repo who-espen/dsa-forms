@@ -134,7 +134,7 @@
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
       <bind constraint=". &gt;= 6 and . &lt;= 7" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
-      <bind calculate="if( instance('__last-saved')/data/p_index !=null, instance('__last-saved')/data/p_index  + 1,1)" nodeset="/data/p_index" readonly="true()" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string"/>
+      <bind calculate="if( instance('__last-saved')/data/p_index !=null, instance('__last-saved')/data/p_index  + 1,1)" nodeset="/data/p_index" readonly="true()" relevant=" /data/p_consent  = 'Sim'" required="true()" type="int"/>
       <bind calculate="concat( /data/p_recorderID , '-',  /data/p_cluster_id , '-',  /data/p_index )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Sim'" required="true()" type="string" db_add_col_5="/data/p_cluster_id" db_add_col_6="."/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
@@ -178,6 +178,9 @@
     </input>
     <input ref="/data/p_how_long_lived">
       <label ref="jr:itext('/data/p_how_long_lived:label')"/>
+    </input>
+    <input ref="/data/p_index">
+      <label ref="jr:itext('/data/p_index:label')"/>
     </input>
     <input ref="/data/p_code_id">
       <label ref="jr:itext('/data/p_code_id:label')"/>
