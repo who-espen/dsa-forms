@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Sept 2023) ONCHO - 4. Info vecteur V2</h:title>
+    <model>
+
+      <instance>
+        <data id="cm_oncho_pre_stop_4_202309_info_vecteur_v2">
+          <v_recorder_id/>
+          <v_region/>
+          <v_district/>
+          <v_village/>
+          <v_village2/>
+          <v_village_id/>
+          <v_village_id2/>
+          <v_ecole/>
+          <v_ecole_id/>
+          <generated_note_name_11/>
+          <v_simulies/>
+          <v_intensite/>
+          <v_riviere/>
+          <v_presence_gite_larvaire/>
+          <v_notes/>
+          <v_start/>
+          <v_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/v_intensite/Modéré:label">
+            <value>Modéré</value>
+          </text>
+          <text id="/data/v_ecole_id:label">
+            <value>Code Ecole</value>
+          </text>
+          <text id="/data/v_presence_gite_larvaire/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/v_simulies:label">
+            <value>Etes-vous souvent piqués par les mouches noires (Mout-Mout ?)</value>
+          </text>
+          <text id="/data/v_district:label">
+            <value>District</value>
+          </text>
+          <text id="/data/v_presence_gite_larvaire/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/v_village2:label">
+            <value>Entrer le nom du village de remplassement</value>
+          </text>
+          <text id="/data/v_intensite/Insupportable:label">
+            <value>Insupportable</value>
+          </text>
+          <text id="/data/v_simulies/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/v_notes:label">
+            <value>Additional notes</value>
+          </text>
+          <text id="/data/v_intensite/Faible:label">
+            <value>Faible</value>
+          </text>
+          <text id="/data/v_intensite:label">
+            <value>Quelle est l'intensité des piqûres</value>
+          </text>
+          <text id="/data/v_ecole:label">
+            <value>Ecole</value>
+          </text>
+          <text id="/data/v_riviere/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/v_riviere:label">
+            <value>Y a-t-il une rivière, un cours d'eau dans ou près du village</value>
+          </text>
+          <text id="/data/v_village:label">
+            <value>Village</value>
+          </text>
+          <text id="/data/v_village_id:label">
+            <value>Code Village</value>
+          </text>
+          <text id="/data/v_presence_gite_larvaire:label">
+            <value>Y a-t-il un endroit de la rivière où l'eau coule vite et semble être blanche dans ou près du village</value>
+          </text>
+          <text id="/data/v_region:label">
+            <value>Région</value>
+          </text>
+          <text id="/data/v_village_id2:label">
+            <value>Code du village remplassé</value>
+          </text>
+          <text id="/data/v_recorder_id:label">
+            <value>Code Opérateur/Equipe</value>
+          </text>
+          <text id="/data/v_riviere/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/v_simulies/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/generated_note_name_11:label">
+            <value>INFORMATIONS SUR LE VECTEUR</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/v_recorder_id" required="true()" type="int"/>
+      <bind nodeset="/data/v_region" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/v_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/v_region"/>
+      <bind nodeset="/data/v_village" required="true()" type="string"  db_get="col_3" db_filter_by_col_2="/data/v_district"/>
+      <bind nodeset="/data/v_village2" relevant=" /data/v_village  = 'Autre'" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/v_district"/>
+      <bind nodeset="/data/v_village_id" relevant=" /data/v_village != 'Autre'" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/v_village"/>
+      <bind nodeset="/data/v_village_id2" relevant=" /data/v_village  = 'Autre'" required="true()" type="string" db_get="col_6" db_filter_by_col_2="/data/v_district"/>
+      <bind nodeset="/data/v_ecole" required="true()" type="string"/>
+      <bind nodeset="/data/v_ecole_id" required="true()" type="string"/>
+      <bind nodeset="/data/generated_note_name_11" readonly="true()" type="string"/>
+      <bind nodeset="/data/v_simulies" type="select1"/>
+      <bind nodeset="/data/v_intensite" relevant=" /data/v_simulies  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/v_riviere" type="select1"/>
+      <bind nodeset="/data/v_presence_gite_larvaire" type="select1"/>
+      <bind nodeset="/data/v_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/v_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/v_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/v_recorder_id">
+      <label ref="jr:itext('/data/v_recorder_id:label')"/>
+    </input>
+    <input ref="/data/v_region">
+      <label ref="jr:itext('/data/v_region:label')"/>
+    </input>
+    <input ref="/data/v_district">
+      <label ref="jr:itext('/data/v_district:label')"/>
+    </input>
+    <input ref="/data/v_village">
+      <label ref="jr:itext('/data/v_village:label')"/>
+    </input>
+    <input ref="/data/v_village2">
+      <label ref="jr:itext('/data/v_village2:label')"/>
+    </input>
+    <input ref="/data/v_village_id">
+      <label ref="jr:itext('/data/v_village_id:label')"/>
+    </input>
+    <input ref="/data/v_village_id2">
+      <label ref="jr:itext('/data/v_village_id2:label')"/>
+    </input>
+    <input ref="/data/v_ecole">
+      <label ref="jr:itext('/data/v_ecole:label')"/>
+    </input>
+    <input ref="/data/v_ecole_id">
+      <label ref="jr:itext('/data/v_ecole_id:label')"/>
+    </input>
+    <input ref="/data/generated_note_name_11">
+      <label ref="jr:itext('/data/generated_note_name_11:label')"/>
+    </input>
+    <select1 ref="/data/v_simulies">
+      <label ref="jr:itext('/data/v_simulies:label')"/>
+      <item>
+        <label ref="jr:itext('/data/v_simulies/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_simulies/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/v_intensite">
+      <label ref="jr:itext('/data/v_intensite:label')"/>
+      <item>
+        <label ref="jr:itext('/data/v_intensite/Faible:label')"/>
+        <value>Faible</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_intensite/Modéré:label')"/>
+        <value>Modéré</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_intensite/Insupportable:label')"/>
+        <value>Insupportable</value>
+      </item>
+    </select1>
+    <select1 ref="/data/v_riviere">
+      <label ref="jr:itext('/data/v_riviere:label')"/>
+      <item>
+        <label ref="jr:itext('/data/v_riviere/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_riviere/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/v_presence_gite_larvaire">
+      <label ref="jr:itext('/data/v_presence_gite_larvaire:label')"/>
+      <item>
+        <label ref="jr:itext('/data/v_presence_gite_larvaire/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/v_presence_gite_larvaire/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/v_notes">
+      <label ref="jr:itext('/data/v_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
