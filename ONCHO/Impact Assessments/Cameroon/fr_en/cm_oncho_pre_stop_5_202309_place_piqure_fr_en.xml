@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Sept 2023) ONCHO - 5 Place des piqûres V2</h:title>
+    <h:title>(Oct 2023) ONCHO - 5 Place des piqûres V3 (EN - FR)</h:title>
     <model>
 
       <instance>
-        <data id="cm_oncho_pre_stop_5_202309_place_piqure_v2">
+        <data id="cm_oncho_pre_stop_5_202309_place_piqure_fr_en_v3">
           <v_recorder_id/>
           <v_region/>
           <v_district/>
@@ -35,12 +35,18 @@
       </instance>
 
       <itext>
-        <translation default="true()" lang="French">
-          <text id="/data/v_village_id2:label">
-            <value>Code du village remplassé</value>
+        <translation lang="French">
+          <text id="/data/v_recorder_id:label">
+            <value>Code Opérateur/Equipe</value>
           </text>
-          <text id="/data/v_ecole_id:label">
-            <value>Code Ecole</value>
+          <text id="/data/v_region:label">
+            <value>Région</value>
+          </text>
+          <text id="/data/v_ecole:label">
+            <value>Ecole</value>
+          </text>
+          <text id="/data/v_notes:label">
+            <value>Additional notes</value>
           </text>
           <text id="/data/v_photo_site3:hint">
             <value>Optionel</value>
@@ -48,41 +54,85 @@
           <text id="/data/v_village_id:label">
             <value>Code Village</value>
           </text>
-          <text id="/data/v_notes:label">
-            <value>Additional notes</value>
-          </text>
-          <text id="/data/v_ecole:label">
-            <value>Ecole</value>
-          </text>
-          <text id="/data/v_photo_site2:label">
-            <value>Prener une deuxième photo</value>
-          </text>
           <text id="/data/v_photo_site:label">
             <value>Prener la photo du lieux où il y a le plus de piqûre</value>
           </text>
           <text id="/data/v_district:label">
             <value>District</value>
           </text>
-          <text id="/data/v_village:label">
-            <value>Village</value>
+          <text id="/data/v_village2:label">
+            <value>Entrer le nom du village de remplassement</value>
           </text>
-          <text id="/data/v_region:label">
-            <value>Région</value>
-          </text>
-          <text id="/data/v_recorder_id:label">
-            <value>Code Opérateur/Equipe</value>
-          </text>
-          <text id="/data/v_gps:label">
-            <value>GPS</value>
-          </text>
-          <text id="/data/v_photo_site3:label">
-            <value>Prener une troisième photo</value>
+          <text id="/data/v_village_id2:label">
+            <value>Code du village remplassé</value>
           </text>
           <text id="/data/v_photo_site2:hint">
             <value>Optionel</value>
           </text>
+          <text id="/data/v_ecole_id:label">
+            <value>Code Ecole</value>
+          </text>
+          <text id="/data/v_photo_site2:label">
+            <value>Prener une deuxième photo</value>
+          </text>
+          <text id="/data/v_photo_site3:label">
+            <value>Prener une troisième photo</value>
+          </text>
+          <text id="/data/v_gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/data/v_village:label">
+            <value>Village</value>
+          </text>
+        </translation>
+        <translation default="true()" lang="English">
+          <text id="/data/v_recorder_id:label">
+            <value>Code Operator/Team</value>
+          </text>
+          <text id="/data/v_region:label">
+            <value>Region</value>
+          </text>
+          <text id="/data/v_ecole:label">
+            <value>School</value>
+          </text>
+          <text id="/data/v_notes:label">
+            <value>Additional notes</value>
+          </text>
+          <text id="/data/v_photo_site3:hint">
+            <value>Optional</value>
+          </text>
+          <text id="/data/v_village_id:label">
+            <value>Village code</value>
+          </text>
+          <text id="/data/v_photo_site:label">
+            <value>Take a photo of the place with the most stings</value>
+          </text>
+          <text id="/data/v_district:label">
+            <value>District</value>
+          </text>
           <text id="/data/v_village2:label">
-            <value>Entrer le nom du village de remplassement</value>
+            <value>Enter the name of the village</value>
+          </text>
+          <text id="/data/v_village_id2:label">
+            <value>Replaced village code</value>
+          </text>
+          <text id="/data/v_photo_site2:hint">
+            <value>Optional</value>
+          </text>
+          <text id="/data/v_ecole_id:label">
+            <value>School code</value>
+          </text>
+          <text id="/data/v_photo_site2:label">
+            <value>Take a second photo</value>
+          </text>
+          <text id="/data/v_photo_site3:label">
+            <value>Take a third photo</value>
+          </text>
+          <text id="/data/v_gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/data/v_village:label">
+            <value>Village</value>
           </text>
         </translation>
       </itext>
@@ -104,6 +154,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/v_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/v_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      
     </model>
   </h:head>
   <h:body>
