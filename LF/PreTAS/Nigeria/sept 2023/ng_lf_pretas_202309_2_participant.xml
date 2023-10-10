@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Oct 2023) - 2. Nigeria - Pre TAS LF Participants Form V2</h:title>
+    <h:title>(Oct 2023) - 2. Nigeria - Pre TAS LF Participants Form V3</h:title>
     <model>
 
       <instance>
-        <data id="ng_lf_pretas_202309_2_participant_v2">
+        <data id="ng_lf_pretas_202309_2_participant_v3">
           <p_recorder_id/>
           <p_region/>
           <p_district/>
@@ -21,8 +21,8 @@
           <p_sex/>
           <p_age_yrs/>
           <p_how_long_lived/>
+          <p_id_sequence/>
           <p_code_id/>
-          <p_code_id2/>
           <p_ending_survey_note/>
           <p_notes/>
           <p_start/>
@@ -41,8 +41,8 @@
           <text id="/data/p_recorder_id:label">
             <value>Enter Recorder ID</value>
           </text>
-          <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>The age must be between 5 and 120 years</value>
+          <text id="/data/p_notes:label">
+            <value>Additional Notes</value>
           </text>
           <text id="/data/p_consent:label">
             <value>Does respondent provide consent?</value>
@@ -56,11 +56,8 @@
           <text id="/data/p_district:label">
             <value>Select your LGA</value>
           </text>
-          <text id="/data/p_code_id2:hint">
-            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
-          </text>
-          <text id="/data/p_code_id2:label">
-            <value>Enter the barcode again</value>
+          <text id="/data/p_id_sequence:label">
+            <value>Enter the sequence ID</value>
           </text>
           <text id="/data/p_cluster_id:label">
             <value>Select the site ID</value>
@@ -74,6 +71,9 @@
           <text id="/data/p_region:label">
             <value>Select your state</value>
           </text>
+          <text id="/data/p_id_sequence:jr:constraintMsg">
+            <value>The number must be greater than 0</value>
+          </text>
           <text id="/data/p_sex/Male:label">
             <value>Male</value>
           </text>
@@ -86,27 +86,23 @@
           <text id="/data/p_how_long_lived:label">
             <value>How many years has the respondent lived in the area?</value>
           </text>
-          <text id="/data/p_notes:label">
-            <value>Additional Notes</value>
+          <text id="/data/p_age_yrs:jr:constraintMsg">
+            <value>The age must be between 5 and 120 years</value>
           </text>
           <text id="/data/p_recorder_id:hint">
             <value>If you are the only recorder on your team, this may be called a "team ID". Recorder ID is the 2-digit code assigned to you or your team.</value>
-          </text>
-          <text id="/data/p_code_id2:jr:constraintMsg">
-            <value>The barcode must be the same</value>
           </text>
           <text id="/data/p_sex/Female:label">
             <value>Female</value>
           </text>
           <text id="/data/p_code_id:label">
-            <value>Get the barcode</value>
+            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) administered</value>
           </text>
           <text id="/data/p_consent/No:label">
             <value>No</value>
           </text>
         </translation>
       </itext>
-
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorder_id:jr:constraintMsg')" nodeset="/data/p_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/p_region" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_region"/>
@@ -116,8 +112,8 @@
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
       <bind constraint=". &gt;= 5 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
-      <bind nodeset="/data/p_code_id" relevant=" /data/p_consent  = 'Yes'" required="true()" type="barcode"/>
-      <bind constraint=". =  /data/p_code_id " jr:constraintMsg="jr:itext('/data/p_code_id2:jr:constraintMsg')" nodeset="/data/p_code_id2" relevant=" /data/p_consent  = 'Yes'" required="true()" type="barcode" db_add_col_4="/data/p_cluster_id" db_add_col_5="."/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="jr:itext('/data/p_id_sequence:jr:constraintMsg')" nodeset="/data/p_id_sequence" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind calculate="concat( /data/p_recorder_id , '-',  /data/p_cluster_id , '-',  /data/p_id_sequence )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string" db_add_col_4="/data/p_cluster_id" db_add_col_5="."/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'No'" type="string"/>
       <bind nodeset="/data/p_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
@@ -170,12 +166,11 @@
     <input ref="/data/p_how_long_lived">
       <label ref="jr:itext('/data/p_how_long_lived:label')"/>
     </input>
+    <input ref="/data/p_id_sequence">
+      <label ref="jr:itext('/data/p_id_sequence:label')"/>
+    </input>
     <input ref="/data/p_code_id">
       <label ref="jr:itext('/data/p_code_id:label')"/>
-    </input>
-    <input ref="/data/p_code_id2">
-      <label ref="jr:itext('/data/p_code_id2:label')"/>
-      <hint ref="jr:itext('/data/p_code_id2:hint')"/>
     </input>
     <input ref="/data/p_ending_survey_note">
       <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
