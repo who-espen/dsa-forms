@@ -1,0 +1,4485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<h:head>
+		<h:title>(Juin 2022) oncho OEM - 3. Formulaire Resultat OV16 V2</h:title>
+		<model >
+			<itext>
+				<translation default="true()" lang="French">
+					<text id="/data/r_recorderID:jr:constraintMsg">
+						<value>Code sur 2 chiffres uniquement</value>
+					</text>
+					<text id="/data/r_recorderID:label">
+						<value>1. Veuillez entrer l'identifiant de l'enregistreur:</value>
+					</text>
+					<text id="/data/r_recorderID:hint">
+						<value>L'identifiant de l'enregistreur est un code à 2 chiffres qui vous a été attribué, à vous ou à votre équipe.</value>
+					</text>
+					<text id="/data/r_district:label">
+						<value>2. Sélectionnez le district :</value>
+					</text>
+					<text id="/data/r_district/Boffa:label">
+						<value>Boffa</value>
+					</text>
+					<text id="/data/r_district/Boke:label">
+						<value>Boke</value>
+					</text>
+					<text id="/data/r_district/Coyah:label">
+						<value>Coyah</value>
+					</text>
+					<text id="/data/r_district/Dalaba:label">
+						<value>Dalaba</value>
+					</text>
+					<text id="/data/r_district/Dubreka:label">
+						<value>Dubreka</value>
+					</text>
+					<text id="/data/r_district/Fria:label">
+						<value>Fria</value>
+					</text>
+					<text id="/data/r_district/Labe:label">
+						<value>Labe</value>
+					</text>
+					<text id="/data/r_district/Pita:label">
+						<value>Pita</value>
+					</text>
+					<text id="/data/r_district/Telimele:label">
+						<value>Telimele</value>
+					</text>
+					<text id="/data/r_sub_district:label">
+						<value>3. Sélectionnez la sous-préfecture :</value>
+					</text>
+					<text id="/data/r_cluster_name:label">
+						<value>4. Sélectionnez le village ou communauté</value>
+					</text>
+					<text id="/data/r_river_name:label">
+						<value>5. Sélectionnez la rivière</value>
+					</text>
+					<text id="/data/r_ID_method:label">
+						<value>6. Quelle méthode pour entrer le Code unique du participant?</value>
+					</text>
+					<text id="/data/r_ID_method/Scanner:label">
+						<value>Scanner le QR Code</value>
+					</text>
+					<text id="/data/r_ID_method/Manual:label">
+						<value>Entrer Manuellement le code (En cas de problème avec votre scanner de code QR)</value>
+					</text>
+					<text id="/data/r_BarcodeID1:jr:constraintMsg">
+						<value>Le format de ce code est incorrect. Exemple de format correct: GNE_ABC_oncho_123_01234</value>
+					</text>
+					<text id="/data/r_BarcodeID1:label">
+						<value>6.a. Veuillez scanner le QR code pour récupérer l'identifiant unique du participant</value>
+					</text>
+					<text id="/data/r_BarcodeID1:hint">
+						<value>Format du code: GNE_ABC_oncho_nnn_nnnnn où ABC représente les 3 premières lettres du district en majuscule, nnn: le code du village ou communauté sur 3 chiffres et nnnnn: le numéro d'ordre du participant sur 5 chiffres.</value>
+					</text>
+					<text id="/data/r_BarcodeID2:jr:constraintMsg">
+						<value>Le format de ce code est incorrect. Exemple de format correct: GNE_ABC_oncho_123_01234</value>
+					</text>
+					<text id="/data/r_BarcodeID2:label">
+						<value>6.b. Veuillez entrer manuellement le code unique du participant</value>
+					</text>
+					<text id="/data/r_BarcodeID2:hint">
+						<value>Format du code: GNE_ABC_oncho_nnn_nnnnn où ABC doit-être remplacé par les 3 premières lettres du district en majuscule, nnn par le code du village ou communauté sur 3 chiffres et nnnnn par le numéro d'ordre du participant sur 5 chiffres.</value>
+					</text>
+					<text id="/data/r_ov16:label">
+						<value>7. Résultat du test OV16</value>
+					</text>
+					<text id="/data/r_ov16/Positif:label">
+						<value>Positif</value>
+					</text>
+					<text id="/data/r_ov16/Negatif:label">
+						<value>Négatif</value>
+					</text>
+					<text id="/data/r_ov16/Invalide:label">
+						<value>Invalide (y compris les erreurs de test et le sang insuffisant)</value>
+					</text>
+					<text id="/data/r_ov16/Refuse:label">
+						<value>Refusé (retrait du consentement)</value>
+					</text>
+					<text id="/data/r_Notes:label">
+						<value>8. Notes Additionnelles</value>
+					</text>
+					<text id="yesNoDontKnow-0">
+						<value>Oui</value>
+					</text>
+					<text id="yesNoDontKnow-1">
+						<value>Non</value>
+					</text>
+					<text id="yesNoDontKnow-2">
+						<value>Ne sais pas</value>
+					</text>
+					<text id="yesNo-0">
+						<value>Oui</value>
+					</text>
+					<text id="yesNo-1">
+						<value>Non</value>
+					</text>
+					<text id="ID_method_list-0">
+						<value>Scanner le QR Code</value>
+					</text>
+					<text id="ID_method_list-1">
+						<value>Entrer Manuellement le code (En cas de problème avec votre scanner de code QR)</value>
+					</text>
+					<text id="results-0">
+						<value>Positif</value>
+					</text>
+					<text id="results-1">
+						<value>Négatif</value>
+					</text>
+					<text id="results-2">
+						<value>Invalide (y compris les erreurs de test et le sang insuffisant)</value>
+					</text>
+					<text id="results-3">
+						<value>Refusé (retrait du consentement)</value>
+					</text>
+					<text id="why_invalid-0">
+						<value>Absence de ligne témoin</value>
+					</text>
+					<text id="why_invalid-1">
+						<value>Ligne témoin brisées/partielle</value>
+					</text>
+					<text id="why_invalid-2">
+						<value>Difficulté d'absorption d'échantillon</value>
+					</text>
+					<text id="why_invalid-3">
+						<value>Difficulté de migration de l'échantillon</value>
+					</text>
+					<text id="why_invalid-4">
+						<value>Trace de sang persiste</value>
+					</text>
+					<text id="why_invalid-5">
+						<value>Insuffisance du volume de sang due à la pipette</value>
+					</text>
+					<text id="why_invalid-6">
+						<value>Autre (expliquer)</value>
+					</text>
+					<text id="district_list-0">
+						<value>Boffa</value>
+					</text>
+					<text id="district_list-1">
+						<value>Boke</value>
+					</text>
+					<text id="district_list-2">
+						<value>Coyah</value>
+					</text>
+					<text id="district_list-3">
+						<value>Dalaba</value>
+					</text>
+					<text id="district_list-4">
+						<value>Dubreka</value>
+					</text>
+					<text id="district_list-5">
+						<value>Fria</value>
+					</text>
+					<text id="district_list-6">
+						<value>Labe</value>
+					</text>
+					<text id="district_list-7">
+						<value>Pita</value>
+					</text>
+					<text id="district_list-8">
+						<value>Telimele</value>
+					</text>
+					<text id="sub_district_list-0">
+						<value>Bady</value>
+					</text>
+					<text id="sub_district_list-1">
+						<value>Banguigny</value>
+					</text>
+					<text id="sub_district_list-2">
+						<value>Banguinet</value>
+					</text>
+					<text id="sub_district_list-3">
+						<value>Bantignel</value>
+					</text>
+					<text id="sub_district_list-4">
+						<value>Bodie</value>
+					</text>
+					<text id="sub_district_list-5">
+						<value>Boffa Centre</value>
+					</text>
+					<text id="sub_district_list-6">
+						<value>Dabiss</value>
+					</text>
+					<text id="sub_district_list-7">
+						<value>Dalaba Centre</value>
+					</text>
+					<text id="sub_district_list-8">
+						<value>Dalein</value>
+					</text>
+					<text id="sub_district_list-9">
+						<value>Daralabe</value>
+					</text>
+					<text id="sub_district_list-10">
+						<value>Ditinn</value>
+					</text>
+					<text id="sub_district_list-11">
+						<value>Donghol Touma</value>
+					</text>
+					<text id="sub_district_list-12">
+						<value>Douprou</value>
+					</text>
+					<text id="sub_district_list-13">
+						<value>Fily</value>
+					</text>
+					<text id="sub_district_list-14">
+						<value>Gougoudje</value>
+					</text>
+					<text id="sub_district_list-15">
+						<value>Kankalabé</value>
+					</text>
+					<text id="sub_district_list-16">
+						<value>Kébaly</value>
+					</text>
+					<text id="sub_district_list-17">
+						<value>Kollet</value>
+					</text>
+					<text id="sub_district_list-18">
+						<value>Korrera</value>
+					</text>
+					<text id="sub_district_list-19">
+						<value>Kouramangui</value>
+					</text>
+					<text id="sub_district_list-20">
+						<value>Kouriah</value>
+					</text>
+					<text id="sub_district_list-21">
+						<value>Lisso</value>
+					</text>
+					<text id="sub_district_list-22">
+						<value>Mankountan</value>
+					</text>
+					<text id="sub_district_list-23">
+						<value>Missira</value>
+					</text>
+					<text id="sub_district_list-24">
+						<value>Mombeya</value>
+					</text>
+					<text id="sub_district_list-25">
+						<value>Ouassou</value>
+					</text>
+					<text id="sub_district_list-26">
+						<value>Pita centre</value>
+					</text>
+					<text id="sub_district_list-27">
+						<value>Popodara</value>
+					</text>
+					<text id="sub_district_list-28">
+						<value>Sangaredi</value>
+					</text>
+					<text id="sub_district_list-29">
+						<value>Sinta</value>
+					</text>
+					<text id="sub_district_list-30">
+						<value>Sintaly</value>
+					</text>
+					<text id="sub_district_list-31">
+						<value>Tamita</value>
+					</text>
+					<text id="sub_district_list-32">
+						<value>Tanene</value>
+					</text>
+					<text id="sub_district_list-33">
+						<value>Tarihoye</value>
+					</text>
+					<text id="sub_district_list-34">
+						<value>Telimele Centre</value>
+					</text>
+					<text id="sub_district_list-35">
+						<value>Timbi Touni</value>
+					</text>
+					<text id="sub_district_list-36">
+						<value>Tondon</value>
+					</text>
+					<text id="sub_district_list-37">
+						<value>Tormelin</value>
+					</text>
+					<text id="sub_district_list-38">
+						<value>Tougnifily</value>
+					</text>
+					<text id="sub_district_list-39">
+						<value>Tountouroun</value>
+					</text>
+					<text id="sub_district_list-40">
+						<value>Wonkifong</value>
+					</text>
+					<text id="sub_district_list-41">
+						<value>Tanene (Dubreka)</value>
+					</text>
+					<text id="village_list-0">
+						<value>Amadouya tanene</value>
+					</text>
+					<text id="village_list-1">
+						<value>Bady</value>
+					</text>
+					<text id="village_list-2">
+						<value>BADY CENTRE</value>
+					</text>
+					<text id="village_list-3">
+						<value>Baguiya</value>
+					</text>
+					<text id="village_list-4">
+						<value>Bakidhèra</value>
+					</text>
+					<text id="village_list-5">
+						<value>Balaya</value>
+					</text>
+					<text id="village_list-6">
+						<value>Balou</value>
+					</text>
+					<text id="village_list-7">
+						<value>Bambewel</value>
+					</text>
+					<text id="village_list-8">
+						<value>Bandegnidé</value>
+					</text>
+					<text id="village_list-9">
+						<value>Bangalan</value>
+					</text>
+					<text id="village_list-10">
+						<value>Bangouya barrage</value>
+					</text>
+					<text id="village_list-11">
+						<value>Bangouya centre</value>
+					</text>
+					<text id="village_list-12">
+						<value>BARA LANDÈ</value>
+					</text>
+					<text id="village_list-13">
+						<value>BARALANDÈ</value>
+					</text>
+					<text id="village_list-14">
+						<value>BARKERÈ</value>
+					</text>
+					<text id="village_list-15">
+						<value>Barrymakhadé</value>
+					</text>
+					<text id="village_list-16">
+						<value>Beela</value>
+					</text>
+					<text id="village_list-17">
+						<value>Bendè</value>
+					</text>
+					<text id="village_list-18">
+						<value>BENNA</value>
+					</text>
+					<text id="village_list-19">
+						<value>Bhoulal</value>
+					</text>
+					<text id="village_list-20">
+						<value>Bingalima</value>
+					</text>
+					<text id="village_list-21">
+						<value>Boboya</value>
+					</text>
+					<text id="village_list-22">
+						<value>Bodie</value>
+					</text>
+					<text id="village_list-23">
+						<value>Bosso</value>
+					</text>
+					<text id="village_list-24">
+						<value>Boudoun ami</value>
+					</text>
+					<text id="village_list-25">
+						<value>Bouramaya</value>
+					</text>
+					<text id="village_list-26">
+						<value>BOURAMAYAH TAFORY</value>
+					</text>
+					<text id="village_list-27">
+						<value>Bourouwel</value>
+					</text>
+					<text id="village_list-28">
+						<value>BOUSSOURA (Banguinet)</value>
+					</text>
+					<text id="village_list-29">
+						<value>Boussoura (Dalaba Centre)</value>
+					</text>
+					<text id="village_list-30">
+						<value>Brouwel</value>
+					</text>
+					<text id="village_list-31">
+						<value>Carrefour Kolon</value>
+					</text>
+					<text id="village_list-32">
+						<value>Congo Hafia</value>
+					</text>
+					<text id="village_list-33">
+						<value>Dagui</value>
+					</text>
+					<text id="village_list-34">
+						<value>Dalabaya</value>
+					</text>
+					<text id="village_list-35">
+						<value>Dankolo</value>
+					</text>
+					<text id="village_list-36">
+						<value>Dar-Es-Salam</value>
+					</text>
+					<text id="village_list-37">
+						<value>Daro</value>
+					</text>
+					<text id="village_list-38">
+						<value>Darra</value>
+					</text>
+					<text id="village_list-39">
+						<value>Dembeleya</value>
+					</text>
+					<text id="village_list-40">
+						<value>Diabere</value>
+					</text>
+					<text id="village_list-41">
+						<value>Diguilin</value>
+					</text>
+					<text id="village_list-42">
+						<value>DINYAMA</value>
+					</text>
+					<text id="village_list-43">
+						<value>DIWÈ LOUMBA WELTO</value>
+					</text>
+					<text id="village_list-44">
+						<value>Djakoudara</value>
+					</text>
+					<text id="village_list-45">
+						<value>Djayilol</value>
+					</text>
+					<text id="village_list-46">
+						<value>Djindji</value>
+					</text>
+					<text id="village_list-47">
+						<value>Djolitougui</value>
+					</text>
+					<text id="village_list-48">
+						<value>DOBA</value>
+					</text>
+					<text id="village_list-49">
+						<value>DOLA</value>
+					</text>
+					<text id="village_list-50">
+						<value>Dolonki</value>
+					</text>
+					<text id="village_list-51">
+						<value>DONDOLY FANGNI</value>
+					</text>
+					<text id="village_list-52">
+						<value>Donghui</value>
+					</text>
+					<text id="village_list-53">
+						<value>DONSOYAH</value>
+					</text>
+					<text id="village_list-54">
+						<value>DOROYI CENTRE</value>
+					</text>
+					<text id="village_list-55">
+						<value>Doubhy centre</value>
+					</text>
+					<text id="village_list-56">
+						<value>DOUMOUN KOGON</value>
+					</text>
+					<text id="village_list-57">
+						<value>Dounkaya</value>
+					</text>
+					<text id="village_list-58">
+						<value>Dow Bodie</value>
+					</text>
+					<text id="village_list-59">
+						<value>Dowoubala</value>
+					</text>
+					<text id="village_list-60">
+						<value>FALABA</value>
+					</text>
+					<text id="village_list-61">
+						<value>Falissare</value>
+					</text>
+					<text id="village_list-62">
+						<value>FANDJETA</value>
+					</text>
+					<text id="village_list-63">
+						<value>Fanfaranyin</value>
+					</text>
+					<text id="village_list-64">
+						<value>FARINYA</value>
+					</text>
+					<text id="village_list-65">
+						<value>Fidoula</value>
+					</text>
+					<text id="village_list-66">
+						<value>Filo Bowal N'dantary</value>
+					</text>
+					<text id="village_list-67">
+						<value>Fokhogbie</value>
+					</text>
+					<text id="village_list-68">
+						<value>Fôto</value>
+					</text>
+					<text id="village_list-69">
+						<value>Fotokhounyi</value>
+					</text>
+					<text id="village_list-70">
+						<value>FOTON FOERT</value>
+					</text>
+					<text id="village_list-71">
+						<value>FOUNDENKHOURÈ</value>
+					</text>
+					<text id="village_list-72">
+						<value>FOUNNA KHOURÉ</value>
+					</text>
+					<text id="village_list-73">
+						<value>Foutaya</value>
+					</text>
+					<text id="village_list-74">
+						<value>FRIA VILLAGE</value>
+					</text>
+					<text id="village_list-75">
+						<value>GABAYAH</value>
+					</text>
+					<text id="village_list-76">
+						<value>GABITÈT</value>
+					</text>
+					<text id="village_list-77">
+						<value>Gadathiangui</value>
+					</text>
+					<text id="village_list-78">
+						<value>Garadara</value>
+					</text>
+					<text id="village_list-79">
+						<value>GARKABEYA</value>
+					</text>
+					<text id="village_list-80">
+						<value>Gbalan</value>
+					</text>
+					<text id="village_list-81">
+						<value>GNAMAKOÛDJÉ</value>
+					</text>
+					<text id="village_list-82">
+						<value>GOBIRET</value>
+					</text>
+					<text id="village_list-83">
+						<value>Goungan</value>
+					</text>
+					<text id="village_list-84">
+						<value>Guildhé centre</value>
+					</text>
+					<text id="village_list-85">
+						<value>Hafia (Dalaba Centre)</value>
+					</text>
+					<text id="village_list-86">
+						<value>Hafia (Ditinn)</value>
+					</text>
+					<text id="village_list-87">
+						<value>Herrokassa</value>
+					</text>
+					<text id="village_list-88">
+						<value>Hinde</value>
+					</text>
+					<text id="village_list-89">
+						<value>Hoore Kassa</value>
+					</text>
+					<text id="village_list-90">
+						<value>Hore Wouloun</value>
+					</text>
+					<text id="village_list-91">
+						<value>Horretayile</value>
+					</text>
+					<text id="village_list-92">
+						<value>Ibouniabe</value>
+					</text>
+					<text id="village_list-93">
+						<value>Kaaba</value>
+					</text>
+					<text id="village_list-94">
+						<value>Kabidjoumaya</value>
+					</text>
+					<text id="village_list-95">
+						<value>KAFA</value>
+					</text>
+					<text id="village_list-96">
+						<value>Kafimma</value>
+					</text>
+					<text id="village_list-97">
+						<value>Kaleta</value>
+					</text>
+					<text id="village_list-98">
+						<value>KANDJA FARA DABIS</value>
+					</text>
+					<text id="village_list-99">
+						<value>Kansa Gawol</value>
+					</text>
+					<text id="village_list-100">
+						<value>Kansakouma</value>
+					</text>
+					<text id="village_list-101">
+						<value>Kansiguirdé</value>
+					</text>
+					<text id="village_list-102">
+						<value>Kansodji</value>
+					</text>
+					<text id="village_list-103">
+						<value>Kaporo</value>
+					</text>
+					<text id="village_list-104">
+						<value>KARDÈ</value>
+					</text>
+					<text id="village_list-105">
+						<value>Kassabinde Bowal</value>
+					</text>
+					<text id="village_list-106">
+						<value>KAWEKI</value>
+					</text>
+					<text id="village_list-107">
+						<value>Kawosso</value>
+					</text>
+					<text id="village_list-108">
+						<value>Kegna Hinde</value>
+					</text>
+					<text id="village_list-109">
+						<value>Kewol</value>
+					</text>
+					<text id="village_list-110">
+						<value>Khorié</value>
+					</text>
+					<text id="village_list-111">
+						<value>KHOURKHAN</value>
+					</text>
+					<text id="village_list-112">
+						<value>Kignan</value>
+					</text>
+					<text id="village_list-113">
+						<value>Kila</value>
+					</text>
+					<text id="village_list-114">
+						<value>KIRA TAGUI</value>
+					</text>
+					<text id="village_list-115">
+						<value>Kiret</value>
+					</text>
+					<text id="village_list-116">
+						<value>KOBE SOODÈ</value>
+					</text>
+					<text id="village_list-117">
+						<value>Kogon lenguey</value>
+					</text>
+					<text id="village_list-118">
+						<value>Kogonlenguiwi</value>
+					</text>
+					<text id="village_list-119">
+						<value>Kogonpassague</value>
+					</text>
+					<text id="village_list-120">
+						<value>Kokoulo</value>
+					</text>
+					<text id="village_list-121">
+						<value>KOLABOUGNI</value>
+					</text>
+					<text id="village_list-122">
+						<value>Kolon</value>
+					</text>
+					<text id="village_list-123">
+						<value>Kondenko</value>
+					</text>
+					<text id="village_list-124">
+						<value>Korrera centre</value>
+					</text>
+					<text id="village_list-125">
+						<value>Koumbaya</value>
+					</text>
+					<text id="village_list-126">
+						<value>Koundidè</value>
+					</text>
+					<text id="village_list-127">
+						<value>KOUNFA</value>
+					</text>
+					<text id="village_list-128">
+						<value>KOUNTIA</value>
+					</text>
+					<text id="village_list-129">
+						<value>Kourassoro</value>
+					</text>
+					<text id="village_list-130">
+						<value>Koussy</value>
+					</text>
+					<text id="village_list-131">
+						<value>Lahoya</value>
+					</text>
+					<text id="village_list-132">
+						<value>Lamy</value>
+					</text>
+					<text id="village_list-133">
+						<value>Legue</value>
+					</text>
+					<text id="village_list-134">
+						<value>LEGUELOUGOU</value>
+					</text>
+					<text id="village_list-135">
+						<value>Leibowal</value>
+					</text>
+					<text id="village_list-136">
+						<value>Ley fello</value>
+					</text>
+					<text id="village_list-137">
+						<value>Ley korima</value>
+					</text>
+					<text id="village_list-138">
+						<value>Leythandi</value>
+					</text>
+					<text id="village_list-139">
+						<value>Lilin</value>
+					</text>
+					<text id="village_list-140">
+						<value>Linguerin</value>
+					</text>
+					<text id="village_list-141">
+						<value>LISSO CENTRE</value>
+					</text>
+					<text id="village_list-142">
+						<value>Lonyi</value>
+					</text>
+					<text id="village_list-143">
+						<value>Louguel</value>
+					</text>
+					<text id="village_list-144">
+						<value>Mabhè</value>
+					</text>
+					<text id="village_list-145">
+						<value>Madina Carrefoure</value>
+					</text>
+					<text id="village_list-146">
+						<value>Madina dibaya</value>
+					</text>
+					<text id="village_list-147">
+						<value>Madina Kansaghi</value>
+					</text>
+					<text id="village_list-148">
+						<value>Madina Kebeya</value>
+					</text>
+					<text id="village_list-149">
+						<value>Madina Saare</value>
+					</text>
+					<text id="village_list-150">
+						<value>MADINA TOULOUN</value>
+					</text>
+					<text id="village_list-151">
+						<value>MANDA SÔDÈ</value>
+					</text>
+					<text id="village_list-152">
+						<value>MANGODJÈ</value>
+					</text>
+					<text id="village_list-153">
+						<value>Megnekouré</value>
+					</text>
+					<text id="village_list-154">
+						<value>MISSIDÉ BOULÈREYAH</value>
+					</text>
+					<text id="village_list-155">
+						<value>MISSIRA</value>
+					</text>
+					<text id="village_list-156">
+						<value>Moriakhory</value>
+					</text>
+					<text id="village_list-157">
+						<value>MORY FODEYAH</value>
+					</text>
+					<text id="village_list-158">
+						<value>Ndanta</value>
+					</text>
+					<text id="village_list-159">
+						<value>NDiraye</value>
+					</text>
+					<text id="village_list-160">
+						<value>Ningué Matodhé</value>
+					</text>
+					<text id="village_list-161">
+						<value>Nyiwa</value>
+					</text>
+					<text id="village_list-162">
+						<value>Paniboun pont</value>
+					</text>
+					<text id="village_list-163">
+						<value>Parawaly</value>
+					</text>
+					<text id="village_list-164">
+						<value>Peliga</value>
+					</text>
+					<text id="village_list-165">
+						<value>Pelloye</value>
+					</text>
+					<text id="village_list-166">
+						<value>Poutétéya</value>
+					</text>
+					<text id="village_list-167">
+						<value>QUATRE PONT</value>
+					</text>
+					<text id="village_list-168">
+						<value>Saagaran</value>
+					</text>
+					<text id="village_list-169">
+						<value>SABENDE KOLOBEYAH</value>
+					</text>
+					<text id="village_list-170">
+						<value>SALAKHOU</value>
+					</text>
+					<text id="village_list-171">
+						<value>Saleya</value>
+					</text>
+					<text id="village_list-172">
+						<value>SAMAN SIRA</value>
+					</text>
+					<text id="village_list-173">
+						<value>SAMBAYA</value>
+					</text>
+					<text id="village_list-174">
+						<value>Sapepo</value>
+					</text>
+					<text id="village_list-175">
+						<value>Saraya (Douprou)</value>
+					</text>
+					<text id="village_list-176">
+						<value>Saraya (Sintaly)</value>
+					</text>
+					<text id="village_list-177">
+						<value>SARAYA TEMBE PONT</value>
+					</text>
+					<text id="village_list-178">
+						<value>Sarbacane quartier centre</value>
+					</text>
+					<text id="village_list-179">
+						<value>Satina</value>
+					</text>
+					<text id="village_list-180">
+						<value>Seriya</value>
+					</text>
+					<text id="village_list-181">
+						<value>Silaya</value>
+					</text>
+					<text id="village_list-182">
+						<value>SIMBAKHOULOUN</value>
+					</text>
+					<text id="village_list-183">
+						<value>Sintaly centre</value>
+					</text>
+					<text id="village_list-184">
+						<value>SINTHOUROU</value>
+					</text>
+					<text id="village_list-185">
+						<value>Sinthourou Almamy</value>
+					</text>
+					<text id="village_list-186">
+						<value>Sira</value>
+					</text>
+					<text id="village_list-187">
+						<value>Sokoutou</value>
+					</text>
+					<text id="village_list-188">
+						<value>Songoron</value>
+					</text>
+					<text id="village_list-189">
+						<value>Sorondo</value>
+					</text>
+					<text id="village_list-190">
+						<value>Sougue</value>
+					</text>
+					<text id="village_list-191">
+						<value>Souloudji (Sinta)</value>
+					</text>
+					<text id="village_list-192">
+						<value>Souloudji (Telimele Centre)</value>
+					</text>
+					<text id="village_list-193">
+						<value>Soulouwoye</value>
+					</text>
+					<text id="village_list-194">
+						<value>Soumbourou</value>
+					</text>
+					<text id="village_list-195">
+						<value>Tabily</value>
+					</text>
+					<text id="village_list-196">
+						<value>Tafory</value>
+					</text>
+					<text id="village_list-197">
+						<value>TAMBONI</value>
+					</text>
+					<text id="village_list-198">
+						<value>TANENE</value>
+					</text>
+					<text id="village_list-199">
+						<value>TANTOL</value>
+					</text>
+					<text id="village_list-200">
+						<value>Tchanghè</value>
+					</text>
+					<text id="village_list-201">
+						<value>Tchangui</value>
+					</text>
+					<text id="village_list-202">
+						<value>Telikoto</value>
+					</text>
+					<text id="village_list-203">
+						<value>Telirè</value>
+					</text>
+					<text id="village_list-204">
+						<value>THIAGHALLE</value>
+					</text>
+					<text id="village_list-205">
+						<value>Thiankoye (Kouramangui)</value>
+					</text>
+					<text id="village_list-206">
+						<value>Thiankoye (Sinta)</value>
+					</text>
+					<text id="village_list-207">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="village_list-208">
+						<value>Toguilon Kondéya</value>
+					</text>
+					<text id="village_list-209">
+						<value>Tolou</value>
+					</text>
+					<text id="village_list-210">
+						<value>Tondon 2</value>
+					</text>
+					<text id="village_list-211">
+						<value>Tossa</value>
+					</text>
+					<text id="village_list-212">
+						<value>Tougnifily centre</value>
+					</text>
+					<text id="village_list-213">
+						<value>Toullelyereya</value>
+					</text>
+					<text id="village_list-214">
+						<value>Touriya</value>
+					</text>
+					<text id="village_list-215">
+						<value>Wanssan</value>
+					</text>
+					<text id="village_list-216">
+						<value>WESSEN</value>
+					</text>
+					<text id="village_list-217">
+						<value>Wèyèkhôri</value>
+					</text>
+					<text id="village_list-218">
+						<value>Wondékhouré</value>
+					</text>
+					<text id="village_list-219">
+						<value>WONDETY</value>
+					</text>
+					<text id="village_list-220">
+						<value>Wondidhè</value>
+					</text>
+					<text id="village_list-221">
+						<value>Yale</value>
+					</text>
+					<text id="village_list-222">
+						<value>Yatiyi</value>
+					</text>
+					<text id="village_list-223">
+						<value>Yattarayah</value>
+					</text>
+					<text id="village_list-224">
+						<value>YENGUISSA</value>
+					</text>
+					<text id="village_list-225">
+						<value>Yèrèyadi</value>
+					</text>
+					<text id="village_list-226">
+						<value>YIMMAYAH</value>
+					</text>
+					<text id="village_list-227">
+						<value>YINTERY</value>
+					</text>
+					<text id="village_list-228">
+						<value>BOURAMAYAH TAFORY</value>
+					</text>
+					<text id="village_list-229">
+						<value>QUATRE PONT</value>
+					</text>
+					<text id="river_list-0">
+						<value>affluent Konkoure</value>
+					</text>
+					<text id="river_list-1">
+						<value>affluent Konkoure</value>
+					</text>
+					<text id="river_list-2">
+						<value>affluent Konkoure</value>
+					</text>
+					<text id="river_list-3">
+						<value>affluent Konkoure</value>
+					</text>
+					<text id="river_list-4">
+						<value>affluent Konkoure</value>
+					</text>
+					<text id="river_list-5">
+						<value>affluent Konkoure</value>
+					</text>
+					<text id="river_list-6">
+						<value>affluent Tene/Konkouré</value>
+					</text>
+					<text id="river_list-7">
+						<value>affluent Tene/Konkouré</value>
+					</text>
+					<text id="river_list-8">
+						<value>affluent Tene/Konkouré</value>
+					</text>
+					<text id="river_list-9">
+						<value>affluent Tene/Konkouré</value>
+					</text>
+					<text id="river_list-10">
+						<value>affluent Tene/Konkouré</value>
+					</text>
+					<text id="river_list-11">
+						<value>affluent Tene/Konkouré</value>
+					</text>
+					<text id="river_list-12">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-13">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-14">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-15">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-16">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-17">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-18">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-19">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-20">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-21">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-22">
+						<value>BADY/KONKOURE</value>
+					</text>
+					<text id="river_list-23">
+						<value>BAGUINET/FATALA</value>
+					</text>
+					<text id="river_list-24">
+						<value>BAGUINET/FATALA</value>
+					</text>
+					<text id="river_list-25">
+						<value>BANGUIGNE/FATALA</value>
+					</text>
+					<text id="river_list-26">
+						<value>BANGUIGNE/FATALA</value>
+					</text>
+					<text id="river_list-27">
+						<value>BANGUIGNE/FATALA</value>
+					</text>
+					<text id="river_list-28">
+						<value>BANGUIGNE/FATALA</value>
+					</text>
+					<text id="river_list-29">
+						<value>BATAFON/TINGUILITA</value>
+					</text>
+					<text id="river_list-30">
+						<value>BATAFON/TINGUILITA</value>
+					</text>
+					<text id="river_list-31">
+						<value>BATAFON/TINGUILITA</value>
+					</text>
+					<text id="river_list-32">
+						<value>BATAFON/TINGUILITA</value>
+					</text>
+					<text id="river_list-33">
+						<value>BATAFON/TINGUILITA</value>
+					</text>
+					<text id="river_list-34">
+						<value>Bodje Wol</value>
+					</text>
+					<text id="river_list-35">
+						<value>Bodje Wol</value>
+					</text>
+					<text id="river_list-36">
+						<value>DOLONKIWOL/FATALA</value>
+					</text>
+					<text id="river_list-37">
+						<value>DOLONKIWOL/FATALA</value>
+					</text>
+					<text id="river_list-38">
+						<value>DOLONKIWOL/FATALA</value>
+					</text>
+					<text id="river_list-39">
+						<value>dombele</value>
+					</text>
+					<text id="river_list-40">
+						<value>dombele</value>
+					</text>
+					<text id="river_list-41">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-42">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-43">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-44">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-45">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-46">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-47">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-48">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-49">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-50">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-51">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-52">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-53">
+						<value>FATALA</value>
+					</text>
+					<text id="river_list-54">
+						<value>FETORET/KONKOURE</value>
+					</text>
+					<text id="river_list-55">
+						<value>FETORET/KONKOURE</value>
+					</text>
+					<text id="river_list-56">
+						<value>Gambie</value>
+					</text>
+					<text id="river_list-57">
+						<value>KABAWOL/FATALA</value>
+					</text>
+					<text id="river_list-58">
+						<value>KAFIMMAWOL/KONKOURE</value>
+					</text>
+					<text id="river_list-59">
+						<value>KAKIRIMA/KONKOURE</value>
+					</text>
+					<text id="river_list-60">
+						<value>KAKIRIMA/KONKOURE</value>
+					</text>
+					<text id="river_list-61">
+						<value>KAKIRIMA/KONKOURE</value>
+					</text>
+					<text id="river_list-62">
+						<value>KAKIRIMA/KONKOURE</value>
+					</text>
+					<text id="river_list-63">
+						<value>KAKIRIMA/KONKOURE</value>
+					</text>
+					<text id="river_list-64">
+						<value>KAKIRIMA/KONKOURE</value>
+					</text>
+					<text id="river_list-65">
+						<value>KAKIRIMA/KONKOURE</value>
+					</text>
+					<text id="river_list-66">
+						<value>KAKIRIMA+KOKOULO/KONKOURE</value>
+					</text>
+					<text id="river_list-67">
+						<value>KALIYERE/KONKOURE</value>
+					</text>
+					<text id="river_list-68">
+						<value>kassa</value>
+					</text>
+					<text id="river_list-69">
+						<value>Kassagui</value>
+					</text>
+					<text id="river_list-70">
+						<value>Kassagui</value>
+					</text>
+					<text id="river_list-71">
+						<value>kassagui</value>
+					</text>
+					<text id="river_list-72">
+						<value>Kassawol/Komba</value>
+					</text>
+					<text id="river_list-73">
+						<value>Kassawol/Komba</value>
+					</text>
+					<text id="river_list-74">
+						<value>Kassawol/Komba</value>
+					</text>
+					<text id="river_list-75">
+						<value>Kassawol/Komba</value>
+					</text>
+					<text id="river_list-76">
+						<value>Kassawol/Komba</value>
+					</text>
+					<text id="river_list-77">
+						<value>Kassawol/Komba</value>
+					</text>
+					<text id="river_list-78">
+						<value>KEWEWOL/KOGON</value>
+					</text>
+					<text id="river_list-79">
+						<value>KEWEWOL/TINGUILITA</value>
+					</text>
+					<text id="river_list-80">
+						<value>KHISSILY</value>
+					</text>
+					<text id="river_list-81">
+						<value>KHISSILY</value>
+					</text>
+					<text id="river_list-82">
+						<value>KHISSILY</value>
+					</text>
+					<text id="river_list-83">
+						<value>KHISSILY</value>
+					</text>
+					<text id="river_list-84">
+						<value>KHISSILY</value>
+					</text>
+					<text id="river_list-85">
+						<value>KIGNAWOL/KONKOURE</value>
+					</text>
+					<text id="river_list-86">
+						<value>KIGNAWOL/KONKOURE</value>
+					</text>
+					<text id="river_list-87">
+						<value>KOGON</value>
+					</text>
+					<text id="river_list-88">
+						<value>KOGON</value>
+					</text>
+					<text id="river_list-89">
+						<value>KOGON</value>
+					</text>
+					<text id="river_list-90">
+						<value>KOGON</value>
+					</text>
+					<text id="river_list-91">
+						<value>KOGON</value>
+					</text>
+					<text id="river_list-92">
+						<value>KOGON</value>
+					</text>
+					<text id="river_list-93">
+						<value>KOGON</value>
+					</text>
+					<text id="river_list-94">
+						<value>KOGON</value>
+					</text>
+					<text id="river_list-95">
+						<value>kokoulo</value>
+					</text>
+					<text id="river_list-96">
+						<value>kokoulo</value>
+					</text>
+					<text id="river_list-97">
+						<value>kokoulo</value>
+					</text>
+					<text id="river_list-98">
+						<value>kokoulo</value>
+					</text>
+					<text id="river_list-99">
+						<value>kokoulo</value>
+					</text>
+					<text id="river_list-100">
+						<value>kokoulo</value>
+					</text>
+					<text id="river_list-101">
+						<value>KokouLo</value>
+					</text>
+					<text id="river_list-102">
+						<value>KokouLo</value>
+					</text>
+					<text id="river_list-103">
+						<value>KOKOULOWOL/KONKOURE</value>
+					</text>
+					<text id="river_list-104">
+						<value>KOMBA</value>
+					</text>
+					<text id="river_list-105">
+						<value>KOMBA</value>
+					</text>
+					<text id="river_list-106">
+						<value>Komba</value>
+					</text>
+					<text id="river_list-107">
+						<value>Komba</value>
+					</text>
+					<text id="river_list-108">
+						<value>KONDEYA</value>
+					</text>
+					<text id="river_list-109">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-110">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-111">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-112">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-113">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-114">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-115">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-116">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-117">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-118">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-119">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-120">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-121">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-122">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-123">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-124">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-125">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-126">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-127">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-128">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-129">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-130">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-131">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-132">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-133">
+						<value>KONKOURE</value>
+					</text>
+					<text id="river_list-134">
+						<value>KONTA/KONKOURE</value>
+					</text>
+					<text id="river_list-135">
+						<value>KONY/KONKOURE</value>
+					</text>
+					<text id="river_list-136">
+						<value>KONY/KONKOURE</value>
+					</text>
+					<text id="river_list-137">
+						<value>KONY/KONKOURE</value>
+					</text>
+					<text id="river_list-138">
+						<value>Koubiwol</value>
+					</text>
+					<text id="river_list-139">
+						<value>Koubiwol</value>
+					</text>
+					<text id="river_list-140">
+						<value>Koubiwol</value>
+					</text>
+					<text id="river_list-141">
+						<value>Koubiwol</value>
+					</text>
+					<text id="river_list-142">
+						<value>Koubiwol</value>
+					</text>
+					<text id="river_list-143">
+						<value>Koubiwol</value>
+					</text>
+					<text id="river_list-144">
+						<value>Koubiwol</value>
+					</text>
+					<text id="river_list-145">
+						<value>Koubiwol</value>
+					</text>
+					<text id="river_list-146">
+						<value>Koubiwol/Kokoulo/Konkoure</value>
+					</text>
+					<text id="river_list-147">
+						<value>KOUSSYWOL/KONKOURE</value>
+					</text>
+					<text id="river_list-148">
+						<value>LEYMINA</value>
+					</text>
+					<text id="river_list-149">
+						<value>PALESSARE/KONKOURE</value>
+					</text>
+					<text id="river_list-150">
+						<value>PARAWOL</value>
+					</text>
+					<text id="river_list-151">
+						<value>Pont Kebali</value>
+					</text>
+					<text id="river_list-152">
+						<value>Poro/gambi</value>
+					</text>
+					<text id="river_list-153">
+						<value>Poro/gambi</value>
+					</text>
+					<text id="river_list-154">
+						<value>Saala/Komba</value>
+					</text>
+					<text id="river_list-155">
+						<value>SAMANKOU/FATALA</value>
+					</text>
+					<text id="river_list-156">
+						<value>SAMANKOU/FATALA</value>
+					</text>
+					<text id="river_list-157">
+						<value>SAMANKOU/FATALA</value>
+					</text>
+					<text id="river_list-158">
+						<value>SAMANKOU/FATALA</value>
+					</text>
+					<text id="river_list-159">
+						<value>SAMANKOU/FATALA</value>
+					</text>
+					<text id="river_list-160">
+						<value>SATINA</value>
+					</text>
+					<text id="river_list-161">
+						<value>Satina /Komba</value>
+					</text>
+					<text id="river_list-162">
+						<value>Satina wol</value>
+					</text>
+					<text id="river_list-163">
+						<value>Satina/Komba</value>
+					</text>
+					<text id="river_list-164">
+						<value>Satinawol</value>
+					</text>
+					<text id="river_list-165">
+						<value>SINTALY/KONKOURE</value>
+					</text>
+					<text id="river_list-166">
+						<value>SINTALY/KONKOURE</value>
+					</text>
+					<text id="river_list-167">
+						<value>SINTALY/KONKOURE</value>
+					</text>
+					<text id="river_list-168">
+						<value>SINTALY/KONKOURE</value>
+					</text>
+					<text id="river_list-169">
+						<value>SINTALY/KONKOURE</value>
+					</text>
+					<text id="river_list-170">
+						<value>SINTALY/KONKOURE</value>
+					</text>
+					<text id="river_list-171">
+						<value>SONGORO/TINGUILITA</value>
+					</text>
+					<text id="river_list-172">
+						<value>SOOTA</value>
+					</text>
+					<text id="river_list-173">
+						<value>SOOTA</value>
+					</text>
+					<text id="river_list-174">
+						<value>Soultou</value>
+					</text>
+					<text id="river_list-175">
+						<value>TANGALA/KONKOURE</value>
+					</text>
+					<text id="river_list-176">
+						<value>Tene</value>
+					</text>
+					<text id="river_list-177">
+						<value>Tene</value>
+					</text>
+					<text id="river_list-178">
+						<value>TENGBE/KONKOURE</value>
+					</text>
+					<text id="river_list-179">
+						<value>THIAGHALEWOL/KOGON</value>
+					</text>
+					<text id="river_list-180">
+						<value>Thiankoye</value>
+					</text>
+					<text id="river_list-181">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-182">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-183">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-184">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-185">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-186">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-187">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-188">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-189">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-190">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-191">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-192">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-193">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-194">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-195">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-196">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-197">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-198">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-199">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-200">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-201">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-202">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-203">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-204">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-205">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-206">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-207">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-208">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-209">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-210">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-211">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-212">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-213">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-214">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-215">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-216">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-217">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-218">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-219">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-220">
+						<value>TINGUILINTA</value>
+					</text>
+					<text id="river_list-221">
+						<value>Tolouwol/Komba</value>
+					</text>
+					<text id="river_list-222">
+						<value>Tolouwol/Komba</value>
+					</text>
+					<text id="river_list-223">
+						<value>TONDON/KONKOURE</value>
+					</text>
+					<text id="river_list-224">
+						<value>Touri/Gambie</value>
+					</text>
+					<text id="river_list-225">
+						<value>wara/dombele</value>
+					</text>
+					<text id="river_list-226">
+						<value>Wolé/Tene/Konkoure</value>
+					</text>
+					<text id="river_list-227">
+						<value>Woulounwol</value>
+					</text>
+					<text id="river_list-228">
+						<value>KONTA/KONKOURE</value>
+					</text>
+					<text id="river_list-229">
+						<value>KONKOURE</value>
+					</text>
+				</translation>
+			</itext>
+			<instance>
+				<data id="gn_oncho_oem_3_Resultat_OV16_202206_v2">
+					<r_recorderID/>
+					<r_district/>
+					<r_sub_district/>
+					<r_cluster_name/>
+					<r_river_name/>
+					<r_ID_method/>
+					<r_BarcodeID1/>
+					<r_BarcodeID2/>
+					<r_ov16/>
+					<r_Notes/>
+					<r_StartTime/>
+					<r_EndTime/>
+					<meta>
+						<instanceID/>
+					</meta>
+				</data>
+			</instance>
+			<instance id="yesNoDontKnow">
+				<root>
+					<item>
+						<itextId>yesNoDontKnow-0</itextId>
+						<name>Oui</name>
+					</item>
+					<item>
+						<itextId>yesNoDontKnow-1</itextId>
+						<name>Non</name>
+					</item>
+					<item>
+						<itextId>yesNoDontKnow-2</itextId>
+						<name>Ne sais pas</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="yesNo">
+				<root>
+					<item>
+						<itextId>yesNo-0</itextId>
+						<name>Oui</name>
+					</item>
+					<item>
+						<itextId>yesNo-1</itextId>
+						<name>Non</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="ID_method_list">
+				<root>
+					<item>
+						<itextId>ID_method_list-0</itextId>
+						<name>Scanner</name>
+					</item>
+					<item>
+						<itextId>ID_method_list-1</itextId>
+						<name>Manual</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="results">
+				<root>
+					<item>
+						<itextId>results-0</itextId>
+						<name>Positif</name>
+					</item>
+					<item>
+						<itextId>results-1</itextId>
+						<name>Negatif</name>
+					</item>
+					<item>
+						<itextId>results-2</itextId>
+						<name>Invalide</name>
+					</item>
+					<item>
+						<itextId>results-3</itextId>
+						<name>Refuse</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="why_invalid">
+				<root>
+					<item>
+						<itextId>why_invalid-0</itextId>
+						<name>Absence.de.ligne.temoin</name>
+					</item>
+					<item>
+						<itextId>why_invalid-1</itextId>
+						<name>Ligne.temoin.brisees/partielle</name>
+					</item>
+					<item>
+						<itextId>why_invalid-2</itextId>
+						<name>Difficulte.d.absorption.d.echantillon</name>
+					</item>
+					<item>
+						<itextId>why_invalid-3</itextId>
+						<name>Difficulte.de.migration.de.l.echantillon</name>
+					</item>
+					<item>
+						<itextId>why_invalid-4</itextId>
+						<name>Trace.de.sang.persiste</name>
+					</item>
+					<item>
+						<itextId>why_invalid-5</itextId>
+						<name>Insuffisance.du.volume.de.sang.due.a.la.pipette</name>
+					</item>
+					<item>
+						<itextId>why_invalid-6</itextId>
+						<name>Other</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="district_list">
+				<root>
+					<item>
+						<itextId>district_list-0</itextId>
+						<name>Boffa</name>
+					</item>
+					<item>
+						<itextId>district_list-1</itextId>
+						<name>Boke</name>
+					</item>
+					<item>
+						<itextId>district_list-2</itextId>
+						<name>Coyah</name>
+					</item>
+					<item>
+						<itextId>district_list-3</itextId>
+						<name>Dalaba</name>
+					</item>
+					<item>
+						<itextId>district_list-4</itextId>
+						<name>Dubreka</name>
+					</item>
+					<item>
+						<itextId>district_list-5</itextId>
+						<name>Fria</name>
+					</item>
+					<item>
+						<itextId>district_list-6</itextId>
+						<name>Labe</name>
+					</item>
+					<item>
+						<itextId>district_list-7</itextId>
+						<name>Pita</name>
+					</item>
+					<item>
+						<itextId>district_list-8</itextId>
+						<name>Telimele</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="sub_district_list">
+				<root>
+					<item>
+						<itextId>sub_district_list-0</itextId>
+						<district_list>Dubreka</district_list>
+						<name>Bady</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-1</itextId>
+						<district_list>Fria</district_list>
+						<name>Banguigny</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-2</itextId>
+						<district_list>Fria</district_list>
+						<name>Banguinet</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-3</itextId>
+						<district_list>Pita</district_list>
+						<name>Bantignel</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-4</itextId>
+						<district_list>Dalaba</district_list>
+						<name>Bodie</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-5</itextId>
+						<district_list>Boffa</district_list>
+						<name>Boffa Centre</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-6</itextId>
+						<district_list>Boke</district_list>
+						<name>Dabiss</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-7</itextId>
+						<district_list>Dalaba</district_list>
+						<name>Dalaba Centre</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-8</itextId>
+						<district_list>Labe</district_list>
+						<name>Dalein</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-9</itextId>
+						<district_list>Labe</district_list>
+						<name>Daralabe</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-10</itextId>
+						<district_list>Dalaba</district_list>
+						<name>Ditinn</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-11</itextId>
+						<district_list>Pita</district_list>
+						<name>Donghol Touma</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-12</itextId>
+						<district_list>Boffa</district_list>
+						<name>Douprou</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-13</itextId>
+						<district_list>Coyah</district_list>
+						<name>Fily</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-14</itextId>
+						<district_list>Telimele</district_list>
+						<name>Gougoudje</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-15</itextId>
+						<district_list>Dalaba</district_list>
+						<name>Kankalabé</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-16</itextId>
+						<district_list>Dalaba</district_list>
+						<name>Kébaly</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-17</itextId>
+						<district_list>Telimele</district_list>
+						<name>Kollet</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-18</itextId>
+						<district_list>Boke</district_list>
+						<name>Korrera</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-19</itextId>
+						<district_list>Labe</district_list>
+						<name>Kouramangui</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-20</itextId>
+						<district_list>Coyah</district_list>
+						<name>Kouriah</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-21</itextId>
+						<district_list>Boffa</district_list>
+						<name>Lisso</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-22</itextId>
+						<district_list>Boffa</district_list>
+						<name>Mankountan</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-23</itextId>
+						<district_list>Telimele</district_list>
+						<name>Missira</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-24</itextId>
+						<district_list>Dalaba</district_list>
+						<name>Mombeya</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-25</itextId>
+						<district_list>Dubreka</district_list>
+						<name>Ouassou</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-26</itextId>
+						<district_list>Pita</district_list>
+						<name>Pita centre</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-27</itextId>
+						<district_list>Labe</district_list>
+						<name>Popodara</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-28</itextId>
+						<district_list>Boke</district_list>
+						<name>Sangaredi</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-29</itextId>
+						<district_list>Telimele</district_list>
+						<name>Sinta</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-30</itextId>
+						<district_list>Pita</district_list>
+						<name>Sintaly</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-31</itextId>
+						<district_list>Boffa</district_list>
+						<name>Tamita</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-32</itextId>
+						<district_list>Boke</district_list>
+						<name>Tanene</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-33</itextId>
+						<district_list>Telimele</district_list>
+						<name>Tarihoye</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-34</itextId>
+						<district_list>Telimele</district_list>
+						<name>Telimele Centre</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-35</itextId>
+						<district_list>Pita</district_list>
+						<name>Timbi Touni</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-36</itextId>
+						<district_list>Dubreka</district_list>
+						<name>Tondon</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-37</itextId>
+						<district_list>Fria</district_list>
+						<name>Tormelin</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-38</itextId>
+						<district_list>Boffa</district_list>
+						<name>Tougnifily</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-39</itextId>
+						<district_list>Labe</district_list>
+						<name>Tountouroun</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-40</itextId>
+						<district_list>Coyah</district_list>
+						<name>Wonkifong</name>
+					</item>
+					<item>
+						<itextId>sub_district_list-41</itextId>
+						<district_list>Dubreka</district_list>
+						<name>Tanene (Dubreka)</name>
+					</item>
+				</root>
+			</instance>
+			<instance id="village_list">
+				<root>
+					<item>
+						<itextId>village_list-0</itextId>
+						<name>Amadouya tanene</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-1</itextId>
+						<name>Bady</name>
+						<sub_district_list>Gougoudje</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-2</itextId>
+						<name>BADY CENTRE</name>
+						<sub_district_list>Bady</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-3</itextId>
+						<name>Baguiya</name>
+						<sub_district_list>Wonkifong</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-4</itextId>
+						<name>Bakidhèra</name>
+						<sub_district_list>Korrera</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-5</itextId>
+						<name>Balaya</name>
+						<sub_district_list>Tountouroun</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-6</itextId>
+						<name>Balou</name>
+						<sub_district_list>Sinta</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-7</itextId>
+						<name>Bambewel</name>
+						<sub_district_list>Pita centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-8</itextId>
+						<name>Bandegnidé</name>
+						<sub_district_list>Douprou</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-9</itextId>
+						<name>Bangalan</name>
+						<sub_district_list>Boffa Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-10</itextId>
+						<name>Bangouya barrage</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-11</itextId>
+						<name>Bangouya centre</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-12</itextId>
+						<name>BARA LANDÈ</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-13</itextId>
+						<name>BARALANDÈ</name>
+						<sub_district_list>Boffa Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-14</itextId>
+						<name>BARKERÈ</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-15</itextId>
+						<name>Barrymakhadé</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-16</itextId>
+						<name>Beela</name>
+						<sub_district_list>Kouramangui</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-17</itextId>
+						<name>Bendè</name>
+						<sub_district_list>Sinta</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-18</itextId>
+						<name>BENNA</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-19</itextId>
+						<name>Bhoulal</name>
+						<sub_district_list>Sintaly</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-20</itextId>
+						<name>Bingalima</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-21</itextId>
+						<name>Boboya</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-22</itextId>
+						<name>Bodie</name>
+						<sub_district_list>Bodie</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-23</itextId>
+						<name>Bosso</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-24</itextId>
+						<name>Boudoun ami</name>
+						<sub_district_list>Telimele Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-25</itextId>
+						<name>Bouramaya</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-26</itextId>
+						<name>BOURAMAYAH TAFORY</name>
+						<sub_district_list>Tanene</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-27</itextId>
+						<name>Bourouwel</name>
+						<sub_district_list>Mombeya</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-28</itextId>
+						<name>BOUSSOURA (Banguinet)</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-29</itextId>
+						<name>Boussoura (Dalaba Centre)</name>
+						<sub_district_list>Dalaba Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-30</itextId>
+						<name>Brouwel</name>
+						<sub_district_list>Timbi Touni</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-31</itextId>
+						<name>Carrefour Kolon</name>
+						<sub_district_list>Mankountan</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-32</itextId>
+						<name>Congo Hafia</name>
+						<sub_district_list>Pita centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-33</itextId>
+						<name>Dagui</name>
+						<sub_district_list>Sinta</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-34</itextId>
+						<name>Dalabaya</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-35</itextId>
+						<name>Dankolo</name>
+						<sub_district_list>Kankalabé</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-36</itextId>
+						<name>Dar-Es-Salam</name>
+						<sub_district_list>Mombeya</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-37</itextId>
+						<name>Daro</name>
+						<sub_district_list>Kébaly</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-38</itextId>
+						<name>Darra</name>
+						<sub_district_list>Pita centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-39</itextId>
+						<name>Dembeleya</name>
+						<sub_district_list>Timbi Touni</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-40</itextId>
+						<name>Diabere</name>
+						<sub_district_list>Bodie</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-41</itextId>
+						<name>Diguilin</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-42</itextId>
+						<name>DINYAMA</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-43</itextId>
+						<name>DIWÈ LOUMBA WELTO</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-44</itextId>
+						<name>Djakoudara</name>
+						<sub_district_list>Sinta</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-45</itextId>
+						<name>Djayilol</name>
+						<sub_district_list>Timbi Touni</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-46</itextId>
+						<name>Djindji</name>
+						<sub_district_list>Bantignel</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-47</itextId>
+						<name>Djolitougui</name>
+						<sub_district_list>Tarihoye</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-48</itextId>
+						<name>DOBA</name>
+						<sub_district_list>Boffa Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-49</itextId>
+						<name>DOLA</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-50</itextId>
+						<name>Dolonki</name>
+						<sub_district_list>Tarihoye</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-51</itextId>
+						<name>DONDOLY FANGNI</name>
+						<sub_district_list>Tamita</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-52</itextId>
+						<name>Donghui</name>
+						<sub_district_list>Dalaba Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-53</itextId>
+						<name>DONSOYAH</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-54</itextId>
+						<name>DOROYI CENTRE</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-55</itextId>
+						<name>Doubhy centre</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-56</itextId>
+						<name>DOUMOUN KOGON</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-57</itextId>
+						<name>Dounkaya</name>
+						<sub_district_list>Telimele Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-58</itextId>
+						<name>Dow Bodie</name>
+						<sub_district_list>Bodie</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-59</itextId>
+						<name>Dowoubala</name>
+						<sub_district_list>Gougoudje</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-60</itextId>
+						<name>FALABA</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-61</itextId>
+						<name>Falissare</name>
+						<sub_district_list>Sinta</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-62</itextId>
+						<name>FANDJETA</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-63</itextId>
+						<name>Fanfaranyin</name>
+						<sub_district_list>Tormelin</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-64</itextId>
+						<name>FARINYA</name>
+						<sub_district_list>Boffa Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-65</itextId>
+						<name>Fidoula</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-66</itextId>
+						<name>Filo Bowal N'dantary</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-67</itextId>
+						<name>Fokhogbie</name>
+						<sub_district_list>Douprou</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-68</itextId>
+						<name>Fôto</name>
+						<sub_district_list>Tormelin</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-69</itextId>
+						<name>Fotokhounyi</name>
+						<sub_district_list>Tormelin</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-70</itextId>
+						<name>FOTON FOERT</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-71</itextId>
+						<name>FOUNDENKHOURÈ</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-72</itextId>
+						<name>FOUNNA KHOURÉ</name>
+						<sub_district_list>Boffa Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-73</itextId>
+						<name>Foutaya</name>
+						<sub_district_list>Donghol Touma</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-74</itextId>
+						<name>FRIA VILLAGE</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-75</itextId>
+						<name>GABAYAH</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-76</itextId>
+						<name>GABITÈT</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-77</itextId>
+						<name>Gadathiangui</name>
+						<sub_district_list>Dalein</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-78</itextId>
+						<name>Garadara</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-79</itextId>
+						<name>GARKABEYA</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-80</itextId>
+						<name>Gbalan</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-81</itextId>
+						<name>GNAMAKOÛDJÉ</name>
+						<sub_district_list>Dabiss</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-82</itextId>
+						<name>GOBIRET</name>
+						<sub_district_list>Tanene</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-83</itextId>
+						<name>Goungan</name>
+						<sub_district_list>Popodara</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-84</itextId>
+						<name>Guildhé centre</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-85</itextId>
+						<name>Hafia (Dalaba Centre)</name>
+						<sub_district_list>Dalaba Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-86</itextId>
+						<name>Hafia (Ditinn)</name>
+						<sub_district_list>Ditinn</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-87</itextId>
+						<name>Herrokassa</name>
+						<sub_district_list>Kouramangui</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-88</itextId>
+						<name>Hinde</name>
+						<sub_district_list>Bantignel</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-89</itextId>
+						<name>Hoore Kassa</name>
+						<sub_district_list>Kouramangui</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-90</itextId>
+						<name>Hore Wouloun</name>
+						<sub_district_list>Kouramangui</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-91</itextId>
+						<name>Horretayile</name>
+						<sub_district_list>Bantignel</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-92</itextId>
+						<name>Ibouniabe</name>
+						<sub_district_list>Tountouroun</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-93</itextId>
+						<name>Kaaba</name>
+						<sub_district_list>Sinta</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-94</itextId>
+						<name>Kabidjoumaya</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-95</itextId>
+						<name>KAFA</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-96</itextId>
+						<name>Kafimma</name>
+						<sub_district_list>Gougoudje</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-97</itextId>
+						<name>Kaleta</name>
+						<sub_district_list>Kollet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-98</itextId>
+						<name>KANDJA FARA DABIS</name>
+						<sub_district_list>Dabiss</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-99</itextId>
+						<name>Kansa Gawol</name>
+						<sub_district_list>Kouramangui</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-100</itextId>
+						<name>Kansakouma</name>
+						<sub_district_list>Dalein</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-101</itextId>
+						<name>Kansiguirdé</name>
+						<sub_district_list>Douprou</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-102</itextId>
+						<name>Kansodji</name>
+						<sub_district_list>Sintaly</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-103</itextId>
+						<name>Kaporo</name>
+						<sub_district_list>Wonkifong</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-104</itextId>
+						<name>KARDÈ</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-105</itextId>
+						<name>Kassabinde Bowal</name>
+						<sub_district_list>Kouramangui</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-106</itextId>
+						<name>KAWEKI</name>
+						<sub_district_list>Korrera</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-107</itextId>
+						<name>Kawosso</name>
+						<sub_district_list>Douprou</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-108</itextId>
+						<name>Kegna Hinde</name>
+						<sub_district_list>Mombeya</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-109</itextId>
+						<name>Kewol</name>
+						<sub_district_list>Pita centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-110</itextId>
+						<name>Khorié</name>
+						<sub_district_list>Kollet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-111</itextId>
+						<name>KHOURKHAN</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-112</itextId>
+						<name>Kignan</name>
+						<sub_district_list>Gougoudje</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-113</itextId>
+						<name>Kila</name>
+						<sub_district_list>Tormelin</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-114</itextId>
+						<name>KIRA TAGUI</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-115</itextId>
+						<name>Kiret</name>
+						<sub_district_list>Dalaba Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-116</itextId>
+						<name>KOBE SOODÈ</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-117</itextId>
+						<name>Kogon lenguey</name>
+						<sub_district_list>Missira</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-118</itextId>
+						<name>Kogonlenguiwi</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-119</itextId>
+						<name>Kogonpassague</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-120</itextId>
+						<name>Kokoulo</name>
+						<sub_district_list>Sintaly</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-121</itextId>
+						<name>KOLABOUGNI</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-122</itextId>
+						<name>Kolon</name>
+						<sub_district_list>Mankountan</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-123</itextId>
+						<name>Kondenko</name>
+						<sub_district_list>Pita centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-124</itextId>
+						<name>Korrera centre</name>
+						<sub_district_list>Korrera</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-125</itextId>
+						<name>Koumbaya</name>
+						<sub_district_list>Tougnifily</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-126</itextId>
+						<name>Koundidè</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-127</itextId>
+						<name>KOUNFA</name>
+						<sub_district_list>Dabiss</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-128</itextId>
+						<name>KOUNTIA</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-129</itextId>
+						<name>Kourassoro</name>
+						<sub_district_list>Pita centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-130</itextId>
+						<name>Koussy</name>
+						<sub_district_list>Gougoudje</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-131</itextId>
+						<name>Lahoya</name>
+						<sub_district_list>Mombeya</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-132</itextId>
+						<name>Lamy</name>
+						<sub_district_list>Kankalabé</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-133</itextId>
+						<name>Legue</name>
+						<sub_district_list>Dalaba Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-134</itextId>
+						<name>LEGUELOUGOU</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-135</itextId>
+						<name>Leibowal</name>
+						<sub_district_list>Bantignel</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-136</itextId>
+						<name>Ley fello</name>
+						<sub_district_list>Gougoudje</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-137</itextId>
+						<name>Ley korima</name>
+						<sub_district_list>Tountouroun</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-138</itextId>
+						<name>Leythandi</name>
+						<sub_district_list>Kouramangui</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-139</itextId>
+						<name>Lilin</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-140</itextId>
+						<name>Linguerin</name>
+						<sub_district_list>Sintaly</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-141</itextId>
+						<name>LISSO CENTRE</name>
+						<sub_district_list>Lisso</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-142</itextId>
+						<name>Lonyi</name>
+						<sub_district_list>Bantignel</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-143</itextId>
+						<name>Louguel</name>
+						<sub_district_list>Daralabe</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-144</itextId>
+						<name>Mabhè</name>
+						<sub_district_list>Tarihoye</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-145</itextId>
+						<name>Madina Carrefoure</name>
+						<sub_district_list>Korrera</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-146</itextId>
+						<name>Madina dibaya</name>
+						<sub_district_list>Sintaly</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-147</itextId>
+						<name>Madina Kansaghi</name>
+						<sub_district_list>Dalein</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-148</itextId>
+						<name>Madina Kebeya</name>
+						<sub_district_list>Korrera</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-149</itextId>
+						<name>Madina Saare</name>
+						<sub_district_list>Tountouroun</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-150</itextId>
+						<name>MADINA TOULOUN</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-151</itextId>
+						<name>MANDA SÔDÈ</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-152</itextId>
+						<name>MANGODJÈ</name>
+						<sub_district_list>Dabiss</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-153</itextId>
+						<name>Megnekouré</name>
+						<sub_district_list>Gougoudje</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-154</itextId>
+						<name>MISSIDÉ BOULÈREYAH</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-155</itextId>
+						<name>MISSIRA</name>
+						<sub_district_list>Banguigny</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-156</itextId>
+						<name>Moriakhory</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-157</itextId>
+						<name>MORY FODEYAH</name>
+						<sub_district_list>Bady</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-158</itextId>
+						<name>Ndanta</name>
+						<sub_district_list>Kouramangui</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-159</itextId>
+						<name>NDiraye</name>
+						<sub_district_list>Dalein</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-160</itextId>
+						<name>Ningué Matodhé</name>
+						<sub_district_list>Tormelin</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-161</itextId>
+						<name>Nyiwa</name>
+						<sub_district_list>Popodara</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-162</itextId>
+						<name>Paniboun pont</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-163</itextId>
+						<name>Parawaly</name>
+						<sub_district_list>Sinta</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-164</itextId>
+						<name>Peliga</name>
+						<sub_district_list>Tountouroun</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-165</itextId>
+						<name>Pelloye</name>
+						<sub_district_list>Bantignel</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-166</itextId>
+						<name>Poutétéya</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-167</itextId>
+						<name>QUATRE PONT</name>
+						<sub_district_list>Tanene</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-168</itextId>
+						<name>Saagaran</name>
+						<sub_district_list>Popodara</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-169</itextId>
+						<name>SABENDE KOLOBEYAH</name>
+						<sub_district_list>Tormelin</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-170</itextId>
+						<name>SALAKHOU</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-171</itextId>
+						<name>Saleya</name>
+						<sub_district_list>Wonkifong</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-172</itextId>
+						<name>SAMAN SIRA</name>
+						<sub_district_list>Lisso</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-173</itextId>
+						<name>SAMBAYA</name>
+						<sub_district_list>Boffa Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-174</itextId>
+						<name>Sapepo</name>
+						<sub_district_list>Pita centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-175</itextId>
+						<name>Saraya (Douprou)</name>
+						<sub_district_list>Douprou</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-176</itextId>
+						<name>Saraya (Sintaly)</name>
+						<sub_district_list>Sintaly</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-177</itextId>
+						<name>SARAYA TEMBE PONT</name>
+						<sub_district_list>Ouassou</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-178</itextId>
+						<name>Sarbacane quartier centre</name>
+						<sub_district_list>Fily</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-179</itextId>
+						<name>Satina</name>
+						<sub_district_list>Popodara</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-180</itextId>
+						<name>Seriya</name>
+						<sub_district_list>Mombeya</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-181</itextId>
+						<name>Silaya</name>
+						<sub_district_list>Mombeya</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-182</itextId>
+						<name>SIMBAKHOULOUN</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-183</itextId>
+						<name>Sintaly centre</name>
+						<sub_district_list>Sintaly</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-184</itextId>
+						<name>SINTHOUROU</name>
+						<sub_district_list>Banguinet</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-185</itextId>
+						<name>Sinthourou Almamy</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-186</itextId>
+						<name>Sira</name>
+						<sub_district_list>Pita centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-187</itextId>
+						<name>Sokoutou</name>
+						<sub_district_list>Tougnifily</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-188</itextId>
+						<name>Songoron</name>
+						<sub_district_list>Mankountan</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-189</itextId>
+						<name>Sorondo</name>
+						<sub_district_list>Mombeya</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-190</itextId>
+						<name>Sougue</name>
+						<sub_district_list>Bodie</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-191</itextId>
+						<name>Souloudji (Sinta)</name>
+						<sub_district_list>Sinta</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-192</itextId>
+						<name>Souloudji (Telimele Centre)</name>
+						<sub_district_list>Telimele Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-193</itextId>
+						<name>Soulouwoye</name>
+						<sub_district_list>Telimele Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-194</itextId>
+						<name>Soumbourou</name>
+						<sub_district_list>Boffa Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-195</itextId>
+						<name>Tabily</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-196</itextId>
+						<name>Tafory</name>
+						<sub_district_list>Tormelin</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-197</itextId>
+						<name>TAMBONI</name>
+						<sub_district_list>Boffa Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-198</itextId>
+						<name>TANENE</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-199</itextId>
+						<name>TANTOL</name>
+						<sub_district_list>Dabiss</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-200</itextId>
+						<name>Tchanghè</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-201</itextId>
+						<name>Tchangui</name>
+						<sub_district_list>Dalaba Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-202</itextId>
+						<name>Telikoto</name>
+						<sub_district_list>Dalein</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-203</itextId>
+						<name>Telirè</name>
+						<sub_district_list>Tountouroun</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-204</itextId>
+						<name>THIAGHALLE</name>
+						<sub_district_list>Sangaredi</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-205</itextId>
+						<name>Thiankoye (Kouramangui)</name>
+						<sub_district_list>Kouramangui</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-206</itextId>
+						<name>Thiankoye (Sinta)</name>
+						<sub_district_list>Sinta</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-207</itextId>
+						<name>TINGUILINTA</name>
+						<sub_district_list>Tanene</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-208</itextId>
+						<name>Toguilon Kondéya</name>
+						<sub_district_list>Wonkifong</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-209</itextId>
+						<name>Tolou</name>
+						<sub_district_list>Tountouroun</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-210</itextId>
+						<name>Tondon 2</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-211</itextId>
+						<name>Tossa</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-212</itextId>
+						<name>Tougnifily centre</name>
+						<sub_district_list>Tougnifily</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-213</itextId>
+						<name>Toullelyereya</name>
+						<sub_district_list>Pita centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-214</itextId>
+						<name>Touriya</name>
+						<sub_district_list>Sintaly</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-215</itextId>
+						<name>Wanssan</name>
+						<sub_district_list>Sinta</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-216</itextId>
+						<name>WESSEN</name>
+						<sub_district_list>Dabiss</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-217</itextId>
+						<name>Wèyèkhôri</name>
+						<sub_district_list>Tormelin</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-218</itextId>
+						<name>Wondékhouré</name>
+						<sub_district_list>Tormelin</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-219</itextId>
+						<name>WONDETY</name>
+						<sub_district_list>Lisso</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-220</itextId>
+						<name>Wondidhè</name>
+						<sub_district_list>Kouriah</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-221</itextId>
+						<name>Yale</name>
+						<sub_district_list>Bodie</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-222</itextId>
+						<name>Yatiyi</name>
+						<sub_district_list>Tormelin</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-223</itextId>
+						<name>Yattarayah</name>
+						<sub_district_list>Wonkifong</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-224</itextId>
+						<name>YENGUISSA</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-225</itextId>
+						<name>Yèrèyadi</name>
+						<sub_district_list>Douprou</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-226</itextId>
+						<name>YIMMAYAH</name>
+						<sub_district_list>Boffa Centre</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-227</itextId>
+						<name>YINTERY</name>
+						<sub_district_list>Tondon</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-228</itextId>
+						<name>BOURAMAYAH TAFORY</name>
+						<sub_district_list>Tanene (Dubreka)</sub_district_list>
+					</item>
+					<item>
+						<itextId>village_list-229</itextId>
+						<name>QUATRE PONT</name>
+						<sub_district_list>Tanene (Dubreka)</sub_district_list>
+					</item>
+				</root>
+			</instance>
+			<instance id="river_list">
+				<root>
+					<item>
+						<itextId>river_list-0</itextId>
+						<name>affluent Konkoure</name>
+						<village_list>Sougue</village_list>
+					</item>
+					<item>
+						<itextId>river_list-1</itextId>
+						<name>affluent Konkoure</name>
+						<village_list>Yale</village_list>
+					</item>
+					<item>
+						<itextId>river_list-2</itextId>
+						<name>affluent Konkoure</name>
+						<village_list>Hafia (Ditinn)</village_list>
+					</item>
+					<item>
+						<itextId>river_list-3</itextId>
+						<name>affluent Konkoure</name>
+						<village_list>Foutaya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-4</itextId>
+						<name>affluent Konkoure</name>
+						<village_list>Brouwel</village_list>
+					</item>
+					<item>
+						<itextId>river_list-5</itextId>
+						<name>affluent Konkoure</name>
+						<village_list>Khorié</village_list>
+					</item>
+					<item>
+						<itextId>river_list-6</itextId>
+						<name>affluent Tene/Konkouré</name>
+						<village_list>Boussoura (Dalaba Centre)</village_list>
+					</item>
+					<item>
+						<itextId>river_list-7</itextId>
+						<name>affluent Tene/Konkouré</name>
+						<village_list>Donghui</village_list>
+					</item>
+					<item>
+						<itextId>river_list-8</itextId>
+						<name>affluent Tene/Konkouré</name>
+						<village_list>Hafia (Dalaba Centre)</village_list>
+					</item>
+					<item>
+						<itextId>river_list-9</itextId>
+						<name>affluent Tene/Konkouré</name>
+						<village_list>Kiret</village_list>
+					</item>
+					<item>
+						<itextId>river_list-10</itextId>
+						<name>affluent Tene/Konkouré</name>
+						<village_list>Legue</village_list>
+					</item>
+					<item>
+						<itextId>river_list-11</itextId>
+						<name>affluent Tene/Konkouré</name>
+						<village_list>Tchangui</village_list>
+					</item>
+					<item>
+						<itextId>river_list-12</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>BADY CENTRE</village_list>
+					</item>
+					<item>
+						<itextId>river_list-13</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>MORY FODEYAH</village_list>
+					</item>
+					<item>
+						<itextId>river_list-14</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>BARA LANDÈ</village_list>
+					</item>
+					<item>
+						<itextId>river_list-15</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>DINYAMA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-16</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>FALABA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-17</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>FOTON FOERT</village_list>
+					</item>
+					<item>
+						<itextId>river_list-18</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>FOUNDENKHOURÈ</village_list>
+					</item>
+					<item>
+						<itextId>river_list-19</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>GABITÈT</village_list>
+					</item>
+					<item>
+						<itextId>river_list-20</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>GARKABEYA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-21</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>KAFA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-22</itextId>
+						<name>BADY/KONKOURE</name>
+						<village_list>SALAKHOU</village_list>
+					</item>
+					<item>
+						<itextId>river_list-23</itextId>
+						<name>BAGUINET/FATALA</name>
+						<village_list>MISSIRA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-24</itextId>
+						<name>BAGUINET/FATALA</name>
+						<village_list>KIRA TAGUI</village_list>
+					</item>
+					<item>
+						<itextId>river_list-25</itextId>
+						<name>BANGUIGNE/FATALA</name>
+						<village_list>DONSOYAH</village_list>
+					</item>
+					<item>
+						<itextId>river_list-26</itextId>
+						<name>BANGUIGNE/FATALA</name>
+						<village_list>MADINA TOULOUN</village_list>
+					</item>
+					<item>
+						<itextId>river_list-27</itextId>
+						<name>BANGUIGNE/FATALA</name>
+						<village_list>MANDA SÔDÈ</village_list>
+					</item>
+					<item>
+						<itextId>river_list-28</itextId>
+						<name>BANGUIGNE/FATALA</name>
+						<village_list>SINTHOUROU</village_list>
+					</item>
+					<item>
+						<itextId>river_list-29</itextId>
+						<name>BATAFON/TINGUILITA</name>
+						<village_list>Bakidhèra</village_list>
+					</item>
+					<item>
+						<itextId>river_list-30</itextId>
+						<name>BATAFON/TINGUILITA</name>
+						<village_list>KAWEKI</village_list>
+					</item>
+					<item>
+						<itextId>river_list-31</itextId>
+						<name>BATAFON/TINGUILITA</name>
+						<village_list>Korrera centre</village_list>
+					</item>
+					<item>
+						<itextId>river_list-32</itextId>
+						<name>BATAFON/TINGUILITA</name>
+						<village_list>Madina Carrefoure</village_list>
+					</item>
+					<item>
+						<itextId>river_list-33</itextId>
+						<name>BATAFON/TINGUILITA</name>
+						<village_list>Madina Kebeya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-34</itextId>
+						<name>Bodje Wol</name>
+						<village_list>Bodie</village_list>
+					</item>
+					<item>
+						<itextId>river_list-35</itextId>
+						<name>Bodje Wol</name>
+						<village_list>Dow Bodie</village_list>
+					</item>
+					<item>
+						<itextId>river_list-36</itextId>
+						<name>DOLONKIWOL/FATALA</name>
+						<village_list>Djolitougui</village_list>
+					</item>
+					<item>
+						<itextId>river_list-37</itextId>
+						<name>DOLONKIWOL/FATALA</name>
+						<village_list>Dolonki</village_list>
+					</item>
+					<item>
+						<itextId>river_list-38</itextId>
+						<name>DOLONKIWOL/FATALA</name>
+						<village_list>Mabhè</village_list>
+					</item>
+					<item>
+						<itextId>river_list-39</itextId>
+						<name>dombele</name>
+						<village_list>Dar-Es-Salam</village_list>
+					</item>
+					<item>
+						<itextId>river_list-40</itextId>
+						<name>dombele</name>
+						<village_list>Lahoya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-41</itextId>
+						<name>FATALA</name>
+						<village_list>Bangalan</village_list>
+					</item>
+					<item>
+						<itextId>river_list-42</itextId>
+						<name>FATALA</name>
+						<village_list>BARALANDÈ</village_list>
+					</item>
+					<item>
+						<itextId>river_list-43</itextId>
+						<name>FATALA</name>
+						<village_list>DOBA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-44</itextId>
+						<name>FATALA</name>
+						<village_list>FARINYA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-45</itextId>
+						<name>FATALA</name>
+						<village_list>FOUNNA KHOURÉ</village_list>
+					</item>
+					<item>
+						<itextId>river_list-46</itextId>
+						<name>FATALA</name>
+						<village_list>SAMBAYA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-47</itextId>
+						<name>FATALA</name>
+						<village_list>Soumbourou</village_list>
+					</item>
+					<item>
+						<itextId>river_list-48</itextId>
+						<name>FATALA</name>
+						<village_list>TAMBONI</village_list>
+					</item>
+					<item>
+						<itextId>river_list-49</itextId>
+						<name>FATALA</name>
+						<village_list>YIMMAYAH</village_list>
+					</item>
+					<item>
+						<itextId>river_list-50</itextId>
+						<name>FATALA</name>
+						<village_list>LISSO CENTRE</village_list>
+					</item>
+					<item>
+						<itextId>river_list-51</itextId>
+						<name>FATALA</name>
+						<village_list>SAMAN SIRA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-52</itextId>
+						<name>FATALA</name>
+						<village_list>WONDETY</village_list>
+					</item>
+					<item>
+						<itextId>river_list-53</itextId>
+						<name>FATALA</name>
+						<village_list>DONDOLY FANGNI</village_list>
+					</item>
+					<item>
+						<itextId>river_list-54</itextId>
+						<name>FETORET/KONKOURE</name>
+						<village_list>Dembeleya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-55</itextId>
+						<name>FETORET/KONKOURE</name>
+						<village_list>Djayilol</village_list>
+					</item>
+					<item>
+						<itextId>river_list-56</itextId>
+						<name>Gambie</name>
+						<village_list>Ibouniabe</village_list>
+					</item>
+					<item>
+						<itextId>river_list-57</itextId>
+						<name>KABAWOL/FATALA</name>
+						<village_list>Ley fello</village_list>
+					</item>
+					<item>
+						<itextId>river_list-58</itextId>
+						<name>KAFIMMAWOL/KONKOURE</name>
+						<village_list>Dowoubala</village_list>
+					</item>
+					<item>
+						<itextId>river_list-59</itextId>
+						<name>KAKIRIMA/KONKOURE</name>
+						<village_list>Kafimma</village_list>
+					</item>
+					<item>
+						<itextId>river_list-60</itextId>
+						<name>KAKIRIMA/KONKOURE</name>
+						<village_list>Megnekouré</village_list>
+					</item>
+					<item>
+						<itextId>river_list-61</itextId>
+						<name>KAKIRIMA/KONKOURE</name>
+						<village_list>Balou</village_list>
+					</item>
+					<item>
+						<itextId>river_list-62</itextId>
+						<name>KAKIRIMA/KONKOURE</name>
+						<village_list>Dagui</village_list>
+					</item>
+					<item>
+						<itextId>river_list-63</itextId>
+						<name>KAKIRIMA/KONKOURE</name>
+						<village_list>Kaaba</village_list>
+					</item>
+					<item>
+						<itextId>river_list-64</itextId>
+						<name>KAKIRIMA/KONKOURE</name>
+						<village_list>Thiankoye (Sinta)</village_list>
+					</item>
+					<item>
+						<itextId>river_list-65</itextId>
+						<name>KAKIRIMA/KONKOURE</name>
+						<village_list>Wanssan</village_list>
+					</item>
+					<item>
+						<itextId>river_list-66</itextId>
+						<name>KAKIRIMA+KOKOULO/KONKOURE</name>
+						<village_list>Djakoudara</village_list>
+					</item>
+					<item>
+						<itextId>river_list-67</itextId>
+						<name>KALIYERE/KONKOURE</name>
+						<village_list>SABENDE KOLOBEYAH</village_list>
+					</item>
+					<item>
+						<itextId>river_list-68</itextId>
+						<name>kassa</name>
+						<village_list>Madina Kansaghi</village_list>
+					</item>
+					<item>
+						<itextId>river_list-69</itextId>
+						<name>Kassagui</name>
+						<village_list>Seriya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-70</itextId>
+						<name>Kassagui</name>
+						<village_list>Silaya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-71</itextId>
+						<name>kassagui</name>
+						<village_list>Sorondo</village_list>
+					</item>
+					<item>
+						<itextId>river_list-72</itextId>
+						<name>Kassawol/Komba</name>
+						<village_list>Herrokassa</village_list>
+					</item>
+					<item>
+						<itextId>river_list-73</itextId>
+						<name>Kassawol/Komba</name>
+						<village_list>Hoore Kassa</village_list>
+					</item>
+					<item>
+						<itextId>river_list-74</itextId>
+						<name>Kassawol/Komba</name>
+						<village_list>Kansa Gawol</village_list>
+					</item>
+					<item>
+						<itextId>river_list-75</itextId>
+						<name>Kassawol/Komba</name>
+						<village_list>Kassabinde Bowal</village_list>
+					</item>
+					<item>
+						<itextId>river_list-76</itextId>
+						<name>Kassawol/Komba</name>
+						<village_list>Leythandi</village_list>
+					</item>
+					<item>
+						<itextId>river_list-77</itextId>
+						<name>Kassawol/Komba</name>
+						<village_list>Ndanta</village_list>
+					</item>
+					<item>
+						<itextId>river_list-78</itextId>
+						<name>KEWEWOL/KOGON</name>
+						<village_list>Sinthourou Almamy</village_list>
+					</item>
+					<item>
+						<itextId>river_list-79</itextId>
+						<name>KEWEWOL/TINGUILITA</name>
+						<village_list>Filo Bowal N'dantary</village_list>
+					</item>
+					<item>
+						<itextId>river_list-80</itextId>
+						<name>KHISSILY</name>
+						<village_list>Bandegnidé</village_list>
+					</item>
+					<item>
+						<itextId>river_list-81</itextId>
+						<name>KHISSILY</name>
+						<village_list>Kansiguirdé</village_list>
+					</item>
+					<item>
+						<itextId>river_list-82</itextId>
+						<name>KHISSILY</name>
+						<village_list>Kawosso</village_list>
+					</item>
+					<item>
+						<itextId>river_list-83</itextId>
+						<name>KHISSILY</name>
+						<village_list>Saraya (Douprou)</village_list>
+					</item>
+					<item>
+						<itextId>river_list-84</itextId>
+						<name>KHISSILY</name>
+						<village_list>Yèrèyadi</village_list>
+					</item>
+					<item>
+						<itextId>river_list-85</itextId>
+						<name>KIGNAWOL/KONKOURE</name>
+						<village_list>Bady</village_list>
+					</item>
+					<item>
+						<itextId>river_list-86</itextId>
+						<name>KIGNAWOL/KONKOURE</name>
+						<village_list>Kignan</village_list>
+					</item>
+					<item>
+						<itextId>river_list-87</itextId>
+						<name>KOGON</name>
+						<village_list>BARKERÈ</village_list>
+					</item>
+					<item>
+						<itextId>river_list-88</itextId>
+						<name>KOGON</name>
+						<village_list>DOUMOUN KOGON</village_list>
+					</item>
+					<item>
+						<itextId>river_list-89</itextId>
+						<name>KOGON</name>
+						<village_list>Guildhé centre</village_list>
+					</item>
+					<item>
+						<itextId>river_list-90</itextId>
+						<name>KOGON</name>
+						<village_list>Kogonlenguiwi</village_list>
+					</item>
+					<item>
+						<itextId>river_list-91</itextId>
+						<name>KOGON</name>
+						<village_list>Kogonpassague</village_list>
+					</item>
+					<item>
+						<itextId>river_list-92</itextId>
+						<name>KOGON</name>
+						<village_list>Poutétéya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-93</itextId>
+						<name>KOGON</name>
+						<village_list>Tchanghè</village_list>
+					</item>
+					<item>
+						<itextId>river_list-94</itextId>
+						<name>KOGON</name>
+						<village_list>Kogon lenguey</village_list>
+					</item>
+					<item>
+						<itextId>river_list-95</itextId>
+						<name>kokoulo</name>
+						<village_list>Djindji</village_list>
+					</item>
+					<item>
+						<itextId>river_list-96</itextId>
+						<name>kokoulo</name>
+						<village_list>Hinde</village_list>
+					</item>
+					<item>
+						<itextId>river_list-97</itextId>
+						<name>kokoulo</name>
+						<village_list>Horretayile</village_list>
+					</item>
+					<item>
+						<itextId>river_list-98</itextId>
+						<name>kokoulo</name>
+						<village_list>Leibowal</village_list>
+					</item>
+					<item>
+						<itextId>river_list-99</itextId>
+						<name>kokoulo</name>
+						<village_list>Lonyi</village_list>
+					</item>
+					<item>
+						<itextId>river_list-100</itextId>
+						<name>kokoulo</name>
+						<village_list>Pelloye</village_list>
+					</item>
+					<item>
+						<itextId>river_list-101</itextId>
+						<name>KokouLo</name>
+						<village_list>Kansodji</village_list>
+					</item>
+					<item>
+						<itextId>river_list-102</itextId>
+						<name>KokouLo</name>
+						<village_list>Saraya (Sintaly)</village_list>
+					</item>
+					<item>
+						<itextId>river_list-103</itextId>
+						<name>KOKOULOWOL/KONKOURE</name>
+						<village_list>Kokoulo</village_list>
+					</item>
+					<item>
+						<itextId>river_list-104</itextId>
+						<name>KOMBA</name>
+						<village_list>Koumbaya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-105</itextId>
+						<name>KOMBA</name>
+						<village_list>Sokoutou</village_list>
+					</item>
+					<item>
+						<itextId>river_list-106</itextId>
+						<name>Komba</name>
+						<village_list>Kansakouma</village_list>
+					</item>
+					<item>
+						<itextId>river_list-107</itextId>
+						<name>Komba</name>
+						<village_list>Telikoto</village_list>
+					</item>
+					<item>
+						<itextId>river_list-108</itextId>
+						<name>KONDEYA</name>
+						<village_list>Tafory</village_list>
+					</item>
+					<item>
+						<itextId>river_list-109</itextId>
+						<name>KONKOURE</name>
+						<village_list>QUATRE PONT</village_list>
+					</item>
+					<item>
+						<itextId>river_list-110</itextId>
+						<name>KONKOURE</name>
+						<village_list>Amadouya tanene</village_list>
+					</item>
+					<item>
+						<itextId>river_list-111</itextId>
+						<name>KONKOURE</name>
+						<village_list>Bingalima</village_list>
+					</item>
+					<item>
+						<itextId>river_list-112</itextId>
+						<name>KONKOURE</name>
+						<village_list>Bouramaya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-113</itextId>
+						<name>KONKOURE</name>
+						<village_list>Garadara</village_list>
+					</item>
+					<item>
+						<itextId>river_list-114</itextId>
+						<name>KONKOURE</name>
+						<village_list>Lilin</village_list>
+					</item>
+					<item>
+						<itextId>river_list-115</itextId>
+						<name>KONKOURE</name>
+						<village_list>TANENE</village_list>
+					</item>
+					<item>
+						<itextId>river_list-116</itextId>
+						<name>KONKOURE</name>
+						<village_list>Tossa</village_list>
+					</item>
+					<item>
+						<itextId>river_list-117</itextId>
+						<name>KONKOURE</name>
+						<village_list>YENGUISSA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-118</itextId>
+						<name>KONKOURE</name>
+						<village_list>YINTERY</village_list>
+					</item>
+					<item>
+						<itextId>river_list-119</itextId>
+						<name>KONKOURE</name>
+						<village_list>BENNA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-120</itextId>
+						<name>KONKOURE</name>
+						<village_list>BOUSSOURA (Banguinet)</village_list>
+					</item>
+					<item>
+						<itextId>river_list-121</itextId>
+						<name>KONKOURE</name>
+						<village_list>DOLA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-122</itextId>
+						<name>KONKOURE</name>
+						<village_list>DOROYI CENTRE</village_list>
+					</item>
+					<item>
+						<itextId>river_list-123</itextId>
+						<name>KONKOURE</name>
+						<village_list>FANDJETA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-124</itextId>
+						<name>KONKOURE</name>
+						<village_list>FRIA VILLAGE</village_list>
+					</item>
+					<item>
+						<itextId>river_list-125</itextId>
+						<name>KONKOURE</name>
+						<village_list>GABAYAH</village_list>
+					</item>
+					<item>
+						<itextId>river_list-126</itextId>
+						<name>KONKOURE</name>
+						<village_list>KARDÈ</village_list>
+					</item>
+					<item>
+						<itextId>river_list-127</itextId>
+						<name>KONKOURE</name>
+						<village_list>KOBE SOODÈ</village_list>
+					</item>
+					<item>
+						<itextId>river_list-128</itextId>
+						<name>KONKOURE</name>
+						<village_list>KOLABOUGNI</village_list>
+					</item>
+					<item>
+						<itextId>river_list-129</itextId>
+						<name>KONKOURE</name>
+						<village_list>KOUNTIA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-130</itextId>
+						<name>KONKOURE</name>
+						<village_list>LEGUELOUGOU</village_list>
+					</item>
+					<item>
+						<itextId>river_list-131</itextId>
+						<name>KONKOURE</name>
+						<village_list>MISSIDÉ BOULÈREYAH</village_list>
+					</item>
+					<item>
+						<itextId>river_list-132</itextId>
+						<name>KONKOURE</name>
+						<village_list>SIMBAKHOULOUN</village_list>
+					</item>
+					<item>
+						<itextId>river_list-133</itextId>
+						<name>KONKOURE</name>
+						<village_list>Kaleta</village_list>
+					</item>
+					<item>
+						<itextId>river_list-134</itextId>
+						<name>KONTA/KONKOURE</name>
+						<village_list>BOURAMAYAH TAFORY</village_list>
+					</item>
+					<item>
+						<itextId>river_list-135</itextId>
+						<name>KONY/KONKOURE</name>
+						<village_list>Diguilin</village_list>
+					</item>
+					<item>
+						<itextId>river_list-136</itextId>
+						<name>KONY/KONKOURE</name>
+						<village_list>KHOURKHAN</village_list>
+					</item>
+					<item>
+						<itextId>river_list-137</itextId>
+						<name>KONY/KONKOURE</name>
+						<village_list>Tondon 2</village_list>
+					</item>
+					<item>
+						<itextId>river_list-138</itextId>
+						<name>Koubiwol</name>
+						<village_list>Bambewel</village_list>
+					</item>
+					<item>
+						<itextId>river_list-139</itextId>
+						<name>Koubiwol</name>
+						<village_list>Congo Hafia</village_list>
+					</item>
+					<item>
+						<itextId>river_list-140</itextId>
+						<name>Koubiwol</name>
+						<village_list>Darra</village_list>
+					</item>
+					<item>
+						<itextId>river_list-141</itextId>
+						<name>Koubiwol</name>
+						<village_list>Kewol</village_list>
+					</item>
+					<item>
+						<itextId>river_list-142</itextId>
+						<name>Koubiwol</name>
+						<village_list>Kourassoro</village_list>
+					</item>
+					<item>
+						<itextId>river_list-143</itextId>
+						<name>Koubiwol</name>
+						<village_list>Sapepo</village_list>
+					</item>
+					<item>
+						<itextId>river_list-144</itextId>
+						<name>Koubiwol</name>
+						<village_list>Sira</village_list>
+					</item>
+					<item>
+						<itextId>river_list-145</itextId>
+						<name>Koubiwol</name>
+						<village_list>Toullelyereya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-146</itextId>
+						<name>Koubiwol/Kokoulo/Konkoure</name>
+						<village_list>Kondenko</village_list>
+					</item>
+					<item>
+						<itextId>river_list-147</itextId>
+						<name>KOUSSYWOL/KONKOURE</name>
+						<village_list>Koussy</village_list>
+					</item>
+					<item>
+						<itextId>river_list-148</itextId>
+						<name>LEYMINA</name>
+						<village_list>Balaya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-149</itextId>
+						<name>PALESSARE/KONKOURE</name>
+						<village_list>Falissare</village_list>
+					</item>
+					<item>
+						<itextId>river_list-150</itextId>
+						<name>PARAWOL</name>
+						<village_list>Peliga</village_list>
+					</item>
+					<item>
+						<itextId>river_list-151</itextId>
+						<name>Pont Kebali</name>
+						<village_list>Daro</village_list>
+					</item>
+					<item>
+						<itextId>river_list-152</itextId>
+						<name>Poro/gambi</name>
+						<village_list>Satina</village_list>
+					</item>
+					<item>
+						<itextId>river_list-153</itextId>
+						<name>Poro/gambi</name>
+						<village_list>Madina Saare</village_list>
+					</item>
+					<item>
+						<itextId>river_list-154</itextId>
+						<name>Saala/Komba</name>
+						<village_list>Goungan</village_list>
+					</item>
+					<item>
+						<itextId>river_list-155</itextId>
+						<name>SAMANKOU/FATALA</name>
+						<village_list>Souloudji (Sinta)</village_list>
+					</item>
+					<item>
+						<itextId>river_list-156</itextId>
+						<name>SAMANKOU/FATALA</name>
+						<village_list>Boudoun ami</village_list>
+					</item>
+					<item>
+						<itextId>river_list-157</itextId>
+						<name>SAMANKOU/FATALA</name>
+						<village_list>Dounkaya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-158</itextId>
+						<name>SAMANKOU/FATALA</name>
+						<village_list>Souloudji (Telimele Centre)</village_list>
+					</item>
+					<item>
+						<itextId>river_list-159</itextId>
+						<name>SAMANKOU/FATALA</name>
+						<village_list>Soulouwoye</village_list>
+					</item>
+					<item>
+						<itextId>river_list-160</itextId>
+						<name>SATINA</name>
+						<village_list>Gadathiangui</village_list>
+					</item>
+					<item>
+						<itextId>river_list-161</itextId>
+						<name>Satina /Komba</name>
+						<village_list>Nyiwa</village_list>
+					</item>
+					<item>
+						<itextId>river_list-162</itextId>
+						<name>Satina wol</name>
+						<village_list>NDiraye</village_list>
+					</item>
+					<item>
+						<itextId>river_list-163</itextId>
+						<name>Satina/Komba</name>
+						<village_list>Saagaran</village_list>
+					</item>
+					<item>
+						<itextId>river_list-164</itextId>
+						<name>Satinawol</name>
+						<village_list>Beela</village_list>
+					</item>
+					<item>
+						<itextId>river_list-165</itextId>
+						<name>SINTALY/KONKOURE</name>
+						<village_list>Louguel</village_list>
+					</item>
+					<item>
+						<itextId>river_list-166</itextId>
+						<name>SINTALY/KONKOURE</name>
+						<village_list>Bhoulal</village_list>
+					</item>
+					<item>
+						<itextId>river_list-167</itextId>
+						<name>SINTALY/KONKOURE</name>
+						<village_list>Linguerin</village_list>
+					</item>
+					<item>
+						<itextId>river_list-168</itextId>
+						<name>SINTALY/KONKOURE</name>
+						<village_list>Madina dibaya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-169</itextId>
+						<name>SINTALY/KONKOURE</name>
+						<village_list>Sintaly centre</village_list>
+					</item>
+					<item>
+						<itextId>river_list-170</itextId>
+						<name>SINTALY/KONKOURE</name>
+						<village_list>Touriya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-171</itextId>
+						<name>SONGORO/TINGUILITA</name>
+						<village_list>Carrefour Kolon</village_list>
+					</item>
+					<item>
+						<itextId>river_list-172</itextId>
+						<name>SOOTA</name>
+						<village_list>Fotokhounyi</village_list>
+					</item>
+					<item>
+						<itextId>river_list-173</itextId>
+						<name>SOOTA</name>
+						<village_list>Kila</village_list>
+					</item>
+					<item>
+						<itextId>river_list-174</itextId>
+						<name>Soultou</name>
+						<village_list>Kegna Hinde</village_list>
+					</item>
+					<item>
+						<itextId>river_list-175</itextId>
+						<name>TANGALA/KONKOURE</name>
+						<village_list>Bendè</village_list>
+					</item>
+					<item>
+						<itextId>river_list-176</itextId>
+						<name>Tene</name>
+						<village_list>Dankolo</village_list>
+					</item>
+					<item>
+						<itextId>river_list-177</itextId>
+						<name>Tene</name>
+						<village_list>Lamy</village_list>
+					</item>
+					<item>
+						<itextId>river_list-178</itextId>
+						<name>TENGBE/KONKOURE</name>
+						<village_list>SARAYA TEMBE PONT</village_list>
+					</item>
+					<item>
+						<itextId>river_list-179</itextId>
+						<name>THIAGHALEWOL/KOGON</name>
+						<village_list>THIAGHALLE</village_list>
+					</item>
+					<item>
+						<itextId>river_list-180</itextId>
+						<name>Thiankoye</name>
+						<village_list>Thiankoye (Kouramangui)</village_list>
+					</item>
+					<item>
+						<itextId>river_list-181</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Fokhogbie</village_list>
+					</item>
+					<item>
+						<itextId>river_list-182</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Kolon</village_list>
+					</item>
+					<item>
+						<itextId>river_list-183</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Songoron</village_list>
+					</item>
+					<item>
+						<itextId>river_list-184</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Tougnifily centre</village_list>
+					</item>
+					<item>
+						<itextId>river_list-185</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>GNAMAKOÛDJÉ</village_list>
+					</item>
+					<item>
+						<itextId>river_list-186</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>KANDJA FARA DABIS</village_list>
+					</item>
+					<item>
+						<itextId>river_list-187</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>KOUNFA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-188</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>MANGODJÈ</village_list>
+					</item>
+					<item>
+						<itextId>river_list-189</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>TANTOL</village_list>
+					</item>
+					<item>
+						<itextId>river_list-190</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>WESSEN</village_list>
+					</item>
+					<item>
+						<itextId>river_list-191</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>DIWÈ LOUMBA WELTO</village_list>
+					</item>
+					<item>
+						<itextId>river_list-192</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Doubhy centre</village_list>
+					</item>
+					<item>
+						<itextId>river_list-193</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>GOBIRET</village_list>
+					</item>
+					<item>
+						<itextId>river_list-194</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>TINGUILINTA</village_list>
+					</item>
+					<item>
+						<itextId>river_list-195</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Sarbacane quartier centre</village_list>
+					</item>
+					<item>
+						<itextId>river_list-196</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Bangouya barrage</village_list>
+					</item>
+					<item>
+						<itextId>river_list-197</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Bangouya centre</village_list>
+					</item>
+					<item>
+						<itextId>river_list-198</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Barrymakhadé</village_list>
+					</item>
+					<item>
+						<itextId>river_list-199</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Boboya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-200</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Bosso</village_list>
+					</item>
+					<item>
+						<itextId>river_list-201</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Dalabaya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-202</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Fidoula</village_list>
+					</item>
+					<item>
+						<itextId>river_list-203</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Gbalan</village_list>
+					</item>
+					<item>
+						<itextId>river_list-204</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Kabidjoumaya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-205</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Koundidè</village_list>
+					</item>
+					<item>
+						<itextId>river_list-206</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Moriakhory</village_list>
+					</item>
+					<item>
+						<itextId>river_list-207</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Paniboun pont</village_list>
+					</item>
+					<item>
+						<itextId>river_list-208</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Tabily</village_list>
+					</item>
+					<item>
+						<itextId>river_list-209</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Wondidhè</village_list>
+					</item>
+					<item>
+						<itextId>river_list-210</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Baguiya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-211</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Kaporo</village_list>
+					</item>
+					<item>
+						<itextId>river_list-212</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Saleya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-213</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Toguilon Kondéya</village_list>
+					</item>
+					<item>
+						<itextId>river_list-214</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Yattarayah</village_list>
+					</item>
+					<item>
+						<itextId>river_list-215</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Fanfaranyin</village_list>
+					</item>
+					<item>
+						<itextId>river_list-216</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Fôto</village_list>
+					</item>
+					<item>
+						<itextId>river_list-217</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Ningué Matodhé</village_list>
+					</item>
+					<item>
+						<itextId>river_list-218</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Wèyèkhôri</village_list>
+					</item>
+					<item>
+						<itextId>river_list-219</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Wondékhouré</village_list>
+					</item>
+					<item>
+						<itextId>river_list-220</itextId>
+						<name>TINGUILINTA</name>
+						<village_list>Yatiyi</village_list>
+					</item>
+					<item>
+						<itextId>river_list-221</itextId>
+						<name>Tolouwol/Komba</name>
+						<village_list>Ley korima</village_list>
+					</item>
+					<item>
+						<itextId>river_list-222</itextId>
+						<name>Tolouwol/Komba</name>
+						<village_list>Tolou</village_list>
+					</item>
+					<item>
+						<itextId>river_list-223</itextId>
+						<name>TONDON/KONKOURE</name>
+						<village_list>Parawaly</village_list>
+					</item>
+					<item>
+						<itextId>river_list-224</itextId>
+						<name>Touri/Gambie</name>
+						<village_list>Telirè</village_list>
+					</item>
+					<item>
+						<itextId>river_list-225</itextId>
+						<name>wara/dombele</name>
+						<village_list>Bourouwel</village_list>
+					</item>
+					<item>
+						<itextId>river_list-226</itextId>
+						<name>Wolé/Tene/Konkoure</name>
+						<village_list>Diabere</village_list>
+					</item>
+					<item>
+						<itextId>river_list-227</itextId>
+						<name>Woulounwol</name>
+						<village_list>Hore Wouloun</village_list>
+					</item>
+					<item>
+						<itextId>river_list-228</itextId>
+						<name>KONTA/KONKOURE</name>
+						<village_list>BOURAMAYAH TAFORY</village_list>
+					</item>
+					<item>
+						<itextId>river_list-229</itextId>
+						<name>KONKOURE</name>
+						<village_list>QUATRE PONT</village_list>
+					</item>
+				</root>
+			</instance>
+			<bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/r_recorderID:jr:constraintMsg')" nodeset="/data/r_recorderID" required="true()" type="string"/>
+			<bind nodeset="/data/r_district" required="true()" type="string"/>
+			<bind nodeset="/data/r_sub_district" required="true()" type="string"/>
+			<bind nodeset="/data/r_cluster_name" required="true()" type="string"/>
+			<bind nodeset="/data/r_river_name" required="true()" type="string"/>
+			<bind nodeset="/data/r_ID_method" required="true()" type="string"/>
+			<bind constraint="regex(., '^GNE_[A-Z]{3}_oncho_[0-9]{3}_[0-9]{5}$')" jr:constraintMsg="jr:itext('/data/r_BarcodeID1:jr:constraintMsg')" nodeset="/data/r_BarcodeID1" relevant=" /data/r_ID_method  = 'Scanner'" required="true()" type="barcode"/>
+			<bind constraint="regex(., '^GNE_[A-Z]{3}_oncho_[0-9]{3}_[0-9]{5}$')" jr:constraintMsg="jr:itext('/data/r_BarcodeID2:jr:constraintMsg')" nodeset="/data/r_BarcodeID2" relevant=" /data/r_ID_method  = 'Manual'" required="true()" type="string"/>
+			<bind nodeset="/data/r_ov16" required="true()" type="string"/>
+			<bind nodeset="/data/r_Notes" type="string"/>
+			<bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_StartTime" type="dateTime"/>
+			<bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/r_EndTime" type="dateTime"/>
+			<bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+		</model>
+	</h:head>
+	<h:body>
+		<input ref="/data/r_recorderID">
+			<label ref="jr:itext('/data/r_recorderID:label')"/>
+			<hint ref="jr:itext('/data/r_recorderID:hint')"/>
+		</input>
+		<select1 ref="/data/r_district">
+			<label ref="jr:itext('/data/r_district:label')"/>
+			<item>
+				<label ref="jr:itext('/data/r_district/Boffa:label')"/>
+				<value>Boffa</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_district/Boke:label')"/>
+				<value>Boke</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_district/Coyah:label')"/>
+				<value>Coyah</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_district/Dalaba:label')"/>
+				<value>Dalaba</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_district/Dubreka:label')"/>
+				<value>Dubreka</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_district/Fria:label')"/>
+				<value>Fria</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_district/Labe:label')"/>
+				<value>Labe</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_district/Pita:label')"/>
+				<value>Pita</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_district/Telimele:label')"/>
+				<value>Telimele</value>
+			</item>
+		</select1>
+		<select1 ref="/data/r_sub_district">
+			<label ref="jr:itext('/data/r_sub_district:label')"/>
+			<itemset nodeset="instance('sub_district_list')/root/item[district_list =  /data/r_district ]">
+				<value ref="name"/>
+				<label ref="jr:itext(itextId)"/>
+			</itemset>
+		</select1>
+		<select1 ref="/data/r_cluster_name">
+			<label ref="jr:itext('/data/r_cluster_name:label')"/>
+			<itemset nodeset="instance('village_list')/root/item[sub_district_list =  /data/r_sub_district ]">
+				<value ref="name"/>
+				<label ref="jr:itext(itextId)"/>
+			</itemset>
+		</select1>
+		<select1 ref="/data/r_river_name">
+			<label ref="jr:itext('/data/r_river_name:label')"/>
+			<itemset nodeset="instance('river_list')/root/item[village_list =  /data/r_cluster_name ]">
+				<value ref="name"/>
+				<label ref="jr:itext(itextId)"/>
+			</itemset>
+		</select1>
+		<select1 ref="/data/r_ID_method">
+			<label ref="jr:itext('/data/r_ID_method:label')"/>
+			<item>
+				<label ref="jr:itext('/data/r_ID_method/Scanner:label')"/>
+				<value>Scanner</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_ID_method/Manual:label')"/>
+				<value>Manual</value>
+			</item>
+		</select1>
+		<input ref="/data/r_BarcodeID1">
+			<label ref="jr:itext('/data/r_BarcodeID1:label')"/>
+			<hint ref="jr:itext('/data/r_BarcodeID1:hint')"/>
+		</input>
+		<input ref="/data/r_BarcodeID2">
+			<label ref="jr:itext('/data/r_BarcodeID2:label')"/>
+			<hint ref="jr:itext('/data/r_BarcodeID2:hint')"/>
+		</input>
+		<select1 ref="/data/r_ov16">
+			<label ref="jr:itext('/data/r_ov16:label')"/>
+			<item>
+				<label ref="jr:itext('/data/r_ov16/Positif:label')"/>
+				<value>Positif</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_ov16/Negatif:label')"/>
+				<value>Negatif</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_ov16/Invalide:label')"/>
+				<value>Invalide</value>
+			</item>
+			<item>
+				<label ref="jr:itext('/data/r_ov16/Refuse:label')"/>
+				<value>Refuse</value>
+			</item>
+		</select1>
+		<input ref="/data/r_Notes">
+			<label ref="jr:itext('/data/r_Notes:label')"/>
+		</input>
+	</h:body>
+</h:html>
