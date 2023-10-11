@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Août 2023) - 2. SCH/STH – Participant V3.2</h:title>
+    <h:title>(Oct 2023) - 2. SCH/STH – Participant V4</h:title>
     <model>
 
       <instance>
-        <data id="sn_sch_sth_impact_2_child_202308_v3_2">
+        <data id="sn_sch_sth_impact_2_child_202308_v4">
           <p_recorder/>
           <p_district/>
           <p_subdistrict/>
@@ -367,7 +367,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-			<bind nodeset="/data/part/meta/randomnum" type="string" calculate="concat(substr(random(),2,6), '-', substr(random(),10,14))"/>
+      <bind nodeset="/data/part/meta/randomnum" type="string" calculate="concat(substr(random(),2,6), '-', substr(random(),10,14))"/>
     </model>
   </h:head>
   <h:body>
