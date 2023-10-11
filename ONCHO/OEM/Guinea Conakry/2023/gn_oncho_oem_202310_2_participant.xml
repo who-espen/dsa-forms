@@ -151,8 +151,8 @@
       <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_cluster_id:jr:constraintMsg')" nodeset="/data/p_cluster_id" relevant=" /data/p_cluster_name = 'Autre'" required="true()" type="string"  db_get="col_5" db_filter_by_col_4="/data/p_cluster_name2"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
       <bind nodeset="/data/p_ID_method" relevant=" /data/p_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind constraint="regex(., '^GNE_[A-Z]{3}_oncho_[0-9]{3}_[0-9]{5}$')" jr:constraintMsg="jr:itext('/data/p_BarcodeID1:jr:constraintMsg')" nodeset="/data/p_BarcodeID1" relevant=" /data/p_consent  = 'Oui' and  /data/p_ID_method  = 'Scanner'" required="true()" type="barcode"/>
-      <bind constraint="regex(., '^GNE_[A-Z]{3}_oncho_[0-9]{3}_[0-9]{5}$')" jr:constraintMsg="jr:itext('/data/p_BarcodeID2:jr:constraintMsg')" nodeset="/data/p_BarcodeID2" relevant=" /data/p_consent  = 'Oui' and  /data/p_ID_method  = 'Manual'" required="true()" type="string"/>
+      <bind nodeset="/data/p_BarcodeID1" relevant=" /data/p_consent  = 'Oui' and  /data/p_ID_method  = 'Scanner'" required="true()" type="barcode"/>
+      <bind nodeset="/data/p_BarcodeID2" relevant=" /data/p_consent  = 'Oui' and  /data/p_ID_method  = 'Manual'" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="select1"/>
       <bind constraint=". &gt;= 20 and . &lt;= 99" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
       <bind constraint=".&lt;= /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_duree_reside:jr:constraintMsg')" nodeset="/data/p_duree_reside" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>

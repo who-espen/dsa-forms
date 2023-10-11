@@ -7,7 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Juin 2022) oncho OEM - 3. Formulaire Resultat OV16 V2</h:title>
+    <h:title>(2023 Oct) oncho OEM - 3. Formulaire Resultat OV16 V2</h:title>
     <model>
 
       <instance>
@@ -2144,8 +2144,8 @@
       <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/r_cluster_id:jr:constraintMsg')" nodeset="/data/r_cluster_id" relevant=" /data/r_cluster_name = 'Autre'" required="true()" type="int"/>
       <bind nodeset="/data/r_river_name" required="true()" type="select1"/>
       <bind nodeset="/data/r_ID_method" required="true()" type="select1"/>
-      <bind constraint="regex(., '^GNE_[A-Z]{3}_oncho_[0-9]{3}_[0-9]{5}$')" jr:constraintMsg="jr:itext('/data/r_BarcodeID1:jr:constraintMsg')" nodeset="/data/r_BarcodeID1" relevant=" /data/r_ID_method  = 'Scanner'" required="true()" type="barcode"/>
-      <bind constraint="regex(., '^GNE_[A-Z]{3}_oncho_[0-9]{3}_[0-9]{5}$')" jr:constraintMsg="jr:itext('/data/r_BarcodeID2:jr:constraintMsg')" nodeset="/data/r_BarcodeID2" relevant=" /data/r_ID_method  = 'Manual'" required="true()" type="string"/>
+      <bind nodeset="/data/r_BarcodeID1" relevant=" /data/r_ID_method  = 'Scanner'" required="true()" type="barcode"/>
+      <bind nodeset="/data/r_BarcodeID2" relevant=" /data/r_ID_method  = 'Manual'" required="true()" type="string"/>
       <bind nodeset="/data/r_ov16" required="true()" type="select1"/>
       <bind nodeset="/data/r_Notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_StartTime" type="dateTime"/>
