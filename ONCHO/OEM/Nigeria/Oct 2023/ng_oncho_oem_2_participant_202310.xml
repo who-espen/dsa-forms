@@ -43,7 +43,7 @@
             <value>Are the sample collected</value>
           </text>
           <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>Age must be between 5 and 9 years old</value>
+            <value>Age must be 20 years or more</value>
           </text>
           <text id="/data/p_serial_number1:label">
             <value>Please, enter the participant serial number</value>
@@ -124,7 +124,7 @@
       <bind constraint=". =  /data/p_serial_number1 " jr:constraintMsg="jr:itext('/data/p_serial_number2:jr:constraintMsg')" nodeset="/data/p_serial_number2" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind calculate="concat( /data/p_recorder_id , '-',  /data/p_cluster_id , '-',  /data/p_serial_number1 )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 20" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/p_sample_collected" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
       <bind nodeset="/data/p_end_survey_note" readonly="true()" relevant=" /data/p_consent  = 'No'" type="string"/>
       <bind nodeset="/data/p_AdditionalNotes" type="string"/>
