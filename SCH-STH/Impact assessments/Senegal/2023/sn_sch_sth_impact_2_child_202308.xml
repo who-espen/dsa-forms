@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Oct 2023) - 2. SCH/STH – Participant V4</h:title>
+    <h:title>(Oct 2023) - 2. SCH/STH – Participant V4.1</h:title>
     <model>
 
       <instance>
-        <data id="sn_sch_sth_impact_2_child_202308_v4">
+        <data id="sn_sch_sth_impact_2_child_202308_v4_1">
           <p_recorder/>
           <p_district/>
           <p_subdistrict/>
@@ -129,7 +129,7 @@
             <value>Veuillez remercier l'enfant pour sa participation</value>
           </text>
           <text id="/data/p_toilet:label">
-            <value>9. Y a-t-il des toilettes à la concession ?</value>
+            <value>9. Y a-t-il des toilettes dans l'école ?</value>
           </text>
           <text id="/data/part/p_consent/A.refuse:label">
             <value>2. A refusé</value>
@@ -222,7 +222,7 @@
             <value>Dans un village proche (à moins de 10km)</value>
           </text>
           <text id="/data/p_site_code:label">
-            <value>5. Sélectionnez le code du village</value>
+            <value>5. Sélectionnez le code de l'école</value>
           </text>
           <text id="/data/part/p_annes_vecu_village:label">
             <value>11. Depuis combien d'années l'enfant habite ce village</value>
@@ -261,7 +261,7 @@
             <value>Douleurs abdominales</value>
           </text>
           <text id="/data/p_site:label">
-            <value>4. Sélectionnez le nom du village</value>
+            <value>4. Sélectionnez le nom de l'école</value>
           </text>
           <text id="/data/p_place_defecate/Chez.eux:label">
             <value>Chez eux</value>
@@ -368,7 +368,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
       <bind nodeset="/data/part/meta/randomnum" type="string" calculate="concat(substr(random(),2,6), '-', substr(random(),10,14))"/>
-    </model>
+     </model>
   </h:head>
   <h:body>
     <input ref="/data/p_recorder">
