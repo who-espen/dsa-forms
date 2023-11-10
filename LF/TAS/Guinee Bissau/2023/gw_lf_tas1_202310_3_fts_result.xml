@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2023 Oct) 3. TAS1 FL - Resultado FTS</h:title>
+    <model odk:xforms-version="1.0.0">
+
+      <instance>
+        <data id="gw_lf_tas1_202310_3_fts_result">
+          <d_recorderID/>
+          <d_eu/>
+          <d_district/>
+          <d_cluster_name/>
+          <d_cluster_id/>
+          <d_code_id/>
+          <d_code_id2/>
+          <d_lotnumber1/>
+          <d_result1/>
+          <d_why_invalid1/>
+          <d_why_invalid_other1/>
+          <d_display_result1/>
+          <d_need_second_test/>
+          <d_lotnumber2/>
+          <d_result2/>
+          <d_why_invalid2/>
+          <d_why_invalid_other2/>
+          <d_display_result2/>
+          <d_final_result/>
+          <d_display_final_result/>
+          <d_Positivo_why_no_tx/>
+          <notes_part/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="Portuguese">
+          <text id="/data/d_recorderID:jr:constraintMsg">
+            <value>O código deve ser um número de dois algarismos entre 9 e 100</value>
+          </text>
+          <text id="/data/d_recorderID:label">
+            <value>Insira o ID do inqueridor</value>
+          </text>
+          <text id="/data/d_recorderID:hint">
+            <value>Se você for o único registrador/inqueridor na sua equipa, isso pode ser chamado de "ID de equipa" ID do inqueridor é o código de 2 dígitos fornecido a você ou à sua equipa</value>
+          </text>
+          <text id="/data/d_eu:label">
+            <value>Selecione a UA</value>
+          </text>
+          <text id="/data/d_district:label">
+            <value>Selecione o area sanitaria</value>
+          </text>
+          <text id="/data/d_cluster_name:label">
+            <value>Selecione o tabanca</value>
+          </text>
+          <text id="/data/d_cluster_id:label">
+            <value>Selecione o código do tabanca</value>
+          </text>
+          <text id="/data/d_code_id:label">
+            <value>Selecione o código do participante</value>
+          </text>
+          <text id="/data/d_code_id2:jr:constraintMsg">
+            <value>O código repetido deve ser o mesmo</value>
+          </text>
+          <text id="/data/d_code_id2:label">
+            <value>Insira manualmente o código do participante</value>
+          </text>
+          <text id="/data/d_lotnumber1:label">
+            <value>Por favor, insira o lote 1 do FTS</value>
+          </text>
+          <text id="/data/d_result1:label">
+            <value>FTS - Teste 1</value>
+          </text>
+          <text id="/data/d_result1:hint">
+            <value>"Inválido" inclui erros de teste e sangue insuficiente</value>
+          </text>
+          <text id="/data/d_why_invalid1:label">
+            <value>Justifique o teste inválido</value>
+          </text>
+          <text id="/data/d_why_invalid_other1:label">
+            <value>Dê 'Outro' motivo para teste inválido</value>
+          </text>
+          <text id="/data/d_need_second_test:label">
+            <value>O primeiro resultado do teste para este participante é <output value=" /data/d_display_result1 "/>
+ Este resultado requer um segundo teste Continuar este questionário para introduzir o segundo resultado do teste do participante</value>
+          </text>
+          <text id="/data/d_lotnumber2:jr:constraintMsg">
+            <value>O lote deve ser um número de seis algarismos</value>
+          </text>
+          <text id="/data/d_lotnumber2:label">
+            <value>Por favor, insira o lote número 2 do FTS</value>
+          </text>
+          <text id="/data/d_result2:label">
+            <value>FTS - Teste 2</value>
+          </text>
+          <text id="/data/d_result2:hint">
+            <value>Invalido comprend des erreurs de test et un sang insuffisant</value>
+          </text>
+          <text id="/data/d_why_invalid2:label">
+            <value>Justifique o teste inválido</value>
+          </text>
+          <text id="/data/d_why_invalid_other2:label">
+            <value>Dê 'Outro' motivo para teste inválido</value>
+          </text>
+          <text id="/data/d_display_final_result:label">
+            <value>O resultado final deste participante é: <output value=" /data/d_final_result "/>
+            </value>
+          </text>
+          <text id="/data/d_Positivo_why_no_tx:label">
+            <value>Especifique o plano de tratamento deste participante ou explique porque o tratamento não é possível.</value>
+          </text>
+          <text id="/data/notes_part:label">
+            <value>Notas adicionais no formulário</value>
+          </text>
+          <text id="results_list-0">
+            <value>Positivo</value>
+          </text>
+          <text id="results_list-1">
+            <value>Negativo</value>
+          </text>
+          <text id="results_list-2">
+            <value>Inválido</value>
+          </text>
+          <text id="why_invalid-0">
+            <value>Sem linha de controlo/acompanhamento</value>
+          </text>
+          <text id="why_invalid-1">
+            <value>Linha de controlo descontínuo/parcial</value>
+          </text>
+          <text id="why_invalid-2">
+            <value>Dificuldade na absorção da amostra</value>
+          </text>
+          <text id="why_invalid-3">
+            <value>Dificuldade com a migração de amostras</value>
+          </text>
+          <text id="why_invalid-4">
+            <value>O vestígio de sangue persiste (sangue deixado em linhas de tiras/obscuras)</value>
+          </text>
+          <text id="why_invalid-5">
+            <value>Volume de sangue insuficiente devido à pipetagem</value>
+          </text>
+          <text id="why_invalid-6">
+            <value>Outro (explicar)</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="results_list">
+        <root>
+          <item>
+            <itextId>results_list-0</itextId>
+            <name>Positivo</name>
+          </item>
+          <item>
+            <itextId>results_list-1</itextId>
+            <name>Negativo</name>
+          </item>
+          <item>
+            <itextId>results_list-2</itextId>
+            <name>Invalido</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="why_invalid">
+        <root>
+          <item>
+            <itextId>why_invalid-0</itextId>
+            <name>Sem.linha.de.controlo/acompanhamento</name>
+          </item>
+          <item>
+            <itextId>why_invalid-1</itextId>
+            <name>Linha.de.controlo.descontínuo/parcial</name>
+          </item>
+          <item>
+            <itextId>why_invalid-2</itextId>
+            <name>Dificuldade.na.absorção.da.amostra</name>
+          </item>
+          <item>
+            <itextId>why_invalid-3</itextId>
+            <name>Dificuldade.com.a.migração.de.amostras</name>
+          </item>
+          <item>
+            <itextId>why_invalid-4</itextId>
+            <name>O.vestígio.de.sangue.persiste.(sangue.deixado.em.linhas.de.tiras/obscuras)</name>
+          </item>
+          <item>
+            <itextId>why_invalid-5</itextId>
+            <name>Volume.de.sangue.insuficiente.devido.à.pipetagem</name>
+          </item>
+          <item>
+            <itextId>why_invalid-6</itextId>
+            <name>Other</name>
+          </item>
+        </root>
+      </instance>
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/d_recorderID:jr:constraintMsg')" nodeset="/data/d_recorderID" required="true()" type="int"/>
+      <bind nodeset="/data/d_eu" type="string" db_get="col_1"/>
+      <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_eu"/>
+      <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_district"/>
+      <bind nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/d_cluster_name"/>
+      <bind nodeset="/data/d_code_id" required="true()" type="string" db_get="col_6" db_filter_by_col_5="/data/d_cluster_id"/>
+      <bind constraint=". =  /data/d_code_id " jr:constraintMsg="jr:itext('/data/d_code_id2:jr:constraintMsg')" nodeset="/data/d_code_id2" required="true()" type="string"/>
+      <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
+      <bind nodeset="/data/d_result1" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid1" relevant=" /data/d_result1  = 'Invalid'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid_other1" relevant="selected( /data/d_why_invalid1 ,'Other')" required="true()" type="string"/>
+      <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result1" required="true()" type="string"/>
+      <bind nodeset="/data/d_need_second_test" readonly="true()" relevant=" /data/d_result1 != 'Negativo'" type="string"/>
+      <bind constraint="regex(.,'^[0-9]{6}$')" jr:constraintMsg="jr:itext('/data/d_lotnumber2:jr:constraintMsg')" nodeset="/data/d_lotnumber2" relevant=" /data/d_result1 != 'Negativo'" required="true()" type="string"/>
+      <bind nodeset="/data/d_result2" relevant=" /data/d_result1 != 'Negativo'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid2" relevant=" /data/d_result2  = 'Invalid'" required="true()" type="string"/>
+      <bind nodeset="/data/d_why_invalid_other2" relevant="selected( /data/d_why_invalid2 ,'Other')" required="true()" type="string"/>
+      <bind calculate=" /data/d_result1 " nodeset="/data/d_display_result2" relevant=" /data/d_result1 != 'Negativo'" type="string"/>
+      <bind calculate="if( /data/d_result1 =&quot;Positivo&quot; and  /data/d_result2 =&quot;Positivo&quot;, &quot;Positivo&quot;,
+ if( /data/d_result1 =&quot;Positivo&quot; and  /data/d_result2 =&quot;Negativo&quot;, &quot;Indeterminate&quot;,
+ if( /data/d_result1 =&quot;Positivo&quot; and  /data/d_result2 =&quot;Invalid&quot;, &quot;Positivo&quot;,
+ if( /data/d_result1 =&quot;Invalid&quot; and  /data/d_result2 =&quot;Positivo&quot;, &quot;Positivo&quot;,
+ if( /data/d_result1 =&quot;Invalid&quot; and  /data/d_result2 =&quot;Invalid&quot;, &quot;Indeterminate&quot;,
+ if( /data/d_result1 =&quot;Invalid&quot; and  /data/d_result2 =&quot;Negativo&quot;, &quot;Negativo&quot;, &quot;Negativo&quot;)
+ )
+ )
+ )
+ )
+)" nodeset="/data/d_final_result" type="string"/>
+      <bind nodeset="/data/d_display_final_result" readonly="true()" type="string"/>
+      <bind nodeset="/data/d_Positivo_why_no_tx" relevant=" /data/d_final_result  = 'Positivo'" type="string"/>
+      <bind nodeset="/data/notes_part" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/d_recorderID">
+      <label ref="jr:itext('/data/d_recorderID:label')"/>
+      <hint ref="jr:itext('/data/d_recorderID:hint')"/>
+    </input>
+    <input ref="/data/d_eu">
+      <label ref="jr:itext('/data/d_eu:label')"/>
+    </input>
+    <input ref="/data/d_district">
+      <label ref="jr:itext('/data/d_district:label')"/>
+    </input>
+    <input ref="/data/d_cluster_name">
+      <label ref="jr:itext('/data/d_cluster_name:label')"/>
+    </input>
+    <input ref="/data/d_cluster_id">
+      <label ref="jr:itext('/data/d_cluster_id:label')"/>
+    </input>
+    <input ref="/data/d_code_id">
+      <label ref="jr:itext('/data/d_code_id:label')"/>
+    </input>
+    <input ref="/data/d_code_id2">
+      <label ref="jr:itext('/data/d_code_id2:label')"/>
+    </input>
+    <input ref="/data/d_lotnumber1">
+      <label ref="jr:itext('/data/d_lotnumber1:label')"/>
+    </input>
+    <select1 ref="/data/d_result1">
+      <label ref="jr:itext('/data/d_result1:label')"/>
+      <hint ref="jr:itext('/data/d_result1:hint')"/>
+      <itemset nodeset="instance('results_list')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select ref="/data/d_why_invalid1">
+      <label ref="jr:itext('/data/d_why_invalid1:label')"/>
+      <itemset nodeset="instance('why_invalid')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select>
+    <input ref="/data/d_why_invalid_other1">
+      <label ref="jr:itext('/data/d_why_invalid_other1:label')"/>
+    </input>
+    <input ref="/data/d_need_second_test">
+      <label ref="jr:itext('/data/d_need_second_test:label')"/>
+    </input>
+    <input ref="/data/d_lotnumber2">
+      <label ref="jr:itext('/data/d_lotnumber2:label')"/>
+    </input>
+    <select1 ref="/data/d_result2">
+      <label ref="jr:itext('/data/d_result2:label')"/>
+      <hint ref="jr:itext('/data/d_result2:hint')"/>
+      <itemset nodeset="instance('results_list')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select ref="/data/d_why_invalid2">
+      <label ref="jr:itext('/data/d_why_invalid2:label')"/>
+      <itemset nodeset="instance('why_invalid')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select>
+    <input ref="/data/d_why_invalid_other2">
+      <label ref="jr:itext('/data/d_why_invalid_other2:label')"/>
+    </input>
+    <input ref="/data/d_display_final_result">
+      <label ref="jr:itext('/data/d_display_final_result:label')"/>
+    </input>
+    <input ref="/data/d_Positivo_why_no_tx">
+      <label ref="jr:itext('/data/d_Positivo_why_no_tx:label')"/>
+    </input>
+    <input ref="/data/notes_part">
+      <label ref="jr:itext('/data/notes_part:label')"/>
+    </input>
+  </h:body>
+</h:html>

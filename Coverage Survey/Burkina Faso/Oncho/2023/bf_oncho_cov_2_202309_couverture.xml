@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Sept 2023) BFA Cov ONCHO - 2.Formulaire Couverture</h:title>
+    <model>
+
+      <instance>
+        <data id="bf_oncho_cov_2_202309_couverture">
+          <Code_enqueteur/>
+          <csps/>
+          <grappe/>
+          <num_grappe/>
+          <num_menage/>
+          <num_ordre/>
+          <numero_individu/>
+          <code_individu/>
+          <age/>
+          <age_en_mois/>
+          <sexe/>
+          <repondant/>
+          <presence/>
+          <duree_sejour/>
+          <nb_ivm_avale/>
+          <jamais_ivm/>
+          <recu_IVM/>
+          <pourquoi_pas_recu_IVM/>
+          <autres_raisons/>
+          <raisons_absence/>
+          <prise_taille/>
+          <avale_IVM/>
+          <nb_comprime_IVM_avale/>
+          <prise_supervisee/>
+          <pourquoi_pas_avale/>
+          <lieux/>
+          <effet_indesirable/>
+          <type_effet_indesirable/>
+          <autre_effet_indesirable/>
+          <combien_de_temps/>
+          <taille/>
+          <traitementparlequipe/>
+          <notes/>
+          <debut_edition/>
+          <fin_edition/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/pourquoi_pas_avale/Pas_reçu_suffisamment_d.information:label">
+            <value>Pas reçu suffisamment d'information</value>
+          </text>
+          <text id="/data/numero_individu:label">
+            <value>7. Numéro de l'enquêté</value>
+          </text>
+          <text id="/data/raisons_absence/Travail/absent:label">
+            <value>Travail/absent</value>
+          </text>
+          <text id="/data/lieux/Ecole:label">
+            <value>Ecole</value>
+          </text>
+          <text id="/data/grappe:label">
+            <value>3. Grappe</value>
+          </text>
+          <text id="/data/Code_enqueteur:hint">
+            <value>Entrez le code de l'équipe</value>
+          </text>
+          <text id="/data/pourquoi_pas_avale/Mauvais_gout:label">
+            <value>Mauvais gout</value>
+          </text>
+          <text id="/data/jamais_ivm/DC pas venu chez moi:label">
+            <value>Le distributeur n.est pas venu chez moi</value>
+          </text>
+          <text id="/data/autres_raisons:label">
+            <value>15b. Autres raisons</value>
+          </text>
+          <text id="/data/Code_enqueteur/5:label">
+            <value>5</value>
+          </text>
+          <text id="/data/num_grappe:label">
+            <value>4. Numéro de la grappe:</value>
+          </text>
+          <text id="/data/combien_de_temps/J0:label">
+            <value>J0</value>
+          </text>
+          <text id="/data/type_effet_indesirable/Nausee/vomissements:label">
+            <value>Nausée/vomissements</value>
+          </text>
+          <text id="/data/nb_ivm_avale/Une fois:label">
+            <value>Une fois</value>
+          </text>
+          <text id="/data/avale_IVM:label">
+            <value>17. Est-ce que vous avez avalé les médicaments ?</value>
+          </text>
+          <text id="/data/jamais_ivm/Ne sait pas:label">
+            <value>Ne sait pas</value>
+          </text>
+          <text id="/data/lieux/Marché:label">
+            <value>Marché</value>
+          </text>
+          <text id="/data/taille/Noir:label">
+            <value>Noir</value>
+          </text>
+          <text id="/data/nb_comprime_IVM_avale/4. Quatre comprimés:label">
+            <value>4. Quatre comprimés</value>
+          </text>
+          <text id="/data/presence/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/type_effet_indesirable:label">
+            <value>23. Lequel/lesquels des effets indésirables avez-vous eu après la prise de l'ivermectine ?</value>
+          </text>
+          <text id="/data/age:jr:constraintMsg">
+            <value>Veuillez entrer un age convenable</value>
+          </text>
+          <text id="/data/avale_IVM/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/combien_de_temps/J1:label">
+            <value>J1</value>
+          </text>
+          <text id="/data/pourquoi_pas_avale/Refus:label">
+            <value>Refus</value>
+          </text>
+          <text id="/data/pourquoi_pas_recu_IVM/Moins_de_5_ans:label">
+            <value>Moins de 5 ans</value>
+          </text>
+          <text id="/data/lieux/Menage:label">
+            <value>Ménage</value>
+          </text>
+          <text id="/data/Code_enqueteur/3:label">
+            <value>3</value>
+          </text>
+          <text id="/data/code_individu:label">
+            <value>8. Code unique de l'enquêté</value>
+          </text>
+          <text id="/data/recu_IVM/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/prise_taille/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/type_effet_indesirable/Vertige:label">
+            <value>Vertige</value>
+          </text>
+          <text id="/data/nb_comprime_IVM_avale/1. Un comprimé:label">
+            <value>1. Un comprimé</value>
+          </text>
+          <text id="/data/pourquoi_pas_recu_IVM/Absent_du_village:label">
+            <value>Absent du village</value>
+          </text>
+          <text id="/data/csps:label">
+            <value>2. CSPS</value>
+          </text>
+          <text id="/data/sexe/F:label">
+            <value>Féminin</value>
+          </text>
+          <text id="/data/repondant:label">
+            <value>11. Personne qui répond au questionnaire?</value>
+          </text>
+          <text id="/data/nb_comprime_IVM_avale/5. Cinq comprimés:label">
+            <value>5. Cinq comprimés</value>
+          </text>
+          <text id="/data/nb_comprime_IVM_avale:label">
+            <value>18. Combien de comprimés avez-vous avalé</value>
+          </text>
+          <text id="/data/type_effet_indesirable/Douleur_abdominale_/diarrhee:label">
+            <value>Douleur abdominale /diarrhée</value>
+          </text>
+          <text id="/data/pourquoi_pas_recu_IVM/Other:label">
+            <value>Autres (à spécifier)</value>
+          </text>
+          <text id="/data/numero_individu:hint">
+            <value>Numero menage suivi de 2 chiffres. Exemple: A01_01</value>
+          </text>
+          <text id="/data/jamais_ivm:label">
+            <value>13b. Si jamais avalé médicaments contre l'oncho, dites pourquoi ?</value>
+          </text>
+          <text id="/data/num_menage:hint">
+            <value>une lettre majuscule suivi de 2 chiffres. Exemple: A01</value>
+          </text>
+          <text id="/data/grappe:hint">
+            <value>Sélectionnez la grappe</value>
+          </text>
+          <text id="/data/type_effet_indesirable/Cephalees:label">
+            <value>Céphalées</value>
+          </text>
+          <text id="/data/num_ordre:label">
+            <value>6. Numéro d'ordre du participant</value>
+          </text>
+          <text id="/data/effet_indesirable/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/taille:hint">
+            <value>Si enquêté present</value>
+          </text>
+          <text id="/data/nb_ivm_avale/Ne sait pas / pas de réponse:label">
+            <value>Ne sait pas / pas de réponse</value>
+          </text>
+          <text id="/data/num_grappe:hint">
+            <value>Le numéro doit être compris entre 1 et 30</value>
+          </text>
+          <text id="/data/Code_enqueteur/1:label">
+            <value>1</value>
+          </text>
+          <text id="/data/pourquoi_pas_avale:label">
+            <value>20. Pourquoi n'avez-vous pas avalé l'ivermectine lors de la dernière campagne?</value>
+          </text>
+          <text id="/data/pourquoi_pas_recu_IVM/Malade_:label">
+            <value>Malade</value>
+          </text>
+          <text id="/data/raisons_absence/Autre:label">
+            <value>Autre</value>
+          </text>
+          <text id="/data/pourquoi_pas_recu_IVM/Grossesse:label">
+            <value>Grossesse</value>
+          </text>
+          <text id="/data/jamais_ivm/Peur effets indesirables:label">
+            <value>Peur des effets indesirables</value>
+          </text>
+          <text id="/data/type_effet_indesirable/Somnolence_:label">
+            <value>Somnolence</value>
+          </text>
+          <text id="/data/jamais_ivm/Non éligible:label">
+            <value>Non éligible</value>
+          </text>
+          <text id="/data/raisons_absence/École/Université:label">
+            <value>École/Université</value>
+          </text>
+          <text id="/data/taille:label">
+            <value>25.Prendre la taille de l'enquêté à l'aide d'une toise et noter les résultats</value>
+          </text>
+          <text id="/data/taille/Bleu:label">
+            <value>Bleu</value>
+          </text>
+          <text id="/data/traitementparlequipe/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/lieux:label">
+            <value>21. Où étiez-vous lorsque vous avez reçu le médicament?</value>
+          </text>
+          <text id="/data/type_effet_indesirable/Fievre:label">
+            <value>Fièvre</value>
+          </text>
+          <text id="/data/combien_de_temps:label">
+            <value>24. Combien de temps après avez-vous eu cet/ces effet (s)?</value>
+          </text>
+          <text id="/data/jamais_ivm/Autres raisons:label">
+            <value>Autres raisons</value>
+          </text>
+          <text id="/data/Code_enqueteur/4:label">
+            <value>4</value>
+          </text>
+          <text id="/data/pourquoi_pas_recu_IVM/Refus:label">
+            <value>Refus</value>
+          </text>
+          <text id="/data/num_grappe:jr:constraintMsg">
+            <value>Le numéro doit être compris entre 1 et 30</value>
+          </text>
+          <text id="/data/lieux/Lieu_de_travail:label">
+            <value>Lieu de travail</value>
+          </text>
+          <text id="/data/effet_indesirable:label">
+            <value>22. Avez-vous eu des effets indésirables après la prise de l'ivermectine?</value>
+          </text>
+          <text id="/data/csps:hint">
+            <value>Sélectionnez le CSPS</value>
+          </text>
+          <text id="/data/nb_comprime_IVM_avale/2. Deux comprimés:label">
+            <value>2. Deux comprimés</value>
+          </text>
+          <text id="/data/taille/Vert:label">
+            <value>Vert</value>
+          </text>
+          <text id="/data/prise_supervisee/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/autre_effet_indesirable:label">
+            <value>23b. Autres effet indésirables</value>
+          </text>
+          <text id="/data/notes:label">
+            <value>27. Notes</value>
+          </text>
+          <text id="/data/pourquoi_pas_recu_IVM/Personne_n.est_passe:label">
+            <value>Personne n'est passé</value>
+          </text>
+          <text id="/data/raisons_absence:label">
+            <value>15c. Raisons de l'absence</value>
+          </text>
+          <text id="/data/prise_supervisee:label">
+            <value>19. les médicaments ont-ils été avalés devant le DC ?</value>
+          </text>
+          <text id="/data/prise_taille/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/avale_IVM/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/sexe:label">
+            <value>10. Sexe</value>
+          </text>
+          <text id="/data/age_en_mois:jr:constraintMsg">
+            <value>Age compris entre 2 et 11 mois</value>
+          </text>
+          <text id="/data/pourquoi_pas_avale/Malade:label">
+            <value>Malade</value>
+          </text>
+          <text id="/data/raisons_absence/Ne sait pas/Pas de réponse:label">
+            <value>Ne sait pas/Pas de réponse</value>
+          </text>
+          <text id="/data/type_effet_indesirable/Courbature:label">
+            <value>Courbature</value>
+          </text>
+          <text id="/data/duree_sejour:jr:constraintMsg">
+            <value>La valeur ne peut pas être supérieure à l'age</value>
+          </text>
+          <text id="/data/pourquoi_pas_recu_IVM/Rupture_de_medicaments:label">
+            <value>Rupture de médicaments</value>
+          </text>
+          <text id="/data/pourquoi_pas_recu_IVM:label">
+            <value>15. Raisons pour lesquelles vous n'avez pas eu les médicaments</value>
+          </text>
+          <text id="/data/nb_comprime_IVM_avale/0. Ne sait pas:label">
+            <value>0. Ne sait pas</value>
+          </text>
+          <text id="/data/recu_IVM/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/recu_IVM:label">
+            <value>14. Avez-vous reçu l'IVM au cours de la campagne ?</value>
+          </text>
+          <text id="/data/code_individu:hint">
+            <value>Sélectionnez le code unique de l'enquêté</value>
+          </text>
+          <text id="/data/repondant/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/sexe/M:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/presence:label">
+            <value>11b. Le répondant est-il actuellement à la maison ?</value>
+          </text>
+          <text id="/data/raisons_absence/Insécurité:label">
+            <value>Insécurité</value>
+          </text>
+          <text id="/data/effet_indesirable/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/lieux/Autres:label">
+            <value>Autres</value>
+          </text>
+          <text id="/data/prise_supervisee/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/age:label">
+            <value>9. Age (en années)</value>
+          </text>
+          <text id="/data/taille/Jaune:label">
+            <value>Jaune</value>
+          </text>
+          <text id="/data/jamais_ivm/Pas au courant TDM:label">
+            <value>Je n.étais pas au courant du TDM</value>
+          </text>
+          <text id="/data/traitementparlequipe/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/lieux/Gare-routier:label">
+            <value>Gare routière</value>
+          </text>
+          <text id="/data/duree_sejour:label">
+            <value>12. Depuis combien d'années vivez-vous dans ce village ?</value>
+          </text>
+          <text id="/data/pourquoi_pas_avale/Other:label">
+            <value>Autre (spécifiez)</value>
+          </text>
+          <text id="/data/prise_taille:label">
+            <value>16. Le DC a-t-il pris votre taille avant de vous donner les médicaments ?</value>
+          </text>
+          <text id="/data/Code_enqueteur/2:label">
+            <value>2</value>
+          </text>
+          <text id="/data/num_menage:label">
+            <value>5. Numéro ménage</value>
+          </text>
+          <text id="/data/lieux/Lieux_de_culte:label">
+            <value>Lieux de culte</value>
+          </text>
+          <text id="/data/type_effet_indesirable/Other:label">
+            <value>Autre (spécifiez)</value>
+          </text>
+          <text id="/data/taille/Rouge:label">
+            <value>Rouge</value>
+          </text>
+          <text id="/data/jamais_ivm/Absent pendant TDM:label">
+            <value>Absent pendant le TDM</value>
+          </text>
+          <text id="/data/Code_enqueteur:label">
+            <value>1. Code Equipe</value>
+          </text>
+          <text id="/data/pourquoi_pas_recu_IVM/Allaitement_moins_d.une_semaine:label">
+            <value>Allaitement  moins d'une semaine</value>
+          </text>
+          <text id="/data/repondant/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/nb_ivm_avale/Deux fois ou plus:label">
+            <value>Deux fois ou plus</value>
+          </text>
+          <text id="/data/nb_ivm_avale:label">
+            <value>13. En comptant la dernière campagne, Combien de fois avez-vous pris des médicaments contre l'oncho ?</value>
+          </text>
+          <text id="/data/traitementparlequipe:label">
+            <value>26. L'enquêté a-t-il été traité par l'équipe?</value>
+          </text>
+          <text id="/data/raisons_absence/Absent du village(voyage):label">
+            <value>Absent du village(voyage)</value>
+          </text>
+          <text id="/data/pourquoi_pas_avale/Peur_d.effets_indesirables:label">
+            <value>Peur d'effets indésirables</value>
+          </text>
+          <text id="/data/type_effet_indesirable/Prurit:label">
+            <value>Prurit</value>
+          </text>
+          <text id="/data/age_en_mois:hint">
+            <value>Entre 2 et 11</value>
+          </text>
+          <text id="/data/nb_ivm_avale/Jamais:label">
+            <value>Jamais</value>
+          </text>
+          <text id="/data/age_en_mois:label">
+            <value>9b. Age (en mois)</value>
+          </text>
+          <text id="/data/presence/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/combien_de_temps/J2_et_plus:label">
+            <value>J2 et plus</value>
+          </text>
+          <text id="/data/nb_comprime_IVM_avale/3. Trois comprimés:label">
+            <value>3. Trois comprimés</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/Code_enqueteur" required="true()" type="select1"/>
+      <bind nodeset="/data/csps" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/grappe" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/csps"/>
+      <bind nodeset="/data/num_grappe" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/grappe"/>
+      <bind constraint="regex(.,'^[A-Z]{1}[0-9]{2}$')" nodeset="/data/num_menage" required="true()" type="string"/>
+      <bind nodeset="/data/num_ordre" required="true()" type="int"/>
+      <bind calculate="if(  /data/num_ordre  &lt; 10, concat( /data/num_menage , '_0',  /data/num_ordre ), concat( /data/num_menage , '_',  /data/num_ordre ))" nodeset="/data/numero_individu" readonly="true()" type="string"/>
+      <bind calculate="concat( /data/grappe ,'_',  /data/numero_individu )" nodeset="/data/code_individu" readonly="true()" required="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and .&lt;120" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" required="true()" type="int"/>
+      <bind constraint=". &gt;= 2 and . &lt;= 11" jr:constraintMsg="jr:itext('/data/age_en_mois:jr:constraintMsg')" nodeset="/data/age_en_mois" relevant=" /data/age  = 0" required="true()" type="int"/>
+      <bind nodeset="/data/sexe" required="true()" type="select1"/>
+      <bind nodeset="/data/repondant" required="true()" type="select1"/>
+      <bind nodeset="/data/presence" required="true()" type="select1"/>
+      <bind constraint=". &lt;=  /data/age " jr:constraintMsg="jr:itext('/data/duree_sejour:jr:constraintMsg')" nodeset="/data/duree_sejour" required="true()" type="int"/>
+      <bind nodeset="/data/nb_ivm_avale" required="true()" type="select1"/>
+      <bind nodeset="/data/jamais_ivm" relevant=" /data/nb_ivm_avale  = 'Jamais'" required="true()" type="select1"/>
+      <bind nodeset="/data/recu_IVM" required="true()" type="select1"/>
+      <bind nodeset="/data/pourquoi_pas_recu_IVM" relevant=" /data/recu_IVM  = 'Non'" required="true()" type="select1"/>
+      <bind nodeset="/data/autres_raisons" relevant=" /data/pourquoi_pas_recu_IVM  = 'Other'" required="true()" type="string"/>
+      <bind nodeset="/data/raisons_absence" relevant=" /data/pourquoi_pas_recu_IVM  = 'Absent_du_village'" required="true()" type="select1"/>
+      <bind nodeset="/data/prise_taille" relevant=" /data/recu_IVM  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/avale_IVM" relevant=" /data/recu_IVM  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/nb_comprime_IVM_avale" relevant=" /data/avale_IVM  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/prise_supervisee" relevant=" /data/avale_IVM  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/pourquoi_pas_avale" relevant=" /data/avale_IVM  = 'Non'" required="true()" type="select1"/>
+      <bind nodeset="/data/lieux" relevant=" /data/recu_IVM  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/effet_indesirable" relevant=" /data/avale_IVM  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/type_effet_indesirable" relevant=" /data/avale_IVM  = 'Oui' and  /data/effet_indesirable  = 'Oui'" required="true()" type="select"/>
+      <bind nodeset="/data/autre_effet_indesirable" relevant="selected( /data/type_effet_indesirable , 'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/combien_de_temps" relevant=" /data/effet_indesirable  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/taille" relevant=" /data/repondant  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/traitementparlequipe" relevant=" /data/recu_IVM  = 'Non' and  /data/presence = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/notes" required="false()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/debut_edition" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/fin_edition" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 ref="/data/Code_enqueteur">
+      <label ref="jr:itext('/data/Code_enqueteur:label')"/>
+      <hint ref="jr:itext('/data/Code_enqueteur:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/Code_enqueteur/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Code_enqueteur/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Code_enqueteur/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Code_enqueteur/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/Code_enqueteur/5:label')"/>
+        <value>5</value>
+      </item>
+    </select1>
+    <input ref="/data/csps">
+      <label ref="jr:itext('/data/csps:label')"/>
+      <hint ref="jr:itext('/data/csps:hint')"/>
+    </input>
+    <input ref="/data/grappe">
+      <label ref="jr:itext('/data/grappe:label')"/>
+      <hint ref="jr:itext('/data/grappe:hint')"/>
+    </input>
+    <input ref="/data/num_grappe">
+      <label ref="jr:itext('/data/num_grappe:label')"/>
+      <hint ref="jr:itext('/data/num_grappe:hint')"/>
+    </input>
+    <input ref="/data/num_menage">
+      <label ref="jr:itext('/data/num_menage:label')"/>
+      <hint ref="jr:itext('/data/num_menage:hint')"/>
+    </input>
+    <input ref="/data/num_ordre">
+      <label ref="jr:itext('/data/num_ordre:label')"/>
+    </input>
+    <input ref="/data/numero_individu">
+      <label ref="jr:itext('/data/numero_individu:label')"/>
+      <hint ref="jr:itext('/data/numero_individu:hint')"/>
+    </input>
+    <input ref="/data/code_individu">
+      <label ref="jr:itext('/data/code_individu:label')"/>
+      <hint ref="jr:itext('/data/code_individu:hint')"/>
+    </input>
+    <input ref="/data/age">
+      <label ref="jr:itext('/data/age:label')"/>
+    </input>
+    <input ref="/data/age_en_mois">
+      <label ref="jr:itext('/data/age_en_mois:label')"/>
+      <hint ref="jr:itext('/data/age_en_mois:hint')"/>
+    </input>
+    <select1 ref="/data/sexe">
+      <label ref="jr:itext('/data/sexe:label')"/>
+      <item>
+        <label ref="jr:itext('/data/sexe/F:label')"/>
+        <value>F</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/sexe/M:label')"/>
+        <value>M</value>
+      </item>
+    </select1>
+    <select1 ref="/data/repondant">
+      <label ref="jr:itext('/data/repondant:label')"/>
+      <item>
+        <label ref="jr:itext('/data/repondant/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/repondant/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/presence">
+      <label ref="jr:itext('/data/presence:label')"/>
+      <item>
+        <label ref="jr:itext('/data/presence/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/presence/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/duree_sejour">
+      <label ref="jr:itext('/data/duree_sejour:label')"/>
+    </input>
+    <select1 ref="/data/nb_ivm_avale">
+      <label ref="jr:itext('/data/nb_ivm_avale:label')"/>
+      <item>
+        <label ref="jr:itext('/data/nb_ivm_avale/Jamais:label')"/>
+        <value>Jamais</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/nb_ivm_avale/Une fois:label')"/>
+        <value>Une fois</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/nb_ivm_avale/Deux fois ou plus:label')"/>
+        <value>Deux fois ou plus</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/nb_ivm_avale/Ne sait pas / pas de réponse:label')"/>
+        <value>Ne sait pas / pas de réponse</value>
+      </item>
+    </select1>
+    <select1 ref="/data/jamais_ivm">
+      <label ref="jr:itext('/data/jamais_ivm:label')"/>
+      <item>
+        <label ref="jr:itext('/data/jamais_ivm/Absent pendant TDM:label')"/>
+        <value>Absent pendant TDM</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/jamais_ivm/Peur effets indesirables:label')"/>
+        <value>Peur effets indesirables</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/jamais_ivm/Pas au courant TDM:label')"/>
+        <value>Pas au courant TDM</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/jamais_ivm/DC pas venu chez moi:label')"/>
+        <value>DC pas venu chez moi</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/jamais_ivm/Non éligible:label')"/>
+        <value>Non éligible</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/jamais_ivm/Ne sait pas:label')"/>
+        <value>Ne sait pas</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/jamais_ivm/Autres raisons:label')"/>
+        <value>Autres raisons</value>
+      </item>
+    </select1>
+    <select1 ref="/data/recu_IVM">
+      <label ref="jr:itext('/data/recu_IVM:label')"/>
+      <item>
+        <label ref="jr:itext('/data/recu_IVM/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/recu_IVM/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/pourquoi_pas_recu_IVM">
+      <label ref="jr:itext('/data/pourquoi_pas_recu_IVM:label')"/>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_recu_IVM/Grossesse:label')"/>
+        <value>Grossesse</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_recu_IVM/Allaitement_moins_d.une_semaine:label')"/>
+        <value>Allaitement_moins_d.une_semaine</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_recu_IVM/Moins_de_5_ans:label')"/>
+        <value>Moins_de_5_ans</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_recu_IVM/Absent_du_village:label')"/>
+        <value>Absent_du_village</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_recu_IVM/Malade_:label')"/>
+        <value>Malade_</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_recu_IVM/Personne_n.est_passe:label')"/>
+        <value>Personne_n.est_passe</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_recu_IVM/Rupture_de_medicaments:label')"/>
+        <value>Rupture_de_medicaments</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_recu_IVM/Refus:label')"/>
+        <value>Refus</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_recu_IVM/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <input ref="/data/autres_raisons">
+      <label ref="jr:itext('/data/autres_raisons:label')"/>
+    </input>
+    <select1 ref="/data/raisons_absence">
+      <label ref="jr:itext('/data/raisons_absence:label')"/>
+      <item>
+        <label ref="jr:itext('/data/raisons_absence/Travail/absent:label')"/>
+        <value>Travail/absent</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raisons_absence/Absent du village(voyage):label')"/>
+        <value>Absent du village(voyage)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raisons_absence/École/Université:label')"/>
+        <value>École/Université</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raisons_absence/Insécurité:label')"/>
+        <value>Insécurité</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raisons_absence/Autre:label')"/>
+        <value>Autre</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/raisons_absence/Ne sait pas/Pas de réponse:label')"/>
+        <value>Ne sait pas/Pas de réponse</value>
+      </item>
+    </select1>
+    <select1 ref="/data/prise_taille">
+      <label ref="jr:itext('/data/prise_taille:label')"/>
+      <item>
+        <label ref="jr:itext('/data/prise_taille/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/prise_taille/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/avale_IVM">
+      <label ref="jr:itext('/data/avale_IVM:label')"/>
+      <item>
+        <label ref="jr:itext('/data/avale_IVM/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/avale_IVM/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/nb_comprime_IVM_avale">
+      <label ref="jr:itext('/data/nb_comprime_IVM_avale:label')"/>
+      <item>
+        <label ref="jr:itext('/data/nb_comprime_IVM_avale/0. Ne sait pas:label')"/>
+        <value>0. Ne sait pas</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/nb_comprime_IVM_avale/1. Un comprimé:label')"/>
+        <value>1. Un comprimé</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/nb_comprime_IVM_avale/2. Deux comprimés:label')"/>
+        <value>2. Deux comprimés</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/nb_comprime_IVM_avale/3. Trois comprimés:label')"/>
+        <value>3. Trois comprimés</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/nb_comprime_IVM_avale/4. Quatre comprimés:label')"/>
+        <value>4. Quatre comprimés</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/nb_comprime_IVM_avale/5. Cinq comprimés:label')"/>
+        <value>5. Cinq comprimés</value>
+      </item>
+    </select1>
+    <select1 ref="/data/prise_supervisee">
+      <label ref="jr:itext('/data/prise_supervisee:label')"/>
+      <item>
+        <label ref="jr:itext('/data/prise_supervisee/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/prise_supervisee/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/pourquoi_pas_avale">
+      <label ref="jr:itext('/data/pourquoi_pas_avale:label')"/>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_avale/Peur_d.effets_indesirables:label')"/>
+        <value>Peur_d.effets_indesirables</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_avale/Malade:label')"/>
+        <value>Malade</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_avale/Mauvais_gout:label')"/>
+        <value>Mauvais_gout</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_avale/Pas_reçu_suffisamment_d.information:label')"/>
+        <value>Pas_reçu_suffisamment_d.information</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_avale/Refus:label')"/>
+        <value>Refus</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/pourquoi_pas_avale/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select1>
+    <select1 ref="/data/lieux">
+      <label ref="jr:itext('/data/lieux:label')"/>
+      <item>
+        <label ref="jr:itext('/data/lieux/Menage:label')"/>
+        <value>Menage</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieux/Lieux_de_culte:label')"/>
+        <value>Lieux_de_culte</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieux/Gare-routier:label')"/>
+        <value>Gare-routier</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieux/Marché:label')"/>
+        <value>Marché</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieux/Lieu_de_travail:label')"/>
+        <value>Lieu_de_travail</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieux/Ecole:label')"/>
+        <value>Ecole</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/lieux/Autres:label')"/>
+        <value>Autres</value>
+      </item>
+    </select1>
+    <select1 ref="/data/effet_indesirable">
+      <label ref="jr:itext('/data/effet_indesirable:label')"/>
+      <item>
+        <label ref="jr:itext('/data/effet_indesirable/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/effet_indesirable/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select ref="/data/type_effet_indesirable">
+      <label ref="jr:itext('/data/type_effet_indesirable:label')"/>
+      <item>
+        <label ref="jr:itext('/data/type_effet_indesirable/Cephalees:label')"/>
+        <value>Cephalees</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/type_effet_indesirable/Nausee/vomissements:label')"/>
+        <value>Nausee/vomissements</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/type_effet_indesirable/Vertige:label')"/>
+        <value>Vertige</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/type_effet_indesirable/Courbature:label')"/>
+        <value>Courbature</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/type_effet_indesirable/Douleur_abdominale_/diarrhee:label')"/>
+        <value>Douleur_abdominale_/diarrhee</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/type_effet_indesirable/Prurit:label')"/>
+        <value>Prurit</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/type_effet_indesirable/Fievre:label')"/>
+        <value>Fievre</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/type_effet_indesirable/Somnolence_:label')"/>
+        <value>Somnolence_</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/type_effet_indesirable/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/autre_effet_indesirable">
+      <label ref="jr:itext('/data/autre_effet_indesirable:label')"/>
+    </input>
+    <select1 ref="/data/combien_de_temps">
+      <label ref="jr:itext('/data/combien_de_temps:label')"/>
+      <item>
+        <label ref="jr:itext('/data/combien_de_temps/J0:label')"/>
+        <value>J0</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/combien_de_temps/J1:label')"/>
+        <value>J1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/combien_de_temps/J2_et_plus:label')"/>
+        <value>J2_et_plus</value>
+      </item>
+    </select1>
+    <select1 ref="/data/taille">
+      <label ref="jr:itext('/data/taille:label')"/>
+      <hint ref="jr:itext('/data/taille:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/taille/Noir:label')"/>
+        <value>Noir</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/taille/Jaune:label')"/>
+        <value>Jaune</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/taille/Bleu:label')"/>
+        <value>Bleu</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/taille/Vert:label')"/>
+        <value>Vert</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/taille/Rouge:label')"/>
+        <value>Rouge</value>
+      </item>
+    </select1>
+    <select1 ref="/data/traitementparlequipe">
+      <label ref="jr:itext('/data/traitementparlequipe:label')"/>
+      <item>
+        <label ref="jr:itext('/data/traitementparlequipe/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/traitementparlequipe/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/notes">
+      <label ref="jr:itext('/data/notes:label')"/>
+    </input>
+  </h:body>
+</h:html>

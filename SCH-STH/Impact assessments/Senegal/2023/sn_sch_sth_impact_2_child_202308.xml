@@ -7,16 +7,17 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Août 2023) - 2. SCH/STH – Participant V3.2</h:title>
+    <h:title>(Oct 2023) - 2. SCH/STH – Participant V4.1</h:title>
     <model>
 
       <instance>
-        <data id="sn_sch_sth_impact_2_child_202308_v3_2">
+        <data id="sn_sch_sth_impact_2_child_202308_v4_1">
           <p_recorder/>
           <p_district/>
           <p_subdistrict/>
           <p_site/>
           <p_site_code/>
+          <p_consent_note/>
           <p_toilet/>
           <p_toilet_type/>
           <p_toilet_clean/>
@@ -30,7 +31,6 @@
           <p_place_defecate/>
           <part jr:template="">
             <p_add_child/>
-            <p_consent_note/>
             <p_consent/>
             <p_barcodeid/>
             <p_age_yrs/>
@@ -59,6 +59,9 @@
 
       <itext>
         <translation default="true()" lang="French">
+          <text id="/data/p_consent_note:label">
+            <value>Bonjour ! Je suis ici au nom du ministère de la Santé. Nous menons une enquête pour déterminer la présence de schistosomiase (SCH) et des géo-helminthiases (STH) dans votre école. Je vais vous poser quelques questions sur le mode et le mécanisme de transmission et apprécierais également de prélever des échantillons de selles et d'urine auprès de vous. Si vous souhaitez participer à l'enquête, dites-le-moi et je noterai vos réponses et vous fournirai des récipients de selles et d'urine. Si vous êtes d'accord, l'enquête ne prendra que quelques minutes. Participer à l'enquête scolaire vous sera directement bénéfique car en cas de diagnostic de vers, vous recevrez immédiatement des médicaments vermifuges. Votre communauté et votre école en bénéficieront également directement, car les résultats de cette enquête aideront le ministère de la Santé à mettre en œuvre des activités de déparasitage pour les enfants âgés de 5 à 14 ans, si les résultats de laboratoire révèlent la nécessité d'interventions. Vous pouvez refuser sans pénalité. Souhaitez-vous participer à notre enquête ?</value>
+          </text>
           <text id="/data/p_flies_access_faeces:label">
             <value>9.f. Observateur: Les mouches peuvent-elles accéder aux fécès ?</value>
           </text>
@@ -126,7 +129,7 @@
             <value>Veuillez remercier l'enfant pour sa participation</value>
           </text>
           <text id="/data/p_toilet:label">
-            <value>9. Y a-t-il des toilettes à la concession ?</value>
+            <value>9. Y a-t-il des toilettes dans l'école ?</value>
           </text>
           <text id="/data/part/p_consent/A.refuse:label">
             <value>2. A refusé</value>
@@ -164,14 +167,14 @@
           <text id="/data/p_sanitiser_2/Rien:label">
             <value>Rien</value>
           </text>
+          <text id="/data/part/p_manif_bilh/Ne.sait.pas:label">
+            <value>Ne sait pas</value>
+          </text>
           <text id="/data/part/p_sex/F:label">
             <value>Féminin</value>
           </text>
           <text id="/data/p_sanitizer/Serviette.jetable:label">
             <value>Serviette jetable</value>
-          </text>
-          <text id="/data/part/p_manif_bilh/Uriné du sang:label">
-            <value>Uriné du sang</value>
           </text>
           <text id="/data/p_toilet_type/Toilettes avec chasse d eau:label">
             <value>Toilettes avec chasse d eau</value>
@@ -197,6 +200,9 @@
           <text id="/data/p_washing_hand:label">
             <value>9.c. Observateur : Y-a-t in dispositif de lavage des mains est-ce ?</value>
           </text>
+          <text id="/data/part/p_manif_bilh/Uriné.du.sang:label">
+            <value>Uriné du sang</value>
+          </text>
           <text id="/data/p_toilet_clean/Non:label">
             <value>Non</value>
           </text>
@@ -216,7 +222,7 @@
             <value>Dans un village proche (à moins de 10km)</value>
           </text>
           <text id="/data/p_site_code:label">
-            <value>5. Sélectionnez le code du village</value>
+            <value>5. Sélectionnez le code de l'école</value>
           </text>
           <text id="/data/part/p_annes_vecu_village:label">
             <value>11. Depuis combien d'années l'enfant habite ce village</value>
@@ -230,8 +236,8 @@
           <text id="/data/part/p_sex:label">
             <value>9. Sélectionnez le sexe de l'enfant</value>
           </text>
-          <text id="/data/part/p_manif_bilh/Douleurs abdominales:label">
-            <value>Douleurs abdominales</value>
+          <text id="/data/p_sanitiser_2/Serviette.non.jetable:label">
+            <value>Serviette non jetable</value>
           </text>
           <text id="/data/p_sanitiser_2:label">
             <value>9.g.Quel(s) sont les désinfectant(s) disponible(s) ?</value>
@@ -245,17 +251,17 @@
           <text id="/data/part/p_consent:label">
             <value>6. L'enfant a-t-il donné son consentement et le consentement de ses parents ou tuteurs ?</value>
           </text>
-          <text id="/data/p_sanitiser_2/Serviette.non.jetable:label">
-            <value>Serviette non jetable</value>
-          </text>
           <text id="/data/p_washing_hand/Oui:label">
             <value>Oui</value>
           </text>
           <text id="/data/p_subdistrict:label">
             <value>3. Sélectionnez le Poste de santé</value>
           </text>
+          <text id="/data/part/p_manif_bilh/Douleurs.abdominales:label">
+            <value>Douleurs abdominales</value>
+          </text>
           <text id="/data/p_site:label">
-            <value>4. Sélectionnez le nom du village</value>
+            <value>4. Sélectionnez le nom de l'école</value>
           </text>
           <text id="/data/p_place_defecate/Chez.eux:label">
             <value>Chez eux</value>
@@ -302,9 +308,6 @@
           <text id="/data/p_washing_hand_2/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/part/p_manif_bilh/Ne sait pas:label">
-            <value>Ne sait pas</value>
-          </text>
           <text id="/data/part/p_connait_bilh:label">
             <value>13. Connaissez-vous la Bilharziose ?</value>
           </text>
@@ -320,9 +323,6 @@
           <text id="/data/part/p_age_yrs:label">
             <value>8. Entrez l'âge de l'enfant en années</value>
           </text>
-          <text id="/data/part/p_consent_note:label">
-            <value>Bonjour ! Je suis ici au nom du ministère de la Santé. Nous menons une enquête pour déterminer la présence de schistosomiase (SCH) et des géo-helminthiases (STH) dans votre école. Je vais vous poser quelques questions sur le mode et le mécanisme de transmission et apprécierais également de prélever des échantillons de selles et d'urine auprès de vous. Si vous souhaitez participer à l'enquête, dites-le-moi et je noterai vos réponses et vous fournirai des récipients de selles et d'urine. Si vous êtes d'accord, l'enquête ne prendra que quelques minutes. Participer à l'enquête scolaire vous sera directement bénéfique car en cas de diagnostic de vers, vous recevrez immédiatement des médicaments vermifuges. Votre communauté et votre école en bénéficieront également directement, car les résultats de cette enquête aideront le ministère de la Santé à mettre en œuvre des activités de déparasitage pour les enfants âgés de 5 à 14 ans, si les résultats de laboratoire révèlent la nécessité d'interventions. Vous pouvez refuser sans pénalité. Souhaitez-vous participer à notre enquête ?</value>
-          </text>
           <text id="/data/p_toilet/Oui:label">
             <value>Oui</value>
           </text>
@@ -337,6 +337,7 @@
       <bind nodeset="/data/p_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
       <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_subdistrict"/>
       <bind nodeset="/data/p_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_site"/>
+      <bind nodeset="/data/p_consent_note" readonly="true()" relevant=" /data/part/p_add_child  = 'Oui'" type="string"/>
       <bind nodeset="/data/p_toilet" required="true()" type="select1"/>
       <bind nodeset="/data/p_toilet_type" relevant=" /data/p_toilet  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/p_toilet_clean" relevant=" /data/p_toilet  = 'Oui'" required="true()" type="select1"/>
@@ -349,7 +350,6 @@
       <bind nodeset="/data/p_sanitiser_2" relevant=" /data/p_toilet  = 'Oui' and  /data/p_soap_2  = 'Non'" required="true()" type="select1"/>
       <bind nodeset="/data/p_place_defecate" relevant=" /data/p_toilet  = 'Non'" required="true()" type="select"/>
       <bind nodeset="/data/part/p_add_child" required="true()" type="select1"/>
-      <bind nodeset="/data/part/p_consent_note" readonly="true()" relevant=" ../p_add_child  = 'Oui'" type="string"/>
       <bind nodeset="/data/part/p_consent" relevant=" ../p_add_child  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/part/p_barcodeid" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="string" readonly="true()" calculate="concat( /data/p_site_code ,'-',/data/part/meta/randomnum)" db_add_col_4="/data/p_site_code" db_add_col_5="."/>
       <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/part/p_age_yrs:jr:constraintMsg')" nodeset="/data/part/p_age_yrs" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="int"/>
@@ -358,7 +358,7 @@
       <bind constraint=". &lt;=  ../p_age_yrs " jr:constraintMsg="jr:itext('/data/part/p_annes_vecu_village:jr:constraintMsg')" nodeset="/data/part/p_annes_vecu_village" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/part/p_mares_deau" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/part/p_connait_bilh" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/part/p_manif_bilh" relevant=" ../p_consent  = 'A.donne' and  ../p_connait_bilh  = 'Oui' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/part/p_manif_bilh" relevant=" ../p_consent  = 'A.donne' and  ../p_connait_bilh  = 'Oui' and  ../p_add_child  = 'Oui'" required="true()" type="select"/>
       <bind nodeset="/data/part/p_pisse_sang_1_fois" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/part/p_pisse_sang_maintenant" relevant=" ../p_consent  = 'A.donne' and  ../p_add_child  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/part/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'A.refuse' and  ../p_add_child  = 'Oui'" type="string"/>
@@ -367,8 +367,8 @@
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-			<bind nodeset="/data/part/meta/randomnum" type="string" calculate="concat(substr(random(),2,6), '-', substr(random(),10,14))"/>
-    </model>
+      <bind nodeset="/data/part/meta/randomnum" type="string" calculate="concat(substr(random(),2,6), '-', substr(random(),10,14))"/>
+     </model>
   </h:head>
   <h:body>
     <input ref="/data/p_recorder">
@@ -386,6 +386,9 @@
     </input>
     <input ref="/data/p_site_code">
       <label ref="jr:itext('/data/p_site_code:label')"/>
+    </input>
+    <input ref="/data/p_consent_note">
+      <label ref="jr:itext('/data/p_consent_note:label')"/>
     </input>
     <select1 ref="/data/p_toilet">
       <label ref="jr:itext('/data/p_toilet:label')"/>
@@ -562,9 +565,6 @@
             <value>Non</value>
           </item>
         </select1>
-        <input ref="/data/part/p_consent_note">
-          <label ref="jr:itext('/data/part/p_consent_note:label')"/>
-        </input>
         <select1 ref="/data/part/p_consent">
           <label ref="jr:itext('/data/part/p_consent:label')"/>
           <hint ref="jr:itext('/data/part/p_consent:hint')"/>
@@ -634,25 +634,25 @@
             <value>Non</value>
           </item>
         </select1>
-        <select1 ref="/data/part/p_manif_bilh">
+        <select ref="/data/part/p_manif_bilh">
           <label ref="jr:itext('/data/part/p_manif_bilh:label')"/>
           <item>
-            <label ref="jr:itext('/data/part/p_manif_bilh/Douleurs abdominales:label')"/>
-            <value>Douleurs abdominales</value>
+            <label ref="jr:itext('/data/part/p_manif_bilh/Douleurs.abdominales:label')"/>
+            <value>Douleurs.abdominales</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/part/p_manif_bilh/Uriné du sang:label')"/>
-            <value>Uriné du sang</value>
+            <label ref="jr:itext('/data/part/p_manif_bilh/Uriné.du.sang:label')"/>
+            <value>Uriné.du.sang</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/part/p_manif_bilh/Ne sait pas:label')"/>
-            <value>Ne sait pas</value>
+            <label ref="jr:itext('/data/part/p_manif_bilh/Ne.sait.pas:label')"/>
+            <value>Ne.sait.pas</value>
           </item>
           <item>
             <label ref="jr:itext('/data/part/p_manif_bilh/Autres:label')"/>
             <value>Autres</value>
           </item>
-        </select1>
+        </select>
         <select1 ref="/data/part/p_pisse_sang_1_fois">
           <label ref="jr:itext('/data/part/p_pisse_sang_1_fois:label')"/>
           <item>
