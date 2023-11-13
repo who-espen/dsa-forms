@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2023 Nov) - 3. SCH/STH - Kato Katz</h:title>
+    <model odk:xforms-version="1.0.0">
+
+      <instance>
+        <data id="tz_sch_sth_impact_202311_3_kato_katz">
+          <k_Recorder/>
+          <k_district/>
+          <k_ward/>
+          <k_site/>
+          <k_site_id/>
+          <C1/>
+          <k jr:template="">
+            <C2/>
+            <C3/>
+            <k_index/>
+            <k_code_id/>
+            <k_code_id2/>
+            <k_sch_man_sa/>
+            <k_sch_man_sb/>
+            <k_ascaris_lumb_sa/>
+            <k_ascaris_lumb_sb/>
+            <k_hookworm_sa/>
+            <k_hookworm_sb/>
+            <k_trichuris_sa/>
+            <k_trichuris_sb/>
+            <k_sch_hae_sa/>
+            <k_sch_hae_sb/>
+            <k_remarks/>
+          </k>
+          <k>
+            <C2/>
+            <C3/>
+            <k_index/>
+            <k_code_id/>
+            <k_code_id2/>
+            <k_sch_man_sa/>
+            <k_sch_man_sb/>
+            <k_ascaris_lumb_sa/>
+            <k_ascaris_lumb_sb/>
+            <k_hookworm_sa/>
+            <k_hookworm_sb/>
+            <k_trichuris_sa/>
+            <k_trichuris_sb/>
+            <k_sch_hae_sa/>
+            <k_sch_hae_sb/>
+            <k_remarks/>
+          </k>
+          <k_start/>
+          <k_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/k_Recorder:jr:constraintMsg">
+            <value>Must be two digits between 9 and 100</value>
+          </text>
+          <text id="/data/k_Recorder:label">
+            <value>Record code</value>
+          </text>
+          <text id="/data/k_district:label">
+            <value>Select the council</value>
+          </text>
+          <text id="/data/k_ward:label">
+            <value>Select ward</value>
+          </text>
+          <text id="/data/k_site:label">
+            <value>Select school name</value>
+          </text>
+          <text id="/data/k_site_id:label">
+            <value>Select school ID</value>
+          </text>
+          <text id="/data/k/k_index:jr:constraintMsg">
+            <value>This child code already exists. Please edit the sequence number from the previous question</value>
+          </text>
+          <text id="/data/k/k_index:label">
+            <value>Please select the QR code of the registered child</value>
+          </text>
+          <text id="/data/k/k_code_id:label">
+            <value>Please scan the QR Code again</value>
+          </text>
+          <text id="/data/k/k_code_id2:jr:constraintMsg">
+            <value>The code must be the same. If the child has not been registered, please register him/her first.</value>
+          </text>
+          <text id="/data/k/k_code_id2:label">
+            <value>Please select the code of the registered child</value>
+          </text>
+          <text id="/data/k/k_sch_man_sa:label">
+            <value>Schistosoma mansoni (eggs) - Slide A</value>
+          </text>
+          <text id="/data/k/k_sch_man_sb:label">
+            <value>Schistosoma mansoni (eggs) - Slide B</value>
+          </text>
+          <text id="/data/k/k_ascaris_lumb_sa:label">
+            <value>Ascaris lumbricoides (eggs) - Slide A</value>
+          </text>
+          <text id="/data/k/k_ascaris_lumb_sb:label">
+            <value>Ascaris lumbricoides (eggs) - Slide B</value>
+          </text>
+          <text id="/data/k/k_hookworm_sa:label">
+            <value>Hookworm - Slide A</value>
+          </text>
+          <text id="/data/k/k_hookworm_sb:label">
+            <value>Hookworm - Slide B</value>
+          </text>
+          <text id="/data/k/k_trichuris_sa:label">
+            <value>Whipworm trichura - Slide A</value>
+          </text>
+          <text id="/data/k/k_trichuris_sb:label">
+            <value>Whipworm trichura - Slide B</value>
+          </text>
+          <text id="/data/k/k_sch_hae_sa:label">
+            <value>Schistosoma haematobium – Slide A</value>
+          </text>
+          <text id="/data/k/k_sch_hae_sb:label">
+            <value>Schistosoma haematobium – Slide B</value>
+          </text>
+          <text id="/data/k/k_remarks:label">
+            <value>Additional notes</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/k_Recorder:jr:constraintMsg')" nodeset="/data/k_Recorder" required="true()" type="int"/>
+      <bind nodeset="/data/k_district" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/k_ward" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/k_district"/>
+      <bind nodeset="/data/k_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_ward"/>
+      <bind nodeset="/data/k_site_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/k_site"/>
+      <bind calculate="join(' ',  /data/k/k_index )" nodeset="/data/C1" type="string"/>
+      <bind calculate="position(..)" nodeset="/data/k/C2" type="string"/>
+      <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../k_index ))" nodeset="/data/k/C3" type="string"/>
+      <bind constraint="not(selected( ../C3 ,  ../k_index ))" jr:constraintMsg="jr:itext('/data/k/k_index:jr:constraintMsg')" nodeset="/data/k/k_index" required="true()" type="int"/>
+      <bind calculate="concat( /data/k_site_id , '_',  ../k_index )" nodeset="/data/k/k_code_id" readonly="true()" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/k_site_id"/>
+      <bind constraint=". =  ../k_code_id " jr:constraintMsg="jr:itext('/data/k/k_code_id2:jr:constraintMsg')" nodeset="/data/k/k_code_id2" required="true()" type="string"/>
+      <bind nodeset="/data/k/k_sch_man_sa" required="true()" type="int"/>
+      <bind nodeset="/data/k/k_sch_man_sb" required="true()" type="int"/>
+      <bind nodeset="/data/k/k_ascaris_lumb_sa" required="true()" type="int"/>
+      <bind nodeset="/data/k/k_ascaris_lumb_sb" required="true()" type="int"/>
+      <bind nodeset="/data/k/k_hookworm_sa" required="true()" type="int"/>
+      <bind nodeset="/data/k/k_hookworm_sb" required="true()" type="int"/>
+      <bind nodeset="/data/k/k_trichuris_sa" required="true()" type="int"/>
+      <bind nodeset="/data/k/k_trichuris_sb" required="true()" type="int"/>
+      <bind nodeset="/data/k/k_sch_hae_sa" required="true()" type="int"/>
+      <bind nodeset="/data/k/k_sch_hae_sb" required="true()" type="int"/>
+      <bind nodeset="/data/k/k_remarks" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/k_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/k_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/k_Recorder">
+      <label ref="jr:itext('/data/k_Recorder:label')"/>
+    </input>
+    <input ref="/data/k_district">
+      <label ref="jr:itext('/data/k_district:label')"/>
+    </input>
+    <input ref="/data/k_ward">
+      <label ref="jr:itext('/data/k_ward:label')"/>
+    </input>
+    <input ref="/data/k_site">
+      <label ref="jr:itext('/data/k_site:label')"/>
+    </input>
+    <input ref="/data/k_site_id">
+      <label ref="jr:itext('/data/k_site_id:label')"/>
+    </input>
+    <group ref="/data/k">
+      <label></label>
+      <repeat nodeset="/data/k">
+        <input ref="/data/k/k_index">
+          <label ref="jr:itext('/data/k/k_index:label')"/>
+        </input>
+        <input ref="/data/k/k_code_id">
+          <label ref="jr:itext('/data/k/k_code_id:label')"/>
+        </input>
+        <input ref="/data/k/k_code_id2">
+          <label ref="jr:itext('/data/k/k_code_id2:label')"/>
+        </input>
+        <input ref="/data/k/k_sch_man_sa">
+          <label ref="jr:itext('/data/k/k_sch_man_sa:label')"/>
+        </input>
+        <input ref="/data/k/k_sch_man_sb">
+          <label ref="jr:itext('/data/k/k_sch_man_sb:label')"/>
+        </input>
+        <input ref="/data/k/k_ascaris_lumb_sa">
+          <label ref="jr:itext('/data/k/k_ascaris_lumb_sa:label')"/>
+        </input>
+        <input ref="/data/k/k_ascaris_lumb_sb">
+          <label ref="jr:itext('/data/k/k_ascaris_lumb_sb:label')"/>
+        </input>
+        <input ref="/data/k/k_hookworm_sa">
+          <label ref="jr:itext('/data/k/k_hookworm_sa:label')"/>
+        </input>
+        <input ref="/data/k/k_hookworm_sb">
+          <label ref="jr:itext('/data/k/k_hookworm_sb:label')"/>
+        </input>
+        <input ref="/data/k/k_trichuris_sa">
+          <label ref="jr:itext('/data/k/k_trichuris_sa:label')"/>
+        </input>
+        <input ref="/data/k/k_trichuris_sb">
+          <label ref="jr:itext('/data/k/k_trichuris_sb:label')"/>
+        </input>
+        <input ref="/data/k/k_sch_hae_sa">
+          <label ref="jr:itext('/data/k/k_sch_hae_sa:label')"/>
+        </input>
+        <input ref="/data/k/k_sch_hae_sb">
+          <label ref="jr:itext('/data/k/k_sch_hae_sb:label')"/>
+        </input>
+        <input ref="/data/k/k_remarks">
+          <label ref="jr:itext('/data/k/k_remarks:label')"/>
+        </input>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>
