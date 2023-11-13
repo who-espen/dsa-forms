@@ -6,7 +6,7 @@ import zlib
 
 settings = {
   "general": {
-    "server_url": "https://submit.datastandard.co/espen/togo-espen",   
+    "server_url": "https://submit.datastandard.co/espen/togo-espen",
     "username": "collect",
     "password": "espen47",
   },
@@ -14,7 +14,7 @@ settings = {
     "edit_saved": False,
     "send_finalized": True,
     "view_sent": True,
-    "delete_saved": False,
+    #"delete_saved": False,
     "admin_pw": "1325",
   },
   "project": {
