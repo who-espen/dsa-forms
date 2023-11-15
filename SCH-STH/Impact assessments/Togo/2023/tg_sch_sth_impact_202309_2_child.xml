@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Sept) - 2. SCH/STH – Enrôlement V4</h:title>
+    <h:title>(2023 Sept) - 2. SCH/STH – Enrôlement V4.1</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_202309_2_child_v4">
+        <data id="tg_sch_sth_impact_202309_2_child_v4_1">
           <p_recorder/>
           <p_district/>
           <p_usp/>
@@ -251,7 +251,7 @@
             <value>Un échantillon d'urine de cet enfant a-t-il été prélevé ?</value>
           </text>
           <text id="/data/p_urine_conserve:jr:constraintMsg">
-            <value>Le résultat est positif, l'urine doit être conservé.</value>
+            <value>L'urine doit être conservé parce que macroscopiquement négative et de graduation négative</value>
           </text>
           <text id="/data/p_macroscopique_hemat:label">
             <value>L'urine est-elle macroscopiquement hématurique</value>
@@ -300,7 +300,7 @@
       <bind nodeset="/data/p_collected_urine" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_macroscopique_hemat" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui'" type="select1"/>
       <bind nodeset="/data/p_grading" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui'" type="select1"/>
-      <bind constraint="if(( /data/p_grading  = '+' or  /data/p_grading  = '++' or  /data/p_grading  = '+++' or  /data/p_grading  = 'Trace.hemolysee'), . = 'Oui', true())" jr:constraintMsg="jr:itext('/data/p_urine_conserve:jr:constraintMsg')" nodeset="/data/p_urine_conserve" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_grading != 'Negatif'" required="true()" type="select1" db_add_col_4="/data/p_barcodeid" db_add_col_5="."/>
+      <bind constraint="if(( /data/p_grading  = 'Negatif' and  /data/p_macroscopique_hemat  = 'Non'), . = 'Oui', true())" jr:constraintMsg="jr:itext('/data/p_urine_conserve:jr:constraintMsg')" nodeset="/data/p_urine_conserve" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_grading  = 'Negatif' and  /data/p_macroscopique_hemat  = 'Non'" required="true()" type="select1" db_add_col_4="/data/p_barcodeid" db_add_col_5="."/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'A.refuse'" type="string"/>
       <bind nodeset="/data/p_sample_note" readonly="true()" relevant=" /data/p_collected_stool  = 'Non' and  /data/p_collected_urine  = 'Non'" type="string"/>
       <bind nodeset="/data/p_remarks" type="string"/>
