@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Sept) - 4. SCH/STH - Urine Filtration V4.1</h:title>
+    <h:title>(2023 Sept) - 4. SCH/STH - Urine Filtration V4.2</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_202309_4_urine_filtration_v4_1">
+        <data id="tg_sch_sth_impact_202309_4_urine_filtration_v4_2">
           <u_recorder/>
           <u_district/>
           <u_usp/>
@@ -23,12 +23,14 @@
           <u_sh_egg/>
           <u_sh_egg_per_10ml/>
           <u_sch_man/>
+          <u_sch_man_per_10ml/>
           <u_control/>
           <u_barcodeid3/>
           <u_urine_vol_control/>
           <u_sh_egg_control/>
           <u_sh_egg_per_10ml_control/>
           <u_sch_man_control/>
+          <u_sch_man_per_10ml_control/>
           <u_end_note/>
           <u_remarks/>
           <u_start/>
@@ -104,6 +106,9 @@
           <text id="/data/u_recorder/AWILI Mazama Esso:label">
             <value>AWILI Mazama Esso</value>
           </text>
+          <text id="/data/u_sch_man_per_10ml_control:label">
+            <value>Nombre d'œufs (S. Mansoni) par 10 ml pour le contrôle</value>
+          </text>
           <text id="/data/u_recorder/DJAMAH Yaovi Prosper:label">
             <value>DJAMAH Yaovi Prosper</value>
           </text>
@@ -144,7 +149,7 @@
             <value>ADABRA Abra Hélène</value>
           </text>
           <text id="/data/u_sch_man:label">
-            <value>Nombre d'œufs (S. Mansoni) par 10 ml</value>
+            <value>Nombre d'œufs (S. Mansoni)</value>
           </text>
           <text id="/data/u_recorder/AFANOU Kokou M:label">
             <value>AFANOU Kokou M</value>
@@ -153,7 +158,7 @@
             <value>Sélectionner l'enquêteur</value>
           </text>
           <text id="/data/u_sch_man_control:label">
-            <value>Nombre d'œufs (S. Mansoni) par 10 ml pour le contrôle</value>
+            <value>Nombre d'œufs (S. Mansoni) pour le contrôle</value>
           </text>
           <text id="/data/u_sh_egg_control:label">
             <value>Nombre d'œufs (S. Haematobium) pour le contrôle</value>
@@ -184,6 +189,9 @@
           </text>
           <text id="/data/u_recorder/BATEBAWI Raphaël:label">
             <value>BATEBAWI Raphaël</value>
+          </text>
+          <text id="/data/u_sch_man_per_10ml:label">
+            <value>Nombre d'œufs (S. Mansoni) par 10 ml</value>
           </text>
           <text id="/data/u_recorder/TAGBA Atna-Edi M.:label">
             <value>TAGBA Atna-Edi M.</value>
@@ -247,12 +255,14 @@
       <bind nodeset="/data/u_sh_egg" relevant=" /data/u_urine_conserve  = 'Oui'" required="true()" type="int"/>
       <bind calculate="round( 10 *  /data/u_sh_egg  div  /data/u_urine_vol  )" nodeset="/data/u_sh_egg_per_10ml" readonly="true()" relevant=" /data/u_urine_conserve  = 'Oui'" type="string"/>
       <bind nodeset="/data/u_sch_man" relevant=" /data/u_urine_conserve  = 'Oui'" required="true()" type="int"/>
+      <bind calculate="round( 10 *  /data/u_sch_man  div  /data/u_urine_vol  )" nodeset="/data/u_sch_man_per_10ml" readonly="true()" relevant=" /data/u_urine_conserve  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/u_control" relevant=" /data/u_urine_conserve  = 'Oui'" required="true()" type="select1"/>
       <bind constraint=". =  /data/u_barcodeid " jr:constraintMsg="jr:itext('/data/u_barcodeid3:jr:constraintMsg')" nodeset="/data/u_barcodeid3" relevant=" /data/u_control  = 'Oui' and  /data/u_urine_conserve  = 'Oui'" required="true()" type="barcode"/>
       <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol_control:jr:constraintMsg')" nodeset="/data/u_urine_vol_control" relevant=" /data/u_control  = 'Oui' and  /data/u_urine_conserve  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/u_sh_egg_control" relevant=" /data/u_control  = 'Oui' and  /data/u_urine_conserve  = 'Oui'" required="true()" type="int"/>
       <bind calculate="round( 10 *  /data/u_sh_egg_control  div  /data/u_urine_vol_control  )" nodeset="/data/u_sh_egg_per_10ml_control" readonly="true()" relevant=" /data/u_control  = 'Oui' and  /data/u_urine_conserve  = 'Oui'" type="string"/>
       <bind nodeset="/data/u_sch_man_control" relevant=" /data/u_control  = 'Oui' and  /data/u_urine_conserve  = 'Oui'" required="true()" type="int"/>
+      <bind calculate="round( 10 *  /data/u_sch_man_control  div  /data/u_urine_vol  )" nodeset="/data/u_sch_man_per_10ml_control" readonly="true()" relevant=" /data/u_control  = 'Oui' and  /data/u_urine_conserve  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/u_end_note" readonly="true()" relevant=" /data/u_urine_conserve  = 'Non'" type="string"/>
       <bind nodeset="/data/u_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
@@ -450,6 +460,9 @@
     <input ref="/data/u_sch_man">
       <label ref="jr:itext('/data/u_sch_man:label')"/>
     </input>
+    <input ref="/data/u_sch_man_per_10ml">
+      <label ref="jr:itext('/data/u_sch_man_per_10ml:label')"/>
+    </input>
     <select1 ref="/data/u_control">
       <label ref="jr:itext('/data/u_control:label')"/>
       <item>
@@ -475,6 +488,9 @@
     </input>
     <input ref="/data/u_sch_man_control">
       <label ref="jr:itext('/data/u_sch_man_control:label')"/>
+    </input>
+    <input ref="/data/u_sch_man_per_10ml_control">
+      <label ref="jr:itext('/data/u_sch_man_per_10ml_control:label')"/>
     </input>
     <input ref="/data/u_end_note">
       <label ref="jr:itext('/data/u_end_note:label')"/>
