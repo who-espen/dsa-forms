@@ -11,7 +11,7 @@ settings = {
     "password": "espen47",
   },
   "admin": {
-    "edit_saved": False,
+    #"edit_saved": False,
     "send_finalized": True,
     "view_sent": True,
     #"delete_saved": False,

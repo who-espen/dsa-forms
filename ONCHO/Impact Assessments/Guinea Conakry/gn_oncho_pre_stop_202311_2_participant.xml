@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -11,7 +11,7 @@
     <model>
 
       <instance>
-        <data id="data">
+        <data id="gn_oncho_pre_stop_202311_2_participant">
           <p_recorderID/>
           <p_district/>
           <p_sub_district/>
@@ -158,7 +158,7 @@
       <bind calculate="position(..)" nodeset="/data/p/C2" type="string"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../p_BarcodeID1 ))" nodeset="/data/p/C3" type="string"/>
       <bind nodeset="/data/p/p_consent" required="true()" type="select1"/>
-      <bind nodeset="/data/p/p_ID_method" required="true()" type="select1"/>
+      <bind nodeset="/data/p/p_ID_method" relevant=" ../p_consent  = 'Oui'" required="true()" type="select1"/>
       <bind constraint="not(selected( ../C3 ,  ../p_BarcodeID1 ))" jr:constraintMsg="jr:itext('/data/p/p_BarcodeID1:jr:constraintMsg')" nodeset="/data/p/p_BarcodeID1" relevant=" ../p_consent  = 'Oui' and  ../p_ID_method  = 'Scanner'" required="true()" type="barcode"/>
       <bind nodeset="/data/p/p_BarcodeID2" relevant=" ../p_consent  = 'Oui' and  ../p_ID_method  = 'Manual'" required="true()" type="string"/>
       <bind nodeset="/data/p/p_sex" relevant=" ../p_consent  = 'Oui'" required="true()" type="select1"/>
