@@ -47,8 +47,8 @@
           <text id="/data/k_1_2/k_ascaris_lumb_sb:label">
             <value>Ascaris lumbricoides (eggs) - Slide B</value>
           </text>
-          <text id="/data/k_1_2/k_hookworm_sa:label">
-            <value>Hookworm - Slide A</value>
+          <text id="/data/k_1_2/k_code_id:jr:constraintMsg">
+            <value>This child code has already been selected.</value>
           </text>
           <text id="/data/k_Recorder:jr:constraintMsg">
             <value>Must be two digits between 9 and 100</value>
@@ -67,6 +67,9 @@
           </text>
           <text id="/data/k_1_2/k_trichuris_sb:label">
             <value>Whipworm trichura - Slide B</value>
+          </text>
+          <text id="/data/k_1_2/k_hookworm_sa:label">
+            <value>Hookworm - Slide A</value>
           </text>
           <text id="/data/k_1_2:label">
             <value>Kato Katz result</value>
@@ -112,7 +115,7 @@
       <bind calculate="join(' ',  /data/k_1_2/k_code_id )" nodeset="/data/C1" type="string"/>
       <bind calculate="position(..)" nodeset="/data/k_1_2/C2" type="string"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../k_code_id ))" nodeset="/data/k_1_2/C3" type="string"/>
-      <bind nodeset="/data/k_1_2/k_code_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/k_site_id"/>
+      <bind constraint="not(selected( ../C3 ,  ../k_code_id ))" jr:constraintMsg="jr:itext('/data/k_1_2/k_code_id:jr:constraintMsg')" nodeset="/data/k_1_2/k_code_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/k_site_id"/>
       <bind nodeset="/data/k_1_2/k_sch_man_sa" required="true()" type="int"/>
       <bind nodeset="/data/k_1_2/k_sch_man_sb" required="true()" type="int"/>
       <bind nodeset="/data/k_1_2/k_ascaris_lumb_sa" required="true()" type="int"/>

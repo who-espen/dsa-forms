@@ -115,7 +115,7 @@
       <bind calculate="join(' ',  /data/u_1_2/u_code_id )" nodeset="/data/C1" type="string"/>
       <bind calculate="position(..)" nodeset="/data/u_1_2/C2" type="string"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../u_code_id ))" nodeset="/data/u_1_2/C3" type="string"/>
-      <bind constraint="not(selected( ../C3 ,  ../u_code_id ))" jr:constraintMsg="jr:itext('/data/u_1_2/u_code_id:jr:constraintMsg')" nodeset="/data/u_1_2/u_code_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/u_district"/>
+      <bind constraint="not(selected( ../C3 ,  ../u_code_id ))" jr:constraintMsg="jr:itext('/data/u_1_2/u_code_id:jr:constraintMsg')" nodeset="/data/u_1_2/u_code_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/u_site_id"/>
       <bind nodeset="/data/u_1_2/u_urine_conserve" required="true()" type="string"/>
       <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_1_2/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_1_2/u_urine_vol" relevant=" ../u_urine_conserve  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/u_1_2/u_sh_egg" relevant=" ../u_urine_conserve  = 'Oui'" required="true()" type="int"/>
