@@ -27,4 +27,4 @@ settings = {
 qr_data = b64encode(zlib.compress(json.dumps(settings).encode("utf-8")))
 
 code = segno.make(qr_data, micro=False)
-code.save('ONCHO/Entomological survey Survey/Nigeria/2023/nov/nigeria-settings.png', scale=5)
+code.save('ONCHO/Impact Assessments/Nigeria/2023/nov/nigeria-settings.png', scale=5)

@@ -7,25 +7,29 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Oct) - 2. Participant Form</h:title>
+    <h:title>(2023 Nov) - Tabata - 2. Participant Form</h:title>
     <model>
 
       <instance>
-        <data id="ng_oncho_stop_2_participant_202310">
+        <data id="ng_oncho_stop_2_participant_202311">
           <p_recorder_id/>
           <p_district/>
           <p_cluster_name/>
           <p_cluster_id/>
           <p_date/>
-          <p_consent/>
-          <p_serial_number1/>
-          <p_serial_number2/>
-          <p_code_id/>
-          <p_sex/>
-          <p_age_yrs/>
-          <p_sample_collected/>
-          <p_end_survey_note/>
-          <p_AdditionalNotes/>
+          <C1/>
+          <p_t jr:template="">
+            <C2/>
+            <C3/>
+            <p_consent/>
+            <p_serial_number1/>
+            <p_code_id/>
+            <p_sex/>
+            <p_age_yrs/>
+            <p_sample_collected/>
+            <p_end_survey_note/>
+            <p_AdditionalNotes/>
+          </p_t>
           <p_start/>
           <p_end/>
           <meta>
@@ -36,80 +40,77 @@
 
       <itext>
         <translation default="true()" lang="English">
-          <text id="/data/p_consent:label">
-            <value>Has the participant given consent?</value>
+          <text id="/data/p_recorder_id:label">
+            <value>Enter the recorder number</value>
           </text>
-          <text id="/data/p_AdditionalNotes:label">
-            <value>Additional Notes</value>
-          </text>
-          <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>Age must be between 5 and 9 years old</value>
-          </text>
-          <text id="/data/p_cluster_id:label">
-            <value>Select the community ID</value>
-          </text>
-          <text id="/data/p_age_yrs:label">
-            <value>Enter the age in years</value>
-          </text>
-          <text id="/data/p_recorder_id:jr:constraintMsg">
-            <value>Must be between 10 and 99 included</value>
-          </text>
-          <text id="/data/p_end_survey_note:label">
-            <value>You have just entered a value that will end the survey</value>
-          </text>
-          <text id="/data/p_sample_collected:label">
-            <value>Are the sample collected</value>
-          </text>
-          <text id="/data/p_cluster_name:label">
-            <value>Select the community</value>
-          </text>
-          <text id="/data/p_code_id:label">
-            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) adminstered</value>
-          </text>
-          <text id="/data/p_serial_number2:label">
-            <value>Please, repeat the participant serial number</value>
-          </text>
-          <text id="/data/p_district:label">
-            <value>Select the LGA</value>
-          </text>
-          <text id="/data/p_sample_collected/No:label">
-            <value>No</value>
-          </text>
-          <text id="/data/p_serial_number2:jr:constraintMsg">
-            <value>The repeated code must be the same</value>
-          </text>
-          <text id="/data/p_consent/Yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/p_sex/Female:label">
-            <value>Female</value>
-          </text>
-          <text id="/data/p_date:label">
-            <value>Enter the date</value>
+          <text id="/data/p_t/p_serial_number1:jr:constraintMsg">
+            <value>Must be a three-digit number. example: 001 and the code must be used once in the village</value>
           </text>
           <text id="/data/p_recorder_id:hint">
             <value>2-digit code assigned to you</value>
           </text>
-          <text id="/data/p_sample_collected/Yes:label">
+          <text id="/data/p_t/p_sample_collected:label">
+            <value>Are the sample collected</value>
+          </text>
+          <text id="/data/p_t/p_consent/Yes:label">
             <value>Yes</value>
           </text>
-          <text id="/data/p_sex:label">
+          <text id="/data/p_t/p_age_yrs:label">
+            <value>Enter the age in years</value>
+          </text>
+          <text id="/data/p_cluster_name:label">
+            <value>Select the community</value>
+          </text>
+          <text id="/data/p_t/p_sex/Female:label">
+            <value>Female</value>
+          </text>
+          <text id="/data/p_t/p_consent/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/p_t/p_code_id:label">
+            <value>Please record the following unique ID code for the respondent on a separate list and on each diagnostic test(s) adminstered</value>
+          </text>
+          <text id="/data/p_t/p_end_survey_note:label">
+            <value>You have just entered a value that will end the survey</value>
+          </text>
+          <text id="/data/p_t/p_sample_collected/Yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/p_t/p_sex:label">
             <value>Please select the gender</value>
           </text>
-          <text id="/data/p_sex/Male:label">
+          <text id="/data/p_t/p_sample_collected/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/p_t/p_AdditionalNotes:label">
+            <value>Additional Notes</value>
+          </text>
+          <text id="/data/p_date:label">
+            <value>Enter the date</value>
+          </text>
+          <text id="/data/p_t/p_age_yrs:jr:constraintMsg">
+            <value>Age must be between 5 and 9 years old</value>
+          </text>
+          <text id="/data/p_district:label">
+            <value>Select the LGA</value>
+          </text>
+          <text id="/data/p_t/p_consent:label">
+            <value>Has the participant given consent?</value>
+          </text>
+          <text id="/data/p_t/p_sex/Male:label">
             <value>Male</value>
           </text>
-          <text id="/data/p_serial_number1:label">
+          <text id="/data/p_recorder_id:jr:constraintMsg">
+            <value>Must be between 10 and 99 included</value>
+          </text>
+          <text id="/data/p_t:label">
+            <value>Participants</value>
+          </text>
+          <text id="/data/p_cluster_id:label">
+            <value>Select the community ID</value>
+          </text>
+          <text id="/data/p_t/p_serial_number1:label">
             <value>Please, enter the participant serial number</value>
-          </text>
-          <text id="/data/p_recorder_id:label">
-            <value>Enter the recorder number</value>
-          </text>
-          <text id="/data/p_serial_number1:jr:constraintMsg">
-            <value>Must be a three-digit number. example: 001</value>
-          </text>
-          <text id="/data/p_consent/No:label">
-            <value>No</value>
           </text>
         </translation>
       </itext>
@@ -119,15 +120,17 @@
       <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
       <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_cluster_name"/>
       <bind nodeset="/data/p_date" type="date"/>
-      <bind nodeset="/data/p_consent" required="true()" type="select1"/>
-      <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_serial_number1:jr:constraintMsg')" nodeset="/data/p_serial_number1" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind constraint=". =  /data/p_serial_number1 " jr:constraintMsg="jr:itext('/data/p_serial_number2:jr:constraintMsg')" nodeset="/data/p_serial_number2" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind calculate="concat( /data/p_recorder_id , '-',  /data/p_cluster_id , '-',  /data/p_serial_number1 )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
-      <bind nodeset="/data/p_sample_collected" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_end_survey_note" readonly="true()" relevant=" /data/p_consent  = 'No'" type="string"/>
-      <bind nodeset="/data/p_AdditionalNotes" type="string"/>
+      <bind calculate="join(' ',  /data/p_t/p_serial_number1 )" nodeset="/data/C1" type="string"/>
+      <bind calculate="position(..)" nodeset="/data/p_t/C2" type="string"/>
+      <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../p_serial_number1 ))" nodeset="/data/p_t/C3" type="string"/>
+      <bind nodeset="/data/p_t/p_consent" required="true()" type="select1"/>
+      <bind constraint="regex(., '^[0-9]{3}$') and not(selected( ../C3 ,  ../p_serial_number1 ))" jr:constraintMsg="jr:itext('/data/p_t/p_serial_number1:jr:constraintMsg')" nodeset="/data/p_t/p_serial_number1" relevant=" ../p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_recorder_id , '-',  /data/p_cluster_id , '-',  ../p_serial_number1 )" nodeset="/data/p_t/p_code_id" readonly="true()" relevant=" ../p_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/p_t/p_sex" relevant=" ../p_consent  = 'Yes'" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_t/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_t/p_age_yrs" relevant=" ../p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/p_t/p_sample_collected" relevant=" ../p_consent  = 'Yes'" required="true()" type="select1"/>
+      <bind nodeset="/data/p_t/p_end_survey_note" readonly="true()" relevant=" ../p_consent  = 'No'" type="string"/>
+      <bind nodeset="/data/p_t/p_AdditionalNotes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
@@ -150,56 +153,58 @@
     <input ref="/data/p_date">
       <label ref="jr:itext('/data/p_date:label')"/>
     </input>
-    <select1 ref="/data/p_consent">
-      <label ref="jr:itext('/data/p_consent:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_consent/Yes:label')"/>
-        <value>Yes</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_consent/No:label')"/>
-        <value>No</value>
-      </item>
-    </select1>
-    <input ref="/data/p_serial_number1">
-      <label ref="jr:itext('/data/p_serial_number1:label')"/>
-    </input>
-    <input ref="/data/p_serial_number2">
-      <label ref="jr:itext('/data/p_serial_number2:label')"/>
-    </input>
-    <input ref="/data/p_code_id">
-      <label ref="jr:itext('/data/p_code_id:label')"/>
-    </input>
-    <select1 ref="/data/p_sex">
-      <label ref="jr:itext('/data/p_sex:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_sex/Male:label')"/>
-        <value>Male</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_sex/Female:label')"/>
-        <value>Female</value>
-      </item>
-    </select1>
-    <input ref="/data/p_age_yrs">
-      <label ref="jr:itext('/data/p_age_yrs:label')"/>
-    </input>
-    <select1 ref="/data/p_sample_collected">
-      <label ref="jr:itext('/data/p_sample_collected:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_sample_collected/Yes:label')"/>
-        <value>Yes</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_sample_collected/No:label')"/>
-        <value>No</value>
-      </item>
-    </select1>
-    <input ref="/data/p_end_survey_note">
-      <label ref="jr:itext('/data/p_end_survey_note:label')"/>
-    </input>
-    <input ref="/data/p_AdditionalNotes">
-      <label ref="jr:itext('/data/p_AdditionalNotes:label')"/>
-    </input>
+    <group ref="/data/p_t">
+      <label ref="jr:itext('/data/p_t:label')"/>
+      <repeat nodeset="/data/p_t">
+        <select1 ref="/data/p_t/p_consent">
+          <label ref="jr:itext('/data/p_t/p_consent:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_t/p_consent/Yes:label')"/>
+            <value>Yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_t/p_consent/No:label')"/>
+            <value>No</value>
+          </item>
+        </select1>
+        <input ref="/data/p_t/p_serial_number1">
+          <label ref="jr:itext('/data/p_t/p_serial_number1:label')"/>
+        </input>
+        <input ref="/data/p_t/p_code_id">
+          <label ref="jr:itext('/data/p_t/p_code_id:label')"/>
+        </input>
+        <select1 ref="/data/p_t/p_sex">
+          <label ref="jr:itext('/data/p_t/p_sex:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_t/p_sex/Male:label')"/>
+            <value>Male</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_t/p_sex/Female:label')"/>
+            <value>Female</value>
+          </item>
+        </select1>
+        <input ref="/data/p_t/p_age_yrs">
+          <label ref="jr:itext('/data/p_t/p_age_yrs:label')"/>
+        </input>
+        <select1 ref="/data/p_t/p_sample_collected">
+          <label ref="jr:itext('/data/p_t/p_sample_collected:label')"/>
+          <item>
+            <label ref="jr:itext('/data/p_t/p_sample_collected/Yes:label')"/>
+            <value>Yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/p_t/p_sample_collected/No:label')"/>
+            <value>No</value>
+          </item>
+        </select1>
+        <input ref="/data/p_t/p_end_survey_note">
+          <label ref="jr:itext('/data/p_t/p_end_survey_note:label')"/>
+        </input>
+        <input ref="/data/p_t/p_AdditionalNotes">
+          <label ref="jr:itext('/data/p_t/p_AdditionalNotes:label')"/>
+        </input>
+      </repeat>
+    </group>
   </h:body>
 </h:html>
