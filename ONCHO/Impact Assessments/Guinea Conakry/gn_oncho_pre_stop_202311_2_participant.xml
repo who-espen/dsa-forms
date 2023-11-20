@@ -162,7 +162,7 @@
       <bind constraint="not(selected( ../C3 ,  ../p_BarcodeID1 ))" jr:constraintMsg="jr:itext('/data/p/p_BarcodeID1:jr:constraintMsg')" nodeset="/data/p/p_BarcodeID1" relevant=" ../p_consent  = 'Oui' and  ../p_ID_method  = 'Scanner'" required="true()" type="barcode"/>
       <bind nodeset="/data/p/p_BarcodeID2" relevant=" ../p_consent  = 'Oui' and  ../p_ID_method  = 'Manual'" required="true()" type="string"/>
       <bind nodeset="/data/p/p_sex" relevant=" ../p_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 20 and . &lt;= 99" jr:constraintMsg="jr:itext('/data/p/p_age_yrs:jr:constraintMsg')" nodeset="/data/p/p_age_yrs" relevant=" ../p_consent  = 'Oui'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p/p_age_yrs:jr:constraintMsg')" nodeset="/data/p/p_age_yrs" relevant=" ../p_consent  = 'Oui'" required="true()" type="int"/>
       <bind constraint=".&lt;= ../p_age_yrs " jr:constraintMsg="jr:itext('/data/p/p_duree_reside:jr:constraintMsg')" nodeset="/data/p/p_duree_reside" relevant=" ../p_consent  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/p/p_sample_collected" relevant=" ../p_consent  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/p/p_end_survey_note" readonly="true()" relevant=" ../p_consent  = 'Non'" type="string"/>
