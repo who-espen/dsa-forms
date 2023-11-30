@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2023 Sept) - 2. SCH/STH – Enrôlement V4.2</h:title>
+    <h:title>(2023 Sept) - 2. SCH/STH – Enrôlement V4.3</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_impact_202309_2_child_v4_2">
+        <data id="tg_sch_sth_impact_202309_2_child_v4_3">
           <p_recorder/>
           <p_district/>
           <p_usp/>
@@ -292,8 +292,7 @@
       <bind nodeset="/data/p_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_usp"/>
       <bind nodeset="/data/p_consent_note" readonly="true()" type="string"/>
       <bind nodeset="/data/p_consent" required="true()" type="select1"/>
-      <bind constraint="regex(.,'^(MO.?|SOT|TCH|TCH|BAS|AGO|AKE|AMO|DAN|HAH|KLO|KPE|MOY|WAW)_\d{4}$') and (substr( /data/p_district , 0, 3) = substr(., 0, 3) or substr( /data/p_district , 0, 3) = 'MO')
-or (regex(.,'^(MOM)_\d{4}$') and  /data/p_district  = 'MOYEN-MONO') or (regex(.,'^(TCB)_\d{4}$') and  /data/p_district  = 'TCHAMBA')" jr:constraintMsg="jr:itext('/data/p_barcodeid:jr:constraintMsg')" nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'A.donne'" type="barcode" db_add_col_3="/data/p_site" db_add_col_4="."/>
+      <bind constraint="regex(., '.*_\d{4,6}')" jr:constraintMsg="jr:itext('/data/p_barcodeid:jr:constraintMsg')" nodeset="/data/p_barcodeid" relevant=" /data/p_consent  = 'A.donne'" type="barcode" db_add_col_3="/data/p_site" db_add_col_4="."/>
       <bind constraint=". =  /data/p_barcodeid " jr:constraintMsg="jr:itext('/data/p_barcodeid2:jr:constraintMsg')" nodeset="/data/p_barcodeid2" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="barcode"/>
       <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="int"/>
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
