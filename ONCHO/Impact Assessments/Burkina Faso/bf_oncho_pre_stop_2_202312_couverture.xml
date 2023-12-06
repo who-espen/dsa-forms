@@ -11,7 +11,7 @@
     <model>
 
       <instance>
-        <data id="bf_oncho_pre_stop_2_202312_couverture">
+        <data id="bf_oncho_pre_stop_2_202312_couverture_v1">
           <Code_enqueteur/>
           <DS/>
           <CSPS/>
@@ -241,7 +241,7 @@
       <bind nodeset="/data/p_bf_202312_1/Scolarise" relevant=" ../consentement  = 'Oui'" required="true()" type="select1"/>
       <bind constraint=". &lt;=  ../Age " jr:constraintMsg="jr:itext('/data/p_bf_202312_1/Duree_sejour:jr:constraintMsg')" nodeset="/data/p_bf_202312_1/Duree_sejour" relevant=" ../consentement  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/p_bf_202312_1/Recu_IVM" relevant=" ../consentement  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_bf_202312_1/nb_ivm_avale" relevant=" ../consentement  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/p_bf_202312_1/nb_ivm_avale" relevant=" ../Recu_IVM  = 'Oui' and  ../consentement  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/p_bf_202312_1/jamais_ivm" relevant=" ../nb_ivm_avale  = 'a_Jamais' and  ../consentement  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/p_bf_202312_1/Autres_raisons" relevant=" ../jamais_ivm  = 'f_Autres _raisons ' and  ../consentement  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/p_bf_202312_1/migration" relevant=" ../Recu_IVM  = 'Non' and  ../consentement  = 'Oui'" required="true()" type="select1"/>
