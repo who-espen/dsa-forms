@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2023 Nov) - 4. SCH/STH - Urine Filtration V1.3</h:title>
+    <model>
+
+      <instance>
+        <data id="tz_sch_sth_impact_202311_4_urine_filtration_v1_3">
+          <u_recorder/>
+          <u_district/>
+          <u_ward/>
+          <u_site_name/>
+          <u_site_id/>
+          <C1/>
+          <u_1_3 jr:template="">
+            <C2/>
+            <C3/>
+            <u_code_id/>
+            <u_urine_vol/>
+            <u_sh_egg/>
+            <u_sh_egg_per_10ml/>
+            <u_sch_man/>
+            <u_sch_man_per_10ml/>
+          </u_1_3>
+          <u_remarks/>
+          <u_start/>
+          <u_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/u_1_3/u_code_id:jr:constraintMsg">
+            <value>This child code already exists. Please edit the sequence number from the previous question</value>
+          </text>
+          <text id="/data/u_1_3/C3:label">
+            <value>Child code</value>
+          </text>
+          <text id="/data/u_ward:label">
+            <value>Select ward</value>
+          </text>
+          <text id="/data/u_1_3/C2:label">
+            <value>Please inter the child sequence number</value>
+          </text>
+          <text id="/data/u_1_3:label">
+            <value>Urine results</value>
+          </text>
+          <text id="/data/u_recorder:label">
+            <value>Record code</value>
+          </text>
+          <text id="/data/u_1_3/u_urine_vol:label">
+            <value>Urine volume: Record the milliliters (ml) of urine collected from the person</value>
+          </text>
+          <text id="/data/u_1_3/u_sh_egg:label">
+            <value>Number of eggs (S. Haematobium)</value>
+          </text>
+          <text id="/data/u_site_id:label">
+            <value>Select school ID</value>
+          </text>
+          <text id="/data/u_1_3/u_sh_egg_per_10ml:label">
+            <value>Number of eggs (S. Haematobium) per 10 ml</value>
+          </text>
+          <text id="/data/u_recorder:hint">
+            <value>The two digit code assigned to you</value>
+          </text>
+          <text id="/data/u_1_3/u_code_id:label">
+            <value>Please select the code of the registered child</value>
+          </text>
+          <text id="/data/u_recorder:jr:constraintMsg">
+            <value>Must be two digit between 9 and 100</value>
+          </text>
+          <text id="/data/u_district:label">
+            <value>Select the council</value>
+          </text>
+          <text id="/data/u_1_3/u_urine_vol:jr:constraintMsg">
+            <value>Le volume doit être limité à 10ml</value>
+          </text>
+
+          <text id="/data/u_1_3/u_sch_man:label">
+            <value>Number of eggs (S. Mansoni)</value>
+          </text>
+          <text id="/data/u_site_name:label">
+            <value>Select school name</value>
+          </text>
+          <text id="/data/u_remarks:label">
+            <value>Additional Notes</value>
+          </text>
+          <text id="/data/u_1_3/u_sch_man_per_10ml:label">
+            <value>Number of eggs (S. Mansoni) per 10 ml</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/u_recorder:jr:constraintMsg')" nodeset="/data/u_recorder" required="true()" type="int"/>
+      <bind nodeset="/data/u_district" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/u_ward" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_district"/>
+      <bind nodeset="/data/u_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_ward"/>
+      <bind nodeset="/data/u_site_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_site_name"/>
+      <bind calculate="join(' ',  /data/u_1_3/u_code_id )" nodeset="/data/C1" type="string"/>
+      <bind calculate="position(..)" nodeset="/data/u_1_3/C2" type="string"/>
+      <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../u_code_id ))" nodeset="/data/u_1_3/C3" type="string"/>
+      <bind constraint="not(selected( ../C3 ,  ../u_code_id ))" jr:constraintMsg="jr:itext('/data/u_1_3/u_code_id:jr:constraintMsg')" nodeset="/data/u_1_3/u_code_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/u_site_id"/>
+      <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_1_3/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_1_3/u_urine_vol" required="true()" type="int"/>
+      <bind nodeset="/data/u_1_3/u_sh_egg" required="true()" type="int"/>
+      <bind calculate="round( 10 *  ../u_sh_egg  div  ../u_urine_vol  )" nodeset="/data/u_1_3/u_sh_egg_per_10ml" readonly="true()" type="string"/>
+      <bind nodeset="/data/u_1_3/u_sch_man" required="true()" type="int"/>
+      <bind calculate="round( 10 *  ../u_sch_man  div  ../u_urine_vol  )" nodeset="/data/u_1_3/u_sch_man_per_10ml" required="true()" type="int"/>
+
+      <bind nodeset="/data/u_remarks" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/u_recorder">
+      <label ref="jr:itext('/data/u_recorder:label')"/>
+      <hint ref="jr:itext('/data/u_recorder:hint')"/>
+    </input>
+    <input ref="/data/u_district">
+      <label ref="jr:itext('/data/u_district:label')"/>
+    </input>
+    <input ref="/data/u_ward">
+      <label ref="jr:itext('/data/u_ward:label')"/>
+    </input>
+    <input ref="/data/u_site_name">
+      <label ref="jr:itext('/data/u_site_name:label')"/>
+    </input>
+    <input ref="/data/u_site_id">
+      <label ref="jr:itext('/data/u_site_id:label')"/>
+    </input>
+    <group ref="/data/u_1_3">
+      <label ref="jr:itext('/data/u_1_3:label')"/>
+      <repeat nodeset="/data/u_1_3">
+        <input ref="/data/u_1_3/u_code_id">
+          <label ref="jr:itext('/data/u_1_3/u_code_id:label')"/>
+        </input>
+        <input ref="/data/u_1_3/u_urine_vol">
+          <label ref="jr:itext('/data/u_1_3/u_urine_vol:label')"/>
+        </input>
+        <input ref="/data/u_1_3/u_sh_egg">
+          <label ref="jr:itext('/data/u_1_3/u_sh_egg:label')"/>
+        </input>
+        <input ref="/data/u_1_3/u_sh_egg_per_10ml">
+          <label ref="jr:itext('/data/u_1_3/u_sh_egg_per_10ml:label')"/>
+        </input>
+        <input ref="/data/u_1_3/u_sch_man">
+          <label ref="jr:itext('/data/u_1_3/u_sch_man:label')"/>
+        </input>
+        <input ref="/data/u_1_3/u_sch_man_per_10ml">
+          <label ref="jr:itext('/data/u_1_3/u_sch_man_per_10ml:label')"/>
+        </input>
+
+      </repeat>
+    </group>
+    <input ref="/data/u_remarks">
+      <label ref="jr:itext('/data/u_remarks:label')"/>
+    </input>
+  </h:body>
+</h:html>
