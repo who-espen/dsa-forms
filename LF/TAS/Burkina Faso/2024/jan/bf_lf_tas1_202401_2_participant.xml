@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Jan 2024) Burkina Faso TAS FL - 2. Formulaire Enrôlement</h:title>
+    <h:title>(Jan 2024) Burkina Faso TAS FL - 2. Formulaire Enrôlement V2</h:title>
     <model>
 
     <instance>
-      <data id="bf_lf_tas1_202401_2_participant">
+      <data id="bf_lf_tas1_202401_2_participant_2">
         <p_recorder_id/>
         <ds/>
         <csps/>
@@ -30,6 +30,7 @@
         <p_sex/>
         <Scolarisation/>
         <Duree_sejour/>
+        <Duree_sejour_mois/>
         <status/>
         <Recu_IVM/>
         <nb_ivm_avale/>
@@ -67,8 +68,8 @@
           <text id="/data/fts2_invalid_description/A_Absence_de_ligne_temoin:label">
             <value>A. Absence de ligne témoin</value>
           </text>
-          <text id="/data/d_lotnumber2/Lot1:239299W_Exp28_05_2024:label">
-            <value>Lot1:239299W_Exp:28/05/2024</value>
+          <text id="/data/status/1_ancien_positif:label">
+            <value>1 Ancien positif</value>
           </text>
           <text id="/data/ds:label">
             <value>2. District</value>
@@ -78,6 +79,9 @@
           </text>
           <text id="/data/p_recorder_id/EN08:label">
             <value>EN08</value>
+          </text>
+          <text id="/data/Duree_sejour_mois:jr:constraintMsg">
+            <value>Le nombre de mois ne dois pas dépasser 11</value>
           </text>
           <text id="/data/p_recorder_id/EN01:label">
             <value>EN01</value>
@@ -89,10 +93,10 @@
             <value>Doit être comprise entre 5 et 110</value>
           </text>
           <text id="/data/non_ivm/g_Autres _raisons:label">
-            <value>g.Autres raisons</value>
+            <value>g. Autres raisons</value>
           </text>
           <text id="/data/non_ivm/c_ Peur_ effets _indesirables:label">
-            <value>c.Peur des effets indesirables</value>
+            <value>c. Peur des effets indesirables</value>
           </text>
           <text id="/data/p_ending_survey_note:label">
             <value>35.Vous venez de saisir une valeur qui mettra fin à l'enquête</value>
@@ -100,8 +104,8 @@
           <text id="/data/defis_operationnels/A_Aucun:label">
             <value>A_Aucun</value>
           </text>
-          <text id="/data/status/1_examine_precedemment:label">
-            <value>1 examiné précédemment</value>
+          <text id="/data/d_lotnumber2/Lot1:239299W_Exp28_05_2024:label">
+            <value>Lot1:239299W_Exp:28/05/2024</value>
           </text>
           <text id="/data/Satut_prelev/1_oui:label">
             <value>Oui</value>
@@ -117,8 +121,11 @@
         <text id="/data/p_sex/F:label">
           <value>Feminin</value>
         </text>
-        <text id="/data/fts1_invalid_description/E_Trace_de_sang_persiste:label">
-          <value>E. Trace de sang persiste</value>
+        <text id="/data/status/2_nouvel_entrant:label">
+          <value>2 Nouvel entrant</value>
+        </text>
+        <text id="/data/Duree_sejour_mois:label">
+          <value>16.b. Préciser le nombre de mois</value>
         </text>
         <text id="/data/fts2_invalid_description/B_Ligne_temoin_brisees/partielle:label">
           <value>B. Ligne témoin brisées/partielle</value>
@@ -134,6 +141,9 @@
         </text>
         <text id="/data/migration/12_autre_localité_du_Burkina_Faso:label">
           <value>12 autre localité du Burkina Faso</value>
+        </text>
+        <text id="/data/fts1_invalid_description/E_Trace_de_sang_persiste:label">
+          <value>E. Trace de sang persiste</value>
         </text>
         <text id="/data/Recu_IVM/2_non:label">
           <value>Non</value>
@@ -186,11 +196,11 @@
         <text id="/data/hydrocele/2_non:label">
           <value>Non</value>
         </text>
+        <text id="/data/nb_bandelette/1:label">
+          <value>1</value>
+        </text>
         <text id="/data/manual_code2:label">
           <value>9b. Saisir le code barre à nouveau</value>
-        </text>
-        <text id="/data/fts1_invalid_description/C_Difficulte_d_absorption_echantillon:label">
-          <value>C. Difficulté d'absorption d'échantillon</value>
         </text>
         <text id="/data/p_barcode_id:label">
           <value>8. Code barre</value>
@@ -208,7 +218,7 @@
           <value>29. Lots FTS2</value>
         </text>
         <text id="/data/non_ivm/f_Refus:label">
-          <value>f.Refus</value>
+          <value>f. Refus</value>
         </text>
         <text id="/data/defis_operationnels/Q_Micropipette absente:label">
           <value>Q_Micropipette absente</value>
@@ -235,7 +245,7 @@
           <value>15.Quel est votre niveau de scolarisation ?</value>
         </text>
         <text id="/data/Scolarisation/Aucune:label">
-          <value>a.Aucune</value>
+          <value>Aucune</value>
         </text>
         <text id="/data/p_id_method/manuel:label">
           <value>Manuel</value>
@@ -286,7 +296,7 @@
           <value>Oui</value>
         </text>
         <text id="/data/Scolarisation/Alphabetise:label">
-          <value>b.Alphabétise</value>
+          <value>Alphabétise</value>
         </text>
         <text id="/data/fts2_invalid_description/D_Difficulte_de_migration_échantillon:label">
           <value>D. Difficulté de migration de l'échantillon</value>
@@ -309,8 +319,14 @@
         <text id="/data/defis_operationnels/N_Plusieurs kits dans un seul sachet:label">
           <value>N_Plusieurs kits dans un seul sachet</value>
         </text>
+        <text id="/data/Resultats:hint">
+          <value>Cliquer suivant pour saisir les informations sur le résultat de l'enquêté</value>
+        </text>
         <text id="/data/p_recorder_id/EN07:label">
           <value>EN07</value>
+        </text>
+        <text id="/data/Scolarisation/Secondaire:label">
+          <value>Secondaire</value>
         </text>
         <text id="/data/non_ivm/b_Absent_pendant_TDM:label">
           <value>b. Absent pendant le TDM</value>
@@ -322,7 +338,7 @@
           <value>18. Migration (personnes entrée il y a moins 5 ans d'un pays voisin ou autre localités)</value>
         </text>
         <text id="/data/Scolarisation/Primaire:label">
-          <value>c.Primaire</value>
+          <value>Primaire</value>
         </text>
         <text id="/data/non_ivm/d_Pas _au _courant_TDM:label">
           <value>d. Je n'étais pas au courant du TDM</value>
@@ -342,20 +358,14 @@
         <text id="/data/hydrocele/1_oui:label">
           <value>Oui</value>
         </text>
-        <text id="/data/Scolarisation/secondaire:label">
-          <value>d.secondaire</value>
-        </text>
         <text id="/data/fts2_invalid_description/E_Trace_de_sang_persiste:label">
           <value>E. Trace de sang persiste</value>
         </text>
         <text id="/data/defis_operationnels/R_Test casse et non-utilise:label">
           <value>R_Test cassé et non-utilisé</value>
         </text>
-        <text id="/data/status/2_nouveau_entrant:label">
-          <value>2 nouveau entrant</value>
-        </text>
         <text id="/data/non_ivm/e_DC_pas_ venu_chez_moi:label">
-          <value>e.Le distributeur n'est pas venu chez moi</value>
+          <value>e. Le distributeur n'est pas venu chez moi</value>
         </text>
         <text id="/data/d_result1/2_Négatif:label">
           <value>2 Négatif</value>
@@ -372,14 +382,14 @@
         <text id="/data/lymphoedeme:label">
           <value>20. Présence de Lymphoedème</value>
         </text>
+        <text id="/data/fts2_invalid_description/C_Difficulte_d_absorption_echantillon:label">
+          <value>C. Difficulté d'absorption d'échantillon</value>
+        </text>
         <text id="/data/fts1_invalid_description/F_Insuffisance_du_volume_de_sang_due_pipette:label">
           <value>F. Insuffisance du volume de sang due à la pipette</value>
         </text>
         <text id="/data/defis_operationnels_autre:label">
           <value>34.Si autre précisez</value>
-        </text>
-        <text id="/data/fts2_invalid_description/C_Difficulte_d_absorption_echantillon:label">
-          <value>C. Difficulté d'absorption d'échantillon</value>
         </text>
         <text id="/data/p_age_yrs:label">
           <value>13. Age</value>
@@ -394,7 +404,7 @@
           <value>Si Autre (expliquer)</value>
         </text>
         <text id="/data/Scolarisation/Superieure:label">
-          <value>e.Superieure</value>
+          <value>Superieure</value>
         </text>
         <text id="/data/manual_code2:hint">
           <value>Exemple "FL23120001"</value>
@@ -411,8 +421,8 @@
         <text id="/data/p_sex/M:label">
           <value>Masculin</value>
         </text>
-        <text id="/data/nb_bandelette/1:label">
-          <value>1</value>
+        <text id="/data/Enrolement:hint">
+          <value>Cliquer suivant pour saisir les informations sur les caractéristiques de l'enquêté</value>
         </text>
         <text id="/data/manual_code:jr:constraintMsg">
           <value>Paramétrer pour prendre 10 caractère</value>
@@ -428,6 +438,9 @@
         </text>
         <text id="/data/photo1:label">
           <value>28. Photo FTS1</value>
+        </text>
+        <text id="/data/fts1_invalid_description/C_Difficulte_d_absorption_echantillon:label">
+          <value>C. Difficulté d'absorption d'échantillon</value>
         </text>
         <text id="/data/p_recorder_id/EN06:label">
           <value>EN06</value>
@@ -476,13 +489,14 @@
     <bind constraint="string-length(.)=10" jr:constraintMsg="jr:itext('/data/manual_code:jr:constraintMsg')" nodeset="/data/manual_code" relevant=" /data/p_id_method ='manuel' and  /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind constraint=". =  /data/manual_code " jr:constraintMsg="jr:itext('/data/manual_code2:jr:constraintMsg')" nodeset="/data/manual_code2" relevant=" /data/p_id_method ='manuel' and  /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind nodeset="/data/Enrolement" readonly="true()" type="string"/>
-    <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/Numero_famille:jr:constraintMsg')" nodeset="/data/Numero_famille" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
-    <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/Numero_Enquete:jr:constraintMsg')" nodeset="/data/Numero_Enquete" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
+    <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/Numero_famille:jr:constraintMsg')" nodeset="/data/Numero_famille" relevant=" /data/p_consent  = '1_oui'" required="true()" type="int"/>
+    <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/Numero_Enquete:jr:constraintMsg')" nodeset="/data/Numero_Enquete" relevant=" /data/p_consent  = '1_oui'" required="true()" type="int"/>
     <bind calculate="concat( /data/p_site_id , '-', /data/p_recorder_id ,'-',  /data/Numero_famille ,'-', /data/Numero_Enquete )" nodeset="/data/Numero_Enquete_complet" readonly="true()" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
     <bind constraint=".&gt;4 and .&lt;110" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = '1_oui'" required="true()" type="int"/>
     <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
     <bind nodeset="/data/Scolarisation" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
     <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/Duree_sejour:jr:constraintMsg')" nodeset="/data/Duree_sejour" relevant=" /data/p_consent  = '1_oui'" required="true()" type="int"/>
+    <bind constraint=". &lt; 12" jr:constraintMsg="jr:itext('/data/Duree_sejour_mois:jr:constraintMsg')" nodeset="/data/Duree_sejour_mois" relevant=" /data/Duree_sejour  = 0" required="true()" type="int"/>
     <bind nodeset="/data/status" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
     <bind nodeset="/data/Recu_IVM" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
     <bind nodeset="/data/nb_ivm_avale" relevant=" /data/Recu_IVM  = '1_oui'and  /data/p_consent  = '1_oui'" required="true()" type="select1"/>
@@ -611,6 +625,7 @@
   </input>
   <input ref="/data/Enrolement">
     <label ref="jr:itext('/data/Enrolement:label')"/>
+    <hint ref="jr:itext('/data/Enrolement:hint')"/>
   </input>
   <input ref="/data/Numero_famille">
     <label ref="jr:itext('/data/Numero_famille:label')"/>
@@ -651,8 +666,8 @@
       <value>Primaire</value>
     </item>
     <item>
-      <label ref="jr:itext('/data/Scolarisation/secondaire:label')"/>
-      <value>secondaire</value>
+      <label ref="jr:itext('/data/Scolarisation/Secondaire:label')"/>
+      <value>Secondaire</value>
     </item>
     <item>
       <label ref="jr:itext('/data/Scolarisation/Superieure:label')"/>
@@ -662,15 +677,18 @@
   <input ref="/data/Duree_sejour">
     <label ref="jr:itext('/data/Duree_sejour:label')"/>
   </input>
+  <input ref="/data/Duree_sejour_mois">
+    <label ref="jr:itext('/data/Duree_sejour_mois:label')"/>
+  </input>
   <select1 ref="/data/status">
     <label ref="jr:itext('/data/status:label')"/>
     <item>
-      <label ref="jr:itext('/data/status/1_examine_precedemment:label')"/>
-      <value>1_examine_precedemment</value>
+      <label ref="jr:itext('/data/status/1_ancien_positif:label')"/>
+      <value>1_ancien_positif</value>
     </item>
     <item>
-      <label ref="jr:itext('/data/status/2_nouveau_entrant:label')"/>
-      <value>2_nouveau_entrant</value>
+      <label ref="jr:itext('/data/status/2_nouvel_entrant:label')"/>
+      <value>2_nouvel_entrant</value>
     </item>
   </select1>
   <select1 ref="/data/Recu_IVM">
@@ -780,6 +798,7 @@
   </select1>
   <input ref="/data/Resultats">
     <label ref="jr:itext('/data/Resultats:label')"/>
+    <hint ref="jr:itext('/data/Resultats:hint')"/>
   </input>
   <select1 ref="/data/Satut_prelev">
     <label ref="jr:itext('/data/Satut_prelev:label')"/>
