@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -7,26 +7,32 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Janvier) - 4. SCH/STH - Urine Filtration V2</h:title>
+    <h:title>(2024 Janvier) - 4. SCH/STH - Urine Filtration V3.2</h:title>
     <model>
 
       <instance>
-        <data id="bj_sch_sth_impact_202401_4_urine_filtration_v2">
+        <data id="bj_sch_sth_impact_202401_4_urine_filtration_v3_2">
           <u_recorder/>
           <u_district/>
           <u_subdistrict/>
           <u_site_name/>
           <u_site_code/>
-          <u_espen_code_id/>
-          <u_urine_filtrer/>
-          <u_urine_vol/>
-          <u_urine_vol_sup/>
-          <u_sh_egp_10ml/>
-          <u_sh_egp_10ml_sup/>
-          <u_sch_man_a/>
-          <u_sch_man_b/>
-          <u_sch_man_sup/>
-          <u_remarks/>
+          <C1/>
+          <bj_u2 jr:template="">
+            <C2/>
+            <C3/>
+            <u_add_record/>
+            <u_espen_code_id/>
+            <u_urine_filtrer/>
+            <u_urine_vol/>
+            <u_urine_vol_sup/>
+            <u_sh_egp_10ml/>
+            <u_sh_egp_10ml_sup/>
+            <u_sch_man_a/>
+            <u_sch_man_b/>
+            <u_sch_man_sup/>
+            <u_remarks/>
+          </bj_u2>
           <u_start/>
           <u_end/>
           <meta>
@@ -37,74 +43,86 @@
 
       <itext>
         <translation default="true()" lang="French">
-          <text id="/data/u_sh_egp_10ml_sup:label">
-            <value>Nombre d'œufs de Schistosoma haematobium par 10 ml - Superviseur</value>
-          </text>
-          <text id="/data/u_espen_code_id:jr:constraintMsg">
-            <value>Veuillez entrer le code du participant. Exemple 999-99</value>
+          <text id="/data/u_recorder:label">
+            <value>Code de l'enquêteur</value>
           </text>
           <text id="/data/u_site_name:label">
             <value>Sélectionner l'école</value>
           </text>
-          <text id="/data/u_urine_vol_sup:jr:constraintMsg">
+          <text id="/data/bj_u2/u_urine_vol:jr:constraintMsg">
             <value>Le volume doit être limité à 10ml</value>
           </text>
-          <text id="/data/u_sch_man_b:label">
-            <value>Nombre d'œufs de Schistosoma mansoni - Lame B</value>
+          <text id="/data/bj_u2/u_urine_filtrer/Confirmé:label">
+            <value>Confirmé</value>
           </text>
-          <text id="/data/u_sch_man_a:label">
-            <value>Nombre d'œufs de Schistosoma mansoni - Lame A</value>
+          <text id="/data/bj_u2/u_urine_vol:label">
+            <value>Volume d'urine : Consigner les millilitres (ml) d'urine prélevés sur la personne</value>
           </text>
-          <text id="/data/u_espen_code_id:label">
-            <value>Code d'identification du répondant (Veuillez Saisir le code du participant tel qu'il a été généré dans le formulaire 2)</value>
-          </text>
-          <text id="/data/u_recorder:label">
-            <value>Code de l'enquêteur</value>
-          </text>
-          <text id="/data/u_recorder:hint">
-            <value>Code sur 2 chiffres</value>
+          <text id="/data/bj_u2/u_urine_filtrer/Pas confirmé:label">
+            <value>Pas confirmé</value>
           </text>
           <text id="/data/u_district:label">
             <value>Sélectionner la commune</value>
           </text>
-          <text id="/data/u_urine_filtrer/Pas confirmé:label">
-            <value>Pas confirmé</value>
+          <text id="/data/bj_u2/u_sch_man_sup:label">
+            <value>Nombre d'œufs de Schistosoma mansoni - Superviseur</value>
+          </text>
+          <text id="/data/bj_u2/u_urine_filtrer:label">
+            <value>Confirmer que l'urine a été conservé pour filtration et que les résultats finaux insérés seront le nombre d'œufs ?</value>
+          </text>
+          <text id="/data/bj_u2/u_sh_egp_10ml_sup:label">
+            <value>Nombre d'œufs de Schistosoma haematobium par 10 ml - Superviseur</value>
+          </text>
+          <text id="/data/bj_u2/u_espen_code_id:label">
+            <value>Code d'identification du répondant (Veuillez Saisir le code du participant tel qu'il a été généré dans le formulaire 2)</value>
+          </text>
+          <text id="/data/bj_u2/u_add_record/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/bj_u2/u_add_record/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/u_recorder:hint">
+            <value>Code sur 2 chiffres</value>
+          </text>
+          <text id="/data/bj_u2/u_espen_code_id:hint">
+            <value>Exemple: 999-99. Il s'agit du code de l'école suivi d'un tiret puis du numéro d'ordre du participant sur deux chiffres.</value>
+          </text>
+          <text id="/data/bj_u2/u_add_record:label">
+            <value>Voulez-vous ajouter un autre enregistrement</value>
           </text>
           <text id="/data/u_recorder:jr:constraintMsg">
             <value>Veuillez rentrer votre code sur 2 chiffres</value>
           </text>
+          <text id="/data/bj_u2/u_sch_man_a:label">
+            <value>Nombre d'œufs de Schistosoma mansoni - Lame A</value>
+          </text>
           <text id="/data/u_site_code:label">
             <value>Sélectionner le code de l'école</value>
           </text>
-          <text id="/data/u_urine_vol_sup:label">
-            <value>Volume d'urine : Consigner les millilitres (ml) d'urine prélevés sur la personne - Superviseur</value>
-          </text>
-          <text id="/data/u_sh_egp_10ml:label">
-            <value>Nombre d'œufs de Schistosoma haematobium par 10 ml</value>
-          </text>
-          <text id="/data/u_remarks:label">
+          <text id="/data/bj_u2/u_remarks:label">
             <value>Notes additionnelles</value>
           </text>
-          <text id="/data/u_espen_code_id:hint">
-            <value>Exemple: 999-99. Il s'agit du code de l'école suivi d'un tiret puis du numéro d'ordre du participant sur deux chiffres.</value>
+          <text id="/data/bj_u2/u_sh_egp_10ml:label">
+            <value>Nombre d'œufs de Schistosoma haematobium par 10 ml</value>
           </text>
-          <text id="/data/u_sch_man_sup:label">
-            <value>Nombre d'œufs de Schistosoma mansoni - Superviseur</value>
+          <text id="/data/bj_u2/u_espen_code_id:jr:constraintMsg">
+            <value>Cet identifiant est déjà utilisé</value>
+          </text>
+          <text id="/data/bj_u2/u_sch_man_b:label">
+            <value>Nombre d'œufs de Schistosoma mansoni - Lame B</value>
           </text>
           <text id="/data/u_subdistrict:label">
             <value>Sélectionner l'arrondissement</value>
           </text>
-          <text id="/data/u_urine_filtrer:label">
-            <value>Confirmer que l'urine a été conservé pour filtration et que les résultats finaux insérés seront le nombre d'œufs ?</value>
-          </text>
-          <text id="/data/u_urine_vol:label">
-            <value>Volume d'urine : Consigner les millilitres (ml) d'urine prélevés sur la personne</value>
-          </text>
-          <text id="/data/u_urine_vol:jr:constraintMsg">
+          <text id="/data/bj_u2/u_urine_vol_sup:jr:constraintMsg">
             <value>Le volume doit être limité à 10ml</value>
           </text>
-          <text id="/data/u_urine_filtrer/Confirmé:label">
-            <value>Confirmé</value>
+          <text id="/data/bj_u2:label">
+            <value>Résultats Urine</value>
+          </text>
+          <text id="/data/bj_u2/u_urine_vol_sup:label">
+            <value>Volume d'urine : Consigner les millilitres (ml) d'urine prélevés sur la personne - Superviseur</value>
           </text>
         </translation>
       </itext>
@@ -113,16 +131,20 @@
       <bind nodeset="/data/u_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_district"/>
       <bind nodeset="/data/u_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_subdistrict"/>
       <bind nodeset="/data/u_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_site_name"/>
-      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/u_espen_code_id:jr:constraintMsg')" nodeset="/data/u_espen_code_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/u_site_code"/>
-      <bind nodeset="/data/u_urine_filtrer" required="true()" type="select1"/>
-      <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol:jr:constraintMsg')" nodeset="/data/u_urine_vol" type="int"/>
-      <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/u_urine_vol_sup:jr:constraintMsg')" nodeset="/data/u_urine_vol_sup" type="int"/>
-      <bind nodeset="/data/u_sh_egp_10ml" required="true()" type="int"/>
-      <bind nodeset="/data/u_sh_egp_10ml_sup" required="true()" type="int"/>
-      <bind nodeset="/data/u_sch_man_a" type="int"/>
-      <bind nodeset="/data/u_sch_man_b" type="int"/>
-      <bind nodeset="/data/u_sch_man_sup" type="int"/>
-      <bind nodeset="/data/u_remarks" type="string"/>
+      <bind calculate="join(' ',  /data/bj_u2/u_espen_code_id )" nodeset="/data/C1" type="string"/>
+      <bind calculate="position(..)" nodeset="/data/bj_u2/C2" type="string"/>
+      <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../u_espen_code_id ))" nodeset="/data/bj_u2/C3" type="string"/>
+      <bind nodeset="/data/bj_u2/u_add_record" type="select1"/>
+      <bind constraint="not(selected( ../C3 ,  ../u_espen_code_id ))" jr:constraintMsg="jr:itext('/data/bj_u2/u_espen_code_id:jr:constraintMsg')" nodeset="/data/bj_u2/u_espen_code_id" relevant=" ../u_add_record  = 'Oui'" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/u_site_code"/>
+      <bind nodeset="/data/bj_u2/u_urine_filtrer" relevant=" ../u_add_record  = 'Oui'" required="true()" type="select1"/>
+      <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/bj_u2/u_urine_vol:jr:constraintMsg')" nodeset="/data/bj_u2/u_urine_vol" relevant=" ../u_add_record  = 'Oui'" type="int"/>
+      <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/bj_u2/u_urine_vol_sup:jr:constraintMsg')" nodeset="/data/bj_u2/u_urine_vol_sup" relevant=" ../u_add_record  = 'Oui'" type="int"/>
+      <bind nodeset="/data/bj_u2/u_sh_egp_10ml" relevant=" ../u_add_record  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/bj_u2/u_sh_egp_10ml_sup" relevant=" ../u_add_record  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/bj_u2/u_sch_man_a" relevant=" ../u_add_record  = 'Oui'" type="int"/>
+      <bind nodeset="/data/bj_u2/u_sch_man_b" relevant=" ../u_add_record  = 'Oui'" type="int"/>
+      <bind nodeset="/data/bj_u2/u_sch_man_sup" relevant=" ../u_add_record  = 'Oui'" type="int"/>
+      <bind nodeset="/data/bj_u2/u_remarks" relevant=" ../u_add_record  = 'Oui'" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/u_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/u_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
@@ -145,44 +167,60 @@
     <input ref="/data/u_site_code">
       <label ref="jr:itext('/data/u_site_code:label')"/>
     </input>
-    <input ref="/data/u_espen_code_id">
-      <label ref="jr:itext('/data/u_espen_code_id:label')"/>
-      <hint ref="jr:itext('/data/u_espen_code_id:hint')"/>
-    </input>
-    <select1 ref="/data/u_urine_filtrer">
-      <label ref="jr:itext('/data/u_urine_filtrer:label')"/>
-      <item>
-        <label ref="jr:itext('/data/u_urine_filtrer/Confirmé:label')"/>
-        <value>Confirmé</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/u_urine_filtrer/Pas confirmé:label')"/>
-        <value>Pas confirmé</value>
-      </item>
-    </select1>
-    <input ref="/data/u_urine_vol">
-      <label ref="jr:itext('/data/u_urine_vol:label')"/>
-    </input>
-    <input ref="/data/u_urine_vol_sup">
-      <label ref="jr:itext('/data/u_urine_vol_sup:label')"/>
-    </input>
-    <input ref="/data/u_sh_egp_10ml">
-      <label ref="jr:itext('/data/u_sh_egp_10ml:label')"/>
-    </input>
-    <input ref="/data/u_sh_egp_10ml_sup">
-      <label ref="jr:itext('/data/u_sh_egp_10ml_sup:label')"/>
-    </input>
-    <input ref="/data/u_sch_man_a">
-      <label ref="jr:itext('/data/u_sch_man_a:label')"/>
-    </input>
-    <input ref="/data/u_sch_man_b">
-      <label ref="jr:itext('/data/u_sch_man_b:label')"/>
-    </input>
-    <input ref="/data/u_sch_man_sup">
-      <label ref="jr:itext('/data/u_sch_man_sup:label')"/>
-    </input>
-    <input ref="/data/u_remarks">
-      <label ref="jr:itext('/data/u_remarks:label')"/>
-    </input>
+    <group ref="/data/bj_u2">
+      <label ref="jr:itext('/data/bj_u2:label')"/>
+      <repeat nodeset="/data/bj_u2">
+        <select1 ref="/data/bj_u2/u_add_record">
+          <label ref="jr:itext('/data/bj_u2/u_add_record:label')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_u2/u_add_record/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_u2/u_add_record/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <input ref="/data/bj_u2/u_espen_code_id">
+          <label ref="jr:itext('/data/bj_u2/u_espen_code_id:label')"/>
+          <hint ref="jr:itext('/data/bj_u2/u_espen_code_id:hint')"/>
+        </input>
+        <select1 ref="/data/bj_u2/u_urine_filtrer">
+          <label ref="jr:itext('/data/bj_u2/u_urine_filtrer:label')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_u2/u_urine_filtrer/Confirmé:label')"/>
+            <value>Confirmé</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_u2/u_urine_filtrer/Pas confirmé:label')"/>
+            <value>Pas confirmé</value>
+          </item>
+        </select1>
+        <input ref="/data/bj_u2/u_urine_vol">
+          <label ref="jr:itext('/data/bj_u2/u_urine_vol:label')"/>
+        </input>
+        <input ref="/data/bj_u2/u_urine_vol_sup">
+          <label ref="jr:itext('/data/bj_u2/u_urine_vol_sup:label')"/>
+        </input>
+        <input ref="/data/bj_u2/u_sh_egp_10ml">
+          <label ref="jr:itext('/data/bj_u2/u_sh_egp_10ml:label')"/>
+        </input>
+        <input ref="/data/bj_u2/u_sh_egp_10ml_sup">
+          <label ref="jr:itext('/data/bj_u2/u_sh_egp_10ml_sup:label')"/>
+        </input>
+        <input ref="/data/bj_u2/u_sch_man_a">
+          <label ref="jr:itext('/data/bj_u2/u_sch_man_a:label')"/>
+        </input>
+        <input ref="/data/bj_u2/u_sch_man_b">
+          <label ref="jr:itext('/data/bj_u2/u_sch_man_b:label')"/>
+        </input>
+        <input ref="/data/bj_u2/u_sch_man_sup">
+          <label ref="jr:itext('/data/bj_u2/u_sch_man_sup:label')"/>
+        </input>
+        <input ref="/data/bj_u2/u_remarks">
+          <label ref="jr:itext('/data/bj_u2/u_remarks:label')"/>
+        </input>
+      </repeat>
+    </group>
   </h:body>
 </h:html>
