@@ -127,9 +127,9 @@
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/k_recorder:jr:constraintMsg')" nodeset="/data/k_recorder" required="true()" type="string"/>
       <bind nodeset="/data/k_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/k_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/k_district"/>
-      <bind nodeset="/data/k_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_site_name"/>
-      <bind nodeset="/data/k_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/k_site_code"/>
-      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/k_espen_code_id:jr:constraintMsg')" nodeset="/data/k_espen_code_id" required="true()" type="string"/>
+      <bind nodeset="/data/k_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/k_subdistrict"/>
+      <bind nodeset="/data/k_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/k_site_name"/>
+      <bind constraint="regex(.,'^[0-9]{3}-[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/k_espen_code_id:jr:constraintMsg')" nodeset="/data/k_espen_code_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/k_site_code"/>
       <bind nodeset="/data/k_sch_man_sa" required="true()" type="int"/>
       <bind nodeset="/data/k_sch_man_sb" required="true()" type="int"/>
       <bind nodeset="/data/k_sch_man_sup" type="int"/>

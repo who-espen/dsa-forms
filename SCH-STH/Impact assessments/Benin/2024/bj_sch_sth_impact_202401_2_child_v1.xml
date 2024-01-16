@@ -381,7 +381,7 @@
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
       <bind nodeset="/data/p_site_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_subdistrict"/>
-      <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_site_code:jr:constraintMsg')" nodeset="/data/p_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/p_site_name"/>
+      <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_site_code:jr:constraintMsg')" nodeset="/data/p_site_code" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_site_name"/>
       <bind constraint=".&gt;=1 and .&lt;=99" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" required="true()" type="int"/>
       <bind nodeset="/data/p_classe" required="true()" type="select1"/>
       <bind nodeset="/data/p_sex" required="true()" type="select1"/>
@@ -389,7 +389,7 @@
       <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="int"/>
       <bind nodeset="/data/p_chaussures" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_latrines" relevant=" /data/p_consent  = 'A.donne'" type="select1"/>
-      <bind calculate="concat( /data/p_site_code ,'-',if( /data/p_num &lt;10, concat('0',  /data/p_num ),  /data/p_num ))" nodeset="/data/p_espen_code_id" readonly="true()" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"/>
+      <bind calculate="concat( /data/p_site_code ,'-',if( /data/p_num &lt;10, concat('0',  /data/p_num ),  /data/p_num ))" nodeset="/data/p_espen_code_id" readonly="true()" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"  db_add_col_4="/data/p_site_code" db_add_col_5="."/>
       <bind nodeset="/data/p_collected_stool" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_collected_urine" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
       <bind nodeset="/data/p_grading" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui'" type="select1"/>
