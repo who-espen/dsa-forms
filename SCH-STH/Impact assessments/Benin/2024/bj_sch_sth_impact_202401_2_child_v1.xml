@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Janvier) - 2. SCH/STH – Enrôlement V1</h:title>
+    <h:title>(2024 Janvier) - 2. SCH/STH – Enrôlement V3</h:title>
     <model>
 
       <instance>
-        <data id="bj_sch_sth_impact_202401_2_child_v1">
+        <data id="bj_sch_sth_impact_202401_2_child_v3">
           <p_recorder/>
           <p_district/>
           <p_subdistrict/>
@@ -20,18 +20,23 @@
           <p_num/>
           <p_classe/>
           <p_sex/>
-          <p_consent/>
-          <p_age_yrs/>
-          <p_chaussures/>
-          <p_latrines/>
-          <p_espen_code_id/>
-          <p_collected_stool/>
-          <p_collected_urine/>
-          <p_grading/>
-          <p_urine_conserve/>
-          <p_ending_survey_note/>
-          <p_sample_note/>
-          <p_remarks/>
+          <C1/>
+          <bj_e jr:template="">
+            <C2/>
+            <C3/>
+            <p_consent/>
+            <p_age_yrs/>
+            <p_chaussures/>
+            <p_latrines/>
+            <p_espen_code_id/>
+            <p_collected_stool/>
+            <p_collected_urine/>
+            <p_grading/>
+            <p_urine_conserve/>
+            <p_ending_survey_note/>
+            <p_sample_note/>
+            <p_remarks/>
+          </bj_e>
           <p_start/>
           <p_end/>
           <meta>
@@ -45,17 +50,26 @@
           <text id="/data/p_sex/Feminin:label">
             <value>Féminin</value>
           </text>
+          <text id="/data/bj_e/p_grading/++:label">
+            <value>++</value>
+          </text>
           <text id="/data/p_classe/CP:label">
             <value>CP</value>
+          </text>
+          <text id="/data/bj_e/p_urine_conserve:jr:constraintMsg">
+            <value>L'urine ne doit pas être conservée si le résultat du test Hemastix est positif</value>
           </text>
           <text id="/data/p_classe/CE1:label">
             <value>CE1</value>
           </text>
+          <text id="/data/bj_e/p_collected_stool:hint">
+            <value>Nous ne voulons pas rentrer s'ils ne donnent pas d'échantillon car nous ne pouvons pas garantir qu'il n'y aura pas d'échange d'échantillons.</value>
+          </text>
           <text id="/data/p_classe/CI:label">
             <value>CI</value>
           </text>
-          <text id="/data/p_collected_stool/Oui:label">
-            <value>Oui</value>
+          <text id="/data/bj_e/p_collected_urine/Non:label">
+            <value>Non</value>
           </text>
           <text id="/data/p_num:hint">
             <value>Maximum 99</value>
@@ -63,26 +77,38 @@
           <text id="/data/p_sex:label">
             <value>Sélectionnez le sexe de l'enfant</value>
           </text>
-          <text id="/data/p_chaussures/Non:label">
-            <value>Non</value>
+          <text id="/data/bj_e/p_chaussures/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/bj_e/p_consent/A.refuse:label">
+            <value>2. A refusé</value>
           </text>
           <text id="/data/p_sex/Masculin:label">
             <value>Masculin</value>
           </text>
-          <text id="/data/p_latrines/Oui:label">
-            <value>Oui</value>
+          <text id="/data/bj_e/p_chaussures:label">
+            <value>L'enfant porte t-il des chaussures?</value>
           </text>
-          <text id="/data/p_grading/Trace.non.hemolysee:label">
-            <value>Trace non hémolysée</value>
+          <text id="/data/bj_e/p_grading/+++:label">
+            <value>+++</value>
+          </text>
+          <text id="/data/bj_e/p_consent:hint">
+            <value>La réponse "Non" mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/bj_e/p_collected_urine:label">
+            <value>Un échantillon d'urine de cet enfant a-t-il été prélevé ?</value>
+          </text>
+          <text id="/data/bj_e/p_remarks:label">
+            <value>Notes complémentaires</value>
           </text>
           <text id="/data/p_num:jr:constraintMsg">
             <value>Compris entre 01 et 99</value>
           </text>
-          <text id="/data/p_sample_note:label">
-            <value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête. Veuillez collecter les échantillons de selle et d'urine du participant.</value>
-          </text>
           <text id="/data/p_recorder:jr:constraintMsg">
             <value>Veuillez rentrer votre code sur 2 chiffres</value>
+          </text>
+          <text id="/data/bj_e/p_collected_stool/Non:label">
+            <value>Non</value>
           </text>
           <text id="/data/p_num:label">
             <value>Entrer le numéro d'ordre du participant</value>
@@ -90,14 +116,17 @@
           <text id="/data/p_site_name:label">
             <value>Sélectionner le nom de l'école</value>
           </text>
-          <text id="/data/p_ending_survey_note:label">
-            <value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête</value>
+          <text id="/data/bj_e/p_grading/Trace.non.hemolysee:label">
+            <value>Trace non hémolysée</value>
           </text>
-          <text id="/data/p_urine_conserve:label">
-            <value>Cette urine est-elle conservée pour la filtration de l'urine?</value>
+          <text id="/data/bj_e/p_chaussures/Non:label">
+            <value>Non</value>
           </text>
-          <text id="/data/p_collected_urine/Oui:label">
+          <text id="/data/bj_e/p_urine_conserve/Oui:label">
             <value>Oui</value>
+          </text>
+          <text id="/data/bj_e/p_age_yrs:label">
+            <value>Entrez l'âge de l'enfant en années</value>
           </text>
           <text id="/data/p_recorder:label">
             <value>Code de l'enquêteur</value>
@@ -105,50 +134,29 @@
           <text id="/data/p_classe:label">
             <value>Sélectionner la classe de l'enfant</value>
           </text>
-          <text id="/data/p_consent/A.refuse:label">
-            <value>2. A refusé</value>
+          <text id="/data/bj_e/p_grading:label">
+            <value>Graduation de la microhématurie</value>
           </text>
-          <text id="/data/p_grading/++:label">
-            <value>++</value>
-          </text>
-          <text id="/data/p_chaussures/Oui:label">
-            <value>Oui</value>
-          </text>
-          <text id="/data/p_collected_urine:label">
-            <value>Un échantillon d'urine de cet enfant a-t-il été prélevé ?</value>
-          </text>
-          <text id="/data/p_remarks:label">
-            <value>Notes complémentaires</value>
+          <text id="/data/bj_e/p_sample_note:label">
+            <value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête. Veuillez collecter les échantillons de selle et d'urine du participant.</value>
           </text>
           <text id="/data/p_subdistrict:label">
             <value>Sélectionner l'arrondissement</value>
           </text>
-          <text id="/data/p_grading/+++:label">
-            <value>+++</value>
+          <text id="/data/bj_e/p_grading/+:label">
+            <value>+</value>
           </text>
-          <text id="/data/p_chaussures:label">
-            <value>L'enfant porte t-il des chaussures?</value>
-          </text>
-          <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>L'âge doit être compris entre 5 et 14 ans</value>
+          <text id="/data/bj_e/p_collected_urine/Oui:label">
+            <value>Oui</value>
           </text>
           <text id="/data/p_site_code:jr:constraintMsg">
             <value>Veuillez rentrer le code de l'école sur 3 chiffres</value>
           </text>
-          <text id="/data/p_grading/Trace.hemolysee:label">
+          <text id="/data/bj_e/p_urine_conserve:label">
+            <value>Cette urine est-elle conservée pour la filtration de l'urine?</value>
+          </text>
+          <text id="/data/bj_e/p_grading/Trace.hemolysee:label">
             <value>Trace hémolysée</value>
-          </text>
-          <text id="/data/p_espen_code_id:label">
-            <value>Code d'identification du répondant (Veuillez recopier ce code tel qu'il est quelque part entre autres sur les tests de diagnostique)</value>
-          </text>
-          <text id="/data/p_grading:label">
-            <value>Graduation de la microhématurie</value>
-          </text>
-          <text id="/data/p_grading/Negatif:label">
-            <value>Négatif</value>
-          </text>
-          <text id="/data/p_collected_urine/Non:label">
-            <value>Non</value>
           </text>
           <text id="/data/p_district:label">
             <value>Sélectionner la commune</value>
@@ -156,97 +164,121 @@
           <text id="/data/p_classe/CM2:label">
             <value>CM2</value>
           </text>
-          <text id="/data/p_consent:label">
-            <value>L'enfant a-t-il donné son consentement et le consentement de ses parents ou tuteurs?</value>
-          </text>
-          <text id="/data/p_collected_stool/Non:label">
+          <text id="/data/bj_e/p_latrines/Non:label">
             <value>Non</value>
           </text>
-          <text id="/data/p_urine_conserve/Non:label">
-            <value>Non</value>
-          </text>
-          <text id="/data/p_urine_conserve:jr:constraintMsg">
-            <value>L'urine ne doit pas être conservée si le résultat du test Hemastix est positif</value>
+          <text id="/data/bj_e:label">
+            <value>Enfant</value>
           </text>
           <text id="/data/p_recorder:hint">
             <value>Code sur 2 chiffres</value>
           </text>
+          <text id="/data/bj_e/p_latrines:label">
+            <value>Existence de latrines à la maison de l'enfant?</value>
+          </text>
           <text id="/data/p_classe/CM1:label">
             <value>CM1</value>
           </text>
-          <text id="/data/p_age_yrs:label">
-            <value>Entrez l'âge de l'enfant en années</value>
-          </text>
-          <text id="/data/p_latrines:label">
-            <value>Existence de latrines à la maison de l'enfant?</value>
-          </text>
-          <text id="/data/p_collected_stool:hint">
-            <value>Nous ne voulons pas rentrer s'ils ne donnent pas d'échantillon car nous ne pouvons pas garantir qu'il n'y aura pas d'échange d'échantillons.</value>
-          </text>
-          <text id="/data/p_urine_conserve/Oui:label">
+          <text id="/data/bj_e/p_collected_stool/Oui:label">
             <value>Oui</value>
           </text>
-          <text id="/data/p_collected_stool:label">
-            <value>Un échantillon de selles de cet enfant a-t-il été prélevé ?</value>
+          <text id="/data/bj_e/p_latrines/Oui:label">
+            <value>Oui</value>
           </text>
-          <text id="/data/p_consent/A.donne:label">
+          <text id="/data/bj_e/p_consent/A.donne:label">
             <value>1. A donné</value>
           </text>
-          <text id="/data/p_consent:hint">
-            <value>La réponse "Non" mettra fin à l'enquête</value>
+          <text id="/data/bj_e/p_ending_survey_note:label">
+            <value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête</value>
+          </text>
+          <text id="/data/bj_e/p_urine_conserve/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/bj_e/p_consent:label">
+            <value>L'enfant a-t-il donné son consentement et le consentement de ses parents ou tuteurs?</value>
+          </text>
+          <text id="/data/bj_e/p_espen_code_id:label">
+            <value>Code d'identification du répondant (Veuillez recopier ce code tel qu'il est quelque part entre autres sur les tests de diagnostique)</value>
           </text>
           <text id="/data/p_site_code:label">
             <value>Sélectionner le code de l'école</value>
           </text>
-          <text id="/data/p_grading/+:label">
-            <value>+</value>
+          <text id="/data/bj_e/p_collected_stool:label">
+            <value>Un échantillon de selles de cet enfant a-t-il été prélevé ?</value>
+          </text>
+          <text id="/data/bj_e/p_grading/Negatif:label">
+            <value>Négatif</value>
           </text>
           <text id="/data/p_classe/CE2:label">
             <value>CE2</value>
           </text>
-          <text id="/data/p_latrines/Non:label">
-            <value>Non</value>
+          <text id="/data/bj_e/p_age_yrs:jr:constraintMsg">
+            <value>L'âge doit être compris entre 5 et 14 ans</value>
           </text>
         </translation>
         <translation lang="English">
           <text id="/data/p_sex/Feminin:label">
             <value>Female</value>
           </text>
+          <text id="/data/bj_e/p_grading/++:label">
+            <value>++</value>
+          </text>
           <text id="/data/p_classe/CP:label">
             <value>CP</value>
+          </text>
+          <text id="/data/bj_e/p_urine_conserve:jr:constraintMsg">
+            <value>The urine should not be conserved if the hemastix test result is positive</value>
           </text>
           <text id="/data/p_classe/CE1:label">
             <value>CE1</value>
           </text>
+          <text id="/data/bj_e/p_collected_stool:hint">
+            <value>*We do not want to come back to the house if they don't give a sample as we can't guarantee there won't be any swapping of samples.</value>
+          </text>
           <text id="/data/p_classe/CI:label">
             <value>CI</value>
           </text>
-          <text id="/data/p_collected_stool/Oui:label">
-            <value>Yes</value>
+          <text id="/data/bj_e/p_collected_urine/Non:label">
+            <value>No</value>
           </text>
-          <text id="/data/p_grading/Trace.non.hemolysee:label">
-            <value>Trace non-haemolysed</value>
+          <text id="/data/bj_e/p_grading:label">
+            <value>What was the haemastix result?</value>
           </text>
           <text id="/data/p_sex:label">
             <value>Select the gender of the child</value>
           </text>
-          <text id="/data/p_chaussures/Non:label">
-            <value>No</value>
+          <text id="/data/bj_e/p_chaussures/Oui:label">
+            <value>Yes</value>
           </text>
-          <text id="/data/p_consent:hint">
+          <text id="/data/bj_e/p_consent/A.refuse:label">
+            <value>2. Refused</value>
+          </text>
+          <text id="/data/p_sex/Masculin:label">
+            <value>Male</value>
+          </text>
+          <text id="/data/bj_e/p_chaussures:label">
+            <value>Wearing shoes?</value>
+          </text>
+          <text id="/data/bj_e/p_grading/+++:label">
+            <value>+++</value>
+          </text>
+          <text id="/data/bj_e/p_consent:hint">
             <value>"No" answer response will end survey</value>
           </text>
-          <text id="/data/p_latrines/Oui:label">
-            <value>Yes</value>
+          <text id="/data/bj_e/p_collected_urine:label">
+            <value>Was a stool sample successfully collected from this child?</value>
+          </text>
+          <text id="/data/bj_e/p_remarks:label">
+            <value>Additional notes</value>
           </text>
           <text id="/data/p_num:jr:constraintMsg">
             <value>between 01 and 99</value>
           </text>
-          <text id="/data/p_sample_note:label">
-            <value>You have just entered a value that will cause the survey to end. Please collect the participant's stool and urine samples.</value>
-          </text>
           <text id="/data/p_recorder:jr:constraintMsg">
             <value>Please enter your 2 digits code</value>
+          </text>
+          <text id="/data/bj_e/p_collected_stool/Non:label">
+            <value>No</value>
           </text>
           <text id="/data/p_num:label">
             <value>Enter the participant's order number</value>
@@ -254,14 +286,17 @@
           <text id="/data/p_site_name:label">
             <value>Select the school</value>
           </text>
-          <text id="/data/p_ending_survey_note:label">
-            <value>You just entered a value that will end the survey</value>
+          <text id="/data/bj_e/p_grading/Trace.non.hemolysee:label">
+            <value>Trace non-haemolysed</value>
           </text>
-          <text id="/data/p_urine_conserve:label">
-            <value>Is this urine being saved for urine filtration?</value>
+          <text id="/data/bj_e/p_chaussures/Non:label">
+            <value>No</value>
           </text>
-          <text id="/data/p_collected_urine/Oui:label">
+          <text id="/data/bj_e/p_urine_conserve/Oui:label">
             <value>Yes</value>
+          </text>
+          <text id="/data/bj_e/p_age_yrs:label">
+            <value>Enter the child's age in years</value>
           </text>
           <text id="/data/p_recorder:label">
             <value>Investigator code</value>
@@ -269,50 +304,29 @@
           <text id="/data/p_classe:label">
             <value>Select child's class</value>
           </text>
-          <text id="/data/p_consent/A.refuse:label">
-            <value>2. Refused</value>
+          <text id="/data/p_num:hint">
+            <value>-</value>
           </text>
-          <text id="/data/p_grading/++:label">
-            <value>++</value>
-          </text>
-          <text id="/data/p_chaussures/Oui:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/p_collected_urine:label">
-            <value>Was a stool sample successfully collected from this child?</value>
-          </text>
-          <text id="/data/p_remarks:label">
-            <value>Additional notes</value>
+          <text id="/data/bj_e/p_sample_note:label">
+            <value>You have just entered a value that will cause the survey to end. Please collect the participant's stool and urine samples.</value>
           </text>
           <text id="/data/p_subdistrict:label">
             <value>Select the Sub-district (USP)</value>
           </text>
-          <text id="/data/p_grading/+++:label">
-            <value>+++</value>
+          <text id="/data/bj_e/p_grading/+:label">
+            <value>+</value>
           </text>
-          <text id="/data/p_chaussures:label">
-            <value>Wearing shoes?</value>
-          </text>
-          <text id="/data/p_age_yrs:jr:constraintMsg">
-            <value>The age must be between 5 and 14 years</value>
+          <text id="/data/bj_e/p_collected_urine/Oui:label">
+            <value>Yes</value>
           </text>
           <text id="/data/p_site_code:jr:constraintMsg">
             <value>Please enter the 3 digits school code</value>
           </text>
-          <text id="/data/p_grading/Trace.hemolysee:label">
+          <text id="/data/bj_e/p_urine_conserve:label">
+            <value>Is this urine being saved for urine filtration?</value>
+          </text>
+          <text id="/data/bj_e/p_grading/Trace.hemolysee:label">
             <value>Trace haemolysed</value>
-          </text>
-          <text id="/data/p_espen_code_id:label">
-            <value>Respondent's identification code (Please copy this code as it is somewhere, among other things, on the diagnostic tests)</value>
-          </text>
-          <text id="/data/p_grading:label">
-            <value>What was the haemastix result?</value>
-          </text>
-          <text id="/data/p_grading/Negatif:label">
-            <value>Negative</value>
-          </text>
-          <text id="/data/p_collected_urine/Non:label">
-            <value>No</value>
           </text>
           <text id="/data/p_district:label">
             <value>Select the county</value>
@@ -320,63 +334,59 @@
           <text id="/data/p_classe/CM2:label">
             <value>CM2</value>
           </text>
-          <text id="/data/p_consent:label">
-            <value>Did the child give assent, and parent or guardian consent?</value>
-          </text>
-          <text id="/data/p_collected_stool/Non:label">
+          <text id="/data/bj_e/p_latrines/Non:label">
             <value>No</value>
           </text>
-          <text id="/data/p_urine_conserve/Non:label">
-            <value>No</value>
-          </text>
-          <text id="/data/p_urine_conserve:jr:constraintMsg">
-            <value>The urine should not be conserved if the hemastix test result is positive</value>
-          </text>
-          <text id="/data/p_num:hint">
-            <value>-</value>
+          <text id="/data/bj_e:label">
+            <value>Children</value>
           </text>
           <text id="/data/p_recorder:hint">
             <value>2 digits</value>
           </text>
+          <text id="/data/bj_e/p_latrines:label">
+            <value>Existence of latrines at the child's house?</value>
+          </text>
           <text id="/data/p_classe/CM1:label">
             <value>CM1</value>
           </text>
-          <text id="/data/p_age_yrs:label">
-            <value>Enter the child's age in years</value>
-          </text>
-          <text id="/data/p_latrines:label">
-            <value>Existence of latrines at the child's house?</value>
-          </text>
-          <text id="/data/p_collected_stool:hint">
-            <value>*We do not want to come back to the house if they don't give a sample as we can't guarantee there won't be any swapping of samples.</value>
-          </text>
-          <text id="/data/p_urine_conserve/Oui:label">
+          <text id="/data/bj_e/p_collected_stool/Oui:label">
             <value>Yes</value>
           </text>
-          <text id="/data/p_collected_stool:label">
-            <value>Was a stool sample successfully collected from this child?</value>
+          <text id="/data/bj_e/p_latrines/Oui:label">
+            <value>Yes</value>
           </text>
-          <text id="/data/p_consent/A.donne:label">
+          <text id="/data/bj_e/p_consent/A.donne:label">
             <value>1. Given</value>
           </text>
-          <text id="/data/p_sex/Masculin:label">
-            <value>Male</value>
+          <text id="/data/bj_e/p_ending_survey_note:label">
+            <value>You just entered a value that will end the survey</value>
+          </text>
+          <text id="/data/bj_e/p_urine_conserve/Non:label">
+            <value>No</value>
+          </text>
+          <text id="/data/bj_e/p_consent:label">
+            <value>Did the child give assent, and parent or guardian consent?</value>
+          </text>
+          <text id="/data/bj_e/p_espen_code_id:label">
+            <value>Respondent's identification code (Please copy this code as it is somewhere, among other things, on the diagnostic tests)</value>
           </text>
           <text id="/data/p_site_code:label">
             <value>select the school code</value>
           </text>
-          <text id="/data/p_grading/+:label">
-            <value>+</value>
+          <text id="/data/bj_e/p_collected_stool:label">
+            <value>Was a stool sample successfully collected from this child?</value>
+          </text>
+          <text id="/data/bj_e/p_grading/Negatif:label">
+            <value>Negative</value>
           </text>
           <text id="/data/p_classe/CE2:label">
             <value>CE2</value>
           </text>
-          <text id="/data/p_latrines/Non:label">
-            <value>No</value>
+          <text id="/data/bj_e/p_age_yrs:jr:constraintMsg">
+            <value>The age must be between 5 and 14 years</value>
           </text>
         </translation>
       </itext>
-
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorder:jr:constraintMsg')" nodeset="/data/p_recorder" required="true()" type="string"/>
       <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/p_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
@@ -385,18 +395,21 @@
       <bind constraint=".&gt;=1 and .&lt;=99" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" required="true()" type="int"/>
       <bind nodeset="/data/p_classe" required="true()" type="select1"/>
       <bind nodeset="/data/p_sex" required="true()" type="select1"/>
-      <bind nodeset="/data/p_consent" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="int"/>
-      <bind nodeset="/data/p_chaussures" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_latrines" relevant=" /data/p_consent  = 'A.donne'" type="select1"/>
-      <bind calculate="concat( /data/p_site_code ,'-',if( /data/p_num &lt;10, concat('0',  /data/p_num ),  /data/p_num ))" nodeset="/data/p_espen_code_id" readonly="true()" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="string"  db_add_col_4="/data/p_site_code" db_add_col_5="."/>
-      <bind nodeset="/data/p_collected_stool" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_collected_urine" relevant=" /data/p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/p_grading" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui'" type="select1"/>
-      <bind constraint="if(( /data/p_grading ='Trace.hemolysee' or  /data/p_grading ='+' or  /data/p_grading ='++' or  /data/p_grading ='+++' ) and . = 'Non', false(), true()) and if( /data/p_grading ='Trace.non.hemolysee' and . = 'Oui', false(), true())" jr:constraintMsg="jr:itext('/data/p_urine_conserve:jr:constraintMsg')" nodeset="/data/p_urine_conserve" relevant=" /data/p_consent  = 'A.donne' and  /data/p_collected_urine  = 'Oui' and  /data/p_grading != 'Negatif'" type="select1"/>
-      <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'A.refuse'" type="string"/>
-      <bind nodeset="/data/p_sample_note" readonly="true()" relevant=" /data/p_collected_stool  = 'Non' and  /data/p_collected_urine  = 'Non'" type="string"/>
-      <bind nodeset="/data/p_remarks" type="string"/>
+      <bind calculate="join(' ',  /data/bj_e/p_espen_code_id )" nodeset="/data/C1" type="string"/>
+      <bind calculate="position(..)" nodeset="/data/bj_e/C2" type="string"/>
+      <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../p_espen_code_id ))" nodeset="/data/bj_e/C3" type="string"   db_add_col_4="/data/p_site_code" db_add_col_5="."/>
+      <bind nodeset="/data/bj_e/p_consent" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/bj_e/p_age_yrs:jr:constraintMsg')" nodeset="/data/bj_e/p_age_yrs" relevant=" ../p_consent  = 'A.donne'" required="true()" type="int"/>
+      <bind nodeset="/data/bj_e/p_chaussures" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
+      <bind nodeset="/data/bj_e/p_latrines" relevant=" ../p_consent  = 'A.donne'" type="select1"/>
+      <bind calculate="concat( /data/p_site_code ,'-',if( /data/p_num &lt;10, concat('0',  /data/p_num ),  /data/p_num ))" nodeset="/data/bj_e/p_espen_code_id" readonly="true()" relevant=" ../p_consent  = 'A.donne'" required="true()" type="string"/>
+      <bind nodeset="/data/bj_e/p_collected_stool" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
+      <bind nodeset="/data/bj_e/p_collected_urine" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
+      <bind nodeset="/data/bj_e/p_grading" relevant=" ../p_consent  = 'A.donne' and  ../p_collected_urine  = 'Oui'" type="select1"/>
+      <bind constraint="if(( ../p_grading ='Trace.hemolysee' or  ../p_grading ='+' or  ../p_grading ='++' or  ../p_grading ='+++' ) and . = 'Non', false(), true()) and if( ../p_grading ='Trace.non.hemolysee' and . = 'Oui', false(), true())" jr:constraintMsg="jr:itext('/data/bj_e/p_urine_conserve:jr:constraintMsg')" nodeset="/data/bj_e/p_urine_conserve" relevant=" ../p_consent  = 'A.donne' and  ../p_collected_urine  = 'Oui' and  ../p_grading != 'Negatif'" type="select1"/>
+      <bind nodeset="/data/bj_e/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'A.refuse'" type="string"/>
+      <bind nodeset="/data/bj_e/p_sample_note" readonly="true()" relevant=" ../p_collected_stool  = 'Non' and  ../p_collected_urine  = 'Non'" type="string"/>
+      <bind nodeset="/data/bj_e/p_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
@@ -461,115 +474,120 @@
         <value>Masculin</value>
       </item>
     </select1>
-    <select1 ref="/data/p_consent">
-      <label ref="jr:itext('/data/p_consent:label')"/>
-      <hint ref="jr:itext('/data/p_consent:hint')"/>
-      <item>
-        <label ref="jr:itext('/data/p_consent/A.donne:label')"/>
-        <value>A.donne</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_consent/A.refuse:label')"/>
-        <value>A.refuse</value>
-      </item>
-    </select1>
-    <input ref="/data/p_age_yrs">
-      <label ref="jr:itext('/data/p_age_yrs:label')"/>
-    </input>
-    <select1 ref="/data/p_chaussures">
-      <label ref="jr:itext('/data/p_chaussures:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_chaussures/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_chaussures/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <select1 ref="/data/p_latrines">
-      <label ref="jr:itext('/data/p_latrines:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_latrines/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_latrines/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <input ref="/data/p_espen_code_id">
-      <label ref="jr:itext('/data/p_espen_code_id:label')"/>
-    </input>
-    <select1 ref="/data/p_collected_stool">
-      <label ref="jr:itext('/data/p_collected_stool:label')"/>
-      <hint ref="jr:itext('/data/p_collected_stool:hint')"/>
-      <item>
-        <label ref="jr:itext('/data/p_collected_stool/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_collected_stool/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <select1 ref="/data/p_collected_urine">
-      <label ref="jr:itext('/data/p_collected_urine:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_collected_urine/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_collected_urine/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <select1 ref="/data/p_grading">
-      <label ref="jr:itext('/data/p_grading:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_grading/Negatif:label')"/>
-        <value>Negatif</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_grading/Trace.non.hemolysee:label')"/>
-        <value>Trace.non.hemolysee</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_grading/Trace.hemolysee:label')"/>
-        <value>Trace.hemolysee</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_grading/+:label')"/>
-        <value>+</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_grading/++:label')"/>
-        <value>++</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_grading/+++:label')"/>
-        <value>+++</value>
-      </item>
-    </select1>
-    <select1 ref="/data/p_urine_conserve">
-      <label ref="jr:itext('/data/p_urine_conserve:label')"/>
-      <item>
-        <label ref="jr:itext('/data/p_urine_conserve/Oui:label')"/>
-        <value>Oui</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/p_urine_conserve/Non:label')"/>
-        <value>Non</value>
-      </item>
-    </select1>
-    <input ref="/data/p_ending_survey_note">
-      <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
-    </input>
-    <input ref="/data/p_sample_note">
-      <label ref="jr:itext('/data/p_sample_note:label')"/>
-    </input>
-    <input ref="/data/p_remarks">
-      <label ref="jr:itext('/data/p_remarks:label')"/>
-    </input>
+    <group ref="/data/bj_e">
+      <label ref="jr:itext('/data/bj_e:label')"/>
+      <repeat nodeset="/data/bj_e">
+        <select1 ref="/data/bj_e/p_consent">
+          <label ref="jr:itext('/data/bj_e/p_consent:label')"/>
+          <hint ref="jr:itext('/data/bj_e/p_consent:hint')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_consent/A.donne:label')"/>
+            <value>A.donne</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_consent/A.refuse:label')"/>
+            <value>A.refuse</value>
+          </item>
+        </select1>
+        <input ref="/data/bj_e/p_age_yrs">
+          <label ref="jr:itext('/data/bj_e/p_age_yrs:label')"/>
+        </input>
+        <select1 ref="/data/bj_e/p_chaussures">
+          <label ref="jr:itext('/data/bj_e/p_chaussures:label')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_chaussures/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_chaussures/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <select1 ref="/data/bj_e/p_latrines">
+          <label ref="jr:itext('/data/bj_e/p_latrines:label')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_latrines/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_latrines/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <input ref="/data/bj_e/p_espen_code_id">
+          <label ref="jr:itext('/data/bj_e/p_espen_code_id:label')"/>
+        </input>
+        <select1 ref="/data/bj_e/p_collected_stool">
+          <label ref="jr:itext('/data/bj_e/p_collected_stool:label')"/>
+          <hint ref="jr:itext('/data/bj_e/p_collected_stool:hint')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_collected_stool/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_collected_stool/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <select1 ref="/data/bj_e/p_collected_urine">
+          <label ref="jr:itext('/data/bj_e/p_collected_urine:label')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_collected_urine/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_collected_urine/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <select1 ref="/data/bj_e/p_grading">
+          <label ref="jr:itext('/data/bj_e/p_grading:label')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_grading/Negatif:label')"/>
+            <value>Negatif</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_grading/Trace.non.hemolysee:label')"/>
+            <value>Trace.non.hemolysee</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_grading/Trace.hemolysee:label')"/>
+            <value>Trace.hemolysee</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_grading/+:label')"/>
+            <value>+</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_grading/++:label')"/>
+            <value>++</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_grading/+++:label')"/>
+            <value>+++</value>
+          </item>
+        </select1>
+        <select1 ref="/data/bj_e/p_urine_conserve">
+          <label ref="jr:itext('/data/bj_e/p_urine_conserve:label')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_urine_conserve/Oui:label')"/>
+            <value>Oui</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_e/p_urine_conserve/Non:label')"/>
+            <value>Non</value>
+          </item>
+        </select1>
+        <input ref="/data/bj_e/p_ending_survey_note">
+          <label ref="jr:itext('/data/bj_e/p_ending_survey_note:label')"/>
+        </input>
+        <input ref="/data/bj_e/p_sample_note">
+          <label ref="jr:itext('/data/bj_e/p_sample_note:label')"/>
+        </input>
+        <input ref="/data/bj_e/p_remarks">
+          <label ref="jr:itext('/data/bj_e/p_remarks:label')"/>
+        </input>
+      </repeat>
+    </group>
   </h:body>
 </h:html>
