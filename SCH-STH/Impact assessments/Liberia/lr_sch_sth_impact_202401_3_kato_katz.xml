@@ -108,9 +108,6 @@
           <text id="/data/k_Recorder:label">
             <value>Record code</value>
           </text>
-          <text id="/data/lr_k_202401_v12/k_add_result:jr:constraintMsg">
-            <value>This child code has already been selected.</value>
-          </text>
           <text id="/data/lr_k_202401_v12/k_sch_man_intensity:label">
             <value>Schistosoma mansoni (eggs) - Intensity</value>
           </text>
@@ -164,7 +161,7 @@
       <bind calculate="join(' ',  /data/lr_k_202401_v12/k_code_id )" nodeset="/data/C1" type="string"/>
       <bind calculate="position(..)" nodeset="/data/lr_k_202401_v12/C2" type="string"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../k_code_id ))" nodeset="/data/lr_k_202401_v12/C3" type="string"/>
-      <bind constraint="not(selected( ../C3 ,  ../k_code_id ))" jr:constraintMsg="jr:itext('/data/lr_k_202401_v12/k_add_result:jr:constraintMsg')" nodeset="/data/lr_k_202401_v12/k_add_result" required="true()" type="select1"/>
+      <bind nodeset="/data/lr_k_202401_v12/k_add_result" required="true()" type="select1"/>
       <bind constraint="not(selected( ../C3 ,  ../k_code_id ))" jr:constraintMsg="jr:itext('/data/lr_k_202401_v12/k_code_id:jr:constraintMsg')" nodeset="/data/lr_k_202401_v12/k_code_id" relevant=" ../k_add_result  = 'Yes'" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/k_school_id"/>
       <bind nodeset="/data/lr_k_202401_v12/k_sch_man_sa" relevant=" ../k_add_result  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/lr_k_202401_v12/k_sch_man_sb" relevant=" ../k_add_result  = 'Yes'" required="true()" type="int"/>
