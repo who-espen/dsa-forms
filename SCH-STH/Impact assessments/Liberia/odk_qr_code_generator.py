@@ -15,7 +15,7 @@ settings = {
     "send_finalized": True,
     "view_sent": True,
     #"delete_saved": False,
-    "admin_pw": "1325",
+    # "admin_pw": "1325",
   },
   "project": {
     "name": "Liberia SCH/STH survey",
