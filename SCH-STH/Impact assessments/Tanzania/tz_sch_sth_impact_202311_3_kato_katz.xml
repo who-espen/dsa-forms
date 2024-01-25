@@ -215,7 +215,7 @@
       <bind calculate="position(..)" nodeset="/data/tz_k_202401_v2/C2" type="string"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../k_barcode_id ))" nodeset="/data/tz_k_202401_v2/C3" type="string"/>
       <bind nodeset="/data/tz_k_202401_v2/k_add_result" required="true()" type="select1"/>
-      <bind constraint="not(selected( ../C3 ,  ../k_barcode_id ))" jr:constraintMsg="jr:itext('/data/tz_k_202401_v2/k_barcode_id:jr:constraintMsg')" nodeset="/data/tz_k_202401_v2/k_barcode_id" relevant=" ../k_add_result  = 'Yes'" required="true()" type="barcode" db_get="col_5" db_filter_by_col_4="/data/k_site_id"/>
+      <bind constraint="not(selected( ../C3 ,  ../k_barcode_id ))" jr:constraintMsg="jr:itext('/data/tz_k_202401_v2/k_barcode_id:jr:constraintMsg')" nodeset="/data/tz_k_202401_v2/k_barcode_id" relevant=" ../k_add_result  = 'Yes'" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/k_site_id"/>
       <bind nodeset="/data/tz_k_202401_v2/k_sch_man_sa" relevant=" ../k_add_result  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/tz_k_202401_v2/k_sch_man_sb" relevant=" ../k_add_result  = 'Yes'" required="true()" type="int"/>
       <bind calculate="( ../k_sch_man_sa  +  ../k_sch_man_sb ) *12" nodeset="/data/tz_k_202401_v2/k_sch_man_intensity" relevant=" ../k_add_result  = 'Yes'" type="string"/>
@@ -236,8 +236,8 @@
       <bind calculate="( ../k_trichuris_sa  +  ../k_trichuris_sb ) *12" nodeset="/data/tz_k_202401_v2/k_trichuris_intensity" relevant=" ../k_add_result  = 'Yes'" type="string"/>
       <bind calculate="if( ../k_trichuris_intensity &gt;= 400, 1, 0)" nodeset="/data/tz_k_202401_v2/k_trichuris_heavy_intensity" relevant=" ../k_add_result  = 'Yes'" type="string"/>
       <bind calculate="if( ../k_trichuris_intensity &gt;= 100 and  ../k_trichuris_intensity  &lt; 400, 1, 0)" nodeset="/data/tz_k_202401_v2/k_trichuris_moderate_intensity" relevant=" ../k_add_result  = 'Yes'" type="string"/>
-      <bind nodeset="/data/tz_k_202401_v2/k_sch_hae_sa" type="int"/>
-      <bind nodeset="/data/tz_k_202401_v2/k_sch_hae_sb" type="int"/>
+      <bind nodeset="/data/tz_k_202401_v2/k_sch_hae_sa" relevant=" ../k_add_result  = 'Yes'" type="int"/>
+      <bind nodeset="/data/tz_k_202401_v2/k_sch_hae_sb" relevant=" ../k_add_result  = 'Yes'" type="int"/>
       <bind nodeset="/data/tz_k_202401_v2/k_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/k_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/k_end" type="dateTime"/>
