@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Jan) - 1. SCH/STH – School/Location V2</h:title>
+    <h:title>(2024 Jan) - 1. SCH/STH – School/Location V3</h:title>
     <model>
 
       <instance>
-        <data id="tz_sch_sth_impact_202311_1_school_v2">
+        <data id="tz_sch_sth_impact_202311_1_school_v3">
           <w_recorder/>
           <w_region/>
           <w_district/>
@@ -157,7 +157,7 @@
             <value>128</value>
           </text>
           <text id="/data/w_head_teacher_consent:label">
-            <value>Je, mwalimu mkuu alitoa ridhaa yake kwa utafiti huu?</value>
+            <value>Je mwalimu mkuu/ kaimu alitoa ridhaa yake kwa utafiti huu?</value>
           </text>
           <text id="/data/w_site_id/207:label">
             <value>207</value>
@@ -607,7 +607,7 @@
             <value>Kilesha</value>
           </text>
           <text id="/data/w_head_teacher_contact:jr:constraintMsg">
-            <value>Tafadhali weka nambari ya simu halali</value>
+            <value>Tafadhari ingiza namba sahihi yenye tarakimu 10</value>
           </text>
           <text id="/data/w_ward/Maboga:label">
             <value>Maboga</value>
@@ -1175,6 +1175,9 @@
           </text>
           <text id="/data/w_site/Mandawa:label">
             <value>Mandawa</value>
+          </text>
+          <text id="/data/w_head_teacher_contact:hint">
+            <value>Ingiza namba ya simu ya mkononi ya mwalimu mf. 0778000000</value>
           </text>
           <text id="static_instance-site_id-149">
             <value>250</value>
@@ -3606,7 +3609,7 @@
             <value>128</value>
           </text>
           <text id="/data/w_head_teacher_consent:label">
-            <value>Does the head teacher gave his consent to this survey?</value>
+            <value>Did the head teacher/his or her representative give his consent to this survey?</value>
           </text>
           <text id="/data/w_site_id/207:label">
             <value>207</value>
@@ -4053,7 +4056,7 @@
             <value>Kilesha</value>
           </text>
           <text id="/data/w_head_teacher_contact:jr:constraintMsg">
-            <value>Please enter a number valid number phone</value>
+            <value>Enter correct number with 10 digits</value>
           </text>
           <text id="/data/w_ward/Maboga:label">
             <value>Maboga</value>
@@ -4624,6 +4627,9 @@
           </text>
           <text id="/data/w_site/Mandawa:label">
             <value>Mandawa</value>
+          </text>
+          <text id="/data/w_head_teacher_contact:hint">
+            <value>Enter phone number of headteacher example 0778000000</value>
           </text>
           <text id="static_instance-site_id-149">
             <value>250</value>
@@ -5700,7 +5706,7 @@
             <value>Mkinga</value>
           </text>
           <text id="/data/w_head_teacher_name:label">
-            <value>Head teacher name</value>
+            <value>Head teacher's name</value>
           </text>
           <text id="static_instance-site-103">
             <value>Mnima</value>
@@ -6117,7 +6123,7 @@
             <value>Molandi</value>
           </text>
           <text id="/data/w_head_teacher_contact:label">
-            <value>Head teacher contact</value>
+            <value>Head teacher's contact</value>
           </text>
           <text id="/data/w_site/Kwamagombe:label">
             <value>Kwamagombe</value>
@@ -9688,7 +9694,7 @@
       <bind nodeset="/data/w_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/w_head_teacher_consent" required="true()" type="select1"/>
       <bind nodeset="/data/w_head_teacher_name" required="true()" type="string"/>
-      <bind constraint="regex(., '^\+?[0-9]+$')" jr:constraintMsg="jr:itext('/data/w_head_teacher_contact:jr:constraintMsg')" nodeset="/data/w_head_teacher_contact" required="true()" type="string"/>
+      <bind constraint="regex(., '^[0-9]{9}$')" jr:constraintMsg="jr:itext('/data/w_head_teacher_contact:jr:constraintMsg')" nodeset="/data/w_head_teacher_contact" required="true()" type="string"/>
       <bind nodeset="/data/w_regi_class_IV" required="true()" type="int"/>
       <bind nodeset="/data/w_regi_class_V" required="true()" type="int"/>
       <bind nodeset="/data/w_regi_class_VI" required="true()" type="int"/>
@@ -9804,6 +9810,7 @@
     </input>
     <input ref="/data/w_head_teacher_contact">
       <label ref="jr:itext('/data/w_head_teacher_contact:label')"/>
+      <hint ref="jr:itext('/data/w_head_teacher_contact:hint')"/>
     </input>
     <input ref="/data/w_regi_class_IV">
       <label ref="jr:itext('/data/w_regi_class_IV:label')"/>
