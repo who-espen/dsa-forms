@@ -124,8 +124,8 @@
           <text id="/data/tz_202401_4/p_barcode_id:jr:constraintMsg">
             <value>Namba hii ya mtoto tayari ipo. Tafadhali hariri nambari ya mfuatano kutoka kwa swali lililotangulia</value>
           </text>
-          <text id="/data/tz_202401_4/p_water_play/Yes:label">
-            <value>Ndiyo</value>
+          <text id="/data/tz_202401_4/p_child_treat_pzq/Do not remember:label">
+            <value>Sikumbuki</value>
           </text>
           <text id="/data/tz_202401_4/p_water_fish/Yes:label">
             <value>Ndiyo</value>
@@ -144,9 +144,6 @@
           </text>
           <text id="/data/tz_202401_4/p_not_collected_stool/Child.refused.to.give.sample:label">
             <value>Mtoto alikataa kutoa sampuli</value>
-          </text>
-          <text id="/data/tz_202401_4/p_child_treat_pzq/Don't remember:label">
-            <value>Sikumbuki</value>
           </text>
           <text id="/data/tz_202401_4/p_water_play:label">
             <value>Je katika kipindi cha wiki iliyopita ulioga, kuogelea na kucheza katika mito, madimbwi au chemchem za maji zilizo karibu?</value>
@@ -190,11 +187,11 @@
           <text id="/data/tz_202401_4/p_consent:label">
             <value>Je mzazi au mwalimu mkuu amesaini hati ya ushiriki?</value>
           </text>
-          <text id="/data/tz_202401_4/p_child_treat_alb/Don't remember:label">
-            <value>Sikumbuki</value>
-          </text>
           <text id="/data/tz_202401_4:label">
             <value>Participants</value>
+          </text>
+          <text id="/data/tz_202401_4/p_child_treat_alb/Do not remember:label">
+            <value>Sikumbuki</value>
           </text>
           <text id="/data/tz_202401_4/p_assent:label">
             <value>Je mtoto amekubali kushiriki?</value>
@@ -246,6 +243,9 @@
           </text>
           <text id="/data/tz_202401_4/p_assent/Refused:label">
             <value>Alikataa</value>
+          </text>
+          <text id="/data/tz_202401_4/p_water_play/Yes:label">
+            <value>Ndiyo</value>
           </text>
         </translation>
         <translation lang="English">
@@ -321,8 +321,8 @@
           <text id="/data/tz_202401_4/p_barcode_id:jr:constraintMsg">
             <value>This child code already exists. Please edit the sequence number from the previous question</value>
           </text>
-          <text id="/data/tz_202401_4/p_water_play/Yes:label">
-            <value>Yes</value>
+          <text id="/data/tz_202401_4/p_child_treat_pzq/Do not remember:label">
+            <value>Don't remember</value>
           </text>
           <text id="/data/tz_202401_4/p_water_fish/Yes:label">
             <value>Yes</value>
@@ -341,9 +341,6 @@
           </text>
           <text id="/data/tz_202401_4/p_not_collected_stool/Child.refused.to.give.sample:label">
             <value>Child refused to give sample</value>
-          </text>
-          <text id="/data/tz_202401_4/p_child_treat_pzq/Don't remember:label">
-            <value>Don't remember</value>
           </text>
           <text id="/data/tz_202401_4/p_water_play:label">
             <value>Did you bathe, swim or play in nearby rivers, streams or ponds in the last week?</value>
@@ -387,11 +384,11 @@
           <text id="/data/tz_202401_4/p_consent:label">
             <value>Has the parents or guardians given consent?</value>
           </text>
-          <text id="/data/tz_202401_4/p_child_treat_alb/Don't remember:label">
-            <value>Don't remember</value>
-          </text>
           <text id="/data/tz_202401_4:label">
             <value>Participants</value>
+          </text>
+          <text id="/data/tz_202401_4/p_child_treat_alb/Do not remember:label">
+            <value>Don't remember</value>
           </text>
           <text id="/data/tz_202401_4/p_assent:label">
             <value>Has the child given assent?</value>
@@ -444,6 +441,9 @@
           <text id="/data/tz_202401_4/p_assent/Refused:label">
             <value>Refused</value>
           </text>
+          <text id="/data/tz_202401_4/p_water_play/Yes:label">
+            <value>Yes</value>
+          </text>
         </translation>
       </itext>
 
@@ -473,7 +473,7 @@
       <bind nodeset="/data/tz_202401_4/p_water_play" relevant=" ../p_assent  = 'Gave' and  ../p_collected_stool  = 'Yes' and  ../p_collected_urine  = 'Yes'" required="true()" type="select1"/>
       <bind nodeset="/data/tz_202401_4/p_water_fish" relevant=" ../p_assent  = 'Gave' and  ../p_collected_stool  = 'Yes' and  ../p_collected_urine  = 'Yes'" required="true()" type="select1"/>
       <bind nodeset="/data/tz_202401_4/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'Refused' or  ../p_assent  = 'Refused'" type="string"/>
-      <bind nodeset="/data/tz_202401_4/p_sample_note" readonly="true()" relevant=" ../p_collected_stool  = 'No' and  ../p_collected_urine  = 'No'" type="string"/>
+      <bind nodeset="/data/tz_202401_4/p_sample_note" readonly="true()" relevant=" ../p_collected_stool  = 'No' or  ../p_collected_urine  = 'No'" type="string"/>
       <bind nodeset="/data/tz_202401_4/p_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
@@ -632,8 +632,8 @@
             <value>No</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tz_202401_4/p_child_treat_pzq/Don't remember:label')"/>
-            <value>Don't remember</value>
+            <label ref="jr:itext('/data/tz_202401_4/p_child_treat_pzq/Do not remember:label')"/>
+            <value>Do not remember</value>
           </item>
         </select1>
         <select1 ref="/data/tz_202401_4/p_child_treat_alb">
@@ -647,8 +647,8 @@
             <value>No</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tz_202401_4/p_child_treat_alb/Don't remember:label')"/>
-            <value>Don't remember</value>
+            <label ref="jr:itext('/data/tz_202401_4/p_child_treat_alb/Do not remember:label')"/>
+            <value>Do not remember</value>
           </item>
         </select1>
         <select1 ref="/data/tz_202401_4/p_water_play">
