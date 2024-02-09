@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Fev) Nigeria - 2. TAS1 LF Participants Form - Jigawa</h:title>
+    <h:title>(2024 Fev) Nigeria - 2. TAS1 LF Participants Form - Jigawa V1</h:title>
     <model>
 
       <instance>
-        <data id="ng_lf_tas_202402_2_participant_jgw">
+        <data id="ng_lf_tas_202402_2_participant_jgw_v1">
           <p_recorder_id/>
           <p_district/>
           <p_cluster_name/>
@@ -111,10 +111,10 @@
       <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Yes'" required="true()" type="select1"/>
       <bind constraint=". &gt;= 5 and . &lt;= 15" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
-      <bind nodeset="/data/p_index" relevant=" /data/p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/p_index" type="int" relevant=" /data/p_consent  = 'Yes'" calculate="if( instance('__last-saved')/data/p_index !=null, instance('__last-saved')/data/p_index  + 1,1)" required="true()" readonly="true()"/>
       <bind calculate="concat( /data/p_recorder_id , '-',  /data/p_cluster_id , '-',  /data/p_index )" nodeset="/data/p_code_id" relevant=" /data/p_consent  = 'Yes'" required="true()" type="string" db_add_col_3="/data/p_cluster_id" db_add_col_4="."/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'No'" type="string"/>
-      <bind constraint="regex(., '^.{0,255}$')" jr:constraintMsg="jr:itext('/data/p_notes:jr:constraintMsg')" nodeset="/data/p_notes" type="string"/>
+      <bind constraint="regex(., '^.{0,255}$')" jr:constraintMsg="jr:itext('/data/p_notes:jr:constraintMsg')" nodeset="/data/p_notes" type="text"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>

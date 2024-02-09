@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Fev) Nigeria - 3. TAS1 LF FTS Results Form - Jigawa</h:title>
+    <h:title>(2024 Fev) Nigeria - 3. TAS1 LF FTS Results Form - Jigawa V1</h:title>
     <model>
 
       <instance>
-        <data id="ng_lf_tas_202402_3_resultat_fts_jgw">
+        <data id="ng_lf_tas_202402_3_resultat_fts_jgw_v1">
           <d_recorderID/>
           <d_district/>
           <d_cluster_name/>
@@ -200,9 +200,9 @@
       <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_eu"/>
       <bind constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_eu"/>
-      <bind calculate="join(' ',  /data/ng_fts_202402/d_code_id )" nodeset="/data/C1" type="string"/>
-      <bind calculate="position(..)" nodeset="/data/ng_fts_202402/C2" type="string"/>
-      <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../d_code_id ))" nodeset="/data/ng_fts_202402/C3" type="string"/>
+      <bind calculate="join(' ',  /data/ng_fts_202402/d_code_id )" nodeset="/data/C1" type="text"/>
+      <bind calculate="position(..)" nodeset="/data/ng_fts_202402/C2" type="text"/>
+      <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../d_code_id ))" nodeset="/data/ng_fts_202402/C3" type="text"/>
       <bind nodeset="/data/ng_fts_202402/d_add_results" required="true()" type="select1"/>
       <bind constraint="not(selected( ../C3 ,  ../d_code_id ))" jr:constraintMsg="jr:itext('/data/ng_fts_202402/d_code_id:jr:constraintMsg')" nodeset="/data/ng_fts_202402/d_code_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/d_eu"/>
       <bind nodeset="/data/ng_fts_202402/d_lotnumber1" required="true()" type="string"/>
@@ -228,7 +228,7 @@
  )
 )" nodeset="/data/ng_fts_202402/d_final_result" type="string"/>
       <bind nodeset="/data/ng_fts_202402/d_display_final_result" readonly="true()" type="string"/>
-      <bind nodeset="/data/ng_fts_202402/notes_part" type="string"/>
+      <bind nodeset="/data/ng_fts_202402/notes_part" type="text"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
