@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Jan 2024) 1. TAS1 FL - Formulário do site</h:title>
+    <h:title>(Fev 2024) 1. TAS1 FL - Formulário do site V2</h:title>
     <model>
 
       <instance>
-        <data id="gw_lf_tas1_202402_1_sites">
+        <data id="gw_lf_tas1_202402_1_sites_v2">
           <c_recorder/>
           <c_eu/>
           <c_district/>
@@ -1356,6 +1356,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="eu">
         <root>
           <item>
@@ -2427,7 +2428,7 @@
       <bind constraint=". &lt;=  /data/c_population " jr:constraintMsg="jr:itext('/data/c_present:jr:constraintMsg')" nodeset="/data/c_present" relevant=" /data/c_consent  = 'Sim'" required="false()" type="int"/>
       <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Sim'" required="true()" type="geopoint"/>
       <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'Nao'" type="string"/>
-      <bind nodeset="/data/c_ClusterNotes" type="string"/>
+      <bind nodeset="/data/c_ClusterNotes" type="text"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
