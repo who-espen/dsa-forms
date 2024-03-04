@@ -6,7 +6,7 @@ import zlib
 
 settings = {
   "general": {
-    "server_url": "https://submit.datastandard.co/espen/tanzania-espen",
+    "server_url": "https://submit.datastandard.co/espen/nigeria-espen-5",
     "username": "collect",
     "password": "espen47",
   },
@@ -18,13 +18,13 @@ settings = {
     # "admin_pw": "1325",
   },
   "project": {
-    "name": "Tanzania SCH/STH survey",
-    "icon": "E",
-    "color": "#0066ff"
+    "name": "Nigeria TAS1",
+    "icon": "G",
+    "color": "#ebc634"
   }
 }
 
 qr_data = b64encode(zlib.compress(json.dumps(settings).encode("utf-8")))
 
 code = segno.make(qr_data, micro=False)
-code.save('SCH-STH/Impact assessments/Tanzania/tanzania-settings.png', scale=5)
+code.save('LF/TAS/Nigeria/2024/nigeria-settings.png', scale=5)

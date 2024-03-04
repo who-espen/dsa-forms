@@ -6,19 +6,19 @@ import zlib
 
 settings = {
   "general": {
-    "server_url": "https://submit.datastandard.co/espen/tanzania-espen",
+    "server_url": "https://submit.datastandard.co/espen/burkina-faso-4",
     "username": "collect",
     "password": "espen47",
   },
   "admin": {
-   # "edit_saved": False,
+    "edit_saved": False,
     "send_finalized": True,
     "view_sent": True,
     #"delete_saved": False,
-    # "admin_pw": "1325",
+    "admin_pw": "1325",
   },
   "project": {
-    "name": "Tanzania SCH/STH survey",
+    "name": "Burkina Faso 4",
     "icon": "E",
     "color": "#0066ff"
   }
@@ -27,4 +27,4 @@ settings = {
 qr_data = b64encode(zlib.compress(json.dumps(settings).encode("utf-8")))
 
 code = segno.make(qr_data, micro=False)
-code.save('SCH-STH/Impact assessments/Tanzania/tanzania-settings.png', scale=5)
+code.save('LF/TAS/Burkina Faso/2024/jan/bf-settings.png', scale=5)
