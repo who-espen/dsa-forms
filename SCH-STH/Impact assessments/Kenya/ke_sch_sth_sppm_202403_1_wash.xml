@@ -3122,9 +3122,9 @@
       <bind nodeset="/data/w_note" readonly="true()" required="false()" type="string"/>
       <bind nodeset="/data/w_team" required="true()" type="select1"/>
       <bind nodeset="/data/w_team_Other" relevant=" /data/w_team  = 'Other'" required="true()" type="string"/>
-      <bind nodeset="/data/w_county" required="false()" type="select1"/>
-      <bind nodeset="/data/w_school" required="false()" type="select1"/>
-      <bind nodeset="/data/w_school_id" required="false()" type="select1"/>
+      <bind nodeset="/data/w_county" required="false()" type="select1" db_add_col_1="."/>
+      <bind nodeset="/data/w_school" required="false()" type="select1" db_add_col_1="/data/w_county" db_add_col_2="."/>
+      <bind nodeset="/data/w_school_id" required="false()" type="select1" db_add_col_2="/data/w_school" db_add_col_3="."/>
       <bind nodeset="/data/w_gps_school" required="true()" type="geopoint"/>
       <bind constraint=". &gt; 4000 and . &lt; 5000" jr:constraintMsg="jr:itext('/data/w_Village_ID:jr:constraintMsg')" nodeset="/data/w_Village_ID" required="true()" type="int"/>
       <bind constraint=". =  /data/w_Village_ID " jr:constraintMsg="jr:itext('/data/w_Village_ID_2:jr:constraintMsg')" nodeset="/data/w_Village_ID_2" required="true()" type="int"/>
@@ -3137,7 +3137,7 @@
       <bind calculate="if( ../w_id_type  = 'Scanner', concat( ../Child_ID_Survey_Barcode ) ,concat( ../Child_ID_Enter ))" nodeset="/data/ke_w_202403/w_code_id_calculate" type="string"/>
       <bind calculate="position(..)" nodeset="/data/ke_w_202403/C2" type="text"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../w_code_id ))" nodeset="/data/ke_w_202403/C3" type="text"/>
-      <bind calculate="concat( ../w_code_id_calculate )" constraint="not(selected( ../C3 ,  ../w_code_id ))" jr:constraintMsg="jr:itext('/data/ke_w_202403/w_code_id:jr:constraintMsg')" nodeset="/data/ke_w_202403/w_code_id" readonly="true()" required="true()" type="string"/>
+      <bind calculate="concat( ../w_code_id_calculate )" constraint="not(selected( ../C3 ,  ../w_code_id ))" jr:constraintMsg="jr:itext('/data/ke_w_202403/w_code_id:jr:constraintMsg')" nodeset="/data/ke_w_202403/w_code_id" readonly="true()" required="true()" type="string" db_add_col_3="/data/w_school_id" db_add_col_4="."/>
       <bind nodeset="/data/ke_w_202403/w_sex" required="true()" type="select1"/>
       <bind nodeset="/data/ke_w_202403/w_age_yrs" required="true()" type="select1"/>
       <bind nodeset="/data/ke_w_202403/SECTION_B_WASH_HOUSEHOLD_QUESTIONS" readonly="true()" required="false()" type="string"/>
