@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Mar) - 1. SCH/STH – Site</h:title>
+    <h:title>(2024 Mar) - 1. SCH/STH – Site V2</h:title>
     <model>
 
       <instance>
-        <data id="sn_sch_sth_impact_202403_1_site">
+        <data id="sn_sch_sth_impact_202403_1_site_v2">
           <w_recorder/>
           <site_note/>
           <w_district/>
@@ -1133,7 +1133,7 @@
             <value>NGNITH</value>
           </text>
           <text id="/data/w_site_code:label">
-            <value>5. Sélectionner le code de l'école</value>
+            <value>5. Sélectionner le code de l'école / Village</value>
           </text>
           <text id="static_instance-school_code_list-249">
             <value>350</value>
@@ -1334,7 +1334,7 @@
             <value>PS MBOSS</value>
           </text>
           <text id="/data/w_director_name:label">
-            <value>6. Prénoms et Noms du directeur</value>
+            <value>6. Prénoms et Noms du directeur / chef du village</value>
           </text>
           <text id="static_instance-subdistrict_list-62">
             <value>PS MANDE KEUR MIGNANE</value>
@@ -2492,7 +2492,7 @@
             <value>3. Sélectionner le Poste de santé</value>
           </text>
           <text id="/data/w_water_point_used:label">
-            <value>10. Ce point d'eau est-il fréquenté par les enfants</value>
+            <value>12. Ce point d'eau est-il fréquenté par les enfants</value>
           </text>
           <text id="/data/w_subdistrict/BANGO:label">
             <value>BANGO</value>
@@ -2951,7 +2951,7 @@
             <value>Non</value>
           </text>
           <text id="/data/w_remarks:label">
-            <value>12. Informations supplémentaires sur l'école</value>
+            <value>14. Informations supplémentaires sur l'école</value>
           </text>
           <text id="static_instance-source_place-1">
             <value>A plus de 15mn de marche aller-retour à partir de l école</value>
@@ -4667,7 +4667,7 @@
             <value>EE GHONIAME</value>
           </text>
           <text id="/data/w_site_name:label">
-            <value>4. Sélectionner le nom de l'école</value>
+            <value>4. Sélectionner le nom de l'école / Village</value>
           </text>
           <text id="/data/w_subdistrict/PS MANDE KEUR MIGNANE:label">
             <value>PS MANDE KEUR MIGNANE</value>
@@ -7562,7 +7562,7 @@
             <value>427</value>
           </text>
           <text id="/data/w_gps:label">
-            <value>11. Collectez les coordonnées GPS</value>
+            <value>13. Collectez les coordonnées GPS</value>
           </text>
           <text id="static_instance-school_code_list-328">
             <value>429</value>
@@ -13803,16 +13803,16 @@
       <bind nodeset="/data/w_source_place" relevant=" /data/w_source_exist  = 'Non' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/w_source_type2" relevant=" /data/w_source_exist  = 'Non' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/w_source_type2_other" relevant=" /data/w_source_exist  = 'Non' and  /data/w_source_type2  = 'Autre' and  /data/w_consent  = 'Oui'" required="true()" type="string"/>
-      <bind nodeset="/data/w_toilet" relevant=" /data/w_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/w_toilet_type" relevant=" /data/w_toilet  = 'Oui' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/w_toilet_clean" relevant=" /data/w_toilet  = 'Oui' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/w_washing_hand" relevant=" /data/w_toilet  = 'Oui' and  /data/w_toilet_clean  = 'Oui' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/w_soap" relevant=" /data/w_toilet  = 'Oui' and  /data/w_toilet_clean  = 'Oui' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/w_sanitizer" relevant=" /data/w_toilet  = 'Oui' and  /data/w_soap  = 'Non' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/w_flies_access_faeces" relevant=" /data/w_toilet  = 'Oui' and  /data/w_toilet_clean  = 'Non' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/w_washing_hand_2" relevant=" /data/w_toilet  = 'Oui' and  /data/w_toilet_clean  = 'Non' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/w_soaw_2" relevant=" /data/w_toilet  = 'Oui' and  /data/w_washing_hand_2  = 'Oui' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/w_sanitiser_2" relevant=" /data/w_toilet  = 'Oui' and  /data/w_soaw_2  = 'Non' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/w_toilet" relevant=" /data/w_consent  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/w_toilet_type" relevant=" /data/w_toilet  = 'Oui' and  /data/w_consent  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/w_toilet_clean" relevant=" /data/w_toilet  = 'Oui' and  /data/w_consent  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/w_washing_hand" relevant=" /data/w_toilet  = 'Oui' and  /data/w_toilet_clean  = 'Oui' and  /data/w_consent  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/w_soap" relevant=" /data/w_toilet  = 'Oui' and  /data/w_toilet_clean  = 'Oui' and  /data/w_consent  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/w_sanitizer" relevant=" /data/w_toilet  = 'Oui' and  /data/w_soap  = 'Non' and  /data/w_consent  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/w_flies_access_faeces" relevant=" /data/w_toilet  = 'Oui' and  /data/w_toilet_clean  = 'Non' and  /data/w_consent  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/w_washing_hand_2" relevant=" /data/w_toilet  = 'Oui' and  /data/w_toilet_clean  = 'Non' and  /data/w_consent  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/w_soaw_2" relevant=" /data/w_toilet  = 'Oui' and  /data/w_washing_hand_2  = 'Oui' and  /data/w_consent  = 'Oui'" type="select1"/>
+      <bind nodeset="/data/w_sanitiser_2" relevant=" /data/w_toilet  = 'Oui' and  /data/w_soaw_2  = 'Non' and  /data/w_consent  = 'Oui'" type="select1"/>
       <bind nodeset="/data/w_place_defecate" relevant=" /data/w_toilet  = 'Non' and  /data/w_consent  = 'Oui'" required="true()" type="select"/>
       <bind nodeset="/data/w_place_water_point" relevant=" /data/w_consent  = 'Oui' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/w_water_point_used" relevant=" /data/w_consent  = 'Oui' and  /data/w_consent  = 'Oui'" required="true()" type="select1"/>
