@@ -27,4 +27,4 @@ settings = {
 qr_data = b64encode(zlib.compress(json.dumps(settings).encode("utf-8")))
 
 code = segno.make(qr_data, micro=False)
-code.save('LF/TAS/Nigeria/2024/nigeria-settings.png', scale=5)
+code.save('LF/TAS/Nigeria/2024/fev_2024/nigeria-settings.png', scale=5)
