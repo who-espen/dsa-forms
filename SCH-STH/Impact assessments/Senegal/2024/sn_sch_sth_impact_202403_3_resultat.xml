@@ -231,7 +231,7 @@
           </text>
         </translation>
       </itext>
-
+      
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/r_recorder:jr:constraintMsg')" nodeset="/data/r_recorder" required="true()" type="string"/>
       <bind nodeset="/data/r_district" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/r_subdistrict" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/r_district"/>
@@ -248,7 +248,7 @@
       <bind nodeset="/data/sn_r_202403_v2/r_urine_vol" required="true()" type="int"/>
       <bind nodeset="/data/sn_r_202403_v2/r_sh_egp" required="true()" type="int"/>
       <bind calculate="( ../r_sh_egp *10) div  ../r_urine_vol " nodeset="/data/sn_r_202403_v2/r_sh_egr_10ml" readonly="true()" required="true()" type="int"/>
-      <bind nodeset="/data/sn_r_202403_v2/r_note2" readonly="true()" type="string"/>
+      <bind nodeset="/data/sn_r_202403_v2/r_note2" readonly="true()" relevant=" ../r_test  = 'Filtration d urine Uniquement'" type="string"/>
       <bind nodeset="/data/sn_r_202403_v2/r_sch_man_sa" relevant=" ../r_test  = 'Filtration d urine Uniquement'" required="true()" type="int"/>
       <bind nodeset="/data/sn_r_202403_v2/r_sch_man_sb" relevant=" ../r_test  = 'Filtration d urine Uniquement'" required="true()" type="int"/>
       <bind calculate="( ../r_sch_man_sa  +  ../r_sch_man_sb )*12" nodeset="/data/sn_r_202403_v2/r_sch_man_intensity" readonly="true()" relevant=" ../r_test  = 'Filtration d urine Uniquement'" required="true()" type="int"/>
