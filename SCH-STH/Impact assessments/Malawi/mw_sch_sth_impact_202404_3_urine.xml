@@ -14,8 +14,7 @@
         <data id="mw_sch_sth_impact_202404_3_urine">
           <u_recorder/>
           <u_district/>
-          <u_location/>
-          <u_school_name/>
+          <u_school/>
           <u_school_id/>
           <u_samples_batch/>
           <C1/>
@@ -45,9 +44,6 @@
           <text id="/data/mw_sch_sth_u_202404/u_code_id:jr:constraintMsg">
             <value>This child code already exists. Please edit the sequence number from the previous question</value>
           </text>
-          <text id="/data/mw_sch_sth_u_202404/u_dipstick/++:label">
-            <value>4 = ++</value>
-          </text>
           <text id="/data/u_recorder:jr:constraintMsg">
             <value>Must be two digit between 9 and 100</value>
           </text>
@@ -57,20 +53,20 @@
           <text id="/data/mw_sch_sth_u_202404/C3:label">
             <value>Child code</value>
           </text>
-          <text id="/data/mw_sch_sth_u_202404/u_dipstick/Trace haemolysed:label">
-            <value>2 = Trace haemolysed</value>
+          <text id="/data/mw_sch_sth_u_202404/u_dipstick/++:label">
+            <value>4 = ++</value>
           </text>
           <text id="/data/mw_sch_sth_u_202404/u_dipstick:label">
             <value>Dipstick result (micro-haematuria)</value>
+          </text>
+          <text id="/data/mw_sch_sth_u_202404/u_dipstick/Trace haemolysed:label">
+            <value>2 = Trace haemolysed</value>
           </text>
           <text id="/data/mw_sch_sth_u_202404/u_dipstick/Trace non-haemolysed:label">
             <value>1 = Trace non-haemolysed</value>
           </text>
           <text id="/data/mw_sch_sth_u_202404/u_dipstick/+++:label">
             <value>5 = +++</value>
-          </text>
-          <text id="/data/u_location:label">
-            <value>Select the location</value>
           </text>
           <text id="/data/C1:label">
             <value>How many samples were collected in this school?</value>
@@ -81,8 +77,8 @@
           <text id="/data/mw_sch_sth_u_202404:label">
             <value>Urine results</value>
           </text>
-          <text id="/data/u_school_name:label">
-            <value>Select school name</value>
+          <text id="/data/u_school:label">
+            <value>Select the school</value>
           </text>
           <text id="/data/mw_sch_sth_u_202404/C2:label">
             <value>Please inter the child sequence number</value>
@@ -134,15 +130,14 @@
 
       <bind constraint=". &gt; 9 and . &lt; 100" jr:constraintMsg="jr:itext('/data/u_recorder:jr:constraintMsg')" nodeset="/data/u_recorder" required="true()" type="int"/>
       <bind nodeset="/data/u_district" required="true()" type="string" db_get="col_1"/>
-      <bind nodeset="/data/u_location" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_district"/>
-      <bind nodeset="/data/u_school_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_location"/>
-      <bind nodeset="/data/u_school_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_school_name"/>
+      <bind nodeset="/data/u_school" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/u_district"/>
+      <bind nodeset="/data/u_school_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/u_school"/>
       <bind nodeset="/data/u_samples_batch" required="true()" type="string"/>
       <bind calculate="join(' ',  /data/mw_sch_sth_u_202404/u_code_id )" nodeset="/data/C1" type="string"/>
       <bind calculate="position(..)" nodeset="/data/mw_sch_sth_u_202404/C2" type="string"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../u_code_id ))" nodeset="/data/mw_sch_sth_u_202404/C3" type="string"/>
       <bind nodeset="/data/mw_sch_sth_u_202404/u_add_result" required="true()" type="select1"/>
-      <bind constraint="not(selected( ../C3 ,  ../u_code_id ))" jr:constraintMsg="jr:itext('/data/mw_sch_sth_u_202404/u_code_id:jr:constraintMsg')" nodeset="/data/mw_sch_sth_u_202404/u_code_id" relevant=" ../u_add_result  = 'Yes'" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/u_school_id"/>
+      <bind constraint="not(selected( ../C3 ,  ../u_code_id ))" jr:constraintMsg="jr:itext('/data/mw_sch_sth_u_202404/u_code_id:jr:constraintMsg')" nodeset="/data/mw_sch_sth_u_202404/u_code_id" relevant=" ../u_add_result  = 'Yes'" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_school_id"/>
       <bind nodeset="/data/mw_sch_sth_u_202404/u_dipstick" relevant=" ../u_add_result  = 'Yes'" required="true()" type="select1"/>
       <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/mw_sch_sth_u_202404/u_urine_vol:jr:constraintMsg')" nodeset="/data/mw_sch_sth_u_202404/u_urine_vol" relevant=" ../u_add_result  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/mw_sch_sth_u_202404/u_sh_egg" relevant=" ../u_add_result  = 'Yes'" required="true()" type="int"/>
@@ -163,11 +158,8 @@
     <input ref="/data/u_district">
       <label ref="jr:itext('/data/u_district:label')"/>
     </input>
-    <input ref="/data/u_location">
-      <label ref="jr:itext('/data/u_location:label')"/>
-    </input>
-    <input ref="/data/u_school_name">
-      <label ref="jr:itext('/data/u_school_name:label')"/>
+    <input ref="/data/u_school">
+      <label ref="jr:itext('/data/u_school:label')"/>
     </input>
     <input ref="/data/u_school_id">
       <label ref="jr:itext('/data/u_school_id:label')"/>
