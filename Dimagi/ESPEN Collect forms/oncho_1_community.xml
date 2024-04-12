@@ -90,7 +90,7 @@
       <bind nodeset="/data/duplicate_confirmation" required="true()" type="select1"/>
       <bind nodeset="/data/r_Date" required="true()" type="date"/>
       <bind nodeset="/data/r_CommunityAccessibility" required="true()" type="select1"/>
-      <bind nodeset="/data/r_InaccessibleReason" required="true()" type="string"/>
+      <bind nodeset="/data/r_InaccessibleReason" relevant=" /data/r_CommunityAccessibility  = 'No'" required="true()" type="string"/>
       <bind nodeset="/data/r_GPSCommunity" required="true()" type="geopoint"/>
       <bind nodeset="/data/r_remarks" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_Start" type="dateTime"/>
