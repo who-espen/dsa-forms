@@ -18,7 +18,7 @@ settings = {
     # "admin_pw": "1325",
   },
   "project": {
-    "name": "Demo",
+    "name": "Demo ONCHO",
     "icon": "D",
     "color": "#0066ff"
   }

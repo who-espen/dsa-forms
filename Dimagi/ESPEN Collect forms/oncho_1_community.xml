@@ -7,15 +7,16 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>1. Community Registration Form</h:title>
+    <h:title>1. Community Registration Form V2</h:title>
     <model>
 
       <instance>
-        <data id="oncho_1_community">
+        <data id="oncho_1_community_v2">
           <r_RecorderID/>
           <r_State/>
           <r_LGA/>
           <r_CommunityName/>
+          <r_site_id/>
           <duplicate_confirmation/>
           <r_Date/>
           <r_CommunityAccessibility/>
@@ -49,6 +50,9 @@
           </text>
           <text id="/data/duplicate_confirmation:label">
             <value>The community you just entered detail on may have already been registered. Please exit the form and check the case list to confirm it has not already been registered. If you've already completed that check select 'Yes' to proceed.</value>
+          </text>
+          <text id="/data/r_site_id:label">
+            <value>Site ID</value>
           </text>
           <text id="/data/r_GPSCommunity:hint">
             <value>Works best outside of buildings</value>
@@ -87,6 +91,7 @@
       <bind nodeset="/data/r_State" required="true()" type="string" db_add_col_1="."/>
       <bind nodeset="/data/r_LGA" required="true()" type="string" db_add_col_1="/data/r_State" db_add_col_2="."/>
       <bind nodeset="/data/r_CommunityName" required="true()" type="string" db_add_col_2="/data/r_LGA" db_add_col_3="."/>
+      <bind nodeset="/data/r_site_id" required="true()" type="string" db_add_col_3="/data/r_CommunityName" db_add_col_4="."/>
       <bind nodeset="/data/duplicate_confirmation" required="true()" type="select1"/>
       <bind nodeset="/data/r_Date" required="true()" type="date"/>
       <bind nodeset="/data/r_CommunityAccessibility" required="true()" type="select1"/>
@@ -111,6 +116,9 @@
     </input>
     <input ref="/data/r_CommunityName">
       <label ref="jr:itext('/data/r_CommunityName:label')"/>
+    </input>
+    <input ref="/data/r_site_id">
+      <label ref="jr:itext('/data/r_site_id:label')"/>
     </input>
     <select1 ref="/data/duplicate_confirmation">
       <label ref="jr:itext('/data/duplicate_confirmation:label')"/>
