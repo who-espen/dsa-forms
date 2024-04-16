@@ -10,45 +10,45 @@
     <h:title>(BF - Apr 2024) Pré TAS FL - 2. Formulaire Enrôlement V2.1</h:title>
     <model>
 
-      <instance>
-        <data id="bf_lf_pretas_202404_2_Enrolement_v2_1">
-          <p_recorder_id/>
-          <p_district/>
-          <p_formation_sanitaire/>
-          <p_cluster_name/>
-          <p_cluster_id/>
-          <p_consent/>
-          <p_id_method/>
-          <p_barcode_id/>
-          <p_code_id/>
-          <p_code_id2/>
-          <p_Numero_famille/>
-          <p_Numero_Enquete/>
-          <p_Numero_Enquete_complet/>
-          <p_age_yrs/>
-          <p_sex/>
-          <p_ancien_positif/>
-          <p_scolarisation/>
-          <p_profession/>
-          <p_dormi_sous_moustiquaire/>
-          <p_annee_vecu_dans_village/>
-          <p_mois_vecu_dans_village/>
-          <p_deja_ete_traiter_par_ivm_alb/>
-          <p_nb_fois_ivm_alb/>
-          <p_raison_non_traitement/>
-          <p_migration/>
-          <p_migration_autre/>
-          <p_lymphoedeme/>
-          <p_hydrocele/>
-          <p_ending_survey_note/>
-          <p_commentaires/>
-          <p_start/>
-          <p_end/>
-          <meta>
-            <instanceID/>
-          </meta>
-        </data>
-      </instance>
+    <instance>
+      <data id="bf_lf_pretas_202404_2_Enrolement_v2_1">
+        <p_recorder_id/>
+        <p_district/>
+        <p_formation_sanitaire/>
+        <p_cluster_name/>
+        <p_cluster_id/>
+        <p_consent/>
+        <p_id_method/>
+        <p_barcode_id/>
+        <p_code_id/>
+        <p_code_id2/>
+        <p_Numero_famille/>
+        <p_Numero_Enquete/>
+        <p_Numero_Enquete_complet/>
+        <p_age_yrs/>
+        <p_sex/>
+        <p_ancien_positif/>
+        <p_scolarisation/>
+        <p_profession/>
+        <p_dormi_sous_moustiquaire/>
+        <p_annee_vecu_dans_village/>
+        <p_mois_vecu_dans_village/>
+        <p_deja_ete_traiter_par_ivm_alb/>
+        <p_nb_fois_ivm_alb/>
+        <p_raison_non_traitement/>
+        <p_migration/>
+        <p_migration_autre/>
+        <p_lymphoedeme/>
+        <p_hydrocele/>
+        <p_ending_survey_note/>
+        <p_commentaires/>
+        <p_start/>
+        <p_end/>
+        <meta>
+          <instanceID/>
+        </meta>
+      </data>
+    </instance>
 
       <itext>
         <translation default="true()" lang="French">
@@ -65,7 +65,7 @@
             <value>Doit être entre 6 et 11 inclus</value>
           </text>
           <text id="/data/p_migration:label">
-            <value>p_migration (personnes entrée il y a moins 5 ans d'un pays voisin ou autre localités)</value>
+            <value>Migration (personnes entrée il y a moins 5 ans d'un pays voisin ou autre localités)</value>
           </text>
           <text id="/data/p_annee_vecu_dans_village:jr:constraintMsg">
             <value>Ne dois pas être supérieure à l'âge</value>
@@ -352,7 +352,7 @@
     <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_annee_vecu_dans_village:jr:constraintMsg')" nodeset="/data/p_annee_vecu_dans_village" relevant=" /data/p_consent  = '1_oui'" required="true()" type="int"/>
     <bind constraint=". &gt;= 6 and . &lt;= 11" jr:constraintMsg="jr:itext('/data/p_mois_vecu_dans_village:jr:constraintMsg')" nodeset="/data/p_mois_vecu_dans_village" relevant=" /data/p_consent  = '1_oui' and  /data/p_annee_vecu_dans_village  = 0" required="true()" type="int"/>
     <bind nodeset="/data/p_deja_ete_traiter_par_ivm_alb" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
-    <bind nodeset="/data/p_nb_fois_ivm_alb" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_nb_fois_ivm_alb" relevant=" /data/p_deja_ete_traiter_par_ivm_alb ='1_oui' and  /data/p_consent  = '1_oui'" required="true()" type="select1"/>
     <bind nodeset="/data/p_raison_non_traitement" relevant=" /data/p_deja_ete_traiter_par_ivm_alb ='2_non' and  /data/p_consent  = '1_oui'" required="true()" type="select1"/>
     <bind nodeset="/data/p_migration" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
     <bind nodeset="/data/p_migration_autre" relevant=" /data/p_migration ='13_autre_pays' and  /data/p_consent  = '1_oui'" type="string"/>
