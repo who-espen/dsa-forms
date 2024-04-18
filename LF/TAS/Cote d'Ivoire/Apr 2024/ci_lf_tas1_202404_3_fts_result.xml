@@ -7,19 +7,17 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Avr) 3. TAS1 FL - Résultat FTS</h:title>
+    <h:title>(2024 Avr) 3. TAS1 &amp; 2 FL - Résultat FTS V2</h:title>
     <model>
 
       <instance>
-        <data id="ci_lf_tas1_202404_3_fts_result">
+        <data id="ci_lf_tas1_202404_3_fts_result_v2">
           <d_recorderID/>
           <d_eu_name/>
           <d_district/>
           <d_district_id/>
           <d_cluster_name/>
           <d_cluster_id/>
-          <d_cluster_name2/>
-          <d_cluster_id2/>
           <d_num/>
           <d_code_id/>
           <d_sex/>
@@ -126,8 +124,8 @@
           <text id="/data/d_why_Invalid2/Difficulte.de.migration.d.echantillon:label">
             <value>Difficulté de migration d'échantillon</value>
           </text>
-          <text id="/data/d_num:hint">
-            <value>Doit être compris entre 1 et 410</value>
+          <text id="/data/d_result1:hint">
+            <value>Invalide comprend des erreurs de test et un sang insuffisant</value>
           </text>
           <text id="/data/d_image_1:label">
             <value>Veuillez capturer l'image du test positif</value>
@@ -147,14 +145,11 @@
           <text id="/data/d_result1/Positif:label">
             <value>Positif</value>
           </text>
-          <text id="/data/d_cluster_name2:label">
-            <value>Sélectionner votre école</value>
-          </text>
           <text id="/data/d_why_invalid_other2:label">
             <value>Donnez la raison du test invalide</value>
           </text>
-          <text id="/data/d_result1:hint">
-            <value>Invalide comprend des erreurs de test et un sang insuffisant</value>
+          <text id="/data/d_num:hint">
+            <value>Doit être compris entre 1 et 410</value>
           </text>
           <text id="/data/d_why_invalid1/Trace.de.sang.persiste.(sang.reste.sur.la.bandelette/a.obscurci.les.lignes):label">
             <value>Trace de sang persiste (sang resté sur la bandelette/a obscurci les lignes)</value>
@@ -164,9 +159,6 @@
           </text>
           <text id="/data/d_image_2:label">
             <value>Veuillez capturer l'image du test positif</value>
-          </text>
-          <text id="/data/d_cluster_id2:label">
-            <value>Sélectionner le code de votre école</value>
           </text>
           <text id="/data/d_age_yrs:jr:constraintMsg">
             <value>L'age doit être compris entre 5 et 9 ans</value>
@@ -231,12 +223,10 @@
       <bind nodeset="/data/d_eu_name" required="true()" type="string" db_get="col_1"/>
       <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_eu_name"/>
       <bind nodeset="/data/d_district_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_district"/>
-      <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_2="/data/d_district"/>
-      <bind constraint=". &gt; 999 and .&lt; 10000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" relevant=" /data/d_cluster_name != 'Autre'" required="true()" type="string" db_get="col_5" db_filter_by_col_3="/data/d_cluster_name"/>
-      <bind nodeset="/data/d_cluster_name2" relevant=" /data/d_cluster_name  = 'Autre'" required="true()" type="string" db_get="col_6" db_filter_by_col_2="/data/d_district"/>
-      <bind nodeset="/data/d_cluster_id2" relevant=" /data/d_cluster_name  = 'Autre'" required="true()" type="string" db_get="col_7" db_filter_by_col_3="/data/d_cluster_name"/>
+      <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/d_district_id"/>
+      <bind constraint=". &gt; 999 and .&lt; 10000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_cluster_name"/>
       <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
-      <bind calculate="if( /data/d_cluster_name  = 'Autre', concat( /data/d_district_id , '-',  /data/d_cluster_id2 , '-' , /data/d_num ), concat( /data/d_district_id , '-',  /data/d_cluster_id , '-' , /data/d_num ))" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
+      <bind calculate="concat( /data/d_district_id , '-',  /data/d_cluster_id , '-' , /data/d_num )" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/d_sex" required="true()" type="select1"/>
       <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/d_age_yrs:jr:constraintMsg')" nodeset="/data/d_age_yrs" required="true()" type="int"/>
       <bind nodeset="/data/d_lotnumber1" required="true()" type="string"/>
@@ -291,12 +281,6 @@
     <input ref="/data/d_cluster_id">
       <label ref="jr:itext('/data/d_cluster_id:label')"/>
       <hint ref="jr:itext('/data/d_cluster_id:hint')"/>
-    </input>
-    <input ref="/data/d_cluster_name2">
-      <label ref="jr:itext('/data/d_cluster_name2:label')"/>
-    </input>
-    <input ref="/data/d_cluster_id2">
-      <label ref="jr:itext('/data/d_cluster_id2:label')"/>
     </input>
     <input ref="/data/d_num">
       <label ref="jr:itext('/data/d_num:label')"/>

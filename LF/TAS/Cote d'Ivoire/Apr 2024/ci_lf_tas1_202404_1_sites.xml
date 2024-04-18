@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <h:html xmlns="http://www.w3.org/2002/xforms"
   xmlns:ev="http://www.w3.org/2001/xml-events"
   xmlns:h="http://www.w3.org/1999/xhtml"
@@ -16229,7 +16229,7 @@
             <value>1656</value>
           </text>
           <text id="/data/c_cluster_name:label">
-            <value>Nom de l'école</value>
+            <value>Ecole sélectionnée</value>
           </text>
           <text id="/data/c_cluster_id2/2779:label">
             <value>2779</value>
@@ -19772,7 +19772,7 @@
             <value>1121</value>
           </text>
           <text id="/data/c_cluster_id:label">
-            <value>Nom du site</value>
+            <value>Code de l'école sélectionnée</value>
           </text>
           <text id="/data/c_cluster_name1/EPP YOHOUDA 2:label">
             <value>EPP YOHOUDA 2</value>
@@ -42548,8 +42548,8 @@
       <bind constraint=". &gt; 999 and .&lt; 10000" jr:constraintMsg="jr:itext('/data/c_cluster_id1:jr:constraintMsg')" nodeset="/data/c_cluster_id1" relevant=" /data/c_cluster_name1 != 'Autre'" required="true()" type="select1"/>
       <bind nodeset="/data/c_cluster_name2" relevant=" /data/c_cluster_name1  = 'Autre'" required="true()" type="select1"/>
       <bind nodeset="/data/c_cluster_id2" relevant=" /data/c_cluster_name1  = 'Autre'" required="true()" type="select1"/>
-      <bind calculate="if( /data/c_cluster_name1  = 'Autre', concat( /data/c_cluster_name2 ), concat( /data/c_cluster_name1 ))" nodeset="/data/c_cluster_name" type="string" db_add_col_2="/data/c_district" db_add_col_4="."/>
-      <bind calculate="if( /data/c_cluster_name1  = 'Autre', concat( /data/c_cluster_id1 ), concat( /data/c_cluster_id1 ))" nodeset="/data/c_cluster_id" type="string" db_add_col_4="/data/c_cluster_name" db_add_col_5="."/>
+      <bind calculate="if( /data/c_cluster_name1  = 'Autre', concat( /data/c_cluster_name2 ), concat( /data/c_cluster_name1 ))" nodeset="/data/c_cluster_name" readonly="true()" type="string" db_add_col_3="/data/c_district_id" db_add_col_4="."/>
+      <bind calculate="if( /data/c_cluster_name1  = 'Autre', concat( /data/c_cluster_id2 ), concat( /data/c_cluster_id1 ))" nodeset="/data/c_cluster_id" readonly="true()" type="string" db_add_col_4="/data/c_cluster_name" db_add_col_5="."/>
       <bind nodeset="/data/c_cluster_leader_name" required="true()" type="string"/>
       <bind nodeset="/data/c_consent" required="true()" type="select1"/>
       <bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Yes'" required="false()" type="int"/>
@@ -42721,6 +42721,12 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
+    <input ref="/data/c_cluster_name">
+      <label ref="jr:itext('/data/c_cluster_name:label')"/>
+    </input>
+    <input ref="/data/c_cluster_id">
+      <label ref="jr:itext('/data/c_cluster_id:label')"/>
+    </input>
     <input ref="/data/c_cluster_leader_name">
       <label ref="jr:itext('/data/c_cluster_leader_name:label')"/>
     </input>
