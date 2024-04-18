@@ -1120,7 +1120,7 @@
       <bind nodeset="/data/c_receiving_ivm" required="true()" type="select1"/>
       <bind nodeset="/data/c_lengh_period_ivm" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/c_month_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="select1"/>
-      <bind constraint=". &gt; 1970 and . &lt; 2022" jr:constraintMsg="jr:itext('/data/c_year_dist:jr:constraintMsg')" nodeset="/data/c_year_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &gt; 1970 and . &lt;= 2024" jr:constraintMsg="jr:itext('/data/c_year_dist:jr:constraintMsg')" nodeset="/data/c_year_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="int"/>
       <bind calculate="concat(B19,' ',B20)" nodeset="/data/c_last_dist" required="true()" type="string"/>
       <bind nodeset="/data/c_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
