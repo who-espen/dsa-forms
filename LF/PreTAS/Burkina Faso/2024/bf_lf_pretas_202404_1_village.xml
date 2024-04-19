@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(BF - Apr 2024) Pré TAS FL - 1. Formulaire Village V2</h:title>
+    <h:title>(BF - Apr 2024) Pré TAS FL - 1. Formulaire Village V2.1</h:title>
     <model>
 
       <instance>
-        <data id="bf_lf_pretas_202404_1_village_v2">
+        <data id="bf_lf_pretas_202404_1_village_v2_1">
           <c_recorder/>
           <c_drs/>
           <c_district/>
@@ -112,6 +112,9 @@
           <text id="/data/c_recorder:label">
             <value>Code opérateurs</value>
           </text>
+          <text id="/data/c_recorder/EN11:label">
+            <value>EN11</value>
+          </text>
           <text id="static_instance-ds_list-1">
             <value>Ouargaye</value>
           </text>
@@ -150,6 +153,9 @@
           </text>
           <text id="/data/c_recorder/EN05:label">
             <value>EN05</value>
+          </text>
+          <text id="static_instance-operateur-8">
+            <value>EN09</value>
           </text>
           <text id="/data/c_cluster_name/Vaongho:label">
             <value>Vaongho</value>
@@ -205,6 +211,15 @@
           <text id="/data/c_cluster_name/Yeoghin:label">
             <value>Yeoghin</value>
           </text>
+          <text id="/data/c_recorder/EN12:label">
+            <value>EN12</value>
+          </text>
+          <text id="static_instance-operateur-10">
+            <value>EN11</value>
+          </text>
+          <text id="static_instance-operateur-11">
+            <value>EN12</value>
+          </text>
           <text id="/data/c_site_type/Site de contrôle ponctuel:label">
             <value>Site de contrôle ponctuel</value>
           </text>
@@ -217,11 +232,17 @@
           <text id="/data/c_cluster_id1/OAR:label">
             <value>OAR</value>
           </text>
+          <text id="/data/c_couverture_tdm_2024:hint">
+            <value>La valeur saisie doit être en décimal à 2 chiffres après la virgule</value>
+          </text>
           <text id="/data/c_gps:label">
             <value>GPS</value>
           </text>
           <text id="/data/c_population:label">
             <value>Population 2024</value>
+          </text>
+          <text id="/data/c_recorder/EN09:label">
+            <value>EN09</value>
           </text>
           <text id="/data/c_formation_sanitaire:label">
             <value>Formation sanitaire</value>
@@ -238,8 +259,8 @@
           <text id="/data/c_formation_sanitaire/Salembore:label">
             <value>Salembore</value>
           </text>
-          <text id="/data/c_couverture_tdm_2024:hint">
-            <value>La valeur saisie doit être en décimal à 2 chiffres après la virgule</value>
+          <text id="/data/c_recorder/EN10:label">
+            <value>EN10</value>
           </text>
           <text id="/data/c_cluster_id1/KOH:label">
             <value>KOH</value>
@@ -279,6 +300,9 @@
           </text>
           <text id="static_instance-control_list-8">
             <value>Niorgho</value>
+          </text>
+          <text id="static_instance-operateur-9">
+            <value>EN10</value>
           </text>
           <text id="/data/c_cluster_id1:label">
             <value>Code du site</value>
@@ -330,7 +354,6 @@
           </text>
         </translation>
       </itext>
-
       <instance id="drs_list">
         <root>
           <item>
@@ -534,6 +557,22 @@
             <itextId>static_instance-operateur-7</itextId>
             <name>EN08</name>
           </item>
+          <item>
+            <itextId>static_instance-operateur-8</itextId>
+            <name>EN09</name>
+          </item>
+          <item>
+            <itextId>static_instance-operateur-9</itextId>
+            <name>EN10</name>
+          </item>
+          <item>
+            <itextId>static_instance-operateur-10</itextId>
+            <name>EN11</name>
+          </item>
+          <item>
+            <itextId>static_instance-operateur-11</itextId>
+            <name>EN12</name>
+          </item>
         </root>
       </instance>
       <instance id="sentinel_Type_list">
@@ -607,6 +646,22 @@
       <item>
         <label ref="jr:itext('/data/c_recorder/EN08:label')"/>
         <value>EN08</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN09:label')"/>
+        <value>EN09</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN10:label')"/>
+        <value>EN10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN11:label')"/>
+        <value>EN11</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_recorder/EN12:label')"/>
+        <value>EN12</value>
       </item>
     </select1>
     <select1 ref="/data/c_drs">
