@@ -36,6 +36,7 @@
           <river_characteristics/>
           <r_Notes/>
           <summary/>
+          <confirm_summary/>
           <r_Start/>
           <r_End/>
           <meta>
@@ -51,6 +52,9 @@
           </text>
           <text id="/data/r_LarvaeRate/More than 50:label">
             <value>More than 50</value>
+          </text>
+          <text id="/data/r_PossibleProspection/Yes:label">
+            <value>Yes</value>
           </text>
           <text id="/data/photo_3:label">
             <value>Please capture the third photo of the river bed</value>
@@ -101,7 +105,7 @@
             <value>What are the characteristics of the river? Please choose as many as apply.</value>
           </text>
           <text id="/data/ph_water:label">
-            <value>What is the ph of the water?</value>
+            <value>What is the PH of the water?</value>
           </text>
           <text id="/data/r_ReasonNoProspection/River not flowing:label">
             <value>River not flowing</value>
@@ -142,8 +146,14 @@
           <text id="/data/r_PossibleProspection/No:label">
             <value>No</value>
           </text>
+          <text id="/data/confirm_summary/No:label">
+            <value>No</value>
+          </text>
           <text id="/data/r_AdultRate/More than 50:label">
             <value>More than 50</value>
+          </text>
+          <text id="/data/confirm_summary:jr:constraintMsg">
+            <value>Please go back and review your answers before proceeding</value>
           </text>
           <text id="/data/r_CommunityName:label">
             <value>Select Site Name</value>
@@ -158,7 +168,7 @@
             <value>At time of inspection did site provide evidence of larvae</value>
           </text>
           <text id="/data/r_Notes:label">
-            <value>Additional notes to add ? e.g. rivre muddy/sand, pollution type, human activity, forested /shrub/ farming area.</value>
+            <value>Additional notes to add ? e.g. river muddy/sand, pollution type, human activity, forested /shrub/ farming area.</value>
           </text>
           <text id="/data/site_id:label">
             <value>Select Site ID</value>
@@ -199,8 +209,23 @@ River Characteristics: **<output value=" /data/river_characteristics "/>
   <text id="/data/r_AdultRate:label">
     <value>Please rate adult black fly abundance as few, some, or many</value>
   </text>
+  <text id="/data/river_characteristics:jr:constraintMsg">
+    <value>###Warning
+
+You cannot select two contradictory/opposite characteristics.
+For example,
+
+You cannot choose both "River Rapids" and "River Calm," as they represent opposite conditions.
+
+"No water" cannot be selected with "River Flooded,"
+
+"Vegetation/Substrate Present" cannot be chosen alongside "Vegetation/Trailing Present.""</value>
+  </text>
   <text id="/data/r_SiteSuitable:label">
     <value>At time of inspection did site appear suitable for black fly breeding</value>
+  </text>
+  <text id="/data/confirm_summary/Yes:label">
+    <value>Yes</value>
   </text>
   <text id="/data/r_ReasonNoProspection/Insecurity:label">
     <value>Insecurity</value>
@@ -214,8 +239,11 @@ River Characteristics: **<output value=" /data/river_characteristics "/>
   <text id="/data/river_characteristics/Rocky./.Rocks.Present:label">
     <value>Rocky / Rocks Present</value>
   </text>
-  <text id="/data/r_PossibleProspection/Yes:label">
-    <value>Yes</value>
+  <text id="/data/ph_water:jr:constraintMsg">
+    <value>The PH must be between 0 and 10</value>
+  </text>
+  <text id="/data/confirm_summary:label">
+    <value>Please confirm the details summarised are correct</value>
   </text>
   <text id="/data/r_ReasonNoProspection:label">
     <value>Why is it not possible to prospect the river?</value>
@@ -224,9 +252,9 @@ River Characteristics: **<output value=" /data/river_characteristics "/>
 </itext>
 
 <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/r_RecorderID:jr:constraintMsg')" nodeset="/data/r_RecorderID" required="true()" type="int"/>
-<bind nodeset="/data/r_LGA" required="true()" type="string"  db_get="col_2"/>
+<bind nodeset="/data/r_LGA" required="true()" type="string" db_get="col_2"/>
 <bind nodeset="/data/r_CommunityName" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/r_LGA"/>
-<bind nodeset="/data/site_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/r_CommunityName"/>
+<bind nodeset="/data/site_id" required="true()" type="string"/>
 <bind nodeset="/data/r_RiverName" required="true()" type="string"/>
 <bind nodeset="/data/r_RiverBasin" required="true()" type="string"/>
 <bind nodeset="/data/r_Date" required="true()" type="date"/>
@@ -234,7 +262,7 @@ River Characteristics: **<output value=" /data/river_characteristics "/>
 <bind nodeset="/data/r_PossibleProspection" required="true()" type="select1"/>
 <bind nodeset="/data/r_ReasonNoProspection" relevant=" /data/r_PossibleProspection  = 'No'" required="true()" type="select1"/>
 <bind nodeset="/data/r_ReasonNoProspection_other" relevant=" /data/r_ReasonNoProspection  = 'Other'" required="true()" type="string"/>
-<bind nodeset="/data/ph_water" required="true()" type="decimal"/>
+<bind constraint=". &gt;= 0 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/ph_water:jr:constraintMsg')" nodeset="/data/ph_water" required="true()" type="decimal"/>
 <bind nodeset="/data/r_SiteSuitable" required="true()" type="select1"/>
 <bind nodeset="/data/r_EvidenceOfLarvae" required="true()" type="select1"/>
 <bind nodeset="/data/r_LarvaeRate" relevant=" /data/r_EvidenceOfLarvae  = 'Yes'" required="true()" type="select1"/>
@@ -244,9 +272,26 @@ River Characteristics: **<output value=" /data/river_characteristics "/>
 <bind nodeset="/data/photo_1" type="binary"/>
 <bind nodeset="/data/photo_2" type="binary"/>
 <bind nodeset="/data/photo_3" type="binary"/>
-<bind nodeset="/data/river_characteristics" required="true()" type="select"/>
+<bind constraint="if(
+ selected( /data/river_characteristics , 'River.rapids/fast.flow') and
+ (selected( /data/river_characteristics , 'River.Calm/Slow.Flow') or
+ selected( /data/river_characteristics , 'No.Water')),
+ false(), true()) and
+
+if(selected( /data/river_characteristics , 'River.Calm/Slow.Flow') and
+ selected( /data/river_characteristics , 'No.Water'), false(), true()) and
+
+if(selected( /data/river_characteristics , 'River.Calm/Slow.Flow') and
+ selected( /data/river_characteristics , 'River.Flooded'), false(), true()) and
+
+if(selected( /data/river_characteristics , 'No.Water') and
+ selected( /data/river_characteristics , 'River.Flooded'), false(), true()) and
+
+if(selected( /data/river_characteristics , 'Vegetation/Substrate.Present') and
+ selected( /data/river_characteristics , 'Vegetation/Trailing.Present'), false(), true())" jr:constraintMsg="jr:itext('/data/river_characteristics:jr:constraintMsg')" nodeset="/data/river_characteristics" required="true()" type="select"/>
 <bind nodeset="/data/r_Notes" type="string"/>
 <bind nodeset="/data/summary" readonly="true()" type="string"/>
+<bind constraint=". = 'Yes'" jr:constraintMsg="jr:itext('/data/confirm_summary:jr:constraintMsg')" nodeset="/data/confirm_summary" type="select1"/>
 <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_Start" type="dateTime"/>
 <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/r_End" type="dateTime"/>
 <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
@@ -434,5 +479,16 @@ River Characteristics: **<output value=" /data/river_characteristics "/>
 <input ref="/data/summary">
 <label ref="jr:itext('/data/summary:label')"/>
 </input>
+<select1 ref="/data/confirm_summary">
+<label ref="jr:itext('/data/confirm_summary:label')"/>
+<item>
+<label ref="jr:itext('/data/confirm_summary/Yes:label')"/>
+<value>Yes</value>
+</item>
+<item>
+<label ref="jr:itext('/data/confirm_summary/No:label')"/>
+<value>No</value>
+</item>
+</select1>
 </h:body>
 </h:html>
