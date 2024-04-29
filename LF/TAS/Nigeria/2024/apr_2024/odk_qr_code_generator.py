@@ -6,7 +6,7 @@ import zlib
 
 settings = {
   "general": {
-    "server_url": "https://submit.datastandard.co/espen/nigeria-espen-5",
+    "server_url": "https://submit.datastandard.co/espen/nigeria-espen-6",
     "username": "collect",
     "password": "espen47",
   },
