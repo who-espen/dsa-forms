@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Avr) - 1. SCH/STH – Ecole/Localité &amp; Elève V2</h:title>
+    <h:title>(2024 Avr) - 1. SCH/STH – Ecole/Localité &amp; Elève V3</h:title>
     <model>
 
       <instance>
-        <data id="tg_sch_sth_ia_202404_1_scho_ch_v2">
+        <data id="tg_sch_sth_ia_202404_1_scho_ch_v3">
           <w_note_1/>
           <w_recorder/>
           <w_district/>
@@ -27,8 +27,10 @@
           <w_obs_washing_hand_type/>
           <w_gps/>
           <w_note_2/>
+          <p_nb_children/>
           <C1/>
-          <tg_sch_p_2404_v2 jr:template="">
+          <tg_sch_p_2404_v3_count/>
+          <tg_sch_p_2404_v3 jr:template="">
             <p_consent_note/>
             <C2/>
             <C3/>
@@ -45,7 +47,7 @@
             <p_ending_survey_note/>
             <p_sample_note/>
             <p_remarks/>
-          </tg_sch_p_2404_v2>
+          </tg_sch_p_2404_v3>
           <w_Start/>
           <w_End/>
           <meta>
@@ -263,11 +265,20 @@
           <text id="static_instance-village_list-149">
             <value>DALAVE CENTRE</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_urine_conserve:hint">
+            <value>Il s'agit de l'urine de bandellete et/ou de l'urine macroscopiquement positive.</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_urine_conserve:label">
+            <value>L'urine est-elle conservée pour la filtration de l'urine?</value>
+          </text>
           <text id="/data/w_usp/KAGNIGADA:label">
             <value>KAGNIGADA</value>
           </text>
           <text id="/data/w_site_name/TOMEGBE:label">
             <value>TOMEGBE</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_consent:hint">
+            <value>La réponse "Non" mettra fin à l'enquête</value>
           </text>
           <text id="/data/w_site_name/ALEWOBUDO:label">
             <value>ALEWOBUDO</value>
@@ -347,9 +358,6 @@
           <text id="/data/w_usp/ATCHANGBADE:label">
             <value>ATCHANGBADE</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2:label">
-            <value>Participants</value>
-          </text>
           <text id="/data/w_site_name/GBOGBA KONDJI:label">
             <value>GBOGBA KONDJI</value>
           </text>
@@ -385,6 +393,9 @@
           </text>
           <text id="/data/w_usp/ESSE N. ZOGBEDJI:label">
             <value>ESSE N. ZOGBEDJI</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_sex/Masculin:label">
+            <value>Masculin</value>
           </text>
           <text id="/data/w_usp/KPATCHILE:label">
             <value>KPATCHILE</value>
@@ -532,6 +543,9 @@
           </text>
           <text id="/data/w_usp/BATONOU:label">
             <value>BATONOU</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_urine_conserve/Oui:label">
+            <value>Oui</value>
           </text>
           <text id="/data/w_usp/ADETIKOPE:label">
             <value>ADETIKOPE</value>
@@ -776,14 +790,14 @@
           <text id="/data/w_site_name/DOKOUME-HETSIAVI:label">
             <value>DOKOUME-HETSIAVI</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_consent/A.donne:label">
+            <value>1. A donné</value>
+          </text>
           <text id="/data/w_site_name/GNITA:label">
             <value>GNITA</value>
           </text>
           <text id="/data/w_site_name/DEVEME:label">
             <value>DEVEME</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_barcodeid2:jr:constraintMsg">
-            <value>Les deux QR code scanné doivent être les mêmes</value>
           </text>
           <text id="/data/w_site_name/YOMETCHIN:label">
             <value>YOMETCHIN</value>
@@ -841,6 +855,9 @@
           </text>
           <text id="/data/w_site_name/AGOMENOU:label">
             <value>AGOMENOU</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_consent/A.refuse:label">
+            <value>2. A refusé</value>
           </text>
           <text id="/data/w_usp/BOKO:label">
             <value>BOKO</value>
@@ -902,11 +919,11 @@
           <text id="/data/w_usp:label">
             <value>Sélectionner le sous-district (USP)</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_macroscopique_hemat/Oui:label">
-            <value>Oui</value>
-          </text>
           <text id="static_instance-village_list-404">
             <value>LOROU POUWAI</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_collected_urine/Oui:label">
+            <value>Oui</value>
           </text>
           <text id="/data/w_site_name/AFANGADJI:label">
             <value>AFANGADJI</value>
@@ -944,8 +961,8 @@
           <text id="static_instance-village_list-83">
             <value>TOVO</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_consent_note:label">
-            <value>Bonjour ! Je suis ici au nom du ministère de la Santé. Nous menons une enquête pour déterminer la présence de schistosomiase (SCH) et des géo-helminthiases (STH) dans votre école. Je vais vous poser quelques questions sur le mode et le mécanisme de transmission et apprécierais également de prélever des échantillons de selles et d'urine auprès de vous. Si vous souhaitez participer à l'enquête, dites-le-moi et je noterai vos réponses et vous fournirai des récipients de selles et d'urine. Si vous êtes d'accord, l'enquête ne prendra que quelques minutes. Participer à l'enquête scolaire vous sera directement bénéfique car en cas de diagnostic de vers, vous recevrez immédiatement des médicaments vermifuges. Votre communauté et votre école en bénéficieront également directement, car les résultats de cette enquête aideront le ministère de la Santé à mettre en œuvre des activités de déparasitage pour les enfants âgés de 5 à 14 ans, si les résultats de laboratoire révèlent la nécessité d'interventions. Vous pouvez refuser sans pénalité. Souhaitez-vous participer à notre enquête ?</value>
+          <text id="static_instance-village_list-334">
+            <value>MOME GBEDEPEME</value>
           </text>
           <text id="/data/w_recorder:hint">
             <value>Code à 2 chiffrre qui vous a été affecté</value>
@@ -953,8 +970,8 @@
           <text id="/data/w_obs_toilet_condition/Non:label">
             <value>Non</value>
           </text>
-          <text id="static_instance-sex-1">
-            <value>Masculin</value>
+          <text id="/data/tg_sch_p_2404_v3/p_age_yrs:label">
+            <value>Entrez l'âge de l'enfant en années</value>
           </text>
           <text id="static_instance-sex-0">
             <value>Féminin</value>
@@ -1190,6 +1207,9 @@
           <text id="static_instance-village_list-189">
             <value>AVEGAN</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_barcodeid:label">
+            <value>Veuillez scanner le QR Code</value>
+          </text>
           <text id="/data/w_site_name/KONFAGA:label">
             <value>KONFAGA</value>
           </text>
@@ -1277,6 +1297,9 @@
           <text id="/data/w_usp/MOME HOUNKPATI:label">
             <value>MOME HOUNKPATI</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_urine_conserve:jr:constraintMsg">
+            <value>L'urine doit être conservé parce que macroscopiquement positive et de graduation positive</value>
+          </text>
           <text id="/data/w_site_name/KAOUNO:label">
             <value>KAOUNO</value>
           </text>
@@ -1285,9 +1308,6 @@
           </text>
           <text id="static_instance-usp-69">
             <value>KATCHENKE</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_collected_stool:hint">
-            <value>Nous ne voulons pas rentrer s'ils ne donnent pas d'échantillon car nous ne pouvons pas garantir qu'il n'y aura pas d'échange d'échantillons.</value>
           </text>
           <text id="static_instance-usp-64">
             <value>ATIKPAI</value>
@@ -1316,6 +1336,9 @@
           <text id="/data/w_site_name/TINDJASSI:label">
             <value>TINDJASSI</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_collected_stool:label">
+            <value>Un échantillon de selles de cet enfant a-t-il été prélevé ?</value>
+          </text>
           <text id="/data/w_usp/WELLY:label">
             <value>WELLY</value>
           </text>
@@ -1327,9 +1350,6 @@
           </text>
           <text id="/data/w_usp/ATTI-ATOVOU:label">
             <value>ATTI-ATOVOU</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_grading:label">
-            <value>Graduation de la microhématurie</value>
           </text>
           <text id="/data/w_usp/KETA-AKODA:label">
             <value>KETA-AKODA</value>
@@ -1382,6 +1402,9 @@
           <text id="/data/w_usp/BROUKOU:label">
             <value>BROUKOU</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_grading/+:label">
+            <value>+</value>
+          </text>
           <text id="/data/w_site_name/HEKPE:label">
             <value>HEKPE</value>
           </text>
@@ -1414,9 +1437,6 @@
           </text>
           <text id="static_instance-usp-89">
             <value>KOULFIEKOU</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_consent/A.refuse:label">
-            <value>2. A refusé</value>
           </text>
           <text id="static_instance-village_list-420">
             <value>KOUTANTAGOU</value>
@@ -1538,8 +1558,8 @@
           <text id="/data/w_site_name/ATTISSO KONDJI:label">
             <value>ATTISSO KONDJI</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_sex:label">
-            <value>Sélectionnez le sexe de l'enfant</value>
+          <text id="/data/tg_sch_p_2404_v3/p_grading/++:label">
+            <value>++</value>
           </text>
           <text id="/data/w_usp/TCHEKPO-DEVE:label">
             <value>TCHEKPO-DEVE</value>
@@ -1613,6 +1633,9 @@
           <text id="static_instance-village_list-208">
             <value>DOMEZE KOPE</value>
           </text>
+          <text id="/data/p_nb_children:label">
+            <value>Combien d'enfant allez vous enregistrer?</value>
+          </text>
           <text id="/data/w_site_name/KOULFIEKOU:label">
             <value>KOULFIEKOU</value>
           </text>
@@ -1652,9 +1675,6 @@
           <text id="/data/w_site_name/TCHAREBAOU:label">
             <value>TCHAREBAOU</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_grading/Negatif:label">
-            <value>Négatif</value>
-          </text>
           <text id="/data/w_site_name/MANGOTIDEKE:label">
             <value>MANGOTIDEKE</value>
           </text>
@@ -1669,9 +1689,6 @@
           </text>
           <text id="/data/w_site_name/NAMON CENTRE:label">
             <value>NAMON CENTRE</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_sample_note:label">
-            <value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête. Veuillez collecter les échantillons de selle et d'urine du participant.</value>
           </text>
           <text id="/data/w_usp/ALLOUM:label">
             <value>ALLOUM</value>
@@ -1796,9 +1813,6 @@
           <text id="/data/w_obs_washing_hand_type/Eau, savon/cendres et serviette non jetable:label">
             <value>Eau, savon/cendres et serviette non jetable</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_age_yrs:jr:constraintMsg">
-            <value>L'âge doit être compris entre 4 et 15 ans</value>
-          </text>
           <text id="/data/w_recorder/KWAKU Kossi Edem:label">
             <value>KWAKU Kossi Edem</value>
           </text>
@@ -1831,9 +1845,6 @@
           </text>
           <text id="/data/w_site_name/GBOTO ATCHAME:label">
             <value>GBOTO ATCHAME</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_collected_stool/Non:label">
-            <value>Non</value>
           </text>
           <text id="/data/w_site_name/VIGAN:label">
             <value>VIGAN</value>
@@ -1910,8 +1921,8 @@
           <text id="static_instance-village_list-344">
             <value>DJABAGBAL</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_barcodeid2:label">
-            <value>Veuillez scanner le QR Code à nouveau</value>
+          <text id="static_instance-village_list-345">
+            <value>KOUSSOUDO</value>
           </text>
           <text id="static_instance-village_list-342">
             <value>KOULANGOU</value>
@@ -1930,9 +1941,6 @@
           </text>
           <text id="/data/w_site_name/EKPUI:label">
             <value>EKPUI</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_grading/+++:label">
-            <value>+++</value>
           </text>
           <text id="/data/w_site_name/MANDELA:label">
             <value>MANDELA</value>
@@ -2021,9 +2029,6 @@
           <text id="static_instance-village_list-437">
             <value>TCHITCHAO</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_collected_stool/Oui:label">
-            <value>Oui</value>
-          </text>
           <text id="static_instance-village_list-430">
             <value>DAWOU</value>
           </text>
@@ -2078,9 +2083,6 @@
           <text id="static_instance-usp-259">
             <value>GAPE NYASSIVE</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_macroscopique_hemat:label">
-            <value>L'urine est-elle macroscopiquement hématurique</value>
-          </text>
           <text id="static_instance-village_list-237">
             <value>KADOGOU</value>
           </text>
@@ -2104,6 +2106,9 @@
           </text>
           <text id="/data/w_site_name/VAKPOSSITO:label">
             <value>VAKPOSSITO</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_grading/+++:label">
+            <value>+++</value>
           </text>
           <text id="/data/w_recorder/BONSA Baminte:label">
             <value>BONSA Baminte</value>
@@ -2143,9 +2148,6 @@
           </text>
           <text id="static_instance-recorders-28">
             <value>LACK Fiali</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_urine_conserve/Oui:label">
-            <value>Oui</value>
           </text>
           <text id="/data/w_site_name/DEWA:label">
             <value>DEWA</value>
@@ -2207,8 +2209,8 @@
           <text id="/data/w_usp/SOKO TOMETY:label">
             <value>SOKO TOMETY</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_grading/Trace.hemolysee:label">
-            <value>Trace hémolysée</value>
+          <text id="/data/tg_sch_p_2404_v3/p_collected_urine/Non:label">
+            <value>Non</value>
           </text>
           <text id="/data/w_usp/ATTITOGON:label">
             <value>ATTITOGON</value>
@@ -2287,9 +2289,6 @@
           </text>
           <text id="static_instance-source_place-0">
             <value>A moins de 15 minutes aller-retour depuis de l.école</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_urine_conserve:jr:constraintMsg">
-            <value>L'urine doit être conservé parce que macroscopiquement positive et de graduation positive</value>
           </text>
           <text id="static_instance-village_list-224">
             <value>AGBEDJINOU KOPE</value>
@@ -2383,9 +2382,6 @@
           </text>
           <text id="/data/w_usp/SARAKAWA:label">
             <value>SARAKAWA</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_collected_stool:label">
-            <value>Un échantillon de selles de cet enfant a-t-il été prélevé ?</value>
           </text>
           <text id="static_instance-village_list-229">
             <value>ALOKPA</value>
@@ -2513,6 +2509,9 @@
           <text id="/data/w_recorder/NYADEKA Kossi Mawuli:label">
             <value>NYADEKA Kossi Mawuli</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_barcodeid:jr:constraintMsg">
+            <value>Vous avez déjà utiliser ce QR Code</value>
+          </text>
           <text id="/data/w_site_name/KOUWERE:label">
             <value>KOUWERE</value>
           </text>
@@ -2567,8 +2566,8 @@
           <text id="/data/w_usp/GLIDJI:label">
             <value>GLIDJI</value>
           </text>
-          <text id="/data/w_usp/LAMA-KPEDAH:label">
-            <value>LAMA-KPEDAH</value>
+          <text id="/data/tg_sch_p_2404_v3/p_barcodeid2:jr:constraintMsg">
+            <value>Les deux QR code scanné doivent être les mêmes</value>
           </text>
           <text id="/data/w_recorder/ASSIH Pèkèwè:label">
             <value>ASSIH Pèkèwè</value>
@@ -2605,9 +2604,6 @@
           </text>
           <text id="/data/w_usp/TCHARE-WIYAMDE:label">
             <value>TCHARE-WIYAMDE</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_age_yrs:label">
-            <value>Entrez l'âge de l'enfant en années</value>
           </text>
           <text id="/data/w_site_name/KOUTAMAGOU:label">
             <value>KOUTAMAGOU</value>
@@ -2662,6 +2658,9 @@
           </text>
           <text id="/data/w_site_name/BOURGOU:label">
             <value>BOURGOU</value>
+          </text>
+          <text id="static_instance-village_list-174">
+            <value>KOLEVE</value>
           </text>
           <text id="/data/w_site_name/KPETAB:label">
             <value>KPETAB</value>
@@ -2741,8 +2740,8 @@
           <text id="static_instance-usp-129">
             <value>OSSACRE</value>
           </text>
-          <text id="static_instance-village_list-174">
-            <value>KOLEVE</value>
+          <text id="/data/tg_sch_p_2404_v3/p_macroscopique_hemat/Oui:label">
+            <value>Oui</value>
           </text>
           <text id="static_instance-usp-124">
             <value>KOUTOUGOU</value>
@@ -2945,9 +2944,6 @@
           <text id="/data/w_usp/BEBEDA:label">
             <value>BEBEDA</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_sex/Masculin:label">
-            <value>Masculin</value>
-          </text>
           <text id="/data/w_usp/BAKHITA:label">
             <value>BAKHITA</value>
           </text>
@@ -2968,6 +2964,9 @@
           </text>
           <text id="/data/w_site_name/AGBODJIKOPE/ANEVE:label">
             <value>AGBODJIKOPE/ANEVE</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_grading:label">
+            <value>Graduation de la microhématurie</value>
           </text>
           <text id="/data/w_site_name/KOUDASSI GARE:label">
             <value>KOUDASSI GARE</value>
@@ -3206,6 +3205,9 @@
           <text id="/data/w_site_name/EPP TOMDE:label">
             <value>EPP TOMDE</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_consent_note:label">
+            <value>Bonjour ! Je suis ici au nom du ministère de la Santé. Nous menons une enquête pour déterminer la présence de schistosomiase (SCH) et des géo-helminthiases (STH) dans votre école. Je vais vous poser quelques questions sur le mode et le mécanisme de transmission et apprécierais également de prélever des échantillons de selles et d'urine auprès de vous. Si vous souhaitez participer à l'enquête, dites-le-moi et je noterai vos réponses et vous fournirai des récipients de selles et d'urine. Si vous êtes d'accord, l'enquête ne prendra que quelques minutes. Participer à l'enquête scolaire vous sera directement bénéfique car en cas de diagnostic de vers, vous recevrez immédiatement des médicaments vermifuges. Votre communauté et votre école en bénéficieront également directement, car les résultats de cette enquête aideront le ministère de la Santé à mettre en œuvre des activités de déparasitage pour les enfants âgés de 5 à 14 ans, si les résultats de laboratoire révèlent la nécessité d'interventions. Vous pouvez refuser sans pénalité. Souhaitez-vous participer à notre enquête ?</value>
+          </text>
           <text id="/data/w_site_name/ZEBE:label">
             <value>ZEBE</value>
           </text>
@@ -3226,6 +3228,9 @@
           </text>
           <text id="/data/w_site_name/ABATECOPE/SEWATRICOPE:label">
             <value>ABATECOPE/SEWATRICOPE</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_sample_note:label">
+            <value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête. Veuillez collecter les échantillons de selle et d'urine du participant.</value>
           </text>
           <text id="/data/w_site_name/SEVAGAN CENTRE:label">
             <value>SEVAGAN CENTRE</value>
@@ -3275,9 +3280,6 @@
           <text id="/data/w_usp/WARAGNI:label">
             <value>WARAGNI</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_consent:hint">
-            <value>La réponse "Non" mettra fin à l'enquête</value>
-          </text>
           <text id="/data/w_site_name/SEKO:label">
             <value>SEKO</value>
           </text>
@@ -3310,9 +3312,6 @@
           </text>
           <text id="/data/w_site_name/N GOBO:label">
             <value>N GOBO</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_barcodeid:label">
-            <value>Veuillez scanner le QR Code</value>
           </text>
           <text id="/data/w_site_name/SALIFOU COPE:label">
             <value>SALIFOU COPE</value>
@@ -3539,8 +3538,14 @@
           <text id="static_instance-usp-215">
             <value>ABOSSEHOE</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_sex:label">
+            <value>Sélectionnez le sexe de l'enfant</value>
+          </text>
           <text id="/data/w_site_name/DARAKOPE:label">
             <value>DARAKOPE</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_remarks:label">
+            <value>Notes complémentaires</value>
           </text>
           <text id="/data/w_usp/CHP PAGOUDA:label">
             <value>CHP PAGOUDA</value>
@@ -3556,6 +3561,9 @@
           </text>
           <text id="/data/w_site_name/WARAGNI:label">
             <value>WARAGNI</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_urine_conserve/Non:label">
+            <value>Non</value>
           </text>
           <text id="static_instance-usp-106">
             <value>BONTIGAH</value>
@@ -3650,9 +3658,6 @@
           <text id="static_instance-village_list-158">
             <value>GBAMAKOPE</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_barcodeid:jr:constraintMsg">
-            <value>Vous avez déjà utiliser ce QR Code</value>
-          </text>
           <text id="/data/w_source_drinkable:label">
             <value>Si non, où est la source d'eau potable?</value>
           </text>
@@ -3667,6 +3672,9 @@
           </text>
           <text id="/data/w_site_name/KPOTA:label">
             <value>KPOTA</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_collected_stool/Oui:label">
+            <value>Oui</value>
           </text>
           <text id="/data/w_recorder/ABOU KERIM S. A.:label">
             <value>ABOU KERIM S. A.</value>
@@ -3737,12 +3745,6 @@
           <text id="static_instance-usp-186">
             <value>SEKO</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_consent:label">
-            <value>L'enfant a-t-il donné son consentement et le consentement de ses parents ou tuteurs?</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_collected_urine:label">
-            <value>Un échantillon d'urine de cet enfant a-t-il été prélevé ?</value>
-          </text>
           <text id="/data/w_usp/YALOUMBE:label">
             <value>YALOUMBE</value>
           </text>
@@ -3766,9 +3768,6 @@
           </text>
           <text id="static_instance-village_list-488">
             <value>YOPE</value>
-          </text>
-          <text id="static_instance-village_list-334">
-            <value>MOME GBEDEPEME</value>
           </text>
           <text id="static_instance-village_list-485">
             <value>AVEVOIN</value>
@@ -3947,6 +3946,9 @@
           <text id="/data/w_usp/AFIDENYIGBA:label">
             <value>AFIDENYIGBA</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_consent:label">
+            <value>L'enfant a-t-il donné son consentement et le consentement de ses parents ou tuteurs?</value>
+          </text>
           <text id="static_instance-usp-214">
             <value>ZOOTI</value>
           </text>
@@ -4004,6 +4006,9 @@
           <text id="/data/w_site_name/AGBANAKIN:label">
             <value>AGBANAKIN</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3:label">
+            <value>Participants</value>
+          </text>
           <text id="/data/w_site_name/KAGNANDE:label">
             <value>KAGNANDE</value>
           </text>
@@ -4034,9 +4039,6 @@
           <text id="/data/w_site_name/AVIOHONOU (KPAKPLADJEVE):label">
             <value>AVIOHONOU (KPAKPLADJEVE)</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_urine_conserve:label">
-            <value>L'urine est-elle conservée pour la filtration de l'urine?</value>
-          </text>
           <text id="/data/w_site_name/POUTAMOULE:label">
             <value>POUTAMOULE</value>
           </text>
@@ -4045,9 +4047,6 @@
           </text>
           <text id="/data/w_usp/BADJA:label">
             <value>BADJA</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_grading/+:label">
-            <value>+</value>
           </text>
           <text id="/data/w_toilet_type/Latrines améliorées à fosse ventilée (VIP):label">
             <value>Latrines améliorées à fosse ventilée (VIP)</value>
@@ -4100,6 +4099,9 @@
           <text id="/data/w_usp/AHEPE:label">
             <value>AHEPE</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_collected_stool:hint">
+            <value>Nous ne voulons pas rentrer s'ils ne donnent pas d'échantillon car nous ne pouvons pas garantir qu'il n'y aura pas d'échange d'échantillons.</value>
+          </text>
           <text id="/data/w_site_name/KPATAYOU:label">
             <value>KPATAYOU</value>
           </text>
@@ -4127,8 +4129,8 @@
           <text id="/data/w_site_name/DOMEZE KOPE:label">
             <value>DOMEZE KOPE</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_sex/Feminin:label">
-            <value>Féminin</value>
+          <text id="/data/w_usp/LAMA-KPEDAH:label">
+            <value>LAMA-KPEDAH</value>
           </text>
           <text id="/data/w_usp/AYAKOPE:label">
             <value>AYAKOPE</value>
@@ -4253,6 +4255,9 @@
           <text id="/data/w_usp/AGBANDAOUDE (ASSOLI):label">
             <value>AGBANDAOUDE (ASSOLI)</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_sex/Feminin:label">
+            <value>Féminin</value>
+          </text>
           <text id="static_instance-accessible_water-0">
             <value>Moins de 15 minutes aller-retour depuis de l.école</value>
           </text>
@@ -4357,6 +4362,9 @@
           </text>
           <text id="/data/w_site_name/BALE:label">
             <value>BALE</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_collected_stool:jr:constraintMsg">
+            <value>Vous devez collecter l'échantillon de selle</value>
           </text>
           <text id="/data/w_usp/KPANGBAZIBIO:label">
             <value>KPANGBAZIBIO</value>
@@ -4505,9 +4513,6 @@
           <text id="/data/w_recorder/ASSONDE Ditorgue:label">
             <value>ASSONDE Ditorgue</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_consent/A.donne:label">
-            <value>1. A donné</value>
-          </text>
           <text id="/data/w_site_name/YADE KAYADE:label">
             <value>YADE KAYADE</value>
           </text>
@@ -4546,9 +4551,6 @@
           </text>
           <text id="/data/w_usp/LASSA-BAS:label">
             <value>LASSA-BAS</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_urine_conserve/Non:label">
-            <value>Non</value>
           </text>
           <text id="/data/w_recorder/N DORE Essomandan:label">
             <value>N'DORE Essomandan</value>
@@ -4601,6 +4603,9 @@
           <text id="/data/w_usp/LILIKOPE:label">
             <value>LILIKOPE</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_grading/Negatif:label">
+            <value>Négatif</value>
+          </text>
           <text id="/data/w_site_name/ADJOME:label">
             <value>ADJOME</value>
           </text>
@@ -4619,8 +4624,8 @@
           <text id="static_instance-usp-154">
             <value>POLYCLINIQUE KARA</value>
           </text>
-          <text id="/data/w_site_name/PAGALA VILLAGE:label">
-            <value>PAGALA VILLAGE</value>
+          <text id="static_instance-usp-157">
+            <value>PYA-PITTAH</value>
           </text>
           <text id="/data/w_site_name/MISSEOUTA1:label">
             <value>MISSEOUTA1</value>
@@ -4691,9 +4696,6 @@
           <text id="/data/w_site_name/KEGBANCONDJI:label">
             <value>KEGBANCONDJI</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_macroscopique_hemat/Non:label">
-            <value>Non</value>
-          </text>
           <text id="/data/w_toilet/Non:label">
             <value>Non</value>
           </text>
@@ -4754,9 +4756,6 @@
           <text id="/data/w_recorder/BOMBONNE ouwouborbi:label">
             <value>BOMBONNE ouwouborbi</value>
           </text>
-          <text id="static_instance-village_list-345">
-            <value>KOUSSOUDO</value>
-          </text>
           <text id="/data/w_site_name/LEON YAKA:label">
             <value>LEON YAKA</value>
           </text>
@@ -4814,6 +4813,9 @@
           <text id="/data/w_usp/MASSEKOPE:label">
             <value>MASSEKOPE</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_macroscopique_hemat/Non:label">
+            <value>Non</value>
+          </text>
           <text id="/data/w_usp/WLI MIVAKPO:label">
             <value>WLI MIVAKPO</value>
           </text>
@@ -4846,6 +4848,12 @@
           </text>
           <text id="/data/w_recorder/ESSILIVI Yao Eyram:label">
             <value>ESSILIVI Yao Eyram</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_age_yrs:jr:constraintMsg">
+            <value>L'âge doit être compris entre 5 et 14 ans</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_barcodeid2:label">
+            <value>Veuillez scanner le QR Code à nouveau</value>
           </text>
           <text id="/data/w_usp/KOUTIERE:label">
             <value>KOUTIERE</value>
@@ -4894,9 +4902,6 @@
           </text>
           <text id="static_instance-village_list-121">
             <value>BOULADE NORD</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_collected_urine/Oui:label">
-            <value>Oui</value>
           </text>
           <text id="/data/w_usp/DOUFOULI:label">
             <value>DOUFOULI</value>
@@ -5000,6 +5005,9 @@
           <text id="static_instance-village_list-443">
             <value>TOGBLEKOPE</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_macroscopique_hemat:label">
+            <value>L'urine est-elle macroscopiquement hématurique</value>
+          </text>
           <text id="static_instance-village_list-442">
             <value>AKOIN</value>
           </text>
@@ -5024,17 +5032,11 @@
           <text id="/data/w_site_name/AGOUTE:label">
             <value>AGOUTE</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_grading/++:label">
-            <value>++</value>
-          </text>
           <text id="/data/w_site_name/AGOSSITO:label">
             <value>AGOSSITO</value>
           </text>
           <text id="/data/w_usp/BOULADE:label">
             <value>BOULADE</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_collected_urine/Non:label">
-            <value>Non</value>
           </text>
           <text id="/data/w_site_name/TOMEFA:label">
             <value>TOMEFA</value>
@@ -5099,20 +5101,17 @@
           <text id="/data/w_usp/BAGA:label">
             <value>BAGA</value>
           </text>
-          <text id="/data/tg_sch_p_2404_v2/p_remarks:label">
-            <value>Notes complémentaires</value>
-          </text>
           <text id="/data/w_site_name/AGBATA ZIVE:label">
             <value>AGBATA ZIVE</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_urine_conserve:hint">
-            <value>Il s'agit de l'urine de bandellete et/ou de l'urine macroscopiquement positive.</value>
           </text>
           <text id="/data/w_toilet:hint">
             <value>Si oui, demandez à visiter les latrines</value>
           </text>
           <text id="/data/w_site_name/PEDAKONDJI:label">
             <value>PEDAKONDJI</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_grading/Trace.hemolysee:label">
+            <value>Trace hémolysée</value>
           </text>
           <text id="static_instance-usp-28">
             <value>GBEMOUKONDKJI</value>
@@ -5174,6 +5173,12 @@
           <text id="static_instance-village_list-287">
             <value>AKARIO</value>
           </text>
+          <text id="/data/tg_sch_p_2404_v3/p_collected_urine:label">
+            <value>Un échantillon d'urine de cet enfant a-t-il été prélevé ?</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_ending_survey_note:label">
+            <value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête</value>
+          </text>
           <text id="/data/w_usp/LANDA:label">
             <value>LANDA</value>
           </text>
@@ -5204,11 +5209,11 @@
           <text id="/data/w_site_name/DZREKPO CENTRE:label">
             <value>DZREKPO CENTRE</value>
           </text>
+          <text id="static_instance-sex-1">
+            <value>Masculin</value>
+          </text>
           <text id="/data/w_site_name/GASSI-GASSI:label">
             <value>GASSI-GASSI</value>
-          </text>
-          <text id="/data/tg_sch_p_2404_v2/p_ending_survey_note:label">
-            <value>Vous venez d'entrer une valeur qui entrainera la fin de l'enquête</value>
           </text>
           <text id="/data/w_site_name/LAOUDA:label">
             <value>LAOUDA</value>
@@ -5287,6 +5292,9 @@
           </text>
           <text id="/data/w_site_name/KOULANGOU:label">
             <value>KOULANGOU</value>
+          </text>
+          <text id="/data/tg_sch_p_2404_v3/p_collected_stool/Non:label">
+            <value>Non</value>
           </text>
           <text id="static_instance-village_list-131">
             <value>MABOLE</value>
@@ -5483,8 +5491,8 @@
           <text id="/data/w_site_name/HOUDE (PIYO):label">
             <value>HOUDE (PIYO)</value>
           </text>
-          <text id="static_instance-usp-157">
-            <value>PYA-PITTAH</value>
+          <text id="/data/w_site_name/PAGALA VILLAGE:label">
+            <value>PAGALA VILLAGE</value>
           </text>
         </translation>
       </itext>
@@ -9954,23 +9962,25 @@
       <bind nodeset="/data/w_obs_washing_hand_type" relevant=" /data/w_toilet  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/w_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/w_note_2" readonly="true()" type="string"/>
-      <bind calculate="join(' ',  /data/tg_sch_p_2404_v2/p_barcodeid )" nodeset="/data/C1" type="text"/>
-      <bind nodeset="/data/tg_sch_p_2404_v2/p_consent_note" readonly="true()" type="string"/>
-      <bind calculate="position(..)" nodeset="/data/tg_sch_p_2404_v2/C2" type="text"/>
-      <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../p_barcodeid ))" nodeset="/data/tg_sch_p_2404_v2/C3" type="text"/>
-      <bind nodeset="/data/tg_sch_p_2404_v2/p_consent" required="true()" type="select1"/>
-      <bind constraint="not(selected( ../C3 ,  ../p_barcodeid ))" jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v2/p_barcodeid:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v2/p_barcodeid" relevant=" ../p_consent  = 'A.donne'" type="barcode" db_add_col_3="/data/w_site_name" db_add_col_4="."/>
-      <bind constraint=". =  ../p_barcodeid " jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v2/p_barcodeid2:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v2/p_barcodeid2" relevant=" ../p_consent  = 'A.donne'" required="true()" type="barcode"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v2/p_age_yrs:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v2/p_age_yrs" relevant=" ../p_consent  = 'A.donne'" required="true()" type="int"/>
-      <bind nodeset="/data/tg_sch_p_2404_v2/p_sex" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/tg_sch_p_2404_v2/p_collected_stool" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/tg_sch_p_2404_v2/p_collected_urine" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
-      <bind nodeset="/data/tg_sch_p_2404_v2/p_macroscopique_hemat" relevant=" ../p_consent  = 'A.donne' and  ../p_collected_urine  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/tg_sch_p_2404_v2/p_grading" relevant=" ../p_consent  = 'A.donne' and  ../p_collected_urine  = 'Oui'" required="true()" type="select1"/>
-      <bind constraint="if(( ../p_grading  = '+' or  ../p_grading  = '++' or  ../p_grading  = '+++' or  ../p_grading  = 'Trace.hemolysee' or  ../p_macroscopique_hemat  = 'Oui'), . = 'Oui', true())" jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v2/p_urine_conserve:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v2/p_urine_conserve" relevant=" ../p_consent  = 'A.donne' and  ../p_collected_urine  = 'Oui' and ( ../p_grading  = '+' or  ../p_grading  = '++' or  ../p_grading  = '+++' or  ../p_grading  = 'Trace.hemolysee' or  ../p_macroscopique_hemat  = 'Oui')" required="true()" type="select1"/>
-      <bind nodeset="/data/tg_sch_p_2404_v2/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'A.refuse'" type="string"/>
-      <bind nodeset="/data/tg_sch_p_2404_v2/p_sample_note" readonly="true()" relevant=" ../p_collected_stool  = 'Non' and  ../p_collected_urine  = 'Non'" type="string"/>
-      <bind nodeset="/data/tg_sch_p_2404_v2/p_remarks" type="text"/>
+      <bind nodeset="/data/p_nb_children" required="true()" type="int"/>
+      <bind calculate="join(' ',  /data/tg_sch_p_2404_v3/p_barcodeid )" nodeset="/data/C1" type="text"/>
+      <bind calculate=" /data/p_nb_children " nodeset="/data/tg_sch_p_2404_v3_count" readonly="true()" type="string"/>
+      <bind nodeset="/data/tg_sch_p_2404_v3/p_consent_note" readonly="true()" type="string"/>
+      <bind calculate="position(..)" nodeset="/data/tg_sch_p_2404_v3/C2" type="text"/>
+      <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../p_barcodeid ))" nodeset="/data/tg_sch_p_2404_v3/C3" type="text"/>
+      <bind nodeset="/data/tg_sch_p_2404_v3/p_consent" required="true()" type="select1"/>
+      <bind constraint="not(selected( ../C3 ,  ../p_barcodeid ))" jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v3/p_barcodeid:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v3/p_barcodeid" relevant=" ../p_consent  = 'A.donne'" type="barcode" db_add_col_3="/data/w_site_name" db_add_col_4="."/>
+      <bind constraint=". =  ../p_barcodeid " jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v3/p_barcodeid2:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v3/p_barcodeid2" relevant=" ../p_consent  = 'A.donne'" required="true()" type="barcode"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v3/p_age_yrs:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v3/p_age_yrs" relevant=" ../p_consent  = 'A.donne'" required="true()" type="int"/>
+      <bind nodeset="/data/tg_sch_p_2404_v3/p_sex" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
+      <bind constraint=" ../p_collected_stool  = 'Oui'" jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v3/p_collected_stool:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v3/p_collected_stool" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
+      <bind nodeset="/data/tg_sch_p_2404_v3/p_collected_urine" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
+      <bind nodeset="/data/tg_sch_p_2404_v3/p_macroscopique_hemat" relevant=" ../p_consent  = 'A.donne' and  ../p_collected_urine  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/tg_sch_p_2404_v3/p_grading" relevant=" ../p_consent  = 'A.donne' and  ../p_collected_urine  = 'Oui'" required="true()" type="select1"/>
+      <bind constraint="if(( ../p_grading  = '+' or  ../p_grading  = '++' or  ../p_grading  = '+++' or  ../p_grading  = 'Trace.hemolysee' or  ../p_macroscopique_hemat  = 'Oui'), . = 'Oui', true())" jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v3/p_urine_conserve:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v3/p_urine_conserve" relevant=" ../p_consent  = 'A.donne' and  ../p_collected_urine  = 'Oui' and ( ../p_grading  = '+' or  ../p_grading  = '++' or  ../p_grading  = '+++' or  ../p_grading  = 'Trace.hemolysee' or  ../p_macroscopique_hemat  = 'Oui')" required="true()" type="select1"/>
+      <bind nodeset="/data/tg_sch_p_2404_v3/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'A.refuse'" type="string"/>
+      <bind nodeset="/data/tg_sch_p_2404_v3/p_sample_note" readonly="true()" relevant=" ../p_collected_stool  = 'Non' and  ../p_collected_urine  = 'Non'" type="string"/>
+      <bind nodeset="/data/tg_sch_p_2404_v3/p_remarks" type="text"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/w_Start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/w_End" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
@@ -10339,121 +10349,124 @@
     <input ref="/data/w_note_2">
       <label ref="jr:itext('/data/w_note_2:label')"/>
     </input>
-    <group ref="/data/tg_sch_p_2404_v2">
-      <label ref="jr:itext('/data/tg_sch_p_2404_v2:label')"/>
-      <repeat nodeset="/data/tg_sch_p_2404_v2">
-        <input ref="/data/tg_sch_p_2404_v2/p_consent_note">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_consent_note:label')"/>
+    <input ref="/data/p_nb_children">
+      <label ref="jr:itext('/data/p_nb_children:label')"/>
+    </input>
+    <group ref="/data/tg_sch_p_2404_v3">
+      <label ref="jr:itext('/data/tg_sch_p_2404_v3:label')"/>
+      <repeat jr:count=" /data/tg_sch_p_2404_v3_count " nodeset="/data/tg_sch_p_2404_v3">
+        <input ref="/data/tg_sch_p_2404_v3/p_consent_note">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_consent_note:label')"/>
         </input>
-        <select1 ref="/data/tg_sch_p_2404_v2/p_consent">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_consent:label')"/>
-          <hint ref="jr:itext('/data/tg_sch_p_2404_v2/p_consent:hint')"/>
+        <select1 ref="/data/tg_sch_p_2404_v3/p_consent">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_consent:label')"/>
+          <hint ref="jr:itext('/data/tg_sch_p_2404_v3/p_consent:hint')"/>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_consent/A.donne:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_consent/A.donne:label')"/>
             <value>A.donne</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_consent/A.refuse:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_consent/A.refuse:label')"/>
             <value>A.refuse</value>
           </item>
         </select1>
-        <input ref="/data/tg_sch_p_2404_v2/p_barcodeid">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_barcodeid:label')"/>
+        <input ref="/data/tg_sch_p_2404_v3/p_barcodeid">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_barcodeid:label')"/>
         </input>
-        <input ref="/data/tg_sch_p_2404_v2/p_barcodeid2">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_barcodeid2:label')"/>
+        <input ref="/data/tg_sch_p_2404_v3/p_barcodeid2">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_barcodeid2:label')"/>
         </input>
-        <input ref="/data/tg_sch_p_2404_v2/p_age_yrs">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_age_yrs:label')"/>
+        <input ref="/data/tg_sch_p_2404_v3/p_age_yrs">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_age_yrs:label')"/>
         </input>
-        <select1 ref="/data/tg_sch_p_2404_v2/p_sex">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_sex:label')"/>
+        <select1 ref="/data/tg_sch_p_2404_v3/p_sex">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_sex:label')"/>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_sex/Feminin:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_sex/Feminin:label')"/>
             <value>Feminin</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_sex/Masculin:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_sex/Masculin:label')"/>
             <value>Masculin</value>
           </item>
         </select1>
-        <select1 ref="/data/tg_sch_p_2404_v2/p_collected_stool">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_collected_stool:label')"/>
-          <hint ref="jr:itext('/data/tg_sch_p_2404_v2/p_collected_stool:hint')"/>
+        <select1 ref="/data/tg_sch_p_2404_v3/p_collected_stool">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_collected_stool:label')"/>
+          <hint ref="jr:itext('/data/tg_sch_p_2404_v3/p_collected_stool:hint')"/>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_collected_stool/Oui:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_collected_stool/Oui:label')"/>
             <value>Oui</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_collected_stool/Non:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_collected_stool/Non:label')"/>
             <value>Non</value>
           </item>
         </select1>
-        <select1 ref="/data/tg_sch_p_2404_v2/p_collected_urine">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_collected_urine:label')"/>
+        <select1 ref="/data/tg_sch_p_2404_v3/p_collected_urine">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_collected_urine:label')"/>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_collected_urine/Oui:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_collected_urine/Oui:label')"/>
             <value>Oui</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_collected_urine/Non:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_collected_urine/Non:label')"/>
             <value>Non</value>
           </item>
         </select1>
-        <select1 ref="/data/tg_sch_p_2404_v2/p_macroscopique_hemat">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_macroscopique_hemat:label')"/>
+        <select1 ref="/data/tg_sch_p_2404_v3/p_macroscopique_hemat">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_macroscopique_hemat:label')"/>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_macroscopique_hemat/Oui:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_macroscopique_hemat/Oui:label')"/>
             <value>Oui</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_macroscopique_hemat/Non:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_macroscopique_hemat/Non:label')"/>
             <value>Non</value>
           </item>
         </select1>
-        <select1 ref="/data/tg_sch_p_2404_v2/p_grading">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_grading:label')"/>
+        <select1 ref="/data/tg_sch_p_2404_v3/p_grading">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_grading:label')"/>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_grading/Negatif:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_grading/Negatif:label')"/>
             <value>Negatif</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_grading/Trace.hemolysee:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_grading/Trace.hemolysee:label')"/>
             <value>Trace.hemolysee</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_grading/+:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_grading/+:label')"/>
             <value>+</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_grading/++:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_grading/++:label')"/>
             <value>++</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_grading/+++:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_grading/+++:label')"/>
             <value>+++</value>
           </item>
         </select1>
-        <select1 ref="/data/tg_sch_p_2404_v2/p_urine_conserve">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_urine_conserve:label')"/>
-          <hint ref="jr:itext('/data/tg_sch_p_2404_v2/p_urine_conserve:hint')"/>
+        <select1 ref="/data/tg_sch_p_2404_v3/p_urine_conserve">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_urine_conserve:label')"/>
+          <hint ref="jr:itext('/data/tg_sch_p_2404_v3/p_urine_conserve:hint')"/>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_urine_conserve/Oui:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_urine_conserve/Oui:label')"/>
             <value>Oui</value>
           </item>
           <item>
-            <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_urine_conserve/Non:label')"/>
+            <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_urine_conserve/Non:label')"/>
             <value>Non</value>
           </item>
         </select1>
-        <input ref="/data/tg_sch_p_2404_v2/p_ending_survey_note">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_ending_survey_note:label')"/>
+        <input ref="/data/tg_sch_p_2404_v3/p_ending_survey_note">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_ending_survey_note:label')"/>
         </input>
-        <input ref="/data/tg_sch_p_2404_v2/p_sample_note">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_sample_note:label')"/>
+        <input ref="/data/tg_sch_p_2404_v3/p_sample_note">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_sample_note:label')"/>
         </input>
-        <input ref="/data/tg_sch_p_2404_v2/p_remarks">
-          <label ref="jr:itext('/data/tg_sch_p_2404_v2/p_remarks:label')"/>
+        <input ref="/data/tg_sch_p_2404_v3/p_remarks">
+          <label ref="jr:itext('/data/tg_sch_p_2404_v3/p_remarks:label')"/>
         </input>
       </repeat>
     </group>
