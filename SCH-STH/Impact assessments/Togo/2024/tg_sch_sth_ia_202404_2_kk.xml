@@ -284,7 +284,7 @@
       <bind calculate=" /data/k_nb_children " nodeset="/data/tg_sch_sth_k_2404_v3_count" readonly="true()" type="string"/>
       <bind calculate="position(..)" nodeset="/data/tg_sch_sth_k_2404_v3/C2" type="text"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../k_barcodeid ))" nodeset="/data/tg_sch_sth_k_2404_v3/C3" type="text"/>
-      <bind constraint="not(selected( ../C3 ,  ../k_barcodeid ))" jr:constraintMsg="jr:itext('/data/tg_sch_sth_k_2404_v3/k_barcodeid:jr:constraintMsg')" nodeset="/data/tg_sch_sth_k_2404_v3/k_barcodeid" type="string" db_get="col_4" db_filter_by_col_3="/data/k_site_name"/>
+      <bind constraint="not(selected( ../C3 ,  ../k_barcodeid ))" jr:constraintMsg="jr:itext('/data/tg_sch_sth_k_2404_v3/k_barcodeid:jr:constraintMsg')" nodeset="/data/tg_sch_sth_k_2404_v3/k_barcodeid" type="barcode"/>
       <bind constraint=". =  ../k_barcodeid " jr:constraintMsg="jr:itext('/data/tg_sch_sth_k_2404_v3/k_barcodeid2:jr:constraintMsg')" nodeset="/data/tg_sch_sth_k_2404_v3/k_barcodeid2" required="true()" type="barcode"/>
       <bind nodeset="/data/tg_sch_sth_k_2404_v3/k_sch_man_sa" required="true()" type="int"/>
       <bind nodeset="/data/tg_sch_sth_k_2404_v3/k_sch_man_sb" required="true()" type="int"/>

@@ -279,7 +279,7 @@
       <bind calculate=" /data/u_nb_children " nodeset="/data/tg_sc_st_u_2404_v3_count" readonly="true()" type="string"/>
       <bind calculate="position(..)" nodeset="/data/tg_sc_st_u_2404_v3/C2" type="text"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../u_barcodeid ))" nodeset="/data/tg_sc_st_u_2404_v3/C3" type="text"/>
-      <bind constraint="not(selected( ../C3 ,  ../u_barcodeid ))" jr:constraintMsg="jr:itext('/data/tg_sc_st_u_2404_v3/u_barcodeid:jr:constraintMsg')" nodeset="/data/tg_sc_st_u_2404_v3/u_barcodeid" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/u_site_name"/>
+      <bind constraint="not(selected( ../C3 ,  ../u_barcodeid ))" jr:constraintMsg="jr:itext('/data/tg_sc_st_u_2404_v3/u_barcodeid:jr:constraintMsg')" nodeset="/data/tg_sc_st_u_2404_v3/u_barcodeid" required="true()" type="barcode"/>
       <bind constraint=". =  ../u_barcodeid " jr:constraintMsg="jr:itext('/data/tg_sc_st_u_2404_v3/u_barcodeid2:jr:constraintMsg')" nodeset="/data/tg_sc_st_u_2404_v3/u_barcodeid2" required="true()" type="barcode"/>
       <bind constraint=". &gt;=0 and .&lt; 11" jr:constraintMsg="jr:itext('/data/tg_sc_st_u_2404_v3/u_urine_vol:jr:constraintMsg')" nodeset="/data/tg_sc_st_u_2404_v3/u_urine_vol" required="true()" type="int"/>
       <bind nodeset="/data/tg_sc_st_u_2404_v3/u_sh_egg" required="true()" type="int"/>

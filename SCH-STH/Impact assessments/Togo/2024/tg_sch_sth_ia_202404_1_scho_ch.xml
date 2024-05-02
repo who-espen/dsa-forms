@@ -3280,6 +3280,9 @@
           <text id="/data/w_usp/WARAGNI:label">
             <value>WARAGNI</value>
           </text>
+          <text id="static_instance-source_type-10">
+            <value>Fontaine améliorée</value>
+          </text>
           <text id="/data/w_site_name/SEKO:label">
             <value>SEKO</value>
           </text>
@@ -3900,6 +3903,9 @@
           </text>
           <text id="/data/w_usp/ATALOTE:label">
             <value>ATALOTE</value>
+          </text>
+          <text id="/data/w_site_name/HANGBAKOE:label">
+            <value>HANGBAKOE</value>
           </text>
           <text id="/data/w_usp/HANGOUME:label">
             <value>HANGOUME</value>
@@ -5287,8 +5293,11 @@
           <text id="static_instance-source_type-4">
             <value>Puits creusé sans couvercle (non protégé)</value>
           </text>
-          <text id="/data/w_site_name/HANGBAKOE:label">
-            <value>HANGBAKOE</value>
+          <text id="static_instance-source_type-9">
+            <value>Forage</value>
+          </text>
+          <text id="static_instance-source_type-8">
+            <value>Puits couvert</value>
           </text>
           <text id="/data/w_site_name/KOULANGOU:label">
             <value>KOULANGOU</value>
@@ -7306,6 +7315,18 @@
           <item>
             <itextId>static_instance-source_type-7</itextId>
             <name>Citerne à eau mobile</name>
+          </item>
+          <item>
+            <itextId>static_instance-source_type-8</itextId>
+            <name>Puits couvert</name>
+          </item>
+          <item>
+            <itextId>static_instance-source_type-9</itextId>
+            <name>Forage</name>
+          </item>
+          <item>
+            <itextId>static_instance-source_type-10</itextId>
+            <name>Fontaine améliorée</name>
           </item>
         </root>
       </instance>
@@ -9969,7 +9990,7 @@
       <bind calculate="position(..)" nodeset="/data/tg_sch_p_2404_v3/C2" type="text"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../p_barcodeid ))" nodeset="/data/tg_sch_p_2404_v3/C3" type="text"/>
       <bind nodeset="/data/tg_sch_p_2404_v3/p_consent" required="true()" type="select1"/>
-      <bind constraint="not(selected( ../C3 ,  ../p_barcodeid ))" jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v3/p_barcodeid:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v3/p_barcodeid" relevant=" ../p_consent  = 'A.donne'" type="barcode" db_add_col_3="/data/w_site_name" db_add_col_4="."/>
+      <bind constraint="not(selected( ../C3 ,  ../p_barcodeid ))" jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v3/p_barcodeid:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v3/p_barcodeid" relevant=" ../p_consent  = 'A.donne'" type="barcode"/>
       <bind constraint=". =  ../p_barcodeid " jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v3/p_barcodeid2:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v3/p_barcodeid2" relevant=" ../p_consent  = 'A.donne'" required="true()" type="barcode"/>
       <bind constraint=". &gt;= 5 and . &lt;= 14" jr:constraintMsg="jr:itext('/data/tg_sch_p_2404_v3/p_age_yrs:jr:constraintMsg')" nodeset="/data/tg_sch_p_2404_v3/p_age_yrs" relevant=" ../p_consent  = 'A.donne'" required="true()" type="int"/>
       <bind nodeset="/data/tg_sch_p_2404_v3/p_sex" relevant=" ../p_consent  = 'A.donne'" required="true()" type="select1"/>
@@ -9985,6 +10006,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/w_End" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
     </model>
+    
   </h:head>
   <h:body>
     <input ref="/data/w_note_1">
