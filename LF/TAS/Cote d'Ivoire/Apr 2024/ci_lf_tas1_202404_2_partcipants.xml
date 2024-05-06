@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2024 Avr) 2. TAS1 &amp; 2 FL - Participants V2</h:title>
+    <model>
+
+      <instance>
+        <data id="ci_lf_tas1_202404_2_partcipants_v2">
+          <p_recorderID/>
+          <p_eu_name/>
+          <p_district/>
+          <p_district_id/>
+          <p_cluster_name/>
+          <p_cluster_id/>
+          <p_consent/>
+          <p_sex/>
+          <p_age_yrs/>
+          <p_how_long_lived/>
+          <p_num/>
+          <p_code_id/>
+          <p_ending_survey_note/>
+          <p_notes/>
+          <c_start/>
+          <c_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/p_sex/Male:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/p_num:hint">
+            <value>Doit être compris entre 1 et 410</value>
+          </text>
+          <text id="/data/p_eu_name:label">
+            <value>Sélectionner l'unité d'évaluation (UE)</value>
+          </text>
+          <text id="/data/p_how_long_lived:jr:constraintMsg">
+            <value>La valeur ne doit pas être supérieure à l'âge</value>
+          </text>
+          <text id="/data/p_sex:label">
+            <value>Sexe du participant</value>
+          </text>
+          <text id="/data/p_recorderID:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/p_notes:label">
+            <value>Notes complémentaires</value>
+          </text>
+          <text id="/data/p_age_yrs:jr:constraintMsg">
+            <value>L'age doit être compris entre 5 et 9 ans</value>
+          </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>Vous vener de saisir une valeur qui mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/p_age_yrs:label">
+            <value>Entrer l'âge du participant (en années)</value>
+          </text>
+          <text id="/data/p_consent:label">
+            <value>Le répondant a-t-il donné son consentement?</value>
+          </text>
+          <text id="/data/p_district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/p_recorderID:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui a été attribué à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/p_district_id:label">
+            <value>Sélectionner le code du district</value>
+          </text>
+          <text id="/data/p_cluster_id:label">
+            <value>Sélectionner le code de votre école</value>
+          </text>
+          <text id="/data/p_recorderID:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
+          </text>
+          <text id="/data/p_consent/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_num:jr:constraintMsg">
+            <value>La valeur doit être compris entre 1 et 410</value>
+          </text>
+          <text id="/data/p_consent/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_num:label">
+            <value>Numéro d'ordre</value>
+          </text>
+          <text id="/data/p_sex/Female:label">
+            <value>Féminin</value>
+          </text>
+          <text id="/data/p_code_id:label">
+            <value>Code d'identification du répondant (Veuillez recopier ce code tel qu'il est quelque part entre autre sur les test de diagnostique)</value>
+          </text>
+          <text id="/data/p_how_long_lived:label">
+            <value>Depuis combien d'années le participant habite-t-il dans la communauté?</value>
+          </text>
+          <text id="/data/p_cluster_name:label">
+            <value>Sélectionner votre école</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_recorderID:jr:constraintMsg')" nodeset="/data/p_recorderID" required="true()" type="int"/>
+      <bind nodeset="/data/p_eu_name" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_eu_name"/>
+      <bind nodeset="/data/p_district_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_district"/>
+      <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_district_id"/>
+      <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/p_cluster_name"/>
+      <bind nodeset="/data/p_consent" required="true()" type="select1"/>
+      <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = 'Oui'" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 9" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_how_long_lived:jr:constraintMsg')" nodeset="/data/p_how_long_lived" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
+      <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/p_num:jr:constraintMsg')" nodeset="/data/p_num" relevant=" /data/p_consent  = 'Oui'" required="true()" type="int"/>
+      <bind calculate="concat( /data/p_district_id , '-',  /data/p_cluster_id , '-' , /data/p_num )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
+      <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = 'Non'" type="string"/>
+      <bind nodeset="/data/p_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/p_recorderID">
+      <label ref="jr:itext('/data/p_recorderID:label')"/>
+      <hint ref="jr:itext('/data/p_recorderID:hint')"/>
+    </input>
+    <input ref="/data/p_eu_name">
+      <label ref="jr:itext('/data/p_eu_name:label')"/>
+    </input>
+    <input ref="/data/p_district">
+      <label ref="jr:itext('/data/p_district:label')"/>
+    </input>
+    <input ref="/data/p_district_id">
+      <label ref="jr:itext('/data/p_district_id:label')"/>
+    </input>
+    <input ref="/data/p_cluster_name">
+      <label ref="jr:itext('/data/p_cluster_name:label')"/>
+    </input>
+    <input ref="/data/p_cluster_id">
+      <label ref="jr:itext('/data/p_cluster_id:label')"/>
+    </input>
+    <select1 ref="/data/p_consent">
+      <label ref="jr:itext('/data/p_consent:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_consent/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_consent/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/p_sex">
+      <label ref="jr:itext('/data/p_sex:label')"/>
+      <item>
+        <label ref="jr:itext('/data/p_sex/Male:label')"/>
+        <value>Male</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/p_sex/Female:label')"/>
+        <value>Female</value>
+      </item>
+    </select1>
+    <input ref="/data/p_age_yrs">
+      <label ref="jr:itext('/data/p_age_yrs:label')"/>
+    </input>
+    <input ref="/data/p_how_long_lived">
+      <label ref="jr:itext('/data/p_how_long_lived:label')"/>
+    </input>
+    <input ref="/data/p_num">
+      <label ref="jr:itext('/data/p_num:label')"/>
+      <hint ref="jr:itext('/data/p_num:hint')"/>
+    </input>
+    <input ref="/data/p_code_id">
+      <label ref="jr:itext('/data/p_code_id:label')"/>
+    </input>
+    <input ref="/data/p_ending_survey_note">
+      <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
+    </input>
+    <input ref="/data/p_notes">
+      <label ref="jr:itext('/data/p_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
