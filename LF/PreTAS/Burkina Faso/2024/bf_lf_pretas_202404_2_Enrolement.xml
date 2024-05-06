@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(BF - Apr 2024) Pré TAS FL - 2. Formulaire Enrôlement V2.2</h:title>
+    <model>
+
+    <instance>
+      <data id="bf_lf_pretas_202404_2_Enrolement_v2_2">
+        <p_recorder_id/>
+        <p_district/>
+        <p_formation_sanitaire/>
+        <p_cluster_name/>
+        <p_cluster_id/>
+        <p_consent/>
+        <p_id_method/>
+        <p_barcode_id/>
+        <p_code_id/>
+        <p_code_id2/>
+        <p_Numero_famille/>
+        <p_Numero_Enquete/>
+        <p_Numero_Enquete_complet/>
+        <p_age_yrs/>
+        <p_sex/>
+        <p_statut_enregistrement/>
+        <p_est_persone_deplace/>
+        <p_village_origine/>
+        <p_ancien_positif/>
+        <p_scolarisation/>
+        <p_profession/>
+        <p_dormi_sous_moustiquaire/>
+        <p_annee_vecu_dans_village/>
+        <p_mois_vecu_dans_village/>
+        <p_deja_ete_traiter_par_ivm_alb/>
+        <p_nb_fois_ivm_alb/>
+        <p_raison_non_traitement/>
+        <p_migration/>
+        <p_migration_autre/>
+        <p_lymphoedeme/>
+        <p_hydrocele/>
+        <p_ending_survey_note/>
+        <p_commentaires/>
+        <p_start/>
+        <p_end/>
+        <meta>
+          <instanceID/>
+        </meta>
+      </data>
+    </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/p_migration_autre:label">
+            <value>Si autre précisez</value>
+          </text>
+          <text id="/data/p_consent:label">
+            <value>Le répondant a-t-il donné son consentement?</value>
+          </text>
+          <text id="/data/p_recorder_id/EN01:label">
+            <value>EN01</value>
+          </text>
+          <text id="/data/p_district:label">
+            <value>District</value>
+          </text>
+          <text id="/data/p_mois_vecu_dans_village:jr:constraintMsg">
+            <value>Doit être entre 6 et 11 inclus</value>
+          </text>
+          <text id="/data/p_migration:label">
+            <value>Migration (personnes entrée il y a moins 5 ans d'un pays voisin ou autre localités)</value>
+          </text>
+          <text id="/data/p_annee_vecu_dans_village:jr:constraintMsg">
+            <value>Ne dois pas être supérieure à l'âge</value>
+          </text>
+          <text id="/data/p_dormi_sous_moustiquaire/2_non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_barcode_id:label">
+            <value>Code barre</value>
+          </text>
+          <text id="/data/p_scolarisation/Primaire:label">
+            <value>Primaire</value>
+          </text>
+          <text id="/data/p_raison_non_traitement:label">
+            <value>Pourquoi n'avez-vous jamais été traité?</value>
+          </text>
+          <text id="/data/p_ending_survey_note:label">
+            <value>Vous venez de saisir une valeur qui mettra fin à l'enquête</value>
+          </text>
+          <text id="/data/p_scolarisation/Alphabétise:label">
+            <value>Alphabétise</value>
+          </text>
+          <text id="/data/p_raison_non_traitement/b_Absent_pendant_TDM:label">
+            <value>b. Absent pendant les TDM</value>
+          </text>
+          <text id="/data/p_dormi_sous_moustiquaire/1_oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_recorder_id/EN10:label">
+            <value>EN10</value>
+          </text>
+          <text id="/data/p_hydrocele/2_non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_id_method/manuel:label">
+            <value>Manuel</value>
+          </text>
+          <text id="/data/p_code_id:hint">
+            <value>Exemple "FL2212001"</value>
+          </text>
+          <text id="/data/p_consent/1_oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_deja_ete_traiter_par_ivm_alb:label">
+            <value>Avez-vous déjà été traité à l'ivermectine et Albendazole pour traiter la FL?</value>
+          </text>
+          <text id="/data/p_statut_enregistrement/2 = Enregistré précédemment:label">
+            <value>2 = Enregistré précédemment</value>
+          </text>
+          <text id="/data/p_nb_fois_ivm_alb/deuxfois_ou_plus:label">
+            <value>Deux fois ou plus</value>
+          </text>
+          <text id="/data/p_commentaires:label">
+            <value>Commentaires</value>
+          </text>
+          <text id="/data/p_profession/1 = Etudiant:label">
+            <value>1 = Etudiant</value>
+          </text>
+          <text id="/data/p_raison_non_traitement/f_Autres _raisons:label">
+            <value>f. Autres raisons</value>
+          </text>
+          <text id="/data/p_id_method/scanner:label">
+            <value>Scanner</value>
+          </text>
+          <text id="/data/p_scolarisation:label">
+            <value>Quel est votre niveau de scolarisation?</value>
+          </text>
+          <text id="/data/p_deja_ete_traiter_par_ivm_alb/1_oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_migration/4_autre_pays:label">
+            <value>4. Autre pays</value>
+          </text>
+          <text id="/data/p_village_origine:label">
+            <value>Village de provenance</value>
+          </text>
+          <text id="/data/p_Numero_famille:jr:constraintMsg">
+            <value>Le code doit être 3 chiffres</value>
+          </text>
+          <text id="/data/p_ancien_positif/1_oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_age_yrs:label">
+            <value>Age</value>
+          </text>
+          <text id="/data/p_nb_fois_ivm_alb:label">
+            <value>En incluant la dernière campagne, combien de fois avez-vous avalé l'IVM+ALB</value>
+          </text>
+          <text id="/data/p_profession/2 = Agriculture:label">
+            <value>2 = Agriculture</value>
+          </text>
+          <text id="/data/p_lymphoedeme/1_oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_dormi_sous_moustiquaire:label">
+            <value>Avez-vous dormi sous une moustiquaire la nuit dernière ?</value>
+          </text>
+          <text id="/data/p_lymphoedeme/2_non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_formation_sanitaire:label">
+            <value>Formation sanitaire</value>
+          </text>
+          <text id="/data/p_recorder_id/EN07:label">
+            <value>EN07</value>
+          </text>
+          <text id="/data/p_mois_vecu_dans_village:label">
+            <value>Depuis combien de mois vivez-vous dans ce village ?</value>
+          </text>
+          <text id="/data/p_scolarisation/secondaire:label">
+            <value>secondaire</value>
+          </text>
+          <text id="/data/p_code_id2:label">
+            <value>Saisir le code barre à nouveau</value>
+          </text>
+          <text id="/data/p_hydrocele/1_oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/p_nb_fois_ivm_alb/Nesaitpas:label">
+            <value>Ne sait pas / pas de réponse</value>
+          </text>
+          <text id="/data/p_recorder_id/EN05:label">
+            <value>EN05</value>
+          </text>
+          <text id="/data/p_code_id:label">
+            <value>Saisir le code barre</value>
+          </text>
+          <text id="/data/p_statut_enregistrement:label">
+            <value>Statut d'enregistrement</value>
+          </text>
+          <text id="/data/p_est_persone_deplace/2_non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/p_Numero_Enquete:label">
+            <value>Numéro enquêté (<output value=" /data/p_recorder_id "/>
+            <output value=" /data/p_Numero_famille "/>
+...)</value>
+        </text>
+        <text id="/data/p_hydrocele:label">
+          <value>Présence de Hydrocèle</value>
+        </text>
+        <text id="/data/p_profession/5 = Fonctionnaire (public/privé/ONG):label">
+          <value>5 = Fonctionnaire (public/privé/ONG)</value>
+        </text>
+        <text id="/data/p_Numero_famille:hint">
+          <value>Trois chiffres</value>
+        </text>
+        <text id="/data/p_code_id:jr:constraintMsg">
+          <value>Paramétrer pour prendre 10 caractère</value>
+        </text>
+        <text id="/data/p_recorder_id:label">
+          <value>Code opérateurs</value>
+        </text>
+        <text id="/data/p_Numero_famille:label">
+          <value>Numéro famille</value>
+        </text>
+        <text id="/data/p_age_yrs:jr:constraintMsg">
+          <value>Doit être comprise entre 5 et 110</value>
+        </text>
+        <text id="/data/p_Numero_Enquete:jr:constraintMsg">
+          <value>Entrer uniquement les deux derniers chiffre du numéro enquété</value>
+        </text>
+        <text id="/data/p_recorder_id/EN09:label">
+          <value>EN09</value>
+        </text>
+        <text id="/data/p_id_method:label">
+          <value>Souhaitez-vous scanner ou saisir manuellement le code-barres?</value>
+        </text>
+        <text id="/data/p_ancien_positif/2_non:label">
+          <value>Non</value>
+        </text>
+        <text id="/data/p_est_persone_deplace:label">
+          <value>Etes vous une personne déplacée interne (DPI)</value>
+        </text>
+        <text id="/data/p_migration/2_GH:label">
+          <value>2.Ghana</value>
+        </text>
+        <text id="/data/p_recorder_id/EN04:label">
+          <value>EN04</value>
+        </text>
+        <text id="/data/p_profession/6 = Entreprise:label">
+          <value>6 = Entreprise</value>
+        </text>
+        <text id="/data/p_profession/9 = Mineur/vieillard:label">
+          <value>9 = Mineur/vieillard</value>
+        </text>
+        <text id="/data/p_raison_non_traitement/e_DC_pas_ venu_chez_moi:label">
+          <value>e.Le distributeur n'est pas venu chez moi</value>
+        </text>
+        <text id="/data/p_nb_fois_ivm_alb/une fois:label">
+          <value>Une fois</value>
+        </text>
+        <text id="/data/p_recorder_id/EN11:label">
+          <value>EN11</value>
+        </text>
+        <text id="/data/p_statut_enregistrement/1 = Nouveau:label">
+          <value>1 = Nouveau</value>
+        </text>
+        <text id="/data/p_code_id2:hint">
+          <value>Exemple "FL2212001"</value>
+        </text>
+        <text id="/data/p_sex:label">
+          <value>Sexe</value>
+        </text>
+        <text id="/data/p_raison_non_traitement/c_ Peur_ effets _indesirables:label">
+          <value>c.Peur des effets indesirables</value>
+        </text>
+        <text id="/data/p_sex/M:label">
+          <value>Masculin</value>
+        </text>
+        <text id="/data/p_deja_ete_traiter_par_ivm_alb/2_non:label">
+          <value>Non</value>
+        </text>
+        <text id="/data/p_lymphoedeme:label">
+          <value>Présence de Lymphoedème</value>
+        </text>
+        <text id="/data/p_est_persone_deplace/1_oui:label">
+          <value>Oui</value>
+        </text>
+        <text id="/data/p_raison_non_traitement/d_Pas _au _courant_TDM:label">
+          <value>d. Je n'étais pas au courant du TDM</value>
+        </text>
+        <text id="/data/p_scolarisation/Aucune:label">
+          <value>Aucune</value>
+        </text>
+        <text id="/data/p_recorder_id/EN03:label">
+          <value>EN03</value>
+        </text>
+        <text id="/data/p_cluster_id:label">
+          <value>Code Site</value>
+        </text>
+        <text id="/data/p_recorder_id/EN02:label">
+          <value>EN02</value>
+        </text>
+        <text id="/data/p_annee_vecu_dans_village:label">
+          <value>Depuis combien d'année vivez-vous dans ce village ?</value>
+        </text>
+        <text id="/data/p_sex/F:label">
+          <value>Feminin</value>
+        </text>
+        <text id="/data/p_cluster_name:label">
+          <value>Village/Site</value>
+        </text>
+        <text id="/data/p_profession/8 = Chômeurs/ retraités:label">
+          <value>8 = Chômeurs/ retraités</value>
+        </text>
+        <text id="/data/p_profession/7 = Tâches ménagères:label">
+          <value>7 = Tâches ménagères</value>
+        </text>
+        <text id="/data/p_profession:label">
+          <value>Quelle est votre profession principale ?</value>
+        </text>
+        <text id="/data/p_consent/2_non:label">
+          <value>Non</value>
+        </text>
+        <text id="/data/p_recorder_id/EN12:label">
+          <value>EN12</value>
+        </text>
+        <text id="/data/p_profession/4 = Pêche:label">
+          <value>4 = Pêche</value>
+        </text>
+        <text id="/data/p_scolarisation/Superieure:label">
+          <value>Superieure</value>
+        </text>
+        <text id="/data/p_code_id2:jr:constraintMsg">
+          <value>Le code répété doit être le même</value>
+        </text>
+        <text id="/data/p_migration/3_autre_localité_du_Burkina_Faso:label">
+          <value>3.Autre localité du Burkina Faso</value>
+        </text>
+        <text id="/data/p_profession/3 = Élevage:label">
+          <value>3 = Élevage</value>
+        </text>
+        <text id="/data/p_migration/5_Aucune:label">
+          <value>5.Aucune</value>
+        </text>
+        <text id="/data/p_Numero_Enquete_complet:label">
+          <value>Le numéro complet de l'enquété</value>
+        </text>
+        <text id="/data/p_raison_non_traitement/a_non_eligible:label">
+          <value>a. Non éligible</value>
+        </text>
+        <text id="/data/p_migration/1_RCI:label">
+          <value>1.Côte d'Ivoire</value>
+        </text>
+        <text id="/data/p_recorder_id/EN06:label">
+          <value>EN06</value>
+        </text>
+        <text id="/data/p_ancien_positif:label">
+          <value>Ancien positif</value>
+        </text>
+        <text id="/data/p_recorder_id/EN08:label">
+          <value>EN08</value>
+        </text>
+      </translation>
+    </itext>
+
+    <bind nodeset="/data/p_recorder_id" required="true()" type="select1"/>
+    <bind nodeset="/data/p_district" required="true()" type="string" db_get="col_1"/>
+    <bind nodeset="/data/p_formation_sanitaire" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/p_district"/>
+    <bind nodeset="/data/p_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/p_formation_sanitaire"/>
+    <bind nodeset="/data/p_cluster_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/p_cluster_name"/>
+    <bind nodeset="/data/p_consent" type="select1"/>
+    <bind nodeset="/data/p_id_method" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_barcode_id" relevant=" /data/p_id_method ='scanner' and  /data/p_consent  = '1_oui'" required="true()" type="barcode"/>
+    <bind constraint="string-length(.)=9" jr:constraintMsg="jr:itext('/data/p_code_id:jr:constraintMsg')" nodeset="/data/p_code_id" relevant=" /data/p_id_method ='manuel' and  /data/p_consent  = '1_oui'" required="true()" type="string"/>
+    <bind constraint=". =  /data/p_code_id " jr:constraintMsg="jr:itext('/data/p_code_id2:jr:constraintMsg')" nodeset="/data/p_code_id2" relevant=" /data/p_id_method ='manuel' and  /data/p_consent  = '1_oui'" required="true()" type="string"/>
+    <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/p_Numero_famille:jr:constraintMsg')" nodeset="/data/p_Numero_famille" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
+    <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/p_Numero_Enquete:jr:constraintMsg')" nodeset="/data/p_Numero_Enquete" relevant=" /data/p_consent  = '1_oui'" required="true()" type="string"/>
+    <bind calculate="concat( /data/p_cluster_id , '-', /data/p_recorder_id ,'-',  /data/p_Numero_famille ,'-', /data/p_Numero_Enquete )" nodeset="/data/p_Numero_Enquete_complet" readonly="true()" relevant=" /data/p_consent  = '1_oui'" type="string"/>
+    <bind constraint=".&gt;4 and .&lt;110" jr:constraintMsg="jr:itext('/data/p_age_yrs:jr:constraintMsg')" nodeset="/data/p_age_yrs" relevant=" /data/p_consent  = '1_oui'" required="true()" type="int"/>
+    <bind nodeset="/data/p_sex" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_statut_enregistrement" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_est_persone_deplace" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_village_origine" relevant=" /data/p_consent  = '1_oui' and  /data/p_est_persone_deplace  = '1_oui'" required="true()" type="string"/>
+    <bind nodeset="/data/p_ancien_positif" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_scolarisation" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_profession" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_dormi_sous_moustiquaire" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind constraint=". &lt;=  /data/p_age_yrs " jr:constraintMsg="jr:itext('/data/p_annee_vecu_dans_village:jr:constraintMsg')" nodeset="/data/p_annee_vecu_dans_village" relevant=" /data/p_consent  = '1_oui'" required="true()" type="int"/>
+    <bind constraint=". &gt;= 6 and . &lt;= 11" jr:constraintMsg="jr:itext('/data/p_mois_vecu_dans_village:jr:constraintMsg')" nodeset="/data/p_mois_vecu_dans_village" relevant=" /data/p_consent  = '1_oui' and  /data/p_annee_vecu_dans_village  = 0" required="true()" type="int"/>
+    <bind nodeset="/data/p_deja_ete_traiter_par_ivm_alb" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_nb_fois_ivm_alb" relevant=" /data/p_deja_ete_traiter_par_ivm_alb ='1_oui' and  /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_raison_non_traitement" relevant=" /data/p_deja_ete_traiter_par_ivm_alb ='2_non' and  /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_migration" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_migration_autre" relevant=" /data/p_migration ='13_autre_pays' and  /data/p_consent  = '1_oui'" type="string"/>
+    <bind nodeset="/data/p_lymphoedeme" relevant=" /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_hydrocele" relevant=" /data/p_sex ='M' and  /data/p_consent  = '1_oui'" required="true()" type="select1"/>
+    <bind nodeset="/data/p_ending_survey_note" readonly="true()" relevant=" /data/p_consent  = '2_non'" type="string"/>
+    <bind nodeset="/data/p_commentaires" type="string"/>
+    <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/p_start" type="dateTime"/>
+    <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/p_end" type="dateTime"/>
+    <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+  </model>
+</h:head>
+<h:body>
+  <select1 ref="/data/p_recorder_id">
+    <label ref="jr:itext('/data/p_recorder_id:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN01:label')"/>
+      <value>EN01</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN02:label')"/>
+      <value>EN02</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN03:label')"/>
+      <value>EN03</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN04:label')"/>
+      <value>EN04</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN05:label')"/>
+      <value>EN05</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN06:label')"/>
+      <value>EN06</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN07:label')"/>
+      <value>EN07</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN08:label')"/>
+      <value>EN08</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN09:label')"/>
+      <value>EN09</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN10:label')"/>
+      <value>EN10</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN11:label')"/>
+      <value>EN11</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_recorder_id/EN12:label')"/>
+      <value>EN12</value>
+    </item>
+  </select1>
+  <input ref="/data/p_district">
+    <label ref="jr:itext('/data/p_district:label')"/>
+  </input>
+  <input ref="/data/p_formation_sanitaire">
+    <label ref="jr:itext('/data/p_formation_sanitaire:label')"/>
+  </input>
+  <input ref="/data/p_cluster_name">
+    <label ref="jr:itext('/data/p_cluster_name:label')"/>
+  </input>
+  <input ref="/data/p_cluster_id">
+    <label ref="jr:itext('/data/p_cluster_id:label')"/>
+  </input>
+  <select1 ref="/data/p_consent">
+    <label ref="jr:itext('/data/p_consent:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_consent/1_oui:label')"/>
+      <value>1_oui</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_consent/2_non:label')"/>
+      <value>2_non</value>
+    </item>
+  </select1>
+  <select1 ref="/data/p_id_method">
+    <label ref="jr:itext('/data/p_id_method:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_id_method/manuel:label')"/>
+      <value>manuel</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_id_method/scanner:label')"/>
+      <value>scanner</value>
+    </item>
+  </select1>
+  <input ref="/data/p_barcode_id">
+    <label ref="jr:itext('/data/p_barcode_id:label')"/>
+  </input>
+  <input ref="/data/p_code_id">
+    <label ref="jr:itext('/data/p_code_id:label')"/>
+    <hint ref="jr:itext('/data/p_code_id:hint')"/>
+  </input>
+  <input ref="/data/p_code_id2">
+    <label ref="jr:itext('/data/p_code_id2:label')"/>
+    <hint ref="jr:itext('/data/p_code_id2:hint')"/>
+  </input>
+  <input ref="/data/p_Numero_famille">
+    <label ref="jr:itext('/data/p_Numero_famille:label')"/>
+    <hint ref="jr:itext('/data/p_Numero_famille:hint')"/>
+  </input>
+  <input ref="/data/p_Numero_Enquete">
+    <label ref="jr:itext('/data/p_Numero_Enquete:label')"/>
+  </input>
+  <input ref="/data/p_Numero_Enquete_complet">
+    <label ref="jr:itext('/data/p_Numero_Enquete_complet:label')"/>
+  </input>
+  <input ref="/data/p_age_yrs">
+    <label ref="jr:itext('/data/p_age_yrs:label')"/>
+  </input>
+  <select1 ref="/data/p_sex">
+    <label ref="jr:itext('/data/p_sex:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_sex/F:label')"/>
+      <value>F</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_sex/M:label')"/>
+      <value>M</value>
+    </item>
+  </select1>
+  <select1 ref="/data/p_statut_enregistrement">
+    <label ref="jr:itext('/data/p_statut_enregistrement:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_statut_enregistrement/1 = Nouveau:label')"/>
+      <value>1 = Nouveau</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_statut_enregistrement/2 = Enregistré précédemment:label')"/>
+      <value>2 = Enregistré précédemment</value>
+    </item>
+  </select1>
+  <select1 ref="/data/p_est_persone_deplace">
+    <label ref="jr:itext('/data/p_est_persone_deplace:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_est_persone_deplace/1_oui:label')"/>
+      <value>1_oui</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_est_persone_deplace/2_non:label')"/>
+      <value>2_non</value>
+    </item>
+  </select1>
+  <input ref="/data/p_village_origine">
+    <label ref="jr:itext('/data/p_village_origine:label')"/>
+  </input>
+  <select1 ref="/data/p_ancien_positif">
+    <label ref="jr:itext('/data/p_ancien_positif:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_ancien_positif/1_oui:label')"/>
+      <value>1_oui</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_ancien_positif/2_non:label')"/>
+      <value>2_non</value>
+    </item>
+  </select1>
+  <select1 ref="/data/p_scolarisation">
+    <label ref="jr:itext('/data/p_scolarisation:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_scolarisation/Aucune:label')"/>
+      <value>Aucune</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_scolarisation/Alphabétise:label')"/>
+      <value>Alphabétise</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_scolarisation/Primaire:label')"/>
+      <value>Primaire</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_scolarisation/secondaire:label')"/>
+      <value>secondaire</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_scolarisation/Superieure:label')"/>
+      <value>Superieure</value>
+    </item>
+  </select1>
+  <select1 ref="/data/p_profession">
+    <label ref="jr:itext('/data/p_profession:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_profession/1 = Etudiant:label')"/>
+      <value>1 = Etudiant</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_profession/2 = Agriculture:label')"/>
+      <value>2 = Agriculture</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_profession/3 = Élevage:label')"/>
+      <value>3 = Élevage</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_profession/4 = Pêche:label')"/>
+      <value>4 = Pêche</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_profession/5 = Fonctionnaire (public/privé/ONG):label')"/>
+      <value>5 = Fonctionnaire (public/privé/ONG)</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_profession/6 = Entreprise:label')"/>
+      <value>6 = Entreprise</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_profession/7 = Tâches ménagères:label')"/>
+      <value>7 = Tâches ménagères</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_profession/8 = Chômeurs/ retraités:label')"/>
+      <value>8 = Chômeurs/ retraités</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_profession/9 = Mineur/vieillard:label')"/>
+      <value>9 = Mineur/vieillard</value>
+    </item>
+  </select1>
+  <select1 ref="/data/p_dormi_sous_moustiquaire">
+    <label ref="jr:itext('/data/p_dormi_sous_moustiquaire:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_dormi_sous_moustiquaire/1_oui:label')"/>
+      <value>1_oui</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_dormi_sous_moustiquaire/2_non:label')"/>
+      <value>2_non</value>
+    </item>
+  </select1>
+  <input ref="/data/p_annee_vecu_dans_village">
+    <label ref="jr:itext('/data/p_annee_vecu_dans_village:label')"/>
+  </input>
+  <input ref="/data/p_mois_vecu_dans_village">
+    <label ref="jr:itext('/data/p_mois_vecu_dans_village:label')"/>
+  </input>
+  <select1 ref="/data/p_deja_ete_traiter_par_ivm_alb">
+    <label ref="jr:itext('/data/p_deja_ete_traiter_par_ivm_alb:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_deja_ete_traiter_par_ivm_alb/1_oui:label')"/>
+      <value>1_oui</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_deja_ete_traiter_par_ivm_alb/2_non:label')"/>
+      <value>2_non</value>
+    </item>
+  </select1>
+  <select1 ref="/data/p_nb_fois_ivm_alb">
+    <label ref="jr:itext('/data/p_nb_fois_ivm_alb:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_nb_fois_ivm_alb/une fois:label')"/>
+      <value>une fois</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_nb_fois_ivm_alb/deuxfois_ou_plus:label')"/>
+      <value>deuxfois_ou_plus</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_nb_fois_ivm_alb/Nesaitpas:label')"/>
+      <value>Nesaitpas</value>
+    </item>
+  </select1>
+  <select1 ref="/data/p_raison_non_traitement">
+    <label ref="jr:itext('/data/p_raison_non_traitement:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_raison_non_traitement/a_non_eligible:label')"/>
+      <value>a_non_eligible</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_raison_non_traitement/b_Absent_pendant_TDM:label')"/>
+      <value>b_Absent_pendant_TDM</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_raison_non_traitement/c_ Peur_ effets _indesirables:label')"/>
+      <value>c_ Peur_ effets _indesirables</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_raison_non_traitement/d_Pas _au _courant_TDM:label')"/>
+      <value>d_Pas _au _courant_TDM</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_raison_non_traitement/e_DC_pas_ venu_chez_moi:label')"/>
+      <value>e_DC_pas_ venu_chez_moi</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_raison_non_traitement/f_Autres _raisons:label')"/>
+      <value>f_Autres _raisons</value>
+    </item>
+  </select1>
+  <select1 ref="/data/p_migration">
+    <label ref="jr:itext('/data/p_migration:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_migration/1_RCI:label')"/>
+      <value>1_RCI</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_migration/2_GH:label')"/>
+      <value>2_GH</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_migration/3_autre_localité_du_Burkina_Faso:label')"/>
+      <value>3_autre_localité_du_Burkina_Faso</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_migration/4_autre_pays:label')"/>
+      <value>4_autre_pays</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_migration/5_Aucune:label')"/>
+      <value>5_Aucune</value>
+    </item>
+  </select1>
+  <input ref="/data/p_migration_autre">
+    <label ref="jr:itext('/data/p_migration_autre:label')"/>
+  </input>
+  <select1 ref="/data/p_lymphoedeme">
+    <label ref="jr:itext('/data/p_lymphoedeme:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_lymphoedeme/1_oui:label')"/>
+      <value>1_oui</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_lymphoedeme/2_non:label')"/>
+      <value>2_non</value>
+    </item>
+  </select1>
+  <select1 ref="/data/p_hydrocele">
+    <label ref="jr:itext('/data/p_hydrocele:label')"/>
+    <item>
+      <label ref="jr:itext('/data/p_hydrocele/1_oui:label')"/>
+      <value>1_oui</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/p_hydrocele/2_non:label')"/>
+      <value>2_non</value>
+    </item>
+  </select1>
+  <input ref="/data/p_ending_survey_note">
+    <label ref="jr:itext('/data/p_ending_survey_note:label')"/>
+  </input>
+  <input ref="/data/p_commentaires">
+    <label ref="jr:itext('/data/p_commentaires:label')"/>
+  </input>
+</h:body>
+</h:html>

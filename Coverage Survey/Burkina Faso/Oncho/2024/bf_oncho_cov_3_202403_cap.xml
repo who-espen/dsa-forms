@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(Mar 2024) BFA Cov ONCHO - 3.Formulaire CAP</h:title>
+    <model>
+
+      <instance>
+        <data id="bf_oncho_cov_3_202403_cap">
+          <code_equipe/>
+          <csps/>
+          <grappe/>
+          <num_grappe/>
+          <num_menage/>
+          <num_ordre/>
+          <age/>
+          <sexe/>
+          <niveau_instruction/>
+          <duree_resident/>
+          <duree_resident_mois/>
+          <entendu_parler_oncho/>
+          <inquiet/>
+          <manifestations/>
+          <autres_manisfestations/>
+          <mode_transmission/>
+          <Autres_transmission/>
+          <prevention/>
+          <Autres_prevention/>
+          <cnce_aveugle/>
+          <nombre_aveugle/>
+          <informe/>
+          <canaux_information/>
+          <autres_canaux_information/>
+          <nbre_resident_menage/>
+          <nbre_resident_moins5ans/>
+          <resident_non_traite/>
+          <nbre_resident_non_traite/>
+          <existence_perception_dc/>
+          <perception_dc/>
+          <suggestions/>
+          <gps/>
+          <commentaires/>
+          <start/>
+          <end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/code_equipe:hint">
+            <value>Entrez le code de l'équipe</value>
+          </text>
+          <text id="/data/manifestations/Diminution_de_l.acuite_visuelle:label">
+            <value>Diminution de l'acuité visuelle</value>
+          </text>
+          <text id="/data/manifestations/Ne_sait_pas:label">
+            <value>Ne sait pas</value>
+          </text>
+          <text id="/data/inquiet/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/resident_non_traite/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/inquiet:label">
+            <value>12. Êtes-vous inquiet par le fait que vous pouvez attraper l'onchocercose ?</value>
+          </text>
+          <text id="/data/duree_resident_mois:label">
+            <value>10b. Si la durée de résidence est moins de 1 an, précisez le nombre de mois</value>
+          </text>
+          <text id="/data/mode_transmission/Piqure_de_moustique:label">
+            <value>Piqure de moustique</value>
+          </text>
+          <text id="/data/niveau_instruction/Secondaire:label">
+            <value>Secondaire</value>
+          </text>
+          <text id="/data/sexe/M:label">
+            <value>Masculin</value>
+          </text>
+          <text id="/data/code_equipe/1:label">
+            <value>1</value>
+          </text>
+          <text id="/data/prevention/Application_de_cremes_repulsives_sur_la_peau:label">
+            <value>Application de crèmes répulsives sur la peau</value>
+          </text>
+          <text id="/data/entendu_parler_oncho/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/mode_transmission/Other:label">
+            <value>Autres à préciser ;</value>
+          </text>
+          <text id="/data/perception_dc:label">
+            <value>23. Perception des gens vis-à-vis des distributeurs de ces médicaments?</value>
+          </text>
+          <text id="/data/num_menage:hint">
+            <value>une lettre majuscule suivi de 2 chiffres. Exemple: A01</value>
+          </text>
+          <text id="/data/sexe:label">
+            <value>8. Sexe</value>
+          </text>
+          <text id="/data/canaux_information/Agents_de_sante:label">
+            <value>Agents de santé</value>
+          </text>
+          <text id="/data/nbre_resident_moins5ans:label">
+            <value>20. Combien de personnes de moins de 5 ans habitent régulièrement dans votre ménage ?</value>
+          </text>
+          <text id="/data/entendu_parler_oncho/Ne_sait_pas:label">
+            <value>Ne sait pas</value>
+          </text>
+          <text id="/data/prevention/Utilisation_de_moustiquaire:label">
+            <value>Utilisation de moustiquaire</value>
+          </text>
+          <text id="/data/nbre_resident_non_traite:label">
+            <value>21b. Si oui combien de résidents éligibles n'ont pas été traités</value>
+          </text>
+          <text id="/data/nombre_aveugle:label">
+            <value>16b. Nombre d'aveugles</value>
+          </text>
+          <text id="/data/Autres_prevention:label">
+            <value>15b. Autres modes de prévention</value>
+          </text>
+          <text id="/data/cnce_aveugle/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/niveau_instruction:label">
+            <value>9. Niveau d'instruction du répondant</value>
+          </text>
+          <text id="/data/niveau_instruction/Primaire:label">
+            <value>Primaire</value>
+          </text>
+          <text id="/data/autres_canaux_information:label">
+            <value>18b. Autres canaux d'information</value>
+          </text>
+          <text id="/data/num_ordre:hint">
+            <value>Numéro d'ordre du participant dans le ménage</value>
+          </text>
+          <text id="/data/existence_perception_dc:label">
+            <value>22. Y a t-il quelque chose que vous voulez nous dire sur ce que les gens vous disent au sujet des distributeurs de ces médicaments?</value>
+          </text>
+          <text id="/data/age:hint">
+            <value>Entre 18 et 120 ans</value>
+          </text>
+          <text id="/data/num_grappe:hint">
+            <value>Le numéro doit être compris entre 1 et 30</value>
+          </text>
+          <text id="/data/manifestations:label">
+            <value>13. Quelles sont les manifestations de l'onchocercose ?</value>
+          </text>
+          <text id="/data/num_menage:label">
+            <value>5. Numéro ménage</value>
+          </text>
+          <text id="/data/Autres_transmission:label">
+            <value>14b. Autres modes de transmission</value>
+          </text>
+          <text id="/data/manifestations/Cecite_d.un_ou_des_deux_yeux:label">
+            <value>Cécité d'un ou des deux yeux</value>
+          </text>
+          <text id="/data/duree_resident:label">
+            <value>10. Depuis combien de temps vivez-vous dans ce village</value>
+          </text>
+          <text id="/data/prevention/Traitement_de_masse_avec_l.ivermectine:label">
+            <value>Traitement de masse avec l'ivermectine</value>
+          </text>
+          <text id="/data/csps:hint">
+            <value>Sélectionnez le CSPS</value>
+          </text>
+          <text id="/data/mode_transmission/Boisson_d.eau_de_marigot:label">
+            <value>Boisson d'eau de marigot</value>
+          </text>
+          <text id="/data/manifestations/Other:label">
+            <value>Autres (à préciser)</value>
+          </text>
+          <text id="/data/age:label">
+            <value>7. Age (en année)</value>
+          </text>
+          <text id="/data/manifestations/Prurit_cutane_localise:label">
+            <value>Prurit cutané localisé</value>
+          </text>
+          <text id="/data/mode_transmission/Ne_sait_pas:label">
+            <value>Ne_sait_pas</value>
+          </text>
+          <text id="/data/code_equipe/4:label">
+            <value>4</value>
+          </text>
+          <text id="/data/sexe/F:label">
+            <value>Féminin</value>
+          </text>
+          <text id="/data/niveau_instruction/Aucun:label">
+            <value>Aucun</value>
+          </text>
+          <text id="/data/informe/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/entendu_parler_oncho:label">
+            <value>11. Avez-vous déjà entendu parler de l'onchocercose ?</value>
+          </text>
+          <text id="/data/canaux_information/Les_responsables_administratifs_locaux:label">
+            <value>Les responsables administratifs locaux</value>
+          </text>
+          <text id="/data/prevention/Port_de_pantalon_chemises_manches_longues:label">
+            <value>Port de pantalon chemises manches longues</value>
+          </text>
+          <text id="/data/entendu_parler_oncho/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/cnce_aveugle/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/resident_non_traite/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/manifestations/depigmentees_Nodule_de_taille_sous_la_peau:label">
+            <value>dépigmentées  Nodule de taille sous la peau.</value>
+          </text>
+          <text id="/data/niveau_instruction/Alphabetise:label">
+            <value>Alphabétisé</value>
+          </text>
+          <text id="/data/grappe:hint">
+            <value>Sélectionnez la grappe</value>
+          </text>
+          <text id="/data/inquiet/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/informe/Ne_sait_pas:label">
+            <value>Ne sait pas</value>
+          </text>
+          <text id="/data/grappe:label">
+            <value>3. Grappe:</value>
+          </text>
+          <text id="/data/code_equipe:label">
+            <value>1.Code Equipe</value>
+          </text>
+          <text id="/data/cnce_aveugle:label">
+            <value>16. Connaissez-vous des personnes aveugles dans ce village ?</value>
+          </text>
+          <text id="/data/canaux_information/Other:label">
+            <value>autres (à préciser)</value>
+          </text>
+          <text id="/data/duree_resident_mois:jr:constraintMsg">
+            <value>Entre 2 et 11 mois uniquement</value>
+          </text>
+          <text id="/data/age:jr:constraintMsg">
+            <value>L'age doit être au moins 18 ans et au plus 120 ans</value>
+          </text>
+          <text id="/data/code_equipe/5:label">
+            <value>5</value>
+          </text>
+          <text id="/data/duree_resident_mois:hint">
+            <value>Age compris entre 2 et 11 mois</value>
+          </text>
+          <text id="/data/prevention/Ne_sait_pas:label">
+            <value>Ne_sait_pas</value>
+          </text>
+          <text id="/data/resident_non_traite:label">
+            <value>21. Avez-vous des membres de votre famille de 5 ans et plus qui n'ont pas pu avoir les médicaments ?</value>
+          </text>
+          <text id="/data/csps:label">
+            <value>2. CSPS</value>
+          </text>
+          <text id="/data/num_menage:jr:constraintMsg">
+            <value>une lettre majuscule suivi de 2 chiffres</value>
+          </text>
+          <text id="/data/autres_manisfestations:label">
+            <value>13b. Autres manisfestations de l'oncho</value>
+          </text>
+          <text id="/data/num_ordre:label">
+            <value>6. Numéro d'ordre du participant</value>
+          </text>
+          <text id="/data/resident_non_traite/Ne_sait_pas:label">
+            <value>Ne sait pas</value>
+          </text>
+          <text id="/data/code_equipe/3:label">
+            <value>3</value>
+          </text>
+          <text id="/data/informe:label">
+            <value>17. Avez-vous entendu parler de la dernière campagne de distribution de l'ivermectine?</value>
+          </text>
+          <text id="/data/canaux_information/Radio:label">
+            <value>Radio</value>
+          </text>
+          <text id="/data/commentaires:label">
+            <value>26. commentaires</value>
+          </text>
+          <text id="/data/nbre_resident_menage:label">
+            <value>19. Combien de personnes habitent régulièrement dans votre ménage ?</value>
+          </text>
+          <text id="/data/prevention/Other:label">
+            <value>Autres (préciser)</value>
+          </text>
+          <text id="/data/canaux_information:label">
+            <value>18.Comment avez-vous entendu parler de la campagne de distribution ?</value>
+          </text>
+          <text id="/data/suggestions:label">
+            <value>24. Que peut-on faire pour amener les gens à avaler correctement les médicaments ?</value>
+          </text>
+          <text id="/data/num_grappe:jr:constraintMsg">
+            <value>Le numéro doit être compris entre 1 et 30</value>
+          </text>
+          <text id="/data/manifestations/Parties_de_la_peau_epaisses:label">
+            <value>Parties de la peau épaisses</value>
+          </text>
+          <text id="/data/num_grappe:label">
+            <value>4. Numéro de la grappe:</value>
+          </text>
+          <text id="/data/mode_transmission/A_travers_la_piqure_d.une_petite_mouche:label">
+            <value>A travers la piqûre d'une petite mouche</value>
+          </text>
+          <text id="/data/prevention:label">
+            <value>15. Que peut-on faire pour prévenir l'onchocercose</value>
+          </text>
+          <text id="/data/canaux_information/Les_Distributeurs_communautaires/crieurs_publics:label">
+            <value>Les Distributeurs communautaires/crieurs publics</value>
+          </text>
+          <text id="/data/canaux_information/Affiches:label">
+            <value>Affiches</value>
+          </text>
+          <text id="/data/code_equipe/2:label">
+            <value>2</value>
+          </text>
+          <text id="/data/duree_resident:jr:constraintMsg">
+            <value>La durée de résidence ne peut-être supérieure à l'age de l'enquêté!</value>
+          </text>
+          <text id="/data/inquiet/Ne_sait_pas:label">
+            <value>Ne sait pas</value>
+          </text>
+          <text id="/data/informe/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/mode_transmission:label">
+            <value>14. Comment peut-on contracter l'onchocercose ?</value>
+          </text>
+          <text id="/data/niveau_instruction/Superieur:label">
+            <value>Supérieur</value>
+          </text>
+          <text id="/data/manifestations/Conjonctivite_(larmoiement,_photophobie):label">
+            <value>Conjonctivite (larmoiement, photophobie)</value>
+          </text>
+          <text id="/data/canaux_information/Message_dans_l.eglise/mosquee:label">
+            <value>Message dans l'église/mosquée</value>
+          </text>
+          <text id="/data/gps:label">
+            <value>25.GPS</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/code_equipe" required="true()" type="select1"/>
+      <bind nodeset="/data/csps" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/grappe" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/csps"/>
+      <bind nodeset="/data/num_grappe" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/csps"/>
+      <bind constraint="regex(.,'^[A-Z]{1}[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/num_menage:jr:constraintMsg')" nodeset="/data/num_menage" required="true()" type="string"/>
+      <bind constraint=".&lt; 100" nodeset="/data/num_ordre" required="true()" type="int"/>
+      <bind constraint=". &gt;= 18 and .&lt;=120" jr:constraintMsg="jr:itext('/data/age:jr:constraintMsg')" nodeset="/data/age" required="true()" type="int"/>
+      <bind nodeset="/data/sexe" required="true()" type="select1"/>
+      <bind nodeset="/data/niveau_instruction" required="true()" type="select1"/>
+      <bind constraint=". &lt;=  /data/age " jr:constraintMsg="jr:itext('/data/duree_resident:jr:constraintMsg')" nodeset="/data/duree_resident" required="true()" type="int"/>
+      <bind constraint=". &gt;= 2 and . &lt;= 11" jr:constraintMsg="jr:itext('/data/duree_resident_mois:jr:constraintMsg')" nodeset="/data/duree_resident_mois" relevant=" /data/duree_resident  &lt; 1 or  /data/age  = 0" required="true()" type="int"/>
+      <bind nodeset="/data/entendu_parler_oncho" required="true()" type="select1"/>
+      <bind nodeset="/data/inquiet" relevant=" /data/entendu_parler_oncho  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/manifestations" relevant=" /data/entendu_parler_oncho  = 'Oui'" required="true()" type="select"/>
+      <bind nodeset="/data/autres_manisfestations" relevant=" /data/entendu_parler_oncho  = 'Oui' and selected( /data/manifestations , 'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/mode_transmission" relevant=" /data/entendu_parler_oncho  = 'Oui'" required="true()" type="select"/>
+      <bind nodeset="/data/Autres_transmission" relevant=" /data/entendu_parler_oncho  = 'Oui' and selected( /data/mode_transmission , 'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/prevention" required="true()" type="select"/>
+      <bind nodeset="/data/Autres_prevention" relevant="selected( /data/prevention , 'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/cnce_aveugle" relevant=" /data/entendu_parler_oncho  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/nombre_aveugle" relevant=" /data/cnce_aveugle  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/informe" required="true()" type="select1"/>
+      <bind nodeset="/data/canaux_information" relevant=" /data/informe  = 'Oui'" required="true()" type="select"/>
+      <bind nodeset="/data/autres_canaux_information" relevant=" /data/informe  = 'Oui' and selected( /data/canaux_information , 'Other')" required="true()" type="string"/>
+      <bind nodeset="/data/nbre_resident_menage" required="true()" type="int"/>
+      <bind nodeset="/data/nbre_resident_moins5ans" required="true()" type="int"/>
+      <bind nodeset="/data/resident_non_traite" required="true()" type="select1"/>
+      <bind nodeset="/data/nbre_resident_non_traite" relevant=" /data/resident_non_traite  = 'Oui'" required="true()" type="int"/>
+      <bind nodeset="/data/existence_perception_dc" required="true()" type="string"/>
+      <bind nodeset="/data/perception_dc" relevant=" /data/existence_perception_dc  = 'Oui'" type="string"/>
+      <bind nodeset="/data/suggestions" type="string"/>
+      <bind nodeset="/data/gps" required="true()" type="geopoint"/>
+      <bind nodeset="/data/commentaires" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <select1 ref="/data/code_equipe">
+      <label ref="jr:itext('/data/code_equipe:label')"/>
+      <hint ref="jr:itext('/data/code_equipe:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/code_equipe/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/code_equipe/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/code_equipe/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/code_equipe/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/code_equipe/5:label')"/>
+        <value>5</value>
+      </item>
+    </select1>
+    <input ref="/data/csps">
+      <label ref="jr:itext('/data/csps:label')"/>
+      <hint ref="jr:itext('/data/csps:hint')"/>
+    </input>
+    <input ref="/data/grappe">
+      <label ref="jr:itext('/data/grappe:label')"/>
+      <hint ref="jr:itext('/data/grappe:hint')"/>
+    </input>
+    <input ref="/data/num_grappe">
+      <label ref="jr:itext('/data/num_grappe:label')"/>
+      <hint ref="jr:itext('/data/num_grappe:hint')"/>
+    </input>
+    <input ref="/data/num_menage">
+      <label ref="jr:itext('/data/num_menage:label')"/>
+      <hint ref="jr:itext('/data/num_menage:hint')"/>
+    </input>
+    <input ref="/data/num_ordre">
+      <label ref="jr:itext('/data/num_ordre:label')"/>
+      <hint ref="jr:itext('/data/num_ordre:hint')"/>
+    </input>
+    <input ref="/data/age">
+      <label ref="jr:itext('/data/age:label')"/>
+      <hint ref="jr:itext('/data/age:hint')"/>
+    </input>
+    <select1 ref="/data/sexe">
+      <label ref="jr:itext('/data/sexe:label')"/>
+      <item>
+        <label ref="jr:itext('/data/sexe/F:label')"/>
+        <value>F</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/sexe/M:label')"/>
+        <value>M</value>
+      </item>
+    </select1>
+    <select1 ref="/data/niveau_instruction">
+      <label ref="jr:itext('/data/niveau_instruction:label')"/>
+      <item>
+        <label ref="jr:itext('/data/niveau_instruction/Aucun:label')"/>
+        <value>Aucun</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/niveau_instruction/Primaire:label')"/>
+        <value>Primaire</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/niveau_instruction/Secondaire:label')"/>
+        <value>Secondaire</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/niveau_instruction/Superieur:label')"/>
+        <value>Superieur</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/niveau_instruction/Alphabetise:label')"/>
+        <value>Alphabetise</value>
+      </item>
+    </select1>
+    <input ref="/data/duree_resident">
+      <label ref="jr:itext('/data/duree_resident:label')"/>
+    </input>
+    <input ref="/data/duree_resident_mois">
+      <label ref="jr:itext('/data/duree_resident_mois:label')"/>
+      <hint ref="jr:itext('/data/duree_resident_mois:hint')"/>
+    </input>
+    <select1 ref="/data/entendu_parler_oncho">
+      <label ref="jr:itext('/data/entendu_parler_oncho:label')"/>
+      <item>
+        <label ref="jr:itext('/data/entendu_parler_oncho/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/entendu_parler_oncho/Non:label')"/>
+        <value>Non</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/entendu_parler_oncho/Ne_sait_pas:label')"/>
+        <value>Ne_sait_pas</value>
+      </item>
+    </select1>
+    <select1 ref="/data/inquiet">
+      <label ref="jr:itext('/data/inquiet:label')"/>
+      <item>
+        <label ref="jr:itext('/data/inquiet/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/inquiet/Non:label')"/>
+        <value>Non</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/inquiet/Ne_sait_pas:label')"/>
+        <value>Ne_sait_pas</value>
+      </item>
+    </select1>
+    <select ref="/data/manifestations">
+      <label ref="jr:itext('/data/manifestations:label')"/>
+      <item>
+        <label ref="jr:itext('/data/manifestations/Prurit_cutane_localise:label')"/>
+        <value>Prurit_cutane_localise</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/manifestations/Parties_de_la_peau_epaisses:label')"/>
+        <value>Parties_de_la_peau_epaisses</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/manifestations/depigmentees_Nodule_de_taille_sous_la_peau:label')"/>
+        <value>depigmentees_Nodule_de_taille_sous_la_peau</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/manifestations/Conjonctivite_(larmoiement,_photophobie):label')"/>
+        <value>Conjonctivite_(larmoiement,_photophobie)</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/manifestations/Diminution_de_l.acuite_visuelle:label')"/>
+        <value>Diminution_de_l.acuite_visuelle</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/manifestations/Cecite_d.un_ou_des_deux_yeux:label')"/>
+        <value>Cecite_d.un_ou_des_deux_yeux</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/manifestations/Ne_sait_pas:label')"/>
+        <value>Ne_sait_pas</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/manifestations/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/autres_manisfestations">
+      <label ref="jr:itext('/data/autres_manisfestations:label')"/>
+    </input>
+    <select ref="/data/mode_transmission">
+      <label ref="jr:itext('/data/mode_transmission:label')"/>
+      <item>
+        <label ref="jr:itext('/data/mode_transmission/A_travers_la_piqure_d.une_petite_mouche:label')"/>
+        <value>A_travers_la_piqure_d.une_petite_mouche</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/mode_transmission/Boisson_d.eau_de_marigot:label')"/>
+        <value>Boisson_d.eau_de_marigot</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/mode_transmission/Piqure_de_moustique:label')"/>
+        <value>Piqure_de_moustique</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/mode_transmission/Ne_sait_pas:label')"/>
+        <value>Ne_sait_pas</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/mode_transmission/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/Autres_transmission">
+      <label ref="jr:itext('/data/Autres_transmission:label')"/>
+    </input>
+    <select ref="/data/prevention">
+      <label ref="jr:itext('/data/prevention:label')"/>
+      <item>
+        <label ref="jr:itext('/data/prevention/Port_de_pantalon_chemises_manches_longues:label')"/>
+        <value>Port_de_pantalon_chemises_manches_longues</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/prevention/Utilisation_de_moustiquaire:label')"/>
+        <value>Utilisation_de_moustiquaire</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/prevention/Application_de_cremes_repulsives_sur_la_peau:label')"/>
+        <value>Application_de_cremes_repulsives_sur_la_peau</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/prevention/Traitement_de_masse_avec_l.ivermectine:label')"/>
+        <value>Traitement_de_masse_avec_l.ivermectine</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/prevention/Ne_sait_pas:label')"/>
+        <value>Ne_sait_pas</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/prevention/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/Autres_prevention">
+      <label ref="jr:itext('/data/Autres_prevention:label')"/>
+    </input>
+    <select1 ref="/data/cnce_aveugle">
+      <label ref="jr:itext('/data/cnce_aveugle:label')"/>
+      <item>
+        <label ref="jr:itext('/data/cnce_aveugle/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/cnce_aveugle/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <input ref="/data/nombre_aveugle">
+      <label ref="jr:itext('/data/nombre_aveugle:label')"/>
+    </input>
+    <select1 ref="/data/informe">
+      <label ref="jr:itext('/data/informe:label')"/>
+      <item>
+        <label ref="jr:itext('/data/informe/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/informe/Non:label')"/>
+        <value>Non</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/informe/Ne_sait_pas:label')"/>
+        <value>Ne_sait_pas</value>
+      </item>
+    </select1>
+    <select ref="/data/canaux_information">
+      <label ref="jr:itext('/data/canaux_information:label')"/>
+      <item>
+        <label ref="jr:itext('/data/canaux_information/Message_dans_l.eglise/mosquee:label')"/>
+        <value>Message_dans_l.eglise/mosquee</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/canaux_information/Les_Distributeurs_communautaires/crieurs_publics:label')"/>
+        <value>Les_Distributeurs_communautaires/crieurs_publics</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/canaux_information/Les_responsables_administratifs_locaux:label')"/>
+        <value>Les_responsables_administratifs_locaux</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/canaux_information/Agents_de_sante:label')"/>
+        <value>Agents_de_sante</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/canaux_information/Radio:label')"/>
+        <value>Radio</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/canaux_information/Affiches:label')"/>
+        <value>Affiches</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/canaux_information/Other:label')"/>
+        <value>Other</value>
+      </item>
+    </select>
+    <input ref="/data/autres_canaux_information">
+      <label ref="jr:itext('/data/autres_canaux_information:label')"/>
+    </input>
+    <input ref="/data/nbre_resident_menage">
+      <label ref="jr:itext('/data/nbre_resident_menage:label')"/>
+    </input>
+    <input ref="/data/nbre_resident_moins5ans">
+      <label ref="jr:itext('/data/nbre_resident_moins5ans:label')"/>
+    </input>
+    <select1 ref="/data/resident_non_traite">
+      <label ref="jr:itext('/data/resident_non_traite:label')"/>
+      <item>
+        <label ref="jr:itext('/data/resident_non_traite/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/resident_non_traite/Non:label')"/>
+        <value>Non</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/resident_non_traite/Ne_sait_pas:label')"/>
+        <value>Ne_sait_pas</value>
+      </item>
+    </select1>
+    <input ref="/data/nbre_resident_non_traite">
+      <label ref="jr:itext('/data/nbre_resident_non_traite:label')"/>
+    </input>
+    <input ref="/data/existence_perception_dc">
+      <label ref="jr:itext('/data/existence_perception_dc:label')"/>
+    </input>
+    <input ref="/data/perception_dc">
+      <label ref="jr:itext('/data/perception_dc:label')"/>
+    </input>
+    <input ref="/data/suggestions">
+      <label ref="jr:itext('/data/suggestions:label')"/>
+    </input>
+    <input ref="/data/gps">
+      <label ref="jr:itext('/data/gps:label')"/>
+    </input>
+    <input ref="/data/commentaires">
+      <label ref="jr:itext('/data/commentaires:label')"/>
+    </input>
+  </h:body>
+</h:html>
