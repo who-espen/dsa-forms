@@ -7,15 +7,14 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. River inspection Form V4</h:title>
+    <h:title>2. River inspection Form V5</h:title>
     <model>
-
       <instance>
-        <data id="oncho_2_river_inspection_v4">
+        <data id="oncho_2_river_inspection_v5">
           <r_RecorderID/>
+          <r_State/>
           <r_LGA/>
           <r_CommunityName/>
-          <site/>
           <site_id/>
           <r_RiverName/>
           <r_RiverBasin/>
@@ -75,9 +74,6 @@
           <text id="/data/r_ReasonNoProspection/Flooding:label">
             <value>Flooding</value>
           </text>
-          <text id="/data/confirm_summary:label">
-            <value>Please confirm the details summarised are correct</value>
-          </text>
           <text id="/data/river_characteristics/Vegetation/Trailing.Present:label">
             <value>Vegetation/Trailing Present</value>
           </text>
@@ -120,8 +116,8 @@
           <text id="/data/r_EvidenceofAdult:label">
             <value>At time of inspection did site provide evidence of adult black flies</value>
           </text>
-          <text id="/data/r_LarvaeRate/11-50:label">
-            <value>11-50</value>
+          <text id="/data/r_State:label">
+            <value>State</value>
           </text>
           <text id="/data/river_characteristics/Vegetation/Substrate.Present:label">
             <value>Vegetation/Substrate Present</value>
@@ -138,11 +134,14 @@
           <text id="/data/r_RiverBasin:label">
             <value>Name of river basin</value>
           </text>
+          <text id="/data/r_EvidenceofAdult/No:label">
+            <value>No</value>
+          </text>
           <text id="/data/river_characteristics/River.Flooded:label">
             <value>River Flooded</value>
           </text>
-          <text id="/data/r_EvidenceofAdult/No:label">
-            <value>No</value>
+          <text id="/data/r_LarvaeRate/11-50:label">
+            <value>11-50</value>
           </text>
           <text id="/data/r_PossibleProspection/No:label">
             <value>No</value>
@@ -240,8 +239,8 @@ You cannot choose both "River Rapids" and "River Calm," as they represent opposi
   <text id="/data/river_characteristics/River.rapids/fast.flow:label">
     <value>River rapids/fast flow</value>
   </text>
-  <text id="/data/site:label">
-    <value>Select Site Name</value>
+  <text id="/data/confirm_summary:label">
+    <value>Please confirm the details summarised are correct</value>
   </text>
   <text id="/data/river_characteristics/Rocky./.Rocks.Present:label">
     <value>Rocky / Rocks Present</value>
@@ -259,9 +258,9 @@ You cannot choose both "River Rapids" and "River Calm," as they represent opposi
 </itext>
 
 <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/r_RecorderID:jr:constraintMsg')" nodeset="/data/r_RecorderID" required="true()" type="int"/>
-<bind nodeset="/data/r_LGA" required="true()" type="string" db_get="col_2"/>
+<bind nodeset="/data/r_State" required="true()" type="string" db_get="col_1"/>
+<bind nodeset="/data/r_LGA" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/r_State"/>
 <bind nodeset="/data/r_CommunityName" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/r_LGA"/>
-<bind nodeset="/data/site" required="true()" type="string"/>
 <bind nodeset="/data/site_id" required="true()" type="string"/>
 <bind nodeset="/data/r_RiverName" required="true()" type="string"/>
 <bind nodeset="/data/r_RiverBasin" required="true()" type="string"/>
@@ -310,14 +309,14 @@ if(selected( /data/river_characteristics , 'Vegetation/Substrate.Present') and
 <label ref="jr:itext('/data/r_RecorderID:label')"/>
 <hint ref="jr:itext('/data/r_RecorderID:hint')"/>
 </input>
+<input ref="/data/r_State">
+<label ref="jr:itext('/data/r_State:label')"/>
+</input>
 <input ref="/data/r_LGA">
 <label ref="jr:itext('/data/r_LGA:label')"/>
 </input>
 <input ref="/data/r_CommunityName">
 <label ref="jr:itext('/data/r_CommunityName:label')"/>
-</input>
-<input ref="/data/site">
-<label ref="jr:itext('/data/site:label')"/>
 </input>
 <input ref="/data/site_id">
 <label ref="jr:itext('/data/site_id:label')"/>
