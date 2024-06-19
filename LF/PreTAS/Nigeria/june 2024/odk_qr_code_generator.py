@@ -6,7 +6,7 @@ import zlib
 
 settings = {
   "general": {
-    "server_url": "https://submit.datastandard.co/espen/nigeria-espen-5",
+    "server_url": "https://submit.datastandard.co/espen/nigeria-espen-6",
     "username": "collect",
     "password": "espen47",
   },
@@ -27,4 +27,4 @@ settings = {
 qr_data = b64encode(zlib.compress(json.dumps(settings).encode("utf-8")))
 
 code = segno.make(qr_data, micro=False)
-code.save('LF/PreTAS/Nigeria/apri 2024/nigeria-settings.png', scale=5)
+code.save('LF/PreTAS/Nigeria/june 2024/nigeria-settings.png', scale=5)
