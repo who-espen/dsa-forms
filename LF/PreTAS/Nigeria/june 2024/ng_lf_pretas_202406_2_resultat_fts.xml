@@ -281,7 +281,7 @@
       <bind calculate="position(..)" nodeset="/data/ng_pretas_fts_2406_v2/C2" type="string"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../d_code_id ))" nodeset="/data/ng_pretas_fts_2406_v2/C3" type="string"/>
       <bind nodeset="/data/ng_pretas_fts_2406_v2/d_add_results" required="true()" type="select1"/>
-      <bind constraint="not(selected( ../C3 ,  ../d_code_id ))" jr:constraintMsg="jr:itext('/data/ng_pretas_fts_2406_v2/d_code_id:jr:constraintMsg')" nodeset="/data/ng_pretas_fts_2406_v2/d_code_id" relevant=" ../d_add_results  = 'Yes'" required="true()" type="string"/>
+      <bind constraint="not(selected( ../C3 ,  ../d_code_id ))" jr:constraintMsg="jr:itext('/data/ng_pretas_fts_2406_v2/d_code_id:jr:constraintMsg')" nodeset="/data/ng_pretas_fts_2406_v2/d_code_id" relevant=" ../d_add_results  = 'Yes'" required="true()" type="barcode"/>
       <bind nodeset="/data/ng_pretas_fts_2406_v2/d_lotnumber1" relevant=" ../d_add_results  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/ng_pretas_fts_2406_v2/d_result1" relevant=" ../d_add_results  = 'Yes'" required="true()" type="select1"/>
       <bind nodeset="/data/ng_pretas_fts_2406_v2/d_why_invalid1" relevant=" ../d_result1  = 'Invalid' and  ../d_add_results  = 'Yes'" required="true()" type="select"/>
