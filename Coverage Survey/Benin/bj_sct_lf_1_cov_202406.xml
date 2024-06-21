@@ -1087,12 +1087,15 @@
             <value>Trace hémolysée</value>
           </text>
           <text id="grading-2">
-            <value>+</value>
+            <value>Trace non hémolysée</value>
           </text>
           <text id="grading-3">
-            <value>++</value>
+            <value>+</value>
           </text>
           <text id="grading-4">
+            <value>++</value>
+          </text>
+          <text id="grading-5">
             <value>+++</value>
           </text>
           <text id="/data/note1:label">
@@ -2824,19 +2827,22 @@
           </item>
           <item>
             <itextId>grading-2</itextId>
-            <name>+</name>
+            <name>Trace.non.hémolysée</name>
           </item>
           <item>
             <itextId>grading-3</itextId>
-            <name>++</name>
+            <name>+</name>
           </item>
           <item>
             <itextId>grading-4</itextId>
+            <name>++</name>
+          </item>
+          <item>
+            <itextId>grading-5</itextId>
             <name>+++</name>
           </item>
         </root>
       </instance>
-      
       <bind nodeset="/data/note1" readonly="true()" type="string"/>
       <bind nodeset="/data/recorder_id" type="int" required="true()" constraint=". &gt; 9 and . &lt; 100" jr:constraintMsg="jr:itext('/data/recorder_id:jr:constraintMsg')"/>
       <bind nodeset="/data/date" type="date" required="true()"/>
@@ -2896,7 +2902,7 @@
       <bind nodeset="/data/bj_c_2406_v2/q31_avale_pzq_devant_distributeur" type="string" required="true()" relevant=" ../q28_avale_pzq  = 'Oui'"/>
       <bind nodeset="/data/bj_c_2406_v2/q32_effet_secondaire_pzq" type="string" required="true()" relevant=" ../q28_avale_pzq  = 'Oui'"/>
       <bind nodeset="/data/bj_c_2406_v2/q33_type_effet_secondaire_pzq" type="string" required="true()" relevant=" ../q32_effet_secondaire_pzq  = 'Oui'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q34_nb_fois_participe_tdm_sch" type="string" required="true()"/>
+      <bind nodeset="/data/bj_c_2406_v2/q34_nb_fois_participe_tdm_sch" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
       <bind nodeset="/data/bj_c_2406_v2/q35_pourquoi_jamais_participe" type="string" required="true()" relevant=" ../q34_nb_fois_participe_tdm_sch  = '0 = Jamais'"/>
       <bind nodeset="/data/bj_c_2406_v2/q35_pourquoi_jamais_participe_autre" type="string" required="true()" relevant=" ../q35_pourquoi_jamais_participe  = 'Autre'"/>
       <bind nodeset="/data/bj_c_2406_v2/q36_entendu_parler_sch" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
@@ -2912,7 +2918,7 @@
       <bind nodeset="/data/bj_c_2406_v2/q41_traitement_pzq_autre" type="string" required="true()" relevant="selected( ../q41_traitement_pzq , 'Autre')"/>
       <bind nodeset="/data/bj_c_2406_v2/q42_selectionner_bandelette" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
       <bind nodeset="/data/bj_c_2406_v2/q43_gradation" type="string" relevant=" ../q42_selectionner_bandelette  = 'Oui'"/>
-      <bind nodeset="/data/bj_c_2406_v2/commentaires" type="string"/>
+      <bind nodeset="/data/bj_c_2406_v2/commentaires" type="string" relevant=" /data/type_soumission != 'Refus de participer'"/>
       <bind nodeset="/data/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
       <bind nodeset="/data/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
