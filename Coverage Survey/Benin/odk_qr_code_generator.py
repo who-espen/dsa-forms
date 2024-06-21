@@ -18,8 +18,8 @@ settings = {
     # "admin_pw": "1325",
   },
   "project": {
-    "name": "Sénégal",
-    "icon": "s",
+    "name": "Bénin",
+    "icon": "B",
     "color": "#0066ff"
   }
 }
