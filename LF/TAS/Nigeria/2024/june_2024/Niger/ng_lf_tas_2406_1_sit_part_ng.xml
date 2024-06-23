@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(June 2024) - 1. Niger - TAS1 LF Site &amp; participant Form</h:title>
+    <h:title>(June 2024) - 1. Niger - TAS1 LF Site &amp; participant Form V2</h:title>
     <model>
 
       <instance>
-        <data id="ng_lf_tas_2406_1_sit_part_ng">
+        <data id="ng_lf_tas_2406_1_sit_part_ng_v2">
           <c_recorder/>
           <c_eu/>
           <c_district/>
@@ -23,14 +23,13 @@
           <c_cluster_id/>
           <c_cluster_leader/>
           <c_consent/>
-          <c_population/>
+          <c_total_primaries/>
+          <c_enrolment_primaries/>
+          <c_toilet/>
+          <c_type_toilet/>
+          <c_clean_toilet/>
+          <c_src_water_school/>
           <c_gps/>
-          <c_last_mda>
-            <month/>
-            <year/>
-          </c_last_mda>
-          <c_nbr_mda_ivm/>
-          <c_nbr_mda_ivm_alb/>
           <c_nbr_participant/>
           <C1/>
           <ng_tas_p_2406_ng_count/>
@@ -42,6 +41,10 @@
             <p_age_yrs/>
             <p_how_long_lived/>
             <p_code_id/>
+            <p_swallowed_lf_med/>
+            <p_how_many_time_swallowed/>
+            <have_mosquito_net/>
+            <sleep_mosquito_net/>
             <p_ending_survey_note/>
             <p_notes/>
             <c_ending_survey_note/>
@@ -89,8 +92,8 @@
           <text id="static_instance-school_id-95">
             <value>196</value>
           </text>
-          <text id="static_instance-school-51">
-            <value>GAZHE PRIMARY SCHOOL, GAZHE LATI</value>
+          <text id="static_instance-school_id-94">
+            <value>195</value>
           </text>
           <text id="/data/c_cluster_name_1/DUTSUN:label">
             <value>DUTSUN</value>
@@ -212,8 +215,11 @@
           <text id="/data/c_cluster_name_1/IQE 123:label">
             <value>IQE 123</value>
           </text>
-          <text id="static_instance-school_id-94">
-            <value>195</value>
+          <text id="/data/ng_tas_p_2406_ng/p_swallowed_lf_med/No:label">
+            <value>No</value>
+          </text>
+          <text id="/data/c_type_toilet:label">
+            <value>What type of toilet system do you have in this School?</value>
           </text>
           <text id="/data/c_cluster_name_1/MUREGI UBE:label">
             <value>MUREGI UBE</value>
@@ -281,8 +287,8 @@
           <text id="/data/c_recorder/07:label">
             <value>07</value>
           </text>
-          <text id="static_instance-school_id-128">
-            <value>229</value>
+          <text id="static_instance-school-165">
+            <value>TAKUTI NOM.</value>
           </text>
           <text id="static_instance-school_id-129">
             <value>230</value>
@@ -302,8 +308,8 @@
           <text id="/data/c_cluster_id_1/35:label">
             <value>35</value>
           </text>
-          <text id="/data/c_cluster_name_1/TSWAFU PRY. SCH.:label">
-            <value>TSWAFU PRY. SCH.</value>
+          <text id="/data/c_cluster_name_1/TALLE ISLAMIYA PS:label">
+            <value>TALLE ISLAMIYA PS</value>
           </text>
           <text id="static_instance-school_id-125">
             <value>226</value>
@@ -397,6 +403,9 @@
           </text>
           <text id="/data/c_cluster_id_1/013:label">
             <value>013</value>
+          </text>
+          <text id="/data/ng_tas_p_2406_ng/have_mosquito_net:label">
+            <value>Do you have mosquito net?</value>
           </text>
           <text id="/data/c_cluster_id_1/16:label">
             <value>16</value>
@@ -494,9 +503,6 @@
           <text id="/data/c_cluster_name_1/DOGON KURMI PRIMARY SCHOOL:label">
             <value>DOGON KURMI PRIMARY SCHOOL</value>
           </text>
-          <text id="/data/c_last_mda/month/March:label">
-            <value>March</value>
-          </text>
           <text id="/data/ng_tas_p_2406_ng/p_sex:label">
             <value>Sex of respondent</value>
           </text>
@@ -518,8 +524,8 @@
           <text id="/data/c_cluster_id_1/163:label">
             <value>163</value>
           </text>
-          <text id="/data/c_last_mda/year:label">
-            <value>Year</value>
+          <text id="/data/c_cluster_id_1/003:label">
+            <value>003</value>
           </text>
           <text id="/data/c_cluster_name_1/MEJEME PRY. SCH.:label">
             <value>MEJEME PRY. SCH.</value>
@@ -538,9 +544,6 @@
           </text>
           <text id="/data/c_cluster_id_1/28:label">
             <value>28</value>
-          </text>
-          <text id="/data/c_last_mda/year/2008:label">
-            <value>2008</value>
           </text>
           <text id="/data/c_cluster_name_1/U B E MODEL P S:label">
             <value>U B E MODEL P S</value>
@@ -611,9 +614,6 @@
           <text id="/data/c_cluster_name_1/KUDU BIDO&quot;:label">
             <value>KUDU BIDO"</value>
           </text>
-          <text id="/data/c_last_mda/year/2020:label">
-            <value>2020</value>
-          </text>
           <text id="static_instance-yes_no-1">
             <value>No</value>
           </text>
@@ -638,8 +638,8 @@
           <text id="/data/c_cluster_id_1/144:label">
             <value>144</value>
           </text>
-          <text id="static_instance-school-169">
-            <value>ADABO PRY. SCH.</value>
+          <text id="/data/c_cluster_name_1/TSWAFU PRY. SCH.:label">
+            <value>TSWAFU PRY. SCH.</value>
           </text>
           <text id="/data/c_cluster_name_1/MAAGI IGENCHI:label">
             <value>MAAGI IGENCHI</value>
@@ -776,9 +776,6 @@
           <text id="/data/c_cluster_name_1/BABBAN TUNGA PRIMARY SCHOOL:label">
             <value>BABBAN TUNGA PRIMARY SCHOOL</value>
           </text>
-          <text id="/data/c_last_mda/year/2009:label">
-            <value>2009</value>
-          </text>
           <text id="/data/c_cluster_id_1/142:label">
             <value>142</value>
           </text>
@@ -845,20 +842,17 @@
           <text id="/data/c_cluster_name_1/EDOGI LUKO PRIMARY SCHOOL, EDOGI LUKO:label">
             <value>EDOGI LUKO PRIMARY SCHOOL, EDOGI LUKO</value>
           </text>
-          <text id="/data/c_last_mda:label">
-            <value>Year and Month of Last MDA</value>
-          </text>
           <text id="/data/c_cluster_id_1/61:label">
             <value>61</value>
-          </text>
-          <text id="/data/c_last_mda/month/August:label">
-            <value>August</value>
           </text>
           <text id="/data/c_cluster_id_1/002:label">
             <value>002</value>
           </text>
           <text id="/data/c_cluster_name_1/TUNGAN ADAKA PRIMARY SCHOOL:label">
             <value>TUNGAN ADAKA PRIMARY SCHOOL</value>
+          </text>
+          <text id="/data/c_clean_toilet:label">
+            <value>Do you have clean water in this School?</value>
           </text>
           <text id="/data/c_cluster_name_1/CHECHEFU PRIMARY SCHOOL, CHECHEFU:label">
             <value>CHECHEFU PRIMARY SCHOOL, CHECHEFU</value>
@@ -1043,9 +1037,6 @@
           <text id="/data/c_cluster_id_1/2:label">
             <value>2</value>
           </text>
-          <text id="/data/c_last_mda/year/2010:label">
-            <value>2010</value>
-          </text>
           <text id="/data/c_cluster_id_1/017:label">
             <value>017</value>
           </text>
@@ -1064,8 +1055,8 @@
           <text id="static_instance-schoo_id_ng-290">
             <value>021</value>
           </text>
-          <text id="static_instance-schoo_id_ng-291">
-            <value>022</value>
+          <text id="/data/c_toilet/No:label">
+            <value>No</value>
           </text>
           <text id="static_instance-schoo_id_ng-292">
             <value>023</value>
@@ -1081,6 +1072,9 @@
           </text>
           <text id="/data/c_cluster_id_1/36:label">
             <value>36</value>
+          </text>
+          <text id="static_instance-school_id-298">
+            <value>399</value>
           </text>
           <text id="/data/c_cluster_name_1/MULO PRY. SCH.:label">
             <value>MULO PRY. SCH.</value>
@@ -1102,9 +1096,6 @@
           </text>
           <text id="/data/c_cluster_name_1/TAKUMA:label">
             <value>TAKUMA</value>
-          </text>
-          <text id="/data/c_cluster_name_1/NURUL ISLAM PRIMARY SCHOOL GAURAKA:label">
-            <value>NURUL ISLAM PRIMARY SCHOOL GAURAKA</value>
           </text>
           <text id="static_instance-school-38">
             <value>CHECHEFU PRIMARY SCHOOL, CHECHEFU</value>
@@ -1145,9 +1136,6 @@
           <text id="/data/c_cluster_id_1/87:label">
             <value>87</value>
           </text>
-          <text id="/data/c_cluster_name_1/BOKANI GARAG:label">
-            <value>BOKANI GARAG</value>
-          </text>
           <text id="/data/c_eu/NGR EU3:label">
             <value>NGR EU3</value>
           </text>
@@ -1166,9 +1154,6 @@
           <text id="static_instance-school_id-282">
             <value>383</value>
           </text>
-          <text id="static_instance-school_id-120">
-            <value>221</value>
-          </text>
           <text id="/data/c_cluster_id_1/18:label">
             <value>18</value>
           </text>
@@ -1177,6 +1162,9 @@
           </text>
           <text id="/data/c_cluster_name_1/WAZIRI PRIMARY SCHOOL:label">
             <value>WAZIRI PRIMARY SCHOOL</value>
+          </text>
+          <text id="/data/ng_tas_p_2406_ng/p_swallowed_lf_med:label">
+            <value>Have you ever swallowed LF medicines (Y/N)?</value>
           </text>
           <text id="/data/c_cluster_id_1/78:label">
             <value>78</value>
@@ -1193,20 +1181,14 @@
           <text id="/data/c_cluster_name_1/NDABINGI PRIMARY SCHOOL, NDABINGI:label">
             <value>NDABINGI PRIMARY SCHOOL, NDABINGI</value>
           </text>
-          <text id="/data/c_population:label">
-            <value>Total population</value>
-          </text>
-          <text id="static_instance-school_id-124">
-            <value>225</value>
-          </text>
           <text id="/data/c_cluster_name_1/JAKUCITA PRI. SCH.:label">
             <value>JAKUCITA PRI. SCH.</value>
           </text>
           <text id="/data/c_cluster_name_1/U.B.E SUNTI:label">
             <value>U.B.E SUNTI</value>
           </text>
-          <text id="static_instance-school_id-298">
-            <value>399</value>
+          <text id="/data/c_clean_toilet/Yes:label">
+            <value>Yes</value>
           </text>
           <text id="static_instance-school_id-299">
             <value>400</value>
@@ -1319,8 +1301,8 @@
           <text id="static_instance-school_id-71">
             <value>172</value>
           </text>
-          <text id="static_instance-school_id-70">
-            <value>171</value>
+          <text id="/data/c_clean_toilet/No:label">
+            <value>No</value>
           </text>
           <text id="static_instance-school_id-73">
             <value>174</value>
@@ -1391,11 +1373,11 @@
           <text id="/data/c_cluster_id_1/24:label">
             <value>24</value>
           </text>
+          <text id="static_instance-school-169">
+            <value>ADABO PRY. SCH.</value>
+          </text>
           <text id="/data/c_cluster_name_1/GBACINKU PRI. SCH.:label">
             <value>GBACINKU PRI. SCH.</value>
-          </text>
-          <text id="/data/c_last_mda/month/November:label">
-            <value>November</value>
           </text>
           <text id="/data/c_cluster_name_1/IBB PRIMARY SCHOOL:label">
             <value>IBB PRIMARY SCHOOL</value>
@@ -1414,9 +1396,6 @@
           </text>
           <text id="/data/c_cluster_name_1/UNG MUAZU:label">
             <value>UNG MUAZU</value>
-          </text>
-          <text id="static_instance-school_id-130">
-            <value>231</value>
           </text>
           <text id="/data/c_cluster_id_1/3:label">
             <value>3</value>
@@ -1550,6 +1529,9 @@
           <text id="static_instance-school_id-168">
             <value>269</value>
           </text>
+          <text id="/data/c_cluster_id_1/125:label">
+            <value>125</value>
+          </text>
           <text id="/data/c_cluster_id_1/7:label">
             <value>7</value>
           </text>
@@ -1571,14 +1553,8 @@
           <text id="/data/c_cluster_id_1/020:label">
             <value>020</value>
           </text>
-          <text id="/data/c_last_mda/year/2019:label">
-            <value>2019</value>
-          </text>
           <text id="/data/ng_tas_p_2406_ng/p_consent/No:label">
             <value>No</value>
-          </text>
-          <text id="/data/c_last_mda/year/2016:label">
-            <value>2016</value>
           </text>
           <text id="/data/c_cluster_id_1/11:label">
             <value>11</value>
@@ -1616,9 +1592,6 @@
           <text id="/data/c_recorder/04:label">
             <value>04</value>
           </text>
-          <text id="/data/c_last_mda/month/February:label">
-            <value>February</value>
-          </text>
           <text id="static_instance-school-300">
             <value>TUNGAN ALI PRIMARY SCHOOL</value>
           </text>
@@ -1628,14 +1601,14 @@
           <text id="/data/c_cluster_name_1/MAGANDU:label">
             <value>MAGANDU</value>
           </text>
-          <text id="/data/c_last_mda/month/October:label">
-            <value>October</value>
+          <text id="/data/ng_tas_p_2406_ng/sleep_mosquito_net:label">
+            <value>Do you sleep inside mosquito net?</value>
           </text>
           <text id="/data/c_eu/NGR EU6:label">
             <value>NGR EU6</value>
           </text>
-          <text id="/data/c_cluster_id_1/125:label">
-            <value>125</value>
+          <text id="/data/c_toilet/Yes:label">
+            <value>Yes</value>
           </text>
           <text id="/data/c_cluster_id_1/62:label">
             <value>62</value>
@@ -1648,6 +1621,9 @@
           </text>
           <text id="/data/c_cluster_name_1/UBE GA ALLAH:label">
             <value>UBE GA ALLAH</value>
+          </text>
+          <text id="/data/ng_tas_p_2406_ng/p_how_many_time_swallowed:label">
+            <value>If Yes, how many times taken?</value>
           </text>
           <text id="/data/c_cluster_name_1/RAGADA PRY. SCH.:label">
             <value>RAGADA PRY. SCH.</value>
@@ -1685,8 +1661,8 @@
           <text id="static_instance-schoo_id_ng-88">
             <value>52</value>
           </text>
-          <text id="static_instance-schoo_id_ng-89">
-            <value>8</value>
+          <text id="/data/c_cluster_name_1/EZHIGI PRIMARY SCHOOL, EZHIGI:label">
+            <value>EZHIGI PRIMARY SCHOOL, EZHIGI</value>
           </text>
           <text id="/data/c_cluster_name_1/ANGUWAN KAJE:label">
             <value>ANGUWAN KAJE</value>
@@ -1790,6 +1766,9 @@
           <text id="static_instance-schoo_id_ng-138">
             <value>23</value>
           </text>
+          <text id="/data/c_cluster_name_1/RUGA FULANI NOM.:label">
+            <value>RUGA FULANI NOM.</value>
+          </text>
           <text id="static_instance-school_id-13">
             <value>114</value>
           </text>
@@ -1822,9 +1801,6 @@
           </text>
           <text id="static_instance-school_id-18">
             <value>119</value>
-          </text>
-          <text id="/data/c_last_mda/year/2003:label">
-            <value>2003</value>
           </text>
           <text id="/data/c_cluster_id_1/146:label">
             <value>146</value>
@@ -1892,9 +1868,6 @@
           <text id="static_instance-school-62">
             <value>KPAYI PRIMARY SCHOOL, KPAYI</value>
           </text>
-          <text id="/data/c_last_mda/year/2018:label">
-            <value>2018</value>
-          </text>
           <text id="static_instance-school-69">
             <value>NDAGBE PRIMARY SCHOOL, DIKKO STREET NDABE</value>
           </text>
@@ -1945,6 +1918,9 @@
           </text>
           <text id="/data/c_cluster_name_1/EMIMAN UBE PRIMARY SCHOOL, EMIMAN:label">
             <value>EMIMAN UBE PRIMARY SCHOOL, EMIMAN</value>
+          </text>
+          <text id="static_instance-schoo_id_ng-89">
+            <value>8</value>
           </text>
           <text id="/data/c_cluster_name_1/RAFIN KARMA:label">
             <value>RAFIN KARMA</value>
@@ -2078,9 +2054,6 @@
           <text id="/data/ng_tas_p_2406_ng/p_sex/Male:label">
             <value>Male</value>
           </text>
-          <text id="/data/c_last_mda/year/2001:label">
-            <value>2001</value>
-          </text>
           <text id="/data/c_cluster_name_1/LIMAWA PRIMARY SCHOOL:label">
             <value>LIMAWA PRIMARY SCHOOL</value>
           </text>
@@ -2158,9 +2131,6 @@
           </text>
           <text id="/data/c_cluster_name_1/U B E SAGI:label">
             <value>U B E SAGI</value>
-          </text>
-          <text id="/data/c_last_mda/month/September:label">
-            <value>September</value>
           </text>
           <text id="static_instance-schoo_id_ng-302">
             <value>403</value>
@@ -2243,9 +2213,6 @@
           <text id="/data/c_cluster_name_1/KUYAN BANA:label">
             <value>KUYAN BANA</value>
           </text>
-          <text id="/data/c_last_mda/year/2005:label">
-            <value>2005</value>
-          </text>
           <text id="/data/c_cluster_name_1/DALAS PRMARY SCH:label">
             <value>DALAS PRMARY SCH</value>
           </text>
@@ -2255,14 +2222,14 @@
           <text id="/data/c_cluster_id_1/028:label">
             <value>028</value>
           </text>
+          <text id="/data/ng_tas_p_2406_ng/p_swallowed_lf_med/Yes:label">
+            <value>Yes</value>
+          </text>
           <text id="/data/c_cluster_id_1/027:label">
             <value>027</value>
           </text>
           <text id="/data/c_cluster_name_1/UBE BAYAN WAYA:label">
             <value>UBE BAYAN WAYA</value>
-          </text>
-          <text id="/data/c_last_mda/month/June:label">
-            <value>June</value>
           </text>
           <text id="/data/c_cluster_name_1/GIDAN KWANU P S:label">
             <value>GIDAN KWANU P S</value>
@@ -2423,9 +2390,6 @@
           <text id="/data/c_cluster_id_1/65:label">
             <value>65</value>
           </text>
-          <text id="/data/c_last_mda/month/July:label">
-            <value>July</value>
-          </text>
           <text id="static_instance-school_id-39">
             <value>140</value>
           </text>
@@ -2489,6 +2453,9 @@
           <text id="/data/c_cluster_name_1/GBACIDAN PRI. SCH.:label">
             <value>GBACIDAN PRI. SCH.</value>
           </text>
+          <text id="/data/ng_tas_p_2406_ng/sleep_mosquito_net/No:label">
+            <value>No</value>
+          </text>
           <text id="/data/c_cluster_id_1/58:label">
             <value>58</value>
           </text>
@@ -2503,9 +2470,6 @@
           </text>
           <text id="/data/ng_tas_p_2406_ng/p_notes:jr:constraintMsg">
             <value>The text is too long. It mys not exceed 255 caracters</value>
-          </text>
-          <text id="/data/c_last_mda/month:label">
-            <value>Month</value>
           </text>
           <text id="/data/c_cluster_name_1/COLLEGE OF ARTS AND ISLAMIC STUDIES ENAGI:label">
             <value>COLLEGE OF ARTS AND ISLAMIC STUDIES ENAGI</value>
@@ -2593,6 +2557,12 @@
           </text>
           <text id="/data/c_cluster_id_1/26:label">
             <value>26</value>
+          </text>
+          <text id="/data/c_toilet:label">
+            <value>Do you have a toilet system in this School?</value>
+          </text>
+          <text id="/data/c_total_primaries:label">
+            <value>What is the total school (Primaries 1 – 6) enrolment?</value>
           </text>
           <text id="/data/c_cluster_id_1/109:label">
             <value>109</value>
@@ -2762,17 +2732,14 @@
           <text id="static_instance-school_id-131">
             <value>232</value>
           </text>
-          <text id="static_instance-school-179">
-            <value>GIDAN KWANU P S</value>
+          <text id="static_instance-school_id-130">
+            <value>231</value>
           </text>
           <text id="/data/c_cluster_id_1/004:label">
             <value>004</value>
           </text>
           <text id="/data/c_cluster_id_1/8:label">
             <value>8</value>
-          </text>
-          <text id="/data/c_last_mda/year/2022:label">
-            <value>2022</value>
           </text>
           <text id="static_instance-school-208">
             <value>TSWAFU PRY. SCH.</value>
@@ -2849,9 +2816,6 @@
           <text id="/data/c_cluster_name_1/SABON BAABAGI PS:label">
             <value>SABON BAABAGI PS</value>
           </text>
-          <text id="/data/c_last_mda/year/2015:label">
-            <value>2015</value>
-          </text>
           <text id="/data/ng_tas_p_2406_ng/p_how_long_lived:jr:constraintMsg">
             <value>The value must not be greater than the age</value>
           </text>
@@ -2885,6 +2849,9 @@
           <text id="static_instance-schoo_id_ng-213">
             <value>39</value>
           </text>
+          <text id="/data/c_src_water_school:label">
+            <value>What is the source of water in this School?</value>
+          </text>
           <text id="static_instance-school-195">
             <value>MAZAKUKA PRY SCH</value>
           </text>
@@ -2909,8 +2876,8 @@
           <text id="static_instance-school-50">
             <value>GATA LILE PRIMARY SCHOOL, GATA LILE</value>
           </text>
-          <text id="/data/c_last_mda/year/2024:label">
-            <value>2024</value>
+          <text id="static_instance-school-51">
+            <value>GAZHE PRIMARY SCHOOL, GAZHE LATI</value>
           </text>
           <text id="static_instance-school-52">
             <value>GBAMACHE PRIMARY SCHOOL, GBAMACHE</value>
@@ -2945,14 +2912,8 @@
           <text id="/data/c_cluster_id_1/85:label">
             <value>85</value>
           </text>
-          <text id="/data/c_last_mda/year/2000:label">
-            <value>2000</value>
-          </text>
           <text id="/data/c_cluster_name_1/NEW TUNGA:label">
             <value>NEW TUNGA</value>
-          </text>
-          <text id="/data/c_last_mda/year/2023:label">
-            <value>2023</value>
           </text>
           <text id="/data/c_cluster_name_1/UBE TAYI PRIMARY SCHOOL:label">
             <value>UBE TAYI PRIMARY SCHOOL</value>
@@ -3089,8 +3050,8 @@
           <text id="/data/c_cluster_id_1/024:label">
             <value>024</value>
           </text>
-          <text id="/data/c_cluster_id_1/003:label">
-            <value>003</value>
+          <text id="/data/c_cluster_name_1/NURUL ISLAM PRIMARY SCHOOL GAURAKA:label">
+            <value>NURUL ISLAM PRIMARY SCHOOL GAURAKA</value>
           </text>
           <text id="/data/c_cluster_id_1/94:label">
             <value>94</value>
@@ -3164,9 +3125,6 @@
           <text id="static_instance-school_id-219">
             <value>320</value>
           </text>
-          <text id="/data/c_last_mda/month/January:label">
-            <value>January</value>
-          </text>
           <text id="/data/c_cluster_name_1/ANGUWAN DANLADI PRIMARY SCHOOL:label">
             <value>ANGUWAN DANLADI PRIMARY SCHOOL</value>
           </text>
@@ -3211,6 +3169,9 @@
           </text>
           <text id="/data/c_cluster_name_1/YELWANBOKANI:label">
             <value>YELWANBOKANI</value>
+          </text>
+          <text id="/data/ng_tas_p_2406_ng/sleep_mosquito_net/Yes:label">
+            <value>Yes</value>
           </text>
           <text id="/data/c_cluster_id_1/121:label">
             <value>121</value>
@@ -3332,8 +3293,8 @@
           <text id="/data/c_cluster_name_1/BARIKIN SALE NOM:label">
             <value>BARIKIN SALE NOM</value>
           </text>
-          <text id="/data/c_cluster_name_1/RUGA FULANI NOM.:label">
-            <value>RUGA FULANI NOM.</value>
+          <text id="static_instance-school_id-70">
+            <value>171</value>
           </text>
           <text id="static_instance-annee-16">
             <value>2016</value>
@@ -3386,6 +3347,9 @@
           <text id="/data/c_cluster_name_1/R/AGGA PS:label">
             <value>R/AGGA PS</value>
           </text>
+          <text id="/data/ng_tas_p_2406_ng/have_mosquito_net/Yes:label">
+            <value>Yes</value>
+          </text>
           <text id="/data/c_cluster_name_1/KUKPANTI P.S:label">
             <value>KUKPANTI P.S</value>
           </text>
@@ -3394,9 +3358,6 @@
           </text>
           <text id="/data/c_cluster_name_1/TADIMA PRIMARY SCHOOL, TADIMA:label">
             <value>TADIMA PRIMARY SCHOOL, TADIMA</value>
-          </text>
-          <text id="/data/c_last_mda/year/2021:label">
-            <value>2021</value>
           </text>
           <text id="/data/c_cluster_name_1/RUGAN MESA (NOMADIC):label">
             <value>RUGAN MESA (NOMADIC)</value>
@@ -3412,9 +3373,6 @@
           </text>
           <text id="/data/c_recorder/99:label">
             <value>99</value>
-          </text>
-          <text id="/data/c_last_mda/year/2014:label">
-            <value>2014</value>
           </text>
           <text id="/data/c_cluster_id_1/010:label">
             <value>010</value>
@@ -3485,8 +3443,8 @@
           <text id="static_instance-school-178">
             <value>ETSU USMAN M.P.S IBBI</value>
           </text>
-          <text id="/data/c_last_mda/year/2011:label">
-            <value>2011</value>
+          <text id="static_instance-school-179">
+            <value>GIDAN KWANU P S</value>
           </text>
           <text id="static_instance-school_id-133">
             <value>234</value>
@@ -3728,14 +3686,8 @@
           <text id="/data/c_cluster_id_1/149:label">
             <value>149</value>
           </text>
-          <text id="/data/c_last_mda/year/2002:label">
-            <value>2002</value>
-          </text>
           <text id="/data/c_cluster_name_1/KWASAU PRIMARY SCHOOL:label">
             <value>KWASAU PRIMARY SCHOOL</value>
-          </text>
-          <text id="/data/c_nbr_mda_ivm:label">
-            <value>Number of MDA rounds for Oncho (Ivermectin)</value>
           </text>
           <text id="static_instance-schoo_id_ng-236">
             <value>31</value>
@@ -3782,9 +3734,6 @@
           <text id="/data/c_cluster_id_1/135:label">
             <value>135</value>
           </text>
-          <text id="/data/c_last_mda/year/2006:label">
-            <value>2006</value>
-          </text>
           <text id="/data/c_cluster_id_1/011:label">
             <value>011</value>
           </text>
@@ -3818,11 +3767,8 @@
           <text id="static_instance-school-4">
             <value>ANGUWAN KAJE</value>
           </text>
-          <text id="/data/c_last_mda/year/2004:label">
-            <value>2004</value>
-          </text>
-          <text id="/data/c_last_mda/month/December:label">
-            <value>December</value>
+          <text id="static_instance-school-5">
+            <value>ANGUWAN ZAKKA</value>
           </text>
           <text id="/data/c_cluster_name_1/KWATACHI PRY.:label">
             <value>KWATACHI PRY.</value>
@@ -3845,17 +3791,11 @@
           <text id="/data/c_cluster_id_1/93:label">
             <value>93</value>
           </text>
-          <text id="/data/c_nbr_mda_ivm_alb:label">
-            <value>Number of MDA rounds for LF (Ivermectin and Albendazole)</value>
-          </text>
           <text id="/data/c_cluster_name_1/EVUTI NOM.:label">
             <value>EVUTI NOM.</value>
           </text>
           <text id="/data/c_cluster_name_1/KATA SARKI PRIMARY SCHOOL:label">
             <value>KATA SARKI PRIMARY SCHOOL</value>
-          </text>
-          <text id="/data/c_last_mda/month/April:label">
-            <value>April</value>
           </text>
           <text id="/data/c_cluster_id_1/15:label">
             <value>15</value>
@@ -3875,8 +3815,8 @@
           <text id="static_instance-school-166">
             <value>YAWA PRI. SCH.</value>
           </text>
-          <text id="static_instance-school-165">
-            <value>TAKUTI NOM.</value>
+          <text id="static_instance-school_id-128">
+            <value>229</value>
           </text>
           <text id="static_instance-school-164">
             <value>TAKALAFIYA PRI. SCH.</value>
@@ -3899,8 +3839,8 @@
           <text id="static_instance-school_id-123">
             <value>224</value>
           </text>
-          <text id="/data/c_cluster_name_1/EZHIGI PRIMARY SCHOOL, EZHIGI:label">
-            <value>EZHIGI PRIMARY SCHOOL, EZHIGI</value>
+          <text id="static_instance-school_id-120">
+            <value>221</value>
           </text>
           <text id="static_instance-school_id-121">
             <value>222</value>
@@ -3911,8 +3851,8 @@
           <text id="static_instance-school_id-127">
             <value>228</value>
           </text>
-          <text id="/data/c_cluster_name_1/TALLE ISLAMIYA PS:label">
-            <value>TALLE ISLAMIYA PS</value>
+          <text id="static_instance-school_id-124">
+            <value>225</value>
           </text>
           <text id="static_instance-school-168">
             <value>ZOLEGI PRI. SCH.</value>
@@ -3955,9 +3895,6 @@
           </text>
           <text id="/data/c_cluster_name_1/BARATSU PRIMARY SCHOOL, BARATSU:label">
             <value>BARATSU PRIMARY SCHOOL, BARATSU</value>
-          </text>
-          <text id="/data/c_last_mda/year/2012:label">
-            <value>2012</value>
           </text>
           <text id="static_instance-school-233">
             <value>GBET LUTAWO</value>
@@ -4082,8 +4019,8 @@
           <text id="/data/ng_tas_p_2406_ng/p_how_long_lived:label">
             <value>How many years has the respondent lived in the area?</value>
           </text>
-          <text id="static_instance-school-5">
-            <value>ANGUWAN ZAKKA</value>
+          <text id="/data/c_cluster_name_1/BOKANI GARAG:label">
+            <value>BOKANI GARAG</value>
           </text>
           <text id="static_instance-school_id-265">
             <value>366</value>
@@ -4154,6 +4091,9 @@
           <text id="/data/c_cluster_id_1/39:label">
             <value>39</value>
           </text>
+          <text id="static_instance-schoo_id_ng-291">
+            <value>022</value>
+          </text>
           <text id="/data/c_cluster_name_1/TALBA HOUSING:label">
             <value>TALBA HOUSING</value>
           </text>
@@ -4178,14 +4118,8 @@
           <text id="/data/c_cluster_leader:label">
             <value>Name of Village Leader</value>
           </text>
-          <text id="/data/c_last_mda/month/May:label">
-            <value>May</value>
-          </text>
           <text id="/data/c_cluster_name_1/CENTRAL PRIMARY SCHOOL NEW BWARI:label">
             <value>CENTRAL PRIMARY SCHOOL NEW BWARI</value>
-          </text>
-          <text id="/data/c_last_mda/year/2013:label">
-            <value>2013</value>
           </text>
           <text id="static_instance-schoo_id_ng-17">
             <value>52</value>
@@ -4252,9 +4186,6 @@
           </text>
           <text id="static_instance-school_id-118">
             <value>219</value>
-          </text>
-          <text id="/data/c_last_mda/year/2007:label">
-            <value>2007</value>
           </text>
           <text id="/data/c_cluster_name_1/CHAUMA PRIMARY SCHOOL:label">
             <value>CHAUMA PRIMARY SCHOOL</value>
@@ -4487,9 +4418,6 @@
           <text id="/data/c_cluster_name_1/USALE PS:label">
             <value>USALE PS</value>
           </text>
-          <text id="/data/c_last_mda/year/2017:label">
-            <value>2017</value>
-          </text>
           <text id="/data/c_cluster_name_1/MAILEHE PS:label">
             <value>MAILEHE PS</value>
           </text>
@@ -4576,6 +4504,9 @@
           </text>
           <text id="/data/c_cluster_name_1/NURUL ISLAM NUR/PRY SCH SABON WUSE:label">
             <value>NURUL ISLAM NUR/PRY SCH SABON WUSE</value>
+          </text>
+          <text id="/data/c_enrolment_primaries:label">
+            <value>What is the enrolment for primaries 1 &amp; 2?</value>
           </text>
           <text id="/data/c_cluster_name_1/EFU NDASHI R:label">
             <value>EFU NDASHI R</value>
@@ -4684,6 +4615,9 @@
           </text>
           <text id="static_instance-school-252">
             <value>UBE H/ALIYU</value>
+          </text>
+          <text id="/data/ng_tas_p_2406_ng/have_mosquito_net/No:label">
+            <value>No</value>
           </text>
           <text id="static_instance-school-259">
             <value>ANGUWAN DANLADI PRIMARY SCHOOL</value>
@@ -9613,7 +9547,6 @@
           </item>
         </root>
       </instance>
-      
       <bind nodeset="/data/c_recorder" required="true()" type="select1"/>
       <bind nodeset="/data/c_eu" required="true()" type="select1" db_add_col_1="."/>
       <bind nodeset="/data/c_district" required="true()" type="select1" db_add_col_1="/data/c_eu" db_add_col_2="."/>
@@ -9625,13 +9558,13 @@
       <bind calculate="if( /data/c_cluster_name_1  = 'Other', concat( /data/c_cluster_id_2 ), concat( /data/c_cluster_id_1 ))" nodeset="/data/c_cluster_id" readonly="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
       <bind nodeset="/data/c_cluster_leader" required="true()" type="string"/>
       <bind nodeset="/data/c_consent" required="true()" type="select1"/>
-      <bind nodeset="/data/c_population" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_total_primaries" required="true()" type="int"/>
+      <bind nodeset="/data/c_enrolment_primaries" required="true()" type="string"/>
+      <bind nodeset="/data/c_toilet" required="true()" type="select1"/>
+      <bind nodeset="/data/c_type_toilet" required="true()" type="string"/>
+      <bind nodeset="/data/c_clean_toilet" required="true()" type="select1"/>
+      <bind nodeset="/data/c_src_water_school" required="true()" type="string"/>
       <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
-      <bind nodeset="/data/c_last_mda" relevant=" /data/c_consent  = 'Yes'"/>
-      <bind nodeset="/data/c_last_mda/month" relevant=" /data/c_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/c_last_mda/year" relevant=" /data/c_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/c_nbr_mda_ivm" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
-      <bind nodeset="/data/c_nbr_mda_ivm_alb" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
       <bind nodeset="/data/c_nbr_participant" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
       <bind calculate="join(' ',  /data/ng_tas_p_2406_ng/p_code_id )" nodeset="/data/C1" type="string"/>
       <bind calculate=" /data/c_nbr_participant " nodeset="/data/ng_tas_p_2406_ng_count" readonly="true()" type="string"/>
@@ -9642,6 +9575,10 @@
       <bind nodeset="/data/ng_tas_p_2406_ng/p_age_yrs" relevant=" ../p_consent  = 'Yes' and  /data/c_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint=". &lt;=  ../p_age_yrs " jr:constraintMsg="jr:itext('/data/ng_tas_p_2406_ng/p_how_long_lived:jr:constraintMsg')" nodeset="/data/ng_tas_p_2406_ng/p_how_long_lived" relevant=" ../p_consent  = 'Yes' and  /data/c_consent  = 'Yes'" required="true()" type="int"/>
       <bind constraint="not(selected( ../C3 ,  ../p_code_id ))" jr:constraintMsg="jr:itext('/data/ng_tas_p_2406_ng/p_code_id:jr:constraintMsg')" nodeset="/data/ng_tas_p_2406_ng/p_code_id" relevant=" ../p_consent  = 'Yes' and  /data/c_consent  = 'Yes'" required="true()" type="barcode"/>
+      <bind nodeset="/data/ng_tas_p_2406_ng/p_swallowed_lf_med" type="select1"/>
+      <bind nodeset="/data/ng_tas_p_2406_ng/p_how_many_time_swallowed" relevant=" ../p_swallowed_lf_med  = 'Yes'" type="int"/>
+      <bind nodeset="/data/ng_tas_p_2406_ng/have_mosquito_net" type="select1"/>
+      <bind nodeset="/data/ng_tas_p_2406_ng/sleep_mosquito_net" relevant=" ../have_mosquito_net  = 'Yes'" type="select1"/>
       <bind nodeset="/data/ng_tas_p_2406_ng/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'No'" type="string"/>
       <bind constraint="regex(., '^.{0,255}$')" jr:constraintMsg="jr:itext('/data/ng_tas_p_2406_ng/p_notes:jr:constraintMsg')" nodeset="/data/ng_tas_p_2406_ng/p_notes" relevant=" /data/c_consent  = 'Yes'" type="string"/>
       <bind nodeset="/data/ng_tas_p_2406_ng/c_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'Yes'" type="string"/>
@@ -9777,175 +9714,43 @@
         <value>No</value>
       </item>
     </select1>
-    <input ref="/data/c_population">
-      <label ref="jr:itext('/data/c_population:label')"/>
+    <input ref="/data/c_total_primaries">
+      <label ref="jr:itext('/data/c_total_primaries:label')"/>
+    </input>
+    <input ref="/data/c_enrolment_primaries">
+      <label ref="jr:itext('/data/c_enrolment_primaries:label')"/>
+    </input>
+    <select1 ref="/data/c_toilet">
+      <label ref="jr:itext('/data/c_toilet:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_toilet/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_toilet/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/c_type_toilet">
+      <label ref="jr:itext('/data/c_type_toilet:label')"/>
+    </input>
+    <select1 ref="/data/c_clean_toilet">
+      <label ref="jr:itext('/data/c_clean_toilet:label')"/>
+      <item>
+        <label ref="jr:itext('/data/c_clean_toilet/Yes:label')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/c_clean_toilet/No:label')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/c_src_water_school">
+      <label ref="jr:itext('/data/c_src_water_school:label')"/>
     </input>
     <input ref="/data/c_gps">
       <label ref="jr:itext('/data/c_gps:label')"/>
       <hint ref="jr:itext('/data/c_gps:hint')"/>
-    </input>
-    <group appearance="field-list" ref="/data/c_last_mda">
-      <label ref="jr:itext('/data/c_last_mda:label')"/>
-      <select1 ref="/data/c_last_mda/month">
-        <label ref="jr:itext('/data/c_last_mda/month:label')"/>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/January:label')"/>
-          <value>January</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/February:label')"/>
-          <value>February</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/March:label')"/>
-          <value>March</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/April:label')"/>
-          <value>April</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/May:label')"/>
-          <value>May</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/June:label')"/>
-          <value>June</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/July:label')"/>
-          <value>July</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/August:label')"/>
-          <value>August</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/September:label')"/>
-          <value>September</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/October:label')"/>
-          <value>October</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/November:label')"/>
-          <value>November</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/month/December:label')"/>
-          <value>December</value>
-        </item>
-      </select1>
-      <select1 ref="/data/c_last_mda/year">
-        <label ref="jr:itext('/data/c_last_mda/year:label')"/>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2000:label')"/>
-          <value>2000</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2001:label')"/>
-          <value>2001</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2002:label')"/>
-          <value>2002</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2003:label')"/>
-          <value>2003</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2004:label')"/>
-          <value>2004</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2005:label')"/>
-          <value>2005</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2006:label')"/>
-          <value>2006</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2007:label')"/>
-          <value>2007</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2008:label')"/>
-          <value>2008</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2009:label')"/>
-          <value>2009</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2010:label')"/>
-          <value>2010</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2011:label')"/>
-          <value>2011</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2012:label')"/>
-          <value>2012</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2013:label')"/>
-          <value>2013</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2014:label')"/>
-          <value>2014</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2015:label')"/>
-          <value>2015</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2016:label')"/>
-          <value>2016</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2017:label')"/>
-          <value>2017</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2018:label')"/>
-          <value>2018</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2019:label')"/>
-          <value>2019</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2020:label')"/>
-          <value>2020</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2021:label')"/>
-          <value>2021</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2022:label')"/>
-          <value>2022</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2023:label')"/>
-          <value>2023</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/c_last_mda/year/2024:label')"/>
-          <value>2024</value>
-        </item>
-      </select1>
-    </group>
-    <input ref="/data/c_nbr_mda_ivm">
-      <label ref="jr:itext('/data/c_nbr_mda_ivm:label')"/>
-    </input>
-    <input ref="/data/c_nbr_mda_ivm_alb">
-      <label ref="jr:itext('/data/c_nbr_mda_ivm_alb:label')"/>
     </input>
     <input ref="/data/c_nbr_participant">
       <label ref="jr:itext('/data/c_nbr_participant:label')"/>
@@ -9985,6 +9790,42 @@
           <label ref="jr:itext('/data/ng_tas_p_2406_ng/p_code_id:label')"/>
           <hint ref="jr:itext('/data/ng_tas_p_2406_ng/p_code_id:hint')"/>
         </input>
+        <select1 ref="/data/ng_tas_p_2406_ng/p_swallowed_lf_med">
+          <label ref="jr:itext('/data/ng_tas_p_2406_ng/p_swallowed_lf_med:label')"/>
+          <item>
+            <label ref="jr:itext('/data/ng_tas_p_2406_ng/p_swallowed_lf_med/Yes:label')"/>
+            <value>Yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/ng_tas_p_2406_ng/p_swallowed_lf_med/No:label')"/>
+            <value>No</value>
+          </item>
+        </select1>
+        <input ref="/data/ng_tas_p_2406_ng/p_how_many_time_swallowed">
+          <label ref="jr:itext('/data/ng_tas_p_2406_ng/p_how_many_time_swallowed:label')"/>
+        </input>
+        <select1 ref="/data/ng_tas_p_2406_ng/have_mosquito_net">
+          <label ref="jr:itext('/data/ng_tas_p_2406_ng/have_mosquito_net:label')"/>
+          <item>
+            <label ref="jr:itext('/data/ng_tas_p_2406_ng/have_mosquito_net/Yes:label')"/>
+            <value>Yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/ng_tas_p_2406_ng/have_mosquito_net/No:label')"/>
+            <value>No</value>
+          </item>
+        </select1>
+        <select1 ref="/data/ng_tas_p_2406_ng/sleep_mosquito_net">
+          <label ref="jr:itext('/data/ng_tas_p_2406_ng/sleep_mosquito_net:label')"/>
+          <item>
+            <label ref="jr:itext('/data/ng_tas_p_2406_ng/sleep_mosquito_net/Yes:label')"/>
+            <value>Yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/ng_tas_p_2406_ng/sleep_mosquito_net/No:label')"/>
+            <value>No</value>
+          </item>
+        </select1>
         <input ref="/data/ng_tas_p_2406_ng/p_ending_survey_note">
           <label ref="jr:itext('/data/ng_tas_p_2406_ng/p_ending_survey_note:label')"/>
         </input>
