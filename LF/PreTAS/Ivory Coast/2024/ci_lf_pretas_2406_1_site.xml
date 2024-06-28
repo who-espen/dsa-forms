@@ -370,7 +370,7 @@
       <bind nodeset="/data/c_site_leader_contact" required="true()" type="string"/>
       <bind nodeset="/data/c_consent" required="true()" type="select1"/>
       <bind nodeset="/data/c_gps" required="true()" type="geopoint"/>
-      <bind nodeset="/data/c_ending_survey_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/c_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'Non'" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>

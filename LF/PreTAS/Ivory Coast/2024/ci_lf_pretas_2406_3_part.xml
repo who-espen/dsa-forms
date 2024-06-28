@@ -136,6 +136,9 @@
           <text id="/data/p_raison_pas_pris_med:label">
             <value>Demandez pourquoi</value>
           </text>
+          <text id="/data/p_notes:label">
+            <value>Notes complémentaires</value>
+          </text>
           <text id="/data/p_profession/Tâches ménagères:label">
             <value>Tâches ménagères</value>
           </text>
@@ -160,8 +163,8 @@
           <text id="/data/p_profession/Chômeurs, retraités, handicapés:label">
             <value>Chômeurs, retraités, handicapés</value>
           </text>
-          <text id="/data/p_notes:label">
-            <value>Notes complémentaires</value>
+          <text id="/data/p_profession/Pêche:label">
+            <value>Pêche</value>
           </text>
           <text id="/data/p_raison_pas_pris_med/Absent.pendant.la.TDM.:label">
             <value>Absent pendant la TDM</value>
@@ -205,8 +208,8 @@
           <text id="/data/p_tps_ds_village:label">
             <value>Depuis combien de temps vivez-vous dans la communauté</value>
           </text>
-          <text id="/data/p_profession/Pêche:label">
-            <value>Pêche</value>
+          <text id="/data/p_tps_mois:jr:constraintMsg">
+            <value>Le nombre dois être inférieure à 12</value>
           </text>
           <text id="/data/p_tps_ds_village/Moins d.une année:label">
             <value>Moins d'une année</value>
@@ -228,7 +231,7 @@
       <bind calculate="concat( /data/p_recorder , '_',  /data/p_site_id , '_',  /data/p_num )" nodeset="/data/p_code_id" readonly="true()" relevant=" /data/p_consent  = 'Oui'" required="true()" type="string"/>
       <bind nodeset="/data/p_tps_ds_village" relevant=" /data/p_consent  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/p_tps_annee" relevant=" /data/p_consent  = 'Oui' and  /data/p_tps_ds_village  = 'Plus d.une année'" required="true()" type="int"/>
-      <bind nodeset="/data/p_tps_mois" relevant=" /data/p_consent  = 'Oui' and  /data/p_tps_ds_village  = 'Moins d.une année'" required="true()" type="int"/>
+      <bind constraint=". &lt; 12" jr:constraintMsg="jr:itext('/data/p_tps_mois:jr:constraintMsg')" nodeset="/data/p_tps_mois" relevant=" /data/p_consent  = 'Oui' and  /data/p_tps_ds_village  = 'Moins d.une année'" required="true()" type="int"/>
       <bind nodeset="/data/p_niveau_etude" relevant=" /data/p_consent  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/p_profession" relevant=" /data/p_consent  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/p_nb_fois_pris_med_lf" relevant=" /data/p_consent  = 'Oui'" required="true()" type="select1"/>
