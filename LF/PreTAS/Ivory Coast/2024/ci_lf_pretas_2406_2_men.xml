@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Juillet) 2. EMS Formulaire Ménage V4</h:title>
+    <h:title>(2024 Juillet) 2. EMS Formulaire Ménage V4.2</h:title>
     <model>
 
       <instance>
-        <data id="ci_lf_pretas_2406_2_men_v4">
+        <data id="ci_lf_pretas_2406_2_men_v4_2">
           <m_recorder/>
           <m_region/>
           <m_district/>
@@ -21,6 +21,7 @@
           <m_adulte_ds_menage/>
           <m_men_a_moustiquaire/>
           <m_utilise_moustiquaire/>
+          <m_index_men/>
           <m_numero_menage/>
           <m_notes/>
           <m_start/>
@@ -33,6 +34,9 @@
 
       <itext>
         <translation default="true()" lang="French">
+          <text id="/data/m_numero_menage:label">
+            <value>Numéro ménage</value>
+          </text>
           <text id="/data/m_notes:label">
             <value>Notes complémentaires</value>
           </text>
@@ -63,8 +67,8 @@
           <text id="/data/m_recorder:label">
             <value>Entrer l'identifiant de l'enregistreur</value>
           </text>
-          <text id="/data/m_numero_menage:label">
-            <value>Numéro ménage</value>
+          <text id="/data/m_index_men:label">
+            <value>Index du numéro ménage</value>
           </text>
           <text id="/data/m_district:label">
             <value>Sélectionner le district</value>
@@ -101,7 +105,8 @@
       <bind nodeset="/data/m_adulte_ds_menage" required="true()" type="int"/>
       <bind nodeset="/data/m_men_a_moustiquaire" required="true()" type="select1"/>
       <bind nodeset="/data/m_utilise_moustiquaire" relevant=" /data/m_men_a_moustiquaire  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/m_numero_menage" readonly="true()" calculate="concat( /data/m_recorder , '_',  /data/m_site_id , '_', if( instance('__last-saved')/data/m_numero_menage !=null, instance('__last-saved')/data/m_numero_menage  + 1,1))" required="true()" type="string"  db_add_col_4="/data/m_site_id" db_add_col_5="."/>
+      <bind nodeset="/data/m_index_men" type="int" calculate="if( instance('__last-saved')/data/m_index_men !=null, instance('__last-saved')/data/m_index_men  + 1,1)" required="true()"/>
+      <bind calculate="concat( /data/m_recorder , '_',  /data/m_site_id , '_',  /data/m_index_men )" nodeset="/data/m_numero_menage" readonly="true()" required="true()" type="string" db_add_col_4="/data/m_site_id" db_add_col_5="."/>
       <bind nodeset="/data/m_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/m_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/m_end" type="dateTime"/>
@@ -157,6 +162,9 @@
         <value>Jamais</value>
       </item>
     </select1>
+    <input ref="/data/m_index_men">
+      <label ref="jr:itext('/data/m_index_men:label')"/>
+    </input>
     <input ref="/data/m_numero_menage">
       <label ref="jr:itext('/data/m_numero_menage:label')"/>
     </input>
