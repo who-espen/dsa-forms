@@ -7,28 +7,28 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>1. Community Registration Form V3</h:title>
+    <h:title>1. Community Registration Form V4</h:title>
     <model>
 
-    <instance>
-      <data id="oncho_1_community_v3">
-        <r_RecorderID/>
-        <r_State/>
-        <r_LGA/>
-        <r_CommunityName/>
-        <r_Date/>
-        <r_CommunityAccessibility/>
-        <r_InaccessibleReason/>
-        <r_GPSCommunity/>
-        <r_remarks/>
-        <summary/>
-        <r_Start/>
-        <r_End/>
-        <meta>
-          <instanceID/>
-        </meta>
-      </data>
-    </instance>
+      <instance>
+        <data id="oncho_1_community_v4">
+          <r_RecorderID/>
+          <r_State/>
+          <r_LGA/>
+          <r_CommunityName/>
+          <r_Date/>
+          <r_CommunityAccessibility/>
+          <r_InaccessibleReason/>
+          <r_GPSCommunity/>
+          <r_remarks/>
+          <summary/>
+          <r_Start/>
+          <r_End/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
 
       <itext>
         <translation default="true()" lang="English">
@@ -93,7 +93,7 @@ Community accessibility: **<output value=" /data/r_CommunityAccessibility "/>
     <bind constraint=".&lt;=date(today())" jr:constraintMsg="jr:itext('/data/r_Date:jr:constraintMsg')" nodeset="/data/r_Date" required="true()" type="date"/>
     <bind nodeset="/data/r_CommunityAccessibility" required="true()" type="select1"/>
     <bind nodeset="/data/r_InaccessibleReason" relevant=" /data/r_CommunityAccessibility  = 'No'" required="true()" type="string"/>
-    <bind nodeset="/data/r_GPSCommunity" required="true()" type="geopoint"/>
+    <bind nodeset="/data/r_GPSCommunity" type="geopoint"/>
     <bind nodeset="/data/r_remarks" type="string"/>
     <bind nodeset="/data/summary" readonly="true()" type="string"/>
     <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_Start" type="dateTime"/>

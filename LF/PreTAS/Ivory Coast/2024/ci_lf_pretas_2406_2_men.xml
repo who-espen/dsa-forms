@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2024 Juillet) 2. EMS Formulaire Ménage V4.2</h:title>
+    <model>
+
+      <instance>
+        <data id="ci_lf_pretas_2406_2_men_v4_2">
+          <m_recorder/>
+          <m_region/>
+          <m_district/>
+          <m_site/>
+          <m_site_id/>
+          <m_personne_ds_menage/>
+          <m_adulte_ds_menage/>
+          <m_men_a_moustiquaire/>
+          <m_utilise_moustiquaire/>
+          <m_index_men/>
+          <m_numero_menage/>
+          <m_notes/>
+          <m_start/>
+          <m_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/m_numero_menage:label">
+            <value>Numéro ménage</value>
+          </text>
+          <text id="/data/m_notes:label">
+            <value>Notes complémentaires</value>
+          </text>
+          <text id="/data/m_adulte_ds_menage:label">
+            <value>Nombre de personnes ≥ 20 ans vivant dans le ménage</value>
+          </text>
+          <text id="/data/m_site:label">
+            <value>Site sélectionné</value>
+          </text>
+          <text id="/data/m_men_a_moustiquaire/Oui:label">
+            <value>Oui</value>
+          </text>
+          <text id="/data/m_men_a_moustiquaire:label">
+            <value>Votre ménage a-t-il des moustiquaires ?</value>
+          </text>
+          <text id="/data/m_recorder:hint">
+            <value>Si vous êtes le seul enregistreur de votre équipe, cela peut être appelé un "identifiant d'équipe". L'identifiant de l'enregistreur est un code à 2 chiffres qui vous a été attribué, à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/m_men_a_moustiquaire/Non:label">
+            <value>Non</value>
+          </text>
+          <text id="/data/m_site_id:label">
+            <value>Code du site selectionné</value>
+          </text>
+          <text id="/data/m_recorder:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
+          </text>
+          <text id="/data/m_recorder:label">
+            <value>Entrer l'identifiant de l'enregistreur</value>
+          </text>
+          <text id="/data/m_index_men:label">
+            <value>Index du numéro ménage</value>
+          </text>
+          <text id="/data/m_district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/m_personne_ds_menage:label">
+            <value>Nombre de personnes vivant dans le ménage</value>
+          </text>
+          <text id="/data/m_utilise_moustiquaire/Parfois:label">
+            <value>Parfois</value>
+          </text>
+          <text id="/data/m_region:label">
+            <value>Sélectionner la région</value>
+          </text>
+          <text id="/data/m_utilise_moustiquaire/Tous les soirs:label">
+            <value>Tous les soirs</value>
+          </text>
+          <text id="/data/m_utilise_moustiquaire/Jamais:label">
+            <value>Jamais</value>
+          </text>
+          <text id="/data/m_utilise_moustiquaire:label">
+            <value>Si oui, est-ce que vous ou les membres de votre famille utilisez des moustiquaires ?</value>
+          </text>
+        </translation>
+      </itext>
+
+      <instance id="__last-saved" src="jr://instance/last-saved"/>
+
+      <bind constraint=". &gt; 9 and . &lt; 100" jr:constraintMsg="jr:itext('/data/m_recorder:jr:constraintMsg')" nodeset="/data/m_recorder" required="true()" type="int"/>
+      <bind nodeset="/data/m_region" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/m_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/m_region"/>
+      <bind nodeset="/data/m_site" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/m_district"/>
+      <bind nodeset="/data/m_site_id" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/m_site"/>
+      <bind nodeset="/data/m_personne_ds_menage" required="true()" type="int"/>
+      <bind nodeset="/data/m_adulte_ds_menage" required="true()" type="int"/>
+      <bind nodeset="/data/m_men_a_moustiquaire" required="true()" type="select1"/>
+      <bind nodeset="/data/m_utilise_moustiquaire" relevant=" /data/m_men_a_moustiquaire  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/m_index_men" type="int" calculate="if( instance('__last-saved')/data/m_index_men !=null, instance('__last-saved')/data/m_index_men  + 1,1)" required="true()"/>
+      <bind calculate="concat( /data/m_recorder , '_',  /data/m_site_id , '_',  /data/m_index_men )" nodeset="/data/m_numero_menage" readonly="true()" required="true()" type="string" db_add_col_4="/data/m_site_id" db_add_col_5="."/>
+      <bind nodeset="/data/m_notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/m_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/m_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/m_recorder">
+      <label ref="jr:itext('/data/m_recorder:label')"/>
+      <hint ref="jr:itext('/data/m_recorder:hint')"/>
+    </input>
+    <input ref="/data/m_region">
+      <label ref="jr:itext('/data/m_region:label')"/>
+    </input>
+    <input ref="/data/m_district">
+      <label ref="jr:itext('/data/m_district:label')"/>
+    </input>
+    <input ref="/data/m_site">
+      <label ref="jr:itext('/data/m_site:label')"/>
+    </input>
+    <input ref="/data/m_site_id">
+      <label ref="jr:itext('/data/m_site_id:label')"/>
+    </input>
+    <input ref="/data/m_personne_ds_menage">
+      <label ref="jr:itext('/data/m_personne_ds_menage:label')"/>
+    </input>
+    <input ref="/data/m_adulte_ds_menage">
+      <label ref="jr:itext('/data/m_adulte_ds_menage:label')"/>
+    </input>
+    <select1 ref="/data/m_men_a_moustiquaire">
+      <label ref="jr:itext('/data/m_men_a_moustiquaire:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_men_a_moustiquaire/Oui:label')"/>
+        <value>Oui</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_men_a_moustiquaire/Non:label')"/>
+        <value>Non</value>
+      </item>
+    </select1>
+    <select1 ref="/data/m_utilise_moustiquaire">
+      <label ref="jr:itext('/data/m_utilise_moustiquaire:label')"/>
+      <item>
+        <label ref="jr:itext('/data/m_utilise_moustiquaire/Tous les soirs:label')"/>
+        <value>Tous les soirs</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_utilise_moustiquaire/Parfois:label')"/>
+        <value>Parfois</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/m_utilise_moustiquaire/Jamais:label')"/>
+        <value>Jamais</value>
+      </item>
+    </select1>
+    <input ref="/data/m_index_men">
+      <label ref="jr:itext('/data/m_index_men:label')"/>
+    </input>
+    <input ref="/data/m_numero_menage">
+      <label ref="jr:itext('/data/m_numero_menage:label')"/>
+    </input>
+    <input ref="/data/m_notes">
+      <label ref="jr:itext('/data/m_notes:label')"/>
+    </input>
+  </h:body>
+</h:html>
