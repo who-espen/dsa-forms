@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>1. Community Registration Form V4</h:title>
+    <model>
+
+      <instance>
+        <data id="oncho_1_community_v4">
+          <r_RecorderID/>
+          <r_State/>
+          <r_LGA/>
+          <r_CommunityName/>
+          <r_Date/>
+          <r_CommunityAccessibility/>
+          <r_InaccessibleReason/>
+          <r_GPSCommunity/>
+          <r_remarks/>
+          <summary/>
+          <r_Start/>
+          <r_End/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="English">
+          <text id="/data/r_RecorderID:label">
+            <value>Enter Recorder ID</value>
+          </text>
+          <text id="/data/summary:label">
+            <value>Community name: **<output value=" /data/r_CommunityName "/>
+**
+Community accessibility: **<output value=" /data/r_CommunityAccessibility "/>
+**</value>
+        </text>
+        <text id="/data/r_Date:label">
+          <value>Enter today's date</value>
+        </text>
+        <text id="/data/r_CommunityAccessibility:label">
+          <value>Were you able to access the Community?</value>
+        </text>
+        <text id="/data/r_InaccessibleReason:label">
+          <value>Why were you unable to access the community?</value>
+        </text>
+        <text id="/data/r_GPSCommunity:hint">
+          <value>Works best outside of buildings</value>
+        </text>
+        <text id="/data/r_CommunityAccessibility/Yes:label">
+          <value>Yes</value>
+        </text>
+        <text id="/data/r_CommunityName:label">
+          <value>Enter the name of Community</value>
+        </text>
+        <text id="/data/r_RecorderID:hint">
+          <value>2 digit code assigned to you</value>
+        </text>
+        <text id="/data/r_GPSCommunity:label">
+          <value>Collect GPS data at the Community</value>
+        </text>
+        <text id="/data/r_remarks:label">
+          <value>Any additional notes:</value>
+        </text>
+        <text id="/data/r_Date:jr:constraintMsg">
+          <value>The date cannot be in the future</value>
+        </text>
+        <text id="/data/r_State:label">
+          <value>State</value>
+        </text>
+        <text id="/data/r_CommunityAccessibility/No:label">
+          <value>No</value>
+        </text>
+        <text id="/data/r_LGA:label">
+          <value>Select Local Government Area</value>
+        </text>
+        <text id="/data/r_RecorderID:jr:constraintMsg">
+          <value>Must be two digit between 9 and 100</value>
+        </text>
+      </translation>
+    </itext>
+
+    <bind constraint="regex(., '^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/r_RecorderID:jr:constraintMsg')" nodeset="/data/r_RecorderID" required="true()" type="int"/>
+    <bind nodeset="/data/r_State" required="true()" type="string" db_add_col_1="."/>
+    <bind nodeset="/data/r_LGA" required="true()" type="string" db_add_col_1="/data/r_State" db_add_col_2="."/>
+    <bind nodeset="/data/r_CommunityName" required="true()" type="string" db_add_col_2="/data/r_LGA" db_add_col_3="."/>
+    <bind constraint=".&lt;=date(today())" jr:constraintMsg="jr:itext('/data/r_Date:jr:constraintMsg')" nodeset="/data/r_Date" required="true()" type="date"/>
+    <bind nodeset="/data/r_CommunityAccessibility" required="true()" type="select1"/>
+    <bind nodeset="/data/r_InaccessibleReason" relevant=" /data/r_CommunityAccessibility  = 'No'" required="true()" type="string"/>
+    <bind nodeset="/data/r_GPSCommunity" type="geopoint"/>
+    <bind nodeset="/data/r_remarks" type="string"/>
+    <bind nodeset="/data/summary" readonly="true()" type="string"/>
+    <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_Start" type="dateTime"/>
+    <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/r_End" type="dateTime"/>
+    <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+  </model>
+</h:head>
+<h:body>
+  <input ref="/data/r_RecorderID">
+    <label ref="jr:itext('/data/r_RecorderID:label')"/>
+    <hint ref="jr:itext('/data/r_RecorderID:hint')"/>
+  </input>
+  <input ref="/data/r_State">
+    <label ref="jr:itext('/data/r_State:label')"/>
+  </input>
+  <input ref="/data/r_LGA">
+    <label ref="jr:itext('/data/r_LGA:label')"/>
+  </input>
+  <input ref="/data/r_CommunityName">
+    <label ref="jr:itext('/data/r_CommunityName:label')"/>
+  </input>
+  <input ref="/data/r_Date">
+    <label ref="jr:itext('/data/r_Date:label')"/>
+  </input>
+  <select1 ref="/data/r_CommunityAccessibility">
+    <label ref="jr:itext('/data/r_CommunityAccessibility:label')"/>
+    <item>
+      <label ref="jr:itext('/data/r_CommunityAccessibility/Yes:label')"/>
+      <value>Yes</value>
+    </item>
+    <item>
+      <label ref="jr:itext('/data/r_CommunityAccessibility/No:label')"/>
+      <value>No</value>
+    </item>
+  </select1>
+  <input ref="/data/r_InaccessibleReason">
+    <label ref="jr:itext('/data/r_InaccessibleReason:label')"/>
+  </input>
+  <input ref="/data/r_GPSCommunity">
+    <label ref="jr:itext('/data/r_GPSCommunity:label')"/>
+    <hint ref="jr:itext('/data/r_GPSCommunity:hint')"/>
+  </input>
+  <input ref="/data/r_remarks">
+    <label ref="jr:itext('/data/r_remarks:label')"/>
+  </input>
+  <input ref="/data/summary">
+    <label ref="jr:itext('/data/summary:label')"/>
+  </input>
+</h:body>
+</h:html>
