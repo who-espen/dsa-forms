@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>2. River inspection Form</h:title>
+    <h:title>2. River inspection Form V2</h:title>
     <model>
-
       <instance>
-        <data id="ng_oncho_2026_2_river_inspection">
+
+        <data id="ng_oncho_2026_2_river_inspection_v2">
           <r_RecorderID/>
           <r_state/>
           <r_lga/>
@@ -210,6 +210,9 @@ River Characteristics: **<output value=" /data/site_characteristics/substrate_de
 <text id="/data/r_PossibleProspection/Yes:label">
   <value>Yes</value>
 </text>
+<text id="/data/site_characteristics/river_details:jr:constraintMsg">
+  <value>The river cannot be fast and slow at the same time</value>
+</text>
 <text id="/data/r_EvidenceofAdult:label">
   <value>At time of inspection did site provide evidence of adult black flies</value>
 </text>
@@ -308,7 +311,7 @@ River Characteristics: **<output value=" /data/site_characteristics/substrate_de
 <bind nodeset="/data/photo_2" relevant=" /data/r_PossibleProspection  = 'Yes'" type="binary"/>
 <bind nodeset="/data/photo_3" relevant=" /data/r_PossibleProspection  = 'Yes'" type="binary"/>
 <bind nodeset="/data/site_characteristics" relevant=" /data/r_PossibleProspection  = 'Yes'"/>
-<bind nodeset="/data/site_characteristics/river_details" required="true()" type="select"/>
+<bind constraint="not(selected( /data/site_characteristics/river_details , 'River.rapids/fast.flow') and selected( /data/site_characteristics/river_details , 'River.calm/slow.flow'))" jr:constraintMsg="jr:itext('/data/site_characteristics/river_details:jr:constraintMsg')" nodeset="/data/site_characteristics/river_details" required="true()" type="select"/>
 <bind nodeset="/data/site_characteristics/substrate_details" required="true()" type="select"/>
 <bind nodeset="/data/r_Notes" type="string"/>
 <bind nodeset="/data/summary" readonly="true()" type="string"/>
