@@ -296,7 +296,7 @@
  )
 )" nodeset="/data/sn_lf_f_2407/d_final_result" type="string"/>
       <bind nodeset="/data/sn_lf_f_2407/d_display_final_result" readonly="true()" type="string"/>
-      <bind nodeset="/data/sn_lf_f_2407/d_participant_treated" required="true()" type="select1"/>
+      <bind nodeset="/data/sn_lf_f_2407/d_participant_treated" relevant=" ../d_final_result  = 'Positif'" required="true()" type="select1"/>
       <bind nodeset="/data/sn_lf_f_2407/notes_part" type="text"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/d_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/d_end" type="dateTime"/>
