@@ -6,7 +6,7 @@ import zlib
 
 settings = {
   "general": {
-    "server_url": "https://submit.datastandard.co/espen/",
+    "server_url": "https://submit.datastandard.co/espen/nigeria-espen-7",
     "username": "collect",
     "password": "espen47",
   },
@@ -27,4 +27,4 @@ settings = {
 qr_data = b64encode(zlib.compress(json.dumps(settings).encode("utf-8")))
 
 code = segno.make(qr_data, micro=False)
-code.save('ONCHO/Entomological survey Survey/Nigeria/2024/nigeria-setting.png', scale=5)
+code.save('ONCHO/Entomological survey Survey/Nigeria/2024/nigeria-setting-7.png', scale=5)
