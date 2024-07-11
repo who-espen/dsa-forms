@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:odk="http://www.opendatakit.org/xforms">
   <h:head>
-    <h:title>(2024 Juin) - 1. Couverture &amp; CAP V2</h:title>
+    <h:title>(2024 Juin) - 1. Couverture &amp; CAP V3</h:title>
     <model odk:xforms-version="1.0.0">
 
       <instance>
-        <data id="bj_sct_lf_1_cov_2406_v2">
+        <data id="bj_sct_lf_1_cov_2406_v3">
           <note1/>
           <recorder_id/>
           <date/>
@@ -21,7 +21,6 @@
           <village_id/>
           <gps/>
           <type_soumission/>
-          <type_soumission_autre/>
           <note2/>
           <q0_numero_menage/>
           <q1_nbre_personne_ds_menage/>
@@ -35,8 +34,8 @@
           <q6_existe_dispositif_lavage_main/>
           <q7_profession/>
           <q7_profession_autre/>
-          <q7_plan_eau_douce_com/>
-          <q8_tps_allez_retout_eau_douce/>
+          <q8a_plan_eau_douce_com/>
+          <q8b_tps_allez_retout_eau_douce/>
           <q9_src_eau_se_desseche/>
           <q10_se_baigne_eau_douce/>
           <q11_lessive_eau_douce/>
@@ -498,9 +497,6 @@
           <text id="type_soumission-3">
             <value>Refus de participer</value>
           </text>
-          <text id="type_soumission-4">
-            <value>Autre (préciser)</value>
-          </text>
           <text id="yes_no-0">
             <value>Oui</value>
           </text>
@@ -595,25 +591,25 @@
             <value>Pas de réponse</value>
           </text>
           <text id="profession-0">
-            <value>Étudiant ;</value>
+            <value>Étudiant</value>
           </text>
           <text id="profession-1">
-            <value>agriculteur ;</value>
+            <value>agriculteur</value>
           </text>
           <text id="profession-2">
-            <value>Berger ;</value>
+            <value>Berger</value>
           </text>
           <text id="profession-3">
-            <value>Pêcheur ;</value>
+            <value>Pêcheur</value>
           </text>
           <text id="profession-4">
-            <value>Travail de bureau (y compris Gouvernement/secteur public/ONG) ;</value>
+            <value>Travail de bureau (y compris Gouvernement/secteur public/ONG)</value>
           </text>
           <text id="profession-5">
-            <value>Commerçant ;</value>
+            <value>Commerçant</value>
           </text>
           <text id="profession-6">
-            <value>Ménagère ;</value>
+            <value>Ménagère</value>
           </text>
           <text id="profession-7">
             <value>Rien - Retraite, chômage, handicap, trop jeune</value>
@@ -677,6 +673,27 @@
           </text>
           <text id="raison_repondant_pas_com_2024-0">
             <value>Ecole/Formation</value>
+          </text>
+          <text id="raison_repondant_pas_com_2024-1">
+            <value>Occupation/Activité professionnelle (surveillance bétail, Agriculture, pêche, commerce</value>
+          </text>
+          <text id="raison_repondant_pas_com_2024-2">
+            <value>N'étais pas membre de la famille</value>
+          </text>
+          <text id="raison_repondant_pas_com_2024-3">
+            <value>Voyage de funérailles/visite à des parents</value>
+          </text>
+          <text id="raison_repondant_pas_com_2024-4">
+            <value>Soins de santé</value>
+          </text>
+          <text id="raison_repondant_pas_com_2024-5">
+            <value>Insécurité</value>
+          </text>
+          <text id="raison_repondant_pas_com_2024-6">
+            <value>Ne sait pas</value>
+          </text>
+          <text id="raison_repondant_pas_com_2024-7">
+            <value>Autres (à préciser)</value>
           </text>
           <text id="moment_recu_info-0">
             <value>Plus d'une semaine avant</value>
@@ -1131,9 +1148,6 @@
           <text id="/data/type_soumission:label">
             <value>Type de soumission d'enregistrement</value>
           </text>
-          <text id="/data/type_soumission_autre:label">
-            <value>Autre type de soumission d'enregistrement</value>
-          </text>
           <text id="/data/note2:label">
             <value>Section Ménage (à demander au chef de ménage)</value>
           </text>
@@ -1176,11 +1190,11 @@
           <text id="/data/q7_profession_autre:label">
             <value>Q7.a. Autre profession</value>
           </text>
-          <text id="/data/q7_plan_eau_douce_com:label">
-            <value>Q7. Y a-t-il un plan d'eau douce dans cette communauté qui est utilisé pour les baignades, la douche ou encore la lessive</value>
+          <text id="/data/q8a_plan_eau_douce_com:label">
+            <value>Q8.a. Y a-t-il un plan d'eau douce dans cette communauté qui est utilisé pour les baignades, la douche ou encore la lessive</value>
           </text>
-          <text id="/data/q8_tps_allez_retout_eau_douce:label">
-            <value>Q8. Combien de temps cela prend en aller-retour pour aller vers le point d'eau douce ?</value>
+          <text id="/data/q8b_tps_allez_retout_eau_douce:label">
+            <value>Q8.b. Combien de temps cela prend en aller-retour pour aller vers le point d'eau douce ?</value>
           </text>
           <text id="/data/q9_src_eau_se_desseche:label">
             <value>Q9. Cette source d'eau se dessèche-t-elle pendant la saison sèche ?</value>
@@ -1929,10 +1943,6 @@
             <itextId>type_soumission-3</itextId>
             <name>Refus de participer</name>
           </item>
-          <item>
-            <itextId>type_soumission-4</itextId>
-            <name>Autre</name>
-          </item>
         </root>
       </instance>
       <instance id="yes_no">
@@ -2083,31 +2093,31 @@
         <root>
           <item>
             <itextId>profession-0</itextId>
-            <name>Étudiant ;</name>
+            <name>Étudiant</name>
           </item>
           <item>
             <itextId>profession-1</itextId>
-            <name>agriculteur ;</name>
+            <name>agriculteur</name>
           </item>
           <item>
             <itextId>profession-2</itextId>
-            <name>Berger ;</name>
+            <name>Berger</name>
           </item>
           <item>
             <itextId>profession-3</itextId>
-            <name>Pêcheur ;</name>
+            <name>Pêcheur</name>
           </item>
           <item>
             <itextId>profession-4</itextId>
-            <name>Travail de bureau (y compris Gouvernement/secteur public/ONG) ;</name>
+            <name>Travail de bureau (y compris Gouvernement/secteur public/ONG)</name>
           </item>
           <item>
             <itextId>profession-5</itextId>
-            <name>Commerçant ;</name>
+            <name>Commerçant</name>
           </item>
           <item>
             <itextId>profession-6</itextId>
-            <name>Ménagère ;</name>
+            <name>Ménagère</name>
           </item>
           <item>
             <itextId>profession-7</itextId>
@@ -2216,6 +2226,34 @@
           <item>
             <itextId>raison_repondant_pas_com_2024-0</itextId>
             <name>Ecole/Formation</name>
+          </item>
+          <item>
+            <itextId>raison_repondant_pas_com_2024-1</itextId>
+            <name>Occupation/Activité professionnelle (surveillance bétail, Agriculture, pêche, commerce</name>
+          </item>
+          <item>
+            <itextId>raison_repondant_pas_com_2024-2</itextId>
+            <name>N'étais pas membre de la famille</name>
+          </item>
+          <item>
+            <itextId>raison_repondant_pas_com_2024-3</itextId>
+            <name>Voyage de funérailles/visite à des parents</name>
+          </item>
+          <item>
+            <itextId>raison_repondant_pas_com_2024-4</itextId>
+            <name>Soins de santé</name>
+          </item>
+          <item>
+            <itextId>raison_repondant_pas_com_2024-5</itextId>
+            <name>Insécurité</name>
+          </item>
+          <item>
+            <itextId>raison_repondant_pas_com_2024-6</itextId>
+            <name>Ne sait pas</name>
+          </item>
+          <item>
+            <itextId>raison_repondant_pas_com_2024-7</itextId>
+            <name>Autre</name>
           </item>
         </root>
       </instance>
@@ -2852,44 +2890,43 @@
       <bind nodeset="/data/village_id" type="string" required="true()" constraint=". &gt; 99 and . &lt; 1000" jr:constraintMsg="jr:itext('/data/village_id:jr:constraintMsg')"/>
       <bind nodeset="/data/gps" type="geopoint" required="true()"/>
       <bind nodeset="/data/type_soumission" type="string" required="true()"/>
-      <bind nodeset="/data/type_soumission_autre" type="string" required="true()" relevant=" /data/type_soumission  = 'Autre'"/>
-      <bind nodeset="/data/note2" readonly="true()" type="string" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/q0_numero_menage" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'" calculate="concat(substr( /data/arrondissement  , 0, 2), '_', if( instance('__last-saved')/data/q0_numero_menage !=null, instance('__last-saved')/data/q0_numero_menage  + 1,1))"/>
-      <bind nodeset="/data/q1_nbre_personne_ds_menage" type="int" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/q1_nbre_eas_ds_menage" type="int" required="true()" constraint=". &lt;=  /data/q1_nbre_personne_ds_menage " jr:constraintMsg="jr:itext('/data/q1_nbre_eas_ds_menage:jr:constraintMsg')" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/q2_vis_ds_cummunaute_12_mois" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/q3_src_eau_potable_maison" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
+      <bind nodeset="/data/note2" readonly="true()" type="string" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/q0_numero_menage" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')" calculate="concat(substr( /data/arrondissement  , 0, 2), '_', if( instance('__last-saved')/data/q0_numero_menage !=null, instance('__last-saved')/data/q0_numero_menage  + 1,1))"/>
+      <bind nodeset="/data/q1_nbre_personne_ds_menage" type="int" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/q1_nbre_eas_ds_menage" type="int" required="true()" constraint=". &lt;=  /data/q1_nbre_personne_ds_menage " jr:constraintMsg="jr:itext('/data/q1_nbre_eas_ds_menage:jr:constraintMsg')" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/q2_vis_ds_cummunaute_12_mois" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/q3_src_eau_potable_maison" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/q3_src_eau_potable_maison_autre" type="string" required="true()" relevant=" /data/q3_src_eau_potable_maison  = 'Autre'"/>
-      <bind nodeset="/data/q4_toilette_maison" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
+      <bind nodeset="/data/q4_toilette_maison" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/q4_toilette_maison_autre" type="string" required="true()" relevant=" /data/q4_toilette_maison  = 'Autre'"/>
-      <bind nodeset="/data/q5_condition_toilette" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/q6_existe_dispositif_lavage_main" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/q7_profession" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
+      <bind nodeset="/data/q5_condition_toilette" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/q6_existe_dispositif_lavage_main" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/q7_profession" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/q7_profession_autre" type="string" required="true()" relevant=" /data/q7_profession  = 'Autre'"/>
-      <bind nodeset="/data/q7_plan_eau_douce_com" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/q8_tps_allez_retout_eau_douce" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/q9_src_eau_se_desseche" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/q10_se_baigne_eau_douce" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/q11_lessive_eau_douce" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q12_code_id" type="string" relevant=" /data/type_soumission != 'Refus de participer'" calculate="concat( /data/q0_numero_menage , '_', position(..))"/>
-      <bind nodeset="/data/bj_c_2406_v2/q12_sex" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q13_age" type="int" required="true()" constraint=". &gt;= 5 and . &lt;= 14" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q14_niveau_etude" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
+      <bind nodeset="/data/q8a_plan_eau_douce_com" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/q8b_tps_allez_retout_eau_douce" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes') and  /data/q8a_plan_eau_douce_com  = 'Oui'"/>
+      <bind nodeset="/data/q9_src_eau_se_desseche" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes') and  /data/q8a_plan_eau_douce_com  = 'Oui'"/>
+      <bind nodeset="/data/q10_se_baigne_eau_douce" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes') and  /data/q8a_plan_eau_douce_com  = 'Oui'"/>
+      <bind nodeset="/data/q11_lessive_eau_douce" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes') and  /data/q8a_plan_eau_douce_com  = 'Oui'"/>
+      <bind nodeset="/data/bj_c_2406_v2/q12_code_id" type="string" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')" calculate="concat( /data/q0_numero_menage , '_', position(..))"/>
+      <bind nodeset="/data/bj_c_2406_v2/q12_sex" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/bj_c_2406_v2/q13_age" type="int" required="true()" constraint=". &gt;= 5 and . &lt;= 14" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/bj_c_2406_v2/q14_niveau_etude" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/bj_c_2406_v2/q14_niveau_etude_other" type="string" required="true()" relevant=" ../q14_niveau_etude  = 'Autre'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q15_nbr_fois_vas_ecole" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q16_repondant_a_maison" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q17_repondant_repond_lui_meme" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q18_repondant_a_chaussure" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q19_repondant_ne_dans_com" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q19_tps_vis_dans_com" type="int" required="true()" relevant=" ../q19_repondant_ne_dans_com  = 'Oui'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q20_repondant_dans_com_2024" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
+      <bind nodeset="/data/bj_c_2406_v2/q15_nbr_fois_vas_ecole" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/bj_c_2406_v2/q16_repondant_a_maison" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/bj_c_2406_v2/q17_repondant_repond_lui_meme" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/bj_c_2406_v2/q18_repondant_a_chaussure" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/bj_c_2406_v2/q19_repondant_ne_dans_com" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/bj_c_2406_v2/q19_tps_vis_dans_com" type="int" required="true()" relevant=" ../q19_repondant_ne_dans_com  = 'Non'"/>
+      <bind nodeset="/data/bj_c_2406_v2/q20_repondant_dans_com_2024" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/bj_c_2406_v2/q21_raison_repondant_pas_com_2024" type="string" required="true()" relevant=" ../q20_repondant_dans_com_2024  = 'Non'"/>
       <bind nodeset="/data/bj_c_2406_v2/q21_raison_repondant_pas_com_2024_autre" type="string" required="true()" relevant=" ../q21_raison_repondant_pas_com_2024  = 'Autre'"/>
       <bind nodeset="/data/bj_c_2406_v2/q22_repondant_savait_tdm" type="string" required="true()" relevant=" ../q20_repondant_dans_com_2024  = 'Oui'"/>
       <bind nodeset="/data/bj_c_2406_v2/q23_moment_recu_info" type="string" required="true()" relevant=" ../q22_repondant_savait_tdm  = 'Oui'"/>
       <bind nodeset="/data/bj_c_2406_v2/q24_comment_entendu_tdm" type="string" required="true()" relevant=" ../q22_repondant_savait_tdm  = 'Oui'"/>
       <bind nodeset="/data/bj_c_2406_v2/q24_comment_entendu_tdm_autre" type="string" required="true()" relevant=" ../q24_comment_entendu_tdm  = 'Autre'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q25_propose_pzq" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
+      <bind nodeset="/data/bj_c_2406_v2/q25_propose_pzq" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/bj_c_2406_v2/q26_raison_pas_propose_pzq" type="string" required="true()" relevant=" ../q25_propose_pzq  = 'Non'"/>
       <bind nodeset="/data/bj_c_2406_v2/q26_raison_pas_propose_pzq_autre" type="string" required="true()" relevant=" ../q26_raison_pas_propose_pzq  = 'Autre'"/>
       <bind nodeset="/data/bj_c_2406_v2/q27_qui_a_donne_pzq" type="string" required="true()" relevant=" ../q25_propose_pzq  = 'Oui'"/>
@@ -2902,10 +2939,10 @@
       <bind nodeset="/data/bj_c_2406_v2/q31_avale_pzq_devant_distributeur" type="string" required="true()" relevant=" ../q28_avale_pzq  = 'Oui'"/>
       <bind nodeset="/data/bj_c_2406_v2/q32_effet_secondaire_pzq" type="string" required="true()" relevant=" ../q28_avale_pzq  = 'Oui'"/>
       <bind nodeset="/data/bj_c_2406_v2/q33_type_effet_secondaire_pzq" type="string" required="true()" relevant=" ../q32_effet_secondaire_pzq  = 'Oui'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q34_nb_fois_participe_tdm_sch" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q35_pourquoi_jamais_participe" type="string" required="true()" relevant=" ../q34_nb_fois_participe_tdm_sch  = '0 = Jamais'"/>
+      <bind nodeset="/data/bj_c_2406_v2/q34_nb_fois_participe_tdm_sch" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
+      <bind nodeset="/data/bj_c_2406_v2/q35_pourquoi_jamais_participe" type="string" required="true()" relevant=" ../q34_nb_fois_participe_tdm_sch  = 'Jamais'"/>
       <bind nodeset="/data/bj_c_2406_v2/q35_pourquoi_jamais_participe_autre" type="string" required="true()" relevant=" ../q35_pourquoi_jamais_participe  = 'Autre'"/>
-      <bind nodeset="/data/bj_c_2406_v2/q36_entendu_parler_sch" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
+      <bind nodeset="/data/bj_c_2406_v2/q36_entendu_parler_sch" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/bj_c_2406_v2/q37_ou_entendu_parler_sch" type="string" required="true()" relevant=" ../q36_entendu_parler_sch  = 'Oui'"/>
       <bind nodeset="/data/bj_c_2406_v2/q37_ou_entendu_parler_sch_autre" type="string" required="true()" relevant=" ../q37_ou_entendu_parler_sch  = 'Autre'"/>
       <bind nodeset="/data/bj_c_2406_v2/q38_transmission_sch" type="string" required="true()" relevant=" ../q36_entendu_parler_sch  = 'Oui'"/>
@@ -2916,9 +2953,9 @@
       <bind nodeset="/data/bj_c_2406_v2/q40_prevention_sch_autre" type="string" required="true()" relevant="selected( ../q40_prevention_sch , 'Autre')"/>
       <bind nodeset="/data/bj_c_2406_v2/q41_traitement_pzq" type="string" required="true()" relevant=" ../q36_entendu_parler_sch  = 'Oui'"/>
       <bind nodeset="/data/bj_c_2406_v2/q41_traitement_pzq_autre" type="string" required="true()" relevant="selected( ../q41_traitement_pzq , 'Autre')"/>
-      <bind nodeset="/data/bj_c_2406_v2/q42_selectionner_bandelette" type="string" required="true()" relevant=" /data/type_soumission != 'Refus de participer'"/>
+      <bind nodeset="/data/bj_c_2406_v2/q42_selectionner_bandelette" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/bj_c_2406_v2/q43_gradation" type="string" relevant=" ../q42_selectionner_bandelette  = 'Oui'"/>
-      <bind nodeset="/data/bj_c_2406_v2/commentaires" type="string" relevant=" /data/type_soumission != 'Refus de participer'"/>
+      <bind nodeset="/data/bj_c_2406_v2/commentaires" type="string" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
       <bind nodeset="/data/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
@@ -2972,9 +3009,6 @@
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <input ref="/data/type_soumission_autre">
-      <label ref="jr:itext('/data/type_soumission_autre:label')"/>
-    </input>
     <input ref="/data/note2">
       <label ref="jr:itext('/data/note2:label')"/>
     </input>
@@ -3038,15 +3072,15 @@
     <input ref="/data/q7_profession_autre">
       <label ref="jr:itext('/data/q7_profession_autre:label')"/>
     </input>
-    <select1 ref="/data/q7_plan_eau_douce_com">
-      <label ref="jr:itext('/data/q7_plan_eau_douce_com:label')"/>
+    <select1 ref="/data/q8a_plan_eau_douce_com">
+      <label ref="jr:itext('/data/q8a_plan_eau_douce_com:label')"/>
       <itemset nodeset="instance('yes_no_na')/root/item">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <select1 ref="/data/q8_tps_allez_retout_eau_douce">
-      <label ref="jr:itext('/data/q8_tps_allez_retout_eau_douce:label')"/>
+    <select1 ref="/data/q8b_tps_allez_retout_eau_douce">
+      <label ref="jr:itext('/data/q8b_tps_allez_retout_eau_douce:label')"/>
       <itemset nodeset="instance('tps_allez_retout_eau_douce')/root/item">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
