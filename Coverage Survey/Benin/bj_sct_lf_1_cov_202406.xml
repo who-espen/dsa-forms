@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:odk="http://www.opendatakit.org/xforms">
   <h:head>
-    <h:title>(2024 Juin) - 1. Couverture &amp; CAP V3</h:title>
+    <h:title>(2024 Juillet) - 1. Couverture &amp; CAP V3.1</h:title>
     <model odk:xforms-version="1.0.0">
 
       <instance>
-        <data id="bj_sct_lf_1_cov_2406_v3">
+        <data id="bj_sct_lf_1_cov_2406_v3_1">
           <note1/>
           <recorder_id/>
           <date/>
@@ -22,6 +22,7 @@
           <gps/>
           <type_soumission/>
           <note2/>
+          <q0_index_menage/>
           <q0_numero_menage/>
           <q1_nbre_personne_ds_menage/>
           <q1_nbre_eas_ds_menage/>
@@ -705,7 +706,7 @@
             <value>Le jour même de la distribution</value>
           </text>
           <text id="moment_recu_info-3">
-            <value>9Ne sait pas / pas de réponse</value>
+            <value>Ne sait pas / pas de réponse</value>
           </text>
           <text id="comment_entendu_tdm-0">
             <value>membre de la famille / ami / voisin</value>
@@ -1150,6 +1151,9 @@
           </text>
           <text id="/data/note2:label">
             <value>Section Ménage (à demander au chef de ménage)</value>
+          </text>
+          <text id="/data/q0_index_menage:label">
+            <value>Index du numéro de ménage</value>
           </text>
           <text id="/data/q0_numero_menage:label">
             <value>Q0. Numéro du ménage (Premières lettres de l'arrondissement et du village suivi du numéro d'ordre)</value>
@@ -2273,7 +2277,7 @@
           </item>
           <item>
             <itextId>moment_recu_info-3</itextId>
-            <name>9Ne sait pas / pas de réponse</name>
+            <name>Ne sait pas / pas de réponse</name>
           </item>
         </root>
       </instance>
@@ -2585,7 +2589,7 @@
           </item>
           <item>
             <itextId>pourquoi_jamais_participe-5</itextId>
-            <name>9Ne sait pas/Pas de réponse</name>
+            <name>Ne sait pas/Pas de réponse</name>
           </item>
         </root>
       </instance>
@@ -2891,7 +2895,8 @@
       <bind nodeset="/data/gps" type="geopoint" required="true()"/>
       <bind nodeset="/data/type_soumission" type="string" required="true()"/>
       <bind nodeset="/data/note2" readonly="true()" type="string" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
-      <bind nodeset="/data/q0_numero_menage" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')" calculate="concat(substr( /data/arrondissement  , 0, 2), '_', if( instance('__last-saved')/data/q0_numero_menage !=null, instance('__last-saved')/data/q0_numero_menage  + 1,1))"/>
+      <bind nodeset="/data/q0_index_menage" type="int" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')" calculate="if( instance('__last-saved')/data/q0_index_menage !=null, instance('__last-saved')/data/q0_index_menage  + 1,1)" readonly="true()"/>
+      <bind nodeset="/data/q0_numero_menage" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')" calculate="concat( /data/recorder_id , '_', substr( /data/arrondissement  , 0, 2), '_',  /data/q0_index_menage )" readonly="true()"/>
       <bind nodeset="/data/q1_nbre_personne_ds_menage" type="int" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/q1_nbre_eas_ds_menage" type="int" required="true()" constraint=". &lt;=  /data/q1_nbre_personne_ds_menage " jr:constraintMsg="jr:itext('/data/q1_nbre_eas_ds_menage:jr:constraintMsg')" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/q2_vis_ds_cummunaute_12_mois" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
@@ -2908,6 +2913,7 @@
       <bind nodeset="/data/q9_src_eau_se_desseche" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes') and  /data/q8a_plan_eau_douce_com  = 'Oui'"/>
       <bind nodeset="/data/q10_se_baigne_eau_douce" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes') and  /data/q8a_plan_eau_douce_com  = 'Oui'"/>
       <bind nodeset="/data/q11_lessive_eau_douce" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes') and  /data/q8a_plan_eau_douce_com  = 'Oui'"/>
+      <bind nodeset="/data/bj_c_2406_v2" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/bj_c_2406_v2/q12_code_id" type="string" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')" calculate="concat( /data/q0_numero_menage , '_', position(..))"/>
       <bind nodeset="/data/bj_c_2406_v2/q12_sex" type="string" required="true()" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
       <bind nodeset="/data/bj_c_2406_v2/q13_age" type="int" required="true()" constraint=". &gt;= 5 and . &lt;= 14" relevant="( /data/type_soumission != 'Refus de participer' and  /data/type_soumission != 'Logement vide/pas de personnes')"/>
@@ -3011,6 +3017,9 @@
     </select1>
     <input ref="/data/note2">
       <label ref="jr:itext('/data/note2:label')"/>
+    </input>
+    <input ref="/data/q0_index_menage">
+      <label ref="jr:itext('/data/q0_index_menage:label')"/>
     </input>
     <input ref="/data/q0_numero_menage">
       <label ref="jr:itext('/data/q0_numero_menage:label')"/>
