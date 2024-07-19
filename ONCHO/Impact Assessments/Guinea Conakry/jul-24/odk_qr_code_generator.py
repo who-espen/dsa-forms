@@ -6,7 +6,7 @@ import zlib
 
 settings = {
   "general": {
-    "server_url": "https://submit.datastandard.co/espen/guinnee-conakry-espen",
+    "server_url": "https://submit.datastandard.co/espen/guinee-conakry-espen-2",
     "username": "collect",
     "password": "espen47",
   },
@@ -18,7 +18,7 @@ settings = {
     "admin_pw": "1325",
   },
   "project": {
-    "name": "Guinée Enquête ONCHO Pre-Stop",
+    "name": "Guinée Enquête",
     "icon": "E",
     "color": "#0066ff"
   }
@@ -27,4 +27,4 @@ settings = {
 qr_data = b64encode(zlib.compress(json.dumps(settings).encode("utf-8")))
 
 code = segno.make(qr_data, micro=False)
-code.save('ONCHO/Impact Assessments/Guinea Conakry/guinea-settings.png', scale=5)
+code.save('ONCHO/Impact Assessments/Guinea Conakry/jul-24/guinea-settings.png', scale=5)
