@@ -839,8 +839,8 @@
       <bind nodeset="/data/c_cluster_id1" relevant=" /data/c_cluster_name1 != 'Autre'" required="true()" type="select1"/>
       <bind nodeset="/data/c_cluster_name2" relevant=" /data/c_cluster_name1  = 'Autre'" required="true()" type="string"/>
       <bind nodeset="/data/c_cluster_id2" relevant=" /data/c_cluster_name1  = 'Autre'" required="true()" type="select1"/>
-      <bind calculate="if( /data/c_cluster_name1  = 'Autre', concat(c_cluster_name2), concat(c_cluster_name1))" nodeset="/data/c_cluster_name" readonly="true()" required="true()" type="string" db_add_col_2="/data/c_district" db_add_col_3="."/>
-      <bind calculate="if( /data/c_cluster_name1  = 'Autre', concat(c_cluster_id2), concat(c_cluster_id1))" nodeset="/data/c_cluster_id" readonly="true()" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
+      <bind calculate="if( /data/c_cluster_name1  = 'Autre', concat( /data/c_cluster_name2 ), concat( /data/c_cluster_name1 ))" nodeset="/data/c_cluster_name" readonly="true()" required="true()" type="string" db_add_col_2="/data/c_district" db_add_col_3="."/>
+      <bind calculate="if( /data/c_cluster_name1  = 'Autre', concat( /data/c_cluster_id2 ), concat( /data/c_cluster_id1 ))" nodeset="/data/c_cluster_id" readonly="true()" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
       <bind nodeset="/data/c_cluster_leader_name" required="true()" type="string"/>
       <bind nodeset="/data/c_consent" required="true()" type="select1"/>
       <bind nodeset="/data/c_gps_type" relevant=" /data/cg_lf_p_2408/p_consent  = 'Oui'" required="true()" type="select1"/>
