@@ -843,7 +843,7 @@
       <bind calculate="if( /data/c_cluster_name1  = 'Autre', concat( /data/c_cluster_id2 ), concat( /data/c_cluster_id1 ))" nodeset="/data/c_cluster_id" readonly="true()" required="true()" type="string" db_add_col_3="/data/c_cluster_name" db_add_col_4="."/>
       <bind nodeset="/data/c_cluster_leader_name" required="true()" type="string"/>
       <bind nodeset="/data/c_consent" required="true()" type="select1"/>
-      <bind nodeset="/data/c_gps_type" relevant=" /data/cg_lf_p_2408/p_consent  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/c_gps_type" relevant=" /data/c_consent  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Oui' and  /data/c_gps_type  = 'Scanner'" required="true()" type="geopoint"/>
       <bind nodeset="/data/c_gps_dec" relevant=" /data/c_consent  = 'Oui' and  /data/c_gps_type  = 'Degré décimal'"/>
       <bind constraint=". &gt;= -5.0 and . &lt;= 5.0" jr:constraintMsg="jr:itext('/data/c_gps_dec/c_lat_dec:jr:constraintMsg')" nodeset="/data/c_gps_dec/c_lat_dec" required="true()" type="decimal"/>
