@@ -509,8 +509,8 @@
       <bind nodeset="/data/o_cluster_id1" relevant=" /data/o_cluster_name1 != 'Autre'" required="true()" type="select1"/>
       <bind nodeset="/data/o_cluster_name2" relevant=" /data/o_cluster_name1  = 'Autre'" required="true()" type="string"/>
       <bind nodeset="/data/o_cluster_id2" relevant=" /data/o_cluster_name1  = 'Autre'" required="true()" type="select1"/>
-      <bind calculate="if( /data/o_cluster_name1  = 'Autre', concat(o_cluster_name2), concat(o_cluster_name1))" nodeset="/data/o_cluster_name" readonly="true()" required="true()" type="string"/>
-      <bind calculate="if( /data/o_cluster_name1  = 'Autre', concat(o_cluster_id2), concat(o_cluster_id1))" nodeset="/data/o_cluster_id" readonly="true()" required="true()" type="string"/>
+      <bind calculate="if( /data/o_cluster_name1  = 'Autre', concat( /data/o_cluster_name2 ), concat( /data/o_cluster_name1 ))" nodeset="/data/o_cluster_name" readonly="true()" required="true()" type="string"/>
+      <bind calculate="if( /data/o_cluster_name1  = 'Autre', concat( /data/o_cluster_id2 ), concat( /data/o_cluster_id1 ))" nodeset="/data/o_cluster_id" readonly="true()" required="true()" type="string"/>
       <bind calculate="join(' ',  /data/sn_lf_o_2405_v4/o_code_id )" nodeset="/data/C1" type="string"/>
       <bind calculate="position(..)" nodeset="/data/sn_lf_o_2405_v4/C2" type="string"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../o_code_id ))" nodeset="/data/sn_lf_o_2405_v4/C3" type="string"/>
