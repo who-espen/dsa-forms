@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Août) 2. Fiche de collecte des Simulies par équipe V4</h:title>
+    <h:title>(2024 Août) 2. Fiche de collecte des Simulies par équipe V2</h:title>
     <model>
 
       <instance>
-        <data id="bj_oncho_bsa_2408_2_capture_form">
+        <data id="bj_oncho_bsa_2408_2_capture_form_v2">
           <b_recorder_id/>
           <b_district/>
           <b_health_area/>
@@ -20,9 +20,11 @@
           <b_capture_point/>
           <b_date/>
           <b_gps/>
-          <b_hour/>
-          <b_nb_blackflies1/>
-          <b_weather/>
+          <bj_flies_2409 jr:template="">
+            <b_hour/>
+            <b_nb_blackflies1/>
+            <b_weather/>
+          </bj_flies_2409>
           <b_notes/>
           <b_start/>
           <b_end/>
@@ -40,14 +42,11 @@
           <text id="static_instance-capture_point-1">
             <value>2</value>
           </text>
-          <text id="/data/b_site/OUBÉROU/PONT:label">
-            <value>OUBÉROU/PONT</value>
+          <text id="/data/bj_flies_2409:label">
+            <value>Capture</value>
           </text>
           <text id="/data/b_health_area/BESSE:label">
             <value>BESSE</value>
-          </text>
-          <text id="/data/b_hour/12:00 - 13:00:label">
-            <value>12:00 - 13:00</value>
           </text>
           <text id="/data/b_recorder_id:hint">
             <value>Code à deux chiffres qui vous a été assigné</value>
@@ -61,14 +60,11 @@
           <text id="/data/b_site_id/106:label">
             <value>106</value>
           </text>
-          <text id="/data/b_hour/14:00 - 15:00:label">
-            <value>14:00 - 15:00</value>
+          <text id="/data/bj_flies_2409/b_hour/8:00 - 9:00:label">
+            <value>8:00 - 9:00</value>
           </text>
           <text id="/data/b_site_id/105:label">
             <value>105</value>
-          </text>
-          <text id="/data/b_hour/10:00 - 11:00:label">
-            <value>10:00 - 11:00</value>
           </text>
           <text id="/data/b_health_area/TCHALENGA:label">
             <value>TCHALENGA</value>
@@ -76,8 +72,8 @@
           <text id="/data/b_health_area/BÉTÉROU:label">
             <value>BÉTÉROU</value>
           </text>
-          <text id="/data/b_weather:label">
-            <value>Observation climatique</value>
+          <text id="/data/bj_flies_2409/b_hour/15:00 - 16:00:label">
+            <value>15:00 - 16:00</value>
           </text>
           <text id="static_instance-code_site-10">
             <value>111</value>
@@ -115,8 +111,8 @@
           <text id="static_instance-code_site-3">
             <value>104</value>
           </text>
-          <text id="/data/b_nb_blackflies1:label">
-            <value>Nombre de simulies capturées</value>
+          <text id="/data/b_site/OUBÉROU/PONT:label">
+            <value>OUBÉROU/PONT</value>
           </text>
           <text id="static_instance-code_site-8">
             <value>109</value>
@@ -130,14 +126,8 @@
           <text id="/data/b_district/BANTÈ:label">
             <value>BANTÈ</value>
           </text>
-          <text id="/data/b_hour:label">
-            <value>Sélectionner l'heure</value>
-          </text>
-          <text id="/data/b_recorder_id:jr:constraintMsg">
-            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
-          </text>
-          <text id="/data/b_hour/9:00 - 10:00:label">
-            <value>9:00 - 10:00</value>
+          <text id="static_instance-site-7">
+            <value>ANGARADÉBOU</value>
           </text>
           <text id="/data/b_district:label">
             <value>Sélectionner un district</value>
@@ -151,14 +141,17 @@
           <text id="/data/b_recorder_id:label">
             <value>Entrer l'identifiant de l'enregistreur</value>
           </text>
-          <text id="/data/b_site/OKOUTA-OSSE:label">
-            <value>OKOUTA-OSSE</value>
+          <text id="/data/bj_flies_2409/b_weather/Ensoleillé:label">
+            <value>Ensoleillé</value>
+          </text>
+          <text id="/data/bj_flies_2409/b_hour/10:00 - 11:00:label">
+            <value>10:00 - 11:00</value>
           </text>
           <text id="/data/b_district/BASSILA:label">
             <value>BASSILA</value>
           </text>
-          <text id="/data/b_weather/Ensoleillé:label">
-            <value>Ensoleillé</value>
+          <text id="/data/bj_flies_2409/b_weather:label">
+            <value>Observation climatique</value>
           </text>
           <text id="/data/b_district/TCHAOUROU:label">
             <value>TCHAOUROU</value>
@@ -166,20 +159,14 @@
           <text id="static_instance-site-10">
             <value>GBONGBONTOUTA</value>
           </text>
-          <text id="/data/b_hour/8:00 - 9:00:label">
-            <value>8:00 - 9:00</value>
-          </text>
           <text id="/data/b_site_id/110:label">
             <value>110</value>
           </text>
           <text id="/data/b_site_id/104:label">
             <value>104</value>
           </text>
-          <text id="/data/b_hour/11:00 - 12:00:label">
-            <value>11:00 - 12:00</value>
-          </text>
-          <text id="/data/b_hour/13:00 - 14:00:label">
-            <value>13:00 - 14:00</value>
+          <text id="/data/bj_flies_2409/b_hour/17:00 - 18:00:label">
+            <value>17:00 - 18:00</value>
           </text>
           <text id="/data/b_site/OKPA:label">
             <value>OKPA</value>
@@ -196,23 +183,26 @@
           <text id="static_instance-time_liste-4">
             <value>11:00 - 12:00</value>
           </text>
+          <text id="static_instance-health_facility-4">
+            <value>BESSE</value>
+          </text>
           <text id="static_instance-time_liste-6">
             <value>13:00 - 14:00</value>
           </text>
           <text id="static_instance-time_liste-10">
             <value>17:00 - 18:00</value>
           </text>
-          <text id="/data/b_weather/Nuageux:label">
-            <value>Nuageux</value>
+          <text id="/data/bj_flies_2409/b_hour/13:00 - 14:00:label">
+            <value>13:00 - 14:00</value>
           </text>
           <text id="/data/b_site_id:label">
             <value>Code du site</value>
           </text>
-          <text id="/data/b_weather/Pluvieux:label">
-            <value>Pluvieux</value>
-          </text>
           <text id="/data/b_site/ARIGBOKOTO:label">
             <value>ARIGBOKOTO</value>
+          </text>
+          <text id="/data/bj_flies_2409/b_hour/11:00 - 12:00:label">
+            <value>11:00 - 12:00</value>
           </text>
           <text id="static_instance-district-2">
             <value>SAVÈ</value>
@@ -226,9 +216,6 @@
           <text id="static_instance-district-1">
             <value>BANTÈ</value>
           </text>
-          <text id="/data/b_hour/7:00 - 8:00:label">
-            <value>7:00 - 8:00</value>
-          </text>
           <text id="static_instance-district-4">
             <value>OUAKÉ</value>
           </text>
@@ -240,6 +227,9 @@
           </text>
           <text id="/data/b_district/SAVÈ:label">
             <value>SAVÈ</value>
+          </text>
+          <text id="/data/bj_flies_2409/b_hour/16:00 - 17:00:label">
+            <value>16:00 - 17:00</value>
           </text>
           <text id="static_instance-site-9">
             <value>OKOUTA-OSSE</value>
@@ -253,8 +243,8 @@
           <text id="static_instance-site-4">
             <value>TÉROU PONT</value>
           </text>
-          <text id="static_instance-site-7">
-            <value>ANGARADÉBOU</value>
+          <text id="/data/b_recorder_id:jr:constraintMsg">
+            <value>Le code doit être un nombre à deux chiffres entre 9 et 100</value>
           </text>
           <text id="static_instance-site-6">
             <value>KIKA BARRAGE</value>
@@ -276,6 +266,9 @@
           </text>
           <text id="static_instance-time_liste-8">
             <value>15:00 - 16:00</value>
+          </text>
+          <text id="/data/bj_flies_2409/b_hour/12:00 - 13:00:label">
+            <value>12:00 - 13:00</value>
           </text>
           <text id="static_instance-time_liste-1">
             <value>8:00 - 9:00</value>
@@ -319,8 +312,8 @@
           <text id="/data/b_health_area/BASSILA:label">
             <value>BASSILA</value>
           </text>
-          <text id="/data/b_hour/17:00 - 18:00:label">
-            <value>17:00 - 18:00</value>
+          <text id="/data/bj_flies_2409/b_hour/7:00 - 8:00:label">
+            <value>7:00 - 8:00</value>
           </text>
           <text id="/data/b_site/GBONGBONTOUTA:label">
             <value>GBONGBONTOUTA</value>
@@ -334,6 +327,12 @@
           <text id="/data/b_health_area/KIKA:label">
             <value>KIKA</value>
           </text>
+          <text id="/data/bj_flies_2409/b_hour/9:00 - 10:00:label">
+            <value>9:00 - 10:00</value>
+          </text>
+          <text id="/data/bj_flies_2409/b_nb_blackflies1:label">
+            <value>Nombre de simulies capturées</value>
+          </text>
           <text id="/data/b_capture_point:label">
             <value>Point de capture</value>
           </text>
@@ -346,6 +345,9 @@
           <text id="/data/b_site_id/111:label">
             <value>111</value>
           </text>
+          <text id="/data/bj_flies_2409/b_weather/Pluvieux:label">
+            <value>Pluvieux</value>
+          </text>
           <text id="/data/b_notes:label">
             <value>Informations additionnelles</value>
           </text>
@@ -355,8 +357,8 @@
           <text id="static_instance-health_facility-5">
             <value>KIKA</value>
           </text>
-          <text id="static_instance-health_facility-4">
-            <value>BESSE</value>
+          <text id="/data/bj_flies_2409/b_hour:label">
+            <value>Sélectionner l'heure</value>
           </text>
           <text id="static_instance-health_facility-3">
             <value>TCHALENGA</value>
@@ -370,14 +372,17 @@
           <text id="static_instance-health_facility-0">
             <value>PIRA</value>
           </text>
+          <text id="/data/bj_flies_2409/b_weather/Nuageux:label">
+            <value>Nuageux</value>
+          </text>
           <text id="static_instance-code_site-6">
             <value>107</value>
           </text>
-          <text id="/data/b_hour/15:00 - 16:00:label">
-            <value>15:00 - 16:00</value>
+          <text id="/data/bj_flies_2409/b_hour/14:00 - 15:00:label">
+            <value>14:00 - 15:00</value>
           </text>
-          <text id="/data/b_hour/16:00 - 17:00:label">
-            <value>16:00 - 17:00</value>
+          <text id="/data/b_site/OKOUTA-OSSE:label">
+            <value>OKOUTA-OSSE</value>
           </text>
           <text id="/data/b_site:hint">
             <value>Le nom de la communauté où vous êtes</value>
@@ -650,9 +655,9 @@
       <bind nodeset="/data/b_capture_point" required="true()" type="select1"/>
       <bind nodeset="/data/b_date" required="true()" type="date"/>
       <bind nodeset="/data/b_gps" required="true()" type="geopoint"/>
-      <bind nodeset="/data/b_hour" required="true()" type="select1"/>
-      <bind nodeset="/data/b_nb_blackflies1" required="true()" type="int"/>
-      <bind nodeset="/data/b_weather" required="true()" type="select1"/>
+      <bind nodeset="/data/bj_flies_2409/b_hour" required="true()" type="select1"/>
+      <bind nodeset="/data/bj_flies_2409/b_nb_blackflies1" required="true()" type="int"/>
+      <bind nodeset="/data/bj_flies_2409/b_weather" required="true()" type="select1"/>
       <bind nodeset="/data/b_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/b_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/b_end" type="dateTime"/>
@@ -727,71 +732,76 @@
       <label ref="jr:itext('/data/b_gps:label')"/>
       <hint ref="jr:itext('/data/b_gps:hint')"/>
     </input>
-    <select1 appearance="minimal" ref="/data/b_hour">
-      <label ref="jr:itext('/data/b_hour:label')"/>
-      <item>
-        <label ref="jr:itext('/data/b_hour/7:00 - 8:00:label')"/>
-        <value>7:00 - 8:00</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_hour/8:00 - 9:00:label')"/>
-        <value>8:00 - 9:00</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_hour/9:00 - 10:00:label')"/>
-        <value>9:00 - 10:00</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_hour/10:00 - 11:00:label')"/>
-        <value>10:00 - 11:00</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_hour/11:00 - 12:00:label')"/>
-        <value>11:00 - 12:00</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_hour/12:00 - 13:00:label')"/>
-        <value>12:00 - 13:00</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_hour/13:00 - 14:00:label')"/>
-        <value>13:00 - 14:00</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_hour/14:00 - 15:00:label')"/>
-        <value>14:00 - 15:00</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_hour/15:00 - 16:00:label')"/>
-        <value>15:00 - 16:00</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_hour/16:00 - 17:00:label')"/>
-        <value>16:00 - 17:00</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_hour/17:00 - 18:00:label')"/>
-        <value>17:00 - 18:00</value>
-      </item>
-    </select1>
-    <input ref="/data/b_nb_blackflies1">
-      <label ref="jr:itext('/data/b_nb_blackflies1:label')"/>
-    </input>
-    <select1 ref="/data/b_weather">
-      <label ref="jr:itext('/data/b_weather:label')"/>
-      <item>
-        <label ref="jr:itext('/data/b_weather/Nuageux:label')"/>
-        <value>Nuageux</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_weather/Pluvieux:label')"/>
-        <value>Pluvieux</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/data/b_weather/Ensoleillé:label')"/>
-        <value>Ensoleillé</value>
-      </item>
-    </select1>
+    <group ref="/data/bj_flies_2409">
+      <label ref="jr:itext('/data/bj_flies_2409:label')"/>
+      <repeat nodeset="/data/bj_flies_2409">
+        <select1 appearance="minimal" ref="/data/bj_flies_2409/b_hour">
+          <label ref="jr:itext('/data/bj_flies_2409/b_hour:label')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/7:00 - 8:00:label')"/>
+            <value>7:00 - 8:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/8:00 - 9:00:label')"/>
+            <value>8:00 - 9:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/9:00 - 10:00:label')"/>
+            <value>9:00 - 10:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/10:00 - 11:00:label')"/>
+            <value>10:00 - 11:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/11:00 - 12:00:label')"/>
+            <value>11:00 - 12:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/12:00 - 13:00:label')"/>
+            <value>12:00 - 13:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/13:00 - 14:00:label')"/>
+            <value>13:00 - 14:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/14:00 - 15:00:label')"/>
+            <value>14:00 - 15:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/15:00 - 16:00:label')"/>
+            <value>15:00 - 16:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/16:00 - 17:00:label')"/>
+            <value>16:00 - 17:00</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_hour/17:00 - 18:00:label')"/>
+            <value>17:00 - 18:00</value>
+          </item>
+        </select1>
+        <input ref="/data/bj_flies_2409/b_nb_blackflies1">
+          <label ref="jr:itext('/data/bj_flies_2409/b_nb_blackflies1:label')"/>
+        </input>
+        <select1 ref="/data/bj_flies_2409/b_weather">
+          <label ref="jr:itext('/data/bj_flies_2409/b_weather:label')"/>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_weather/Nuageux:label')"/>
+            <value>Nuageux</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_weather/Pluvieux:label')"/>
+            <value>Pluvieux</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/bj_flies_2409/b_weather/Ensoleillé:label')"/>
+            <value>Ensoleillé</value>
+          </item>
+        </select1>
+      </repeat>
+    </group>
     <input ref="/data/b_notes">
       <label ref="jr:itext('/data/b_notes:label')"/>
     </input>
