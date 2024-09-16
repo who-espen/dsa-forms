@@ -141,7 +141,7 @@
             <value>Autre (expliquer)</value>
           </text>
           <text id="/data/d_cluster_id:jr:constraintMsg">
-            <value>Le code doit être un nombre à deux chiffres entre 999 et 10000</value>
+            <value>Le code doit être un nombre à deux chiffres entre 99 et 1000</value>
           </text>
           <text id="/data/d_district_id:label">
             <value>Sélectionner le code du district</value>
@@ -224,7 +224,7 @@
       <bind nodeset="/data/d_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/d_eu_name"/>
       <bind nodeset="/data/d_district_id" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/d_district"/>
       <bind nodeset="/data/d_cluster_name" required="true()" type="string" db_get="col_4" db_filter_by_col_3="/data/d_district_id"/>
-      <bind constraint=". &gt; 999 and .&lt; 10000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_cluster_name"/>
+      <bind constraint=". &gt; 99 and .&lt; 1000" jr:constraintMsg="jr:itext('/data/d_cluster_id:jr:constraintMsg')" nodeset="/data/d_cluster_id" required="true()" type="string" db_get="col_5" db_filter_by_col_4="/data/d_cluster_name"/>
       <bind constraint=". &gt; 0 and . &lt;= 410" jr:constraintMsg="jr:itext('/data/d_num:jr:constraintMsg')" nodeset="/data/d_num" required="true()" type="int"/>
       <bind calculate="concat( /data/d_district_id , '-',  /data/d_cluster_id , '-' , /data/d_num )" nodeset="/data/d_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/d_sex" required="true()" type="select1"/>
