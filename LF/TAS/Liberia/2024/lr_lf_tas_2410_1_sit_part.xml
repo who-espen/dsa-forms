@@ -7036,7 +7036,7 @@
       <bind calculate="if( ../p_type_id  = 'Scanner', concat( ../p_barcode_id ), concat( ../p_mannual_id ))" constraint="not(selected( ../C3 ,  ../p_code_id ))" jr:constraintMsg="jr:itext('/data/lr_tas_p_2410/p_code_id:jr:constraintMsg')" nodeset="/data/lr_tas_p_2410/p_code_id" readonly="true()" relevant=" ../p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/lr_tas_p_2410/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'No'" type="string"/>
       <bind constraint="regex(., '^.{0,255}$')" jr:constraintMsg="jr:itext('/data/lr_tas_p_2410/p_notes:jr:constraintMsg')" nodeset="/data/lr_tas_p_2410/p_notes" relevant=" ../p_consent  = 'Yes'" type="string"/>
-      <bind nodeset="/data/lr_tas_p_2410/c_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'Yes'" type="string"/>
+      <bind nodeset="/data/lr_tas_p_2410/c_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'No'" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
