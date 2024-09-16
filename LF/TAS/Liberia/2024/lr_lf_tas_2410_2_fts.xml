@@ -296,7 +296,7 @@
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../d_code_id ))" nodeset="/data/lr_tas_fts_2410/C3" type="string"/>
       <bind nodeset="/data/lr_tas_fts_2410/d_type_id" required="true()" type="select1"/>
       <bind nodeset="/data/lr_tas_fts_2410/d_barcode_id" relevant=" ../d_type_id  = 'Scanner'" required="true()" type="barcode"/>
-      <bind nodeset="/data/lr_tas_fts_2410/d_mannual_id" relevant=" ../d_type_id  = 'Manual'" required="true()" type="barcode"/>
+      <bind nodeset="/data/lr_tas_fts_2410/d_mannual_id" relevant=" ../d_type_id  = 'Manual'" required="true()" type="string"/>
       <bind calculate="if( ../d_type_id  = 'Scanner', concat( ../d_barcode_id ), concat( ../d_mannual_id ))" constraint="not(selected( ../C3 ,  ../d_code_id ))" jr:constraintMsg="jr:itext('/data/lr_tas_fts_2410/d_code_id:jr:constraintMsg')" nodeset="/data/lr_tas_fts_2410/d_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/lr_tas_fts_2410/d_lotnumber1" required="true()" type="string"/>
       <bind nodeset="/data/lr_tas_fts_2410/d_result1" required="true()" type="select1"/>
@@ -340,6 +340,7 @@
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
     </model>
+    
   </h:head>
   <h:body>
     <select1 ref="/data/d_recorder">

@@ -7023,19 +7023,20 @@
       <bind nodeset="/data/c_gps" relevant=" /data/c_consent  = 'Yes'" required="true()" type="geopoint"/>
       <bind nodeset="/data/c_nbr_participant" relevant=" /data/c_consent  = 'Yes'" required="true()" type="int"/>
       <bind calculate="join(' ',  /data/lr_tas_p_2410/p_code_id )" nodeset="/data/C1" type="string"/>
+      <bind nodeset="/data/lr_tas_p_2410" relevant=" /data/c_consent  = 'Yes'"/>
       <bind calculate="position(..)" nodeset="/data/lr_tas_p_2410/C2" type="string"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../p_code_id ))" nodeset="/data/lr_tas_p_2410/C3" type="string"/>
-      <bind nodeset="/data/lr_tas_p_2410/p_consent" relevant=" /data/c_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/lr_tas_p_2410/p_sex" relevant=" ../p_consent  = 'Yes' and  /data/c_consent  = 'Yes'" required="true()" type="select1"/>
-      <bind nodeset="/data/lr_tas_p_2410/p_age_yrs" relevant=" ../p_consent  = 'Yes' and  /data/c_consent  = 'Yes'" required="true()" type="int"/>
-      <bind constraint=". &lt;=  ../p_age_yrs " jr:constraintMsg="jr:itext('/data/lr_tas_p_2410/p_how_long_lived:jr:constraintMsg')" nodeset="/data/lr_tas_p_2410/p_how_long_lived" relevant=" ../p_consent  = 'Yes' and  /data/c_consent  = 'Yes'" required="true()" type="int"/>
-      <bind nodeset="/data/lr_tas_p_2410/p_type_id" relevant=" ../p_consent  = 'Yes' and  /data/c_consent  = 'Yes'" required="true()" type="select1"/>
+      <bind nodeset="/data/lr_tas_p_2410/p_consent" required="true()" type="select1"/>
+      <bind nodeset="/data/lr_tas_p_2410/p_sex" relevant=" ../p_consent  = 'Yes'" required="true()" type="select1"/>
+      <bind nodeset="/data/lr_tas_p_2410/p_age_yrs" relevant=" ../p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind constraint=". &lt;=  ../p_age_yrs " jr:constraintMsg="jr:itext('/data/lr_tas_p_2410/p_how_long_lived:jr:constraintMsg')" nodeset="/data/lr_tas_p_2410/p_how_long_lived" relevant=" ../p_consent  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/lr_tas_p_2410/p_type_id" relevant=" ../p_consent  = 'Yes'" required="true()" type="select1"/>
       <bind nodeset="/data/lr_tas_p_2410/p_barcode_id" relevant=" ../p_type_id  = 'Scanner'" required="true()" type="barcode"/>
-      <bind nodeset="/data/lr_tas_p_2410/p_mannual_id" relevant=" ../p_type_id  = 'Manual'" required="true()" type="barcode"/>
-      <bind calculate="if( ../p_type_id  = 'Scanner', concat( ../p_barcode_id ), concat( ../p_mannual_id ))" constraint="not(selected( ../C3 ,  ../p_code_id ))" jr:constraintMsg="jr:itext('/data/lr_tas_p_2410/p_code_id:jr:constraintMsg')" nodeset="/data/lr_tas_p_2410/p_code_id" readonly="true()" relevant=" ../p_consent  = 'Yes' and  /data/c_consent  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/lr_tas_p_2410/p_mannual_id" relevant=" ../p_type_id  = 'Manual'" required="true()" type="string"/>
+      <bind calculate="if( ../p_type_id  = 'Scanner', concat( ../p_barcode_id ), concat( ../p_mannual_id ))" constraint="not(selected( ../C3 ,  ../p_code_id ))" jr:constraintMsg="jr:itext('/data/lr_tas_p_2410/p_code_id:jr:constraintMsg')" nodeset="/data/lr_tas_p_2410/p_code_id" readonly="true()" relevant=" ../p_consent  = 'Yes'" required="true()" type="string"/>
       <bind nodeset="/data/lr_tas_p_2410/p_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'No'" type="string"/>
-      <bind constraint="regex(., '^.{0,255}$')" jr:constraintMsg="jr:itext('/data/lr_tas_p_2410/p_notes:jr:constraintMsg')" nodeset="/data/lr_tas_p_2410/p_notes" relevant=" /data/c_consent  = 'Yes'" type="string"/>
-      <bind nodeset="/data/lr_tas_p_2410/c_ending_survey_note" readonly="true()" relevant=" /data/c_consent  = 'Yes'" type="string"/>
+      <bind constraint="regex(., '^.{0,255}$')" jr:constraintMsg="jr:itext('/data/lr_tas_p_2410/p_notes:jr:constraintMsg')" nodeset="/data/lr_tas_p_2410/p_notes" relevant=" ../p_consent  = 'Yes'" type="string"/>
+      <bind nodeset="/data/lr_tas_p_2410/c_ending_survey_note" readonly="true()" relevant=" ../p_consent  = 'Yes'" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/c_end" type="dateTime"/>
       <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
