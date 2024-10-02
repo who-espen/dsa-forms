@@ -19,7 +19,7 @@ settings = {
   },
   "project": {
     "name": "Burkina Faso 4",
-    "icon": "E",
+    "icon": "B",
     "color": "#0066ff"
   }
 }
@@ -27,4 +27,4 @@ settings = {
 qr_data = b64encode(zlib.compress(json.dumps(settings).encode("utf-8")))
 
 code = segno.make(qr_data, micro=False)
-code.save('LF/TAS/Burkina Faso/2024/jan/bf-settings.png', scale=5)
+code.save('LF/TAS/Burkina Faso/2024/oct/bf-settings.png', scale=5)
