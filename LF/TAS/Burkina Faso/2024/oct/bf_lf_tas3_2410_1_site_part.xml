@@ -2168,7 +2168,7 @@
             <value>PIELA I</value>
           </text>
           <text id="/data/bf_tas_p_2410/p_age_yrs:jr:constraintMsg">
-            <value>Doit être comprise entre 5 et 110</value>
+            <value>Doit être comprise entre 6 et 11 ans</value>
           </text>
           <text id="/data/c_grappe1/GOA:label">
             <value>GOA</value>
@@ -4484,7 +4484,7 @@
       <bind constraint="string-length(.)=10" jr:constraintMsg="jr:itext('/data/bf_tas_p_2410/p_manual_code:jr:constraintMsg')" nodeset="/data/bf_tas_p_2410/p_manual_code" relevant=" ../p_id_method ='manuel' and  ../p_consent  = '1_oui'" required="true()" type="string"/>
       <bind constraint=". =  ../p_manual_code " jr:constraintMsg="jr:itext('/data/bf_tas_p_2410/p_manual_code2:jr:constraintMsg')" nodeset="/data/bf_tas_p_2410/p_manual_code2" relevant=" ../p_id_method ='manuel' and  ../p_consent  = '1_oui'" required="true()" type="string"/>
       <bind calculate="if( ../p_id_method  = 'manuel', concat( ../p_manual_code ), concat( ../p_barcode_id ))" constraint="not(selected( ../C3 ,  ../p_code_id ))" jr:constraintMsg="jr:itext('/data/bf_tas_p_2410/p_code_id:jr:constraintMsg')" nodeset="/data/bf_tas_p_2410/p_code_id" readonly="true()" type="string"/>
-      <bind constraint=". &gt; 6 and . &lt; 7" jr:constraintMsg="jr:itext('/data/bf_tas_p_2410/p_age_yrs:jr:constraintMsg')" nodeset="/data/bf_tas_p_2410/p_age_yrs" relevant=" ../p_consent  = '1_oui'" required="true()" type="int"/>
+      <bind constraint=". &gt;= 6 and . &lt;= 11" jr:constraintMsg="jr:itext('/data/bf_tas_p_2410/p_age_yrs:jr:constraintMsg')" nodeset="/data/bf_tas_p_2410/p_age_yrs" relevant=" ../p_consent  = '1_oui'" required="true()" type="int"/>
       <bind nodeset="/data/bf_tas_p_2410/p_sex" relevant=" ../p_consent  = '1_oui'" required="true()" type="select1"/>
       <bind nodeset="/data/bf_tas_p_2410/p_scolarisation" relevant=" ../p_consent  = '1_oui'" required="true()" type="select1"/>
       <bind nodeset="/data/bf_tas_p_2410/p_ivm_alb" required="true()" type="select1"/>
