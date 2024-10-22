@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2024 Oct) BF Cov ONCHO - 3. Formulaire CAP V2</h:title>
+    <h:title>(2024 Oct) BF Cov ONCHO - 3. Formulaire CAP V2.1</h:title>
     <model>
 
       <instance>
-        <data id="bf_oncho_cdticov_2410_3_cap_v2">
+        <data id="bf_oncho_cdticov_2410_3_cap_v2_1">
           <d_equipe/>
           <d_district/>
           <d_code_grappe/>
@@ -398,7 +398,7 @@
       <bind nodeset="/data/d_cnce_aveugle" relevant=" /data/d_entendu_parler_oncho  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/d_nombre_aveugle" relevant=" /data/d_cnce_aveugle  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/d_nbre_resident_menage" required="true()" type="int"/>
-      <bind nodeset="/data/d_nbre_resident_moins5ans" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /data/d_nbre_resident_menage " nodeset="/data/d_nbre_resident_moins5ans" required="true()" type="int"/>
       <bind nodeset="/data/d_resident_non_traite" required="true()" type="select1"/>
       <bind nodeset="/data/d_nbre_resident_non_traite" relevant=" /data/d_resident_non_traite  = 'Oui'" required="true()" type="int"/>
       <bind nodeset="/data/d_satisfaction" required="true()" type="select1"/>
