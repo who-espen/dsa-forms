@@ -6,7 +6,7 @@ import zlib
 
 settings = {
   "general": {
-    "server_url": "https://submit.datastandard.co/espen/nigeria-espen-5",
+    "server_url": "https://submit.datastandard.co/espen/nigeria-espen-8",
     "username": "collect",
     "password": "espen47",
   },
@@ -18,7 +18,7 @@ settings = {
     # "admin_pw": "1325",
   },
   "project": {
-    "name": "Nigeria Surveys",
+    "name": "Nigeria Surveys Nov 2024",
     "icon": "N",
     "color": "#33cc33"
   }
@@ -27,4 +27,4 @@ settings = {
 qr_data = b64encode(zlib.compress(json.dumps(settings).encode("utf-8")))
 
 code = segno.make(qr_data, micro=False)
-code.save('ONCHO/Impact Assessments/Nigeria/2024/adamawa/nigeria-settings.png', scale=5)
+code.save('ONCHO/Impact Assessments/Nigeria/2024/cross river/nigeria-settings.png', scale=5)

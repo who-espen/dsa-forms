@@ -7,7 +7,7 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(Cross River 2024 Nov) - 1. Site Form V2</h:title>
+    <h:title>(Cross River 2024 Nov) - 1. Site Form</h:title>
     <model>
 
       <instance>
@@ -421,9 +421,6 @@
           <text id="static_instance-region_list-0">
             <value>CROSS RIVER</value>
           </text>
-          <text id="/data/c_cluster_id:jr:constraintMsg">
-            <value>Must be between 100 and 999 included</value>
-          </text>
           <text id="/data/c_date:label">
             <value>Date of Survey</value>
           </text>
@@ -753,8 +750,8 @@
       <bind constraint=". &gt; 9 and .&lt; 100" jr:constraintMsg="jr:itext('/data/c_recorder_id:jr:constraintMsg')" nodeset="/data/c_recorder_id" required="true()" type="int"/>
       <bind nodeset="/data/c_region" required="true()" type="select1"/>
       <bind db_add_col_1="." nodeset="/data/c_district" required="true()" type="select1"/>
-      <bind db_add_col_1="/data/c_district" db_add_col_2="." nodeset="/data/c_cluster_name" required="true()" type="select1"/>
-      <bind constraint=". &gt; 99 and . &lt; 1000" db_add_col_2="/data/c_cluster_name" db_add_col_3="." jr:constraintMsg="jr:itext('/data/c_cluster_id:jr:constraintMsg')" nodeset="/data/c_cluster_id" required="true()" type="select1"/>
+      <bind db_add_col_1=" /data/c_district " db_add_col_2="." nodeset="/data/c_cluster_name" required="true()" type="select1"/>
+      <bind db_add_col_2=" /data/c_cluster_name " db_add_col_3="." nodeset="/data/c_cluster_id" required="true()" type="select1"/>
       <bind nodeset="/data/c_supervisor" required="true()" type="string"/>
       <bind nodeset="/data/c_date" required="true()" type="date"/>
       <bind nodeset="/data/c_health_facility" required="true()" type="string"/>
@@ -766,9 +763,9 @@
       <bind nodeset="/data/c_population" required="true()" type="int"/>
       <bind nodeset="/data/c_hh_number" required="true()" type="int"/>
       <bind nodeset="/data/c_receiving_ivm" required="true()" type="select1"/>
-      <bind nodeset="/data/c_lengh_period_ivm" relevant="/data/c_receiving_ivm  = 'Yes'" required="true()" type="string"/>
-      <bind nodeset="/data/c_month_dist" relevant="/data/c_receiving_ivm  = 'Yes'" required="true()" type="select1"/>
-      <bind constraint=". &gt; 1970 and . &lt;= 2024" jr:constraintMsg="jr:itext('/data/c_year_dist:jr:constraintMsg')" nodeset="/data/c_year_dist" relevant="/data/c_receiving_ivm  = 'Yes'" required="true()" type="int"/>
+      <bind nodeset="/data/c_lengh_period_ivm" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="string"/>
+      <bind nodeset="/data/c_month_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="select1"/>
+      <bind constraint=". &gt; 1970 and . &lt;= 2024" jr:constraintMsg="jr:itext('/data/c_year_dist:jr:constraintMsg')" nodeset="/data/c_year_dist" relevant=" /data/c_receiving_ivm  = 'Yes'" required="true()" type="int"/>
       <bind calculate="concat(B19,' ',B20)" nodeset="/data/c_last_dist" required="true()" type="string"/>
       <bind nodeset="/data/c_notes" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/c_start" type="dateTime"/>
