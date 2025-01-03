@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2024 Juillet) oncho Pre-Arrêt - 2. Formulaire Resultat OV16</h:title>
+    <model>
+
+      <instance>
+        <data id="gn_oncho_pre_stop_2407_2_OV16">
+          <r_recorderID/>
+          <r_district/>
+          <r_sub_district/>
+          <r_cluster_name/>
+          <r_cluster_id/>
+          <C1/>
+          <gn_o_2407 jr:template="">
+            <C2/>
+            <C3/>
+            <r_ID_method/>
+            <r_BarcodeID1/>
+            <r_BarcodeID2/>
+            <r_code_id/>
+            <r_ov16/>
+            <r_Notes/>
+          </gn_o_2407>
+          <r_StartTime/>
+          <r_EndTime/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/gn_o_2407/r_BarcodeID1:label">
+            <value>6.a. Veuillez scanner le QR code pour récupérer l'identifiant unique du participant</value>
+          </text>
+          <text id="/data/gn_o_2407/r_Notes:label">
+            <value>8. Notes Additionnelles</value>
+          </text>
+          <text id="/data/r_cluster_id:jr:constraintMsg">
+            <value>Code à 3 chiffres uniquement</value>
+          </text>
+          <text id="/data/r_recorderID:hint">
+            <value>L'identifiant de l'enregistreur est un code à 2 chiffres qui vous a été attribué, à vous ou à votre équipe.</value>
+          </text>
+          <text id="/data/r_district:label">
+            <value>2. Sélectionnez le district :</value>
+          </text>
+          <text id="/data/gn_o_2407/r_ov16:label">
+            <value>7. Résultat du test OV16</value>
+          </text>
+          <text id="/data/gn_o_2407/r_BarcodeID1:hint">
+            <value>Format du code: GNE_ABC_oncho_nnn_nnnnn où ABC représente les 3 premières lettres du district en majuscule, nnn: le code du village ou communauté sur 3 chiffres et nnnnn: le numéro d'ordre du participant sur 5 chiffres.</value>
+          </text>
+          <text id="/data/gn_o_2407/r_BarcodeID2:hint">
+            <value>Format du code: GNE_ABC_oncho_nnn_nnnnn où ABC doit-être remplacé par les 3 premières lettres du district en majuscule, nnn par le code du village ou communauté sur 3 chiffres et nnnnn par le numéro d'ordre du participant sur 5 chiffres.</value>
+          </text>
+          <text id="/data/gn_o_2407/r_ID_method:label">
+            <value>6. Quelle méthode pour entrer le Code unique du participant?</value>
+          </text>
+          <text id="/data/gn_o_2407/r_BarcodeID2:label">
+            <value>6.b. Veuillez entrer manuellement le code unique du participant</value>
+          </text>
+          <text id="/data/gn_o_2407/r_code_id:label">
+            <value>Code enregistré</value>
+          </text>
+          <text id="/data/gn_o_2407/r_ov16/Invalide:label">
+            <value>Invalide (y compris les erreurs de test et le sang insuffisant)</value>
+          </text>
+          <text id="/data/gn_o_2407/r_ID_method/Manual:label">
+            <value>Entrer Manuellement le code (En cas de problème avec votre scanner de code QR)</value>
+          </text>
+          <text id="/data/gn_o_2407:label">
+            <value>Participants</value>
+          </text>
+          <text id="/data/gn_o_2407/r_ov16/Positif:label">
+            <value>Positif</value>
+          </text>
+          <text id="/data/r_recorderID:jr:constraintMsg">
+            <value>Code sur 2 chiffres uniquement</value>
+          </text>
+          <text id="/data/gn_o_2407/r_code_id:jr:constraintMsg">
+            <value>Ce barcode a déjà été utilisé dans ce village</value>
+          </text>
+          <text id="/data/r_cluster_id:label">
+            <value>4.c. Entrer le code du village</value>
+          </text>
+          <text id="/data/gn_o_2407/r_ID_method/Scanner:label">
+            <value>Scanner le QR Code</value>
+          </text>
+          <text id="/data/r_sub_district:label">
+            <value>3. Sélectionnez la sous-préfecture :</value>
+          </text>
+          <text id="/data/r_cluster_name:label">
+            <value>4. Sélectionnez le village ou communauté</value>
+          </text>
+          <text id="/data/gn_o_2407/r_ov16/Negatif:label">
+            <value>Négatif</value>
+          </text>
+          <text id="/data/gn_o_2407/r_ov16/Refuse:label">
+            <value>Refusé (retrait du consentement)</value>
+          </text>
+          <text id="/data/r_recorderID:label">
+            <value>1. Veuillez entrer l'identifiant de l'enregistreur:</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/r_recorderID:jr:constraintMsg')" nodeset="/data/r_recorderID" required="true()" type="string"/>
+      <bind nodeset="/data/r_district" required="true()" type="string" db_get="col_1"/>
+      <bind nodeset="/data/r_sub_district" required="true()" type="string" db_get="col_2" db_filter_by_col_1="/data/r_district"/>
+      <bind nodeset="/data/r_cluster_name" required="true()" type="string" db_get="col_3" db_filter_by_col_2="/data/r_sub_district"/>
+      <bind constraint="regex(.,'^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/r_cluster_id:jr:constraintMsg')" nodeset="/data/r_cluster_id" required="true()" type="int" db_get="col_4" db_filter_by_col_3="/data/r_cluster_name"/>
+      <bind calculate="join(' ',  /data/gn_o_2407/r_code_id )" nodeset="/data/C1" type="string"/>
+      <bind calculate="position(..)" nodeset="/data/gn_o_2407/C2" type="string"/>
+      <bind calculate="if ( ../C2  = 1,'', substring-after( /data/C1 ,  ../r_code_id ))" nodeset="/data/gn_o_2407/C3" type="string"/>
+      <bind nodeset="/data/gn_o_2407/r_ID_method" required="true()" type="select1"/>
+      <bind nodeset="/data/gn_o_2407/r_BarcodeID1" relevant=" ../r_ID_method  = 'Scanner'" required="true()" type="barcode"/>
+      <bind nodeset="/data/gn_o_2407/r_BarcodeID2" relevant=" ../r_ID_method  = 'Manual'" required="true()" type="string"/>
+      <bind calculate="if( ../r_ID_method  = 'Scanner', concat( ../r_BarcodeID1 ), concat( ../r_BarcodeID2 ))" constraint="not(selected( ../C3 ,  ../r_code_id ))" jr:constraintMsg="jr:itext('/data/gn_o_2407/r_code_id:jr:constraintMsg')" nodeset="/data/gn_o_2407/r_code_id" type="string"/>
+      <bind nodeset="/data/gn_o_2407/r_ov16" required="true()" type="select1"/>
+      <bind nodeset="/data/gn_o_2407/r_Notes" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/r_StartTime" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/r_EndTime" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/r_recorderID">
+      <label ref="jr:itext('/data/r_recorderID:label')"/>
+      <hint ref="jr:itext('/data/r_recorderID:hint')"/>
+    </input>
+    <input ref="/data/r_district">
+      <label ref="jr:itext('/data/r_district:label')"/>
+    </input>
+    <input ref="/data/r_sub_district">
+      <label ref="jr:itext('/data/r_sub_district:label')"/>
+    </input>
+    <input ref="/data/r_cluster_name">
+      <label ref="jr:itext('/data/r_cluster_name:label')"/>
+    </input>
+    <input ref="/data/r_cluster_id">
+      <label ref="jr:itext('/data/r_cluster_id:label')"/>
+    </input>
+    <group ref="/data/gn_o_2407">
+      <label ref="jr:itext('/data/gn_o_2407:label')"/>
+      <repeat nodeset="/data/gn_o_2407">
+        <select1 ref="/data/gn_o_2407/r_ID_method">
+          <label ref="jr:itext('/data/gn_o_2407/r_ID_method:label')"/>
+          <item>
+            <label ref="jr:itext('/data/gn_o_2407/r_ID_method/Scanner:label')"/>
+            <value>Scanner</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/gn_o_2407/r_ID_method/Manual:label')"/>
+            <value>Manual</value>
+          </item>
+        </select1>
+        <input ref="/data/gn_o_2407/r_BarcodeID1">
+          <label ref="jr:itext('/data/gn_o_2407/r_BarcodeID1:label')"/>
+          <hint ref="jr:itext('/data/gn_o_2407/r_BarcodeID1:hint')"/>
+        </input>
+        <input ref="/data/gn_o_2407/r_BarcodeID2">
+          <label ref="jr:itext('/data/gn_o_2407/r_BarcodeID2:label')"/>
+          <hint ref="jr:itext('/data/gn_o_2407/r_BarcodeID2:hint')"/>
+        </input>
+        <input ref="/data/gn_o_2407/r_code_id">
+          <label ref="jr:itext('/data/gn_o_2407/r_code_id:label')"/>
+        </input>
+        <select1 ref="/data/gn_o_2407/r_ov16">
+          <label ref="jr:itext('/data/gn_o_2407/r_ov16:label')"/>
+          <item>
+            <label ref="jr:itext('/data/gn_o_2407/r_ov16/Positif:label')"/>
+            <value>Positif</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/gn_o_2407/r_ov16/Negatif:label')"/>
+            <value>Negatif</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/gn_o_2407/r_ov16/Invalide:label')"/>
+            <value>Invalide</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/gn_o_2407/r_ov16/Refuse:label')"/>
+            <value>Refuse</value>
+          </item>
+        </select1>
+        <input ref="/data/gn_o_2407/r_Notes">
+          <label ref="jr:itext('/data/gn_o_2407/r_Notes:label')"/>
+        </input>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>
