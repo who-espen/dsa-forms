@@ -38,26 +38,23 @@
 
       <itext>
         <translation default="true()" lang="French">
-          <text id="/data/ml_ia_u_2501/u_grading/+++:label">
-            <value>+++</value>
-          </text>
-          <text id="/data/ml_ia_u_2501/u_grading/Trace.hemolysee:label">
-            <value>Trace hémolysée</value>
-          </text>
-          <text id="/data/ml_ia_u_2501/u_grading/Trace.non.hemolysee:label">
-            <value>Trace non hémolysée</value>
-          </text>
-          <text id="/data/ml_ia_u_2501/u_remarks:label">
-            <value>Notes additionnelles</value>
-          </text>
           <text id="/data/ml_ia_u_2501/u_grading/Negatif:label">
             <value>Négatif</value>
           </text>
-          <text id="/data/ml_ia_u_2501/u_urine_vol:label">
-            <value>Volume d'urine : Consigner les millilitres (ml) d'urine prélevés sur la personne</value>
-          </text>
           <text id="/data/u_site:label">
             <value>Sélectionner le nom du village</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_grading/++:label">
+            <value>++</value>
+          </text>
+          <text id="/data/u_site_id:label">
+            <value>Sélectionner le code du village</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_code_id:hint">
+            <value>exemple: 12_123_1</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_code_id:jr:constraintMsg">
+            <value>Soit, cet identifiant a déjà été utilisé dans ce village, soit le format du code est incorecte. Exemple d'un code 34_567_890</value>
           </text>
           <text id="/data/ml_ia_u_2501/u_sh_egp_10ml:label">
             <value>Nombre d'œufs par 10 ml</value>
@@ -65,41 +62,47 @@
           <text id="/data/ml_ia_u_2501/u_code_id:label">
             <value>Veuillez enregistrer ce code unique de l'enfant dans les registres et les échantillons de labo</value>
           </text>
-          <text id="/data/ml_ia_u_2501/u_grading/++:label">
-            <value>++</value>
-          </text>
-          <text id="/data/ml_ia_u_2501/u_urine_vol:jr:constraintMsg">
-            <value>Le volume doit être limité à 10ml</value>
-          </text>
-          <text id="/data/ml_ia_u_2501/u_grading/+:label">
-            <value>+</value>
-          </text>
           <text id="/data/u_recorder:label">
             <value>Code de l'Opérateur</value>
           </text>
           <text id="/data/u_subdistrict:label">
             <value>Sélectionner l'aire de santé</value>
           </text>
-          <text id="/data/u_site_id:label">
-            <value>Sélectionner le code du village</value>
-          </text>
-          <text id="/data/u_district:label">
-            <value>Sélectionner le district</value>
-          </text>
-          <text id="/data/ml_ia_u_2501/u_code_id:jr:constraintMsg">
-            <value>Soit, cet identifiant a déjà été utilisé dans ce village, soit le format du code est incorecte</value>
-          </text>
-          <text id="/data/ml_ia_u_2501/u_grading:label">
-            <value>Graduation de la microhématurie</value>
-          </text>
-          <text id="/data/ml_ia_u_2501/u_code_id2:jr:constraintMsg">
-            <value>Le code répéter doit être le même</value>
+          <text id="/data/ml_ia_u_2501:label">
+            <value>Enrôlement</value>
           </text>
           <text id="/data/ml_ia_u_2501/u_code_id2:label">
             <value>Veuillez enregistrer ce code unique de l'enfant dans les registres et les échantillons de labo</value>
           </text>
-          <text id="/data/ml_ia_u_2501:label">
-            <value>Enrôlement</value>
+          <text id="/data/ml_ia_u_2501/u_grading/+++:label">
+            <value>+++</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_grading/Trace.hemolysee:label">
+            <value>Trace hémolysée</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_urine_vol:label">
+            <value>Volume d'urine : Consigner les millilitres (ml) d'urine prélevés sur la personne</value>
+          </text>
+          <text id="/data/u_district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_grading/+:label">
+            <value>+</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_code_id2:jr:constraintMsg">
+            <value>Le code répéter doit être le même</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_grading/Trace.non.hemolysee:label">
+            <value>Trace non hémolysée</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_urine_vol:jr:constraintMsg">
+            <value>Le volume doit être limité à 10ml</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_grading:label">
+            <value>Graduation de la microhématurie</value>
+          </text>
+          <text id="/data/ml_ia_u_2501/u_remarks:label">
+            <value>Notes additionnelles</value>
           </text>
         </translation>
       </itext>
@@ -144,6 +147,7 @@
       <repeat nodeset="/data/ml_ia_u_2501">
         <input ref="/data/ml_ia_u_2501/u_code_id">
           <label ref="jr:itext('/data/ml_ia_u_2501/u_code_id:label')"/>
+          <hint ref="jr:itext('/data/ml_ia_u_2501/u_code_id:hint')"/>
         </input>
         <input ref="/data/ml_ia_u_2501/u_code_id2">
           <label ref="jr:itext('/data/ml_ia_u_2501/u_code_id2:label')"/>

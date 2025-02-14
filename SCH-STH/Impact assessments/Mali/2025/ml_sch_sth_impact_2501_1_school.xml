@@ -4702,6 +4702,7 @@
           </text>
         </translation>
       </itext>
+
       <instance id="toilet_type">
         <root>
           <item>
@@ -8632,10 +8633,10 @@
       <bind nodeset="/data/w_subdistrict_1" required="true()" type="select1"/>
       <bind nodeset="/data/w_subdistrict_2" relevant="/data/w_subdistrict_1  = 'Autre'" required="true()" type="string"/>
       <bind calculate="if( /data/w_subdistrict_1  = 'Autre', concat( /data/w_subdistrict_2 ), concat( /data/w_subdistrict_1 ))" db_add_col_1="/data/w_district" db_add_col_2="." nodeset="/data/w_subdistrict" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/data/w_site_name_1" required="true()" type="select1"/>
+      <bind nodeset="/data/w_site_name_1" relevant="/data/w_subdistrict_1 != 'Autre'" required="true()" type="select1"/>
       <bind nodeset="/data/w_site_name_2" relevant="/data/w_subdistrict_1  = 'Autre'" required="true()" type="string"/>
       <bind calculate="if( /data/w_subdistrict_1  = 'Autre', concat( /data/w_site_name_2 ), concat( /data/w_site_name_1 ))" db_add_col_2="/data/w_subdistrict" db_add_col_3="." nodeset="/data/w_site_name" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/data/w_site_id_1" required="true()" type="select1"/>
+      <bind nodeset="/data/w_site_id_1" relevant="/data/w_subdistrict_1 != 'Autre'" required="true()" type="select1"/>
       <bind nodeset="/data/w_site_id_2" relevant="/data/w_subdistrict_1  = 'Autre'" required="true()" type="select1"/>
       <bind calculate="if( /data/w_subdistrict_1  = 'Autre', concat( /data/w_site_id_2 ), concat( /data/w_site_id_1 ))" db_add_col_3="/data/w_site_name" db_add_col_4="." nodeset="/data/w_site_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/w_gps" required="true()" type="geopoint"/>
