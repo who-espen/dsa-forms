@@ -2815,9 +2815,9 @@
       <bind db_add_col_1="/data/c_district" db_add_col_2="." nodeset="/data/c_community" required="true()" type="select1"/>
       <bind nodeset="/data/c_school_1" required="true()" type="select1"/>
       <bind nodeset="/data/c_school_2" relevant="/data/c_school_1  = 'Other'" required="true()" type="string"/>
-      <bind nodeset="/data/c_school_id_1" relevant="/data/c_school_2 != 'Other'" required="true()" type="select1"/>
+      <bind nodeset="/data/c_school_id_1" relevant="/data/c_school_1 != 'Other'" required="true()" type="select1"/>
       <bind constraint="regex(., '^[0-9]{3}$')" jr:constraintMsg="jr:itext('/data/c_school_id_2:jr:constraintMsg')" nodeset="/data/c_school_id_2" relevant="/data/c_school_1  = 'Other'" required="true()" type="select1"/>
-      <bind calculate="if( /data/c_school_1  = 'Other',concat(  /data/c_school_2 ), concat( /data/c_school_1 ))" db_add_col_2="{c_community}" db_add_col_3="." nodeset="/data/c_site" readonly="true()" type="string"/>
+      <bind calculate="if( /data/c_school_1  = 'Other',concat(  /data/c_school_2 ), concat( /data/c_school_1 ))" db_add_col_2="/data/c_community" db_add_col_3="." nodeset="/data/c_site" readonly="true()" type="string"/>
       <bind calculate="if( /data/c_school_1  = 'Other', concat( /data/c_school_id_2 ), concat( /data/c_school_id_1 ))" db_add_col_3="/data/c_site" db_add_col_4="." nodeset="/data/c_site_id" readonly="true()" type="string"/>
       <bind nodeset="/data/c_cluster_leader" required="true()" type="string"/>
       <bind nodeset="/data/c_consent" required="true()" type="select1"/>
