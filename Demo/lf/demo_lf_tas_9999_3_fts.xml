@@ -322,10 +322,10 @@
       </itext>
 
       <bind nodeset="/data/d_recorder" required="true()" type="select1"/>
-      <bind nodeset="/data/d_district" required="true()" type="string"/>
-      <bind db_filter_by_col_2="/data/d_district" db_get="col_1" nodeset="/data/d_community" required="true()" type="string"/>
-      <bind db_filter_by_col_3="/data/d_community" db_get="col_2" nodeset="/data/d_site" required="true()" type="string"/>
-      <bind db_filter_by_col_4="/data/d_site" db_get="col_3" nodeset="/data/d_site_id" required="true()" type="string"/>
+      <bind db_get="col_1" nodeset="/data/d_district" required="true()" type="string"/>
+      <bind db_filter_by_col_1="/data/d_district" db_get="col_2" nodeset="/data/d_community" required="true()" type="string"/>
+      <bind db_filter_by_col_2="/data/d_community" db_get="col_3" nodeset="/data/d_site" required="true()" type="string"/>
+      <bind db_filter_by_col_3="/data/d_site" db_get="col_4" nodeset="/data/d_site_id" required="true()" type="string"/>
       <bind calculate="join(' ',  /data/demo_tas_d_9999/d_code_id )" nodeset="/data/C1" type="text"/>
       <bind calculate="position(..)" nodeset="/data/demo_tas_d_9999/C2" type="text"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../d_code_id ))" nodeset="/data/demo_tas_d_9999/C3" type="text"/>
