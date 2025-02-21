@@ -6,7 +6,7 @@ import zlib
 
 settings = {
   "general": {
-    "server_url": "https://submit.datastandard.co/espen/mali-espen",
+    "server_url": "https://submit.datastandard.co/espen/sao-tome",
     "username": "collect",
     "password": "espen47",
   },
@@ -18,8 +18,8 @@ settings = {
     # "admin_pw": "1325",
   },
   "project": {
-    "name": "Mali ESPEN",
-    "icon": "M",
+    "name": "STP ESPEN",
+    "icon": "S",
     "color": "#34e5eb"
   }
 }
@@ -27,4 +27,4 @@ settings = {
 qr_data = b64encode(zlib.compress(json.dumps(settings).encode("utf-8")))
 
 code = segno.make(qr_data, micro=False)
-code.save('SCH-STH/Impact assessments/Mali/2025/ml-settings.png', scale=5)
+code.save('SCH-STH/Impact assessments/STP/st-settings.png', scale=5)

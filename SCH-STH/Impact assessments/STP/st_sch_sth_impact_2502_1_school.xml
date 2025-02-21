@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2025 Fev) - 1. SCH/STH – Ecole/Localité</h:title>
+    <h:title>(2025 Fev) - 1. SCH/STH – Ecole/Localité V2</h:title>
     <model>
 
       <instance>
-        <data id="st_sch_sth_impact_2502_1_school">
+        <data id="st_sch_sth_impact_2502_1_school_v2">
           <w_recorder/>
           <w_district/>
           <w_site_name/>
@@ -697,7 +697,7 @@
             <value>172</value>
           </text>
           <text id="/data/w_distance_ets_soin_proche:label">
-            <value>A quelle distance se situe l'établissement de soin</value>
+            <value>A quelle distance en KM se situe l'établissement de soin</value>
           </text>
           <text id="static_instance-village_code-8">
             <value>109</value>
@@ -4222,8 +4222,8 @@
       </instance>
       <bind nodeset="/data/w_recorder" required="true()" type="int"/>
       <bind db_add_col_1="." nodeset="/data/w_district" required="true()" type="select1"/>
-      <bind db_add_col_2="/data/w_district" db_add_col_3="." nodeset="/data/w_site_name" required="true()" type="select1"/>
-      <bind db_add_col_3="/data/w_site_name" db_add_col_4="." nodeset="/data/w_site_id" required="true()" type="select1"/>
+      <bind db_add_col_1="/data/w_district" db_add_col_2="." nodeset="/data/w_site_name" required="true()" type="select1"/>
+      <bind db_add_col_2="/data/w_site_name" db_add_col_3="." nodeset="/data/w_site_id" required="true()" type="select1"/>
       <bind nodeset="/data/w_nbr_classe" required="true()" type="int"/>
       <bind nodeset="/data/w_nbr_eleve" required="true()" type="int"/>
       <bind nodeset="/data/w_nbr_enseigent" required="true()" type="int"/>
