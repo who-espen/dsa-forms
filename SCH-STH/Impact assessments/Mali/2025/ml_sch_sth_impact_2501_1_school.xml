@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2025 Jan) - 1. SCH/STH – Ecole/Localité V3</h:title>
+    <h:title>(2025 Jan) - 1. SCH/STH – Ecole/Localité V3.2</h:title>
     <model>
 
       <instance>
-        <data id="ml_sch_sth_impact_2501_1_school_v3">
+        <data id="ml_sch_sth_impact_2501_1_school_v3_2">
           <w_recorder/>
           <w_region/>
           <w_district/>
@@ -27,6 +27,7 @@
           <w_gps/>
           <w_source_exist/>
           <w_source_type/>
+          <w_distance_source/>
           <w_toilet/>
           <w_toilet_type/>
           <w_dont_use_toilet/>
@@ -440,6 +441,9 @@
           <text id="/data/w_site_id_2/147:label">
             <value>DIYALA KHASSO (147)</value>
           </text>
+          <text id="/data/w_distance_source/A l école:label">
+            <value>A l'école</value>
+          </text>
           <text id="/data/w_toilet:label">
             <value>Y a-t-il des latrines dans l'école?</value>
           </text>
@@ -486,7 +490,7 @@
             <value>BENA FADJIGUILA</value>
           </text>
           <text id="/data/w_obs_washing_hand_type:label">
-            <value>Observateur: quelles facilités de lavage des mains sont disponible?</value>
+            <value>Observateur: quels dispositifs de lavage des mains sont disponible?</value>
           </text>
           <text id="static_instance-subdistrict_list-78">
             <value>BAFING MAKANA</value>
@@ -2012,6 +2016,9 @@
           <text id="/data/w_site_id_1/180:label">
             <value>180</value>
           </text>
+          <text id="/data/w_distance_source:label">
+            <value>Quelle est la distance jusqu'à la source d'eau la plus proche ?</value>
+          </text>
           <text id="/data/w_site_id_2/230:label">
             <value>DJOUGOUFING (230)</value>
           </text>
@@ -3341,6 +3348,9 @@
           <text id="static_instance-village_list-107">
             <value>SEYE BOULE</value>
           </text>
+          <text id="/data/w_distance_source/A moins de 15 minutes aller-retour depuis de l école:label">
+            <value>A moins de 15 minutes aller-retour depuis de l'école</value>
+          </text>
           <text id="/data/w_subdistrict_1/SIBIKILY:label">
             <value>SIBIKILY</value>
           </text>
@@ -4429,6 +4439,9 @@
           </text>
           <text id="/data/w_subdistrict_1/DAFELA:label">
             <value>DAFELA</value>
+          </text>
+          <text id="/data/w_distance_source/A plus de 15 minutes aller-retour depuis l école:label">
+            <value>A plus de 15 minutes aller-retour depuis l'école</value>
           </text>
           <text id="/data/w_site_id_2/113:label">
             <value>AHEL MOULAYE ZEINE (113)</value>
@@ -8642,12 +8655,13 @@
       <bind nodeset="/data/w_gps" required="true()" type="geopoint"/>
       <bind nodeset="/data/w_source_exist" required="true()" type="select1"/>
       <bind nodeset="/data/w_source_type" relevant="/data/w_source_exist  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/w_distance_source" relevant="/data/w_source_exist  = 'Non'" required="true()" type="select1"/>
       <bind nodeset="/data/w_toilet" required="true()" type="select1"/>
       <bind nodeset="/data/w_toilet_type" relevant="/data/w_toilet  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/w_dont_use_toilet" relevant="/data/w_toilet  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/w_obs_toilet_condition" relevant="/data/w_toilet  = 'Oui'" required="true()" type="select1"/>
       <bind nodeset="/data/w_obs_flies_access_faeces" relevant="/data/w_toilet  = 'Oui'" required="true()" type="select1"/>
-      <bind nodeset="/data/w_obs_washing_hand_type" relevant="/data/w_toilet  = 'Oui'" required="true()" type="select1"/>
+      <bind nodeset="/data/w_obs_washing_hand_type" required="true()" type="select1"/>
       <bind nodeset="/data/w_remarks" type="text"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/w_Start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/w_End" type="dateTime"/>
@@ -8767,6 +8781,21 @@
       <item>
         <label ref="jr:itext('/data/w_source_type/Citerne à eau mobile:label')"/>
         <value>Citerne à eau mobile</value>
+      </item>
+    </select1>
+    <select1 ref="/data/w_distance_source">
+      <label ref="jr:itext('/data/w_distance_source:label')"/>
+      <item>
+        <label ref="jr:itext('/data/w_distance_source/A l école:label')"/>
+        <value>A l école</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/w_distance_source/A moins de 15 minutes aller-retour depuis de l école:label')"/>
+        <value>A moins de 15 minutes aller-retour depuis de l école</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/w_distance_source/A plus de 15 minutes aller-retour depuis l école:label')"/>
+        <value>A plus de 15 minutes aller-retour depuis l école</value>
       </item>
     </select1>
     <select1 ref="/data/w_toilet">
