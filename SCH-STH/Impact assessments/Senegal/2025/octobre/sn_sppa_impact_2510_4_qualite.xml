@@ -22,7 +22,6 @@
           <q_sppa2510 jr:template="">
             <C2/>
             <C3/>
-            <q_barcode_method/>
             <q_code_id/>
             <q_test/>
             <q_note3/>
@@ -101,11 +100,6 @@
           <text id="/data/q_sppa2510/q_code_id:hint">
             <value>Le code de l'enfant exactement tel qu'il a été généré dans le formulaire 2.</value>
           </text>
-          <text id="/data/q_sppa2510/q_autre_quantite_1a:label">
-            <value>
-              <output value=" /data/q_sppa2510/q_autre_nom_1 "/>
- nombre d'oeufs lame A</value>
-          </text>
           <text id="/data/q_sppa2510/q_hookworm_sa:label">
             <value>Ankylostome nombre d'œufs lame A</value>
           </text>
@@ -134,11 +128,6 @@
           </text>
           <text id="/data/q_sppa2510/q_autre_vers:label">
             <value>Y'a t-il d'autres parasites à enregistrer?</value>
-          </text>
-          <text id="/data/q_sppa2510/q_autre_nom_1_intensity:label">
-            <value>
-              <output value=" /data/q_sppa2510/q_autre_nom_1 "/>
- nombre d'œufs par gramme de selles</value>
           </text>
           <text id="/data/q_sppa2510/q_ascaris_lumb_intensity:hint">
             <value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
@@ -179,14 +168,16 @@
           <text id="/data/q_sppa2510/q_autre_nom_2_intensity:hint">
             <value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
           </text>
-          <text id="/data/q_sppa2510/q_barcode_method:label">
-            <value>Méthode de capture code QR / code-barres</value>
+          <text id="/data/q_sppa2510/q_sch_man_intensity:hint">
+            <value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
           </text>
           <text id="/data/r_recorder:label">
             <value>Code de l'enquêteur</value>
           </text>
-          <text id="/data/q_sppa2510/q_sch_man_intensity:hint">
-            <value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
+          <text id="/data/q_sppa2510/q_autre_quantite_1a:label">
+            <value>
+              <output value=" /data/q_sppa2510/q_autre_nom_1 "/>
+ nombre d'oeufs lame A</value>
           </text>
           <text id="/data/q_sppa2510/q_urine_vol:label">
             <value>Schistosoma haematobium - Volume d'urine collectée (en ml )</value>
@@ -194,8 +185,10 @@
           <text id="/data/q_sppa2510/q_sch_man_intensity:label">
             <value>Mansoni nombre d'œufs par gramme de selles</value>
           </text>
-          <text id="/data/q_sppa2510/q_barcode_method/QRManual:label">
-            <value>Saisie manuelle (en cas de panne du scanner)</value>
+          <text id="/data/q_sppa2510/q_autre_nom_1_intensity:label">
+            <value>
+              <output value=" /data/q_sppa2510/q_autre_nom_1 "/>
+ nombre d'œufs par gramme de selles</value>
           </text>
           <text id="/data/q_sppa2510/q_autre_nom_2_intensity:label">
             <value>
@@ -231,9 +224,6 @@
               <output value=" /data/q_sppa2510/q_autre_nom_1 "/>
  nombre d'oeufs lame B</value>
           </text>
-          <text id="/data/q_sppa2510/q_trichuris_sa:label">
-            <value>Trichocéphale nombre d'œufs lame A</value>
-          </text>
           <text id="/data/q_sppa2510/q_ascaris_lumb_sb:label">
             <value>Ascaris nombre d'œufs lame B</value>
           </text>
@@ -255,8 +245,8 @@
           <text id="/data/q_site_code:label">
             <value>Sélectionnez le code de l'école / Village</value>
           </text>
-          <text id="/data/q_sppa2510/q_barcode_method/QRScann:label">
-            <value>Scannez le QR/code-barres avec l'appareil</value>
+          <text id="/data/q_sppa2510/q_trichuris_sa:label">
+            <value>Trichocéphale nombre d'œufs lame A</value>
           </text>
         </translation>
       </itext>
@@ -270,8 +260,7 @@
       <bind calculate="join(' ',  /data/q_sppa2510/q_code_id )" nodeset="/data/C1" type="text"/>
       <bind calculate="position(..)" nodeset="/data/q_sppa2510/C2" type="text"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../q_code_id ))" nodeset="/data/q_sppa2510/C3" type="text"/>
-      <bind nodeset="/data/q_sppa2510/q_barcode_method" required="true()" type="select1"/>
-      <bind constraint="not(selected( ../C3 ,  ../q_code_id ))" db_filter_by_col_5=" /data/q_site_code " db_get="col_6" jr:constraintMsg="jr:itext('/data/q_sppa2510/q_code_id:jr:constraintMsg')" nodeset="/data/q_sppa2510/q_code_id" readonly="true()" required="true()" type="string"/>
+      <bind constraint="not(selected( ../C3 ,  ../q_code_id ))" db_filter_by_col_5=" /data/q_site_code " db_get="col_6" jr:constraintMsg="jr:itext('/data/q_sppa2510/q_code_id:jr:constraintMsg')" nodeset="/data/q_sppa2510/q_code_id" required="true()" type="string"/>
       <bind nodeset="/data/q_sppa2510/q_test" required="true()" type="select1"/>
       <bind nodeset="/data/q_sppa2510/q_note3" readonly="true()" type="string"/>
       <bind nodeset="/data/q_sppa2510/q_urine_vol" required="true()" type="int"/>
@@ -337,17 +326,6 @@
     <group ref="/data/q_sppa2510">
       <label ref="jr:itext('/data/q_sppa2510:label')"/>
       <repeat nodeset="/data/q_sppa2510">
-        <select1 ref="/data/q_sppa2510/q_barcode_method">
-          <label ref="jr:itext('/data/q_sppa2510/q_barcode_method:label')"/>
-          <item>
-            <label ref="jr:itext('/data/q_sppa2510/q_barcode_method/QRScann:label')"/>
-            <value>QRScann</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/data/q_sppa2510/q_barcode_method/QRManual:label')"/>
-            <value>QRManual</value>
-          </item>
-        </select1>
         <input ref="/data/q_sppa2510/q_code_id">
           <label ref="jr:itext('/data/q_sppa2510/q_code_id:label')"/>
           <hint ref="jr:itext('/data/q_sppa2510/q_code_id:hint')"/>
