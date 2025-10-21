@@ -7,11 +7,11 @@
   xmlns:orx="http://openrosa.org/xforms"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>(2025 Oct) - 4. SCH/STH – Contrôle Qualité</h:title>
+    <h:title>(2025 Oct) - 4. SCH/STH – Contrôle Qualité V2</h:title>
     <model>
 
       <instance>
-        <data id="sn_sppa_impact_2510_4_qualite">
+        <data id="sn_sppa_impact_2510_4_qualite_v2">
           <r_recorder/>
           <q_region/>
           <q_district/>
@@ -23,9 +23,6 @@
             <C2/>
             <C3/>
             <q_barcode_method/>
-            <q_code_id1/>
-            <q_code_id2/>
-            <q_code_id3/>
             <q_code_id/>
             <q_test/>
             <q_note3/>
@@ -75,9 +72,6 @@
 
       <itext>
         <translation default="true()" lang="French">
-          <text id="/data/q_sppa2510/q_code_id2:label">
-            <value>Veuillez répété le code QR/code-barres</value>
-          </text>
           <text id="/data/q_sppa2510/q_test/Filtration d urine + Kato katz:label">
             <value>Filtration d'urine and Kato katz</value>
           </text>
@@ -94,9 +88,6 @@
             <value>
               <output value=" /data/q_sppa2510/q_autre_nom_2 "/>
  nombre d'oeufs lame B</value>
-          </text>
-          <text id="/data/q_sppa2510/q_code_id2:jr:constraintMsg">
-            <value>Veuillez ressaisir le code QR / code-barres</value>
           </text>
           <text id="/data/q_sppa2510/q_remarks:label">
             <value>Notes additionnelles</value>
@@ -149,9 +140,6 @@
               <output value=" /data/q_sppa2510/q_autre_nom_1 "/>
  nombre d'œufs par gramme de selles</value>
           </text>
-          <text id="/data/q_sppa2510/q_code_id1:label">
-            <value>Veuillez saisir le code QR/code-barres</value>
-          </text>
           <text id="/data/q_sppa2510/q_ascaris_lumb_intensity:hint">
             <value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
           </text>
@@ -176,8 +164,8 @@
           <text id="/data/r_recorder:hint">
             <value>Code sur 2 chiffres</value>
           </text>
-          <text id="/data/q_sppa2510/q_note3:label">
-            <value>Résultats filtrations</value>
+          <text id="/data/r_recorder:jr:constraintMsg">
+            <value>Veuillez rentrer votre code sur 2 chiffres</value>
           </text>
           <text id="/data/q_sppa2510/q_autre_vers/0:label">
             <value>Non</value>
@@ -188,8 +176,8 @@
           <text id="/data/q_sppa2510/q_ascaris_lumb_intensity:label">
             <value>Ascaris nombre d'œufs par gramme de selles</value>
           </text>
-          <text id="/data/q_sppa2510/q_code_id3:label">
-            <value>Veuillez scanner le code-barres</value>
+          <text id="/data/q_sppa2510/q_autre_nom_2_intensity:hint">
+            <value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
           </text>
           <text id="/data/q_sppa2510/q_barcode_method:label">
             <value>Méthode de capture code QR / code-barres</value>
@@ -209,16 +197,10 @@
           <text id="/data/q_sppa2510/q_barcode_method/QRManual:label">
             <value>Saisie manuelle (en cas de panne du scanner)</value>
           </text>
-          <text id="/data/q_sppa2510/q_autre_nom_2_intensity:hint">
-            <value>Formule utilisée: (nombre d'œufs lame A + nombre d'œufs lame B) x12</value>
-          </text>
           <text id="/data/q_sppa2510/q_autre_nom_2_intensity:label">
             <value>
               <output value=" /data/q_sppa2510/q_autre_nom_2 "/>
  nombre d'œufs par gramme de selles</value>
-          </text>
-          <text id="/data/q_sppa2510/q_note2:label">
-            <value>Résultats Kato Katz</value>
           </text>
           <text id="/data/q_sppa2510/q_k_positif/Oui:label">
             <value>Oui</value>
@@ -238,8 +220,8 @@
           <text id="/data/q_sppa2510/q_ascaris_lumb_sa:label">
             <value>Ascaris nombre d'œufs lame A</value>
           </text>
-          <text id="/data/q_sppa2510/q_code_id3:jr:constraintMsg">
-            <value>Veuillez ressaisir le code QR / code-barres</value>
+          <text id="/data/q_sppa2510/q_note2:label">
+            <value>Résultats Kato Katz</value>
           </text>
           <text id="/data/q_sppa2510/q_autre_vers/2:label">
             <value>Deux (2) autres parasites</value>
@@ -261,8 +243,8 @@
           <text id="/data/q_sppa2510/q_code_id:jr:constraintMsg">
             <value>Ce code a déjà été sélectionné.</value>
           </text>
-          <text id="/data/r_recorder:jr:constraintMsg">
-            <value>Veuillez rentrer votre code sur 2 chiffres</value>
+          <text id="/data/q_sppa2510/q_note3:label">
+            <value>Résultats filtrations</value>
           </text>
           <text id="/data/q_sppa2510:label">
             <value>Résultats</value>
@@ -289,10 +271,7 @@
       <bind calculate="position(..)" nodeset="/data/q_sppa2510/C2" type="text"/>
       <bind calculate="if ( ../C2  = 1,'',substring-after( /data/C1 , ../q_code_id ))" nodeset="/data/q_sppa2510/C3" type="text"/>
       <bind nodeset="/data/q_sppa2510/q_barcode_method" required="true()" type="select1"/>
-      <bind nodeset="/data/q_sppa2510/q_code_id1" relevant=" ../q_barcode_method  = 'QRManual'" required="true()" type="string"/>
-      <bind constraint=". =  ../q_code_id1 " jr:constraintMsg="jr:itext('/data/q_sppa2510/q_code_id2:jr:constraintMsg')" nodeset="/data/q_sppa2510/q_code_id2" relevant=" ../q_barcode_method  = 'QRManual'" required="true()" type="string"/>
-      <bind jr:constraintMsg="jr:itext('/data/q_sppa2510/q_code_id3:jr:constraintMsg')" nodeset="/data/q_sppa2510/q_code_id3" relevant=" ../q_barcode_method  = 'QRScann'" required="true()" type="barcode"/>
-      <bind calculate="if( ../q_barcode_method  = 'QRManual', concat( ../q_code_id1 ), concat( ../q_code_id3 ))" constraint="not(selected( ../C3 ,  ../q_code_id ))" db_filter_by_col_5=" /data/q_site_code " jr:constraintMsg="jr:itext('/data/q_sppa2510/q_code_id:jr:constraintMsg')" nodeset="/data/q_sppa2510/q_code_id" readonly="true()" required="true()" type="string"/>
+      <bind constraint="not(selected( ../C3 ,  ../q_code_id ))" db_filter_by_col_5=" /data/q_site_code " db_get="col_6" jr:constraintMsg="jr:itext('/data/q_sppa2510/q_code_id:jr:constraintMsg')" nodeset="/data/q_sppa2510/q_code_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/data/q_sppa2510/q_test" required="true()" type="select1"/>
       <bind nodeset="/data/q_sppa2510/q_note3" readonly="true()" type="string"/>
       <bind nodeset="/data/q_sppa2510/q_urine_vol" required="true()" type="int"/>
@@ -369,15 +348,6 @@
             <value>QRManual</value>
           </item>
         </select1>
-        <input ref="/data/q_sppa2510/q_code_id1">
-          <label ref="jr:itext('/data/q_sppa2510/q_code_id1:label')"/>
-        </input>
-        <input ref="/data/q_sppa2510/q_code_id2">
-          <label ref="jr:itext('/data/q_sppa2510/q_code_id2:label')"/>
-        </input>
-        <input ref="/data/q_sppa2510/q_code_id3">
-          <label ref="jr:itext('/data/q_sppa2510/q_code_id3:label')"/>
-        </input>
         <input ref="/data/q_sppa2510/q_code_id">
           <label ref="jr:itext('/data/q_sppa2510/q_code_id:label')"/>
           <hint ref="jr:itext('/data/q_sppa2510/q_code_id:hint')"/>
