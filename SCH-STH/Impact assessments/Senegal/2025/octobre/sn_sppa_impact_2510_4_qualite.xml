@@ -418,7 +418,7 @@
       <bind constraint="regex(.,'^[0-9]{2}$')" jr:constraintMsg="jr:itext('/data/r_recorder:jr:constraintMsg')" nodeset="/data/r_recorder" required="true()" type="string"/>
       <bind db_get="col_1" nodeset="/data/r_region" required="true()" type="string"/>
       <bind db_filter_by_col_1=" /data/r_region " db_get="col_2" nodeset="/data/r_district" required="true()" type="string"/>
-      <bind db_filter_by_col_3=" /data/r_district " db_get="col_4" nodeset="/data/r_subdistrict" required="true()" type="string"/>
+      <bind db_filter_by_col_2=" /data/r_district " db_get="col_4" nodeset="/data/r_subdistrict" required="true()" type="string"/>
       <bind db_filter_by_col_4=" /data/r_subdistrict " db_get="col_5" nodeset="/data/r_site_name" required="true()" type="string"/>
       <bind db_filter_by_col_5=" /data/r_site_name " db_get="col_6" nodeset="/data/r_site_code" required="true()" type="string"/>
       <bind calculate="join(' ',  /data/r_sppa_2505_3/r_code_id )" nodeset="/data/C1" type="text"/>
