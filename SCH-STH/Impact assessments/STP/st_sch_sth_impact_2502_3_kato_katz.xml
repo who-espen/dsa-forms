@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms"
+  xmlns:ev="http://www.w3.org/2001/xml-events"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:jr="http://openrosa.org/javarosa"
+  xmlns:odk="http://www.opendatakit.org/xforms"
+  xmlns:orx="http://openrosa.org/xforms"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>(2025 Fev) - 3. SCH/STH - Kato Katz</h:title>
+    <model>
+
+      <instance>
+        <data id="st_sch_sth_impact_2502_3_kato_katz">
+          <k_Recorder/>
+          <k_district/>
+          <k_site/>
+          <k_site_id/>
+          <C1/>
+          <st_ia_k_2502 jr:template="">
+            <C2/>
+            <C3/>
+            <k_code_id/>
+            <k_code_id2/>
+            <k_sch_man_sa/>
+            <k_ascaris_lumb_sa/>
+            <k_hookworm_sa/>
+            <k_trichuris_sa/>
+            <k_sch_hae_sa/>
+            <k_other_parasite/>
+            <k_eggs_other_parasite_sa/>
+            <k_remarks/>
+          </st_ia_k_2502>
+          <k_start/>
+          <k_end/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+
+      <itext>
+        <translation default="true()" lang="French">
+          <text id="/data/st_ia_k_2502:label">
+            <value>Enrôlement</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_sch_man_sa:label">
+            <value>Schistosoma mansoni (oeufs)</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_code_id:hint">
+            <value>exemple: 12_123_1</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_code_id2:label">
+            <value>Veuillez repéter le code unique</value>
+          </text>
+          <text id="/data/k_site_id:label">
+            <value>Sélectionner le code du village</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_trichuris_sa:label">
+            <value>Trichocéphale trichura</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_ascaris_lumb_sa:label">
+            <value>Ascaris lumbricoides (œufs)</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_hookworm_sa:label">
+            <value>Ankylostome</value>
+          </text>
+          <text id="/data/k_Recorder:label">
+            <value>Code de l'Opérateur</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_code_id2:jr:constraintMsg">
+            <value>Le code répéter doit être le même</value>
+          </text>
+          <text id="/data/k_district:label">
+            <value>Sélectionner le district</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_sch_hae_sa:label">
+            <value>Schistosoma haematobium</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_other_parasite:label">
+            <value>Nom des autres parasite</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_code_id:jr:constraintMsg">
+            <value>Soit, cet identifiant a déjà été utilisé dans ce village, soit le format du code est incorecte. Exemple d'un code 34_567_890</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_code_id:label">
+            <value>Veuillez enregistrer le code unique de l'enfant et des échantillons de labo</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_remarks:label">
+            <value>Notes additionnelles</value>
+          </text>
+          <text id="/data/st_ia_k_2502/k_eggs_other_parasite_sa:label">
+            <value>Autres parasites (œufs)</value>
+          </text>
+          <text id="/data/k_site:label">
+            <value>Sélectionner le nom du village</value>
+          </text>
+        </translation>
+      </itext>
+
+      <bind nodeset="/data/k_Recorder" required="true()" type="int"/>
+      <bind db_get="col_1" nodeset="/data/k_district" required="true()" type="string"/>
+      <bind db_filter_by_col_1="/data/k_district" db_get="col_2" nodeset="/data/k_site" required="true()" type="string"/>
+      <bind db_filter_by_col_2="/data/k_site" db_get="col_3" nodeset="/data/k_site_id" required="true()" type="string"/>
+      <bind calculate="join(' ',  /data/st_ia_k_2502/k_code_id )" nodeset="/data/C1" type="string"/>
+      <bind calculate="position(..)" nodeset="/data/st_ia_k_2502/C2" type="string"/>
+      <bind calculate="if ( ../C2  = 1, '', substring-after( /data/C1 , ../k_code_id ))" nodeset="/data/st_ia_k_2502/C3" type="string"/>
+      <bind constraint="not(selected( ../C3 ,  ../k_code_id )) and regex(., '^\d{2}_\d{3}_\d{1,3}$')" jr:constraintMsg="jr:itext('/data/st_ia_k_2502/k_code_id:jr:constraintMsg')" nodeset="/data/st_ia_k_2502/k_code_id" required="true()" type="string"/>
+      <bind constraint=". =  ../k_code_id" jr:constraintMsg="jr:itext('/data/st_ia_k_2502/k_code_id2:jr:constraintMsg')" nodeset="/data/st_ia_k_2502/k_code_id2" required="true()" type="string"/>
+      <bind nodeset="/data/st_ia_k_2502/k_sch_man_sa" required="true()" type="int"/>
+      <bind nodeset="/data/st_ia_k_2502/k_ascaris_lumb_sa" required="true()" type="int"/>
+      <bind nodeset="/data/st_ia_k_2502/k_hookworm_sa" required="true()" type="int"/>
+      <bind nodeset="/data/st_ia_k_2502/k_trichuris_sa" required="true()" type="int"/>
+      <bind nodeset="/data/st_ia_k_2502/k_sch_hae_sa" type="int"/>
+      <bind nodeset="/data/st_ia_k_2502/k_other_parasite" type="string"/>
+      <bind nodeset="/data/st_ia_k_2502/k_eggs_other_parasite_sa" type="int"/>
+      <bind nodeset="/data/st_ia_k_2502/k_remarks" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/k_start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/k_end" type="dateTime"/>
+      <bind jr:preload="uid" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/k_Recorder">
+      <label ref="jr:itext('/data/k_Recorder:label')"/>
+    </input>
+    <input ref="/data/k_district">
+      <label ref="jr:itext('/data/k_district:label')"/>
+    </input>
+    <input ref="/data/k_site">
+      <label ref="jr:itext('/data/k_site:label')"/>
+    </input>
+    <input ref="/data/k_site_id">
+      <label ref="jr:itext('/data/k_site_id:label')"/>
+    </input>
+    <group ref="/data/st_ia_k_2502">
+      <label ref="jr:itext('/data/st_ia_k_2502:label')"/>
+      <repeat nodeset="/data/st_ia_k_2502">
+        <input ref="/data/st_ia_k_2502/k_code_id">
+          <label ref="jr:itext('/data/st_ia_k_2502/k_code_id:label')"/>
+          <hint ref="jr:itext('/data/st_ia_k_2502/k_code_id:hint')"/>
+        </input>
+        <input ref="/data/st_ia_k_2502/k_code_id2">
+          <label ref="jr:itext('/data/st_ia_k_2502/k_code_id2:label')"/>
+        </input>
+        <input ref="/data/st_ia_k_2502/k_sch_man_sa">
+          <label ref="jr:itext('/data/st_ia_k_2502/k_sch_man_sa:label')"/>
+        </input>
+        <input ref="/data/st_ia_k_2502/k_ascaris_lumb_sa">
+          <label ref="jr:itext('/data/st_ia_k_2502/k_ascaris_lumb_sa:label')"/>
+        </input>
+        <input ref="/data/st_ia_k_2502/k_hookworm_sa">
+          <label ref="jr:itext('/data/st_ia_k_2502/k_hookworm_sa:label')"/>
+        </input>
+        <input ref="/data/st_ia_k_2502/k_trichuris_sa">
+          <label ref="jr:itext('/data/st_ia_k_2502/k_trichuris_sa:label')"/>
+        </input>
+        <input ref="/data/st_ia_k_2502/k_sch_hae_sa">
+          <label ref="jr:itext('/data/st_ia_k_2502/k_sch_hae_sa:label')"/>
+        </input>
+        <input ref="/data/st_ia_k_2502/k_other_parasite">
+          <label ref="jr:itext('/data/st_ia_k_2502/k_other_parasite:label')"/>
+        </input>
+        <input ref="/data/st_ia_k_2502/k_eggs_other_parasite_sa">
+          <label ref="jr:itext('/data/st_ia_k_2502/k_eggs_other_parasite_sa:label')"/>
+        </input>
+        <input ref="/data/st_ia_k_2502/k_remarks">
+          <label ref="jr:itext('/data/st_ia_k_2502/k_remarks:label')"/>
+        </input>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>
