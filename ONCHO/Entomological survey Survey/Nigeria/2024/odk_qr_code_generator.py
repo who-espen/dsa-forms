@@ -18,7 +18,7 @@ settings = {
     # "admin_pw": "1325",
   },
   "project": {
-    "name": "Nigeria ONCHO",
+    "name": "NIGERIA ONCHOCERCIASIS ELIMINATION PROGRAMME (NOEP)",
     "icon": "N",
     "color": "#0066ff"
   }
