@@ -19,8 +19,8 @@ settings = {
   },
   "project": {
     "name": "NIGERIA ONCHOCERCIASIS ELIMINATION PROGRAMME (NOEP) 2",
-    "icon": "N",
-    "color": "#0066ff"
+    "icon": "🇳🇬",
+    "color": "#DAF2DB"
   }
 }
 
