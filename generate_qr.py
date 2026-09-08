@@ -1,7 +1,7 @@
 import qrcode
 
 # URL to encode
-url = "https://ntd-data-workshop-day5.netlify.app/"
+url = "https://atelier-mtn-jour5.netlify.app/"
 
 # Create QR code instance
 qr = qrcode.QRCode(
@@ -17,6 +17,6 @@ qr.make(fit=True)
 
 # Create and save the QR code image
 img = qr.make_image(fill_color="black", back_color="white")
-img.save("ntd_workshop_qr_day5.png")
+img.save("atelier-mtn-jour5_qr.png")
 
 print("QR code generated successfully as 'ntd_workshop_qr.png'")
